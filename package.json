@@ -16,7 +16,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-docker-image": "docker build -t cruzhacks-2020-website .",
+    "delete-docker-image": "docker image rm cruzhacks-2020-website",
+    "run-docker-container": "docker run cruzhacks-2020-website --name cruzhacks-image-instance  -p 3000:80 -e PORT=80",
+    "stop-docker-container": "docker stop cruzhacks-image-instance",
+    "delete-docker-container": "docker rm cruzhacks-image-instance"
   },
   "eslintConfig": {
     "extends": "react-app"
