@@ -1,0 +1,1 @@
+For API utility functions. Keeps the code clean and easier to maintain.
