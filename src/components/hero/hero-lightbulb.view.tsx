@@ -11,7 +11,7 @@ const HeroLightBulbView: React.FC = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0)">
+      <g clipPath="url(#clip0)">
         <path
           opacity=".13"
           fillRule="evenodd"
@@ -79,8 +79,8 @@ const HeroLightBulbView: React.FC = () => {
           y2="27.048"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5949F3" />
-          <stop offset="1" stop-color="#4A38F2" />
+          <stop stopColor="#5949F3" />
+          <stop offset="1" stopColor="#4A38F2" />
         </linearGradient>
         <linearGradient
           id="paint1_linear"
@@ -90,8 +90,8 @@ const HeroLightBulbView: React.FC = () => {
           y2="12.222"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5949F3" />
-          <stop offset="1" stop-color="#4A38F2" />
+          <stop stopColor="#5949F3" />
+          <stop offset="1" stopColor="#4A38F2" />
         </linearGradient>
         <linearGradient
           id="paint2_linear"
@@ -101,8 +101,8 @@ const HeroLightBulbView: React.FC = () => {
           y2="19.038"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5949F3" />
-          <stop offset="1" stop-color="#4A38F2" />
+          <stop stopColor="#5949F3" />
+          <stop offset="1" stopColor="#4A38F2" />
         </linearGradient>
         <linearGradient
           id="paint3_linear"
@@ -112,8 +112,8 @@ const HeroLightBulbView: React.FC = () => {
           y2="19.038"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5949F3" />
-          <stop offset="1" stop-color="#4A38F2" />
+          <stop stopColor="#5949F3" />
+          <stop offset="1" stopColor="#4A38F2" />
         </linearGradient>
         <linearGradient
           id="paint4_linear"
@@ -123,8 +123,8 @@ const HeroLightBulbView: React.FC = () => {
           y2="-.414"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5949F3" />
-          <stop offset="1" stop-color="#4A38F2" />
+          <stop stopColor="#5949F3" />
+          <stop offset="1" stopColor="#4A38F2" />
         </linearGradient>
         <clipPath id="clip0">
           <path fill="#fff" d="M0 0h36v30H0z" />
