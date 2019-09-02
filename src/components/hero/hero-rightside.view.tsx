@@ -1,5 +1,4 @@
 import React from 'react';
-import HeroRightSideImage from '../../assets/images/HeroRightSideImage.png';
 import './hero.scss';
 
 const HeroRightSideView: React.FC = () => {
