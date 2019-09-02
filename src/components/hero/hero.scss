@@ -1,28 +1,84 @@
-/* HeroMlhBadge */
+@media all and (max-width: 650px) {
+  .hero-nav-buttons-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
 
-.hero-mlh-badge {
-  position: absolute;
-  padding: 0 30px 0 0;
-  right: 0;
-  top: 0;
+/* HeroHeader */
+
+.hero-header-container {
+  display: flex;
+  justify-content: center;
 }
 
 /* HeroLightbulb */
 
-.hero-lightbulb {
+.hero-lightbulb-container {
+  width: 36;
+  height: 30;
   position: absolute;
-  padding: 0 0 0 30px;
+  margin: 25px 25px 25px 25px;
   left: 0;
 }
+
+/* HeroMlhBadge */
+
+.hero-mlh-badge {
+  position: absolute;
+  margin: 0 50px 0 0;
+  right: 0;
+  top: 0;
+}
+
+/* HeroNavButtonsContainer */
+
+.hero-nav-buttons-container {
+  display: flex;
+  position: absolute;
+  right: 150px;
+}
+
+.hero-nav-button-container {
+  margin: 30px 30px 30px 30px;
+}
+
+.nav-button-text {
+  fill: #373737;
+}
+
+.nav-button-text:hover {
+  fill: #ffffff;
+}
+
+/* HeroRightside */
+
+.hero-right-side {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 815px;
+  height: 749px;
+}
+
+// @media all and (max-width: 1100px) {
+//   .hero-right-side {
+//     width: 70vw;
+//   }
+//   .hero-title-text {
+//     position: absolute;
+//     left: 100px;
+//     top: 280px;
+//   }
+// }
 
 /* HeroTitleText */
 
 .hero-title-text {
   position: absolute;
-  left: 9.98%;
-  right: 41.84%;
-  top: 30%;
-  bottom: 93.34%;
+  left: 115px;
+  top: 275px;
 
   font-family: Rubik;
   font-style: normal;
@@ -41,9 +97,8 @@
 
 .hero-slogan-text {
   position: absolute;
-  left: 18%;
-  top: 38%;
-  bottom: 93.34%;
+  left: 246px;
+  top: 329px;
 
   font-family: SofiaProSoftW01-Regular;
   font-size: 22px;
@@ -56,72 +111,72 @@
   color: #9e9eff;
 }
 
-// .hero-navbar-container {
-//   flex-flow: column wrap;
-//   padding: 10 10 10 10;
-// }
-
-.hero-header-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.hero-info-text-container {
+  position: absolute;
+  left: 115px;
+  top: 427px;
 }
 
-/* HeroNavButtonsContainer */
+/* HeroSponsorUsButtonContainer */
 
-.hero-nav-buttons-container {
-  display: flex;
-  flex-direction: row;
+.hero-sponsor-us-button-container {
+  position: absolute;
+  left: 115px;
+  top: 541px;
 }
 
-.hero-nav-button-container {
-  padding: 30px 30px 30px 30px;
+.hero-sponsor-us-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  background: #6f6fe8;
+  box-shadow: 0px 2px 6px #bfbfbf;
+  border-radius: 23px;
 }
 
-/* HeroTeamButtonText */
+/* HeroSponsorUsButtonText */
 
-.hero-team-button-text {
+.hero-sponsor-us-button-text {
+  position: absolute;
+  left: 41px;
+  top: 17px;
+
   font-family: SofiaProSoftW01-Regular;
-  font-size: 13px;
-  line-height: 16px;
-  /* identical to box height */
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: #373737;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.07em;
+  text-indent: 3px;
+
+  color: #fffefe;
 }
 
-/* HeroJoinUsButtonText */
-
-.hero-join-us-button-text {
-  font-family: SofiaProSoftW01-Regular;
-  font-size: 13px;
-  line-height: 16px;
-  /* identical to box height */
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: #373737;
+.navigate-to-bottom-container {
+  position: absolute;
+  left: 99px;
+  top: 637px;
 }
 
-/* HeroSponsorButtonText */
-
-.hero-sponsor-button-text {
-  font-family: SofiaProSoftW01-Regular;
-  font-size: 13px;
-  line-height: 16px;
-  /* identical to box height */
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: #373737;
+.navigate-to-bottom-outer-circle {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-/* HeroApplyButtonText */
+.navigate-to-bottom-middle-circle {
+  position: absolute;
+  left: 11px;
+  top: 11px;
+}
 
-.hero-apply-button-text {
-  font-family: SofiaProSoftW01-Regular;
-  font-size: 13px;
-  line-height: 16px;
-  /* identical to box height */
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: #373737;
+.navigate-to-bottom-inner-circle {
+  position: absolute;
+  left: 21px;
+  top: 21px;
+}
+
+.navigate-to-bottom-arrow {
+  position: absolute;
+  left: 25px;
+  top: -5px;
 }
