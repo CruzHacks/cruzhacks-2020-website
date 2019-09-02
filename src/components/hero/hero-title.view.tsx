@@ -4,7 +4,7 @@ import './hero.sass';
 const HeroTitleView: React.FC = () => {
   return (
     <svg
-      className="hero-title-text"
+      className="hero__title-text"
       width="320"
       height="29"
       viewBox="0 0 320 29"

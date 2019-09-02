@@ -4,7 +4,7 @@ import './hero.sass';
 const HeroMlhBadgeView: React.FC = () => {
   return (
     <svg
-      className="hero-mlh-badge"
+      className="hero__mlh-badge"
       width="86"
       height="150"
       viewBox="0 0 86 150"
