@@ -1,4 +1,4 @@
-/* Global Application Styles Will Go Here */
+// media queries
 @mixin respond($breakpoint)
  @if $breakpoint == phone-narrow
   @media (max-width: 25em)
@@ -23,4 +23,17 @@
  @if $breakpoint == big-desktop
   @media (min-width: 112.5em)
    @content
-/* body and :root go in index.css */
+
+// body font
+@mixin font-source-body($size: false, $color: false, $weight: false,  $lineHeight: false, $letterSpace: false) 
+  font-family: SofiaProSoftW01-Regular
+  @if $size 
+    font-size: $size
+  @if $color
+    color: $color 
+  @if $weight  
+    font-weight: $weight 
+  @if $lineHeight  
+    line-height: $lineHeight
+  @if $letterSpace 
+    letter-spacing: $letterSpace

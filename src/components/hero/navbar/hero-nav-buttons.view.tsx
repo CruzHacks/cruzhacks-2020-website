@@ -1,12 +1,13 @@
 import React from 'react';
-import './hero.sass';
+import './navbar.sass';
+import '../hero.sass';
 
 const HeroNavButtonsView: React.FC = () => {
   return (
-    <div className="hero-nav-buttons-container">
-      <div className="hero-nav-button-container">
+    <div className="hero__nav--buttons-container">
+      <div className="hero__nav--button-container">
         <svg
-          className="hero-apply-button-text"
+          className="hero__apply-button-text"
           width="40"
           height="14"
           viewBox="0 0 40 14"
@@ -19,9 +20,9 @@ const HeroNavButtonsView: React.FC = () => {
           />
         </svg>
       </div>
-      <div className="hero-nav-button-container">
+      <div className="hero__nav--buttons-container">
         <svg
-          className="hero-sponsor-button-text"
+          className="hero__sponsor-button-text"
           width="64"
           height="14"
           viewBox="0 0 64 14"
@@ -34,9 +35,9 @@ const HeroNavButtonsView: React.FC = () => {
           />
         </svg>
       </div>
-      <div className="hero-nav-button-container">
+      <div className="hero__nav--buttons-container">
         <svg
-          className="hero-join-us-button-text"
+          className="hero__join-us-button-text"
           width="52"
           height="14"
           viewBox="0 0 52 14"
@@ -49,9 +50,9 @@ const HeroNavButtonsView: React.FC = () => {
           />
         </svg>
       </div>
-      <div className="hero-nav-button-container">
+      <div className="hero__nav--buttons-container">
         <svg
-          className="hero-team-button-text"
+          className="hero__team-button-text"
           width="37"
           height="14"
           viewBox="0 0 37 14"

@@ -4,7 +4,7 @@ import './hero.sass';
 const HeroLightBulbView: React.FC = () => {
   return (
     <svg
-      className="hero-lightbulb"
+      className="hero__lightbulb"
       width="36"
       height="30"
       viewBox="0 0 36 30"
