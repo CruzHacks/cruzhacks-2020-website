@@ -4,7 +4,7 @@ import HeroNavbarView from './hero-navbar.view';
 import HeroMlhBadgeView from './hero-mlh-badge.view';
 import HeroTitleView from './hero-title.view';
 import HeroSloganView from './hero-slogan.view';
-import './hero.scss';
+import './hero.sass';
 
 const HeroView: React.FC = () => {
   return (

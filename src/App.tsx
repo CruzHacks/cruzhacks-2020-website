@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from './components/hero/hero.view';
-import './App.scss';
+import './base.sass';
 
 const App: React.FC = () => {
   return (
