@@ -1,5 +1,5 @@
 import React from 'react';
-import './hero.scss';
+import './hero.sass';
 
 const HeroSloganView: React.FC = () => {
   return (
