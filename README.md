@@ -17,3 +17,5 @@
 ## utils
 
 - reusable/shared functions belong here
+
+https://jakearchibald.github.io/svgomg/

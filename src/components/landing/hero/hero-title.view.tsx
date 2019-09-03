@@ -1,10 +1,10 @@
 import React from 'react';
-import './hero.sass';
+import './hero.scss';
 
 const HeroTitleView: React.FC = () => {
   return (
     <svg
-      className="hero__title-text"
+      className="hero-title-text"
       width="320"
       height="29"
       viewBox="0 0 320 29"

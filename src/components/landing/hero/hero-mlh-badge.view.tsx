@@ -1,10 +1,10 @@
 import React from 'react';
-import './hero.sass';
+import './hero.scss';
 
 const HeroMlhBadgeView: React.FC = () => {
   return (
     <svg
-      className="hero__mlh-badge"
+      className="hero-mlh-badge"
       width="86"
       height="150"
       viewBox="0 0 86 150"
