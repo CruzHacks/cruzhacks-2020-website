@@ -11,7 +11,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env CI=true react-scripts test",
+    "test": "react-scripts test",
+    "CItest": "cross-env CI=true react-scripts test",
     "eject": "react-scripts eject",
     "build-docker-image": "docker build -t cruzhacks-2020-website .",
     "delete-docker-image": "docker image rm cruzhacks-2020-website",
