@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: npm install
-  displayName: 'install dependencies"
+  displayName: 'install dependencies'
 
 - script: |
     tsc --target ES6 --strict true --project tsconfig.json
