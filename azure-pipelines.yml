@@ -16,13 +16,11 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
-
-- script: |
     tsc --target ES6 --strict true --project tsconfig.json
   displayName: 'typescript compilation to ES6'
   
- - script: npm test
-  displayName: 'run all Jest tests via react-scripts'
+- script: |
+    npm install
+    npm test
+    npm run build
+  displayName: 'npm install, test, and build'
