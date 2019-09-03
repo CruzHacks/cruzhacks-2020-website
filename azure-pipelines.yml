@@ -23,6 +23,6 @@ steps:
   displayName: 'typescript compilation to ES6'
   
 - script: |
-    npm test
+    npm CItest
     npm run build
   displayName: 'npm install, test, and build'
