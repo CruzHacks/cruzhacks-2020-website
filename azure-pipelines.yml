@@ -23,3 +23,6 @@ steps:
 - script: |
     tsc --target ES6 --strict true --project tsconfig.json
   displayName: 'typescript compilation to ES6'
+  
+ - script: npm test
+  displayName: 'run all Jest tests via react-scripts'
