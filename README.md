@@ -1,5 +1,8 @@
 # Cruzhacks 2020 Website
 
+- name test files ```*.test.js```
+- run tests with npm test
+
 ## assets
 
 - storing svg in here for now, but it won't be necessary to keep them in here
@@ -17,5 +20,3 @@
 ## utils
 
 - reusable/shared functions belong here
-
-https://jakearchibald.github.io/svgomg/
