@@ -1,5 +1,6 @@
 import React from 'react';
-import './hero.scss';
+import './hero-backdrop.scss';
+// import '../hero.scss';
 
 const HeroRightSideView: React.FC = () => {
   return (
@@ -35,12 +36,3 @@ const HeroRightSideView: React.FC = () => {
 };
 
 export default HeroRightSideView;
-
-/*
-<img
-      className="hero-right-side"
-      width="65%"
-      height="100%"
-      src={HeroRightSideImage}
-/>
-*/
