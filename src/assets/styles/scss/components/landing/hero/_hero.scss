@@ -1,0 +1,10 @@
+@media all and (max-width: 650px) {
+  .hero-nav-buttons-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .hero-nav-button-container {
+    margin: 20px 20px 20px 20px;
+  }
+}
