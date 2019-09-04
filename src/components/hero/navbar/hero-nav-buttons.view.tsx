@@ -1,5 +1,6 @@
 import React from 'react';
-import './hero.scss';
+import './hero-navbar.scss';
+// import '../hero.scss';
 
 const HeroNavButtonsView: React.FC = () => {
   return (

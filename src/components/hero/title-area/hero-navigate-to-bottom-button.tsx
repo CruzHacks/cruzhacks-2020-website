@@ -1,7 +1,8 @@
 import React from 'react';
-import './hero.scss';
+import './hero-title-area.scss';
+// import './hero.scss';
 
-const HeroNavigateToBottomButton: React.FC = () => {
+const HeroNavigateToBottomButtonView: React.FC = () => {
   return (
     <div className="navigate-to-bottom-container">
       <svg
@@ -52,13 +53,13 @@ const HeroNavigateToBottomButton: React.FC = () => {
           x2="8"
           y2="18"
           stroke="#333333"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </div>
   );
 };
 
-export default HeroNavigateToBottomButton;
+export default HeroNavigateToBottomButtonView;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './hero.scss';
+import './hero-header.scss';
 
 const HeroLightBulbView: React.FC = () => {
   return (
