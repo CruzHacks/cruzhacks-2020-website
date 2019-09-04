@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import HeroView from '../components/landing/hero/hero.view';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<HeroView />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
