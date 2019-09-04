@@ -1,0 +1,30 @@
+/*
+    first pillar: w-73 h-252
+    second pillar: w-38 h-347
+    third pillar: width="73" height="367"
+    fourth pillar: width="37" height="347"
+    fifth pillar: width="73" height="367"
+
+    what we believe in text: width="201" height="17"
+*/
+
+
+.welcome-pillars {
+    position: relative;
+    width: 70%;
+    height: 55%;
+    z-index: -2;
+}
+
+.welcome-mountain {
+    position: absolute;
+    left: 0%;
+    top: 28em;
+    right: 0%;
+    bottom: 0%;
+    z-index: -1;
+    max-width: 100%;
+    vertical-align: middle;
+    width: 100vw;
+    height: 100%;
+}
