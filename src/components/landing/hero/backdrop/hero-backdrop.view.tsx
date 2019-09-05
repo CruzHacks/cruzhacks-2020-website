@@ -1,6 +1,4 @@
 import React from 'react';
-import './hero-backdrop.scss';
-import '../hero.scss';
 
 const HeroBackdropView: React.FC = () => {
   return (
@@ -25,8 +23,8 @@ const HeroBackdropView: React.FC = () => {
               y2="360.135"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#F3F3FF" />
-              <stop offset="1" stop-color="#fff" stop-opacity="0" />
+              <stop stopColor="#F3F3FF" />
+              <stop offset="1" stopColor="#fff" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>
@@ -51,8 +49,8 @@ const HeroBackdropView: React.FC = () => {
               y2="342.763"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#F6F6FF" />
-              <stop offset=".594" stop-color="#fff" />
+              <stop stopColor="#F6F6FF" />
+              <stop offset=".594" stopColor="#fff" />
             </linearGradient>
           </defs>
         </svg>
@@ -77,8 +75,8 @@ const HeroBackdropView: React.FC = () => {
               y2="360.135"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#F7F7FF" />
-              <stop offset="1" stop-color="#fff" />
+              <stop stopColor="#F7F7FF" />
+              <stop offset="1" stopColor="#fff" />
             </linearGradient>
           </defs>
         </svg>
@@ -103,8 +101,8 @@ const HeroBackdropView: React.FC = () => {
               y2="342.763"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#F8F8FE" />
-              <stop offset="1" stop-color="#fff" />
+              <stop stopColor="#F8F8FE" />
+              <stop offset="1" stopColor="#fff" />
             </linearGradient>
           </defs>
         </svg>

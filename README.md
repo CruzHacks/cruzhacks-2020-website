@@ -1,6 +1,6 @@
 # Cruzhacks 2020 Website
 
-- name test files ```*.test.js```
+- name test files `*.test.js`
 - run tests with npm test
 
 ## assets
@@ -20,3 +20,7 @@
 ## utils
 
 - reusable/shared functions belong here
+
+### svg optimizer
+
+https://jakearchibald.github.io/svgomg/
