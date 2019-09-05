@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './welcome-backdrop.scss';
-
 const WelcomeMountainView: React.FC = () => {
     return (
         <div className="welcome-mountain-container">

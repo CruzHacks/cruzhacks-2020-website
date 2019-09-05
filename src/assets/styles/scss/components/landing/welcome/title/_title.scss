@@ -1,0 +1,21 @@
+.welcome-title-container {
+    position: absolute;
+    top: 12em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    align-items: flex-start;
+
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+
+    .welcome-title-main-text {
+        width: 543px;
+        height: 39px;
+        margin-bottom: 1.5em;
+    }
+}

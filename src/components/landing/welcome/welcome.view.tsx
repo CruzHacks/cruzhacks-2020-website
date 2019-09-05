@@ -1,16 +1,16 @@
 import React from 'react';
 
-import WelcomeTitleView from './welcome-title.view';
-import WelcomeBackdropView from './welcome-backdrop.view';
-import WelcomeCardRowView from './welcome-card-row.view'
+import WelcomeTitleView from './title/welcome-title.view';
+import WelcomeCardsView from './cards/welcome-card-row.view';
+import WelcomeBackdropView from './backdrop/welcome-backdrop.view';
 
 const WelcomeView: React.FC = () => {
     return (
         <>
             <div className="welcome-container">
-                <WelcomeTitleView />
                 <WelcomeBackdropView />
-                <WelcomeCardRowView />
+                <WelcomeTitleView />
+                <WelcomeCardsView />
             </div>
         </>
     );

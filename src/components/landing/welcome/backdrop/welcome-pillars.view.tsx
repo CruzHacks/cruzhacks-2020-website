@@ -1,8 +1,5 @@
 import React from 'react';
 
-import './welcome-backdrop.scss';
-
-
 const WelcomePillarsView: React.FC = () => {
     return (
             <svg className="welcome-pillars" width="100%" height="437" viewBox="0 0 885 437" fill="none" xmlns="http://www.w3.org/2000/svg">

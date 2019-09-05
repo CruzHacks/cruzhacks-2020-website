@@ -1,0 +1,25 @@
+/* HeroHeader */
+
+.hero-header-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* HeroLightbulb */
+
+.hero-lightbulb-container {
+  width: 36;
+  height: 30;
+  position: absolute;
+  margin: 25px 25px 25px 25px;
+  left: 0;
+}
+
+/* HeroMlhBadge */
+
+.hero-mlh-badge {
+  position: absolute;
+  margin: 0 50px 0 0;
+  right: 0;
+  top: 0;
+}
