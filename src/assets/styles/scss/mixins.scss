@@ -1,0 +1,128 @@
+/* mixins.scss */
+
+/* Media Queries */
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == phone-narrow) {
+    @media (max-width: 25em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == phone) {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tab-port) {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tab-land) {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == mission) {
+    @media (max-width: 99em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == big-desktop) {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+/* Body Font */
+
+@mixin font-source-body(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $lineHeight: false,
+  $letterSpace: false
+) {
+  font-family: SofiaProSoftW01-Regular;
+  @if ($size) {
+    font-size: $size;
+  }
+  @if ($color) {
+    color: $color;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  }
+  @if ($letterSpace) {
+    letter-spacing: $letterSpace;
+  }
+}
+
+/* Responsive SVG */
+
+@mixin svgContainer() {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.responsive-svg-container {
+  @include svgContainer();
+}
+
+@mixin svgContent() {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.responsive-svg-content {
+  @include svgContent();
+}
+
+/* Flex Containers */
+
+@mixin flexBox() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-box {
+  @include flexBox();
+}
+
+@mixin flexRow() {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-row {
+  @include flexRow();
+}
+
+@mixin flexColumn() {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.flex-column {
+  @include flexColumn();
+}
