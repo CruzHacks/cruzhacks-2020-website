@@ -12,7 +12,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "CItest": "cross-env CI=true react-scripts test",
+    "eject": "react-scripts eject",
+    "build-docker-image": "docker build -t cruzhacks-2020-website .",
+    "delete-docker-image": "docker image rm cruzhacks-2020-website",
+    "run-docker-container": "docker run cruzhacks-2020-website --name cruzhacks-image-instance  -p 3000:80 -e PORT=80",
+    "stop-docker-container": "docker stop cruzhacks-image-instance",
+    "delete-docker-container": "docker rm cruzhacks-image-instance"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,11 +36,20 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^5.2.1",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.3",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
     "react-test-renderer": "^16.9.0",
     "typescript": "3.6.2"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react-typescript@3.0.21",
+      "tester": "bit.envs/testers/jest@22.4.3"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }

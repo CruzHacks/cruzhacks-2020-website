@@ -55,7 +55,7 @@
 
 /* HeroEventInfoTextContainer */
 
-.hero-event-info-container {
+.hero__event-info-container {
   position: absolute;
   left: 0;
   top: 152px;
@@ -63,12 +63,17 @@
   height: 114px;
 }
 
-.hero-event-info-text {
+.hero__event-info-text {
   position: absolute;
-  top: 25px;
-  width: 282px;
+  width: 22vw;
   height: 64px;
   fill: #adadad;
+  @include font-source-body(
+    $size: 1em,
+    $color: #adadad,
+    $weight: normal,
+    $lineHeight: 0.75
+  );
 }
 
 /* HeroSponsorUsButtonContainer */

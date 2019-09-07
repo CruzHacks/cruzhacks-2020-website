@@ -40,7 +40,7 @@
   }
 }
 
-/* Body Font */
+/* Body font source */
 
 @mixin font-source-body(
   $size: false,
@@ -50,6 +50,58 @@
   $letterSpace: false
 ) {
   font-family: SofiaProSoftW01-Regular;
+  @if ($size) {
+    font-size: $size;
+  }
+  @if ($color) {
+    color: $color;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  }
+  @if ($letterSpace) {
+    letter-spacing: $letterSpace;
+  }
+}
+
+/* Subheader font source */
+@mixin font-source-subheader(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $lineHeight: false,
+  $letterSpace: false
+) {
+  font-family: AvenirBook;
+  @if ($size) {
+    font-size: $size;
+  }
+  @if ($color) {
+    color: $color;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  }
+  @if ($letterSpace) {
+    letter-spacing: $letterSpace;
+  }
+}
+
+/* Font source header */
+@mixin font-source-header(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $lineHeight: false,
+  $letterSpace: false
+) {
+  font-family: Rubik;
   @if ($size) {
     font-size: $size;
   }
