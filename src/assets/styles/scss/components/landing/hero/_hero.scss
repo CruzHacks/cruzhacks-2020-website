@@ -1,11 +1,9 @@
-/* _hero.scss */
-
 @media all and (max-width: 650px) {
-  .hero-nav-buttons-container {
+  .navbar {
     flex-flow: column wrap;
   }
 
-  .hero-nav-button-container {
-    margin: 10px 10px 10px 10px;
+  .navbar__button {
+    margin: 20px 20px 20px 20px;
   }
 }

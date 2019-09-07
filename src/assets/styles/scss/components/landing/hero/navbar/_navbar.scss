@@ -1,19 +1,19 @@
 /* HeroNavButtonsContainer */
 
-.hero-nav-buttons-container {
+.navbar {
   display: flex;
   position: absolute;
   right: 150px;
 }
 
-.hero-nav-button-container {
+.navbar__button {
   margin: 30px 30px 30px 30px;
 }
 
-.nav-button-text {
+.navbar__button__text {
   fill: #373737;
 }
 
-.nav-button-text:hover {
+.navbar__button__text:hover {
   fill: #ffffff;
 }

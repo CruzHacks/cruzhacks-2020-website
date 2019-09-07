@@ -36,7 +36,3 @@ const HeroRightSideView: React.FC = () => {
 };
 
 export default HeroRightSideView;
-
-// viewBox="0 0 4096 2631"
-
-// viewBox="0 0 815 749"
