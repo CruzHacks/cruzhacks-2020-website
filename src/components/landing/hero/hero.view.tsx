@@ -7,10 +7,12 @@ import HeroBackdropView from './backdrop/hero-backdrop.view';
 const HeroView: React.FC = () => {
   return (
     <>
-      <HeroHeaderView />
-      <HeroTitleAreaView />
-      <HeroRightSideView />
-      <HeroBackdropView />
+      <div className="hero__container">
+        <HeroHeaderView />
+        <HeroTitleAreaView />
+        <HeroRightSideView />
+        <HeroBackdropView />
+      </div>
     </>
   );
 };
