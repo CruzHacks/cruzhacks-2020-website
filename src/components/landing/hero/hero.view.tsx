@@ -8,9 +8,9 @@ const HeroView: React.FC = () => {
   return (
     <>
       <HeroHeaderView />
-      {/* <HeroTitleAreaView /> */}
-      {/* <HeroRightSideView /> */}
-      {/* <HeroBackdropView /> */}
+      <HeroTitleAreaView />
+      <HeroRightSideView />
+      <HeroBackdropView />
     </>
   );
 };
