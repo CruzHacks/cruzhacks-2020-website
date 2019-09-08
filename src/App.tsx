@@ -4,10 +4,10 @@ import AboutView from './components/about/about.view';
 
 const App: React.FC = () => {
   return (
-    <div className="app-root">
+    <>
       <LandingView />
-      <AboutView />
-    </div>
+      {/* <AboutView /> */}
+    </>
   );
 };
 

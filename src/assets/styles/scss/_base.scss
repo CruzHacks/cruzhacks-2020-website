@@ -6,25 +6,24 @@
 
 body {
   margin: 0;
+  box-sizing: border-box;
   background-color: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.app-root {
-  box-sizing: border-box;
+#root {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 /* Mixins */
@@ -37,7 +36,7 @@ code {
 @import './components/landing/hero/hero';
 @import './components/landing/hero/backdrop/backdrop';
 @import './components/landing/hero/header/header';
-@import './components/landing/hero/navbar/navbar';
+@import './components/landing/hero/header/navbar/navbar';
 @import './components/landing/hero/title-area/title-area';
 
 /* About Styles */
