@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-const StatTree: React.FC = () => {
+const StatsTree: React.FC = () => {
   return (
     <>
-      <div className="stat__tree-container">
+      <div className="stats__tree-container">
         <svg
-          className="stat__tree"
+          className="stats__tree"
           viewBox="0 0 618 169"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -34,4 +34,4 @@ const StatTree: React.FC = () => {
   );
 };
 
-export default StatTree;
+export default StatsTree;

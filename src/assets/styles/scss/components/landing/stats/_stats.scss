@@ -1,11 +1,17 @@
 .stats {
   &__container {
     width: 100vw;
-    height: 25vw;
-    display: flex;
-    position: static;
+    height: 50vh;
+    position: sticky;
+    display: static;
   }
   &__title {
+    margin: 0 50% 0 50%;
+  }
+  &__tree-container {
+    width: 85vw;
+    height: 50vh;
+    display: block;
   }
   &__stat-container {
     position: absolute;
