@@ -64,3 +64,25 @@ $rubik: 'Rubik', sans-serif;
     text-align: left;
     white-space: pre;
 }
+
+.welcome-cards__container {
+
+    position: absolute;
+
+    display: flex;
+    width: 100vw;
+
+    margin-bottom: 10em;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+.welcome-card__text {
+    display: block;
+    position: absolute;
+    min-height: 70%;
+    align-self: center;
+    text-align: center; 
+} 
