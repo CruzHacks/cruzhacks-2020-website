@@ -1,0 +1,18 @@
+.stats {
+  &__container {
+    width: 100vw;
+    height: 25vw;
+    display: flex;
+    position: static;
+  }
+  &__title {
+  }
+  &__stat-container {
+    position: absolute;
+    background: #ffffff;
+    border: 4px solid #76e2da;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+  }
+}
