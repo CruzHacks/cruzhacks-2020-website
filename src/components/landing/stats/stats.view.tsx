@@ -5,7 +5,7 @@ const StatsView: React.FC = () => {
   return (
     <>
       <div className="stats__container">
-        <span className="stats__title">Milestones of 2019</span>
+        <h1 className="stats__title">Milestones of 2019</h1>
         <StatsTreeView />
       </div>
     </>
