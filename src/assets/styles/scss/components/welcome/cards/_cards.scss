@@ -21,14 +21,14 @@ $rubik: 'Rubik', sans-serif;
 
 .welcome-card__text {
     position: absolute;
-    width: 13vw;
+    width: 14vw;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 .welcome-card__header {
-    font-size: 1.3vw;
+    // font-size: 1.3vw;
     font-weight: 500;
     color: $text-color;
     font-family: $rubik;
@@ -40,8 +40,7 @@ $rubik: 'Rubik', sans-serif;
 }
 
 .welcome-card__tree {
-    width: 5vw;
-    padding: 3em;
+    padding: 1em;
 }
 /*
 .welcome-cards {
