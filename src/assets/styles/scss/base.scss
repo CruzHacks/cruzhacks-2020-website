@@ -130,6 +130,11 @@ body {
   display: flex;
 }
 
+h1 {
+  @include font-source-header($size: 3em, $color: #2e2c5f, $weight: bold);
+  text-transform: uppercase;
+}
+
 @import './fonts.scss';
 
 /* Hero */
