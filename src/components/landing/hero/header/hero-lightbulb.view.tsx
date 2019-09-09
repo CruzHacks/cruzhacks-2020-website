@@ -2,10 +2,9 @@ import React from 'react';
 
 const HeroLightBulbView: React.FC = () => {
   return (
-    <div className="hero-lightbulb-container">
+    <div className="hero__lightbulb">
       <svg
-        width="36"
-        height="30"
+        className="lightbulb__svg"
         viewBox="0 0 36 30"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

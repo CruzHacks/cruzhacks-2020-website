@@ -1,15 +1,12 @@
 import React from 'react';
-// import HeroView from './hero/hero.view';
-import WelcomeView from './welcome/welcome.view';
+import HeroView from './hero/hero.view';
 
-const LandingViews: React.FC = () => {
+const LandingView: React.FC = () => {
   return (
-    <>
-      <div className="landing">
-        <WelcomeView/>
-      </div>
-    </>
+    <div className="landing-view-container">
+      <HeroView />
+    </div>
   );
 };
 
-export default LandingViews;
+export default LandingView;

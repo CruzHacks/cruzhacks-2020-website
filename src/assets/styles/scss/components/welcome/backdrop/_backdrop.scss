@@ -1,0 +1,93 @@
+
+/*
+.welcome-pillar-image {
+    position: absolute;
+    width: 70%;
+    height: 55%;
+    top: 110em;
+}
+
+.welcome-mountain-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 140em;
+    max-width: 100%;
+    height: 100%;
+    width: 100vw;
+}
+*/
+
+
+.welcome-pillar-image, .welcome-mountain-image {
+    position: absolute;
+}
+
+.welcome-pillar-image {
+    z-index: -1;
+    width: 100vw;
+    height: 40vw;
+    top: 0;
+}
+
+.welcome-mountain-image {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    margin: auto;
+    bottom: -40vh;
+}
+
+/*
+.welcome-pillar-image {
+    z-index: -2;
+    width: 885px;
+    height: 436px;
+    top: 100em;
+}
+
+.welcome-mountain-image {
+    z-index: -1;
+    top: 120em;
+    width: 100vw;
+    height: 100%;
+}
+*/
+/*
+.welcome-pillars {
+    position: relative;
+    width: 70%;
+    height: 55%;
+    z-index: -2;
+}
+
+.welcome-mountain {
+    position: absolute;
+    left: 0;
+    top: 28em;
+    bottom: 0;
+    z-index: -1;
+    max-width: 100%;
+    vertical-align: middle;
+    width: 100vw;
+    //height: 100vh;
+}
+
+.welcome-pillars__bd, .welcome-mountain__bd {
+    position: absolute;
+    min-height: 500px;
+}
+
+.welcome-pillars__bd {
+    z-index: -2;
+    top: 0;
+}
+
+.welcome-mountain__bd {
+    z-index: -1;
+    top: 27em;
+    bottom: 0;
+    height: 100vh;
+    overflow: visible;
+}
+*/
