@@ -1,10 +1,17 @@
-@media all and (max-width: 650px) {
-  .hero-nav-buttons-container {
-    flex-wrap: wrap;
-    flex-direction: column;
+@media all and (max-width: 700px) {
+  div.navbar__button-container {
+    flex-flow: column wrap;
+    right: 0;
+    right: 35%;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  div.hero__lightbulb {
+    left: 3.3%;
   }
 
-  .hero-nav-button-container {
-    margin: 20px 20px 20px 20px;
+  div.hero__mlh-badge {
+    right: 3.73%;
   }
 }
