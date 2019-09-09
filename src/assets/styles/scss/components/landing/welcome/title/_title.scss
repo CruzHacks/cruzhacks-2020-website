@@ -1,21 +1,19 @@
-.welcome-title-container {
-    position: absolute;
-    top: 12em;
+.welcome-title__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
     align-items: flex-start;
+    top: 12em;
 
-    grid-auto-columns: 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-
-    .welcome-title-main-text {
-        width: 543px;
+    .welcome-title__header {
+        align-self: flex-start;
+        width: 100%;
         height: 39px;
         margin-bottom: 1.5em;
+    }
+    
+    .welcome-title__caption {
+        width: 45%;
     }
 }

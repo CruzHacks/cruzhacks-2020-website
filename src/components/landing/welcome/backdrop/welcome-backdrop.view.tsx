@@ -6,8 +6,8 @@ import WelcomePillarsView from './welcome-pillars.view';
 const WelcomeBackdropView: React.FC = () => {
     return (
         <>
-            <WelcomePillarsView/>
             <WelcomeMountainView/>
+            <WelcomePillarsView/>
         </>
     );
 };

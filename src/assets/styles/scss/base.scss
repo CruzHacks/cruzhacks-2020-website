@@ -79,10 +79,11 @@ code {
     monospace;
 }
 
+/*
 .app-root {
   display: flex;
 }
-
+*/
 @import './components/landing/hero/hero';
 @import './components/landing/hero/backdrop/backdrop';
 @import './components/landing/hero/header/header';

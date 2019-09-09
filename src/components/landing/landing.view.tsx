@@ -7,7 +7,6 @@ const LandingViews: React.FC = () => {
     <>
       <div className="landing">
         <WelcomeView/>
-        
       </div>
     </>
   );
