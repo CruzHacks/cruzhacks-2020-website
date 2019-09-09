@@ -26,7 +26,7 @@ const welcomeCards = template.map((t, i) => {
             </svg>
 
             <div className="welcome-card__text">
-                <div className="welcome-card__header">{t.title}</div>
+                <h2 className="welcome-card__header">{t.title}</h2>
                 <svg className="welcome-card__tree" width="81" height="125" viewBox="0 0 81 125" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#tree_clip0)">
                         <path d="M77.1901 98.2593L45.9825 82.491C42.3177 80.6381 37.9831 80.6444 34.3184 82.5036L3.10441 98.3728C-0.838403 100.377 -0.832085 105.999 3.11705 107.996L33.756 123.481C37.7746 125.511 42.5199 125.517 46.5385 123.5L77.1775 108.116C81.234 106.074 81.2404 100.301 77.1901 98.2593Z" fill="url(#tree0_linear)" />
