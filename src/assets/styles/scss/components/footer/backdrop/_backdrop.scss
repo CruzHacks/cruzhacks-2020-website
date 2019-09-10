@@ -1,6 +1,7 @@
 .footer-pillars-image, .footer-trees-image {
     top: 0;
     position: absolute;
+    z-index: -1;
 }
 
 /* Footer Pillars */
@@ -8,9 +9,9 @@
     position: absolute;
     bottom: 0;
     right: 74px;
-    z-index: -1;
 }
 
+/* Footer Trees */
 .footer-trees-image {
     position: absolute;
     left: 109px;

@@ -9,22 +9,22 @@ const FooterButtonView: React.FC = () => {
     return (
         <div className="footer-button-container">
             <div className="footer-social__buttons">
-                <div className="footer-social__btn">
+                <div className="footer-social__button">
                     <a href="https://facebook.com">
                         <img src={igIcon} />
                     </a>
                 </div>
-                <div className="footer-social__btn">
+                <div className="footer-social__button">
                     <a href="https://facebook.com">
                         <img src={fbIcon} />
                     </a>
                 </div>
-                <div className="footer-social__btn">
+                <div className="footer-social__button">
                     <a href="https://facebook.com">
                         <img src={mediumIcon} />
                     </a>
                 </div>
-                <div className="footer-social__btn">
+                <div className="footer-social__button">
                     <a href="https://facebook.com">
                         <img src={ytIcon} />
                     </a>
