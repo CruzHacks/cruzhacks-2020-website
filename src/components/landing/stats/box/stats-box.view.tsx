@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-interface BoxProps {
-  Category: String;
-  Stat: String;
-}
+type BoxProps = {
+  children?: ReactNode;
+};
 
-const StatsBoxView: React.FC<BoxProps> = ({ Category, Stat }) => {
+const StatsBoxView: React.FC<BoxProps> = children => {
   return (
     <>
-      <div className="stats__box"></div>
+      {children.map()}
+      <div className="stats__box">
+        <span className="stats__stat">{Stat}</span>
+        <span className="stats__category">{Category}</span>
+      </div>
     </>
   );
 };
