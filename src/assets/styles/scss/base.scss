@@ -131,7 +131,13 @@ body {
 }
 
 h1 {
-  @include font-source-header($size: 3em, $color: #2e2c5f, $weight: bold);
+  @include font-source-header(
+    $size: 3em,
+    $color: #2e2c5f,
+    $weight: 1000,
+    $lineHeight: 32px,
+    $letterSpace: 0.05em
+  );
   text-transform: uppercase;
 }
 
