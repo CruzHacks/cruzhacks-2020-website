@@ -1,10 +1,10 @@
 import React from 'react';
-import LandingView from './components/landing/landing.view';
+import Routes from './routes/routes';
 
 const App: React.FC = () => {
   return (
     <>
-      <LandingView />
+      <Routes />
     </>
   );
 };

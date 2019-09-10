@@ -1,16 +1,19 @@
 import React, { ReactNode } from 'react';
 
 type BoxProps = {
-  children?: ReactNode;
+  stats: {
+    category: string;
+    stat: string;
+  }[];
 };
 
-const StatsBoxView: React.FC<BoxProps> = children => {
+const StatsBoxView: React.FC<BoxProps> = BoxProps => {
   return (
     <>
-      {children.map()}
+      {BoxProps.stats.map(metric => )}
       <div className="stats__box">
-        <span className="stats__stat">{Stat}</span>
-        <span className="stats__category">{Category}</span>
+        <span className="stats__stat">{}</span>
+        <span className="stats__category">{}</span>
       </div>
     </>
   );
