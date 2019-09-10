@@ -7,7 +7,7 @@ import FooterView from './components/footer/footer.view';
 const App: React.FC = () => {
   return (
     <>
-      <WelcomeView />
+      <FooterView />
     </>
   );
 };

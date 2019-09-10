@@ -1,0 +1,29 @@
+@font-face {
+    font-family: SofiaProSoftW01-Regular;
+    src: url('../../../../fonts/body/SofiaProSoftW01-Regular.woff');
+}
+
+
+.footer-text-container {
+    font-family: SofiaProSoftW01-Regular;
+    position: relative;
+    letter-spacing: 0.1em;
+    top: 90%;
+    padding: 0 2.5em;
+}
+
+
+
+.footer-text__designers {
+    text-align: left;
+    width: 50%;
+    float: left;
+    // display: inline-block;
+}
+
+.footer-text__copyright {
+    text-align: right;
+    width: 50%;
+    float: right;
+    // display: inline-block;
+}
