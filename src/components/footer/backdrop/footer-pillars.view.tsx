@@ -2,7 +2,7 @@ import React from 'react';
 
 const FooterPillarsView: React.FC = () => {
     return (
-        <svg width="197" height="284" viewBox="0 0 197 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="footer-pillars-image" width="197" height="284" viewBox="0 0 197 284" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M72.8342 0L0.771729 36V252L72.8342 215V0Z" fill="url(#footer-pillar0_linear)" />
             <path d="M196.942 32L124.879 68V284L196.942 247V32Z" fill="url(#footer-pillar1_linear)" />
             <defs>
