@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const WelcomeMountainView: React.FC = () => {
     return (
         <svg className="welcome-mountain-image" viewBox="0 0 1150 547" fill="none" xmlns="http://www.w3.org/2000/svg">
