@@ -1,8 +1,5 @@
 import React from 'react';
 
-import welcomeCardBg from '../../../../assets/images/welcome/Welcome-Cards.svg';
-import welcomeCardTree from '../../../../assets/images/welcome/Welcome_Tree.svg';
-
 const template = [
     {
         "title": "INCLUSIVITY",

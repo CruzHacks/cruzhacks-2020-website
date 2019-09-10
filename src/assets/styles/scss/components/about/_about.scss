@@ -1,5 +1,6 @@
 .about-view-container {
   @include flexBox();
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  min-height: 580px;
+  //bottom: 0;
 }

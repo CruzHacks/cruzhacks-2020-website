@@ -3,27 +3,24 @@
     src: url('../../../../fonts/body/SofiaProSoftW01-Regular.woff');
 }
 
-
 .footer-text-container {
     font-family: SofiaProSoftW01-Regular;
     position: relative;
     letter-spacing: 0.1em;
-    top: 83%;
-    padding: 0 3.5em;
+    top: 85.5%;
+    padding: 0 4.65em;
+    font-size: 12px;
 }
 
-
-
+/* Footer text */
 .footer-text__designers {
     text-align: left;
     width: 50%;
     float: left;
-    // display: inline-block;
 }
 
 .footer-text__copyright {
     text-align: right;
     width: 50%;
     float: right;
-    // display: inline-block;
 }

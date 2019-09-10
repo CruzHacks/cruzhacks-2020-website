@@ -1,25 +1,21 @@
 
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap');
+@font-face {
+    font-family: Rubik;
+    src: url('../../../../fonts/header/Rubik.woff');
+}
 
 $text-color: #2e2c5f;
-$rubik: 'Rubik', sans-serif;
-
-@font-face {
-    font-family: SofiaProSoftW01-Regular;
-    src: url('../../../../fonts/body/SofiaProSoftW01-Regular.woff');
-}
 
 @media all and (max-width: 960px) {
     div.welcome-cards__container {
         display:block;
     }
-
     div.welcome-card {
         margin: 1.5em 0;
     }
 }
 
-
+/* Welcome card containers */ 
 .welcome-cards__container {
     z-index: 1;
     display: flex;
@@ -34,6 +30,7 @@ $rubik: 'Rubik', sans-serif;
     align-items: center;
 }
 
+/* Welcome card text related stuff */
 .welcome-card__text {
     position: absolute;
     display: flex;
@@ -44,7 +41,7 @@ $rubik: 'Rubik', sans-serif;
 .welcome-card__header {
     font-weight: 500;
     color: $text-color;
-    font-family: $rubik;
+    font-family: Rubik;
 }
 
 .welcome-card__caption {
