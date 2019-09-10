@@ -1,0 +1,15 @@
+.hero {
+  &__container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: static;
+  }
+  &__nav--buttons-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  &__nav--button-container {
+    margin: 20px 20px 20px 20px;
+  }
+}

@@ -1,11 +1,11 @@
 import React from 'react';
-import Hero from './components/hero/hero.view';
+import LandingView from './components/landing/landing.view';
 
 const App: React.FC = () => {
   return (
-    <>
-      <Hero />
-    </>
+    <div className="app-root">
+      <LandingView />
+    </div>
   );
 };
 
