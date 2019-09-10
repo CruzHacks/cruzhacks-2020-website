@@ -11,27 +11,27 @@ const FooterButtonView: React.FC = () => {
             <div className="footer-social__buttons">
                 <div className="footer-social__button">
                     <a href="https://facebook.com">
-                        <img src={igIcon} />
+                        <img src={igIcon} alt="instagram_icon"/>
                     </a>
                 </div>
                 <div className="footer-social__button">
                     <a href="https://facebook.com">
-                        <img src={fbIcon} />
+                        <img src={fbIcon} alt="facebook_icon"/>
                     </a>
                 </div>
                 <div className="footer-social__button">
                     <a href="https://facebook.com">
-                        <img src={mediumIcon} />
+                        <img src={mediumIcon} alt="medium_icon"/>
                     </a>
                 </div>
                 <div className="footer-social__button">
                     <a href="https://facebook.com">
-                        <img src={ytIcon} />
+                        <img src={ytIcon} alt="youtube_icon"/>
                     </a>
                 </div>
             </div>
             <div className="footer-up__button">
-                <a href="#">
+                <a href="https://facebook.com">
                     <svg width="50" height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="25.4414" cy="24.5" rx="24.5212" ry="24.5" transform="rotate(-180 25.4414 24.5)" fill="#D2D2FF" />
                         <path d="M26.6497 13.2928C26.2592 12.9023 25.626 12.9023 25.2355 13.2928L18.8716 19.6567C18.481 20.0473 18.481 20.6804 18.8716 21.071C19.2621 21.4615 19.8953 21.4615 20.2858 21.071L25.9426 15.4141L31.5995 21.071C31.99 21.4615 32.6232 21.4615 33.0137 21.071C33.4042 20.6804 33.4042 20.0473 33.0137 19.6567L26.6497 13.2928ZM26.9426 36.3635L26.9426 13.9999L24.9426 13.9999L24.9426 36.3635L26.9426 36.3635Z" fill="#333333" />
