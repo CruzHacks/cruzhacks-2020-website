@@ -1,7 +1,12 @@
 const landingTemplate = [
   {
-    name: 'StatsView',
-    props: {
+    HeroView: {},
+  },
+  {
+    WelcomeView: {},
+  },
+  {
+    StatsView: {
       stats: [
         {
           category: 'attendees',

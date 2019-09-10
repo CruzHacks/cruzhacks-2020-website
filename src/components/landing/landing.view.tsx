@@ -5,19 +5,26 @@ import HeroView from './hero/hero.view';
 import StatsView from './stats/stats.view';
 import AboutView from './about/about.view';
 
-// import landing data template
-import landingTemplate from './landing.template';
+type LandingProps = {
+  text: {
+    name: any;
+  }[];
+};
 
-const LandingView: React.FC = () => landingTemplate:{[index: string]: any} =>
-    ({
-      StatsView: <StatsView {...landingTemplate.props} />,
-    }[landingTemplate.name]);
+type Component = {
+  name: any;
+};
+
+const LandingView: React.FC<LandingProps> = props => {
+  let componentImport = (component: Component) => ({
+    HeroView: <HeroView {...component.name} />,
+    AboutView: <AboutView {...component.name} />,
+    StatsView: <StatsView {...component.name} />,
+  });
   return (
     <>
       <div className="landing">
-        <HeroView />
-        <AboutView />
-        <StatsView stats={landingTemplate} />
+        {props.text.slice(0).map(component => componentImport(component))}
       </div>
     </>
   );

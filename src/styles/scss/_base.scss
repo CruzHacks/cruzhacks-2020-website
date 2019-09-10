@@ -3,7 +3,8 @@
 // ============================================================================
 // Global Styles
 // ============================================================================
-
+/* Mixins */
+@import './mixins';
 body {
   margin: 0;
   box-sizing: border-box;
@@ -32,20 +33,17 @@ h1 {
   text-transform: uppercase;
 }
 
-/* Mixins */
-@import './mixins.scss';
-
 /* Fonts */
-@import './fonts.scss';
+@import './fonts';
 
 /* Landing Styles */
 @import './components/landing/landing';
 @import './components/landing/hero/hero';
 @import './components/landing/hero/backdrop/backdrop';
 @import './components/landing/hero/header/header';
-@import './components/landing/hero/header/navbar/navbar';
+@import './components/landing/hero/navbar/navbar';
 @import './components/landing/hero/title-area/title-area';
 
 /* About Styles */
-@import './components/about/about';
-@import './components/about/backdrop/backdrop';
+@import './components/landing/about/about';
+@import './components/landing/about/backdrop/backdrop';
