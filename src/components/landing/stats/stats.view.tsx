@@ -6,13 +6,13 @@ type StatsProps = {
   stats: [];
 };
 
-const StatsView: React.FC<StatsProps> = Props => {
+const StatsView: React.FC<StatsProps> = props => {
   return (
     <>
       <div className="stats__container">
         <h1 className="stats__title">Milestones of 2019</h1>
         <StatsTreeView />
-        <StatsBoxView stats={Props.stats} />
+        <StatsBoxView stats={props.stats} />
       </div>
     </>
   );

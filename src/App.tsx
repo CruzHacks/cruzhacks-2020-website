@@ -10,5 +10,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-// <div className="test-container">Howdy Partner</div>

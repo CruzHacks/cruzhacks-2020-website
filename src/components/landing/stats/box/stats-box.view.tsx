@@ -10,7 +10,7 @@ type BoxProps = {
 const StatsBoxView: React.FC<BoxProps> = BoxProps => {
   return (
     <>
-      {BoxProps.stats.map(metric => )}
+      {/* BoxProps.stats.map(metric => ) */}
       <div className="stats__box">
         <span className="stats__stat">{}</span>
         <span className="stats__category">{}</span>
