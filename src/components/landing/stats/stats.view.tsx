@@ -1,5 +1,6 @@
 import React from 'react';
 import StatsTreeView from './tree/stats-tree.view';
+import StatsBoxView from './box/stats-box.view';
 
 const StatsView: React.FC = () => {
   return (
