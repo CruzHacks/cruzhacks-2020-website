@@ -17,6 +17,11 @@
 *_LOCAL_*.txt
 *_REMOTE_*.txt
 
+### Bit ###
+# Created by bit to organize component repositories
+*.bitmap
+dist
+
 ### Linux ###
 *~
 
