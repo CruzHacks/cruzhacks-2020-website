@@ -21,6 +21,23 @@
 
 - reusable/shared functions belong here
 
+## tests
+
+Add the following to your test.tsx file for your component and replace **placeholder** with your component name.
+
+```typescript
+it('matches snapshot', () => {
+  const placeholder = renderer.create(<Placeholder />).toJSON();
+  expect(placeholder).toMatchSnapshot();
+});
+```
+
+To run tests on your own, enter `npm test` from your cmd.
+
+To update a snapshot enter `u` while running the script where the test fails, or run `jest -u`
+
+Be careful not to update a failed snapshot test if you're not sure about why it's failing.
+
 ### svg optimizer
 
 https://jakearchibald.github.io/svgomg/
