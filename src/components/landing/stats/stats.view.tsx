@@ -27,7 +27,7 @@ const StatsView: React.FC = () => {
       <div className="stats__container">
         <h1 className="stats__title">Milestones of 2019</h1>
         <StatsTreeView />
-        <StatsBoxView stats={stats} />}
+        <StatsBoxView stats={stats} />
       </div>
     </>
   );
