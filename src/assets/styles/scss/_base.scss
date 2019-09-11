@@ -1,0 +1,51 @@
+/* _base.scss */
+
+// ============================================================================
+// Global Styles
+// ============================================================================
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.app-root {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  @include font-source-header(
+    $size: 3em,
+    $color: #2e2c5f,
+    $weight: 1000,
+    $lineHeight: 32px,
+    $letterSpace: 0.05em
+  );
+  text-transform: uppercase;
+}
+
+/* Mixins */
+@import './mixins.scss';
+
+/* Fonts */
+@import './fonts.scss';
+
+/* Landing Styles */
+@import './components/landing/landing';
+@import './components/landing/hero/hero';
+@import './components/landing/hero/backdrop/backdrop';
+@import './components/landing/hero/header/header';
+@import './components/landing/hero/header/navbar/navbar';
+@import './components/landing/hero/title-area/title-area';
+
+/* About Styles */
+@import './components/about/about';
+@import './components/about/backdrop/backdrop';

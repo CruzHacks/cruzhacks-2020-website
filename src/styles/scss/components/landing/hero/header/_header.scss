@@ -1,0 +1,39 @@
+/* HeroHeader */
+
+.hero__header {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100vw;
+}
+
+/* HeroLightbulb */
+
+.hero__lightbulb {
+  order: 0;
+  @include svgContainer();
+  width: 36px;
+  height: 30px;
+  position: absolute;
+  left: 38px;
+  top: 22px;
+}
+
+.lightbulb__svg {
+  @include svgContent();
+}
+
+/* HeroMlhBadge */
+
+.hero__mlh-badge {
+  order: 2;
+  @include svgContainer();
+  position: absolute;
+  width: 86px;
+  height: 150px;
+  right: 43px;
+  top: 0;
+}
+
+.mlh-badge__svg {
+  @include svgContent();
+}
