@@ -8,6 +8,8 @@
 
 .about-laptop-container {
   @include svgContainer();
+  top: 0vh;
+  width: 100vw;
 }
 
 .about-laptop-image {
