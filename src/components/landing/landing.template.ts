@@ -1,12 +1,15 @@
-const landingTemplate = [
+const landingTemplate: { name: string; props: any }[] = [
   {
-    HeroView: {},
+    name: 'HeroView',
+    props: {},
   },
   {
-    WelcomeView: {},
+    name: 'WelcomeView',
+    props: {},
   },
   {
-    StatsView: {
+    name: 'StatsView',
+    props: {
       stats: [
         {
           category: 'attendees',
