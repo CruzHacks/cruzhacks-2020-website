@@ -106,12 +106,25 @@
 
 /* PLACEHOLDER */
 .about__placeholder-container {
-  position: absolute;
+  left: 29.21%;
+  right: 61.85%;
+  top: 19.07%;
+  bottom: 80.56%;
   width: 89;
   height: 52;
 }
 
 .about__placeholder-text {
-  position: absolute;
-  width: 89;
+  // position: absolute;
+
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 15px;
+  line-height: 19px;
+  /* identical to box height */
+  letter-spacing: 0.04em;
+  text-indent: 3px;
+
+  color: #cdcdcd;
+
+  transform: rotate(26.68deg);
 }

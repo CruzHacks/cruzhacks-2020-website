@@ -3,6 +3,7 @@ import AboutBackdropView from './backdrop/backdrop.view';
 import AboutTitleView from './about-title.view';
 import AboutSubtitleView from './about-subtitle.view';
 import AboutDescriptionView from './about-description.view';
+import AboutPlaceHolderView from './about-placeholder.view';
 
 const AboutView: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const AboutView: React.FC = () => {
         <AboutTitleView />
         <AboutSubtitleView />
         <AboutDescriptionView />
+        <AboutPlaceHolderView />
       </div>
     </div>
   );
