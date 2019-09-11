@@ -1,5 +1,3 @@
-/* todo  */
-
 .about-view-container {
   @include flexBox();
   position: absolute;
@@ -36,8 +34,6 @@
 }
 
 .about__title-text {
-  // position: absolute;
-
   font-family: Rubik;
   font-style: normal;
   font-weight: bold;
@@ -106,17 +102,21 @@
 
 /* PLACEHOLDER */
 .about__placeholder-container {
-  left: 29.21%;
-  right: 61.85%;
-  top: 19.07%;
-  bottom: 80.56%;
+  position: absolute;
+  // left: 29.21%;
+  // right: 61.85%;
+  // top: 19.07%;
+  // bottom: 80.56%;
+
+  left: 329px;
+  top: 246px;
   width: 89;
   height: 52;
+
+  white-space: nowrap;
 }
 
 .about__placeholder-text {
-  // position: absolute;
-
   font-family: SofiaProSoftW01-Regular;
   font-size: 15px;
   line-height: 19px;
