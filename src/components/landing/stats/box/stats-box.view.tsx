@@ -7,7 +7,7 @@ type BoxProps = {
   }[];
 };
 
-const StatsBoxView: React.FC<BoxProps> = BoxProps => {
+export const StatsBoxView: React.FC<BoxProps> = BoxProps => {
   return (
     <>
       {/* BoxProps.stats.map(metric => ) */}

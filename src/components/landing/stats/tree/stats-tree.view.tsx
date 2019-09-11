@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StatsTree: React.FC = () => {
+export const StatsTree: React.FC = () => {
   return (
     <>
       <div className="stats__tree-container">

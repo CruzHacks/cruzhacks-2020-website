@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LandingView from '../components/landing/landing.view';
 
 // import landing text template
-import landingTemplate from '../components/landing/landing.template';
+// import landingTemplate from '../components/landing/landing.template';
 
 const Routes: React.FC = () => {
   return (
@@ -13,10 +13,7 @@ const Routes: React.FC = () => {
       <div className="routes">
         <Router>
           <Switch>
-            <Route
-              path="/"
-              render={() => <LandingView text={landingTemplate} />}
-            />
+            <Route path="/" render={() => <LandingView />} />
           </Switch>
         </Router>
       </div>
