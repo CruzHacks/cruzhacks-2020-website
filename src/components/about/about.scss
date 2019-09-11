@@ -6,11 +6,7 @@
 
 */
 
-.about__description {
-  position: absolute;
-  width: 574;
-  height: 154;
-}
+/* LAPTOP */
 
 .about__laptop {
   position: absolute;
@@ -18,20 +14,92 @@
   height: 446;
 }
 
-.about__placeholder {
+.about-view-container {
+  @include flexBox();
+  position: absolute;
+  bottom: 0;
+}
+
+/* TITLE */
+.about__title-container {
+  position: absolute;
+  left: 42.53%;
+  // right: 4.95%;
+  top: 19.3%;
+  // bottom: 79.17%;
+  width: 451;
+  height: 21;
+}
+
+.about__title-text {
+  position: absolute;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+  text-indent: 3px;
+
+  color: #2e2c5f;
+
+  mix-blend-mode: normal;
+}
+
+/* SUBTITLE */
+.about__subtitle-container {
+  position: absolute;
+  left: 42.97%;
+  // right: 42.01%;
+  top: 20.12%;
+  // bottom: 79.4%;
+  width: 171;
+  height: 15;
+}
+
+.about__subtitle-text {
+  font-family: Avenir;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+  letter-spacing: 0.04em;
+  text-indent: 3px;
+
+  color: #767676;
+}
+
+/* DESCRIPTION */
+.about__description-container {
+  position: absolute;
+  left: 42.97%;
+  // right: 6.42%;
+  top: 21.08%;
+  // bottom: 75.37%;
+  width: 574;
+  height: 154;
+}
+
+.about__description-text {
+  position: absolute;
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 18px;
+  line-height: 150%;
+  /* or 27px */
+  letter-spacing: 0.02em;
+
+  color: #383636;
+}
+
+/* PLACEHOLDER */
+// container and text
+.about__placeholder-container {
   position: absolute;
   width: 89;
   height: 52;
 }
 
-.about__subtitle {
+.about__placeholder-text {
   position: absolute;
-  width: 171;
-  height: 15;
-}
-
-.about__title {
-  position: absolute;
-  width: 451;
-  height: 21;
+  width: 89;
 }
