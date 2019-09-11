@@ -5,18 +5,13 @@ import HeroView from './hero/hero.view';
 import StatsView from './stats/stats.view';
 import AboutView from './about/about.view';
 
-type LandingProps = {
-  text: {
-    name: string;
-    props: any;
-  }[];
-};
-
-const LandingView: React.FC<LandingProps> = props => {
+export const LandingView: React.FC = () => {
   return (
     <>
       <div className="landing">
         <HeroView />
+        <AboutView />
+        <StatsView />
       </div>
     </>
   );
