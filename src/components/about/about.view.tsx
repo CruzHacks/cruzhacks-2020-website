@@ -9,11 +9,11 @@ const AboutView: React.FC = () => {
   return (
     <div className="about-view-container">
       <AboutBackdropView />
+      <AboutPlaceHolderView />
       <div className="about-text-area-view-container">
         <AboutTitleView />
         <AboutSubtitleView />
         <AboutDescriptionView />
-        <AboutPlaceHolderView />
       </div>
     </div>
   );
