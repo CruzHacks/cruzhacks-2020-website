@@ -153,8 +153,7 @@
 
 @mixin svgContainer() {
   display: inline-block;
-  position: relative;
-  width: 100%;
+  position: static;
   padding-bottom: 100%;
   vertical-align: middle;
   overflow: hidden;

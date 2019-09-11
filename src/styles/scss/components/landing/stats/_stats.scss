@@ -12,7 +12,7 @@
     text-align: center;
   }
   &__tree-container {
-    margin: 0 auto 0 auto;
+    @include svgContainer();
     width: 45%;
     max-width: 800px;
   }

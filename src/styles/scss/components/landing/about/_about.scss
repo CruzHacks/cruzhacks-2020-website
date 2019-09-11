@@ -1,5 +1,15 @@
 .about-view-container {
   @include flexBox();
+  height: 20vh;
+  width: 100vw;
   position: absolute;
-  bottom: 0;
+  top: 100vh;
+}
+
+.about-laptop-container {
+  @include svgContainer();
+}
+
+.about-laptop-image {
+  @include svgContent();
 }
