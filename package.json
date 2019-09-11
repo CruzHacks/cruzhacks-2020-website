@@ -12,6 +12,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "CItest": "cross-env CI=true react-scripts test",
     "eject": "react-scripts eject",
     "build-docker-image": "docker build -t cruzhacks-2020-website .",
     "delete-docker-image": "docker image rm cruzhacks-2020-website",
@@ -35,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^5.2.1",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.3",
     "@types/react": "16.9.2",
