@@ -1,12 +1,16 @@
 import React from 'react';
-import Routes from './routes/routes';
+import LandingView from './components/landing/landing.view';
+import AboutView from './components/about/about.view';
 
 const App: React.FC = () => {
   return (
     <>
-      <Routes />
+      <LandingView />
+      <AboutView />
     </>
   );
 };
 
 export default App;
+
+// <div className="test-container">Howdy Partner</div>
