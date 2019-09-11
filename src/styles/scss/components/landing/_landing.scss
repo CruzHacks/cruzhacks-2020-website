@@ -1,3 +1,5 @@
-.landing {
-  display: flex;
+/* _landing.scss */
+
+.landing__container {
+  @include flexBox();
 }

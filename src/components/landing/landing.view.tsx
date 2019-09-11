@@ -8,7 +8,7 @@ import AboutView from './about/about.view';
 export const LandingView: React.FC = () => {
   return (
     <>
-      <div className="landing">
+      <div className="landing__container">
         <HeroView />
         <AboutView />
         <StatsView />

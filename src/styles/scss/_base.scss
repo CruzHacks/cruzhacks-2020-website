@@ -5,7 +5,7 @@
 // ============================================================================
 
 /* Mixins */
-@import './mixins';
+@import './mixins.scss';
 
 body {
   margin: 0;
@@ -36,9 +36,9 @@ h1 {
 }
 
 /* Fonts */
-@import './fonts';
+@import './fonts.scss';
 
-/* Landing Styles */
+/* Hero Styles */
 @import './components/landing/landing';
 @import './components/landing/hero/hero';
 @import './components/landing/hero/backdrop/backdrop';
@@ -49,6 +49,3 @@ h1 {
 /* About Styles */
 @import './components/landing/about/about';
 @import './components/landing/about/backdrop/backdrop';
-
-/* Stats Styles */
-@import './components/landing/stats/stats';
