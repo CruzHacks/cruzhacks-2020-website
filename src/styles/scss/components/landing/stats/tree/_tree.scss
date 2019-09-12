@@ -1,0 +1,10 @@
+&__tree {
+  @include svgContent();
+  width: 75vw;
+  margin: 0 auto;
+}
+&__tree-container {
+  @include svgContainer();
+  max-width: 800px;
+  height: 45vh;
+}

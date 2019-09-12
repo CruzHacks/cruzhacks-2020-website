@@ -1,4 +1,7 @@
 .stats {
+  // import tree & box children
+  @import './tree/tree';
+  @import './box/box';
   align-content: center;
   &__container {
     @include flexBox();
@@ -12,23 +15,5 @@
     margin: auto;
     text-align: center;
     position: absolute;
-  }
-  &__tree {
-    @include svgContent();
-    width: 75vw;
-    margin: 0 auto;
-  }
-  &__tree-container {
-    @include svgContainer();
-    max-width: 800px;
-    height: 45vh;
-  }
-  &__stat-box {
-    position: absolute;
-    background: #ffffff;
-    border: 4px solid #76e2da;
-    box-sizing: border-box;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
   }
 }
