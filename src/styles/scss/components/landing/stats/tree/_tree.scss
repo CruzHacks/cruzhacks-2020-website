@@ -2,9 +2,11 @@
   @include svgContent();
   width: 75vw;
   margin: 0 auto;
+  top: 10vh;
 }
 &__tree-container {
   @include svgContainer();
-  max-width: 800px;
   height: 45vh;
+  width: 100vw;
+  margin: 0 auto;
 }
