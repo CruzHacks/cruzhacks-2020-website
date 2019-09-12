@@ -5,7 +5,7 @@
 // ============================================================================
 
 /* Mixins */
-@import './mixins.scss';
+@import './mixins';
 
 body {
   margin: 0;
@@ -22,17 +22,6 @@ body {
   left: 0;
   right: 0;
   min-height: 100vh;
-}
-
-h1 {
-  @include font-source-header(
-    $size: 3em,
-    $color: #2e2c5f,
-    $weight: 1000,
-    $lineHeight: 32px,
-    $letterSpace: 0.05em
-  );
-  text-transform: uppercase;
 }
 
 /* Fonts */

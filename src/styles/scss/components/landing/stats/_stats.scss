@@ -11,7 +11,10 @@
     top: 150vh;
   }
   &__title {
-    top: 10vh;
+    @include h1();
+    width: 100vw;
+    display: block;
+    top: 0;
     margin: auto;
     text-align: center;
     position: absolute;
