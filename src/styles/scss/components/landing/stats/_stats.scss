@@ -2,13 +2,15 @@
   // import tree & box children
   @import './tree/tree';
   @import './box/box';
-  align-content: center;
   &__container {
     @include flexBox();
+    flex-direction: column;
     height: 50vh;
     width: 100vw;
     position: absolute;
     top: 150vh;
+    justify-content: space-around;
+    align-content: center;
   }
   &__title {
     @include h1();
