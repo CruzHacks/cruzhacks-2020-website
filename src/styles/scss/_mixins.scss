@@ -69,9 +69,10 @@
   @include font-source-header(
     $size: 3em,
     $color: #2e2c5f,
-    $weight: 1000,
+    $weight: bold,
     $lineHeight: 32px,
-    $letterSpace: 0.05em
+    $letterSpace: 0.05em,
+    $bold: true
   );
   text-transform: uppercase;
 }
@@ -143,9 +144,13 @@
   $color: false,
   $weight: false,
   $lineHeight: false,
-  $letterSpace: false
+  $letterSpace: false,
+  $bold: false
 ) {
   font-family: Rubik;
+  @if ($bold) {
+    font-family: RubikBold;
+  }
   @if ($size) {
     font-size: $size;
   }

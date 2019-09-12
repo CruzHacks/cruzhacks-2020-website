@@ -1,5 +1,29 @@
 /* Header font */
 @font-face {
+  font-family: 'RubikBold';
+
+  src: 
+  /* IE9*/
+  url('../../assets/fonts/header/RubikBold.eot');
+  
+  src: 
+    /* IE6-IE8 */
+    url('../../assets/fonts/header/RubikBold.eot?#iefix')
+      format('embedded-opentype'),
+    /* chrome、firefox */ 
+    url('../../assets/fonts/header/RubikBold.woff2')
+      format('woff2'),
+    /* chrome、firefox */ 
+    url('../../assets/fonts/header/RubikBold.woff')
+      format('woff'),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../../assets/fonts/header/RubikBold.ttf')
+      format('truetype'),
+    /* iOS 4.1- */ 
+    url('../../assets/fonts/header/RubikBold.svg#Rubik')
+      format('svg');
+}
+@font-face {
   font-family: 'Rubik';
 
   src: 

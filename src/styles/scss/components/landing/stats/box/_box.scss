@@ -1,10 +1,10 @@
 &__box {
-  position: absolute;
-  //background: #ffffff;
+  position: sticky;
   border: 4px solid #76e2da;
   box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
+  padding: 3em 2em 3em 2em;
 }
 
 &__box-stat {
@@ -14,11 +14,18 @@
     $weight: 500,
     $lineHeight: 41px
   );
+  display: block;
+  text-align: center;
 }
 
 &__box-category {
+  @include h1();
+  font-size: 2em;
+  display: block;
+  text-align: center;
 }
 
 &__box-container {
   @include flexBox();
+  justify-content: space-around;
 }
