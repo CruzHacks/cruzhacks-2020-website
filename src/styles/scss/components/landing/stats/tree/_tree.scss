@@ -2,13 +2,15 @@
   @include svgContent();
   width: 75vw;
   height: 35vh;
+  top: 5vh;
   position: relative;
 }
 &__tree-container {
   @include svgContainer();
-  height: 45vh;
-  width: 100vw;
-  margin: 0 auto;
+  height: 50vh;
+  width: auto;
   top: 10vh;
-  left: auto;
+  position: static;
+  vertical-align: middle;
+  align-self: center;
 }

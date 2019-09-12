@@ -5,12 +5,11 @@
   &__container {
     @include flexBox();
     flex-direction: column;
-    height: 50vh;
+    height: 65vh;
     width: 100vw;
     position: absolute;
     top: 150vh;
     justify-content: space-around;
-    align-content: center;
   }
   &__title {
     @include h1();
