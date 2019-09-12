@@ -4,25 +4,37 @@
   box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  padding: 3em 2em 3em 2em;
+  max-width: 16.75em;
+  max-height: 14em;
+  padding: 3em;
 }
 
 &__box-stat {
   @include font-source-header(
-    $size: 4em,
+    $size: 3.5em,
     $color: #5dcec6,
     $weight: 500,
     $lineHeight: 41px
   );
+  padding: 0.1em 0.1em 0.5em 0.1em;
   display: block;
+  word-wrap: normal;
   text-align: center;
 }
 
 &__box-category {
-  @include h1();
-  font-size: 2em;
+  @include font-source-header(
+    $size: 1.75em,
+    $color: #2e2c5f,
+    $bold: true,
+    $lineHeight: 32px,
+    $letterSpace: 0.02em
+  );
+  padding-top: 0.5em;
+  text-transform: uppercase;
   display: block;
   text-align: center;
+  min-width: 5em;
 }
 
 &__box-container {
