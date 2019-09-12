@@ -6,7 +6,8 @@
   border-radius: 30px;
   max-width: 16.75em;
   max-height: 14em;
-  padding: 3em;
+  height: 40vh;
+  width: 40vw;
 }
 
 &__box-stat {
@@ -16,7 +17,7 @@
     $weight: 500,
     $lineHeight: 41px
   );
-  padding: 0.1em 0.1em 0.5em 0.1em;
+  padding: 0.5em 0.1em 0.5em 0.1em;
   display: block;
   word-wrap: normal;
   text-align: center;
@@ -40,4 +41,5 @@
 &__box-container {
   @include flexBox();
   justify-content: space-around;
+  vertical-align: bottom;
 }
