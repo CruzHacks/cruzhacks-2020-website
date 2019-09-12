@@ -87,6 +87,7 @@
   $lineHeight: false,
   $letterSpace: false
 ) {
+  font-family: SofiaProSoftW01-Regular;
   @if ($size) {
     font-size: $size;
   }
