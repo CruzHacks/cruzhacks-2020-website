@@ -9,7 +9,7 @@ export const StatsBoxView: React.FC<BoxProps> = BoxProps => {
     <>
       <div className="stats__box-container">
         {BoxProps.stats.map(metric => (
-          <div className="stats__box">
+          <div className="stats__box" key={metric.category}>
             <span className="stats__box-stat">{metric.stat}</span>
             <span className="stats__box-category">{metric.category}</span>
           </div>

@@ -40,6 +40,6 @@
 
 &__box-container {
   @include flexBox();
-  justify-content: space-around;
   vertical-align: bottom;
+  justify-content: space-evenly;
 }
