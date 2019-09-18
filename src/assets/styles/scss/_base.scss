@@ -30,6 +30,9 @@ code {
 
 @import './mixins.scss';
 
+/* Fonts */
+@import './fonts.scss';
+
 /* Landing Styles */
 
 @import './components/landing/landing';
@@ -43,3 +46,17 @@ code {
 
 @import './components/about/about';
 @import './components/about/backdrop/backdrop';
+
+
+/* Welcome Styles */
+@import './components/welcome/welcome';
+@import './components/welcome/backdrop/backdrop';
+@import './components/welcome/cards/cards';
+@import './components/welcome/title/title';
+
+
+/* Footer Styles */
+@import './components/footer/footer';
+@import './components/footer/backdrop/backdrop';
+@import './components/footer/text/text';
+@import './components/footer/buttons/buttons';
