@@ -33,8 +33,10 @@ code {
 /* Fonts */
 @import './fonts.scss';
 
-/* Landing Styles */
+/* Background */
+@import './components/background/background';
 
+/* Landing Styles */
 @import './components/landing/landing';
 @import './components/landing/hero/hero';
 @import './components/landing/hero/backdrop/backdrop';
