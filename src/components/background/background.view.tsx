@@ -27,7 +27,7 @@ import BackdropFooterTreeView from './backdrop/footer/backdrop-footer-trees.view
 const BackdropView: React.FC = () => {
     return (
         <>
-            <div className="Backdrop__container">
+            <div className="background__container">
                 <div className="hero-backdrop__container">
                     <BackdropHeroPillars />
                     <BackdropHeroRightSideView />
