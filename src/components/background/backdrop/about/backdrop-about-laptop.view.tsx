@@ -1,10 +1,10 @@
 import React from 'react';
 
-const BackgroundAboutLaptopView: React.FC = () => {
+const BackdropAboutLaptop: React.FC = () => {
   return (
     <>
       <svg
-        className="about-laptop-image"
+        className="about-backdrop-laptop__image"
         viewBox="0 0 420 446"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -40,4 +40,4 @@ const BackgroundAboutLaptopView: React.FC = () => {
   );
 };
 
-export default BackgroundAboutLaptopView;
+export default BackdropAboutLaptop;

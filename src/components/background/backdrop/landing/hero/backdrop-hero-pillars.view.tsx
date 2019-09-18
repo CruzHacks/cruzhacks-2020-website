@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BackgroundHeroPillarsView: React.FC = () => {
+const BackdropHeroPillarsView: React.FC = () => {
   return (
     <>
       <div className="left-pillar1-container">
@@ -111,4 +111,4 @@ const BackgroundHeroPillarsView: React.FC = () => {
   );
 };
 
-export default BackgroundHeroPillarsView;
+export default BackdropHeroPillarsView;

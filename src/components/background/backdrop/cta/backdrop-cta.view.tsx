@@ -1,9 +1,9 @@
 // Call to Action backdrop (cta)
 import React from 'react';
 
-const BackgroundCtaView: React.FC = () => {
+const BackdropCtaView: React.FC = () => {
     return (
-        <svg width="433" height="645" viewBox="0 0 433 645" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="cta-backdrop__image" width="433" height="645" viewBox="0 0 433 645" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M348.927 44L276.865 80V296L348.927 259V44Z" fill="url(#cta_paint0_linear)" />
             <g clip-path="url(#cta_clip0)">
                 <path d="M435.194 353.487V645L321.669 587.255C315.637 584.181 308.489 584.181 302.457 587.255L200.733 638.999C193.299 642.779 184.52 642.825 177.052 639.124L77.209 589.715C70.9495 586.618 70.7557 577.758 76.8897 574.399L124.799 548.118C132.643 543.813 132.438 532.494 124.445 528.475L7.80795 469.808C-1.73512 465.002 -1.78073 451.406 7.72813 446.544L211.599 342.373C223.126 336.486 236.773 336.498 248.289 342.408L305.068 371.547C309.446 373.791 314.634 373.791 319.012 371.547L381.071 339.697C389.28 335.484 399.005 335.427 407.26 339.549L435.194 353.487Z" fill="url(#cta_paint1_linear)" />
@@ -57,4 +57,4 @@ const BackgroundCtaView: React.FC = () => {
     );
 };
 
-export default BackgroundCtaView;
+export default BackdropCtaView;
