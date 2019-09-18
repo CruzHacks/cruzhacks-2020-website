@@ -4,4 +4,6 @@
 
 .landing-view-container {
   @include flexBox();
+  position: relative;
+  min-height: 766px;
 }
