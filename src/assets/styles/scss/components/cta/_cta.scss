@@ -4,8 +4,8 @@ $main: 'Rubik', sans-serif;
 
 .cta-view-container {
   position: relative;
-  height: 100%;
-  width: 100%;
+  min-height: 766px;
+  width: 100vw;
   left: 0;
   top: 0;
   display: flex;
@@ -92,7 +92,7 @@ $main: 'Rubik', sans-serif;
     text-align: center;
     vertical-align: center;
     border-radius: 10px;
-    // padding: 0 15% 0 15%;
+    box-shadow: 0 2px 2px #bfbfbf;
   }
 
   .button--mentor {
@@ -194,7 +194,7 @@ $main: 'Rubik', sans-serif;
     text-align: center;
     vertical-align: center;
     border-radius: 10px;
-    // padding: 0 15% 0 15%;
+    box-shadow: 0 2px 2px #bfbfbf;
   }
 
   .button__text {
