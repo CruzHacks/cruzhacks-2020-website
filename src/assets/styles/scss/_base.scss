@@ -31,7 +31,8 @@ code {
 @import './mixins.scss';
 
 /* Fonts */
-@import './fonts.scss';
+
+// @import './fonts.scss';
 
 /* Landing Styles */
 
@@ -43,10 +44,8 @@ code {
 @import './components/landing/hero/title-area/title-area';
 
 /* About Styles */
-
 @import './components/about/about';
 @import './components/about/backdrop/backdrop';
-
 
 /* Welcome Styles */
 @import './components/welcome/welcome';
@@ -54,8 +53,9 @@ code {
 @import './components/welcome/cards/cards';
 @import './components/welcome/title/title';
 
+/* CTA Styles */
+@import './components/cta/cta';
 
-/* Footer Styles */
 @import './components/footer/footer';
 @import './components/footer/backdrop/backdrop';
 @import './components/footer/text/text';
