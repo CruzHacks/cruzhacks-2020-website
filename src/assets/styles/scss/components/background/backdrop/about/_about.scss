@@ -1,0 +1,5 @@
+.about-backdrop__container {
+    @include flexBox();
+    position: relative;
+    min-height: 580px;
+}
