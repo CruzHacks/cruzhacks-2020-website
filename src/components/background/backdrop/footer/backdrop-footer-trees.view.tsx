@@ -1,8 +1,8 @@
 import React from 'react';
 
-const BackgroundFooterTreeView: React.FC = () => {
+const BackdropFooterTreeView: React.FC = () => {
     return (
-        <svg className="footer-trees-image" width="366" height="333" viewBox="0 0 366 333" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="footer-backdrop-trees__image" width="366" height="333" viewBox="0 0 366 333" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#footer_clip0)">
                 <path d="M131.675 168.997L78.3704 142.027C72.1071 138.855 64.7003 138.87 58.4446 142.05L5.1321 169.191C-1.60204 172.617 -1.58708 182.231 5.15451 185.643L57.4879 212.119C64.3491 215.59 72.4509 215.598 79.3271 212.149L131.653 185.837C138.581 182.366 138.596 172.498 131.675 168.997Z" fill="url(#footer-tree0_linear)" />
                 <path d="M8.52528 125.359V149.022C8.52528 155.232 12.0231 160.913 17.5689 163.727L54.1395 182.232C61.0829 185.747 69.2894 185.762 76.2477 182.269L119.724 160.473C125.053 157.8 128.424 152.351 128.424 146.394V125.367L65.4701 156.598L8.52528 125.359Z" fill="#E7E7FB" />
@@ -68,4 +68,4 @@ const BackgroundFooterTreeView: React.FC = () => {
     );
 };
 
-export default BackgroundFooterTreeView;
+export default BackdropFooterTreeView;

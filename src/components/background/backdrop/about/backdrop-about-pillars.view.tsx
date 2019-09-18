@@ -1,8 +1,8 @@
 import React from 'react';
 
-const BackgroundAboutPillarsView: React.FC = () => {
+const BackdropAboutPillars: React.FC = () => {
     return (
-        <svg className="about-pillars" width="616" height="470" viewBox="0 0 616 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="about-backdrop-pillars__image" width="616" height="470" viewBox="0 0 616 470" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M107.495 123L143.526 142V470L107.495 449V123Z" fill="url(#about-pillars_paint0_linear)" />
             <g clip-path="url(#about-pillars_clip0)">
                 <path d="M0.401886 0L72.4644 36V252L0.401886 215V0Z" fill="url(#about-pillars_paint1_linear)" />
@@ -49,4 +49,4 @@ const BackgroundAboutPillarsView: React.FC = () => {
     );
 };
 
-export default BackgroundAboutPillarsView;
+export default BackdropAboutPillars;
