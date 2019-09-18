@@ -13,6 +13,8 @@ const App: React.FC = () => {
     <>
       <BackgroundView />
       <LandingView />
+      <AboutView />
+      <WelcomeView />
     </>
   );
 };
