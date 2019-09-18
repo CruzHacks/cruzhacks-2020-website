@@ -7,15 +7,11 @@ import AboutPlaceHolderView from './about-placeholder.view';
 
 const AboutView: React.FC = () => {
   return (
-    <div className="about-view-container">
-      <AboutBackdropView />
-      <AboutPlaceHolderView />
       <div className="about-text-area-view-container">
         <AboutTitleView />
         <AboutSubtitleView />
         <AboutDescriptionView />
       </div>
-    </div>
   );
 };
 
