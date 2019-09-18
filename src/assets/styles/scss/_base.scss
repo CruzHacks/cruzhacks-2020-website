@@ -19,6 +19,8 @@ body {
   left: 0;
   right: 0;
   min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
 }
 
 code {
@@ -55,7 +57,9 @@ code {
 
 /* CTA Styles */
 @import './components/cta/cta';
+@import './components/cta/backdrop/backdrop';
 
+/* Footer Styles */
 @import './components/footer/footer';
 @import './components/footer/backdrop/backdrop';
 @import './components/footer/text/text';

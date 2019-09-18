@@ -1,8 +1,26 @@
+.hero-view-container {
+  display: flex;
+  flex-flow: column nowrap;
+  // width: 100vw;
+  min-height: 813px;
+}
+
 @media all and (max-width: 700px) {
+  div.hero-view-container {
+    justify-content: center;
+    align-items: center;
+  }
+
   div.navbar__button-container {
     flex-flow: column wrap;
     right: 0;
     right: 35%;
+  }
+
+  div.hero-title-area-view-container {
+    justify-content: center;
+    left: 0;
+    top: 60%;
   }
 }
 
