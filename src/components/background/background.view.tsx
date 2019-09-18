@@ -1,53 +1,68 @@
 /*
-    TODO: Add all background views into this component.
+    TODO: Add all Backdrop views into this component.
 */
 
 import React from 'react';
 
 /* Hero Section */
-import BackgroundHeroPillars from './backdrop/landing/hero/background-hero-pillars.view';
-import BackgroundHeroRightSideView from './backdrop/landing/hero/background-hero-rightside.view';
+import BackdropHeroPillars from './backdrop/landing/hero/backdrop-hero-pillars.view';
+import BackdropHeroRightSideView from './backdrop/landing/hero/backdrop-hero-rightside.view';
 
 /* About Section */
-import BackgroundAboutLaptopView from './backdrop/about/background-about-laptop.view';
-import BackgroundAboutPillarsView from './backdrop/about/background-about-pillars.view';
+import BackdropAboutLaptopView from './backdrop/about/backdrop-about-laptop.view';
+import BackdropAboutPillarsView from './backdrop/about/backdrop-about-pillars.view';
 
 /* Welcome Section */
-import WelcomeMoutainView from './backdrop/welcome/background-welcome-mountain.view';
-import WelcomePillarsView from './backdrop/welcome/background-welcome-pillars.view';
+import WelcomeMoutainView from './backdrop/welcome/backdrop-welcome-mountain.view';
+import WelcomePillarsView from './backdrop/welcome/backdrop-welcome-pillars.view';
 
 /* CTA Section */
-import BackgroundCtaView from './backdrop/cta/background-cta.view';
+import BackdropCtaView from './backdrop/cta/backdrop-cta.view';
 
 /* Footer Section */
-import BackgroundFooterExtendedView from './backdrop/footer/background-footer-extended.view';
-import BackgroundFooterPillarsView from './backdrop/footer/background-footer-pillars.view';
-import BackgroundFooterTreeView from './backdrop/footer/background-footer-trees.view';
+import BackdropFooterExtendedView from './backdrop/footer/backdrop-footer-extended.view';
+import BackdropFooterPillarsView from './backdrop/footer/backdrop-footer-pillars.view';
+import BackdropFooterTreeView from './backdrop/footer/backdrop-footer-trees.view';
 
-const BackgroundView: React.FC = () => {
+const BackdropView: React.FC = () => {
     return (
         <>
-            <div className="background__container">
+            <div className="Backdrop__container">
                 <div className="hero-backdrop__container">
-                    <BackgroundHeroPillars />
-                    <BackgroundHeroRightSideView />
+                    <BackdropHeroPillars />
+                    <BackdropHeroRightSideView />
                 </div>
                 <div className="about-backdrop__container">
-                    <BackgroundAboutLaptopView />
-                    <BackgroundAboutPillarsView />
+                    <BackdropAboutLaptopView />
+                    <BackdropAboutPillarsView />
+                </div>
+                <div className="welcome-backdrop__container">
+                    <WelcomeMoutainView />
+                    <WelcomePillarsView />
+                </div>
+                <div className="stats-backdrop__container"></div>
+                <div className="cta-backdrop__container">
+                    <BackdropCtaView />
+                </div>
+                <div className="faq-backdrop__container"></div>
+                <div className="sponsors-backdrop__container"></div>
+                <div className="footer-backdrop__container">
+                    <BackdropFooterExtendedView />
+                    <BackdropFooterPillarsView />
+                    <BackdropFooterTreeView />
                 </div>
             </div>
         </>
     );
 };
 
-export default BackgroundView;
+export default BackdropView;
 
 /*
 
 <div className="about-backdrop__container">
-                    <BackgroundAboutLaptopView />
-                    <BackgroundAboutPillarsView />
+                    <BackdropAboutLaptopView />
+                    <BackdropAboutPillarsView />
                 </div>
 
                 <div className="welcome-backdrop__container">
@@ -56,13 +71,13 @@ export default BackgroundView;
                 </div>
 
                 <div className="cta-backdrop__container">
-                    <BackgroundCtaView />
+                    <BackdropCtaView />
                 </div>
 
                 <div className="footer-backdrop__container">
-                    <BackgroundFooterExtendedView />
-                    <BackgroundFooterPillarsView />
-                    <BackgroundFooterTreeView />
+                    <BackdropFooterExtendedView />
+                    <BackdropFooterPillarsView />
+                    <BackdropFooterTreeView />
                 </div>
 
 */

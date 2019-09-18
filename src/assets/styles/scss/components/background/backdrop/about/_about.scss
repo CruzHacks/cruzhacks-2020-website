@@ -3,3 +3,24 @@
     position: relative;
     min-height: 580px;
 }
+
+/* SVGs */
+
+.about-backdrop-laptop__image,
+.about-backdrop-pillars__image {
+    position: absolute;
+}
+
+
+.about-backdrop-laptop__image {
+    top: 64px;
+    left: 0;
+
+    width: 420px;
+    height: 446px;
+}
+
+.about-backdrop-pillars__image {
+    top: -92px;
+    right: 70px;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BackgroundHeroRightSideView: React.FC = () => {
+const BackdropHeroRightsideView: React.FC = () => {
   return (
     <div className="hero-right-side-container">
       <svg
@@ -35,4 +35,4 @@ const BackgroundHeroRightSideView: React.FC = () => {
   );
 };
 
-export default BackgroundHeroRightSideView;
+export default BackdropHeroRightsideView;

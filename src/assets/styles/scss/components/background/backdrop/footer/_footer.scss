@@ -1,0 +1,27 @@
+.footer-backdrop__container {
+    @include flexBox();
+    position: relative;
+    min-height: 566px;
+}
+
+/* SVGs */
+.footer-backdrop-extended__image,
+.footer-backdrop-pillars__image,
+.footer-backdrop-trees__image {
+    position: absolute;
+}
+
+.footer-backdrop-extended__image {
+    bottom: 36px;
+    width: 100%;
+}
+
+.footer-backdrop-pillars__image {
+    top: 42px;
+    right: 74px;
+}
+
+.footer-backdrop-trees__image {
+    top: 42px;
+    left: 137px;
+}

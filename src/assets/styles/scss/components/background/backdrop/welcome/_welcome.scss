@@ -1,0 +1,23 @@
+.welcome-backdrop__container {
+    @include flexBox();
+    position: relative;
+    min-height: 896px;
+}
+
+/* SVGs */
+.welcome-backdrop-mountain__image,
+.welcome-backdrop-pillars__image {
+    align-self: center;
+    position: absolute;
+}
+
+.welcome-backdrop-mountain__image {
+    bottom: -54px;
+}
+
+.welcome-backdrop-pillars__image {
+    z-index: -1;
+    width: 100%;
+    height: 500px;
+    top: -32px;
+}
