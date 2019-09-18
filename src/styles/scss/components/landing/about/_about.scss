@@ -1,36 +1,18 @@
-.about-view-container {
-  @include flexBox();
-  position: absolute;
-  bottom: 0;
-}
-
-.about__laptop {
-  position: absolute;
-  width: 421;
-  height: 446;
-}
-
+// .about-view-container {
+//   @include flexBox();
+//   position: relative;
+//   bottom: 0%;
+// }
 .about-text-area-view-container {
-  position: absolute;
+  @include flexBox();
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
   left: 491px;
-  top: 195px;
-  // left: 42.53%;
-  // right: 4.95%;
-  // top: 19.3%;
-  // bottom: 79.17%;
-  width: 606px;
-  height: 275px;
-}
+  top: 997px;
 
-/* TITLE */
-.about__title-container {
-  position: absolute;
-  // left: 42.53%;
-  // right: 4.95%;
-  // top: 19.3%;
-  // bottom: 79.17%;
-  width: 951;
-  height: 21;
+  max-width: 584px;
 }
 
 .about__title-text {
@@ -42,85 +24,41 @@
   letter-spacing: 0.05em;
   text-indent: 3px;
 
-  // white-space: nowrap;
-  // text-align: center;
-
   color: #2e2c5f;
 
   mix-blend-mode: normal;
-}
 
-/* SUBTITLE */
-.about__subtitle-container {
-  position: absolute;
-  // left: 42.97%;
-  // right: 42.01%;
-  // bottom: 79.4%;
-  //relative to text area container
-  top: 42px;
-  left: 5px;
-  width: 171;
-  height: 15;
+  height: 33px;
 }
 
 .about__subtitle-text {
   font-family: Avenir;
   font-size: 18px;
   line-height: 25px;
-  /* identical to box height */
   letter-spacing: 0.04em;
   text-indent: 3px;
 
-  // white-space: nowrap;
-
   color: #767676;
-}
 
-/* DESCRIPTION */
-.about__description-container {
-  position: absolute;
-  // left: 42.97%;
-  // right: 6.42%;
-  // top: 21.08%;
-  // bottom: 75.37%;
-
-  top: 104px;
-  width: 574;
-  height: 154;
+  margin-top: 10px;
+  height: 25px;
 }
 
 .about__description-text {
-  // position: absolute;
   font-family: SofiaProSoftW01-Regular;
   font-size: 18px;
   line-height: 150%;
-  /* or 27px */
   letter-spacing: 0.02em;
-
   color: #383636;
-}
 
-/* PLACEHOLDER */
-.about__placeholder-container {
-  position: absolute;
-  // left: 29.21%;
-  // right: 61.85%;
-  // top: 19.07%;
-  // bottom: 80.56%;
-
-  left: 329px;
-  top: 246px;
-  width: 89;
-  height: 52;
-
-  white-space: nowrap;
+  margin-top: 25px;
+  height: 150%;
 }
 
 .about__placeholder-text {
   font-family: SofiaProSoftW01-Regular;
   font-size: 15px;
   line-height: 19px;
-  /* identical to box height */
   letter-spacing: 0.04em;
   text-indent: 3px;
 

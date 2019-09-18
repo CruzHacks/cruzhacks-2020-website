@@ -2,7 +2,6 @@ import React from 'react';
 
 const AboutDescriptionView: React.FC = () => {
     return (
-      <div className="about__description-container">
         <div className="about__description-text">
           <p>
             CruzHacks brings together a diverse and inclusive group of students
@@ -14,7 +13,6 @@ const AboutDescriptionView: React.FC = () => {
             efforts every year.
           </p>
         </div>
-      </div>
     );
 };
 
