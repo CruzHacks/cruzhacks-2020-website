@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
 import fbIcon from '../../../assets/images/social/facebook-icon.png';
