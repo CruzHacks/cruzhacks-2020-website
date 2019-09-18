@@ -1,9 +1,4 @@
 
-@font-face {
-    font-family: Rubik;
-    src: url('../../../../fonts/header/Rubik.woff');
-}
-
 $text-color: #2e2c5f;
 
 @media all and (max-width: 960px) {
@@ -39,9 +34,9 @@ $text-color: #2e2c5f;
 }
 
 .welcome-card__header {
+    font-family: Rubik;
     font-weight: 500;
     color: $text-color;
-    font-family: Rubik;
 }
 
 .welcome-card__caption {
