@@ -3,7 +3,7 @@ import React from 'react';
 const FooterTreeView: React.FC = () => {
     return (
         <svg className="footer-trees-image" width="366" height="333" viewBox="0 0 366 333" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#footer_clip0)">
+            <g clipPath="url(#footer_clip0)">
                 <path d="M131.675 168.997L78.3704 142.027C72.1071 138.855 64.7003 138.87 58.4446 142.05L5.1321 169.191C-1.60204 172.617 -1.58708 182.231 5.15451 185.643L57.4879 212.119C64.3491 215.59 72.4509 215.598 79.3271 212.149L131.653 185.837C138.581 182.366 138.596 172.498 131.675 168.997Z" fill="url(#footer-tree0_linear)" />
                 <path d="M8.52528 125.359V149.022C8.52528 155.232 12.0231 160.913 17.5689 163.727L54.1395 182.232C61.0829 185.747 69.2894 185.762 76.2477 182.269L119.724 160.473C125.053 157.8 128.424 152.351 128.424 146.394V125.367L65.4701 156.598L8.52528 125.359Z" fill="#E7E7FB" />
                 <path d="M68.4747 157.778L68.9755 184.09C69.5659 184.001 70.3283 183.866 71.2027 183.642C71.2027 183.642 73.4001 183.097 75.5302 182.12C77.8546 181.052 96.2109 171.848 121.316 159.054C121.72 158.793 122.123 158.502 122.52 158.181C125.988 155.382 127.46 151.537 128.133 148.865C128.2 148.507 128.282 148.007 128.342 147.402C128.454 146.275 128.424 145.424 128.417 145.2C128.372 143.834 128.342 135.459 128.319 123.807L68.4747 157.778Z" fill="#F6F6FE" />
@@ -37,28 +37,28 @@ const FooterTreeView: React.FC = () => {
             </g>
             <defs>
                 <linearGradient id="footer-tree0_linear" x1="0.0949588" y1="177.201" x2="136.858" y2="177.201" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#7D7DE9" />
-                    <stop offset="1" stop-color="#7171E7" />
+                    <stop stopColor="#7D7DE9" />
+                    <stop offset="1" stopColor="#7171E7" />
                 </linearGradient>
                 <linearGradient id="footer-tree1_linear" x1="8.52755" y1="125.357" x2="128.425" y2="125.357" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#ECECFC" />
-                    <stop offset="1" stop-color="#7D7DE9" />
+                    <stop stopColor="#ECECFC" />
+                    <stop offset="1" stopColor="#7D7DE9" />
                 </linearGradient>
                 <linearGradient id="footer-tree2_linear" x1="113.754" y1="236.908" x2="250.516" y2="236.908" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#7D7DE9" />
-                    <stop offset="1" stop-color="#7171E7" />
+                    <stop stopColor="#7D7DE9" />
+                    <stop offset="1" stopColor="#7171E7" />
                 </linearGradient>
                 <linearGradient id="footer-tree3_linear" x1="122.186" y1="185.064" x2="242.084" y2="185.064" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#ECECFC" />
-                    <stop offset="1" stop-color="#7D7DE9" />
+                    <stop stopColor="#ECECFC" />
+                    <stop offset="1" stopColor="#7D7DE9" />
                 </linearGradient>
                 <linearGradient id="footer-tree4_linear" x1="228.649" y1="295.458" x2="365.411" y2="295.458" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#7D7DE9" />
-                    <stop offset="1" stop-color="#7171E7" />
+                    <stop stopColor="#7D7DE9" />
+                    <stop offset="1" stopColor="#7171E7" />
                 </linearGradient>
                 <linearGradient id="footer-tree5_linear" x1="237.081" y1="243.614" x2="356.979" y2="243.614" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#ECECFC" />
-                    <stop offset="1" stop-color="#7D7DE9" />
+                    <stop stopColor="#ECECFC" />
+                    <stop offset="1" stopColor="#7D7DE9" />
                 </linearGradient>
                 <clipPath id="footer_clip0">
                     <rect width="365.317" height="333" fill="white" transform="matrix(-1 0 0 1 365.411 0)" />

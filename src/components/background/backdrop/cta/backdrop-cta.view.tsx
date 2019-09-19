@@ -5,7 +5,7 @@ const BackdropCtaView: React.FC = () => {
     return (
         <svg className="cta-backdrop__image" width="433" height="645" viewBox="0 0 433 645" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M348.927 44L276.865 80V296L348.927 259V44Z" fill="url(#cta_paint0_linear)" />
-            <g clip-path="url(#cta_clip0)">
+            <g clipPath="url(#cta_clip0)">
                 <path d="M435.194 353.487V645L321.669 587.255C315.637 584.181 308.489 584.181 302.457 587.255L200.733 638.999C193.299 642.779 184.52 642.825 177.052 639.124L77.209 589.715C70.9495 586.618 70.7557 577.758 76.8897 574.399L124.799 548.118C132.643 543.813 132.438 532.494 124.445 528.475L7.80795 469.808C-1.73512 465.002 -1.78073 451.406 7.72813 446.544L211.599 342.373C223.126 336.486 236.773 336.498 248.289 342.408L305.068 371.547C309.446 373.791 314.634 373.791 319.012 371.547L381.071 339.697C389.28 335.484 399.005 335.427 407.26 339.549L435.194 353.487Z" fill="url(#cta_paint1_linear)" />
                 <path d="M244.024 404.058L127.9 462.816C116.818 468.418 116.829 484.224 127.911 489.826L258.721 555.884C272.711 562.944 289.22 562.978 303.233 555.975L404.444 505.37C415.572 499.802 415.606 483.951 404.512 478.337L257.729 404.069C253.419 401.883 248.334 401.883 244.024 404.058Z" fill="#79E2CE" />
                 <path d="M168.546 420.638L284.682 481.172L285.822 528.805L150.555 461.04L162.526 423.496C163.302 420.74 166.152 419.396 168.546 420.638Z" fill="#F8FFFE" />
@@ -19,34 +19,34 @@ const BackdropCtaView: React.FC = () => {
             <path d="M107.718 0L179.78 36V252L107.718 215V0Z" fill="url(#cta_paint5_linear)" />
             <defs>
                 <linearGradient id="cta_paint0_linear" x1="312.896" y1="44" x2="312.896" y2="296" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#C3F8F5" />
-                    <stop offset="1" stop-color="#E3FCF8" stop-opacity="0" />
+                    <stop stopColor="#C3F8F5" />
+                    <stop offset="1" stopColor="#E3FCF8" stopOpacity="0" />
                 </linearGradient>
                 <linearGradient id="cta_paint1_linear" x1="222.507" y1="656.077" x2="217.772" y2="397.898" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#F8F8FF" />
-                    <stop offset="0.2076" stop-color="#F5F8FE" />
-                    <stop offset="0.3835" stop-color="#EAF7FB" />
-                    <stop offset="0.5477" stop-color="#D9F5F6" />
-                    <stop offset="0.7049" stop-color="#C0F3EE" />
-                    <stop offset="0.8558" stop-color="#A1F1E5" />
-                    <stop offset="0.9415" stop-color="#8BEFDE" />
+                    <stop stopColor="#F8F8FF" />
+                    <stop offset="0.2076" stopColor="#F5F8FE" />
+                    <stop offset="0.3835" stopColor="#EAF7FB" />
+                    <stop offset="0.5477" stopColor="#D9F5F6" />
+                    <stop offset="0.7049" stopColor="#C0F3EE" />
+                    <stop offset="0.8558" stopColor="#A1F1E5" />
+                    <stop offset="0.9415" stopColor="#8BEFDE" />
                 </linearGradient>
                 <linearGradient id="cta_paint2_linear" x1="26.7827" y1="258.515" x2="204.405" y2="258.515" gradientUnits="userSpaceOnUse">
-                    <stop offset="0.3265" stop-color="#AEFCEF" />
-                    <stop offset="0.9898" stop-color="white" />
+                    <stop offset="0.3265" stopColor="#AEFCEF" />
+                    <stop offset="0.9898" stopColor="white" />
                 </linearGradient>
                 <linearGradient id="cta_paint3_linear" x1="292.285" y1="346.67" x2="481.763" y2="346.67" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="#ADFCEF" />
+                    <stop stopColor="white" />
+                    <stop offset="1" stopColor="#ADFCEF" />
                 </linearGradient>
                 <linearGradient id="cta_paint4_linear" x1="202.681" y1="327.068" x2="274.439" y2="327.068" gradientUnits="userSpaceOnUse">
-                    <stop offset="0.0359" stop-color="#ADFCEF" />
-                    <stop offset="0.3593" stop-color="#B0FCF0" />
-                    <stop offset="1" stop-color="#EFFDFC" />
+                    <stop offset="0.0359" stopColor="#ADFCEF" />
+                    <stop offset="0.3593" stopColor="#B0FCF0" />
+                    <stop offset="1" stopColor="#EFFDFC" />
                 </linearGradient>
                 <linearGradient id="cta_paint5_linear" x1="143.749" y1="0" x2="143.749" y2="252" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#C3F8F5" />
-                    <stop offset="1" stop-color="#E3FCF8" stop-opacity="0" />
+                    <stop stopColor="#C3F8F5" />
+                    <stop offset="1" stopColor="#E3FCF8" stopOpacity="0" />
                 </linearGradient>
                 <clipPath id="cta_clip0">
                     <rect width="481.417" height="450" fill="white" transform="translate(0.625 195)" />

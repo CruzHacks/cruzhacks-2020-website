@@ -11,29 +11,29 @@ const WelcomePillarsView: React.FC = () => {
                 <path d="M0.122406 0L72.1849 36V252L0.122406 215V0Z" fill="url(#pillar4_linear)" fillOpacity="0.9" />
                 <defs>
                     <linearGradient id="pillar0_linear" x1="36.1536" y1="0" x2="36.1536" y2="252" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#F6F5FF" />
-                        <stop offset="0.755208" stop-color="#F4FEFD" />
-                        <stop offset="0.979167" stop-color="white" />
+                        <stop stopColor="#F6F5FF" />
+                        <stop offset="0.755208" stopColor="#F4FEFD" />
+                        <stop offset="0.979167" stopColor="white" />
                     </linearGradient>
                     <linearGradient id="pillar1_linear" x1="36.1536" y1="0" x2="36.1536" y2="252" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#F6F5FF" />
-                        <stop offset="0.755208" stop-color="#F4FEFD" />
-                        <stop offset="0.979167" stop-color="white" />
+                        <stop stopColor="#F6F5FF" />
+                        <stop offset="0.755208" stopColor="#F4FEFD" />
+                        <stop offset="0.979167" stopColor="white" />
                     </linearGradient>
                     <linearGradient id="pillar2_linear" x1="36.1536" y1="0" x2="36.1536" y2="252" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#F6F5FF" />
-                        <stop offset="0.755208" stop-color="#F4FEFD" />
-                        <stop offset="0.979167" stop-color="white" />
+                        <stop stopColor="#F6F5FF" />
+                        <stop offset="0.755208" stopColor="#F4FEFD" />
+                        <stop offset="0.979167" stopColor="white" />
                     </linearGradient>
                     <linearGradient id="pillar3_linear" x1="36.1536" y1="0" x2="36.1536" y2="252" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#F6F5FF" />
-                        <stop offset="0.755208" stop-color="#F4FEFD" />
-                        <stop offset="0.979167" stop-color="white" />
+                        <stop stopColor="#F6F5FF" />
+                        <stop offset="0.755208" stopColor="#F4FEFD" />
+                        <stop offset="0.979167" stopColor="white" />
                     </linearGradient>
                     <linearGradient id="pillar4_linear" x1="36.1536" y1="0" x2="36.1536" y2="252" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#F6F5FF" />
-                        <stop offset="0.755208" stop-color="#F4FEFD" />
-                        <stop offset="0.979167" stop-color="white" />
+                        <stop stopColor="#F6F5FF" />
+                        <stop offset="0.755208" stopColor="#F4FEFD" />
+                        <stop offset="0.979167" stopColor="white" />
                     </linearGradient>
                 </defs>
             </svg>

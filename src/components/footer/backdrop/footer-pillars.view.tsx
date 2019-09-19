@@ -7,14 +7,14 @@ const FooterPillarsView: React.FC = () => {
             <path d="M196.942 32L124.879 68V284L196.942 247V32Z" fill="url(#footer-pillar1_linear)" />
             <defs>
                 <linearGradient id="footer-pillar0_linear" x1="163.32" y1="289.082" x2="159.499" y2="80.8522" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="white" />
-                    <stop offset="0.307292" stop-color="white" />
-                    <stop offset="1" stop-color="#F2F2FF" />
+                    <stop stopColor="white" />
+                    <stop offset="0.307292" stopColor="white" />
+                    <stop offset="1" stopColor="#F2F2FF" />
                 </linearGradient>
                 <linearGradient id="footer-pillar1_linear" x1="163.32" y1="289.082" x2="159.499" y2="80.8522" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="white" />
-                    <stop offset="0.307292" stop-color="white" />
-                    <stop offset="1" stop-color="#F2F2FF" />
+                    <stop stopColor="white" />
+                    <stop offset="0.307292" stopColor="white" />
+                    <stop offset="1" stopColor="#F2F2FF" />
                 </linearGradient>
             </defs>
         </svg>

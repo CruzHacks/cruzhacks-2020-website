@@ -19,13 +19,13 @@ const welcomeCards = template.map((t, i) => {
     return (
         <div key={i} className="welcome-card">
             <svg className="welcome-card__bg" width="327" height="468" viewBox="0 0 327 468" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1.54773" y="1.5" width="323.283" height="465" rx="23.5" fill="white" stroke="#83E2DC" stroke-width="3" />
+                <rect x="1.54773" y="1.5" width="323.283" height="465" rx="23.5" fill="white" stroke="#83E2DC" strokeWidth="3" />
             </svg>
 
             <div className="welcome-card__text">
                 <h2 className="welcome-card__header">{t.title}</h2>
                 <svg className="welcome-card__tree" width="81" height="125" viewBox="0 0 81 125" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#tree_clip0)">
+                    <g clipPath="url(#tree_clip0)">
                         <path d="M77.1901 98.2593L45.9825 82.491C42.3177 80.6381 37.9831 80.6444 34.3184 82.5036L3.10441 98.3728C-0.838403 100.377 -0.832085 105.999 3.11705 107.996L33.756 123.481C37.7746 125.511 42.5199 125.517 46.5385 123.5L77.1775 108.116C81.234 106.074 81.2404 100.301 77.1901 98.2593Z" fill="url(#tree0_linear)" />
                         <path d="M5.08847 72.7413V86.5748C5.08847 90.205 7.1357 93.5326 10.3835 95.1712L31.7972 105.992C35.8664 108.047 40.6686 108.053 44.7441 106.017L70.1954 93.2742C73.3168 91.7112 75.2882 88.5286 75.2882 85.0434V72.7476L38.4318 91.0054L5.08847 72.7413Z" fill="#DAF7F7" />
                         <path d="M40.1884 91.6923L40.4853 107.076C40.8329 107.026 41.2752 106.944 41.787 106.818C41.787 106.818 43.0696 106.496 44.3207 105.923C45.6855 105.299 56.4272 99.9168 71.1306 92.436C71.3644 92.2847 71.6045 92.1145 71.8383 91.9255C73.8666 90.2869 74.7322 88.0369 75.124 86.4803C75.1619 86.2723 75.2124 85.9761 75.2503 85.6232C75.3135 84.9614 75.2946 84.4635 75.2946 84.3375C75.2693 83.5371 75.2503 78.6402 75.2377 71.8274L40.1884 91.6923Z" fill="#F8F8FE" />
@@ -39,12 +39,12 @@ const welcomeCards = template.map((t, i) => {
                     </g>
                     <defs>
                         <linearGradient id="tree0_linear" x1="0.153619" y1="103.052" x2="80.223" y2="103.052" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#96EAEA" />
-                            <stop offset="1" stop-color="#89E7E7" />
+                            <stop stopColor="#96EAEA" />
+                            <stop offset="1" stopColor="#89E7E7" />
                         </linearGradient>
                         <linearGradient id="tree1_linear" x1="5.09054" y1="72.7393" x2="75.2861" y2="72.7393" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#DEF8F8" />
-                            <stop offset="1" stop-color="#96EAEA" />
+                            <stop stopColor="#DEF8F8" />
+                            <stop offset="1" stopColor="#96EAEA" />
                         </linearGradient>
                         <clipPath id="tree_clip0">
                             <rect width="80.0694" height="125" fill="white" transform="translate(0.153625)" />
