@@ -5,12 +5,6 @@
 }
 
 
-@media all and (min-width: 1368px) {
-    div.about-backdrop__container {
-        min-height: 796px;
-    }
-}
-
 /* SVGs */
 
 .about-backdrop-laptop__image,
@@ -20,14 +14,22 @@
 
 
 .about-backdrop-laptop__image {
-    top: 64px;
+    top: 1%;
     left: 0;
 
+
+    /*
     width: 420px;
     height: 446px;
+    */
+
+    max-width: 36%;
+    height: auto;
+
 }
 
-.about-backdrop-pillars__image {
-    top: -92px;
-    right: 70px;
+@media all and (min-width: 1368px) {
+    div.about-backdrop__container {
+        min-height: 796px;
+    }
 }

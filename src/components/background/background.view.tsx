@@ -5,12 +5,11 @@
 import React from 'react';
 
 /* Hero Section */
-import BackdropHeroPillars from './backdrop/landing/hero/backdrop-hero-pillars.view';
 import BackdropHeroRightSideView from './backdrop/landing/hero/backdrop-hero-rightside.view';
+import BackdropHeroAllPillars from './backdrop/landing/hero/backdrop-hero-all-pillars.view';
 
 /* About Section */
 import BackdropAboutLaptopView from './backdrop/about/backdrop-about-laptop.view';
-import BackdropAboutPillarsView from './backdrop/about/backdrop-about-pillars.view';
 
 /* Welcome Section */
 import WelcomeMoutainView from './backdrop/welcome/backdrop-welcome-mountain.view';
@@ -21,7 +20,6 @@ import BackdropCtaView from './backdrop/cta/backdrop-cta.view';
 
 /* Footer Section */
 import BackdropFooterExtendedView from './backdrop/footer/backdrop-footer-extended.view';
-import BackdropFooterPillarsView from './backdrop/footer/backdrop-footer-pillars.view';
 import BackdropFooterTreeView from './backdrop/footer/backdrop-footer-trees.view';
 
 const BackdropView: React.FC = () => {
@@ -29,12 +27,11 @@ const BackdropView: React.FC = () => {
         <>
             <div className="background__container">
                 <div className="hero-backdrop__container">
-                    <BackdropHeroPillars />
+                    <BackdropHeroAllPillars />
                     <BackdropHeroRightSideView />
                 </div>
                 <div className="about-backdrop__container">
                     <BackdropAboutLaptopView />
-                    <BackdropAboutPillarsView />
                 </div>
                 <div className="welcome-backdrop__container">
                     <WelcomeMoutainView />
@@ -48,7 +45,6 @@ const BackdropView: React.FC = () => {
                 <div className="sponsors-backdrop__container"></div>
                 <div className="footer-backdrop__container">
                     <BackdropFooterExtendedView />
-                    <BackdropFooterPillarsView />
                     <BackdropFooterTreeView />
                 </div>
             </div>
@@ -59,7 +55,7 @@ const BackdropView: React.FC = () => {
 export default BackdropView;
 
 /*
-
+width="816" height="1138"
 <div className="about-backdrop__container">
                     <BackdropAboutLaptopView />
                     <BackdropAboutPillarsView />
