@@ -1,0 +1,8 @@
+.faq{
+    &__container{
+        @include flexBox();
+        text-align: center; 
+    }
+
+    @import './container/container';
+}
