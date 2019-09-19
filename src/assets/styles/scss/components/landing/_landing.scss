@@ -1,0 +1,9 @@
+/* _landing.scss */
+
+/* Landing View Container */
+
+.landing-view-container {
+  @include flexBox();
+  position: relative;
+  min-height: 766px;
+}

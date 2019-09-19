@@ -1,0 +1,55 @@
+
+$text-color: #2e2c5f;
+
+@media all and (max-width: 960px) {
+    div.welcome-cards__container {
+        display:block;
+    }
+    div.welcome-card {
+        margin: 1.5em 0;
+    }
+}
+
+/* Welcome card containers */ 
+.welcome-cards__container {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-card {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Welcome card text related stuff */
+.welcome-card__text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome-card__header {
+    font-family: Rubik;
+    font-weight: 500;
+    color: $text-color;
+}
+
+.welcome-card__caption {
+    font-size: 18px;
+    color: #424242;
+    font-family: SofiaProSoftW01-Regular;
+    
+    padding-left: 0.7em;
+    line-height: 1.5em;
+    letter-spacing: 0.02em;
+    max-width: 242px;
+}
+
+.welcome-card__tree {
+    padding: 1.4em;
+}

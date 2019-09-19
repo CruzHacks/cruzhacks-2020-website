@@ -2,13 +2,22 @@
 
 /* HeroRightside */
 
-.hero-right-side {
+.hero-right-side-container {
+  @include svgContainer();
   position: absolute;
-  z-index: -1;
   top: 0;
   right: 0;
   width: 815px;
   height: 749px;
+  z-index: -1;
+}
+
+.hero-right-side-container__svg {
+  @include svgContent();
+}
+
+.hero-right-side-container__image {
+  @include svgContent();
 }
 
 /* LeftPillar1 */
@@ -17,7 +26,7 @@
   position: absolute;
   left: 0;
   top: 124px;
-  z-index: -1;
+  z-index: -2;
 }
 
 .left-pillar1 {
@@ -32,7 +41,7 @@
   position: absolute;
   left: 93px;
   top: 186px;
-  z-index: -1;
+  z-index: -2;
 }
 
 .left-pillar2 {
@@ -47,7 +56,7 @@
   position: absolute;
   left: 203px;
   top: 172px;
-  z-index: -1;
+  z-index: -2;
 }
 
 .left-pillar3 {
@@ -62,7 +71,7 @@
   position: absolute;
   left: 347px;
   top: 374px;
-  z-index: -1;
+  z-index: -2;
 }
 
 .left-pillar4 {
