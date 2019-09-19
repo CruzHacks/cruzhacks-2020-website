@@ -45,7 +45,6 @@ const BackdropView: React.FC = () => {
                 <div className="sponsors-backdrop__container"></div>
                 <div className="footer-backdrop__container">
                     <BackdropFooterExtendedView />
-                    <BackdropFooterTreeView />
                 </div>
             </div>
         </>
