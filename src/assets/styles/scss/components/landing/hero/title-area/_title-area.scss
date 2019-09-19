@@ -1,3 +1,5 @@
+/* _title-area.scss */
+
 /* HeroTitleAreaViewContainer */
 
 .hero-title-area-view-container {
@@ -65,13 +67,13 @@
   position: absolute;
   width: 22vw;
   height: 64px;
-  fill: #adadad;
   @include font-source-body(
     $size: 1em,
     $color: #adadad,
     $weight: normal,
     $lineHeight: 0.75
   );
+  white-space: nowrap;
 }
 
 /* HeroSponsorUsButtonContainer */
@@ -116,6 +118,7 @@
   top: 362px;
   width: 66px;
   height: 66px;
+  cursor: pointer;
 }
 
 .navigate-to-bottom-outer-circle {

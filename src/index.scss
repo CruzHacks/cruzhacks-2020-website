@@ -1,3 +1,9 @@
 /* Importing global styles sheet here */
 
 @import './assets/styles/scss/base.scss';
+
+.test-container {
+  position: relative;
+  background-color: hotpink;
+  top: 100vh;
+}
