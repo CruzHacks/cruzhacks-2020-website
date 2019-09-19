@@ -52,7 +52,6 @@ const faqs = [
 const FAQView: React.FC = () => {
     return (
       <div className="faq__container">
-        <span className="faq__title">FAQ</span>
         <FAQBoxView qAndA={faqs}/>
       </div>
     )
