@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import FAQPopupView from '../popup/faq-popup.view'
 
 interface faqs {
   [index: string]: {
@@ -13,7 +14,6 @@ export const FAQBoxView: React.FC<faqs> = faqs => {
   function onToggle(){
     console.log(toggle)
     setToggle(!toggle);
-
   }
 
   return(
@@ -23,11 +23,11 @@ export const FAQBoxView: React.FC<faqs> = faqs => {
         <span className="faq__divider"></span>
         <span className="faq__questionGrid">
             {faqs.qAndA.map(questions => (
-              <button className="faq__questions" key={questions.question}>{questions.question}</button>
+              <button className='faq__questions' key={questions.question} onClick={onToggle}>{questions.question}</button>
             ))
             }
         </span>
-        
+        {toggle ? <FAQPopupView question="question" answer="answer" close={onToggle} /> : null}
       </div>
     </div>
   )
