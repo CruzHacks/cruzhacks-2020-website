@@ -27,8 +27,8 @@ export const FAQBoxView: React.FC<faqs> = faqs => {
             ))
             }
         </span>
-        {toggle ? <FAQPopupView question="question" answer="answer" close={onToggle} /> : null}
       </div>
+      {toggle ? <FAQPopupView question="question" answer="answer" close={onToggle} /> : null}
     </div>
   )
 }
