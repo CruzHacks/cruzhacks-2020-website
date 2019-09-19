@@ -2,7 +2,7 @@ import React from 'react';
 
 const BackdropWelcomePillarsView: React.FC = () => {
     return (
-        <svg className="welcome-backdrop-pillars__image" width="885" height="437" viewBox="0 0 885 437" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="welcome-backdrop-pillars__image" viewBox="0 0 885 437" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M812.827 18L884.89 54V385L812.827 349V18Z" fill="url(#paint0_linear)" fillOpacity="0.8" />
             <path d="M447.51 38L519.573 74V405L447.51 369V38Z" fill="url(#paint1_linear)" fillOpacity="0.5" />
             <path d="M715.743 90L679.712 109V437L715.743 416V90Z" fill="url(#paint2_linear)" fillOpacity="0.7" />

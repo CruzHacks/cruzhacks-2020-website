@@ -8,3 +8,22 @@
         min-height: 960px;
     }
 }
+
+// SVGs
+.hero-backdrop-all-pillars__image {
+    position: absolute;
+    left: 0;
+    top: 124px;
+
+    max-width: 31%;
+    height: auto;
+}
+
+.hero-backdrop-rightside__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    max-width: 69%;
+    height: auto;
+}
