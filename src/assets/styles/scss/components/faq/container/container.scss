@@ -30,17 +30,18 @@
   display: block;
   text-align: center;
   margin: auto;
-  width: 40em; 
+  width: 44.4vw; 
 }
 
 &__questionGrid{
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 22px 22px 22px; 
-  grid-column-gap: 63px;
-  grid-row-gap: 45px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto; 
+  grid-column-gap: 4.375vw;
+  grid-row-gap: 5.87vh;
   justify-items: left;
   justify-content: center; 
+  margin: 5.7vh; 
 }
 
 &__questions{
