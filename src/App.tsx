@@ -12,6 +12,16 @@ const App: React.FC = () => {
   return (
     <>
       <BackgroundView />
+    </>
+  );
+};
+
+export default App;
+
+// <div className="test-container">Howdy Partner</div>
+
+/*
+
       <LandingView />
       <AboutView />
       <WelcomeView />
@@ -22,10 +32,4 @@ const App: React.FC = () => {
       <div className="sponsors-placeholder"></div>
 
       <FooterView />
-    </>
-  );
-};
-
-export default App;
-
-// <div className="test-container">Howdy Partner</div>
+*/

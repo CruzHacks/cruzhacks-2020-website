@@ -4,6 +4,13 @@
     min-height: 596px;
 }
 
+
+@media all and (min-width: 1368px) {
+    div.about-backdrop__container {
+        min-height: 796px;
+    }
+}
+
 /* SVGs */
 
 .about-backdrop-laptop__image,
