@@ -12,7 +12,7 @@ export const FAQPopupView: React.FC<AnswerProps> = AnswerProps => {
             <div className="faq__popupInner">
                 <span className="faq__popupQuestion">{AnswerProps.question}</span>
                 <span className="faq__popupAnswer">{AnswerProps.answer}</span>
-                <button className="faq__popupExit" onClick={AnswerProps.close}></button>
+                <button className="faq__popupExit" onClick={AnswerProps.close}>x</button>
             </div>
         </div>
     )
