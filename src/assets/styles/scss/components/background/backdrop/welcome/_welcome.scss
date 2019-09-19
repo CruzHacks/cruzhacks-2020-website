@@ -4,6 +4,10 @@
     min-height: 896px;
 }
 
+@media all and (min-width: 1368px) {
+    min-height: 1096px;
+}
+
 /* SVGs */
 .welcome-backdrop-mountain__image,
 .welcome-backdrop-pillars__image {

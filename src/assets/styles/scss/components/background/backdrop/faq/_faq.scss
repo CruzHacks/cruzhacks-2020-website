@@ -4,3 +4,9 @@
     position: relative;
     min-height: 686px;
 }
+
+@media all and (min-width: 1368px) {
+    div.faq-backdrop__container {
+        min-height: 886px;
+    }
+}

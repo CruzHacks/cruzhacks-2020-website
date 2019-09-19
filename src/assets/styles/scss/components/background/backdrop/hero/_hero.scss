@@ -2,3 +2,9 @@
     min-height: 760px;
     position: relative;
 }
+
+@media all and (min-width: 1368px) {
+    div.hero-backdrop__container {
+        min-height: 960px;
+    }
+}
