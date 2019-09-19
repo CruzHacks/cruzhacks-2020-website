@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 interface faqs {
   [index: string]: {
@@ -8,6 +8,14 @@ interface faqs {
 }
 
 export const FAQBoxView: React.FC<faqs> = faqs => {
+  const [toggle, setToggle] = useState(false);
+
+  function onToggle(){
+    console.log(toggle)
+    setToggle(!toggle);
+
+  }
+
   return(
     <div className="faq__box-container">
       <div className="faq__box">
@@ -15,7 +23,7 @@ export const FAQBoxView: React.FC<faqs> = faqs => {
         <span className="faq__divider"></span>
         <span className="faq__questionGrid">
             {faqs.qAndA.map(questions => (
-              <span className="faq__questions" key={questions.question}>{questions.question}</span>
+              <button className="faq__questions" key={questions.question}>{questions.question}</button>
             ))
             }
         </span>
