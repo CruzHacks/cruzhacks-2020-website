@@ -10,12 +10,17 @@ interface faqs {
 export const FAQBoxView: React.FC<faqs> = faqs => {
   return(
     <div className="faq__box-container">
-      {faqs.qAndA.map(questions => (
-        <div className="faq__box" key={questions.question}>
-          <button className="faq__questions">{questions.question}</button>
-        </div>
-      ))
-      }
+      <div className="faq__box">
+        <span className="faq__title">FAQ</span>
+        <span className="faq__divider"></span>
+        <span className="faq__questionGrid">
+            {faqs.qAndA.map(questions => (
+              <span className="faq__questions" key={questions.question}>{questions.question}</span>
+            ))
+            }
+        </span>
+        
+      </div>
     </div>
   )
 }
