@@ -15,6 +15,8 @@ import BackdropAboutPillarsView from './backdrop/about/backdrop-about-pillars.vi
 /* Welcome Section */
 import WelcomeMoutainView from './backdrop/welcome/backdrop-welcome-mountain.view';
 import WelcomePillarsView from './backdrop/welcome/backdrop-welcome-pillars.view';
+import BackdropWelcomeRectangleView from './backdrop/welcome/backdrop-welcome-rectangle.view';
+import BackdropWelcomePillarsMobileView from './backdrop/welcome/backdrop-welcome-pillars-mobile.view';
 
 /* CTA Section */
 import BackdropCtaView from './backdrop/cta/backdrop-cta.view';
@@ -39,6 +41,8 @@ const BackdropView: React.FC = () => {
                 <div className="welcome-backdrop__container">
                     <WelcomeMoutainView />
                     <WelcomePillarsView />
+                    <BackdropWelcomeRectangleView />
+                    <BackdropWelcomePillarsMobileView />
                 </div>
                 <div className="stats-backdrop__container"></div>
                 <div className="cta-backdrop__container">
@@ -49,7 +53,6 @@ const BackdropView: React.FC = () => {
                 <div className="footer-backdrop__container">
                     <BackdropFooterExtendedView />
                     <BackdropFooterPillarsView />
-                    <BackdropFooterTreeView />
                 </div>
             </div>
         </>

@@ -9,9 +9,10 @@ const HeroView: React.FC = () => {
   return (
     <>
       <HeroHeaderView />
-      <HeroTitleAreaView />
+
     </>
   );
 };
 
+//       <HeroTitleAreaView />
 export default HeroView;

@@ -1,6 +1,22 @@
 
 $text-color: #2e2c5f;
 
+@media all and (max-width: 468px) {
+    svg.welcome-card__bg {
+        width: 291px;
+        height: 386px;
+    }
+
+    h2.welcome-card__header {
+        font-size: 18px;
+    }
+
+    p.welcome-card__caption {
+        padding-left: 3em;
+        font-size: 14px;
+    }
+}
+
 @media all and (max-width: 960px) {
     div.welcome-cards__container {
         display:block;
@@ -34,7 +50,7 @@ $text-color: #2e2c5f;
 }
 
 .welcome-card__header {
-    font-family: Rubik;
+    font-family: 'Rubik';
     font-weight: 500;
     color: $text-color;
 }

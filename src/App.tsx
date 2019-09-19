@@ -29,3 +29,17 @@ const App: React.FC = () => {
 export default App;
 
 // <div className="test-container">Howdy Partner</div>
+/*
+
+      <BackgroundView />
+      <LandingView />
+      <AboutView />
+      <WelcomeView />
+
+      <div className="stats-placeholder"></div>
+      <div className="cta-placeholder"></div>
+      <div className="faq-placeholder"></div>
+      <div className="sponsors-placeholder"></div>
+
+      <FooterView />
+*/

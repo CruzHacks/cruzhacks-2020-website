@@ -6,7 +6,10 @@
 
 /* SVGs */
 .welcome-backdrop-mountain__image,
-.welcome-backdrop-pillars__image {
+.welcome-backdrop-pillars__image,
+.welcome-backdrop-rectangle__image,
+.welcome-backdrop-pillars-mobile__image,
+{
     align-self: center;
     position: absolute;
 }
@@ -20,4 +23,39 @@
     width: 100%;
     height: 500px;
     top: -32px;
+}
+
+// Mobile Related
+.welcome-backdrop-rectangle__image, .welcome-backdrop-pillars-mobile__image {
+    display: none;
+}
+
+
+@media all and (max-width: 468px) {
+
+    .welcome-backdrop__container {
+        min-height: 1680px;
+    }
+
+    svg.welcome-backdrop-mountain__image {
+        display: none;
+    }
+
+    svg.welcome-backdrop-pillars__image {
+        display: none;
+    }
+    
+
+    svg.welcome-backdrop-rectangle__image {
+        width: 100%;
+        display: block;
+        bottom: 52px;
+    }
+
+    svg.welcome-backdrop-pillars-mobile__image {
+        z-index: -1;
+        top: 0;
+        display: block;
+    }
+
 }

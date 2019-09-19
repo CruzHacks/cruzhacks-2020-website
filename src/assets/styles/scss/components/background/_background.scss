@@ -9,6 +9,7 @@
 
 .background__container {
     position: absolute;
+    flex-direction: column;
     width: 100vw;
     z-index: -1;
 }
