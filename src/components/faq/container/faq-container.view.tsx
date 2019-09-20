@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import FAQPopupView from '../popup/faq-popup.view'
 
 interface faqs {
   [index: string]: {
@@ -10,25 +9,45 @@ interface faqs {
 
 export const FAQBoxView: React.FC<faqs> = faqs => {
   const [toggle, setToggle] = useState(false);
+  const [answeredQuestion, setAnswer] = useState();
+  const [questionClicked, setClickedQuestion] = useState(); 
 
-  function onToggle(){
-    console.log(toggle)
+  function onToggle(answer?: any, question?:any){
     setToggle(!toggle);
+    setAnswer(answer);
+    setClickedQuestion(question);
   }
+
+
+  const Question = () => {
+    return(
+      <span className="faq__questionGrid">
+        {faqs.qAndA.map(questions => (
+        <button className='faq__questions' key={questions.question} onClick={() => onToggle(questions.answer, questions.question)}>{questions.question}</button>
+        ))
+        }
+    </span>
+  )
+  }
+
+  const Answer = () => {
+    return(
+      <div className="faq__popupContainer">
+        <span className="faq__popupQuestion">{questionClicked}</span>
+        <span className="faq__popupAnswer">{answeredQuestion}</span>
+        <button className="faq__popupExit" onClick={onToggle}>x</button>
+      </div>
+    )
+  }
+  
 
   return(
     <div className="faq__box-container">
       <div className="faq__box">
         <span className="faq__title">FAQ</span>
         <span className="faq__divider"></span>
-        <span className="faq__questionGrid">
-            {faqs.qAndA.map(questions => (
-              <button className='faq__questions' key={questions.question} onClick={onToggle}>{questions.question}</button>
-            ))
-            }
-        </span>
+        {toggle ? <Answer/> : <Question/>}
       </div>
-      {toggle ? <FAQPopupView question="question" answer="answer" close={onToggle} /> : null}
     </div>
   )
 }
