@@ -35,7 +35,7 @@ export const FAQBoxView: React.FC<faqs> = faqs => {
       <div className="faq__popupContainer">
         <span className="faq__popupQuestion">{questionClicked}</span>
         <span className="faq__popupAnswer">{answeredQuestion}</span>
-        <button className="faq__popupExit" onClick={onToggle}>x</button>
+        <button className="faq__popupExit" onClick={onToggle}>Back</button>
       </div>
     )
   }

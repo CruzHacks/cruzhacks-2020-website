@@ -42,6 +42,7 @@
   justify-items: left;
   justify-content: center; 
   margin: 5.7vh; 
+  overflow-block: center;
 }
 
 &__questions{
@@ -85,10 +86,10 @@ text-align: center;
 
 &__popupAnswer{
   @include font-source-header(
-  $size: 1.25em, 
-  $color: #000000, 
-  $weight: normal, 
-  $lineHeight: 18px
+  $size: .87em, 
+  $color: #656565, 
+  $weight: 300, 
+  $lineHeight: 14px
 );
 display: block;
 text-align: center;
@@ -100,6 +101,7 @@ margin: 7vh;
   padding: 0;
   border: none;
   background: none;
+  font-size: 1em; 
 }
 
 &__popupContainer{
