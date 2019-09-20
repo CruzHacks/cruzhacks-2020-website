@@ -4,10 +4,10 @@
     @include flexColumn();
     justify-content: space-evenly;
     flex: 0 0 50%;
-    height: 65vh;
+    height: 75vh;
     width: 100vw;
     position: absolute;
-    top: 150vh;
+    top: 185vh;
     justify-content: space-around;
   }
   &__title {
