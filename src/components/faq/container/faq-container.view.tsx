@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 interface faqs {
   [index: string]: {
     question: string;
-    answer: string;
+    answer: any;
   }[];
 }
 

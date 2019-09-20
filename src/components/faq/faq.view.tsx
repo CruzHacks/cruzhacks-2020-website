@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactContactForm from 'react-mail-form';
 import FAQBoxView from './container/faq-container.view'
 
 const faqs = [
@@ -44,7 +45,7 @@ const faqs = [
   },
   {
     "question": "I don't see my question here.",
-    "answer": "Email us right here"
+    "answer": <ReactContactForm className="faq__contactForm" to="ilopezro@ucsc.edu" />
   }
 ]
 
