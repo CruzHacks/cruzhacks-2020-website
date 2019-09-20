@@ -1,6 +1,28 @@
 /* Importing global styles sheet here */
 
-@import './assets/styles/scss/base.scss';
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+#root {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
 .test-container {
   position: relative;
