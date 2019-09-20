@@ -4,6 +4,8 @@
 // Media Queries
 // ============================================================================
 
+@import './fonts';
+
 @mixin respond($breakpoint) {
   @if ($breakpoint == phone-narrow) {
     @media (max-width: 25em) {
@@ -42,67 +44,85 @@
   }
 }
 
-// =============================================================================
-// String Replace (https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6)
-// =============================================================================
+// ============================================================================
+// Main Font Source
+// ============================================================================
 
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace +
-      str-replace(
-        str-slice($string, $index + str-length($search)),
-        $search,
-        $replace
-      );
+@mixin font-source-main(
+  $size: false,
+  $lineHeight: false,
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
+) {
+  font-family: Rubik;
+  @if ($size) {
+    font-size: $size;
   }
-
-  @return $string;
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  }
+  @if ($letterSpace) {
+    letter-spacing: $letterSpace;
+  }
+  @if ($textIndent) {
+    text-indent: $textIndent;
+  }
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($color) {
+    color: $color;
+  }
 }
 
-// =============================================================================
-// Font Face (https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6)
-// =============================================================================
+// ============================================================================
+// Subheading Font Source
+// ============================================================================
 
-@mixin font-face(
-  $name,
-  $path,
-  $weight: null,
-  $style: null,
-  $exts: eot woff2 woff ttf svg
+@mixin font-source-subheading(
+  $size: false,
+  $lineHeight: false,
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
 ) {
-  $src: null;
-
-  $extmods: (
-    eot: '?',
-    svg: '#' + str-replace($name, ' ', '_'),
-  );
-
-  $formats: (
-    otf: 'opentype',
-    ttf: 'truetype',
-  );
-
-  @each $ext in $exts {
-    $extmod: if(
-      map-has-key($extmods, $ext),
-      $ext + map-get($extmods, $ext),
-      $ext
-    );
-    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $src: append(
-      $src,
-      url(quote($path + '.' + $extmod)) format(quote($format)),
-      comma
-    );
+  font-family: AvenirBook;
+  @if ($size) {
+    font-size: $size;
   }
-
-  @font-face {
-    font-family: quote($name);
-    font-style: $style;
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  }
+  @if ($letterSpace) {
+    letter-spacing: $letterSpace;
+  }
+  @if ($textIndent) {
+    text-indent: $textIndent;
+  }
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
+  }
+  @if ($weight) {
     font-weight: $weight;
-    src: $src;
+  }
+  @if ($color) {
+    color: $color;
   }
 }
 
@@ -112,19 +132,17 @@
 
 @mixin font-source-body(
   $size: false,
-  $color: false,
-  $weight: false,
   $lineHeight: false,
-  $letterSpace: false
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
 ) {
+  font-family: 'SofiaProSoftW01-Regular';
   @if ($size) {
     font-size: $size;
-  }
-  @if ($color) {
-    color: $color;
-  }
-  @if ($weight) {
-    font-weight: $weight;
   }
   @if ($lineHeight) {
     line-height: $lineHeight;
@@ -132,63 +150,20 @@
   @if ($letterSpace) {
     letter-spacing: $letterSpace;
   }
-}
-
-// ============================================================================
-// Subheader Font Source
-// ============================================================================
-
-@mixin font-source-subheader(
-  $size: false,
-  $color: false,
-  $weight: false,
-  $lineHeight: false,
-  $letterSpace: false
-) {
-  font-family: AvenirBook;
-  @if ($size) {
-    font-size: $size;
+  @if ($textIndent) {
+    text-indent: $textIndent;
   }
-  @if ($color) {
-    color: $color;
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
   }
   @if ($weight) {
     font-weight: $weight;
   }
-  @if ($lineHeight) {
-    line-height: $lineHeight;
-  }
-  @if ($letterSpace) {
-    letter-spacing: $letterSpace;
-  }
-}
-
-// ============================================================================
-// Header Font Source
-// ============================================================================
-
-@mixin font-source-header(
-  $size: false,
-  $color: false,
-  $weight: false,
-  $lineHeight: false,
-  $letterSpace: false
-) {
-  font-family: Rubik;
-  @if ($size) {
-    font-size: $size;
-  }
   @if ($color) {
     color: $color;
-  }
-  @if ($weight) {
-    font-weight: $weight;
-  }
-  @if ($lineHeight) {
-    line-height: $lineHeight;
-  }
-  @if ($letterSpace) {
-    letter-spacing: $letterSpace;
   }
 }
 

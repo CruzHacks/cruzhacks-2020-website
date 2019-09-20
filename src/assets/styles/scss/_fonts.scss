@@ -1,4 +1,4 @@
-/* Header font */
+/* Main font */
 
 @font-face {
   font-family: 'Rubik';
@@ -15,11 +15,13 @@
     /* iOS 4.1- */ url('../fonts/header/Rubik.svg#Rubik') format('svg');
 }
 
-/* Subheader font */
+/* Subheading font */
 @font-face {
   font-family: 'AvenirBook';
+
   /* IE9*/
   src: url('../fonts/subheader/AvenirBook.eot');
+
   /* IE6-IE8 */
   src: url('../fonts/subheader/AvenirBook.eot?#iefix')
       format('embedded-opentype'),

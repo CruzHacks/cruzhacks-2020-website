@@ -1,113 +1,106 @@
 /* _title-area.scss */
 
-/* HeroTitleAreaViewContainer */
+/* HeroTitleAreaContainer */
 
-.hero-title-area-view-container {
+.hero-title-area {
   position: absolute;
+  // left: 9.98%;
+  // top: 5.32%;
   left: 115px;
   top: 275px;
-}
 
-/* HeroTitleTextContainer */
+  &__title {
+    position: relative;
+    left: 0;
+    top: 0;
+    // width: 320px;
+    // height: 29px;
+  }
 
-.hero-title-text-container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 320px;
-  height: 29px;
-}
+  &__title-text {
+    @include font-source-main(
+      39px,
+      46px,
+      0.04em,
+      3px,
+      center,
+      normal,
+      500,
+      #222222
+    );
+    mix-blend-mode: normal;
+  }
 
-.hero-title-text {
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 39px;
-  line-height: 46px;
-  letter-spacing: 0.04em;
-  text-indent: 3px;
+  &__slogan {
+    position: absolute;
+    left: 131px;
+    top: 54px;
+    width: 198px;
+    height: 22px;
+  }
 
-  color: #222222;
-  mix-blend-mode: normal;
-}
+  &__slogan-text {
+    @include font-source-body(
+      22px,
+      28px,
+      0.06em,
+      3px,
+      false,
+      false,
+      false,
+      #9e9eff
+    );
+  }
 
-/* HeroSloganTextContainer */
+  &__eventInfo {
+    position: absolute;
+    left: 0;
+    top: 152px;
+    width: 286px;
+    height: 114px;
+  }
 
-.hero-slogan-text-container {
-  position: absolute;
-  left: 131px;
-  top: 54px;
-  width: 198px;
-  height: 22px;
-}
+  &__eventInfo-text {
+    @include font-source-body(
+      14px,
+      14px,
+      0.04em,
+      3px,
+      false,
+      false,
+      false,
+      #adadad
+    );
+    position: absolute;
+    width: 22vw;
+    height: 64px;
+    white-space: nowrap;
+  }
 
-.hero-slogan-text {
-  font-family: SofiaProSoftW01-Regular;
-  font-size: 22px;
-  line-height: 28px;
-  /* identical to box height */
+  &__button {
+    position: absolute;
+    left: 0;
+    top: 266px;
+    width: 183px;
+    height: 46px;
 
-  letter-spacing: 0.06em;
-  text-indent: 3px;
+    background-color: #6f6fe8;
+    box-shadow: 0px 2px 6px #bfbfbf;
+    border-radius: 23px;
+  }
 
-  color: #9e9eff;
-}
-
-/* HeroEventInfoTextContainer */
-
-.hero__event-info-container {
-  position: absolute;
-  left: 0;
-  top: 152px;
-  width: 286px;
-  height: 114px;
-}
-
-.hero__event-info-text {
-  position: absolute;
-  width: 22vw;
-  height: 64px;
-  font-family: SofiaProSoftW01-Regular;
-  font-size: 14px;
-  line-height: 14px;
-  letter-spacing: 0.04em;
-  text-indent: 3px;
-  color: #adadad;
-  white-space: nowrap;
-}
-
-/* HeroSponsorUsButtonContainer */
-
-.hero-sponsor-us-button-container {
-  position: absolute;
-  left: 0;
-  top: 266px;
-  width: 183px;
-  height: 46px;
-}
-
-.hero-sponsor-us-button {
-  background: #6f6fe8;
-  box-shadow: 0px 2px 6px #bfbfbf;
-  border-radius: 23px;
-}
-
-/* HeroSponsorUsButtonText */
-
-.hero-sponsor-us-button-text {
-  position: absolute;
-  left: 41px;
-  top: 17px;
-  width: 94px;
-  height: 11px;
-
-  font-family: SofiaProSoftW01-Regular;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.07em;
-  text-indent: 3px;
-
-  fill: #fffefe;
+  &__button-text {
+    @include font-source-body(
+      14px,
+      18px,
+      0.07em,
+      3px,
+      center,
+      false,
+      false,
+      #fffefe
+    );
+  }
 }
 
 /* NavigateToBottomContainer */
