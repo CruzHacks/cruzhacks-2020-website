@@ -21,11 +21,6 @@ body {
   min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 /* Mixins */
 
 @import './mixins.scss';
@@ -47,13 +42,11 @@ code {
 @import './components/about/about';
 @import './components/about/backdrop/backdrop';
 
-
 /* Welcome Styles */
 @import './components/welcome/welcome';
 @import './components/welcome/backdrop/backdrop';
 @import './components/welcome/cards/cards';
 @import './components/welcome/title/title';
-
 
 /* Footer Styles */
 @import './components/footer/footer';
