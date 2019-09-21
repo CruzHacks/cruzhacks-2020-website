@@ -3,74 +3,57 @@
   font-family: 'RubikBold';
 
   src: 
-  /* IE9*/
-  url('../../assets/fonts/header/RubikBold.eot');
-  
+  /* IE9*/ url('../../assets/fonts/header/RubikBold.eot');
+
   src: 
-    /* IE6-IE8 */
-    url('../../assets/fonts/header/RubikBold.eot?#iefix')
+    /* IE6-IE8 */ url('../../assets/fonts/header/RubikBold.eot?#iefix')
       format('embedded-opentype'),
-    /* chrome、firefox */ 
-    url('../../assets/fonts/header/RubikBold.woff2')
+    /* chrome、firefox */ url('../../assets/fonts/header/RubikBold.woff2')
       format('woff2'),
-    /* chrome、firefox */ 
-    url('../../assets/fonts/header/RubikBold.woff')
+    /* chrome、firefox */ url('../../assets/fonts/header/RubikBold.woff')
       format('woff'),
     /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('../../assets/fonts/header/RubikBold.ttf')
-      format('truetype'),
-    /* iOS 4.1- */ 
-    url('../../assets/fonts/header/RubikBold.svg#Rubik')
+      url('../../assets/fonts/header/RubikBold.ttf') format('truetype'),
+    /* iOS 4.1- */ url('../../assets/fonts/header/RubikBold.svg#Rubik')
       format('svg');
 }
 @font-face {
   font-family: 'Rubik';
 
   src: 
-  /* IE9*/
-  url('../../assets/fonts/header/Rubik.eot');
-  
+  /* IE9*/ url('../../assets/fonts/header/Rubik.eot');
+
   src: 
-    /* IE6-IE8 */
-    url('../../assets/fonts/header/Rubik.eot?#iefix')
+    /* IE6-IE8 */ url('../../assets/fonts/header/Rubik.eot?#iefix')
       format('embedded-opentype'),
-    /* chrome、firefox */ 
-    url('../../assets/fonts/header/Rubik.woff2')
+    /* chrome、firefox */ url('../../assets/fonts/header/Rubik.woff2')
       format('woff2'),
-    /* chrome、firefox */ 
-    url('../../assets/fonts/header/Rubik.woff')
+    /* chrome、firefox */ url('../../assets/fonts/header/Rubik.woff')
       format('woff'),
     /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('../../assets/fonts/header/Rubik.ttf')
-      format('truetype'),
-    /* iOS 4.1- */ 
-    url('../../assets/fonts/header/Rubik.svg#Rubik')
+      url('../../assets/fonts/header/Rubik.ttf') format('truetype'),
+    /* iOS 4.1- */ url('../../assets/fonts/header/Rubik.svg#Rubik')
       format('svg');
 }
 
 /* Subheader font */
 @font-face {
   font-family: 'AvenirBook';
-  
-  src: 
-    /* IE9*/
-    url('../../assets/fonts/subheader/AvenirBook.eot');
 
   src: 
-    /* IE6-IE8 */
-    url('../../assets/fonts/subheader/AvenirBook.eot?#iefix')
+    /* IE9*/ url('../../assets/fonts/subheader/AvenirBook.eot');
+
+  src: 
+    /* IE6-IE8 */ url('../../assets/fonts/subheader/AvenirBook.eot?#iefix')
       format('embedded-opentype'),
-    /* chrome、firefox */
-    url('../../assets/fonts/subheader/AvenirBook.woff2')
+    /* chrome、firefox */ url('../../assets/fonts/subheader/AvenirBook.woff2')
       format('woff2'),
-    /* chrome、firefox */ 
-    url('../../assets/fonts/subheader/AvenirBook.woff')
+    /* chrome、firefox */ url('../../assets/fonts/subheader/AvenirBook.woff')
       format('woff'),
     /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('../../assets/fonts/subheader/AvenirBook.ttf') 
-      format('truetype'),
+      url('../../assets/fonts/subheader/AvenirBook.ttf') format('truetype'),
     /* iOS 4.1- */
-    url('../../assets/fonts/subheader/AvenirBook.svg#Avenir Book')
+      url('../../assets/fonts/subheader/AvenirBook.svg#Avenir Book')
       format('svg');
 }
 
@@ -79,23 +62,20 @@
   font-family: 'SofiaProSoftW01-Regular';
 
   src: 
-    /* IE9*/
-    url('../../assets/fonts/body/SofiaProSoftW01-Regular.eot');
-  
+    /* IE9*/ url('../../assets/fonts/body/SofiaProSoftW01-Regular.eot');
+
   src: 
-    /* IE6-IE8 */
-    url('../../assets/fonts/body/SofiaProSoftW01-Regular.eot?#iefix')
+    /* IE6-IE8 */ url('../../assets/fonts/body/SofiaProSoftW01-Regular.eot?#iefix')
       format('embedded-opentype'),
     /* chrome、firefox */
-    url('../../assets/fonts/body/SofiaProSoftW01-Regular.woff2')
+      url('../../assets/fonts/body/SofiaProSoftW01-Regular.woff2')
       format('woff2'),
     /* chrome、firefox */
-    url('../../assets/fonts/body/SofiaProSoftW01-Regular.woff') 
-      format('woff'),
+      url('../../assets/fonts/body/SofiaProSoftW01-Regular.woff') format('woff'),
     /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('../../assets/fonts/body/SofiaProSoftW01-Regular.ttf')
+      url('../../assets/fonts/body/SofiaProSoftW01-Regular.ttf')
       format('truetype'),
     /* iOS 4.1- */
-    url('../../assets/fonts/body/SofiaProSoftW01-Regular.svg#SofiaProSoftW01-Regular')
+      url('../../assets/fonts/body/SofiaProSoftW01-Regular.svg#SofiaProSoftW01-Regular')
       format('svg');
 }

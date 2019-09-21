@@ -1,9 +1,13 @@
 &__tree {
   @include svgContent();
-  width: 75vw;
-  height: 35vh;
-  top: 5vh;
+  width: 1000px;
+  max-height: 235px;
+  top: 70px;
   position: relative;
+  @include respond(tab-land) {
+    width: 800px;
+    height: 30vh;
+  }
 }
 &__tree-container {
   @include svgContainer();
@@ -13,4 +17,7 @@
   position: static;
   vertical-align: middle;
   align-self: center;
+  @include respond(phone-narrow) {
+    display: none;
+  }
 }
