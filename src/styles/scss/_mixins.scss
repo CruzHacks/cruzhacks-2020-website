@@ -6,13 +6,13 @@
 
 @mixin respond($breakpoint) {
   @if ($breakpoint == phone-narrow) {
-    @media (max-width: 25em) {
+    @media (max-width: 35em) {
       @content;
     }
   }
 
   @if ($breakpoint == phone) {
-    @media (max-width: 37.5em) {
+    @media (max-width: 42.5em) {
       @content;
     }
   }
@@ -69,9 +69,9 @@
   @include font-source-header(
     $size: 3em,
     $color: #2e2c5f,
-    $lineHeight: 32px,
+    $lineHeight: 45px,
     $letterSpace: 0.05em,
-    $bold: true
+    $weight: bold
   );
   text-transform: uppercase;
 }
@@ -143,13 +143,9 @@
   $color: false,
   $weight: false,
   $lineHeight: false,
-  $letterSpace: false,
-  $bold: false
+  $letterSpace: false
 ) {
   font-family: Rubik;
-  @if ($bold) {
-    font-family: RubikBold;
-  }
   @if ($size) {
     font-size: $size;
   }

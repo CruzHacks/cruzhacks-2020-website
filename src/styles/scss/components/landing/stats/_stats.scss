@@ -4,11 +4,20 @@
     @include flexColumn();
     justify-content: space-evenly;
     flex: 0 0 50%;
-    height: 75vh;
+    height: 525px;
     width: 100vw;
     position: absolute;
-    top: 185vh;
+    top: 1500px;
     justify-content: space-around;
+    @include respond(tab-land) {
+      transform: scale(0.75);
+    }
+    @include respond(tab-port) {
+      transform: scale(0.6);
+    }
+    @include respond(phone) {
+      transform: scale(0.5);
+    }
   }
   &__title {
     @include h1();
