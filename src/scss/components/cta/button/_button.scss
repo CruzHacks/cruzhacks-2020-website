@@ -1,0 +1,35 @@
+@mixin button {
+  width: 160px;
+  height: 41px;
+  background-color: #5dcec6;
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.07em;
+  text-indent: 3px;
+  color: #fffefe;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px #bfbfbf;
+  cursor: pointer;
+}
+&__button-container {
+  margin: 3% 44.01% 0 12.33%;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+&__button {
+  @include button();
+}
+&__button--mentor {
+  @include button();
+  margin: 0 0.3% 0 0;
+}
+&__button--volunteer {
+  @include button();
+  margin: 0 0 0 0.3%;
+}

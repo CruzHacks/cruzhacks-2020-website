@@ -4,7 +4,7 @@ import SponsorUsView from './action/cta-sponsor-us.view';
 
 const CtaView: React.FC = () => {
   return (
-    <div className="cta-view__container">
+    <div className="cta__container">
       <JoinOurMissionView />
       <SponsorUsView />
     </div>

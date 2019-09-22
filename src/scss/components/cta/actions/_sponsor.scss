@@ -1,0 +1,31 @@
+&__sponsor-container {
+  width: 100%;
+}
+&__sponsor-title-container {
+  margin: 5.91% 35.42% 0 12.07%;
+}
+&__sponsor-title {
+  @include font-source-header(
+    $size: 35px,
+    $color: #2e2c5f,
+    $weight: bold,
+    $lineHeight: 41px,
+    $letterSpace: 0.04em
+  );
+  text-indent: 3px;
+  mix-blend-mode: normal;
+}
+&__sponsor-description-container {
+  margin: 2% 44.01% 0 12.33%;
+  white-space: nowrap;
+}
+&__sponsor-description {
+  font-family: Avenir;
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 16px;
+  line-height: 12px;
+
+  letter-spacing: 0.02em;
+
+  color: #383636;
+}
