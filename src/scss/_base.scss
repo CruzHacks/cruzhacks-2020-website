@@ -22,14 +22,12 @@ body {
 }
 
 /* Mixins */
-
 @import './mixins.scss';
 
 /* Fonts */
 @import './fonts.scss';
 
 /* Landing Styles */
-
 @import './components/landing/landing';
 @import './components/landing/hero/hero';
 @import './components/landing/hero/backdrop/backdrop';
@@ -38,7 +36,6 @@ body {
 @import './components/landing/hero/title-area/title-area';
 
 /* About Styles */
-
 @import './components/about/about';
 @import './components/about/backdrop/backdrop';
 
@@ -50,6 +47,9 @@ body {
 
 /* FAQ Styles*/
 @import './components/faq/faq';
+
+/* Sponsor Styles */
+@import './components/sponsors/sponsors';
 
 /* Footer Styles */
 @import './components/footer/footer';
