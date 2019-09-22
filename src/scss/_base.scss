@@ -19,6 +19,8 @@ body {
   left: 0;
   right: 0;
   min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* Mixins */
@@ -44,6 +46,10 @@ body {
 @import './components/welcome/backdrop/backdrop';
 @import './components/welcome/cards/cards';
 @import './components/welcome/title/title';
+
+/* CTA Styles */
+@import './components/cta/cta';
+@import './components/cta/backdrop/backdrop';
 
 /* FAQ Styles*/
 @import './components/faq/faq';
