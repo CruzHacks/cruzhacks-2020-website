@@ -1,14 +1,20 @@
 .footer-backdrop__container {
     @include flexBox();
     position: relative;
-    min-height: 566px;
+    min-height: 766px;
+
+    @include respond(tab-land) {
+        min-height: 566px;
+    }
 }
 
+/*
 @media all and (min-width: 1368px) {
     div.footer-backdrop__container {
         min-height: 766px;
     }
 }
+*/
 
 /* SVGs */
 .footer-backdrop-extended__image,
