@@ -1,13 +1,19 @@
 .hero-backdrop__container {
-    min-height: 760px;
+    min-height: 960px;
     position: relative;
+
+    @include respond(tab-land) {
+        min-height: 760px;
+    }
 }
 
+/*
 @media all and (min-width: 1368px) {
     div.hero-backdrop__container {
         min-height: 960px;
     }
 }
+*/
 
 // SVGs
 .hero-backdrop-all-pillars__image {

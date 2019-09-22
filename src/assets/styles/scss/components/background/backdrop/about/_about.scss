@@ -1,7 +1,17 @@
 .about-backdrop__container {
     @include flexBox();
     position: relative;
-    min-height: 596px;
+    min-height: 796px;
+
+    @include respond(tab-land) {
+        min-height: 596px;
+    }
+
+    /*
+    @include respond(mission) {
+        min-height: 796px;
+    }
+    */
 }
 
 
@@ -28,8 +38,10 @@
 
 }
 
+/*
 @media all and (min-width: 1368px) {
     div.about-backdrop__container {
         min-height: 796px;
     }
 }
+*/
