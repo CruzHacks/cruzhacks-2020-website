@@ -1,4 +1,5 @@
 import React from 'react';
+
 import HeroView from './hero/hero.view';
 import AboutView from '../about/about.view';
 import WelcomeView from '../welcome/welcome.view';
