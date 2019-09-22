@@ -1,6 +1,6 @@
 {
   "name": "cruzhacks-2020-website",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "private": true,
   "dependencies": {
     "node-sass": "^4.12.0",
@@ -47,13 +47,5 @@
     "cross-env": "^5.2.1",
     "react-test-renderer": "^16.9.0",
     "typescript": "3.6.2"
-  },
-  "bit": {
-    "env": {
-      "compiler": "bit.envs/compilers/react-typescript@3.0.21",
-      "tester": "bit.envs/testers/jest@22.4.3"
-    },
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
   }
 }

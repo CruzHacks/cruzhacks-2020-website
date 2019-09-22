@@ -1,8 +1,15 @@
-.about-view-container {
+// .about-view-container {
+//   @include flexBox();
+//   position: relative;
+//   bottom: 0%;
+// }
+
+.about-text-area-view-container {
   @include flexBox();
   height: 85vh;
   width: 100vw;
   position: absolute;
+<<<<<<< HEAD
   top: 100vh;
 }
 
@@ -14,4 +21,93 @@
 
 .about-laptop-image {
   @include svgContent();
+=======
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  left: 491px;
+  top: 997px;
+
+  max-width: 584px;
+>>>>>>> origin/about-section
+}
+
+.about__title-text {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+  text-indent: 3px;
+
+  color: #2e2c5f;
+
+  mix-blend-mode: normal;
+
+  height: 33px;
+}
+
+.about__subtitle-text {
+  font-family: Avenir;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  text-indent: 3px;
+
+  color: #767676;
+
+  margin-top: 10px;
+  height: 25px;
+}
+
+.about__description-text {
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #383636;
+
+  margin-top: 25px;
+  height: 150%;
+}
+
+.about__placeholder-text {
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  text-indent: 3px;
+
+  color: #cdcdcd;
+
+  transform: rotate(26.68deg);
+}
+
+//mobile
+@media all and (max-width: 960px) {
+  div.about-text-area-view-container {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    left: unset;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  div.about__title-text {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  div.about__subtitle-text {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+  }
+
+  div.about__description-text {
+    font-size: 14px;
+  }
 }
