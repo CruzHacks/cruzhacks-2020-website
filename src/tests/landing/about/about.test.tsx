@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import About from './about.view';
+import About from '../../../components/landing/about/about.view';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HeroView from '../../components/landing/hero/hero.view';
+import HeroView from '../../../components/landing/hero/hero.view';
 
 import renderer from 'react-test-renderer';
 
