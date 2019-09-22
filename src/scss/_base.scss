@@ -35,17 +35,14 @@ body {
 /* Landing Styles */
 @import './components/landing/landing';
 @import './components/landing/hero/hero';
-@import './components/landing/hero/backdrop/backdrop';
 @import './components/landing/hero/header/header';
 @import './components/landing/hero/title-area/title-area';
 
 /* About Styles */
 @import './components/about/about';
-@import './components/about/backdrop/backdrop';
 
 /* Welcome Styles */
 @import './components/welcome/welcome';
-@import './components/welcome/backdrop/backdrop';
 @import './components/welcome/cards/cards';
 @import './components/welcome/title/title';
 
@@ -54,7 +51,6 @@ body {
 
 /* CTA Styles */
 @import './components/cta/cta';
-@import './components/cta/backdrop/backdrop';
 
 /* FAQ Styles*/
 @import './components/faq/faq';
@@ -64,6 +60,5 @@ body {
 
 /* Footer Styles */
 @import './components/footer/footer';
-@import './components/footer/backdrop/backdrop';
 @import './components/footer/text/text';
 @import './components/footer/buttons/buttons';

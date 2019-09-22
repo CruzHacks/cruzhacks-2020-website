@@ -1,0 +1,18 @@
+&__subtitle {
+  font-family: Avenir;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  text-indent: 3px;
+
+  color: #767676;
+
+  margin-top: 10px;
+  height: 25px;
+
+  @include respond(tab-land) {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+  }
+}

@@ -10,31 +10,26 @@
       @content;
     }
   }
-
   @if ($breakpoint == phone) {
     @media (max-width: 42.5em) {
       @content;
     }
   }
-
   @if ($breakpoint == tab-port) {
     @media (max-width: 56.25em) {
       @content;
     }
   }
-
   @if ($breakpoint == tab-land) {
     @media (max-width: 75em) {
       @content;
     }
   }
-
   @if ($breakpoint == mission) {
     @media (max-width: 99em) {
       @content;
     }
   }
-
   @if ($breakpoint == big-desktop) {
     @media (min-width: 112.5em) {
       @content;

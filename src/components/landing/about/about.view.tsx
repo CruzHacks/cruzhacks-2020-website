@@ -1,11 +1,15 @@
 import React from 'react';
-import AboutBackdropView from './backdrop/backdrop.view';
+import AboutTitleView from './text/about-title.view';
+import AboutSubtitleView from './text/about-subtitle.view';
+import AboutDescriptionView from './text/about-description.view';
 
 const AboutView: React.FC = () => {
   return (
-    <section className="about-view-container">
-      <AboutBackdropView />
-    </section>
+    <div className="about__container">
+      <AboutTitleView />
+      <AboutSubtitleView />
+      <AboutDescriptionView />
+    </div>
   );
 };
 
