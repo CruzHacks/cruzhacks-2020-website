@@ -1,44 +1,41 @@
 $text-color: #2e2c5f;
 
-@media all and (max-width: 960px) {
-  div.welcome-cards__container {
+@include respond(tab-land) {
+  &__card-container {
     display: block;
   }
-  div.welcome-card {
+  &__card {
     margin: 1.5em 0;
   }
 }
 
 /* Welcome card containers */
-.welcome-cards__container {
+&__card-container {
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.welcome-card {
+&__card {
   display: flex;
   margin: 0 auto;
   justify-content: space-around;
   align-items: center;
 }
-
 /* Welcome card text related stuff */
-.welcome-card__text {
+&__card-text {
   position: absolute;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-
-.welcome-card__header {
+&__card-header {
   font-family: Rubik;
   font-weight: 500;
   color: $text-color;
 }
-
-.welcome-card__caption {
+&__card-caption {
   font-size: 18px;
   color: #424242;
   font-family: SofiaProSoftW01-Regular;
@@ -48,7 +45,6 @@ $text-color: #2e2c5f;
   letter-spacing: 0.02em;
   max-width: 242px;
 }
-
-.welcome-card__tree {
+&__card-tree {
   padding: 1.4em;
 }
