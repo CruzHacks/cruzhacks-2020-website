@@ -1,7 +1,0 @@
-.sponsors{
-    &__container{
-        @include flexBox();
-        @include flexColumn();
-    }
-    @import './container/container.scss';
-}

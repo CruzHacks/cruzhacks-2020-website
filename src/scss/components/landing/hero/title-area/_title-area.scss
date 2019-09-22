@@ -67,12 +67,12 @@
   position: absolute;
   width: 22vw;
   height: 64px;
-  @include font-source-body(
-    $size: 1em,
-    $color: #adadad,
-    $weight: normal,
-    $lineHeight: 0.75
-  );
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  text-indent: 3px;
+  color: #adadad;
   white-space: nowrap;
 }
 

@@ -9,6 +9,7 @@ const HeroRightSideView: React.FC = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        preserveAspectRatio="xMinYMin meet"
       >
         <path fill="url(#rightSidePattern0)" d="M0-171h1296v920H0z" />
         <defs>

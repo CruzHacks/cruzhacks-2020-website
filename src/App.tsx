@@ -5,6 +5,7 @@ import WelcomeView from './components/welcome/welcome.view';
 import FAQView from './components/faq/faq.view';
 import SponsorsView from './components/sponsors/sponsors.view';
 import FooterView from './components/footer/footer.view';
+import CtaView from './components/cta/cta.view';
 
 const App: React.FC = () => {
   return (
@@ -14,11 +15,11 @@ const App: React.FC = () => {
       <WelcomeView />
       <FAQView />
       <SponsorsView />
+      <WelcomeView />
+      <CtaView />
       <FooterView />
     </>
   );
 };
 
 export default App;
-
-// <div className="test-container">Howdy Partner</div>
