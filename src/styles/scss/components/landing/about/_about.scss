@@ -1,0 +1,17 @@
+.about-view-container {
+  @include flexBox();
+  height: 85vh;
+  width: 100vw;
+  position: absolute;
+  top: 100vh;
+}
+
+.about-laptop-container {
+  @include svgContainer();
+  width: 100vw;
+  height: 45vh;
+}
+
+.about-laptop-image {
+  @include svgContent();
+}

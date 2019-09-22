@@ -6,12 +6,23 @@ import HeroBackdropView from './backdrop/hero-backdrop.view';
 
 const HeroView: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="hero-view-container">
       <HeroHeaderView />
       <HeroTitleAreaView />
       <HeroRightSideView />
       <HeroBackdropView />
     </div>
+=======
+    <>
+      <section className="hero__container">
+        <HeroHeaderView />
+        <HeroTitleAreaView />
+        <HeroRightSideView />
+        <HeroBackdropView />
+      </section>
+    </>
+>>>>>>> stat-section
   );
 };
 

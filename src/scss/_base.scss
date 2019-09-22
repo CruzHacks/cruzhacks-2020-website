@@ -4,13 +4,16 @@
 // Global Styles
 // ============================================================================
 
+/* Mixins */
+@import "./mixins";
+
 body {
   margin: 0;
   box-sizing: border-box;
   background-color: #ffffff;
 }
 
-#root {
+.app-root {
   display: flex;
   flex-flow: column nowrap;
   position: absolute;
@@ -24,41 +27,44 @@ body {
 }
 
 /* Mixins */
-@import './mixins.scss';
+@import "./mixins.scss";
 
 /* Fonts */
-@import './fonts.scss';
+@import "./fonts.scss";
 
 /* Landing Styles */
-@import './components/landing/landing';
-@import './components/landing/hero/hero';
-@import './components/landing/hero/backdrop/backdrop';
-@import './components/landing/hero/header/header';
-@import './components/landing/hero/header/navbar/navbar';
-@import './components/landing/hero/title-area/title-area';
+@import "./components/landing/landing";
+@import "./components/landing/hero/hero";
+@import "./components/landing/hero/backdrop/backdrop";
+@import "./components/landing/hero/header/header";
+@import "./components/landing/hero/navbar/navbar";
+@import "./components/landing/hero/title-area/title-area";
 
 /* About Styles */
-@import './components/about/about';
-@import './components/about/backdrop/backdrop';
+@import "./components/about/about";
+@import "./components/about/backdrop/backdrop";
 
 /* Welcome Styles */
-@import './components/welcome/welcome';
-@import './components/welcome/backdrop/backdrop';
-@import './components/welcome/cards/cards';
-@import './components/welcome/title/title';
+@import "./components/welcome/welcome";
+@import "./components/welcome/backdrop/backdrop";
+@import "./components/welcome/cards/cards";
+@import "./components/welcome/title/title";
+
+/* Stats Styles */
+@import "./components/landing/stats/stats";
 
 /* CTA Styles */
-@import './components/cta/cta';
-@import './components/cta/backdrop/backdrop';
+@import "./components/cta/cta";
+@import "./components/cta/backdrop/backdrop";
 
 /* FAQ Styles*/
-@import './components/faq/faq';
+@import "./components/faq/faq";
 
 /* Sponsor Styles */
-@import './components/sponsors/sponsors';
+@import "./components/sponsors/sponsors";
 
 /* Footer Styles */
-@import './components/footer/footer';
-@import './components/footer/backdrop/backdrop';
-@import './components/footer/text/text';
-@import './components/footer/buttons/buttons';
+@import "./components/footer/footer";
+@import "./components/footer/backdrop/backdrop";
+@import "./components/footer/text/text";
+@import "./components/footer/buttons/buttons";
