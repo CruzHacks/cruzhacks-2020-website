@@ -3,9 +3,9 @@ import AboutBackdropView from './backdrop/backdrop.view';
 
 const AboutView: React.FC = () => {
   return (
-    <div className="about-view-container">
+    <section className="about-view-container">
       <AboutBackdropView />
-    </div>
+    </section>
   );
 };
 

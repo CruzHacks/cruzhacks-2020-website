@@ -1,11 +1,19 @@
 import React from 'react';
-import HeroView from './hero/hero.view';
 
-const LandingView: React.FC = () => {
+// import landing views
+import HeroView from './hero/hero.view';
+import StatsView from './stats/stats.view';
+import AboutView from './about/about.view';
+
+export const LandingView: React.FC = () => {
   return (
-    <div className="landing-view-container">
-      <HeroView />
-    </div>
+    <>
+      <div className="landing__container">
+        <HeroView />
+        <AboutView />
+        <StatsView />
+      </div>
+    </>
   );
 };
 
