@@ -2,6 +2,7 @@ import React from 'react';
 import LandingView from './components/landing/landing.view';
 import AboutView from './components/about/about.view';
 import WelcomeView from './components/welcome/welcome.view';
+import FAQView from './components/faq/faq.view'
 import FooterView from './components/footer/footer.view';
 
 const App: React.FC = () => {
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <LandingView />
       <AboutView />
       <WelcomeView/>
+      <FAQView/>
       <FooterView />
     </>
   );
