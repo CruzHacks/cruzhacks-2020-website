@@ -1,31 +1,53 @@
 /* HeroNavButtonsContainer */
 
-.navbar__button-container {
-  font-family: SofiaProSoftW01-Regular;
-  order: 1;
+.navbar {
   display: flex;
   flex-flow: row wrap;
   position: absolute;
   top: 0;
   right: 159px;
+
+  &__button {
+    padding: 16px 30px 16px 30px;
+  }
+
+  &__button-text {
+    @include font-source-subheader(
+      13px,
+      16px,
+      0.06em,
+      3px,
+      center,
+      false,
+      600,
+      #373737
+    );
+  }
+
+  &__button-text:hover {
+    color: #ffffff;
+    cursor: pointer;
+  }
 }
 
-.navbar__button {
-  padding: 16px 30px 16px 30px;
-}
+// .navbar__button {
+//   padding: 16px 30px 16px 30px;
+// }
 
-.navbar__button__text {
-  @include font-source-body(
-    $size: 13px,
-    $lineHeight: 16px,
-    $letterSpace: 0.06em,
-    $weight: bold,
-    $color: #373737
-  );
-  text-align: center;
-}
+// .navbar__button__text {
+//   @include font-source-body(
+//     13px,
+//     16px,
+//     0.06em,
+//     3px,
+//     center,
+//     normal,
+//     600,
+//     #373737
+//   );
+// }
 
-.navbar__button__text:hover {
-  color: #ffffff;
-  cursor: pointer;
-}
+// .navbar__button__text:hover {
+//   color: #ffffff;
+//   cursor: pointer;
+// }

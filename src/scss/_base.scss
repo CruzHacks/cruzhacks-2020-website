@@ -1,8 +1,12 @@
-/* _base.scss */
-
 // ============================================================================
 // Global Styles
 // ============================================================================
+
+/* Mixins */
+@import './mixins';
+
+/* Fonts */
+@import './fonts';
 
 body {
   margin: 0;
@@ -10,7 +14,7 @@ body {
   background-color: #ffffff;
 }
 
-#root {
+.app-root {
   display: flex;
   flex-flow: column nowrap;
   position: absolute;
@@ -19,37 +23,14 @@ body {
   left: 0;
   right: 0;
   min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
 }
 
-/* Mixins */
-
-@import './mixins.scss';
-
-/* Fonts */
-@import './fonts.scss';
-
 /* Landing Styles */
-
 @import './components/landing/landing';
-@import './components/landing/hero/hero';
-@import './components/landing/hero/backdrop/backdrop';
-@import './components/landing/hero/header/header';
-@import './components/landing/hero/header/navbar/navbar';
-@import './components/landing/hero/title-area/title-area';
-
-/* About Styles */
-
-@import './components/about/about';
-@import './components/about/backdrop/backdrop';
-
-/* Welcome Styles */
-@import './components/welcome/welcome';
-@import './components/welcome/backdrop/backdrop';
-@import './components/welcome/cards/cards';
-@import './components/welcome/title/title';
 
 /* Footer Styles */
 @import './components/footer/footer';
-@import './components/footer/backdrop/backdrop';
 @import './components/footer/text/text';
 @import './components/footer/buttons/buttons';

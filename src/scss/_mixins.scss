@@ -6,35 +6,30 @@
 
 @mixin respond($breakpoint) {
   @if ($breakpoint == phone-narrow) {
-    @media (max-width: 25em) {
+    @media (max-width: 35em) {
       @content;
     }
   }
-
   @if ($breakpoint == phone) {
-    @media (max-width: 37.5em) {
+    @media (max-width: 42.5em) {
       @content;
     }
   }
-
   @if ($breakpoint == tab-port) {
     @media (max-width: 56.25em) {
       @content;
     }
   }
-
   @if ($breakpoint == tab-land) {
     @media (max-width: 75em) {
       @content;
     }
   }
-
   @if ($breakpoint == mission) {
     @media (max-width: 99em) {
       @content;
     }
   }
-
   @if ($breakpoint == big-desktop) {
     @media (min-width: 112.5em) {
       @content;
@@ -61,49 +56,19 @@
   @return $string;
 }
 
-// =============================================================================
-// Font Face (https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6)
-// =============================================================================
+// ============================================================================
+// H1 style for spans
+// ============================================================================
 
-@mixin font-face(
-  $name,
-  $path,
-  $weight: null,
-  $style: null,
-  $exts: eot woff2 woff ttf svg
-) {
-  $src: null;
-
-  $extmods: (
-    eot: '?',
-    svg: '#' + str-replace($name, ' ', '_'),
+@mixin h1 {
+  @include font-source-header(
+    $size: 3em,
+    $color: #2e2c5f,
+    $lineHeight: 45px,
+    $letterSpace: 0.05em,
+    $weight: bold
   );
-
-  $formats: (
-    otf: 'opentype',
-    ttf: 'truetype',
-  );
-
-  @each $ext in $exts {
-    $extmod: if(
-      map-has-key($extmods, $ext),
-      $ext + map-get($extmods, $ext),
-      $ext
-    );
-    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $src: append(
-      $src,
-      url(quote($path + '.' + $extmod)) format(quote($format)),
-      comma
-    );
-  }
-
-  @font-face {
-    font-family: quote($name);
-    font-style: $style;
-    font-weight: $weight;
-    src: $src;
-  }
+  text-transform: uppercase;
 }
 
 // ============================================================================
@@ -112,25 +77,38 @@
 
 @mixin font-source-body(
   $size: false,
-  $color: false,
-  $weight: false,
   $lineHeight: false,
-  $letterSpace: false
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
 ) {
+  font-family: SofiaProSoftW01-Regular;
   @if ($size) {
     font-size: $size;
-  }
-  @if ($color) {
-    color: $color;
-  }
-  @if ($weight) {
-    font-weight: $weight;
   }
   @if ($lineHeight) {
     line-height: $lineHeight;
   }
   @if ($letterSpace) {
     letter-spacing: $letterSpace;
+  }
+  @if ($textIndent) {
+    text-indent: $textIndent;
+  }
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($color) {
+    color: $color;
   }
 }
 
@@ -140,26 +118,38 @@
 
 @mixin font-source-subheader(
   $size: false,
-  $color: false,
-  $weight: false,
   $lineHeight: false,
-  $letterSpace: false
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
 ) {
   font-family: AvenirBook;
   @if ($size) {
     font-size: $size;
-  }
-  @if ($color) {
-    color: $color;
-  }
-  @if ($weight) {
-    font-weight: $weight;
   }
   @if ($lineHeight) {
     line-height: $lineHeight;
   }
   @if ($letterSpace) {
     letter-spacing: $letterSpace;
+  }
+  @if ($textIndent) {
+    text-indent: $textIndent;
+  }
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($color) {
+    color: $color;
   }
 }
 
@@ -169,26 +159,38 @@
 
 @mixin font-source-header(
   $size: false,
-  $color: false,
-  $weight: false,
   $lineHeight: false,
-  $letterSpace: false
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
 ) {
   font-family: Rubik;
   @if ($size) {
     font-size: $size;
-  }
-  @if ($color) {
-    color: $color;
-  }
-  @if ($weight) {
-    font-weight: $weight;
   }
   @if ($lineHeight) {
     line-height: $lineHeight;
   }
   @if ($letterSpace) {
     letter-spacing: $letterSpace;
+  }
+  @if ($textIndent) {
+    text-indent: $textIndent;
+  }
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($color) {
+    color: $color;
   }
 }
 
@@ -198,9 +200,8 @@
 
 @mixin svgContainer() {
   display: inline-block;
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;
+  position: static;
+  width: 100vw;
   vertical-align: middle;
   overflow: hidden;
 }
