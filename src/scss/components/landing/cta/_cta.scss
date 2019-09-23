@@ -1,0 +1,14 @@
+.cta {
+  &__container {
+    position: relative;
+    min-height: 766px;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  @import './button/button';
+  @import './actions/join';
+  @import './actions/sponsor';
+}

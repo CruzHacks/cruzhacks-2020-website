@@ -1,0 +1,14 @@
+&__description {
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #383636;
+
+  margin-top: 25px;
+  height: 150%;
+
+  @include respond(tab-land) {
+    font-size: 14px;
+  }
+}

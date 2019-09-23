@@ -1,11 +1,13 @@
 {
   "name": "cruzhacks-2020-website",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "private": true,
   "dependencies": {
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-mail-form": "^2.0.2",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1"
   },
   "scripts": {
@@ -41,16 +43,9 @@
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
     "@types/react-test-renderer": "^16.9.0",
+    "@types/react-router-dom": "^4.3.5",
     "cross-env": "^5.2.1",
     "react-test-renderer": "^16.9.0",
     "typescript": "3.6.2"
-  },
-  "bit": {
-    "env": {
-      "compiler": "bit.envs/compilers/react-typescript@3.0.21",
-      "tester": "bit.envs/testers/jest@22.4.3"
-    },
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
   }
 }

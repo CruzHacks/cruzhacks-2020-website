@@ -1,0 +1,16 @@
+.welcome {
+  &__container {
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    margin-bottom: 10em;
+
+    @include respond(tab-land) {
+      height: unset;
+    }
+  }
+  @import './title/title';
+  @import './cards/cards';
+}

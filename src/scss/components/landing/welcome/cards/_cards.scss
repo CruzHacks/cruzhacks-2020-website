@@ -1,0 +1,50 @@
+$text-color: #2e2c5f;
+
+@include respond(tab-land) {
+  &__card-container {
+    display: block;
+  }
+  &__card {
+    margin: 1.5em 0;
+  }
+}
+
+/* Welcome card containers */
+&__card-container {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+&__card {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Welcome card text related stuff */
+&__card-text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+&__card-header {
+  font-family: Rubik;
+  font-weight: 500;
+  color: $text-color;
+}
+&__card-caption {
+  font-size: 18px;
+  color: #424242;
+  font-family: SofiaProSoftW01-Regular;
+
+  padding-left: 0.7em;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  max-width: 242px;
+}
+&__card-tree {
+  padding: 1.4em;
+}
