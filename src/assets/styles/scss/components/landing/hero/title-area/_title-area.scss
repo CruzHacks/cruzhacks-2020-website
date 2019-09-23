@@ -3,19 +3,14 @@
 /* HeroTitleAreaContainer */
 
 .hero-title-area {
+  white-space: nowrap;
   position: absolute;
-  // left: 9.98%;
-  // top: 5.32%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
   left: 115px;
   top: 275px;
-
-  &__title {
-    position: relative;
-    left: 0;
-    top: 0;
-    // width: 320px;
-    // height: 29px;
-  }
 
   &__title-text {
     @include font-source-main(
@@ -29,14 +24,11 @@
       #222222
     );
     mix-blend-mode: normal;
+    @include responsive-font(5vw, 32px, 39px);
   }
 
   &__slogan {
-    position: absolute;
-    left: 131px;
-    top: 54px;
-    width: 198px;
-    height: 22px;
+    text-align: right;
   }
 
   &__slogan-text {
@@ -50,14 +42,14 @@
       false,
       #9e9eff
     );
+    @include responsive-font(5vw, 18px, 22px);
   }
 
   &__eventInfo {
     position: absolute;
+    text-align: left;
     left: 0;
     top: 152px;
-    width: 286px;
-    height: 114px;
   }
 
   &__eventInfo-text {
