@@ -18,7 +18,7 @@
   }
 
   &__title-text {
-    @include font-source-main(
+    @include font-source-header(
       39px,
       46px,
       0.04em,

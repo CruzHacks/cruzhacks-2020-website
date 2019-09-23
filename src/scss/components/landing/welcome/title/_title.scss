@@ -25,16 +25,14 @@
   }
 }
 &__title-caption {
-  font-family: AvenirBook;
-  font-size: 22px;
-  color: #767676;
-
-  letter-spacing: 0.09em;
+  @include font-source-subheader(
+    $size: 22px,
+    $color: #767676,
+    $letterSpace: 0.09em
+  );
   margin: 0;
   @include respond(tab-land) {
-    h3 {
-      padding-left: 10px;
-    }
+    padding-left: 10px;
   }
 }
 &__title-text {
