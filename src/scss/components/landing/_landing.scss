@@ -1,9 +1,30 @@
-/* _landing.scss */
-
-/* Landing View Container */
-
-.landing-view-container {
-  // @include flexBox();
-  position: relative;
-  // min-height: 766px;
+.landing {
+  &__container {
+    // @include flexBox();
+    position: relative;
+    // min-height: 766px;
+  }
 }
+/* Hero Styles */
+@import './hero/hero';
+@import './hero/header/header';
+@import './hero/navbar/navbar';
+@import './hero/title-area/title-area';
+
+/* About Styles */
+@import './about/about';
+
+/* Welcome Styles */
+@import './welcome/welcome';
+
+/* Stats Styles */
+@import './stats/stats';
+
+/* CTA Styles */
+@import './cta/cta';
+
+/* FAQ Styles*/
+@import './faq/faq';
+
+/* Sponsor Styles */
+@import './sponsors/sponsors';

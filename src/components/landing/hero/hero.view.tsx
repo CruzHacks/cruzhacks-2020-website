@@ -10,8 +10,6 @@ const HeroView: React.FC = () => {
       <section className="hero__container">
         <HeroHeaderView />
         <HeroTitleAreaView />
-        <HeroRightSideView />
-        <HeroBackdropView />
       </section>
     </>
   );
