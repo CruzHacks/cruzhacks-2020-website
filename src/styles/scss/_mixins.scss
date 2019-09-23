@@ -4,6 +4,8 @@
 // Media Queries
 // ============================================================================
 
+@import './fonts';
+
 @mixin respond($breakpoint) {
   @if ($breakpoint == phone-narrow) {
     @media (max-width: 35em) {
@@ -42,6 +44,7 @@
   }
 }
 
+<<<<<<< HEAD:src/styles/scss/_mixins.scss
 // =============================================================================
 // String Replace (https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6)
 // =============================================================================
@@ -76,26 +79,111 @@
   text-transform: uppercase;
 }
 
+=======
+>>>>>>> origin/implement-website-skeleton-as-a-baseline-for-moving-forward-with-development:src/assets/styles/scss/_mixins.scss
+// ============================================================================
+// Main Font Source
+// ============================================================================
+
+@mixin font-source-main(
+  $size: false,
+  $lineHeight: false,
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
+) {
+<<<<<<< HEAD:src/styles/scss/_mixins.scss
+  font-family: SofiaProSoftW01-Regular;
+=======
+  font-family: Rubik;
+>>>>>>> origin/implement-website-skeleton-as-a-baseline-for-moving-forward-with-development:src/assets/styles/scss/_mixins.scss
+  @if ($size) {
+    font-size: $size;
+  }
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  }
+  @if ($letterSpace) {
+    letter-spacing: $letterSpace;
+  }
+  @if ($textIndent) {
+    text-indent: $textIndent;
+  }
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($color) {
+    color: $color;
+  }
+}
+
+// ============================================================================
+// Subheading Font Source
+// ============================================================================
+
+@mixin font-source-subheading(
+  $size: false,
+  $lineHeight: false,
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
+) {
+  font-family: AvenirBook;
+  @if ($size) {
+    font-size: $size;
+  }
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  }
+  @if ($letterSpace) {
+    letter-spacing: $letterSpace;
+  }
+  @if ($textIndent) {
+    text-indent: $textIndent;
+  }
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($color) {
+    color: $color;
+  }
+}
+
 // ============================================================================
 // Body Font Source
 // ============================================================================
 
 @mixin font-source-body(
   $size: false,
-  $color: false,
-  $weight: false,
   $lineHeight: false,
-  $letterSpace: false
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
 ) {
-  font-family: SofiaProSoftW01-Regular;
+  font-family: 'SofiaProSoftW01-Regular';
   @if ($size) {
     font-size: $size;
-  }
-  @if ($color) {
-    color: $color;
-  }
-  @if ($weight) {
-    font-weight: $weight;
   }
   @if ($lineHeight) {
     line-height: $lineHeight;
@@ -103,63 +191,20 @@
   @if ($letterSpace) {
     letter-spacing: $letterSpace;
   }
-}
-
-// ============================================================================
-// Subheader Font Source
-// ============================================================================
-
-@mixin font-source-subheader(
-  $size: false,
-  $color: false,
-  $weight: false,
-  $lineHeight: false,
-  $letterSpace: false
-) {
-  font-family: AvenirBook;
-  @if ($size) {
-    font-size: $size;
+  @if ($textIndent) {
+    text-indent: $textIndent;
   }
-  @if ($color) {
-    color: $color;
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
   }
   @if ($weight) {
     font-weight: $weight;
   }
-  @if ($lineHeight) {
-    line-height: $lineHeight;
-  }
-  @if ($letterSpace) {
-    letter-spacing: $letterSpace;
-  }
-}
-
-// ============================================================================
-// Header Font Source
-// ============================================================================
-
-@mixin font-source-header(
-  $size: false,
-  $color: false,
-  $weight: false,
-  $lineHeight: false,
-  $letterSpace: false
-) {
-  font-family: Rubik;
-  @if ($size) {
-    font-size: $size;
-  }
   @if ($color) {
     color: $color;
-  }
-  @if ($weight) {
-    font-weight: $weight;
-  }
-  @if ($lineHeight) {
-    line-height: $lineHeight;
-  }
-  @if ($letterSpace) {
-    letter-spacing: $letterSpace;
   }
 }
 
