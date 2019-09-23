@@ -8,7 +8,7 @@
 @import './mixins';
 
 /* Fonts */
-@import './fonts.scss';
+@import './fonts';
 
 body {
   margin: 0;
@@ -30,9 +30,6 @@ body {
 
 /* Landing Styles */
 @import './components/landing/landing';
-
-/* Fonts */
-@import './fonts.scss';
 
 /* Hero Styles */
 @import './components/landing/hero/hero';

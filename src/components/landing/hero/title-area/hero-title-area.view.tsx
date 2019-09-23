@@ -1,17 +1,25 @@
 import React from 'react';
-import HeroTitleView from './hero-title.view';
-import HeroSloganView from './hero-slogan.view';
-import HeroEventInfoTextView from './hero-event-info-text.view';
-import HeroSponsorUsButtonView from './hero-sponsor-us-button.view';
-import HeroNavigateToBottomButtonView from './hero-navigate-to-bottom-button';
+import HeroNavigateToBottomButtonView from './hero-navigate-to-bottom-button.view';
 
 const HeroTitleAreaView: React.FC = () => {
   return (
-    <div className="hero-title-area-view-container">
-      <HeroTitleView />
-      <HeroSloganView />
-      <HeroEventInfoTextView />
-      <HeroSponsorUsButtonView />
+    <div className="hero-title-area">
+      <div className="hero-title-area__title">
+        <h1 className="hero-title-area__title-text">cruzhacks 2020</h1>
+      </div>
+      <div className="hero-title-area__slogan">
+        <p className="hero-title-area__slogan-text">you.belongHere();</p>
+      </div>
+      <div className="hero-title-area__eventInfo">
+        <div className="hero-title-area__eventInfo-text">
+          <p>// January 19-21st, 2020</p>
+          <p>// Stevenson Event Center, UC Santa Cruz</p>
+          <p>// Applications Release Nov.</p>
+        </div>
+      </div>
+      <div className="hero-title-area__button">
+        <p className="hero-title-area__button-text">SPONSOR US</p>
+      </div>
       <HeroNavigateToBottomButtonView />
     </div>
   );
