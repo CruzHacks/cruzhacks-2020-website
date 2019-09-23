@@ -77,26 +77,38 @@
 
 @mixin font-source-body(
   $size: false,
-  $color: false,
-  $weight: false,
   $lineHeight: false,
-  $letterSpace: false
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
 ) {
   font-family: SofiaProSoftW01-Regular;
   @if ($size) {
     font-size: $size;
-  }
-  @if ($color) {
-    color: $color;
-  }
-  @if ($weight) {
-    font-weight: $weight;
   }
   @if ($lineHeight) {
     line-height: $lineHeight;
   }
   @if ($letterSpace) {
     letter-spacing: $letterSpace;
+  }
+  @if ($textIndent) {
+    text-indent: $textIndent;
+  }
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($color) {
+    color: $color;
   }
 }
 
@@ -106,26 +118,38 @@
 
 @mixin font-source-subheader(
   $size: false,
-  $color: false,
-  $weight: false,
   $lineHeight: false,
-  $letterSpace: false
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
 ) {
   font-family: AvenirBook;
   @if ($size) {
     font-size: $size;
-  }
-  @if ($color) {
-    color: $color;
-  }
-  @if ($weight) {
-    font-weight: $weight;
   }
   @if ($lineHeight) {
     line-height: $lineHeight;
   }
   @if ($letterSpace) {
     letter-spacing: $letterSpace;
+  }
+  @if ($textIndent) {
+    text-indent: $textIndent;
+  }
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($color) {
+    color: $color;
   }
 }
 
@@ -135,26 +159,38 @@
 
 @mixin font-source-header(
   $size: false,
-  $color: false,
-  $weight: false,
   $lineHeight: false,
-  $letterSpace: false
+  $letterSpace: false,
+  $textIndent: false,
+  $textAlign: false,
+  $fontStyle: false,
+  $weight: false,
+  $color: false
 ) {
   font-family: Rubik;
   @if ($size) {
     font-size: $size;
-  }
-  @if ($color) {
-    color: $color;
-  }
-  @if ($weight) {
-    font-weight: $weight;
   }
   @if ($lineHeight) {
     line-height: $lineHeight;
   }
   @if ($letterSpace) {
     letter-spacing: $letterSpace;
+  }
+  @if ($textIndent) {
+    text-indent: $textIndent;
+  }
+  @if ($textAlign) {
+    text-align: $textAlign;
+  }
+  @if ($fontStyle) {
+    font-style: $fontStyle;
+  }
+  @if ($weight) {
+    font-weight: $weight;
+  }
+  @if ($color) {
+    color: $color;
   }
 }
 
