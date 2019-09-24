@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroSubscribeToEmailList from './hero-subscribe-to-email-list.view';
 import HeroNavigateToBottomButtonView from './hero-navigate-to-bottom-button.view';
 
 const HeroTitleAreaView: React.FC = () => {
@@ -11,13 +12,14 @@ const HeroTitleAreaView: React.FC = () => {
         </div>
       </div>
       <div className="hero-title-area__eventInfo hero-title-area__eventInfo-text">
-        <p>// January 19-21st, 2020</p>
-        <p>// Stevenson Event Center, UC Santa Cruz</p>
+        <p>// January 2020</p>
+        <p>// UC Santa Cruz</p>
         <p>// Applications Release Nov.</p>
       </div>
       <div className="hero-title-area__button">
         <p className="hero-title-area__button-text">SPONSOR US</p>
       </div>
+      <HeroSubscribeToEmailList />
       <HeroNavigateToBottomButtonView />
     </div>
   );
