@@ -25,12 +25,22 @@
 .footer-backdrop-extended__image {
     bottom: 5.5%;
     width: 100%;
+
+    @include respond(phone) {
+        display: none;
+    }
 }
 
-.footer-backdrop-trees__image {
-    top: 5.5%;
-    left: 11%;
+.background-footer-mobile__image {
 
-    max-width: 31.8%;
+    position: absolute;
+    display: none;
+
+    bottom: 50%;
     height: auto;
+    width: 100%;
+
+    @include respond(phone-narrow) {
+        display: initial;
+    }
 }

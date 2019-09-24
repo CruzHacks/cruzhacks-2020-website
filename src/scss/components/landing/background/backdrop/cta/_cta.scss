@@ -24,4 +24,20 @@
     height: auto;
     top: 1%;
     right: 0;
+
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.cta-backdrop-mobile__image {
+
+    position: absolute;
+    right: 0;
+
+    display: none;
+
+    @include respond(phone) {
+        display: initial;
+    }
 }
