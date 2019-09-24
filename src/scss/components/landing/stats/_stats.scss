@@ -2,12 +2,11 @@
   &__container {
     @include flexBox();
     @include flexColumn();
-    justify-content: space-evenly;
     flex: 0 0 50%;
     height: 560px;
     width: 100vw;
     position: absolute;
-    top: 1500px;
+    top: 2250px;
     justify-content: space-around;
     @include respond(tab-land) {
       transform: scale(0.75);
