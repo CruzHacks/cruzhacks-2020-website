@@ -1,16 +1,19 @@
 .welcome-backdrop__container {
     @include flexBox();
     position: relative;
-    min-height: 1096px;
+    min-height: 1596px;
 
+    /*
     @include respond(tab-land) {
         min-height: 896px;
     }
+    */
 }
 
 /* SVGs */
 .welcome-backdrop-mountain__image,
-.welcome-backdrop-pillars__image {
+.welcome-backdrop-pillars__image,
+{
     align-self: center;
     position: absolute;
 }
@@ -18,9 +21,28 @@
 .welcome-backdrop-mountain__image {
     bottom: -5%;
 
+    @include respond(phone) {
+        display: none;
+    }
+
     @include respond(tab-land) {
         bottom: 0;
     }
+}
+.welcome-backdrop-mountain-mobile__image {
+
+    position: absolute;
+    display: none;
+    bottom: -5%;
+
+    @include respond(phone-narrow) {
+        bottom: -1%;
+    }
+
+    @include respond(phone) {
+        display: initial;
+    }
+
 }
 
 .welcome-backdrop-pillars__image {
@@ -38,10 +60,10 @@
 .welcome-backdrop-pillars-mobile__image {
     z-index: -1;
     display: none;
-    max-width: 100%;
+    max-width: 99%;
     position: absolute;
     height: auto;
-    top: -13%;
+    top: 0;
 
     @include respond(phone) {
         display: initial;
