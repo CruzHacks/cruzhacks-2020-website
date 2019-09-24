@@ -6,9 +6,8 @@
     align-items: flex-start;
     align-content: flex-start;
     left: 491px;
-    top: 997px;
 
-    max-width: 584px;
+    width: 100vw;
 
     @include respond(tab-land) {
       align-items: center;
