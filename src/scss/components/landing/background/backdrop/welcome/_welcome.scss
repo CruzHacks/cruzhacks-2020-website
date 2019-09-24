@@ -28,6 +28,24 @@
     max-width: 78%;
     height: auto;
     top: -13%;
+
+    @include respond(phone) {
+        display: none;
+    }
+
+}
+
+.welcome-backdrop-pillars-mobile__image {
+    z-index: -1;
+    display: none;
+    max-width: 100%;
+    position: absolute;
+    height: auto;
+    top: -13%;
+
+    @include respond(phone) {
+        display: initial;
+    }
 }
 
 /*

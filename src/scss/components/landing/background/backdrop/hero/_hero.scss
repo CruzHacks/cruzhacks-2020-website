@@ -5,6 +5,9 @@
     @include respond(tab-land) {
         min-height: 760px;
     }
+    @include respond(phone) {
+        min-height: 660px;
+    }
 }
 
 /*
@@ -18,11 +21,32 @@
 // SVGs
 .hero-backdrop-all-pillars__image {
     position: absolute;
-    left: 0;
-    top: 124px;
 
     max-width: 31%;
     height: auto;
+
+    left: 0;
+    top: 124px;
+
+    @include respond(phone) {
+        left: 3px;
+        top: 106px;
+        max-width: 75%;
+        height: auto;
+    }
+}
+
+.hero-backdrop-rightside-mobile__image {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: none;
+
+    @include respond(phone) {
+        display: initial;
+    }
 }
 
 .hero-backdrop-rightside__image {
@@ -32,4 +56,8 @@
 
     max-width: 69%;
     height: auto;
+
+    @include respond(phone) {
+        display: none;
+    }
 }
