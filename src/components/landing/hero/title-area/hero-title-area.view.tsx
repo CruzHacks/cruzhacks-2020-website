@@ -12,8 +12,8 @@ const HeroTitleAreaView: React.FC = () => {
         </div>
       </div>
       <div className="hero-title-area__eventInfo hero-title-area__eventInfo-text">
-        <p>// January 2020</p>
-        <p>// UC Santa Cruz</p>
+        <p>// Coming in January 2020</p>
+        <p>// Location (TBD), UC Santa Cruz</p>
         <p>// Applications Release Nov.</p>
       </div>
       <div className="hero-title-area__button">

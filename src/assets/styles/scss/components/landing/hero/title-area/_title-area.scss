@@ -99,20 +99,24 @@
 
 /* Email Subscription Input Container */
 div.hero-subscribe-to-email-list-container {
-  height: 46px;
+  // height: 46px;
+  height: 45%;
   width: 100%;
 
   display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
   position: absolute;
   left: 0;
-  top: 130px;
+  top: 105px;
   text-align: center;
 
   input {
     all: unset;
-    height: 100%;
-    width: 75%;
+    // height: 100%;
+    width: 60%;
     border-bottom: 1px solid #adadad;
+    margin-bottom: 5%;
     @include font-source-body(
       14px,
       14px,
@@ -127,12 +131,17 @@ div.hero-subscribe-to-email-list-container {
 
   button {
     all: unset;
-    height: 100%;
-    width: 25%;
+    // height: 100%;
+    width: 30%;
+    height: 46px;
     background-color: #6f6fe8;
-    border-radius: 23px 23px 23px 0;
-    padding: 0 14px 0 10px;
+    border-radius: 23px 23px 23px 23px;
+    // padding: 0 14px 0 10px;
+    padding: 10px 10px 10px 10px;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
     box-shadow: 0px 2px 6px #bfbfbf;
+    // align-self: center;
     @include font-source-body(
       14px,
       18px,

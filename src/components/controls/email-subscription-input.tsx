@@ -67,7 +67,7 @@ const EmailSubscriptionInput: React.FC<
     return (
       <div className={textInputData.containerClass}>
         <input
-          type="text"
+          type="email"
           placeholder={textInputData.placeholder}
           value={textInputData.value}
           onChange={e =>
