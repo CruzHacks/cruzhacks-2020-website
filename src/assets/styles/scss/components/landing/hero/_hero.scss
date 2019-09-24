@@ -2,7 +2,18 @@
   display: flex;
   flex-flow: column wrap;
   width: 100vw;
-  min-height: 813px;
+  // min-height: 813px;
+  min-height: 850px;
+}
+
+@media all and (max-width: 321px) {
+  div.hero-title-area {
+    position: unset;
+    position: absolute;
+    left: unset;
+    top: unset;
+    top: 5%;
+  }
 }
 
 @media all and (max-width: 426px) {
@@ -11,14 +22,15 @@
   }
 
   div.hero-title-area {
+    position: unset;
     position: absolute;
     left: unset;
-    top: 30%;
+    top: 25%;
   }
 
   div.hero-title-area__button {
     align-self: center;
-    left: 12vw;
+    // left: 12vw;
   }
 }
 
@@ -47,23 +59,22 @@
   }
 
   div.hero-title-area__button {
-    top: 222px;
+    // top: 222px;
+    top: 305px;
   }
 
   div.hero-title-area__eventInfo {
-    top: 90px;
+    // top: 90px;
+    top: 190px;
   }
 
   div.navigate-to-bottom-container {
-    top: 315px;
+    // top: 315px;
+    top: 415px;
   }
 }
 
 @media all and (max-width: 1280px) {
-  div.hero__lightbulb {
-    left: 3.3%;
-  }
-
   div.hero__mlh-badge {
     right: 3.73%;
   }
