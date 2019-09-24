@@ -1,13 +1,13 @@
 .welcome-backdrop__container {
     @include flexBox();
     position: relative;
-    min-height: 1596px;
 
-    /*
-    @include respond(tab-land) {
-        min-height: 896px;
+    min-height: 896px;
+
+    @include respond(phone) {
+        min-height: 1596px;
     }
-    */
+
 }
 
 /* SVGs */
@@ -33,7 +33,7 @@
 
     position: absolute;
     display: none;
-    bottom: -3.5%;
+    bottom: -10%;
 
     @include respond(phone) {
         display: initial;
@@ -65,3 +65,17 @@
         display: initial;
     }
 }
+
+/*
+@media all and (min-width: 1368px) {
+
+    div.welcome-backdrop__container {
+        min-height: 1096px;
+    }
+
+    svg.welcome-backdrop-mountain__image {
+        bottom: -5%;
+    }
+}
+
+*/
