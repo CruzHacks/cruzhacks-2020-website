@@ -2,6 +2,8 @@
   &__container {
     @include flexBox();
     @include flexColumn();
+    position: relative;
+    top: 1150px;
   }
   @import './container/container.scss';
 }
