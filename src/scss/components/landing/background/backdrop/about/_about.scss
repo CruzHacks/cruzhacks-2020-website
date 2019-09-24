@@ -2,6 +2,10 @@
     @include flexBox();
     position: relative;
     min-height: 796px;
+
+    @include respond(tab-land) {
+        min-height: 596px;
+    }
 }
 
 
