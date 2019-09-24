@@ -7,6 +7,7 @@
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.1.0",
     "react-scripts": "3.1.1"
   },
   "scripts": {
@@ -41,17 +42,10 @@
     "@types/node": "12.7.3",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
+    "@types/react-router-dom": "^4.3.5",
     "@types/react-test-renderer": "^16.9.0",
     "cross-env": "^5.2.1",
     "react-test-renderer": "^16.9.0",
     "typescript": "3.6.2"
-  },
-  "bit": {
-    "env": {
-      "compiler": "bit.envs/compilers/react-typescript@3.0.21",
-      "tester": "bit.envs/testers/jest@22.4.3"
-    },
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
   }
 }
