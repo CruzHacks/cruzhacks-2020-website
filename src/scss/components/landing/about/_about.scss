@@ -1,11 +1,12 @@
 .about {
   &__container {
     @include flexBox();
-    position: absolute;
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
     align-content: flex-start;
-    left: 491px;
+
+    min-height: 796px;
 
     @include respond(tab-land) {
       align-items: center;
@@ -14,6 +15,7 @@
       left: unset;
       padding-left: 10%;
       padding-right: 10%;
+      min-height: 696px;
     }
   }
 
@@ -32,4 +34,10 @@
 
     transform: rotate(26.68deg);
   }
+}
+
+.about-text__container {
+  position: absolute;
+  top: 0;
+  left: 447px;
 }

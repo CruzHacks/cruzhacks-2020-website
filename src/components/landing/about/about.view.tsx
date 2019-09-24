@@ -6,9 +6,12 @@ import AboutDescriptionView from './text/about-description.view';
 const AboutView: React.FC = () => {
   return (
     <div className="about__container">
-      <AboutTitleView />
-      <AboutSubtitleView />
-      <AboutDescriptionView />
+      <div className="about-text__container">
+        <AboutTitleView />
+        <AboutSubtitleView />
+        <AboutDescriptionView />
+      </div>
+
     </div>
   );
 };
