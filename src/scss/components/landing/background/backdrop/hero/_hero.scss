@@ -1,0 +1,35 @@
+.hero-backdrop__container {
+    min-height: 960px;
+    position: relative;
+
+    @include respond(tab-land) {
+        min-height: 760px;
+    }
+}
+
+/*
+@media all and (min-width: 1368px) {
+    div.hero-backdrop__container {
+        min-height: 960px;
+    }
+}
+*/
+
+// SVGs
+.hero-backdrop-all-pillars__image {
+    position: absolute;
+    left: 0;
+    top: 124px;
+
+    max-width: 31%;
+    height: auto;
+}
+
+.hero-backdrop-rightside__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    max-width: 69%;
+    height: auto;
+}

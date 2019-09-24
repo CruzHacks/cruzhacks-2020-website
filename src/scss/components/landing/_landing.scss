@@ -5,6 +5,9 @@
     // min-height: 766px;
   }
 }
+/* Background Styles */
+@import './background/background';
+
 /* Hero Styles */
 @import './hero/hero';
 @import './hero/header/header';
@@ -28,3 +31,8 @@
 
 /* Sponsor Styles */
 @import './sponsors/sponsors';
+
+/* Footer Styles */
+@import './footer/footer';
+@import './footer/text/text';
+@import './footer/buttons/buttons';

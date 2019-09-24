@@ -37,7 +37,7 @@ const welcomeCards = template.map((t, i) => {
           rx="23.5"
           fill="white"
           stroke="#83E2DC"
-          stroke-width="3"
+          strokeWidth="3"
         />
       </svg>
 
@@ -51,7 +51,7 @@ const welcomeCards = template.map((t, i) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#tree_clip0)">
+          <g clipPath="url(#tree_clip0)">
             <path
               d="M77.1901 98.2593L45.9825 82.491C42.3177 80.6381 37.9831 80.6444 34.3184 82.5036L3.10441 98.3728C-0.838403 100.377 -0.832085 105.999 3.11705 107.996L33.756 123.481C37.7746 125.511 42.5199 125.517 46.5385 123.5L77.1775 108.116C81.234 106.074 81.2404 100.301 77.1901 98.2593Z"
               fill="url(#tree0_linear)"
@@ -102,8 +102,8 @@ const welcomeCards = template.map((t, i) => {
               y2="103.052"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#96EAEA" />
-              <stop offset="1" stop-color="#89E7E7" />
+              <stop stopColor="#96EAEA" />
+              <stop offset="1" stopColor="#89E7E7" />
             </linearGradient>
             <linearGradient
               id="tree1_linear"
@@ -113,8 +113,8 @@ const welcomeCards = template.map((t, i) => {
               y2="72.7393"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#DEF8F8" />
-              <stop offset="1" stop-color="#96EAEA" />
+              <stop stopColor="#DEF8F8" />
+              <stop offset="1" stopColor="#96EAEA" />
             </linearGradient>
             <clipPath id="tree_clip0">
               <rect

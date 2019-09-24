@@ -1,0 +1,15 @@
+@import './backdrop/hero/hero';
+@import './backdrop/about/about';
+@import './backdrop/welcome/welcome';
+@import './backdrop/stats/stats';
+@import './backdrop/cta/cta';
+@import './backdrop/faq/faq';
+@import './backdrop/sponsors/sponsors';
+@import './backdrop/footer/footer';
+
+.background__container {
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
+}
+
