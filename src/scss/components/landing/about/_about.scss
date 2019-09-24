@@ -7,8 +7,6 @@
     align-content: flex-start;
     left: 491px;
 
-    width: 100vw;
-
     @include respond(tab-land) {
       align-items: center;
       align-content: center;
