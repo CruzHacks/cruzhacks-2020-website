@@ -2,6 +2,8 @@
   &__container {
     @include flexBox();
     text-align: center;
+    top: 1050px;
+    position: relative;
   }
 
   @import './container/container';
