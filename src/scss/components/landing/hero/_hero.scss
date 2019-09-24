@@ -3,6 +3,9 @@
   height: 100vh;
   display: flex;
   position: static;
+
+  min-height: 986px;
+
 }
 
 @media all and (max-width: 700px) {

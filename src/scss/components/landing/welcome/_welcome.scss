@@ -7,8 +7,11 @@
     height: 100%;
     top: 400px;
 
+    min-height: 1596px;
+
     @include respond(tab-land) {
       height: unset;
+      min-height: 896px;
     }
   }
   @import './title/title';
