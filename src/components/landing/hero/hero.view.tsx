@@ -1,4 +1,5 @@
 import React from 'react';
+
 import HeroHeaderView from './header/hero-header.view';
 import HeroTitleAreaView from './title-area/hero-title-area.view';
 

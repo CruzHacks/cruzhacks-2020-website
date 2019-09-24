@@ -7,12 +7,14 @@ import StatsView from './stats/stats.view';
 import CtaView from './cta/cta.view';
 import FAQView from './faq/faq.view';
 import SponsorsView from './sponsors/sponsors.view';
-import FooterView from '../footer/footer.view';
+import FooterView from './footer/footer.view';
+import BackdropView from './background/background.view';
 
 export const LandingView: React.FC = () => {
   return (
     <>
       <div className="landing__container">
+        <BackdropView />
         <HeroView />
         <AboutView />
         <WelcomeView />
