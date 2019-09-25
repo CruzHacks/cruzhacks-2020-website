@@ -22,7 +22,10 @@ steps:
 
   - script: npm run build
     displayName: 'build to static directory'
- 
+
+  - script: npm rebuild node-sass
+    displayName: 'build node sass binding for Azure agent'
+
   - task: ArchiveFiles@2
     displayName: 'Archive files'
     inputs:
