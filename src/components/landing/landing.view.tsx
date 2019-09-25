@@ -1,13 +1,7 @@
 import React from 'react';
 
 import HeroView from './hero/hero.view';
-import AboutView from './about/about.view';
-import WelcomeView from './welcome/welcome.view';
 import StatsView from './stats/stats.view';
-import CtaView from './cta/cta.view';
-import FAQView from './faq/faq.view';
-import SponsorsView from './sponsors/sponsors.view';
-import FooterView from './footer/footer.view';
 import BackdropView from './background/background.view';
 
 export const LandingView: React.FC = () => {
@@ -16,7 +10,6 @@ export const LandingView: React.FC = () => {
       <div className="landing__container">
         <BackdropView />
         <HeroView />
-        <StatsView />
       </div>
     </>
   );

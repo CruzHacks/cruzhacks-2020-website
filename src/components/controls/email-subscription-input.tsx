@@ -29,12 +29,13 @@ async function subscribeToEmailList(email: string, inputRef: any) {
     let username: string = '' + process.env.REACT_APP_MAILCHIMP_USER;
     let password: string = '' + process.env.REACT_APP_MAILCHIMP_SECRET;
     let mailchimpEndpoint: string =
-      proxy + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT;
+      '' + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT;
 
     let axiosConfig: AxiosRequestConfig = {
       auth: { username, password },
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'www.us17.api.mailchimp.com',
       },
     };
 
