@@ -20,9 +20,6 @@ steps:
   - script: npm run CItest
     displayName: 'run automated tests'
 
-  - script: npm run build
-    displayName: 'build to static directory'
-
   - script: npm rebuild node-sass --force
     displayName: 'build node sass binding for Azure agent'
 
