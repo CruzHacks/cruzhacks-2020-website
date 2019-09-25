@@ -5,8 +5,10 @@
   top: 80px;
   position: relative;
   @include respond(tab-land) {
-    width: 800px;
-    height: 30vh;
+    width: 600px;
+  }
+  @include respond(tab-port) {
+    width: 400px;
   }
 }
 &__tree-container {

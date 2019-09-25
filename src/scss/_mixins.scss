@@ -26,7 +26,7 @@
     }
   }
   @if ($breakpoint == mission) {
-    @media (max-width: 99em) {
+    @media (max-width: 112.5em) {
       @content;
     }
   }
@@ -41,7 +41,7 @@
 // String Replace (https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6)
 // =============================================================================
 
-@function str-replace($string, $search, $replace: "") {
+@function str-replace($string, $search, $replace: '') {
   $index: str-index($string, $search);
 
   @if $index {
@@ -78,7 +78,7 @@
 ///
 @mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
   $responsive-unitless: $responsive / ($responsive - $responsive + 1);
-  $dimension: if(unit($responsive) == "vh", "height", "width");
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
   $min-breakpoint: $min / $responsive-unitless * 100;
 
   @media (max-#{$dimension}: #{$min-breakpoint}) {
@@ -98,21 +98,6 @@
   }
 
   font-size: $responsive;
-}
-
-// ============================================================================
-// Main Font Source
-// ============================================================================
-
-@mixin h1 {
-  @include font-source-header(
-    $size: 3em,
-    $color: #2e2c5f,
-    $lineHeight: 45px,
-    $letterSpace: 0.05em,
-    $weight: bold
-  );
-  text-transform: uppercase;
 }
 
 // ============================================================================
@@ -232,9 +217,35 @@
   }
   @if ($weight) {
     font-weight: $weight;
+    @if ($weight: bold) {
+      font-family: Rubik Bold;
+    }
+    @if ($weight: normal) {
+      font-family: Rubik Regular;
+    }
   }
   @if ($color) {
     color: $color;
+  }
+}
+
+// ============================================================================
+// Main Font Source
+// ============================================================================
+
+@mixin h1 {
+  @include font-source-header(
+    $size: 2.5em,
+    $color: #2e2c5f,
+    $lineHeight: 45px,
+    $letterSpace: 0.05em,
+    $weight: bold
+  );
+  text-transform: uppercase;
+  font-family: Rubik Bold;
+  @include responsive-font($responsive: 4vw, $min: 25px, $max: 35px);
+  @include respond(phone) {
+    line-height: 22px;
   }
 }
 
