@@ -10,16 +10,15 @@ export interface ITextInputProps {
   containerClass: string;
 }
 
-function validateInputSubmission(event: any): boolean {
-  console.log(event);
+function validateInputSubmission(): boolean {
   if (emailInputRef.current.reportValidity()) {
     return true;
   }
   return false;
 }
 
-async function subscribeToEmailList(event: any, email: string, inputRef: any) {
-  if (validateInputSubmission(event)) {
+async function subscribeToEmailList(email: string, inputRef: any) {
+  if (validateInputSubmission()) {
     var proxy = 'https://cors-anywhere.herokuapp.com/';
 
     let body = {
@@ -106,8 +105,8 @@ const EmailSubscriptionInput: React.FC<
         />
         <input
           type="submit"
-          onClick={e =>
-            subscribeToEmailList(e, textInputData.value, emailInputRef)
+          onClick={() =>
+            subscribeToEmailList(textInputData.value, emailInputRef)
           }
           value={textInputData.buttonText}
         ></input>
