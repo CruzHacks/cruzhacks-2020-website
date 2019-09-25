@@ -18,7 +18,7 @@ function validateInputSubmission(event: any): boolean {
   return false;
 }
 
-async function subscribeToEmailList(event: any, email: string) {
+async function subscribeToEmailList(event: any, email: string, inputRef: any) {
   if (validateInputSubmission(event)) {
     var proxy = 'https://cors-anywhere.herokuapp.com/';
 
@@ -39,8 +39,6 @@ async function subscribeToEmailList(event: any, email: string) {
       },
     };
 
-    let err_msg = '';
-
     try {
       const response = await axios.post(mailchimpEndpoint, body, axiosConfig);
       console.log(response);
@@ -48,19 +46,22 @@ async function subscribeToEmailList(event: any, email: string) {
       if (error.response && error.response.status === 400) {
         if (error.response.data.title === 'Member Exists') {
           let err_msg = 'Already subscribed!';
-          console.error(error);
-          console.error(err_msg);
+          inputRef.current.value = '';
+          inputRef.current.classList.add('placeholder-error');
+          inputRef.current.placeholder = err_msg;
         } else if (
           error.response.data.title === 'Forgotten Email Not Subscribed'
         ) {
           let err_msg = "Previously unsubscribed! Can't add email :(";
-          console.error(error);
-          console.error(err_msg);
+          inputRef.current.value = '';
+          inputRef.current.classList.add('placeholder-error');
+          inputRef.current.placeholder = err_msg;
         }
       } else {
         let err_msg = 'Something Went Wrong';
-        console.error(error);
-        console.error(err_msg);
+        inputRef.current.value = '';
+        inputRef.current.classList.add('placeholder-error');
+        inputRef.current.placeholder = err_msg;
       }
     }
   }
@@ -86,11 +87,16 @@ const EmailSubscriptionInput: React.FC<
           onChange={e =>
             setTextInputData({ ...textInputData, value: e.target.value })
           }
+          onFocus={() => {
+            emailInputRef.current.placeholder = '';
+          }}
           required
         />
         <input
           type="submit"
-          onClick={e => subscribeToEmailList(e, textInputData.value)}
+          onClick={e =>
+            subscribeToEmailList(e, textInputData.value, emailInputRef)
+          }
           value={textInputData.buttonText}
         ></input>
       </div>

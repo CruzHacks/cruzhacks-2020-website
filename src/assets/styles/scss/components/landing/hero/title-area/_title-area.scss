@@ -129,6 +129,14 @@ div.hero-subscribe-to-email-list-container {
     );
   }
 
+  .placeholder-ok::-webkit-input-placeholder {
+    color: #adadad;
+  }
+
+  .placeholder-error::-webkit-input-placeholder {
+    color: red;
+  }
+
   input[type='submit'] {
     all: unset;
     // height: 100%;
