@@ -17,11 +17,11 @@ steps:
       tsc --target ES6 --strict true --project tsconfig.json
     displayName: 'typescript compilation to ES6'
 
-  # - script: npm run CItest
-  #   displayName: 'run automated tests'
+  - script: npm run CItest
+    displayName: 'run automated tests'
 
-  # - script: npm rebuild node-sass --force
-  #   displayName: 'build node sass binding for Azure agent'
+  - script: npm rebuild node-sass --force
+    displayName: 'build node sass binding for Azure agent'
 
   - script: npm run build
     displayName: 'build to static directory'
