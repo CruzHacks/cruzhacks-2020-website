@@ -82,6 +82,7 @@ const EmailSubscriptionInput: React.FC<
           ref={emailInputRef}
           id="emailInput"
           type="email"
+          className="placeholder-ok"
           placeholder={textInputData.placeholder}
           value={textInputData.value}
           onChange={e =>
@@ -89,6 +90,11 @@ const EmailSubscriptionInput: React.FC<
           }
           onFocus={() => {
             emailInputRef.current.placeholder = '';
+          }}
+          onBlur={() => {
+            emailInputRef.current.placeholder = 'email';
+            emailInputRef.current.classList.remove('placeholder-error');
+            emailInputRef.current.classList.add('placeholder-ok');
           }}
           required
         />

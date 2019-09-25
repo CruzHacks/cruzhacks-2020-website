@@ -129,11 +129,11 @@ div.hero-subscribe-to-email-list-container {
     );
   }
 
-  .placeholder-ok::-webkit-input-placeholder {
+  #emailInput.placeholder-ok::placeholder {
     color: #adadad;
   }
 
-  .placeholder-error::-webkit-input-placeholder {
+  #emailInput.placeholder-error::placeholder {
     color: red;
   }
 
