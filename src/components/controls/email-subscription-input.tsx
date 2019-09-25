@@ -12,12 +12,20 @@ export interface ITextInputProps {
 
 function validateInputSubmission(event: any): boolean {
   console.log(event);
-  return true;
+  if (emailInputRef.current.reportValidity()) {
+    return true;
+  }
+  return false;
 }
 
 async function subscribeToEmailList(event: any, email: string) {
   if (validateInputSubmission(event)) {
     var proxy = 'https://cors-anywhere.herokuapp.com/';
+
+    let body = {
+      email_address: '' + email,
+      status: 'subscribed',
+    };
 
     let username: string = '' + process.env.REACT_APP_MAILCHIMP_USER;
     let password: string = '' + process.env.REACT_APP_MAILCHIMP_SECRET;
@@ -25,20 +33,16 @@ async function subscribeToEmailList(event: any, email: string) {
       proxy + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT;
 
     let axiosConfig: AxiosRequestConfig = {
-      params: {
-        email_address: email,
-        status: 'subscribed',
-      },
       auth: { username, password },
       headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS',
         'Content-Type': 'application/json',
       },
     };
 
+    let err_msg = '';
+
     try {
-      const response = await axios.post(mailchimpEndpoint, axiosConfig);
+      const response = await axios.post(mailchimpEndpoint, body, axiosConfig);
       console.log(response);
     } catch (error) {
       if (error.response && error.response.status === 400) {
