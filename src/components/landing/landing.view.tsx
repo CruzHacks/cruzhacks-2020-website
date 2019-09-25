@@ -14,6 +14,7 @@ export const LandingView: React.FC = () => {
   return (
     <>
       <div className="landing__container">
+        <BackdropView />
         <HeroView />
         <StatsView />
       </div>
