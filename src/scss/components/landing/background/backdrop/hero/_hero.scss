@@ -35,7 +35,7 @@
 
   display: none;
 
-  @include respond(phone) {
+  @include respond(phone-narrow) {
     display: initial;
     top: -10px;
   }
@@ -54,7 +54,7 @@
   @include respond(tab-port) {
     max-width: 60vw;
   }
-  @include respond(phone) {
+  @include respond(phone-narrow) {
     display: none;
   }
 }
