@@ -23,7 +23,7 @@ steps:
   - script: npm run build
     displayName: 'build to static directory'
 
-  - script: npm rebuild node-sass
+  - script: npm rebuild node-sass --force
     displayName: 'build node sass binding for Azure agent'
 
   - task: ArchiveFiles@2
