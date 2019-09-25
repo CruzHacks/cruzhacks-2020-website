@@ -20,11 +20,11 @@ steps:
   - script: npm run CItest
     displayName: 'run automated tests'
 
+  - script: npm rebuild node-sass --force
+    displayName: 'build node sass binding for Azure agent'
+
   - script: npm run build
     displayName: 'build to static directory'
-
-  - script: npm rebuild node-sass
-    displayName: 'build node sass binding for Azure agent'
 
   - task: ArchiveFiles@2
     displayName: 'Archive files'
