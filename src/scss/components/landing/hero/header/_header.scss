@@ -6,6 +6,22 @@
   width: 100vw;
 }
 
+/* Hero Hamburger */
+
+.hamburger {
+  @include svgContainer();
+  width: 24px;
+  height: 15px;
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  visibility: hidden;
+
+  &__svg {
+    @include svgContent();
+  }
+}
+
 /* HeroLightbulb */
 
 .hero__lightbulb {
@@ -30,8 +46,9 @@
   order: 2;
   @include svgContainer();
   position: absolute;
-  width: 86px;
-  height: 150px;
+  // width: 86px;
+  // height: 150px;
+  width: 7.5%;
   right: 43px;
   top: 0;
 }
