@@ -1,0 +1,80 @@
+/* HeroBackdropView */
+
+/* HeroRightside */
+
+.hero-right-side-container {
+  @include svgContainer();
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58%;
+  z-index: -1;
+}
+
+.hero-right-side-container__svg {
+  @include svgContent();
+}
+
+.hero-right-side-container__image {
+  @include svgContent();
+}
+
+/* LeftPillar1 */
+
+.left-pillar1-container {
+  position: absolute;
+  left: 0;
+  top: 124px;
+  z-index: -2;
+}
+
+.left-pillar1 {
+  position: absolute;
+  width: 48px;
+  height: 361px;
+}
+
+/* LeftPillar2 */
+
+.left-pillar2-container {
+  position: absolute;
+  left: 93px;
+  top: 186px;
+  z-index: -2;
+}
+
+.left-pillar2 {
+  position: absolute;
+  width: 36px;
+  height: 343px;
+}
+
+/* LeftPillar3 */
+
+.left-pillar3-container {
+  position: absolute;
+  left: 203px;
+  top: 172px;
+  z-index: -2;
+}
+
+.left-pillar3 {
+  position: absolute;
+  width: 72px;
+  height: 361px;
+}
+
+/* LeftPillar4 */
+
+.left-pillar4-container {
+  position: absolute;
+  left: 347px;
+  top: 374px;
+  z-index: -2;
+}
+
+.left-pillar4 {
+  position: absolute;
+  width: 36px;
+  height: 343px;
+}
