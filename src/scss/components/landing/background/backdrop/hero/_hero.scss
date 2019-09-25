@@ -30,13 +30,14 @@
 
 .hero-backdrop-rightside-mobile__image {
   position: absolute;
-  top: 0;
+  top: -20px;
   right: 0;
 
   display: none;
 
   @include respond(phone) {
     display: initial;
+    top: -10px;
   }
 }
 
@@ -45,9 +46,14 @@
   top: 0;
   right: 0;
 
-  max-width: 69%;
-  height: auto;
+  max-height: 145vh;
 
+  @include respond(tab-land) {
+    max-width: 75vw;
+  }
+  @include respond(tab-port) {
+    max-width: 60vw;
+  }
   @include respond(phone) {
     display: none;
   }

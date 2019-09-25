@@ -5,22 +5,8 @@
     flex: 0 0 50%;
     height: 560px;
     width: 100vw;
-    position: absolute;
-    top: 1000px;
+    position: relative;
     justify-content: space-around;
-    @include respond(tab-land) {
-      transform: scale(0.75);
-    }
-    @include respond(tab-port) {
-      transform: scale(0.6);
-    }
-    @include respond(phone) {
-      transform: scale(0.5);
-    }
-    @include respond(phone-narrow) {
-      transform: scale(0.5);
-      height: 1000px;
-    }
   }
   &__title {
     @include h1();
