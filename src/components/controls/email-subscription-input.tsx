@@ -41,7 +41,10 @@ async function subscribeToEmailList(event: any, email: string, inputRef: any) {
 
     try {
       const response = await axios.post(mailchimpEndpoint, body, axiosConfig);
-      console.log(response);
+      if (response.status === 200) {
+        inputRef.current.value = '';
+        inputRef.current.placeholder = 'Added to Email List!';
+      }
     } catch (error) {
       if (error.response && error.response.status === 400) {
         if (error.response.data.title === 'Member Exists') {
@@ -49,6 +52,7 @@ async function subscribeToEmailList(event: any, email: string, inputRef: any) {
           inputRef.current.value = '';
           inputRef.current.classList.add('placeholder-error');
           inputRef.current.placeholder = err_msg;
+          console.error(err_msg);
         } else if (
           error.response.data.title === 'Forgotten Email Not Subscribed'
         ) {
@@ -56,12 +60,14 @@ async function subscribeToEmailList(event: any, email: string, inputRef: any) {
           inputRef.current.value = '';
           inputRef.current.classList.add('placeholder-error');
           inputRef.current.placeholder = err_msg;
+          console.error(err_msg);
         }
       } else {
         let err_msg = 'Something Went Wrong';
         inputRef.current.value = '';
         inputRef.current.classList.add('placeholder-error');
         inputRef.current.placeholder = err_msg;
+        console.error(err_msg);
       }
     }
   }
