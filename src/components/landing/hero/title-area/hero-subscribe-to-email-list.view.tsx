@@ -4,7 +4,7 @@ import EmailSubscriptionInput from '../../../controls/email-subscription-input';
 const HeroSubscribeToEmailList: React.FC = () => {
   return (
     <EmailSubscriptionInput
-      placeholder="email"
+      placeholder="Enter email for updates!"
       value=""
       buttonText="SUBSCRIBE"
       containerClass="hero-subscribe-to-email-list-container"
