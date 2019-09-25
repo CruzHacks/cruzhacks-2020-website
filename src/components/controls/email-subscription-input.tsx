@@ -97,7 +97,7 @@ const EmailSubscriptionInput: React.FC<
             emailInputRef.current.placeholder = '';
           }}
           onBlur={() => {
-            emailInputRef.current.placeholder = 'email';
+            emailInputRef.current.placeholder = textInputData.placeholder;
             emailInputRef.current.classList.remove('placeholder-error');
             emailInputRef.current.classList.add('placeholder-ok');
           }}

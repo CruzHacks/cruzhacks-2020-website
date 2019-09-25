@@ -17,6 +17,28 @@
 }
 
 @media all and (max-width: 426px) {
+  div.hero-right-side-container {
+    top: 3%;
+  }
+
+  div.hamburger {
+    visibility: visible;
+  }
+
+  div.hero__mlh-badge {
+    visibility: hidden;
+  }
+
+  div.hero__header {
+    all: unset;
+    position: absolute;
+    top: 0;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 50px;
+    box-shadow: 0px 2px 6px #bfbfbf;
+  }
+
   div.navigate-to-bottom-container {
     visibility: hidden;
   }
@@ -26,17 +48,42 @@
     position: absolute;
     left: unset;
     top: 25%;
+    align-self: center;
   }
 
   div.hero-title-area__button {
     align-self: center;
-    // left: 12vw;
   }
-}
 
-@media all and (max-width: 625px) {
-  div.hero__mlh-badge {
-    visibility: hidden;
+  div.left-pillar1-container {
+    top: 100px;
+  }
+
+  svg.left-pillar1 {
+    width: 48.62px;
+  }
+
+  div.left-pillar2-container {
+    top: 86px;
+    left: 65px;
+  }
+
+  svg.left-pillar2 {
+    width: 23.72px;
+  }
+
+  div.left-pillar3-container {
+    left: 130px;
+    top: 76px;
+    // top: 206px;
+  }
+  svg.left-pillar3 {
+    width: 48.62px;
+  }
+
+  div.left-pillar4-container {
+    top: 296px;
+    left: 230px;
   }
 }
 
@@ -50,27 +97,6 @@
     flex-flow: column wrap;
     right: 0;
     right: 35%;
-  }
-}
-
-@media all and (max-width: 900px) {
-  div.hero-title-area {
-    left: 5%;
-  }
-
-  div.hero-title-area__button {
-    // top: 222px;
-    top: 305px;
-  }
-
-  div.hero-title-area__eventInfo {
-    // top: 90px;
-    top: 190px;
-  }
-
-  div.navigate-to-bottom-container {
-    // top: 315px;
-    top: 415px;
   }
 }
 

@@ -131,6 +131,7 @@ div.hero-subscribe-to-email-list-container {
 
   #emailInput.placeholder-ok::placeholder {
     color: #adadad;
+    @include responsive-font(3vw, 12px, 14px);
   }
 
   #emailInput.placeholder-error::placeholder {
