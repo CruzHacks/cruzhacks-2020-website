@@ -129,6 +129,14 @@ div.hero-subscribe-to-email-list-container {
     );
   }
 
+  #emailInput.placeholder-ok::placeholder {
+    color: #adadad;
+  }
+
+  #emailInput.placeholder-error::placeholder {
+    color: red;
+  }
+
   input[type='submit'] {
     all: unset;
     // height: 100%;

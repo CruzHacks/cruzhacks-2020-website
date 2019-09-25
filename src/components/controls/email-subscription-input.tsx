@@ -10,16 +10,15 @@ export interface ITextInputProps {
   containerClass: string;
 }
 
-function validateInputSubmission(event: any): boolean {
-  console.log(event);
+function validateInputSubmission(): boolean {
   if (emailInputRef.current.reportValidity()) {
     return true;
   }
   return false;
 }
 
-async function subscribeToEmailList(event: any, email: string) {
-  if (validateInputSubmission(event)) {
+async function subscribeToEmailList(email: string, inputRef: any) {
+  if (validateInputSubmission()) {
     var proxy = 'https://cors-anywhere.herokuapp.com/';
 
     let body = {
@@ -39,27 +38,34 @@ async function subscribeToEmailList(event: any, email: string) {
       },
     };
 
-    let err_msg = '';
-
     try {
       const response = await axios.post(mailchimpEndpoint, body, axiosConfig);
-      console.log(response);
+      if (response.status === 200) {
+        inputRef.current.value = '';
+        inputRef.current.placeholder = 'Added to Email List!';
+      }
     } catch (error) {
       if (error.response && error.response.status === 400) {
         if (error.response.data.title === 'Member Exists') {
           let err_msg = 'Already subscribed!';
-          console.error(error);
+          inputRef.current.value = '';
+          inputRef.current.classList.add('placeholder-error');
+          inputRef.current.placeholder = err_msg;
           console.error(err_msg);
         } else if (
           error.response.data.title === 'Forgotten Email Not Subscribed'
         ) {
           let err_msg = "Previously unsubscribed! Can't add email :(";
-          console.error(error);
+          inputRef.current.value = '';
+          inputRef.current.classList.add('placeholder-error');
+          inputRef.current.placeholder = err_msg;
           console.error(err_msg);
         }
       } else {
         let err_msg = 'Something Went Wrong';
-        console.error(error);
+        inputRef.current.value = '';
+        inputRef.current.classList.add('placeholder-error');
+        inputRef.current.placeholder = err_msg;
         console.error(err_msg);
       }
     }
@@ -81,16 +87,27 @@ const EmailSubscriptionInput: React.FC<
           ref={emailInputRef}
           id="emailInput"
           type="email"
+          className="placeholder-ok"
           placeholder={textInputData.placeholder}
           value={textInputData.value}
           onChange={e =>
             setTextInputData({ ...textInputData, value: e.target.value })
           }
+          onFocus={() => {
+            emailInputRef.current.placeholder = '';
+          }}
+          onBlur={() => {
+            emailInputRef.current.placeholder = 'email';
+            emailInputRef.current.classList.remove('placeholder-error');
+            emailInputRef.current.classList.add('placeholder-ok');
+          }}
           required
         />
         <input
           type="submit"
-          onClick={e => subscribeToEmailList(e, textInputData.value)}
+          onClick={() =>
+            subscribeToEmailList(textInputData.value, emailInputRef)
+          }
           value={textInputData.buttonText}
         ></input>
       </div>
