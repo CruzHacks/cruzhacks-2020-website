@@ -20,9 +20,6 @@ steps:
   - script: npm run CItest
     displayName: 'run automated tests'
 
-  - script: npm run build
-    displayName: 'build to static directory'
-
   - task: ArchiveFiles@2
     displayName: 'Archive files'
     inputs:
