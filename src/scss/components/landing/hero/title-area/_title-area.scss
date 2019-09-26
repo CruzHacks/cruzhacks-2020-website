@@ -72,6 +72,7 @@
 
   &__button {
     position: absolute;
+    display: block;
     left: 0;
     // top: 266px;
     top: 310px;
@@ -79,8 +80,9 @@
     height: 46px;
 
     background-color: #6f6fe8;
-    box-shadow: 0px 2px 6px #bfbfbf;
+    box-shadow: 0 2px 6px #bfbfbf;
     border-radius: 23px;
+    text-decoration: none;
   }
 
   &__button-text {
@@ -94,6 +96,7 @@
       false,
       #fffefe
     );
+    text-align: center;
   }
 }
 
@@ -161,6 +164,8 @@ div.hero-subscribe-to-email-list-container {
       #fffefe
     );
     cursor: pointer;
+    display: block;
+    margin: 0 0 0 auto;
   }
 }
 
