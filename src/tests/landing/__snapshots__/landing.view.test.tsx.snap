@@ -468,34 +468,37 @@ exports[`landing view matches snapshot 1`] = `
           // Applications Release Nov.
         </p>
       </div>
-      <div
+      <a
         className="hero-title-area__button"
+        href="mailto:sponsor@cruzhacks.com"
       >
         <p
           className="hero-title-area__button-text"
         >
           SPONSOR US
         </p>
-      </div>
+      </a>
       <div
         className="hero-subscribe-to-email-list-container"
       >
-        <input
-          className="placeholder-ok"
-          id="emailInput"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          placeholder="Enter email for updates!"
-          required={true}
-          type="email"
-          value=""
-        />
-        <input
-          onClick={[Function]}
-          type="submit"
-          value="SUBSCRIBE"
-        />
+        <form>
+          <input
+            className="placeholder-ok"
+            id="emailInput"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            placeholder="Enter email for updates!"
+            required={true}
+            type="email"
+            value=""
+          />
+          <input
+            onClick={[Function]}
+            type="submit"
+            value="SUBSCRIBE"
+          />
+        </form>
       </div>
       <div
         className="navigate-to-bottom-container"
