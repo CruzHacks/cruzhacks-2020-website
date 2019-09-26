@@ -68,7 +68,7 @@
     width: 22vw;
     height: 64px;
     white-space: nowrap;
-    @include responsive-font(2.5vw, 13px, 14px);
+    @include responsive-font(2.5vw, 13.5px, 14px);
   }
 
   &__button {
@@ -101,7 +101,7 @@
       #fffefe
     );
     text-align: center;
-    @include responsive-font(2.5vw, 13px, 14px);
+    @include responsive-font(2.5vw, 13.5px, 14px);
   }
 }
 
@@ -139,7 +139,7 @@ div.hero-subscribe-to-email-list-container {
 
   #emailInput.placeholder-ok::placeholder {
     color: #adadad;
-    @include responsive-font(1vw, 13px, 14px);
+    @include responsive-font(1vw, 13.5px, 14px);
     font-style: oblique;
   }
 
