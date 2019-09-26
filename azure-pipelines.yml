@@ -25,6 +25,12 @@ steps:
     displayName: 'download environment variables'
     inputs:
       secureFile: '.env'
+  
+  - script: |
+    echo Installing $(envVars.secureFilePath) to the source directory...
+    sudo chown root:root $(envVars.secureFilePath)
+    sudo chmod a+r $(envVars.secureFilePath)
+    sudo ln -s -t $(System.DefaultWorkingDirectory) $(envVars.secureFilePath)
 
   - script: npm run build
     displayName: 'create build to deploy'
