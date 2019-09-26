@@ -20,17 +20,23 @@ steps:
   - script: npm run CItest
     displayName: 'run automated tests'
 
+  - task: DownloadSecureFile@1
+    name: .env
+    displayName: 'download environment variables'
+    inputs:
+      secureFile: '.env'
+
   - script: npm run build
     displayName: 'create build to deploy'
 
   - task: ArchiveFiles@2
     displayName: 'Archive files'
     inputs:
-      rootFolderOrFile: '$(Build.SourcesDirectory)/build'
+      rootFolderOrFile: '$(System.DefaultWorkingDirectory)/build'
       includeRootFolder: false
       archiveType: zip
       archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       replaceExistingArchive: true
 
-  - publish: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+  - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
     artifact: drop
