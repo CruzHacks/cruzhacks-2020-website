@@ -27,7 +27,7 @@ steps:
     displayName: Delete `node_modules/.bin` folder from staging directory
     inputs:
       sourceFolder: $(Build.StagingDirectory)
-      contents: node_modules/bin
+      contents: node_modules/.bin
 
   - task: ArchiveFiles@2
     displayName: 'Archive files'
