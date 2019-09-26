@@ -22,7 +22,7 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
   if (validateInputSubmission()) {
     inputRef.current.placeholder = 'Sending...';
 
-    const CORSproxy = 'https://cors-anywhere.herokuapp.com/';
+    // const CORSproxy = 'https://cors-anywhere.herokuapp.com/';
 
     let body = {
       email_address: '' + email,
@@ -38,7 +38,7 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
       auth: { username, password },
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'https://cruzhacks.com',
+        'Access-Control-Allow-Origin': 'https://us17.api.mailchimp.com',
       },
     };
 
