@@ -27,7 +27,8 @@ steps:
       secureFile: '.env'
   
   - script: |
-    echo Installing $(envVars.secureFilePath) to the source directory...
+    echo 'Symlinking $(envVars.secureFilePath) to the source directory...'
+    sudo chown root:root $(envVars.secureFilePath)
     sudo chmod a+r $(envVars.secureFilePath)
     sudo ln -s -t $(System.DefaultWorkingDirectory) $(envVars.secureFilePath)
 
