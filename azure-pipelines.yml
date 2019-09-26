@@ -24,7 +24,7 @@ steps:
     displayName: 'create build to deploy'
 
   - task: DeleteFiles@1
-    displayName: Delete `node_modules/bin` folder from staging directory
+    displayName: Delete `node_modules/.bin` folder from staging directory
     inputs:
       sourceFolder: $(Build.StagingDirectory)
       contents: node_modules/bin
