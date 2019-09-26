@@ -27,9 +27,9 @@ steps:
       secureFile: '.env'
   
   - script: |
-    sudo chown root:root $(envVars.secureFilePath)
-    sudo chmod a+r $(envVars.secureFilePath)
-    sudo ln -s -t $(System.DefaultWorkingDirectory) $(envVars.secureFilePath)
+      sudo chown root:root $(envVars.secureFilePath)
+      sudo chmod a+r $(envVars.secureFilePath)
+      sudo ln -s -t $(System.DefaultWorkingDirectory) $(envVars.secureFilePath)
     displayName: 'symlink .env files from secure directory'
 
   - script: npm run build
