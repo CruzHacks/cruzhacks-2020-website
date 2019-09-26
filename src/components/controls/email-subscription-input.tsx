@@ -38,7 +38,7 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
       auth: { username, password },
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'https://us17.api.mailchimp.com',
+        'Access-Control-Allow-Origin': '*',
       },
     };
 
