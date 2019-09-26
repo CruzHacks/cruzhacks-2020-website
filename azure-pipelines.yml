@@ -20,10 +20,13 @@ steps:
   - script: npm run CItest
     displayName: 'run automated tests'
 
+  - script: npm run build
+  displayName: 'create build to deploy'
+
   - task: ArchiveFiles@2
     displayName: 'Archive files'
     inputs:
-      rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+      rootFolderOrFile: '$(System.DefaultWorkingDirectory)/build'
       includeRootFolder: false
       archiveType: zip
       archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
