@@ -68,6 +68,7 @@
     width: 22vw;
     height: 64px;
     white-space: nowrap;
+    @include responsive-font(2.5vw, 13px, 14px);
   }
 
   &__button {
@@ -83,6 +84,9 @@
     box-shadow: 0 2px 6px #bfbfbf;
     border-radius: 23px;
     text-decoration: none;
+    @include respond(phone) {
+      top: 295px;
+    }
   }
 
   &__button-text {
@@ -97,6 +101,7 @@
       #fffefe
     );
     text-align: center;
+    @include responsive-font(2.5vw, 13px, 14px);
   }
 }
 
