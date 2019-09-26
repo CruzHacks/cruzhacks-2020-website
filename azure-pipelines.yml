@@ -21,7 +21,7 @@ steps:
     displayName: 'run automated tests'
 
   - task: DownloadSecureFile@1
-    name: .env
+    name: envVars
     displayName: 'download environment variables'
     inputs:
       secureFile: '.env'
