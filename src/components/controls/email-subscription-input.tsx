@@ -17,8 +17,11 @@ function validateInputSubmission(): boolean {
   return false;
 }
 
-async function subscribeToEmailList(email: string, inputRef: any) {
+async function subscribeToEmailList(email: string, inputRef: any, e: any) {
+  e.preventDefault();
   if (validateInputSubmission()) {
+    inputRef.current.placeholder = 'Sending...';
+
     var proxy = 'https://cors-anywhere.herokuapp.com/';
 
     let body = {
@@ -83,33 +86,35 @@ const EmailSubscriptionInput: React.FC<
   if (textInputData) {
     return (
       <div className={textInputData.containerClass}>
-        <input
-          ref={emailInputRef}
-          id="emailInput"
-          type="email"
-          className="placeholder-ok"
-          placeholder={textInputData.placeholder}
-          value={textInputData.value}
-          onChange={e =>
-            setTextInputData({ ...textInputData, value: e.target.value })
-          }
-          onFocus={() => {
-            emailInputRef.current.placeholder = '';
-          }}
-          onBlur={() => {
-            emailInputRef.current.placeholder = textInputData.placeholder;
-            emailInputRef.current.classList.remove('placeholder-error');
-            emailInputRef.current.classList.add('placeholder-ok');
-          }}
-          required
-        />
-        <input
-          type="submit"
-          onClick={() =>
-            subscribeToEmailList(textInputData.value, emailInputRef)
-          }
-          value={textInputData.buttonText}
-        ></input>
+        <form>
+          <input
+            ref={emailInputRef}
+            id="emailInput"
+            type="email"
+            className="placeholder-ok"
+            placeholder={textInputData.placeholder}
+            value={textInputData.value}
+            onChange={e =>
+              setTextInputData({ ...textInputData, value: e.target.value })
+            }
+            onFocus={() => {
+              emailInputRef.current.placeholder = '';
+            }}
+            onBlur={() => {
+              emailInputRef.current.placeholder = textInputData.placeholder;
+              emailInputRef.current.classList.remove('placeholder-error');
+              emailInputRef.current.classList.add('placeholder-ok');
+            }}
+            required
+          />
+          <input
+            type="submit"
+            onClick={e =>
+              subscribeToEmailList(textInputData.value, emailInputRef, e)
+            }
+            value={textInputData.buttonText}
+          ></input>
+        </form>
       </div>
     );
   } else {
