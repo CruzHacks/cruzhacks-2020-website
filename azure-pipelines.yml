@@ -23,6 +23,12 @@ steps:
   - script: npm run build
     displayName: 'create build to deploy'
 
+  - task: DeleteFiles@1
+    displayName: Delete `node_modules/bin` folder from staging directory
+    inputs:
+      sourceFolder: $(Build.StagingDirectory)
+      contents: node_modules/bin
+
   - task: ArchiveFiles@2
     displayName: 'Archive files'
     inputs:
