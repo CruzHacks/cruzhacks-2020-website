@@ -27,10 +27,10 @@ steps:
       secureFile: '.env'
   
   - script: |
-    echo 'Symlinking $(envVars.secureFilePath) to the source directory...'
     sudo chown root:root $(envVars.secureFilePath)
     sudo chmod a+r $(envVars.secureFilePath)
     sudo ln -s -t $(System.DefaultWorkingDirectory) $(envVars.secureFilePath)
+  displayName: 'symlink .env files from secure directory'
 
   - script: npm run build
     displayName: 'create build to deploy'
