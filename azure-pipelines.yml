@@ -21,7 +21,7 @@ steps:
     displayName: 'run automated tests'
 
   - script: npm run build
-  displayName: 'create build to deploy'
+    displayName: 'create build to deploy'
 
   - task: ArchiveFiles@2
     displayName: 'Archive files'
