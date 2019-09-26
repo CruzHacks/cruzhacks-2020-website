@@ -22,7 +22,7 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
   if (validateInputSubmission()) {
     inputRef.current.placeholder = 'Sending...';
 
-    // const CORSproxy = 'https://cors-anywhere.herokuapp.com/';
+    const CORSproxy = 'https://cors-anywhere.herokuapp.com/';
 
     let body = {
       email_address: '' + email,
@@ -32,7 +32,7 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
     let username: string = '' + process.env.REACT_APP_MAILCHIMP_USER;
     let password: string = '' + process.env.REACT_APP_MAILCHIMP_SECRET;
     let mailchimpEndpoint: string =
-      '' + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT;
+      CORSproxy + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT;
 
     let axiosConfig: AxiosRequestConfig = {
       auth: { username, password },
