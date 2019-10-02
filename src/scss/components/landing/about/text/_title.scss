@@ -1,21 +1,10 @@
 &__title {
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 27px;
-  line-height: 32px;
-  letter-spacing: 0.05em;
-  text-indent: 3px;
-
-  color: #2e2c5f;
-
+  @include h1();
   mix-blend-mode: normal;
 
   height: 33px;
 
   @include respond(tab-land) {
-    font-size: 18px;
-    line-height: 21px;
     text-align: center;
   }
 }
