@@ -30,22 +30,22 @@ const BackdropView: React.FC = () => {
           <BackdropHeroAllPillars />
           <BackdropHeroRightSideView />
         </div>
-        {/* <div className="about-backdrop__container">
-                    <BackdropAboutLaptopView />
-                </div>
-                <div className="welcome-backdrop__container">
-                    <WelcomeMoutainView />
-                    <WelcomePillarsView />
-                </div>
-                <div className="stats-backdrop__container"></div>
-                <div className="cta-backdrop__container">
-                    <BackdropCtaView />
-                </div>
-                <div className="faq-backdrop__container"></div>
-                <div className="sponsors-backdrop__container"></div>
-                <div className="footer-backdrop__container"> 
-                    <BackdropFooterExtendedView /> 
-                </div> */}
+        <div className="about-backdrop__container">
+          <BackdropAboutLaptopView />
+        </div>
+        <div className="welcome-backdrop__container">
+          <WelcomeMoutainView />
+          <WelcomePillarsView />
+        </div>
+        <div className="stats-backdrop__container"></div>
+        <div className="cta-backdrop__container">
+          <BackdropCtaView />
+        </div>
+        <div className="faq-backdrop__container"></div>
+        <div className="sponsors-backdrop__container"></div>
+        <div className="footer-backdrop__container">
+          <BackdropFooterExtendedView />
+        </div>
       </div>
     </>
   );
