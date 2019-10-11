@@ -96,10 +96,10 @@ exports[`hero view matches snapshot 1`] = `
       className="hero-title-area__eventInfo hero-title-area__eventInfo-text"
     >
       <p>
-        // Coming in January 2020
+        // January 17-19th, 2020
       </p>
       <p>
-        // Location (TBD), UC Santa Cruz
+        // Stevenson Event Center, UC Santa Cruz
       </p>
       <p>
         // Applications Release Nov.
