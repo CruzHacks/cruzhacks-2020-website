@@ -20,8 +20,6 @@ function validateInputSubmission(): boolean {
 async function subscribeToEmailList(email: string, inputRef: any, e: any) {
   e.preventDefault();
   if (validateInputSubmission()) {
-    inputRef.current.placeholder = 'Sending...';
-
     const CORSproxy = 'https://cors-anywhere.herokuapp.com/';
 
     let body = {
@@ -43,6 +41,7 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
     };
 
     try {
+      inputRef.current.placeholder = 'Sending...';
       const response = await axios.post(mailchimpEndpoint, body, axiosConfig);
       if (response.status === 200) {
         inputRef.current.value = '';
