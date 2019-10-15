@@ -1,6 +1,6 @@
 &__subtitle {
   @include font-source-subheader(
-    $size: 18px,
+    $size: 1.25em,
     $color: #767676,
     $lineHeight: 25px,
     $letterSpace: 0.04em,
@@ -10,8 +10,7 @@
   height: 25px;
 
   @include respond(tab-land) {
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 1em;
     letter-spacing: 0.04em;
   }
 }

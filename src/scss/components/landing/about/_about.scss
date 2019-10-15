@@ -38,6 +38,10 @@
 
 .about-text__container {
   position: absolute;
-  top: 0;
-  left: 447px;
+  top: 17.75em;
+  left: 50vw;
+  padding-right: 2em;
+  @include respond(tab-land) {
+    top: 2.75em;
+  }
 }

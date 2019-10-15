@@ -1,21 +1,18 @@
 &__title {
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 27px;
-  line-height: 32px;
-  letter-spacing: 0.05em;
-  text-indent: 3px;
-
-  color: #2e2c5f;
+  @include font-source-header(
+    $size: 2em,
+    $color: #2e2c5f,
+    $weight: bold,
+    $lineHeight: 32px,
+    $letterSpace: 0.05em
+  );
+  font-family: Rubik Bold;
 
   mix-blend-mode: normal;
 
-  height: 33px;
+  height: 15px;
 
   @include respond(tab-land) {
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
+    font-size: 1.45em;
   }
 }

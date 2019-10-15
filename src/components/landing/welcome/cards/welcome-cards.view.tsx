@@ -42,7 +42,7 @@ const welcomeCards = template.map((t, i) => {
       </svg>
 
       <div className="welcome__card-text">
-        <h2 className="welcome__card-header">{t.title}</h2>
+        <span className="welcome__card-header">{t.title}</span>
         <svg
           className="welcome__card-tree"
           width="81"
