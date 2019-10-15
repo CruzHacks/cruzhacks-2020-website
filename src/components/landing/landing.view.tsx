@@ -4,6 +4,7 @@ import HeroView from './hero/hero.view';
 import StatsView from './stats/stats.view';
 import BackdropView from './background/background.view';
 import AboutView from './about/about.view';
+import WelcomeView from './welcome/welcome.view';
 
 export const LandingView: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ export const LandingView: React.FC = () => {
         <BackdropView />
         <HeroView />
         <AboutView />
+        <WelcomeView />
       </div>
     </>
   );
