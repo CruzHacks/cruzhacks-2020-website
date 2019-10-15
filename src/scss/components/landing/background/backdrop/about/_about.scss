@@ -28,6 +28,7 @@
 
     @include respond(phone) {
       max-width: 55%;
+      top: 2%;
     }
   }
 }
