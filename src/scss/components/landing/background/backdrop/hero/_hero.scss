@@ -49,10 +49,10 @@
   max-height: 145vh;
 
   @include respond(tab-land) {
-    max-width: 75vw;
+    max-width: 65vw;
   }
   @include respond(tab-port) {
-    max-width: 60vw;
+    max-width: 55vw;
   }
   @include respond(phone-narrow) {
     display: none;
