@@ -4,7 +4,7 @@ const BackdropAboutLaptop: React.FC = () => {
   return (
     <>
       <svg
-        className="about-backdrop-laptop__image"
+        className="about-backdrop__laptop-image"
         viewBox="0 0 420 446"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

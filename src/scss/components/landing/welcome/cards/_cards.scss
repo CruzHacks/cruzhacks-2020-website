@@ -31,9 +31,14 @@ $text-color: #2e2c5f;
   flex-direction: column;
 }
 &__card-header {
-  font-family: Rubik;
-  font-weight: 500;
-  color: $text-color;
+  @include font-source-header(
+    $size: 1.45em,
+    $color: $text-color,
+    $weight: bold,
+    $lineHeight: 70px,
+    $letterSpace: 0.05em
+  );
+  font-family: Rubik Bold;
 }
 &__card-caption {
   font-size: 18px;
