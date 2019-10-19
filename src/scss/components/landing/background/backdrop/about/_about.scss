@@ -1,33 +1,34 @@
-.about-backdrop__container {
-  @include flexBox();
-  position: relative;
-  min-height: 796px;
+.about-backdrop {
+  &__container {
+    @include flexBox();
+    position: relative;
+    min-height: 796px;
 
-  @include respond(tab-land) {
-    min-height: 596px;
+    @include respond(tab-land) {
+      min-height: 1100vh;
+    }
   }
-}
 
-/* SVGs */
+  /* SVGs */
+  &__laptop-image,
+  &__pillars-image {
+    position: absolute;
+  }
 
-.about-backdrop-laptop__image,
-.about-backdrop-pillars__image {
-  position: absolute;
-}
-
-.about-backdrop-laptop__image {
-  top: 1%;
-  left: 0;
-
-  /*
+  &__laptop-image {
+    top: 1%;
+    left: 0;
+    /*
     width: 420px;
     height: 446px;
     */
 
-  max-width: 36%;
-  height: auto;
+    max-width: 36%;
+    height: auto;
 
-  @include respond(phone) {
-    max-width: 55%;
+    @include respond(phone) {
+      max-width: 55%;
+      top: 22.5vh;
+    }
   }
 }

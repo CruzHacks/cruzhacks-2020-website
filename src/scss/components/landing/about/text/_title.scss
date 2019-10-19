@@ -1,10 +1,24 @@
 &__title {
-  @include h1();
+  @include font-source-header(
+    $size: 2em,
+    $color: #2e2c5f,
+    $weight: bold,
+    $lineHeight: 32px,
+    $letterSpace: 0.05em
+  );
+  font-family: Rubik Bold;
+
   mix-blend-mode: normal;
 
-  height: 33px;
+  height: 15px;
 
   @include respond(tab-land) {
+    font-size: 1.45em;
+  }
+  @include respond(phone-narrow) {
+    width: 10em;
+    margin: auto;
     text-align: center;
+    padding-bottom: 2.5em;
   }
 }

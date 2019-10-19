@@ -10,6 +10,7 @@ import SponsorsView from './sponsors/sponsors.view';
 import FooterView from './footer/footer.view';
 import BackdropView from './background/background.view';
 
+
 export const LandingView: React.FC = () => {
   return (
     <>
@@ -18,11 +19,6 @@ export const LandingView: React.FC = () => {
         <HeroView />
         <AboutView />
         <WelcomeView />
-        <StatsView />
-        <CtaView />
-        <FAQView />
-        <SponsorsView />
-        <FooterView />
       </div>
     </>
   );
