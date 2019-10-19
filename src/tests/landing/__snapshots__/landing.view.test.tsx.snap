@@ -473,16 +473,6 @@ exports[`landing view matches snapshot 1`] = `
       >
         <a
           className="hero-title-area__button"
-          href="mailto:sponsor@cruzhacks.com"
-        >
-          <p
-            className="hero-title-area__button-text"
-          >
-            SPONSOR US
-          </p>
-        </a>
-        <a
-          className="hero-title-area__button"
           href="https://2019.cruzhacks.com"
           rel="noopener noreferrer"
           target="_blank"
@@ -491,6 +481,16 @@ exports[`landing view matches snapshot 1`] = `
             className="hero-title-area__button-text"
           >
             CHECK OUT 2019
+          </p>
+        </a>
+        <a
+          className="hero-title-area__button"
+          href="mailto:sponsor@cruzhacks.com"
+        >
+          <p
+            className="hero-title-area__button-text"
+          >
+            SPONSOR US
           </p>
         </a>
       </div>
