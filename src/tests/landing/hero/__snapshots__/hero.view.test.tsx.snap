@@ -137,12 +137,12 @@ exports[`hero view matches snapshot 1`] = `
       <form>
         <input
           className="placeholder-sending"
+          disabled={false}
           id="emailInput"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           placeholder="Enter email for updates!"
-          readOnly={false}
           required={true}
           type="email"
           value=""
