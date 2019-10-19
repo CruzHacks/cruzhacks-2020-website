@@ -10,11 +10,9 @@
 
     @include respond(tab-land) {
       align-items: center;
-      align-content: center;
-      justify-content: center;
       left: unset;
-      padding-left: 10%;
-      padding-right: 10%;
+      padding-left: 2%;
+      padding-right: 2%;
       min-height: 696px;
     }
   }
@@ -38,6 +36,25 @@
 
 .about-text__container {
   position: absolute;
-  top: 0;
-  left: 447px;
+  top: 25em;
+  right: 20vw;
+  padding-left: 3em;
+  @include respond(tab-land) {
+    top: 12em;
+  }
+  @include respond(tab-port) {
+    right: 10vw;
+    width: 25em;
+    top: 11em;
+  }
+  @include respond(phone) {
+    right: auto;
+    width: 25em;
+    top: 65vw;
+    padding: 0 2em 0 2em;
+  }
+  @include respond(phone-narrow) {
+    padding: 0 1em 0 1em;
+    max-width: 18em;
+  }
 }
