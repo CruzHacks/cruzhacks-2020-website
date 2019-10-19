@@ -105,16 +105,32 @@ exports[`hero view matches snapshot 1`] = `
         // Applications Release Nov.
       </p>
     </div>
-    <a
-      className="hero-title-area__button"
-      href="mailto:sponsor@cruzhacks.com"
+    <div
+      className="hero-title-area__button-container"
     >
-      <p
-        className="hero-title-area__button-text"
+      <a
+        className="hero-title-area__button"
+        href="mailto:sponsor@cruzhacks.com"
       >
-        SPONSOR US
-      </p>
-    </a>
+        <p
+          className="hero-title-area__button-text"
+        >
+          SPONSOR US
+        </p>
+      </a>
+      <a
+        className="hero-title-area__button"
+        href="https://2019.cruzhacks.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <p
+          className="hero-title-area__button-text"
+        >
+          CHECK OUT 2019
+        </p>
+      </a>
+    </div>
     <div
       className="hero-subscribe-to-email-list-container"
     >
