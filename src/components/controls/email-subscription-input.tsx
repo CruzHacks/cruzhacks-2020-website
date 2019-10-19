@@ -6,6 +6,7 @@ const emailInputRef: any = React.createRef();
 export interface ITextInputProps {
   placeholder: string;
   value: string;
+  isSending: boolean;
   buttonText: string;
   containerClass: string;
 }
@@ -19,6 +20,8 @@ function validateInputSubmission(): boolean {
 
 async function subscribeToEmailList(email: string, inputRef: any, e: any) {
   e.preventDefault();
+  emailInputRef.current.classList.add('placeholder-sending');
+  inputRef.current.blur();
   if (validateInputSubmission()) {
     const CORSproxy = 'https://cors-anywhere.herokuapp.com/';
 
@@ -47,13 +50,14 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
       const response = await axios.post(mailchimpEndpoint, body, axiosConfig);
       if (response.status === 200) {
         inputRef.current.value = '';
+        inputRef.current.classList.add('placeholder-ok');
         inputRef.current.placeholder = 'Added to Email List!';
       }
     } catch (error) {
       if (error.response && error.response.status === 400) {
         if (error.response.data.title === 'Member Exists') {
           let err_msg = 'Already subscribed!';
-          inputRef.current.classList.add('placeholder-error');
+          inputRef.current.classList.add('placeholder-ok');
           inputRef.current.placeholder = err_msg;
           console.error(err_msg);
         } else if (
@@ -90,9 +94,10 @@ const EmailSubscriptionInput: React.FC<
             ref={emailInputRef}
             id="emailInput"
             type="email"
-            className="placeholder-ok"
+            className="placeholder-sending"
             placeholder={textInputData.placeholder}
             value={textInputData.value}
+            readOnly={textInputData.isSending}
             onChange={e =>
               setTextInputData({ ...textInputData, value: e.target.value })
             }
@@ -102,7 +107,7 @@ const EmailSubscriptionInput: React.FC<
             onBlur={() => {
               emailInputRef.current.placeholder = textInputData.placeholder;
               emailInputRef.current.classList.remove('placeholder-error');
-              emailInputRef.current.classList.add('placeholder-ok');
+              emailInputRef.current.classList.add('placeholder-sending');
             }}
             required
           />

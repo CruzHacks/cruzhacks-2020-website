@@ -6,6 +6,7 @@ const HeroSubscribeToEmailList: React.FC = () => {
     <EmailSubscriptionInput
       placeholder="Enter email for updates!"
       value=""
+      isSending={false}
       buttonText="SUBSCRIBE"
       containerClass="hero-subscribe-to-email-list-container"
     ></EmailSubscriptionInput>
