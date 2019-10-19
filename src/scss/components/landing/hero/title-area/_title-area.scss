@@ -152,10 +152,14 @@ div.hero-subscribe-to-email-list-container {
     );
   }
 
-  #emailInput.placeholder-ok::placeholder {
+  #emailInput.placeholder-sending::placeholder {
     color: #adadad;
     @include responsive-font(1vw, 13.5px, 14px);
     font-style: oblique;
+  }
+
+  #emailInput.placeholder-ok::placeholder {
+    color: #9ea0ff;
   }
 
   #emailInput.placeholder-error::placeholder {
