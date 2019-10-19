@@ -20,6 +20,7 @@ function validateInputSubmission(): boolean {
 
 async function subscribeToEmailList(email: string, inputRef: any, e: any) {
   e.preventDefault();
+  emailInputRef.current.isSending = true;
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
   if (validateInputSubmission()) {
@@ -75,6 +76,7 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
         console.error(err_msg);
       }
     }
+    emailInputRef.current.isSending = false;
   }
 }
 
@@ -97,7 +99,7 @@ const EmailSubscriptionInput: React.FC<
             className="placeholder-sending"
             placeholder={textInputData.placeholder}
             value={textInputData.value}
-            readOnly={textInputData.isSending}
+            disabled={textInputData.isSending}
             onChange={e =>
               setTextInputData({ ...textInputData, value: e.target.value })
             }
@@ -107,6 +109,7 @@ const EmailSubscriptionInput: React.FC<
             onBlur={() => {
               emailInputRef.current.placeholder = textInputData.placeholder;
               emailInputRef.current.classList.remove('placeholder-error');
+              emailInputRef.current.classList.remove('placeholder-ok');
               emailInputRef.current.classList.add('placeholder-sending');
             }}
             required
