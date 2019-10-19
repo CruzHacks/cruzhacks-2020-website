@@ -3,7 +3,7 @@ import React from 'react';
 const BackdropHeroAllPillars: React.FC = () => {
   return (
     <svg
-      className="hero-backdrop-all-pillars__image"
+      className="hero-backdrop__all-pillars-image"
       viewBox="0 0 384 593"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
