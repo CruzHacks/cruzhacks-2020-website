@@ -16,12 +16,22 @@ const HeroTitleAreaView: React.FC = () => {
         <p>// Location (TBD), UC Santa Cruz</p>
         <p>// Applications Release Nov.</p>
       </div>
-      <a
-        href="mailto:sponsor@cruzhacks.com"
-        className="hero-title-area__button"
-      >
-        <p className="hero-title-area__button-text">SPONSOR US</p>
-      </a>
+      <div className="hero-title-area__button-container">
+        <a
+          href="mailto:sponsor@cruzhacks.com"
+          className="hero-title-area__button"
+        >
+          <p className="hero-title-area__button-text">SPONSOR US</p>
+        </a>
+        <a
+          href="https://2019.cruzhacks.com"
+          className="hero-title-area__button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p className="hero-title-area__button-text">CHECK OUT 2019</p>
+        </a>
+      </div>
       <HeroSubscribeToEmailList />
       <HeroNavigateToBottomButtonView />
     </div>
