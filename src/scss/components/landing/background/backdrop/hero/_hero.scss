@@ -1,60 +1,79 @@
-.hero-backdrop__container {
-  min-height: 960px;
-  position: relative;
+.hero-backdrop {
+  &__container {
+    min-height: 960px;
+    position: relative;
 
-  @include respond(tab-land) {
-    min-height: 760px;
+    @include respond(tab-land) {
+      min-height: 760px;
+    }
+    @include respond(phone) {
+      min-height: 660px;
+    }
   }
-  @include respond(phone) {
-    min-height: 660px;
-  }
-}
 
-// SVGs
-.hero-backdrop-all-pillars__image {
-  position: absolute;
+  // SVGs
+  &__all-pillars-image {
+    position: absolute;
 
-  max-width: 31%;
-  height: auto;
-
-  left: 0;
-  top: 124px;
-
-  @include respond(phone) {
-    left: 3px;
-    top: 106px;
-    max-width: 75%;
+    max-width: 30em;
     height: auto;
+
+    left: 0;
+    top: 124px;
+    @include respond(tab-land) {
+      max-width: 28em;
+      height: auto;
+    }
+    @include respond(tab-port) {
+      top: 10vh;
+      max-width: 28em;
+      height: auto;
+    }
+    @include respond(phone-narrow) {
+      left: 3px;
+      top: 13vh;
+      max-width: 24em;
+      height: auto;
+    }
   }
-}
 
-.hero-backdrop-rightside-mobile__image {
-  position: absolute;
-  top: -20px;
-  right: 0;
+  &__rightside-mobile-image {
+    position: absolute;
+    top: -20px;
+    right: 0;
 
-  display: none;
-
-  @include respond(phone-narrow) {
-    display: initial;
-    top: -10px;
-  }
-}
-
-.hero-backdrop-rightside__image {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  max-height: 145vh;
-
-  @include respond(tab-land) {
-    max-width: 65vw;
-  }
-  @include respond(tab-port) {
-    max-width: 55vw;
-  }
-  @include respond(phone-narrow) {
     display: none;
+
+    @include respond(phone-narrow) {
+      display: initial;
+      top: -10px;
+    }
+  }
+
+  &__rightside-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    max-height: 145vh;
+
+    @include respond(tab-land) {
+      max-width: 65vw;
+    }
+    @include respond(tab-port) {
+      max-width: 55vw;
+    }
+    @include respond(phone-narrow) {
+      display: none;
+    }
+  }
+
+  &__rightside-clip0,
+  &__rightside-clip1,
+  &__rightside-clip2,
+  &__rightside-clip3 {
+    @include respond(tab-land) {
+      transform: scaleX(0);
+    }
   }
 }

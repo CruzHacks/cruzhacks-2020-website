@@ -4,7 +4,7 @@ const BackdropHeroRightsideView: React.FC = () => {
   return (
     <>
       <svg
-        className="hero-backdrop-rightside__image"
+        className="hero-backdrop__rightside-image"
         viewBox="0 0 816 1138"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -17,17 +17,20 @@ const BackdropHeroRightsideView: React.FC = () => {
           height="920"
           fill="url(#pattern0)"
         />
-        <path
-          d="M233.495 791L269.526 810V1138L233.495 1117V791Z"
-          fill="url(#paint0_linear)"
-        />
+        <g className="hero-backdrop__rightside-clip0">
+          <path
+            d="M233.495 791L269.526 810V1138L233.495 1117V791Z"
+            fill="url(#paint0_linear)"
+          />
+        </g>
         <g clipPath="url(#clip0)">
           <path
             d="M126.402 668L198.464 704V920L126.402 883V668Z"
             fill="url(#paint1_linear)"
+            className="hero-backdrop__rightside-clip1"
           />
         </g>
-        <g clipPath="url(#clip1)">
+        <g clipPath="url(#clip1)" className="hero-backdrop__rightside-clip2">
           <path
             d="M522.746 733L594.808 769V985L522.746 948V733Z"
             fill="url(#paint2_linear)"
@@ -37,6 +40,7 @@ const BackdropHeroRightsideView: React.FC = () => {
           <path
             d="M741.936 784L669.873 820V1036L741.936 999V784Z"
             fill="url(#paint3_linear)"
+            className="hero-backdrop__rightside-clip3"
           />
         </g>
         <defs>
@@ -132,7 +136,7 @@ const BackdropHeroRightsideView: React.FC = () => {
         </defs>
       </svg>
       <svg
-        className="hero-backdrop-rightside-mobile__image"
+        className="hero-backdrop__rightside-mobile-image"
         width="156"
         height="194"
         viewBox="0 0 156 194"
