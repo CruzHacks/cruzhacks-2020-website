@@ -5,6 +5,11 @@
 // ============================================================================
 
 @mixin respond($breakpoint) {
+  @if ($breakpoint == smallest) {
+    @media (max-width: 361px) {
+      @content;
+    }
+  }
   @if ($breakpoint == phone-narrow) {
     @media (max-width: 35em) {
       @content;

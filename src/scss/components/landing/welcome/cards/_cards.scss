@@ -14,8 +14,15 @@ $text-color: #2e2c5f;
   z-index: 1;
   display: flex;
   align-items: center;
-  padding: 0 5em 0 5em;
+  padding: 4em 2em 0 2em;
   justify-content: center;
+  flex-wrap: wrap;
+  @include respond(tab-port) {
+    padding: 2em 2em 2em;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+  }
 }
 
 &__card {
@@ -27,8 +34,25 @@ $text-color: #2e2c5f;
   background: #ffffff;
   box-sizing: border-box;
   border-radius: 25px;
-  width: 20vw;
-  height: 50vh;
+  max-width: 30vw;
+  height: 55vh;
+  @include respond(tab-land) {
+    height: 45vh;
+    min-width: 25vw;
+    margin: 2em 1em 1em 1em
+  }
+  @include respond(tab-port) {
+    min-height: 45vh;
+    min-width: 36vw;
+    margin: 2em 1em 1em 1em
+  }
+  @include respond(phone) {
+    min-width: 60vw;
+    max-height: 50vh;
+  }
+  @include respond(smallest) {
+    min-height: 60vh;
+  }
 }
 /* Welcome card text related stuff */
 &__card-text {
@@ -57,9 +81,12 @@ $text-color: #2e2c5f;
   line-height: 1.5em;
   letter-spacing: 0.02em;
   max-width: 242px;
-  @include responsive-font(1.25vw, 12px, 18px);
+  @include responsive-font(2vw, 12px, 18px);
   
 }
 &__card-tree {
   padding: 1.4em;
+  @include respond(phone-narrow) {
+    padding: 0 1em 0 1em;
+  }
 }
