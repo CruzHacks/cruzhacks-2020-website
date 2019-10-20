@@ -480,6 +480,7 @@ exports[`landing view matches snapshot 1`] = `
           <p
             className="hero-title-area__2019-button-text"
           >
+            <br />
             CHECK OUT 2019
           </p>
         </a>
