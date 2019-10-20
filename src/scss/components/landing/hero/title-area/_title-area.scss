@@ -84,24 +84,23 @@
     box-shadow: 0 2px 6px #bfbfbf;
     border-radius: 23px;
     text-decoration: none;
-    @include respond(phone) {
+    @include respond(smallest) {
       top: 295px;
     }
   }
 
   &__button-text {
     @include font-source-body(
-      14px,
+      .95em,
       18px,
       0.07em,
-      3px,
+      0,
       center,
       false,
       false,
       #fffefe
     );
     text-align: center;
-    @include responsive-font(2.5vw, 13.5px, 14px);
   }
 }
 

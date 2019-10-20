@@ -8,7 +8,7 @@
     width: 600px;
   }
   @include respond(tab-port) {
-    width: 400px;
+    width: 450px;
   }
 }
 &__tree-container {
@@ -19,7 +19,7 @@
   position: static;
   vertical-align: middle;
   align-self: center;
-  @include respond(phone-narrow) {
+  @include respond(phone) {
     display: none;
   }
 }
