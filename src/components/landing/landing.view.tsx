@@ -19,6 +19,8 @@ export const LandingView: React.FC = () => {
         <HeroView />
         <AboutView />
         <WelcomeView />
+        <StatsView />
+        <FAQView />
       </div>
     </>
   );

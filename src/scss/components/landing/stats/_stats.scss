@@ -3,7 +3,7 @@
     @include flexBox();
     @include flexColumn();
     flex: 0 0 50%;
-    height: 560px;
+    min-height: 560px;
     width: 100vw;
     position: relative;
     justify-content: space-around;
