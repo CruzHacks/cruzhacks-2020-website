@@ -40,6 +40,9 @@
     position: absolute;
     left: unset;
     align-self: center;
+    @include respond (smallest) {
+      margin-top: -5em;
+    }
   }
 
   div.hero-title-area__button {
