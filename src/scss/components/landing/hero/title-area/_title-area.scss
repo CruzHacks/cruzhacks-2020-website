@@ -145,6 +145,7 @@
     }
   }
   &__sponsor-button-text {
+    position: relative;
     @include font-source-body(
       0.95em,
       18px,
@@ -155,6 +156,7 @@
       false,
       #fffefe
     );
+    bottom: 1px;
     text-align: center;
   }
 }
