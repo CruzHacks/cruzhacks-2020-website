@@ -1,7 +1,29 @@
 /* _title-area.scss */
 
 /* HeroTitleAreaContainer */
-
+@mixin button($color) {
+  position: relative;
+  display: block;
+  width: 143px;
+  height: 46px;
+  border: 1px solid #6F6FE8;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(191, 191, 191, 0.7);
+  border-radius: 26px;
+  background: $color;
+  margin: 0.5em;
+  text-decoration: none;
+  z-index: 1;
+  &:hover {
+    background: #5555CF;
+    transition: background 0.5s ease-in;
+    transition: background 0.5s ease-out;
+  }
+  @include respond(phone-narrow) {
+    width: 140px;
+    margin: 0.25em;
+  }
+}
 .hero-title-area {
   white-space: nowrap;
   position: absolute;
@@ -76,35 +98,50 @@
 
   &__button-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 40em;
     align-self: flex-start;
-    @include respond(phone-narrow) {
-      flex-direction: row;
-    }
   }
-  &__button {
-    position: relative;
-    display: block;
+  &__sponsor-button {
+    @include button(#6F6FE8);
+    @include respond(phone-narrow) {
+      top: 200px;
+    }
     left: 0;
     // top: 266px;
     top: 225px;
-    width: 183px;
-    height: 46px;
-    background-color: #6f6fe8;
-    box-shadow: 0 2px 6px #bfbfbf;
-    border-radius: 23px;
-    margin: 0.5em;
-    text-decoration: none;
-    z-index: 1;
+  }
+  &__2019-button {
+    @include button(#ffffff);
     @include respond(phone-narrow) {
-      width: 140px;
       top: 200px;
-      margin: 0.25em;
+    }
+    left: 0;
+    // top: 266px;
+    top: 225px;
+  }
+  &__2019-button-text {
+    @include font-source-body(
+      14px,
+      18px,
+      0.07em,
+      3px,
+      center,
+      false,
+      false,
+      #6F6FE8
+    );
+    text-align: center;
+    width: 143px;
+    height: 46px;
+    @include responsive-font(2.5vw, 13.5px, 14px);
+    &:hover {
+      color: #ffffff;
+      transition: background 0.5s ease-in;
+      transition: background 0.5s ease-out;
     }
   }
-
-  &__button-text {
+  &__sponsor-button-text {
     @include font-source-body(
       0.95em,
       18px,
@@ -117,6 +154,7 @@
     );
     text-align: center;
   }
+  
 }
 
 /* Email Subscription Input Container */
@@ -189,6 +227,11 @@ div.hero-subscribe-to-email-list-container {
     cursor: pointer;
     display: block;
     margin: 0 0 0 auto;
+    &:hover {
+      background: #5555CF;
+      transition: background 0.5s ease-in;
+      transition: background 0.5s ease-out;
+    }
   }
 }
 
