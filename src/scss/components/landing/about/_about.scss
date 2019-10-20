@@ -5,15 +5,15 @@
     flex-direction: column;
     align-items: flex-start;
     align-content: flex-start;
-
-    min-height: 796px;
+    top: 6vh;
+    min-height: 896px;
 
     @include respond(tab-land) {
       align-items: center;
       left: unset;
       padding-left: 2%;
       padding-right: 2%;
-      min-height: 696px;
+      min-height: 796px;
     }
   }
 

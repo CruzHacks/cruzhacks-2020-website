@@ -1,6 +1,6 @@
 &__title {
   @include font-source-header(
-    $size: 2em,
+    $size: 2.5em,
     $color: #2e2c5f,
     $weight: bold,
     $lineHeight: 32px,
@@ -13,7 +13,7 @@
   height: 15px;
 
   @include respond(tab-land) {
-    font-size: 1.45em;
+    font-size: 1.85em;
   }
   @include respond(phone-narrow) {
     width: 10em;
