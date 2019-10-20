@@ -9,6 +9,9 @@
   @include responsive-font(3vw, 1.15em, 1.3em);
   margin-top: 10px;
   height: 25px;
+  text-align: center;
+  position: relative;
+  right: 8.5em;
 
   @include respond(tab-land) {
     letter-spacing: 0.04em;
