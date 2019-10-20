@@ -472,23 +472,23 @@ exports[`landing view matches snapshot 1`] = `
         className="hero-title-area__button-container"
       >
         <a
-          className="hero-title-area__button"
+          className="hero-title-area__2019-button"
           href="https://2019.cruzhacks.com"
           rel="noopener noreferrer"
           target="_blank"
         >
           <p
-            className="hero-title-area__button-text"
+            className="hero-title-area__2019-button-text"
           >
             CHECK OUT 2019
           </p>
         </a>
         <a
-          className="hero-title-area__button"
+          className="hero-title-area__sponsor-button"
           href="mailto:sponsor@cruzhacks.com"
         >
           <p
-            className="hero-title-area__button-text"
+            className="hero-title-area__sponsor-button-text"
           >
             SPONSOR US
           </p>
