@@ -8,16 +8,6 @@
   min-height: 850px;
 }
 
-@media all and (max-width: 321px) {
-  div.hero-title-area {
-    position: unset;
-    position: absolute;
-    left: unset;
-    top: unset;
-    top: 5%;
-  }
-}
-
 @media all and (max-width: 426px) {
   div.hero-right-side-container {
     top: 3%;
@@ -38,7 +28,7 @@
     background-color: #ffffff;
     width: 100vw;
     height: 50px;
-    box-shadow: 0px 2px 6px #bfbfbf;
+    box-shadow: 0 2px 6px #bfbfbf;
   }
 
   div.navigate-to-bottom-container {
@@ -49,56 +39,10 @@
     position: unset;
     position: absolute;
     left: unset;
-    top: 25%;
     align-self: center;
   }
 
   div.hero-title-area__button {
     align-self: center;
-  }
-
-  div.left-pillar1-container {
-    top: 100px;
-  }
-
-  svg.left-pillar1 {
-    width: 48.62px;
-  }
-
-  div.left-pillar2-container {
-    top: 86px;
-    left: 65px;
-  }
-
-  svg.left-pillar2 {
-    width: 23.72px;
-  }
-
-  div.left-pillar3-container {
-    left: 130px;
-    top: 76px;
-    // top: 206px;
-  }
-  svg.left-pillar3 {
-    width: 48.62px;
-  }
-
-  div.left-pillar4-container {
-    top: 296px;
-    left: 230px;
-  }
-}
-
-@media all and (max-width: 700px) {
-  div.navbar__button-container {
-    flex-flow: column wrap;
-    right: 0;
-    right: 35%;
-  }
-}
-
-@media all and (max-width: 1280px) {
-  div.hero__mlh-badge {
-    right: 3.73%;
   }
 }

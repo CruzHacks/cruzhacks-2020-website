@@ -13,6 +13,7 @@
       min-height: 896px;
     }
   }
-  @import './title/title';
+  @import './text/title';
+  @import './text/subtitle';
   @import './cards/cards';
 }
