@@ -8,7 +8,7 @@
   min-height: 850px;
 }
 
-@media all and (max-width: 426px) {
+@include respond(smallest) {
   div.hero-right-side-container {
     top: 3%;
   }
@@ -19,6 +19,10 @@
 
   div.hero__mlh-badge {
     visibility: hidden;
+  }
+
+  div.hero__lightbulb {
+    top: 1%;
   }
 
   div.hero__header {
@@ -40,7 +44,7 @@
     position: absolute;
     left: unset;
     align-self: center;
-    @include respond (smallest) {
+    @include respond(smallest) {
       margin-top: -5em;
     }
   }
