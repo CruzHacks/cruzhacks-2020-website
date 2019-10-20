@@ -13,7 +13,10 @@
       left: unset;
       padding-left: 2%;
       padding-right: 2%;
-      min-height: 796px;
+      min-height: 596px;
+    }
+    @include respond(phone) {
+      min-height: 826px;
     }
   }
 
