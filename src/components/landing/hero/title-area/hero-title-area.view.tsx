@@ -23,7 +23,7 @@ const HeroTitleAreaView: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p className="hero-title-area__2019-button-text">CHECK OUT 2019</p>
+          <p className="hero-title-area__2019-button-text"><br />CHECK OUT 2019</p>
         </a>
         <a
           href="mailto:sponsor@cruzhacks.com"
