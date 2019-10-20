@@ -19,34 +19,24 @@
     height: auto;
 
     left: 0;
-    top: 124px;
+    top: 184px;
+    @include respond(mission) {
+      max-width: 26em;
+    }
     @include respond(tab-land) {
       max-width: 28em;
       height: auto;
     }
     @include respond(tab-port) {
-      top: 10vh;
+      top: 20vh;
       max-width: 28em;
       height: auto;
     }
     @include respond(phone-narrow) {
       left: 3px;
-      top: 13vh;
+      top: 22vh;
       max-width: 24em;
       height: auto;
-    }
-  }
-
-  &__rightside-mobile-image {
-    position: absolute;
-    top: -20px;
-    right: 0;
-
-    display: none;
-
-    @include respond(phone-narrow) {
-      display: initial;
-      top: -10px;
     }
   }
 
@@ -61,10 +51,7 @@
       max-width: 65vw;
     }
     @include respond(tab-port) {
-      max-width: 55vw;
-    }
-    @include respond(phone-narrow) {
-      display: none;
+      max-width: 50vw;
     }
   }
 
