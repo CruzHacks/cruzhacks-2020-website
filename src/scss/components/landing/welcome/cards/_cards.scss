@@ -17,6 +17,9 @@ $text-color: #2e2c5f;
   padding: 4em 2em 0 2em;
   justify-content: center;
   flex-wrap: wrap;
+  @include respond(tab-land) {
+    padding-top: 2em;
+  }
   @include respond(tab-port) {
     padding: 2em 2em 2em;
   }
@@ -37,12 +40,11 @@ $text-color: #2e2c5f;
   max-width: 30vw;
   height: 55vh;
   @include respond(tab-land) {
-    height: 45vh;
+    min-height: 45vh;
     min-width: 25vw;
     margin: 2em 1em 1em 1em
   }
   @include respond(tab-port) {
-    min-height: 45vh;
     min-width: 36vw;
     margin: 2em 1em 1em 1em
   }
@@ -87,6 +89,6 @@ $text-color: #2e2c5f;
 &__card-tree {
   padding: 1.4em;
   @include respond(phone-narrow) {
-    padding: 0 1em 0 1em;
+  padding: 0 1em 0 1em;
   }
 }

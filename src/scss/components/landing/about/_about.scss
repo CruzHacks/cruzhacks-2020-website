@@ -18,6 +18,10 @@
     @include respond(phone) {
       min-height: 826px;
     }
+    @include respond(phone-narrow) {
+      min-height: 756px;
+      padding-bottom: 4em;
+    }
   }
 
   @import './text/title';
