@@ -13,6 +13,12 @@
       min-height: 896px;
       padding-bottom: 2em;
     }
+    @include respond(phone) {
+      margin-top: -6em;
+    }
+    @include respond(smallest) {
+      margin-top: -10em;
+    }
   }
   @import './text/title';
   @import './text/subtitle';
