@@ -6,7 +6,6 @@ const emailInputRef: any = React.createRef();
 export interface ITextInputProps {
   placeholder: string;
   value: string;
-  isSending: boolean;
   buttonText: string;
   containerClass: string;
 }
@@ -20,7 +19,6 @@ function validateInputSubmission(): boolean {
 
 async function subscribeToEmailList(email: string, inputRef: any, e: any) {
   e.preventDefault();
-  emailInputRef.current.isSending = true;
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
   if (validateInputSubmission()) {
@@ -30,6 +28,7 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
       email_address: '' + email,
       status: 'subscribed',
     };
+    inputRef.current.value = '';
 
     let username: string = '' + process.env.REACT_APP_MAILCHIMP_USER;
     let password: string = '' + process.env.REACT_APP_MAILCHIMP_SECRET;
@@ -48,7 +47,6 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
       inputRef.current.placeholder = 'Sending...';
       const response = await axios.post(mailchimpEndpoint, body, axiosConfig);
       if (response.status === 200) {
-        inputRef.current.value = '';
         inputRef.current.classList.add('placeholder-ok');
         inputRef.current.placeholder = 'Added to Email List!';
       }
@@ -63,20 +61,17 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
           error.response.data.title === 'Forgotten Email Not Subscribed'
         ) {
           let err_msg = "Previously unsubscribed! Can't add email :(";
-          inputRef.current.value = '';
           inputRef.current.classList.add('placeholder-error');
           inputRef.current.placeholder = err_msg;
           console.error(err_msg);
         }
       } else {
         let err_msg = 'Something Went Wrong';
-        inputRef.current.value = '';
         inputRef.current.classList.add('placeholder-error');
         inputRef.current.placeholder = err_msg;
         console.error(err_msg);
       }
     }
-    emailInputRef.current.isSending = false;
   }
 }
 
@@ -99,7 +94,6 @@ const EmailSubscriptionInput: React.FC<
             className="placeholder-sending"
             placeholder={textInputData.placeholder}
             value={textInputData.value}
-            disabled={textInputData.isSending}
             onChange={e =>
               setTextInputData({ ...textInputData, value: e.target.value })
             }
@@ -114,13 +108,14 @@ const EmailSubscriptionInput: React.FC<
             }}
             required
           />
-          <input
+          <button
             type="submit"
             onClick={e =>
               subscribeToEmailList(textInputData.value, emailInputRef, e)
             }
-            value={textInputData.buttonText}
-          ></input>
+          >
+            {textInputData.buttonText}
+          </button>
         </form>
       </div>
     );
