@@ -22,7 +22,9 @@
   justify-content: flex-start;
   align-items: center;
   @include respond(phone) {
-    margin: 0 auto;
+    justify-content: center;
+    padding-top: 1.5em;
+    margin: unset;
   }
 }
 &__button {
