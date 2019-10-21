@@ -4,7 +4,7 @@ const BackdropWelcomeMountainView: React.FC = () => {
   return (
     <>
       <svg
-        className="welcome-backdrop-mountain__image"
+        className="welcome-backdrop__mountain-image"
         viewBox="0 0 1150 547"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const BackdropWelcomeMountainView: React.FC = () => {
         </defs>
       </svg>
       <svg
-        className="welcome-backdrop-mountain-mobile__image"
+        className="welcome-backdrop__mountain-mobile-image"
         viewBox="0 0 375 1415"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

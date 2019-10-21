@@ -48,7 +48,8 @@ $text-color: #2e2c5f;
     margin: 2em 1em 1em 1em;
   }
   @include respond(phone) {
-    max-height: 50vh;
+    max-height: 25em;
+    max-width: 18em;
   }
   @include respond(smallest) {
     min-height: 60vh;

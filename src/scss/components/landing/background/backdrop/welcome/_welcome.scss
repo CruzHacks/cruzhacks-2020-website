@@ -1,81 +1,74 @@
-.welcome-backdrop__container {
+.welcome-backdrop {
+  &__container {
     @include flexBox();
     position: relative;
 
     min-height: 896px;
 
-    @include respond(phone) {
-        min-height: 1596px;
+    @include respond(tab-land) {
+      bottom: 355em;
     }
-
-}
-
-/* SVGs */
-.welcome-backdrop-mountain__image,
-.welcome-backdrop-pillars__image,
-{
+    @include respond(phone) {
+      bottom: 309.5em;
+      min-height: 1596px;
+    }
+  }
+  /* SVGs */
+  &__mountain-image,
+  &__pillars-image {
     align-self: center;
     position: absolute;
-}
-
-.welcome-backdrop-mountain__image {
-    bottom: -5%;
-
+  }
+  &__mountain-image {
+    bottom: 100px;
+    max-width: 100%;
+    max-height: 1000px;
+    object-fit: scale-down;
     @include respond(phone) {
-        display: none;
+      display: none;
     }
 
+    @include respond(big-desktop) {
+      bottom: -20em;
+    }
+    @include respond(desktop) {
+      bottom: -10em;
+    }
+    @include respond(mission) {
+      bottom: 0;
+    }
     @include respond(tab-land) {
-        bottom: 0;
+      bottom: 10em;
     }
-}
-.welcome-backdrop-mountain-mobile__image {
-
+  }
+  &__mountain-mobile-image {
     position: absolute;
     display: none;
-    bottom: -10%;
-
+    top: -450px;
+    background-position: center 0;
     @include respond(phone) {
-        display: initial;
+      display: initial;
+      object-fit: fill;
     }
-
-}
-
-.welcome-backdrop-pillars__image {
+    @include respond(phone-narrow) {
+      bottom: -10em;
+    }
+  }
+  &__pillars-image {
     z-index: -1;
     max-width: 78%;
     height: auto;
     top: -13%;
 
+    @include respond(tab-port) {
+    }
     @include respond(phone) {
-        display: none;
+      top: -48%;
+      max-width: 100vw;
+      height: 40%;
     }
-
+    @include respond(smallest) {
+      top: -55%;
+    }
+  }
 }
-
-.welcome-backdrop-pillars-mobile__image {
-    z-index: -1;
-    display: none;
-    max-width: 99%;
-    position: absolute;
-    height: auto;
-    top: -3%;
-
-    @include respond(phone) {
-        display: initial;
-    }
-}
-
-/*
-@media all and (min-width: 1368px) {
-
-    div.welcome-backdrop__container {
-        min-height: 1096px;
-    }
-
-    svg.welcome-backdrop-mountain__image {
-        bottom: -5%;
-    }
-}
-
-*/

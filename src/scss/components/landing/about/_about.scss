@@ -57,7 +57,7 @@
   @include respond(phone) {
     right: auto;
     width: 25em;
-    top: 65vw;
+    top: 55vw;
     padding: 0 2em 0 2em;
   }
   @include respond(phone-narrow) {
