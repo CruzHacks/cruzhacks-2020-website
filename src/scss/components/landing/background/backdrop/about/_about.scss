@@ -25,7 +25,9 @@
 
     max-width: 33%;
     height: auto;
-
+    @include respond(tab-land) {
+      top: 2%;
+    }
     @include respond(phone) {
       max-width: 55%;
       top: 22.5vh;
