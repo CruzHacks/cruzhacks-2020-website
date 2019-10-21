@@ -24,27 +24,31 @@
     max-width: 100%;
     max-height: 1000px;
     object-fit: scale-down;
+    z-index: 1;
     @include respond(phone) {
       display: none;
     }
 
     @include respond(big-desktop) {
-      bottom: -20em;
+      bottom: -400px;
     }
     @include respond(desktop) {
-      bottom: -10em;
+      bottom: -320px;
     }
     @include respond(mission) {
-      bottom: 0;
+      bottom: -100px;
     }
     @include respond(tab-land) {
-      bottom: 10em;
+      bottom: 3450px;
+    }
+    @include respond(tab-port) {
+      bottom: 3550px;
     }
   }
   &__mountain-mobile-image {
     position: absolute;
     display: none;
-    top: -450px;
+    top: -3200px;
     background-position: center 0;
     @include respond(phone) {
       display: initial;
@@ -58,17 +62,19 @@
     z-index: -1;
     max-width: 78%;
     height: auto;
-    top: -13%;
-
+    top: -8%;
+    position: absolute;
+    @include respond(tab-land) {
+      top: -2550px;
+    }
     @include respond(tab-port) {
     }
     @include respond(phone) {
-      top: -48%;
+      top: -3050px;
       max-width: 100vw;
-      height: 40%;
     }
     @include respond(smallest) {
-      top: -55%;
+      top: -3100px;
     }
   }
 }
