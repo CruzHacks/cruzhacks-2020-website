@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100%;
     text-align: center;
-    min-height: 756px;
+    min-height: 796px;
 
     @include respond(tab-land) {
       height: unset;

@@ -2,7 +2,7 @@
 .faq-backdrop__container {
     background-color:#FFFFFF;
     position: relative;
-    min-height: 886px;
+    min-height: 586px;
 
     @include respond(tab-land) {
         min-height: 686px;

@@ -6,8 +6,10 @@ import FooterButtonView from './buttons/footer-button.view';
 const FooterView: React.FC = () => {
   return (
     <div className="footer-view-container">
-      <FooterButtonView />
-      <FooterTextView />
+      <div className="footer-view-content__container">
+        <FooterButtonView />
+        <FooterTextView />
+      </div>
     </div>
   );
 };
