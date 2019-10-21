@@ -2,7 +2,7 @@
   &__container {
     @include flexBox();
     position: relative;
-    min-height: 796px;
+    min-height: 596px;
 
     @include respond(tab-land) {
       min-height: 1100vh;
