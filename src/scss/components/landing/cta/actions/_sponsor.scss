@@ -4,7 +4,7 @@
 &__sponsor-title-container {
   margin: 5.91% 35.42% 0 12.07%;
   @include respond(phone) {
-    margin: 3em auto 3em auto;
+    margin: 3em auto -2em auto;
   }
 }
 &__sponsor-title {
@@ -20,8 +20,6 @@
   mix-blend-mode: normal;
   @include respond(tab-land) {
     font-size: 1.85em;
-    text-align: center;
-    text-indent: unset;
     margin: 0 auto;
   }
   @include respond(phone-narrow) {
@@ -42,6 +40,8 @@
   line-height: 12px;
 
   letter-spacing: 0.02em;
+  @include responsive-font(1.9vw, 14px, 16px);
 
   color: #383636;
+
 }

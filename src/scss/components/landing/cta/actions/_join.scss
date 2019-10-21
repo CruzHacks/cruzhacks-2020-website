@@ -4,8 +4,7 @@
 &__join-title-container {
   margin: 0 35.42% 0 12.07%;
   @include respond(phone) {
-    margin: 0 auto;
-    padding-bottom: 2em;
+    margin: 3em auto -2em auto;
   }
 }
 &__join-title {
@@ -23,7 +22,6 @@
   mix-blend-mode: normal;
   @include respond(tab-land) {
     font-size: 1.85em;
-    text-align: center;
     text-indent: unset;
     margin: 0 auto;
   }
@@ -42,6 +40,7 @@
   font-family: SofiaProSoftW01-Regular;
   font-size: 16px;
   line-height: 12px;
+  @include responsive-font(1.9vw, 14px, 16px);
 
   letter-spacing: 0.02em;
 
