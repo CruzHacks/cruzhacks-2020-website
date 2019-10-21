@@ -60,11 +60,12 @@
   @include respond(phone) {
     right: auto;
     width: 25em;
-    top: 55vw;
+    top: 58vw;
     padding: 0 2em 0 2em;
   }
   @include respond(phone-narrow) {
     padding: 0 1em 0 1em;
+    top: 60vw;
     max-width: 18em;
   }
 }

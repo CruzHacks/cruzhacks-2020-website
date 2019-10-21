@@ -17,6 +17,7 @@
     }
     @include respond(phone) {
       margin-top: -6em;
+      min-height: 1536px;
     }
     @include respond(smallest) {
       margin-top: -10em;

@@ -18,8 +18,8 @@
     width: 8em;
   }
   @include respond(phone) {
-    height: 12em;
-    width: 13em;
+    height: 11em;
+    width: 12em;
   }
   @include respond(smallest) {
     height: 9.5em;
@@ -84,7 +84,7 @@
   vertical-align: bottom;
   justify-content: space-evenly;
   position: relative;
-  bottom: 3em;
+  bottom: 4em;
   @include respond(tab-land) {
     bottom: 7em;
   }
@@ -93,8 +93,7 @@
   }
   @include respond(phone) {
     flex-direction: column;
-    margin: 4em 0 0 0;
-    bottom: unset;
+    bottom: 5em;
   }
   @include respond(smallest) {
     margin: 6em 0 0 0;
