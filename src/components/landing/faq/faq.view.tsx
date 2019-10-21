@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     "question": "I don't see my question here.",
-    "answer": <ReactContactForm className="faq__contactForm" to="ilopezro@ucsc.edu" />
+    "answer": <ReactContactForm className="faq__contactForm" to="contact@cruzhacks.com" />
   }
 ]
 
