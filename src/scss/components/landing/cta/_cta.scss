@@ -6,6 +6,9 @@
     left: 0;
     display: flex;
     flex-flow: column nowrap;
+    @include respond(tab-port) {
+      min-height: 636px;
+    }
   }
   @import './button/button';
   @import './actions/join';

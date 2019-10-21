@@ -21,15 +21,18 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
+  @include respond(phone) {
+    margin: 0 auto;
+  }
 }
 &__button {
   @include button();
 }
 &__button--mentor {
   @include button();
-  margin: 0 0.3% 0 0;
+  margin: 0 1em 0 0;
 }
 &__button--volunteer {
   @include button();
-  margin: 0 0 0 0.3%;
+  margin: 0 0 0 1em;
 }
