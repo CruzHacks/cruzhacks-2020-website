@@ -3,6 +3,7 @@
     @include flexBox();
     text-align: center;
     position: relative;
+    max-height: fit-content;
   }
   @import './container/container';
 }
