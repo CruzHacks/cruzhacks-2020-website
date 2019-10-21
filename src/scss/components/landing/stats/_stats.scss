@@ -1,5 +1,6 @@
 .stats {
   &__container {
+    margin-top: 5em;
     @include flexBox();
     @include flexColumn();
     flex: 0 0 50%;
