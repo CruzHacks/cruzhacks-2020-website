@@ -5,17 +5,25 @@
     flex-direction: column;
     align-items: flex-start;
     align-content: flex-start;
+    top: 50px;
+    min-height: 696px;
 
-    min-height: 796px;
-
+    @include respond(mission) {
+      top: 0;
+    }
     @include respond(tab-land) {
       align-items: center;
-      align-content: center;
-      justify-content: center;
       left: unset;
-      padding-left: 10%;
-      padding-right: 10%;
-      min-height: 696px;
+      padding-left: 2%;
+      padding-right: 2%;
+      min-height: 596px;
+    }
+    @include respond(phone) {
+      min-height: 826px;
+    }
+    @include respond(phone-narrow) {
+      min-height: 756px;
+      padding-bottom: 4em;
     }
   }
 
@@ -38,6 +46,26 @@
 
 .about-text__container {
   position: absolute;
-  top: 0;
-  left: 447px;
+  top: 6em;
+  right: 7vw;
+  padding-left: 3em;
+  @include respond(tab-land) {
+    top: 2.5em;
+  }
+  @include respond(tab-port) {
+    right: 10vw;
+    width: 25em;
+    top: 3em;
+  }
+  @include respond(phone) {
+    right: auto;
+    width: 25em;
+    top: 58vw;
+    padding: 0 2em 0 2em;
+  }
+  @include respond(phone-narrow) {
+    padding: 0 1em 0 1em;
+    top: 60vw;
+    max-width: 18em;
+  }
 }

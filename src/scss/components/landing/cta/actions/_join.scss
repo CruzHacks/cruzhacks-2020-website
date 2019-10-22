@@ -1,8 +1,12 @@
 &__join-container {
+  padding-top: 8em;
   width: 100vw;
 }
 &__join-title-container {
   margin: 0 35.42% 0 12.07%;
+  @include respond(phone) {
+    margin: 3em auto -2em auto;
+  }
 }
 &__join-title {
   @include font-source-header(
@@ -12,10 +16,22 @@
     $lineHeight: 41px,
     $letterSpace: 0.04em
   );
+  font-family: Rubik Bold;
   text-indent: 3px;
 
   color: #2e2c5f;
   mix-blend-mode: normal;
+  @include respond(tab-land) {
+    font-size: 1.85em;
+    text-indent: unset;
+    margin: 0 auto;
+  }
+  @include respond(phone-narrow) {
+    width: 10em;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 2.5em;
+  }
 }
 &__join-description-container {
   margin: 2% 44.01% 0 12.33%;
@@ -25,6 +41,7 @@
   font-family: SofiaProSoftW01-Regular;
   font-size: 16px;
   line-height: 12px;
+  @include responsive-font(1.9vw, 14px, 16px);
 
   letter-spacing: 0.02em;
 

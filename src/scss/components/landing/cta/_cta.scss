@@ -1,12 +1,14 @@
 .cta {
   &__container {
     position: relative;
-    min-height: 766px;
+    min-height: 906px;
     width: 100vw;
     left: 0;
-    top: 1150px;
     display: flex;
     flex-flow: column nowrap;
+    @include respond(tab-land) {
+      min-height: 776px;
+    }
   }
   @import './button/button';
   @import './actions/join';

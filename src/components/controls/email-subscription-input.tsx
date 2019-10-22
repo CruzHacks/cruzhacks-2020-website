@@ -20,7 +20,6 @@ function validateInputSubmission(): boolean {
 
 async function subscribeToEmailList(email: string, inputRef: any, e: any) {
   e.preventDefault();
-  emailInputRef.current.isSending = true;
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
   if (validateInputSubmission()) {
@@ -30,6 +29,7 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
       email_address: '' + email,
       status: 'subscribed',
     };
+    inputRef.current.value = '';
 
     let username: string = '' + process.env.REACT_APP_MAILCHIMP_USER;
     let password: string = '' + process.env.REACT_APP_MAILCHIMP_SECRET;
@@ -45,12 +45,9 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
     };
 
     try {
-      let send_msg = 'Sending...';
-      inputRef.current.value = '';
-      inputRef.current.placeholder = send_msg;
+      inputRef.current.placeholder = 'Sending...';
       const response = await axios.post(mailchimpEndpoint, body, axiosConfig);
       if (response.status === 200) {
-        inputRef.current.value = '';
         inputRef.current.classList.add('placeholder-ok');
         inputRef.current.placeholder = 'Added to Email List!';
       }
@@ -114,13 +111,14 @@ const EmailSubscriptionInput: React.FC<
             }}
             required
           />
-          <input
+          <button
             type="submit"
             onClick={e =>
               subscribeToEmailList(textInputData.value, emailInputRef, e)
             }
-            value={textInputData.buttonText}
-          ></input>
+          >
+            {textInputData.buttonText}
+          </button>
         </form>
       </div>
     );

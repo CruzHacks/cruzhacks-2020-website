@@ -5,6 +5,11 @@
 // ============================================================================
 
 @mixin respond($breakpoint) {
+  @if ($breakpoint == smallest) {
+    @media (max-width: 426px) {
+      @content;
+    }
+  }
   @if ($breakpoint == phone-narrow) {
     @media (max-width: 35em) {
       @content;
@@ -26,6 +31,11 @@
     }
   }
   @if ($breakpoint == mission) {
+    @media (max-width: 85.5em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == desktop) {
     @media (max-width: 112.5em) {
       @content;
     }
@@ -237,7 +247,7 @@
   @include font-source-header(
     $size: 2.5em,
     $color: #2e2c5f,
-    $lineHeight: 45px,
+    $lineHeight: 70px,
     $letterSpace: 0.05em,
     $weight: bold
   );

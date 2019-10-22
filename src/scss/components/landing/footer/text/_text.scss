@@ -2,9 +2,17 @@
   font-family: SofiaProSoftW01-Regular;
   position: relative;
   letter-spacing: 0.1em;
-  top: 85.5%;
-  padding: 0 4.65em;
+  padding: 1em 4.65em;
   font-size: 12px;
+
+  @include respond(mission) {
+    padding: 1em 1.3em;
+  }
+
+  @include respond(tab-port) {
+    padding: 1em 1.3em;
+  }
+
 }
 
 /* Footer text */

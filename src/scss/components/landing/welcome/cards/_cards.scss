@@ -5,7 +5,7 @@ $text-color: #2e2c5f;
     display: block;
   }
   &__card {
-    margin: 1.5em 0;
+    margin: 1em 0;
   }
 }
 
@@ -14,7 +14,18 @@ $text-color: #2e2c5f;
   z-index: 1;
   display: flex;
   align-items: center;
+  padding: 4em 2em 0 2em;
   justify-content: center;
+  flex-wrap: wrap;
+  @include respond(tab-land) {
+    padding-top: 2em;
+  }
+  @include respond(tab-port) {
+    padding: 2em 2em 2em;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+  }
 }
 
 &__card {
@@ -22,29 +33,60 @@ $text-color: #2e2c5f;
   margin: 0 auto;
   justify-content: space-around;
   align-items: center;
+  border: 3px solid #83e2dc;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 25px;
+  max-width: 25vw;
+  height: 28em;
+  @include respond(tab-land) {
+    min-height: 45vh;
+    max-width: 25em;
+    margin: 2em 1em 1em 1em;
+  }
+  @include respond(tab-port) {
+    margin: 2em 1em 1em 1em;
+  }
+  @include respond(phone) {
+    max-height: 25em;
+    max-width: 18em;
+  }
+  @include respond(smallest) {
+    min-height: 60vh;
+  }
 }
 /* Welcome card text related stuff */
 &__card-text {
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 &__card-header {
-  font-family: Rubik;
-  font-weight: 500;
-  color: $text-color;
+  @include font-source-header(
+    $size: 1.45em,
+    $color: $text-color,
+    $weight: bold,
+    $lineHeight: 70px,
+    $letterSpace: 0.05em
+  );
+  font-family: Rubik Bold;
+  @include responsive-font(5vw, 1.2em, 1.45em);
 }
 &__card-caption {
-  font-size: 18px;
   color: #424242;
   font-family: SofiaProSoftW01-Regular;
 
-  padding-left: 0.7em;
   line-height: 1.5em;
   letter-spacing: 0.02em;
   max-width: 242px;
+  @include responsive-font(1.9vw, 12px, 18px);
 }
 &__card-tree {
   padding: 1.4em;
+  @include respond(phone-narrow) {
+    padding: 0 1em 0 1em;
+  }
 }
