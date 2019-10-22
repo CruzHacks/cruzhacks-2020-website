@@ -7,7 +7,7 @@
   top: 150px;
 
   @include respond(desktop) {
-    min-height: 826px;
+    min-height: 726px;
   }
 
   @include respond(mission) {
@@ -15,7 +15,7 @@
   }
 
   @include respond(tab-land) {
-    min-height: 596px;
+    min-height: 516px;
   }
 
   @include respond(tab-port) {
