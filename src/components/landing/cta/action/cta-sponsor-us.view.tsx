@@ -14,9 +14,9 @@ const SponsorUsView: React.FC = () => {
         </p>
       </div>
       <div className="cta__button-container">
-        <div className="cta__button">
-          <p className="cta__button-text">LEARN MORE</p>
-        </div>
+        <a href="mailto:sponsor@cruzhacks.com" className="cta__button">
+          <p className="cta__button-text">SPONSOR US</p>
+        </a>
       </div>
     </div>
   );
