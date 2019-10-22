@@ -4,7 +4,7 @@ const FooterTextView: React.FC = () => {
   return (
     <div className="footer-text-container">
       <span className="footer-text__designers">
-        Designed by Lily Lee and Ivy Chen.
+        Made with love by the CruzHacks Team.
       </span>
       <span className="footer-text__copyright">@ 2020 Cruzhacks</span>
       <div style={{ clear: 'both' }}></div>
