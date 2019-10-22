@@ -25,7 +25,6 @@
   @include respond(phone) {
     text-align: center;
     padding-bottom: 2em;
-
   }
   @include respond(phone-narrow) {
     width: 10em;
@@ -34,13 +33,17 @@
 }
 &__sponsor-description-container {
   margin: 2% 44.01% 0 12.33%;
-  white-space: nowrap;
+  max-height: 10em;
+  max-width: 24em;
+  word-wrap: break-word;
+
+  @include respond(phone) {
+    margin: 0 auto;
+  }
 }
 &__sponsor-description {
-  font-family: Avenir;
   font-family: SofiaProSoftW01-Regular;
   font-size: 16px;
-  line-height: 12px;
 
   align-content: center;
 
@@ -48,5 +51,4 @@
   @include responsive-font(1.9vw, 14px, 16px);
 
   color: #383636;
-
 }

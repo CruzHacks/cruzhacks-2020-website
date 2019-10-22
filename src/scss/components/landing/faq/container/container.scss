@@ -12,8 +12,14 @@
   box-sizing: border-box;
   border-radius: 77px;
   @include respond(phone) {
-    max-height: fit-content;
+    min-height: 62em;
     align-content: center;
+  }
+  @include respond(phone-narrow) {
+    min-height: 65em;
+  }
+  @include respond(smallest) {
+    height: 48%;
   }
 }
 
@@ -27,6 +33,7 @@
   );
   display: block;
   margin-top: 1em;
+  padding-bottom: 0.25em;
   text-align: center;
 }
 
@@ -35,9 +42,12 @@
   display: block;
   text-align: center;
   margin: auto;
-  width: 30em;
+  width: 400px;
   @include respond(phone) {
-    border: 0;
+    width: 300px;
+  }
+  @include respond(phone-narrow) {
+    width: 200px;
   }
 }
 
@@ -66,8 +76,14 @@
   padding: 0;
   border: 1px solid #6f6fe8;
   border-radius: 26px;
-  padding: 0.4em 0.2em 0.4em 0.2em;
-  background: none;
+  padding: 0.4em 0.35em 0.4em 0.35em;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  &:hover {
+    background-color: #6f6fe8;
+    color: #ffffff;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  }
   @include respond(phone) {
     padding: 0.35em 0.3em 0.35em 0.3em;
     margin: 1.8vh;
@@ -105,11 +121,11 @@
     $size: 0.87em,
     $color: #656565,
     $weight: 300,
-    $lineHeight: 14px
+    $lineHeight: 22px
   );
   display: block;
   text-align: center;
-  margin: 7vh;
+  margin: 7vh 0 7vh 0;
 }
 
 &__popupExit {

@@ -1,4 +1,5 @@
-import React, {useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { goToAnchor } from 'react-scrollable-anchor';
 
 interface faqs {
   [index: string]: {
@@ -7,52 +8,56 @@ interface faqs {
   }[];
 }
 
-const scrollToRef = (faqRef: any) => 
-  window.scrollTo(0, faqRef.current.offsetTop)
-
 export const FAQBoxView: React.FC<faqs> = faqs => {
   const [toggle, setToggle] = useState(false);
   const [answeredQuestion, setAnswer] = useState();
-  const [questionClicked, setClickedQuestion] = useState(); 
+  const [questionClicked, setClickedQuestion] = useState();
 
-  function onToggle(answer?: any, question?:any){
+  function onToggle(answer?: any, question?: any) {
+    goToAnchor('faq');
     setToggle(!toggle);
     setAnswer(answer);
     setClickedQuestion(question);
+    return;
   }
-
 
   const Question = () => {
-    return(
+    return (
       <span className="faq__questionGrid">
         {faqs.qAndA.map(questions => (
-        <button className='faq__questions' key={questions.question} onClick={() => onToggle(questions.answer, questions.question)}>{questions.question}</button>
-        ))
-        }
-    </span>
-  )
-  }
+          <button
+            className="faq__questions"
+            key={questions.question}
+            onClick={() => onToggle(questions.answer, questions.question)}
+          >
+            {questions.question}
+          </button>
+        ))}
+      </span>
+    );
+  };
 
   const Answer = () => {
-    return(
+    return (
       <div className="faq__popupContainer">
         <span className="faq__popupQuestion">{questionClicked}</span>
         <span className="faq__popupAnswer">{answeredQuestion}</span>
-        <button className="faq__popupExit" onClick={onToggle}>Back</button>
+        <button className="faq__popupExit" onClick={onToggle}>
+          Back
+        </button>
       </div>
-    )
-  }
-  
+    );
+  };
 
-  return(
+  return (
     <div className="faq__box-container">
       <div className="faq__box">
         <span className="faq__title">FAQ</span>
         <span className="faq__divider"></span>
-        {toggle ? <Answer/> : <Question/>}
+        {toggle ? <Answer /> : <Question />}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FAQBoxView
+export default FAQBoxView;

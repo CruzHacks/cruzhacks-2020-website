@@ -18,7 +18,6 @@
   );
   font-family: Rubik Bold;
   text-indent: 3px;
-
   color: #2e2c5f;
   mix-blend-mode: normal;
   @include respond(tab-land) {
@@ -29,7 +28,6 @@
   @include respond(phone) {
     text-align: center;
     padding-bottom: 2em;
-
   }
   @include respond(phone-narrow) {
     width: 10em;
@@ -38,18 +36,18 @@
 }
 &__join-description-container {
   margin: 2% 44.01% 0 12.33%;
-  white-space: nowrap;
-  @include respond(phone) {
-    justify-content: center;
-  }
+  max-height: 10em;
+  max-width: 24em;
+  word-wrap: break-word;
 
+  @include respond(phone) {
+    margin: 0 auto;
+  }
 }
 &__join-description {
   font-family: SofiaProSoftW01-Regular;
   font-size: 16px;
-  line-height: 12px;
   @include responsive-font(1.9vw, 14px, 16px);
-
   letter-spacing: 0.02em;
 
   color: #383636;

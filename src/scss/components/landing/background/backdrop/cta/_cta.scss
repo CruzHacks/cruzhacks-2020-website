@@ -2,14 +2,17 @@
 .cta-backdrop__container {
   @include flexBox();
   position: relative;
-  min-height: 886px;
+  min-height: 856px;
   z-index: 1;
-  @include respond(desktop) {
-    min-height: 986px;
-  }
+
+  /*
+    @include respond(desktop) {
+        min-height: 986px;
+    }
+    */
 
   @include respond(tab-land) {
-    min-height: 686px;
+    min-height: 730px;
   }
 }
 

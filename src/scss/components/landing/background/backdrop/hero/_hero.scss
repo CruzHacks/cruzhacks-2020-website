@@ -1,14 +1,7 @@
 .hero-backdrop {
   &__container {
-    min-height: 860px;
+    min-height: 100vh;
     position: relative;
-
-    @include respond(tab-land) {
-      min-height: 760px;
-    }
-    @include respond(phone) {
-      min-height: 660px;
-    }
   }
 
   // SVGs
@@ -43,7 +36,7 @@
   &__rightside-image {
     position: absolute;
     top: 0;
-    right: -1px;
+    right: 0;
 
     max-height: 145vh;
 

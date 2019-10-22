@@ -35,8 +35,8 @@
       top: 2%;
     }
     @include respond(phone) {
+      top: 0;
       max-width: 55%;
-      top: 22.5vh;
     }
   }
 }

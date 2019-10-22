@@ -1,14 +1,17 @@
 .cta {
   &__container {
     position: relative;
-    min-height: 966px;
+    min-height: 906px;
     width: 100vw;
     left: 0;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column;
     @include respond(tab-port) {
       min-height: 556px;
       margin-top: -4em;
+    }
+    @include respond(tab-land) {
+      min-height: 776px;
     }
   }
   @import './button/button';
