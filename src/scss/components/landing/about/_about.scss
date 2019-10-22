@@ -18,6 +18,9 @@
       padding-right: 2%;
       min-height: 596px;
     }
+    @include respond(tab-port) {
+      min-height: 496px;
+    }
     @include respond(phone) {
       min-height: 826px;
     }
@@ -50,12 +53,12 @@
   right: 7vw;
   padding-left: 3em;
   @include respond(tab-land) {
-    top: 2.5em;
+    top: 8em;
   }
   @include respond(tab-port) {
     right: 10vw;
     width: 25em;
-    top: 3em;
+    top: 8em;
   }
   @include respond(phone) {
     right: auto;

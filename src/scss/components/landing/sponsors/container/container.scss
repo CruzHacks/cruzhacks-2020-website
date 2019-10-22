@@ -1,31 +1,52 @@
-&__title{
-    @include font-source-header( 
+&__title {
+  @include font-source-header(
     $size: 2.4em,
     $color: #262626,
     $weight: bold,
     $lineHeight: 34px,
     $letterSpace: 0.05em
-    ); 
-    font-family: Rubik Bold;
-    display: inline-block;
-    text-transform: uppercase;
-    text-align: center;
-    margin-left: 12%;
-    @include responsive-font(4vw, 1.8em, 2.4em);
+  );
+  font-family: Rubik Bold;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  word-wrap: break-word;
+  @include responsive-font(4vw, 1.8em, 2.4em);
 }
 
-&__divider{
-    border: 2px solid #2E2C5F;
-    display: block;
-    width: 30em; 
-    margin: 22px auto 49px; 
+&__divider {
+  border: 2px solid #2e2c5f;
+  display: block;
+  width: 30em;
+  margin: 22px auto 49px;
+  @include respond(phone) {
+    width: 25em;
+  }
+  @include respond(phone-narrow) {
+    width: 20em;
+  }
+  @include respond(smallest) {
+    width: 15em;
+  }
 }
 
-&__logos{
-    display: block;
-    margin: 0 auto; 
+&__logos {
+  display: block;
+  margin: 0 auto;
+  @include respond(tab-port) {
+    max-width: 600px;
+  }
+  @include respond(phone) {
+    max-width: 500px;
+  }
+  @include respond(smallest) {
+    max-width: 300px;
+  }
 }
 
-&__boxContainter{
-    @include flexBox(); 
+&__boxContainer {
+  @include flexBox();
+  position: relative;
+  flex-direction: column;
 }

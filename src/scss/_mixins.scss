@@ -6,7 +6,7 @@
 
 @mixin respond($breakpoint) {
   @if ($breakpoint == smallest) {
-    @media (max-width: 426px) {
+    @media (max-width: 422px) {
       @content;
     }
   }

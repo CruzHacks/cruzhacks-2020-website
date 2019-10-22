@@ -25,12 +25,18 @@
 
     max-width: 33%;
     height: auto;
+    @include respond(big-desktop) {
+      max-width: 25%;
+    }
+    @include respond(desktop) {
+      max-width: 28%;
+    }
     @include respond(tab-land) {
       top: 2%;
     }
     @include respond(phone) {
+      top: 0;
       max-width: 55%;
-      top: 22.5vh;
     }
   }
 }

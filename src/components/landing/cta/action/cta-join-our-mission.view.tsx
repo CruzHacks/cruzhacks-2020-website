@@ -7,21 +7,13 @@ const JoinOurMissionView: React.FC = () => {
         <h1 className="cta__join-title">JOIN OUR MISSION</h1>
       </div>
       <div className="cta__join-description-container">
-        <p className="cta__join-description">
+        <span className="cta__join-description">
           Cruzhacks is entirely student organized and run. If you have
-        </p>
-        <p className="cta__join-description">
           experience in the industry, hackers at CruzHacks could use your
-        </p>
-        <p className="cta__join-description">
-          support while building their projects! Student volunteers are
-        </p>
-        <p className="cta__join-description">
-          also paramount to the event, helping with logistics. Consider
-        </p>
-        <p className="cta__join-description">
-          registering as a mentor or volunteer!
-        </p>
+          support while building their projects! Student volunteers are also
+          paramount to the event, helping with logistics. Consider registering
+          as a mentor or volunteer!
+        </span>
       </div>
       {/*<div className="cta__button-container">
         <div className="cta__button--mentor">
