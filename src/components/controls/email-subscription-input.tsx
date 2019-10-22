@@ -20,10 +20,6 @@ function validateInputSubmission(): boolean {
 
 async function subscribeToEmailList(email: string, inputRef: any, e: any) {
   e.preventDefault();
-<<<<<<< HEAD
-=======
-  emailInputRef.current.isSending = true;
->>>>>>> master
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
   if (validateInputSubmission()) {
