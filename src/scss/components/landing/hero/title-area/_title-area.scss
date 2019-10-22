@@ -122,32 +122,6 @@
   }
   &__2019-button-text {
     position: relative;
-<<<<<<< HEAD
-=======
-    @include font-source-body(
-      14px,
-      18px,
-      0.07em,
-      3px,
-      center,
-      false,
-      false,
-      #6f6fe8
-    );
-    text-align: center;
-    width: 144px;
-    height: 50px;
-    bottom: 18px;
-    z-index: 2;
-    transition: color 0.5s ease-out;
-    @include responsive-font(2.5vw, 13.5px, 14px);
-    &:hover {
-      color: #ffffff;
-      transition: color 0.5s ease-in;
-    }
-  }
-  &__sponsor-button-text {
->>>>>>> master
     @include font-source-body(
       14px,
       18px,
