@@ -49,7 +49,6 @@ const faqs = [
   }
 ]
 
-
 const FAQView: React.FC = () => {
     return (
       <div className="faq__container">
