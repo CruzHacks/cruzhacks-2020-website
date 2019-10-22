@@ -1,38 +1,39 @@
 .footer-backdrop__container {
-    @include flexBox();
-    position: relative;
-    min-height: 766px;
-
-    @include respond(tab-land) {
-        min-height: 566px;
-    }
+  @include flexBox();
+  position: relative;
+  min-height: 766px;
+  top: 25em;
+  @include respond(big-desktop) {
+  }
+  @include respond(tab-land) {
+    min-height: 466px;
+  }
 }
 
 /* SVGs */
 .footer-backdrop-extended__image,
 .footer-backdrop-trees__image {
-    position: absolute;
+  position: absolute;
 }
 
 .footer-backdrop-extended__image {
-    bottom: 5.5%;
-    width: 100%;
+  bottom: 100px;
+  width: 100vw;
 
-    @include respond(phone) {
-        display: none;
-    }
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 .background-footer-mobile__image {
+  position: absolute;
+  display: none;
 
-    position: absolute;
-    display: none;
+  bottom: 50%;
+  height: auto;
+  width: 100%;
 
-    bottom: 50%;
-    height: auto;
-    width: 100%;
-
-    @include respond(phone-narrow) {
-        display: initial;
-    }
+  @include respond(phone-narrow) {
+    display: initial;
+  }
 }

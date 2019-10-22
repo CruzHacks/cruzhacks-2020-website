@@ -6,7 +6,7 @@
     align-items: flex-start;
     align-content: flex-start;
     top: 50px;
-    min-height: 996px;
+    min-height: 696px;
 
     @include respond(mission) {
       top: 0;
@@ -46,16 +46,16 @@
 
 .about-text__container {
   position: absolute;
-  top: 25em;
-  right: 20vw;
+  top: 6em;
+  right: 7vw;
   padding-left: 3em;
   @include respond(tab-land) {
-    top: 12em;
+    top: 2.5em;
   }
   @include respond(tab-port) {
     right: 10vw;
     width: 25em;
-    top: 11em;
+    top: 3em;
   }
   @include respond(phone) {
     right: auto;
