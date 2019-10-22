@@ -4,7 +4,7 @@ const template = [
   {
     title: 'INCLUSIVITY',
     text:
-      'Team up with students \nfrom 25+ universities, and \n50+ superhero mentors as \nyou power through the weekend.',
+      'Team up with students\nfrom 25+ universities, and 50+\nmentors as\nyou power through the weekend.',
   },
   {
     title: 'INNOVATION',
