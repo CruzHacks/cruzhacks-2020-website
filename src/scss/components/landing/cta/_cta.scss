@@ -7,7 +7,8 @@
     display: flex;
     flex-flow: column nowrap;
     @include respond(tab-port) {
-      min-height: 636px;
+      min-height: 556px;
+      margin-top: -4em;
     }
   }
   @import './button/button';

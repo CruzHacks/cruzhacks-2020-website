@@ -7,7 +7,7 @@
     height: 100%;
     text-align: center;
     min-height: 756px;
-
+    padding-bottom: 6em;
     @include respond(tab-land) {
       height: unset;
       min-height: 696px;
@@ -17,6 +17,7 @@
     }
     @include respond(phone) {
       margin-top: -6em;
+      padding-bottom: unset;
       min-height: 1536px;
     }
     @include respond(smallest) {
