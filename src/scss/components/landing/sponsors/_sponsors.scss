@@ -4,6 +4,7 @@
     @include flexColumn();
     position: relative;
     top: 150px;
+    min-height: 346px;
   }
   @import './container/container.scss';
 }

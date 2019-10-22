@@ -50,7 +50,7 @@
   right: 7vw;
   padding-left: 3em;
   @include respond(tab-land) {
-    top: 8em;
+    top: 2.5em;
   }
   @include respond(tab-port) {
     right: 10vw;

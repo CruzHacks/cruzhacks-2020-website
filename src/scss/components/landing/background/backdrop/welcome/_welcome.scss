@@ -6,7 +6,11 @@
     min-height: 896px;
 
     @include respond(tab-land) {
-      bottom: 355em;
+      min-height: 1096px;
+      //bottom: 355em;
+    }
+    @include respond(tab-port) {
+      min-height: 996px;
     }
     @include respond(phone) {
       bottom: 309.5em;

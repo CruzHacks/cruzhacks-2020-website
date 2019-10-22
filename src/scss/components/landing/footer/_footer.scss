@@ -1,8 +1,17 @@
 .footer-view-container {
   margin: 6em 0 2em 0;
   position: relative;
-  min-height: 686px;
+
+  min-height: 626px;
+
+  @include respond(tab-land) {
+      min-height: 566px;
+  }
   top: 150px;
+  
+  @include respond(desktop) {
+    min-height: 686px;
+  }
 }
 
 .footer-view-content__container {
