@@ -3,8 +3,7 @@
     @include flexBox();
     @include flexColumn();
     position: relative;
-    top: 150px;
-    min-height: 346px;
+    min-height: 596px;
   }
   @import './container/container.scss';
 }

@@ -1,4 +1,4 @@
-import React, {useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 interface faqs {
   [index: string]: {
@@ -15,7 +15,7 @@ export const FAQBoxView: React.FC<faqs> = faqs => {
   const [answeredQuestion, setAnswer] = useState();
   const [questionClicked, setClickedQuestion] = useState(); 
 
-  function onToggle(answer?: any, question?:any){
+  function onToggle(answer?: any, question?: any) {
     setToggle(!toggle);
     setAnswer(answer);
     setClickedQuestion(question);
