@@ -33,12 +33,14 @@
   // height: 30px;
   position: absolute;
   left: 3%;
-  top: 0.8%;
+  top: 0.3%;
   @include respond(tab-land) {
-    top: 0.875%;
+    top: 0.3%;
+    // top: 0.875%;
   }
   @include respond(phone) {
-    top: 0.655%;
+    top: 0.3%;
+    // top: 0.655%;
   }
 }
 
