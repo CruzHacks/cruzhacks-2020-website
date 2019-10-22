@@ -72,8 +72,8 @@ const welcomeCards = template.map((t, i) => {
                 y2="56.286"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#fff" />
-                <stop offset="1" stop-color="#fff" stop-opacity=".4" />
+                <stop stopColor="#fff" />
+                <stop offset="1" stopColor="#fff" stopOpacity=".4" />
               </linearGradient>
               <linearGradient
                 id="inclusivity_paint1_linear"
@@ -83,8 +83,8 @@ const welcomeCards = template.map((t, i) => {
                 y2="67.156"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#fff" />
-                <stop offset="1" stop-color="#fff" stop-opacity=".4" />
+                <stop stopColor="#fff" />
+                <stop offset="1" stopColor="#fff" stopOpacity=".4" />
               </linearGradient>
               <linearGradient
                 id="inclusivity_paint2_linear"
@@ -94,8 +94,8 @@ const welcomeCards = template.map((t, i) => {
                 y2="43.863"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#fff" />
-                <stop offset="1" stop-color="#fff" stop-opacity=".4" />
+                <stop stopColor="#fff" />
+                <stop offset="1" stopColor="#fff" stopOpacity=".4" />
               </linearGradient>
               <linearGradient
                 id="inclusivity_paint3_linear"
@@ -105,8 +105,8 @@ const welcomeCards = template.map((t, i) => {
                 y2="78.802"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#fff" />
-                <stop offset="1" stop-color="#fff" stop-opacity=".4" />
+                <stop stopColor="#fff" />
+                <stop offset="1" stopColor="#fff" stopOpacity=".4" />
               </linearGradient>
               <linearGradient
                 id="inclusivity_paint4_linear"
@@ -116,8 +116,8 @@ const welcomeCards = template.map((t, i) => {
                 y2="32.993"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#fff" />
-                <stop offset="1" stop-color="#fff" stop-opacity=".4" />
+                <stop stopColor="#fff" />
+                <stop offset="1" stopColor="#fff" stopOpacity=".4" />
               </linearGradient>
               <linearGradient
                 id="inclusivity_paint5_linear"
@@ -127,8 +127,8 @@ const welcomeCards = template.map((t, i) => {
                 y2="43.863"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#fff" />
-                <stop offset="1" stop-color="#fff" stop-opacity=".4" />
+                <stop stopColor="#fff" />
+                <stop offset="1" stopColor="#fff" stopOpacity=".4" />
               </linearGradient>
               <linearGradient
                 id="inclusivity_paint6_linear"
@@ -138,8 +138,8 @@ const welcomeCards = template.map((t, i) => {
                 y2="67.156"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#fff" />
-                <stop offset="1" stop-color="#fff" stop-opacity=".4" />
+                <stop stopColor="#fff" />
+                <stop offset="1" stopColor="#fff" stopOpacity=".4" />
               </linearGradient>
             </defs>
           </svg>
@@ -176,8 +176,8 @@ const welcomeCards = template.map((t, i) => {
                 y2="46.552"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#fff" />
-                <stop offset="1" stop-color="#fff" stop-opacity=".4" />
+                <stop stopColor="#fff" />
+                <stop offset="1" stopColor="#fff" stopOpacity=".4" />
               </linearGradient>
             </defs>
           </svg>
@@ -218,8 +218,8 @@ const welcomeCards = template.map((t, i) => {
                 y2="69.199"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#fff" />
-                <stop offset="1" stop-color="#fff" stop-opacity=".4" />
+                <stop stopColor="#fff" />
+                <stop offset="1" stopColor="#fff" stopOpacity=".4" />
               </linearGradient>
             </defs>
           </svg>
