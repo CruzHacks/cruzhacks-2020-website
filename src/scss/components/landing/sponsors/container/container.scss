@@ -6,10 +6,11 @@
     $lineHeight: 34px,
     $letterSpace: 0.05em
     ); 
+    font-family: Rubik Bold;
     display: inline-block;
     text-transform: uppercase;
-    margin: 12em 0 auto;
     text-align: center;
+    margin-left: 12%;
     @include responsive-font(4vw, 1.8em, 2.4em);
 }
 
