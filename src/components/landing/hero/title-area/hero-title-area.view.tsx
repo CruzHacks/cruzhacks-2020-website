@@ -36,7 +36,6 @@ const HeroTitleAreaView: React.FC = () => {
         </a>
       </div>
       <HeroSubscribeToEmailList />
-      <HeroNavigateToBottomButtonView />
     </div>
   );
 };

@@ -5,7 +5,7 @@ const BackdropFooterExtendedView: React.FC = () => {
         <>
             <svg className="footer-backdrop-extended__image" viewBox="0 0 1153 1506" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M392.4 1501.01L827.368 1267.17C840.244 1260.24 840.236 1240.76 827.36 1233.84L714.08 1173.02C699.978 1165.45 699.986 1144.11 714.096 1136.54L1173.02 890.67V142.824L1136.28 123.004C1104.61 105.919 1067.14 105.885 1035.45 122.91L680.074 313.76L116.288 11.9723C87.1953 -3.59995 52.9232 -4.00165 23.508 10.8869L-21.0182 33.4248V1300.06L352.981 1501.01C365.365 1507.66 380.016 1507.66 392.4 1501.01Z" fill="url(#footer-extended-footer-mobile-paint0_linear)" />
-                <g clip-path="url(#footer-extended-clip0)">
+                <g clipPath="url(#footer-extended-clip0)">
                     <path d="M240.675 1206L187.37 1179.03C181.107 1175.86 173.7 1175.87 167.445 1179.05L114.132 1206.19C107.398 1209.62 107.413 1219.23 114.155 1222.64L166.488 1249.12C173.349 1252.59 181.451 1252.6 188.327 1249.15L240.653 1222.84C247.581 1219.37 247.596 1209.5 240.675 1206Z" fill="url(#footer-extended-footer-mobile-paint1_linear)" />
                     <path d="M117.525 1162.36V1186.02C117.525 1192.23 121.023 1197.91 126.569 1200.73L163.139 1219.23C170.083 1222.75 178.289 1222.76 185.248 1219.27L228.724 1197.47C234.053 1194.8 237.424 1189.35 237.424 1183.39V1162.37L174.47 1193.6L117.525 1162.36Z" fill="#E7E7FB" />
                     <path d="M177.475 1194.78L177.975 1221.09C178.566 1221 179.328 1220.87 180.203 1220.64C180.203 1220.64 182.4 1220.1 184.53 1219.12C186.855 1218.05 205.211 1208.85 230.316 1196.05C230.72 1195.79 231.123 1195.5 231.52 1195.18C234.988 1192.38 236.46 1188.54 237.133 1185.87C237.2 1185.51 237.282 1185.01 237.342 1184.4C237.454 1183.27 237.424 1182.42 237.417 1182.2C237.372 1180.83 237.342 1172.46 237.319 1160.81L177.475 1194.78Z" fill="#F6F6FE" />
@@ -37,54 +37,54 @@ const BackdropFooterExtendedView: React.FC = () => {
                     <path d="M405.157 1172.54L373.527 1220.18C372.129 1222.28 372.884 1225.14 375.141 1226.29L375.522 1226.48C394.716 1236.21 417.422 1236.14 436.548 1226.29C438.775 1225.14 439.523 1222.31 438.155 1220.22L407.01 1172.56C406.569 1171.88 405.598 1171.88 405.157 1172.54Z" fill="#5252E2" />
                     <path d="M405.389 1155.26L382.256 1190.1C381.232 1191.64 381.786 1193.73 383.437 1194.57L383.721 1194.71C397.758 1201.83 414.365 1201.78 428.349 1194.57C429.978 1193.73 430.524 1191.66 429.522 1190.13L406.741 1155.27C406.427 1154.78 405.71 1154.78 405.389 1155.26Z" fill="#5252E2" />
                 </g>
-                <g clip-path="url(#footer-extended-clip1)">
+                <g clipPath="url(#footer-extended-clip1)">
                     <path d="M961.834 1043L889.772 1079V1295L961.834 1258V1043Z" fill="url(#footer-extended-paint7_linear)" />
                 </g>
-                <g clip-path="url(#footer-extended-clip2)">
+                <g clipPath="url(#footer-extended-clip2)">
                     <path d="M1085.94 1075L1013.88 1111V1327L1085.94 1290V1075Z" fill="url(#footer-extended-paint8_linear)" />
                 </g>
                 <defs>
                     <linearGradient id="footer-extended-footer-mobile-paint0_linear" x1="137.136" y1="206.037" x2="1027.97" y2="1138.27" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#EBF7FB" />
-                        <stop offset="0.229167" stop-color="#EDEDFF" />
-                        <stop offset="0.421875" stop-color="#DBDBFF" />
-                        <stop offset="0.5533" stop-color="#BEBEFF" />
-                        <stop offset="0.797" stop-color="#9595FF" />
-                        <stop offset="1" stop-color="#6E6EFF" />
+                        <stop stopColor="#EBF7FB" />
+                        <stop offset="0.229167" stopColor="#EDEDFF" />
+                        <stop offset="0.421875" stopColor="#DBDBFF" />
+                        <stop offset="0.5533" stopColor="#BEBEFF" />
+                        <stop offset="0.797" stopColor="#9595FF" />
+                        <stop offset="1" stopColor="#6E6EFF" />
                     </linearGradient>
                     <linearGradient id="footer-extended-footer-mobile-paint1_linear" x1="109.095" y1="1214.2" x2="245.858" y2="1214.2" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#7D7DE9" />
-                        <stop offset="1" stop-color="#7171E7" />
+                        <stop stopColor="#7D7DE9" />
+                        <stop offset="1" stopColor="#7171E7" />
                     </linearGradient>
                     <linearGradient id="footer-extended-footer-mobile-paint2_linear" x1="117.528" y1="1162.36" x2="237.425" y2="1162.36" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#ECECFC" />
-                        <stop offset="1" stop-color="#7D7DE9" />
+                        <stop stopColor="#ECECFC" />
+                        <stop offset="1" stopColor="#7D7DE9" />
                     </linearGradient>
                     <linearGradient id="footer-extended-footer-mobile-paint3_linear" x1="222.754" y1="1273.91" x2="359.516" y2="1273.91" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#7D7DE9" />
-                        <stop offset="1" stop-color="#7171E7" />
+                        <stop stopColor="#7D7DE9" />
+                        <stop offset="1" stopColor="#7171E7" />
                     </linearGradient>
                     <linearGradient id="footer-extended-footer-mobile-paint4_linear" x1="231.186" y1="1222.06" x2="351.084" y2="1222.06" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#ECECFC" />
-                        <stop offset="1" stop-color="#7D7DE9" />
+                        <stop stopColor="#ECECFC" />
+                        <stop offset="1" stopColor="#7D7DE9" />
                     </linearGradient>
                     <linearGradient id="footer-extended-footer-mobile-paint5_linear" x1="337.649" y1="1332.46" x2="474.411" y2="1332.46" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#7D7DE9" />
-                        <stop offset="1" stop-color="#7171E7" />
+                        <stop stopColor="#7D7DE9" />
+                        <stop offset="1" stopColor="#7171E7" />
                     </linearGradient>
                     <linearGradient id="footer-extended-footer-mobile-paint6_linear" x1="346.081" y1="1280.61" x2="465.979" y2="1280.61" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#ECECFC" />
-                        <stop offset="1" stop-color="#7D7DE9" />
+                        <stop stopColor="#ECECFC" />
+                        <stop offset="1" stopColor="#7D7DE9" />
                     </linearGradient>
                     <linearGradient id="footer-extended-paint7_linear" x1="928.212" y1="1300.08" x2="924.392" y2="1091.85" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="white" />
-                        <stop offset="0.307292" stop-color="white" />
-                        <stop offset="1" stop-color="#F2F2FF" />
+                        <stop stopColor="white" />
+                        <stop offset="0.307292" stopColor="white" />
+                        <stop offset="1" stopColor="#F2F2FF" />
                     </linearGradient>
                     <linearGradient id="footer-extended-paint8_linear" x1="1052.32" y1="1332.08" x2="1048.5" y2="1123.85" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="white" />
-                        <stop offset="0.307292" stop-color="white" />
-                        <stop offset="1" stop-color="#F2F2FF" />
+                        <stop stopColor="white" />
+                        <stop offset="0.307292" stopColor="white" />
+                        <stop offset="1" stopColor="#F2F2FF" />
                     </linearGradient>
                     <clipPath id="footer-extended-clip0">
                         <rect width="365.317" height="333" fill="white" transform="matrix(-1 0 0 1 474.411 1037)" />
@@ -99,7 +99,7 @@ const BackdropFooterExtendedView: React.FC = () => {
             </svg>
             <svg className="background-footer-mobile__image" width="375" height="587" viewBox="0 0 375 587" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M148 585.053L317.392 493.908C322.406 491.209 322.403 483.614 317.389 480.919L273.273 457.213C267.781 454.262 267.785 445.943 273.28 442.995L452 347.16V55.6691L437.695 47.9437C425.36 41.2844 410.769 41.2711 398.424 47.9071L260.03 122.295L40.4719 4.6665C29.1422 -1.40316 15.7954 -1.55974 4.3401 4.24343L-13 13.0281V506.73L132.649 585.053C137.471 587.648 143.177 587.648 148 585.053Z" fill="url(#footer-mobile-paint0_linear)" />
-                <g clip-path="url(#footer-mobile-clip0)">
+                <g clipPath="url(#footer-mobile-clip0)">
                     <path d="M88.9128 470.066L68.154 459.554C65.7148 458.317 62.8304 458.323 60.3941 459.563L39.6324 470.142C37.0098 471.477 37.0157 475.224 39.6411 476.554L60.0216 486.874C62.6936 488.227 65.8487 488.23 68.5265 486.886L88.9041 476.63C91.6023 475.277 91.6081 471.43 88.9128 470.066Z" fill="url(#footer-mobile-paint1_linear)" />
                     <path d="M40.9538 453.057V462.28C40.9538 464.701 42.316 466.915 44.4757 468.012L58.7176 475.224C61.4216 476.595 64.6175 476.601 67.3273 475.239L84.2587 466.743C86.334 465.702 87.6467 463.578 87.6467 461.256V453.06L63.1301 465.233L40.9538 453.057Z" fill="#E7E7FB" />
                     <path d="M64.3002 465.693L64.4952 475.949C64.7252 475.914 65.0221 475.861 65.3626 475.774C65.3626 475.774 66.2183 475.562 67.0479 475.18C67.9531 474.764 75.1017 471.177 84.8786 466.19C85.0358 466.088 85.193 465.975 85.3472 465.85C86.6978 464.759 87.2712 463.26 87.5331 462.219C87.5593 462.079 87.5913 461.884 87.6146 461.649C87.6583 461.209 87.6467 460.878 87.6437 460.79C87.6263 460.258 87.6146 456.993 87.6059 452.452L64.3002 465.693Z" fill="#F6F6FE" />
@@ -133,36 +133,36 @@ const BackdropFooterExtendedView: React.FC = () => {
                 </g>
                 <defs>
                     <linearGradient id="footer-mobile-paint0_linear" x1="48.591" y1="80.3077" x2="395.83" y2="443.367" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#EBF7FB" />
-                        <stop offset="0.229167" stop-color="#EDEDFF" />
-                        <stop offset="0.421875" stop-color="#DBDBFF" />
-                        <stop offset="0.5533" stop-color="#BEBEFF" />
-                        <stop offset="0.797" stop-color="#9595FF" />
-                        <stop offset="1" stop-color="#6E6EFF" />
+                        <stop stopColor="#EBF7FB" />
+                        <stop offset="0.229167" stopColor="#EDEDFF" />
+                        <stop offset="0.421875" stopColor="#DBDBFF" />
+                        <stop offset="0.5533" stopColor="#BEBEFF" />
+                        <stop offset="0.797" stopColor="#9595FF" />
+                        <stop offset="1" stopColor="#6E6EFF" />
                     </linearGradient>
                     <linearGradient id="footer-mobile-paint1_linear" x1="37.6707" y1="473.264" x2="90.931" y2="473.264" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#7D7DE9" />
-                        <stop offset="1" stop-color="#7171E7" />
+                        <stop stopColor="#7D7DE9" />
+                        <stop offset="1" stopColor="#7171E7" />
                     </linearGradient>
                     <linearGradient id="footer-mobile-paint2_linear" x1="40.9547" y1="453.056" x2="87.6471" y2="453.056" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#ECECFC" />
-                        <stop offset="1" stop-color="#7D7DE9" />
+                        <stop stopColor="#ECECFC" />
+                        <stop offset="1" stopColor="#7D7DE9" />
                     </linearGradient>
                     <linearGradient id="footer-mobile-paint3_linear" x1="81.9334" y1="496.536" x2="135.194" y2="496.536" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#7D7DE9" />
-                        <stop offset="1" stop-color="#7171E7" />
+                        <stop stopColor="#7D7DE9" />
+                        <stop offset="1" stopColor="#7171E7" />
                     </linearGradient>
                     <linearGradient id="footer-mobile-paint4_linear" x1="85.2174" y1="476.328" x2="131.91" y2="476.328" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#ECECFC" />
-                        <stop offset="1" stop-color="#7D7DE9" />
+                        <stop stopColor="#ECECFC" />
+                        <stop offset="1" stopColor="#7D7DE9" />
                     </linearGradient>
                     <linearGradient id="footer-mobile-paint5_linear" x1="126.678" y1="519.357" x2="179.938" y2="519.357" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#7D7DE9" />
-                        <stop offset="1" stop-color="#7171E7" />
+                        <stop stopColor="#7D7DE9" />
+                        <stop offset="1" stopColor="#7171E7" />
                     </linearGradient>
                     <linearGradient id="footer-mobile-paint6_linear" x1="129.962" y1="499.15" x2="176.654" y2="499.15" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#ECECFC" />
-                        <stop offset="1" stop-color="#7D7DE9" />
+                        <stop stopColor="#ECECFC" />
+                        <stop offset="1" stopColor="#7D7DE9" />
                     </linearGradient>
                     <clipPath id="footer-mobile-clip0">
                         <rect width="142.267" height="129.795" fill="white" transform="matrix(-1 0 0 1 179.938 404.195)" />

@@ -21,28 +21,8 @@ const template = [
 const welcomeCards = template.map((t, i) => {
   return (
     <div key={i} className="welcome__card">
-      <svg
-        className="welcome__card-bg"
-        width="327"
-        height="468"
-        viewBox="0 0 327 468"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="1.54773"
-          y="1.5"
-          width="323.283"
-          height="465"
-          rx="23.5"
-          fill="white"
-          stroke="#83E2DC"
-          strokeWidth="3"
-        />
-      </svg>
-
       <div className="welcome__card-text">
-        <h2 className="welcome__card-header">{t.title}</h2>
+        <span className="welcome__card-header">{t.title}</span>
         <svg
           className="welcome__card-tree"
           width="81"

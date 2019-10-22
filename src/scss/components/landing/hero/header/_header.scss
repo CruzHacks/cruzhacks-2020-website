@@ -28,12 +28,18 @@
   order: 0;
   @include svgContainer();
   width: 55px;
-  height: 48px;
+  height: 40px;
   // width: 36px;
   // height: 30px;
   position: absolute;
-  left: 1%;
-  top: 1.2%;
+  left: 3%;
+  top: 0.8%;
+  @include respond(tab-land) {
+    top: 0.875%;
+  }
+  @include respond(phone) {
+    top: 0.655%;
+  }
 }
 
 .lightbulb__svg {

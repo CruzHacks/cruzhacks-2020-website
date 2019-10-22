@@ -121,6 +121,16 @@
   display: block;
 }
 
+&__contactForm {
+  align-items: center;
+  input[type='email'] {
+    display: block;
+  }
+  textarea {
+    display: block;
+  }
+}
+
 &__box-container {
   @include flexBox();
 }
