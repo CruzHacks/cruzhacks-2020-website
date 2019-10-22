@@ -1,8 +1,8 @@
 .sponsors-backdrop__container {
-    position: relative;
-    min-height: 786px;
+  position: relative;
+  min-height: 446px;
 
-    @include respond(tab-land) {
-        min-height: 586px;
-    }
+  @include respond(desktop) {
+    min-height: 596px;
+  }
 }

@@ -56,7 +56,7 @@ const BackdropHeroRightsideView: React.FC = () => {
             />
           </pattern>
           <linearGradient
-            id="paint0_linear"
+            id="paint4_linear"
             x1="251.51"
             y1="791"
             x2="251.51"
@@ -68,7 +68,7 @@ const BackdropHeroRightsideView: React.FC = () => {
             <stop offset="1" stopColor="white" />
           </linearGradient>
           <linearGradient
-            id="paint1_linear"
+            id="paint5_linear"
             x1="160.024"
             y1="925.082"
             x2="163.844"
@@ -80,7 +80,7 @@ const BackdropHeroRightsideView: React.FC = () => {
             <stop offset="1" stopColor="#F1F1FF" />
           </linearGradient>
           <linearGradient
-            id="paint2_linear"
+            id="paint6_linear"
             x1="556.368"
             y1="990.082"
             x2="560.188"
@@ -92,7 +92,7 @@ const BackdropHeroRightsideView: React.FC = () => {
             <stop offset="1" stopColor="#F7F7FF" />
           </linearGradient>
           <linearGradient
-            id="paint3_linear"
+            id="paint7_linear"
             x1="708.314"
             y1="1041.08"
             x2="704.493"
