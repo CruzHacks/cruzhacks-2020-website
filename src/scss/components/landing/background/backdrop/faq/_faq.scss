@@ -4,7 +4,13 @@
     position: relative;
     min-height: 586px;
 
+    /*
     @include respond(tab-land) {
         min-height: 686px;
     }
+
+    @include respond(desktop) {
+        min-height: 786px;
+    }
+    */
 }
