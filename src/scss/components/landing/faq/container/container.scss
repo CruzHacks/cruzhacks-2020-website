@@ -60,12 +60,15 @@
     $size: 1.25em,
     $color: #000000,
     $weight: normal,
-    $lineHeight: 18px
+    $lineHeight: 22px
   );
   padding: 0;
-  border: none;
+  border: 1px solid #6f6fe8;
+  border-radius: 26px;
+  padding: 0.4em 0.2em 0.4em 0.2em; 
   background: none;
   @include respond(phone) {
+    padding: 0.35em 0.3em 0.35em 0.3em; 
     margin: 1.8vh;
   }
 }
@@ -111,7 +114,9 @@
 &__popupExit {
   color: #7171cb;
   padding: 0;
-  border: none;
+  border: 1px solid #6f6fe8;
+  padding: 0.25em;
+  border-radius: 26px;
   background: none;
   font-size: 1em;
 }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef } from 'react';
 
 interface faqs {
   [index: string]: {
@@ -6,6 +6,9 @@ interface faqs {
     answer: any;
   }[];
 }
+
+const scrollToRef = (faqRef: any) => 
+  window.scrollTo(0, faqRef.current.offsetTop)
 
 export const FAQBoxView: React.FC<faqs> = faqs => {
   const [toggle, setToggle] = useState(false);

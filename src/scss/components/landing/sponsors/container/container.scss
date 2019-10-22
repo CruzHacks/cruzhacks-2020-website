@@ -6,14 +6,17 @@
     $lineHeight: 34px,
     $letterSpace: 0.05em
     ); 
-    margin: 9vh 27vh;
+    display: inline-block;
     text-transform: uppercase;
+    margin: 12em 0 auto;
+    text-align: center;
+    @include responsive-font(4vw, 1.8em, 2.4em);
 }
 
 &__divider{
     border: 2px solid #2E2C5F;
     display: block;
-    width: 50vw; 
+    width: 30em; 
     margin: 22px auto 49px; 
 }
 
