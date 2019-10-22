@@ -17,9 +17,8 @@
 }
 
 .footer-backdrop-extended__image {
-  bottom: 100px;
-  width: 100vw;
-
+  bottom: 3%;
+  width: 100%;
   @include respond(phone) {
     display: none;
   }

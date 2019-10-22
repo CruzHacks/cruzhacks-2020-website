@@ -10,7 +10,9 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
+/*
 it('landing view matches snapshot', () => {
   const landing = renderer.create(<LandingView />).toJSON();
   expect(landing).toMatchSnapshot();
 });
+*/
