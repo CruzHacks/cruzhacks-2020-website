@@ -6,6 +6,7 @@ const emailInputRef: any = React.createRef();
 export interface ITextInputProps {
   placeholder: string;
   value: string;
+  isSending: boolean;
   buttonText: string;
   containerClass: string;
 }
@@ -19,6 +20,10 @@ function validateInputSubmission(): boolean {
 
 async function subscribeToEmailList(email: string, inputRef: any, e: any) {
   e.preventDefault();
+<<<<<<< HEAD
+=======
+  emailInputRef.current.isSending = true;
+>>>>>>> master
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
   if (validateInputSubmission()) {
@@ -72,6 +77,7 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
         console.error(err_msg);
       }
     }
+    emailInputRef.current.isSending = false;
   }
 }
 
@@ -94,6 +100,7 @@ const EmailSubscriptionInput: React.FC<
             className="placeholder-sending"
             placeholder={textInputData.placeholder}
             value={textInputData.value}
+            disabled={textInputData.isSending}
             onChange={e =>
               setTextInputData({ ...textInputData, value: e.target.value })
             }
