@@ -6,13 +6,8 @@
     width: 100vw;
     height: 100%;
     text-align: center;
-<<<<<<< HEAD
-    min-height: 796px;
-
-=======
     min-height: 756px;
     padding-bottom: 6em;
->>>>>>> updated margins in-between components
     @include respond(tab-land) {
       height: unset;
       min-height: 696px;

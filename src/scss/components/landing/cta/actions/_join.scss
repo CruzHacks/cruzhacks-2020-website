@@ -47,7 +47,11 @@
 &__join-description {
   font-family: SofiaProSoftW01-Regular;
   font-size: 16px;
+<<<<<<< HEAD
   line-height: 12px;
+=======
+  line-height: 22px;
+>>>>>>> fixed line-height in cta
   @include responsive-font(1.9vw, 14px, 16px);
 
   letter-spacing: 0.02em;

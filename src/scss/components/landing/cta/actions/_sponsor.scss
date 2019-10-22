@@ -40,7 +40,7 @@
   font-family: Avenir;
   font-family: SofiaProSoftW01-Regular;
   font-size: 16px;
-  line-height: 12px;
+  line-height: 22px;
 
   align-content: center;
 
@@ -48,5 +48,4 @@
   @include responsive-font(1.9vw, 14px, 16px);
 
   color: #383636;
-
 }
