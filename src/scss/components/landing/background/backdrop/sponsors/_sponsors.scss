@@ -1,8 +1,8 @@
 .sponsors-backdrop__container {
-    position: relative;
-    min-height: 476px;
-    
-    @include respond(desktop) {
-        min-height: 576px;
-    }
+  position: relative;
+  min-height: 476px;
+
+  @include respond(desktop) {
+    min-height: 576px;
+  }
 }

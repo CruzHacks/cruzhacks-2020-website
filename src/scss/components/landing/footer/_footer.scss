@@ -1,5 +1,5 @@
 .footer-view-container {
-  margin: 6em 0 2em 0;
+  margin: 6em 1em 2em 1em;
   position: relative;
 
   min-height: 496px;
@@ -13,14 +13,14 @@
   @include respond(mission) {
     min-height: 706px;
   }
-
+  /*
   @include respond(tab-land) {
     min-height: 546px;
   }
 
   @include respond(tab-port) {
     min-height: 516px;
-  }
+  } */
 }
 
 .footer-view-content__container {
