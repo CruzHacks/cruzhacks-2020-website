@@ -4,24 +4,22 @@
 
   min-height: 496px;
 
-  top: 50px;
+  top: 125px;
   @include respond(desktop) {
     min-height: 696px;
-    top: 150px;
   }
   @include respond(mission) {
     min-height: 106px;
-    top: 385px;
-  }
-  @include respond(tab-land) {
-    top: 185px;
+    top: 596px;
   }
   @include respond(tab-port) {
     bottom: 0;
-    top: 50px;
+    min-height: 100px;
+    top: 300px;
   }
   @include respond(phone) {
-    top: -25px;
+    bottom: 0;
+    top: 425px;
   }
   /*
   @include respond(tab-land) {
