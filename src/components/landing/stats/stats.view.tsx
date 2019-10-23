@@ -5,7 +5,7 @@ import StatsBoxView from './box/stats-box.view';
 let stats = [
   {
     category: 'attendees',
-    stat: '500+',
+    stat: '600+',
   },
   {
     category: 'first time hackers',
