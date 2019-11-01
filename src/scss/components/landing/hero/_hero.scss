@@ -8,7 +8,7 @@
   min-height: 100vh;
 }
 
-@include respond(smallest) {
+@include respond(phone) {
   div.hero-right-side-container {
     top: 3%;
   }

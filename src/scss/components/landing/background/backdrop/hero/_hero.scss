@@ -43,13 +43,16 @@
     max-height: 145vh;
     max-width: 65vw;
 
+    @include respond(big-desktop) {
+      max-width: 50vw;
+    }
     @include respond(tab-land) {
       max-width: 65vw;
     }
     @include respond(tab-port) {
       max-width: 50vw;
     }
-    @include respond(phone-narrow) {
+    @include respond(phone) {
       max-width: 50vw;
       top: 5vh;
     }
