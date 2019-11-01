@@ -8,6 +8,9 @@
 /* Fonts */
 @import './fonts';
 
+/* Landing Styles */
+@import './components/landing/landing';
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -16,9 +19,11 @@ body {
   overflow-x: hidden;
 }
 
-.routes {
-  overflow-x: hidden;
-}
+// .routes {
+//   overflow-x: hidden;
+//   max-width: 100vw;
+//   margin: 0;
+// }
 
 .app-root {
   display: flex;
@@ -31,5 +36,16 @@ body {
   overflow-x: hidden;
 }
 
-/* Landing Styles */
-@import './components/landing/landing';
+#mlh-badge {
+  @include respond(phone-narrow) {
+    visibility: hidden;
+  }
+}
+
+@include respond(phone) {
+  .routes {
+    overflow-x: hidden;
+    max-width: 100vw;
+    margin: 0;
+  }
+}
