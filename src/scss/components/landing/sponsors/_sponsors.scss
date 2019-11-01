@@ -4,6 +4,9 @@
     @include flexColumn();
     position: relative;
     min-height: 496px;
+    @include respond(tab-port) {
+      min-height: 396px;
+    }
   }
   @import './container/container.scss';
 }
