@@ -35,16 +35,23 @@
 
   &__rightside-image {
     position: absolute;
-    top: 0;
+    // width: 1002px;
+    // height: 741px;
+    top: -41px;
     right: -1px;
 
     max-height: 145vh;
+    max-width: 65vw;
 
     @include respond(tab-land) {
       max-width: 65vw;
     }
     @include respond(tab-port) {
       max-width: 50vw;
+    }
+    @include respond(phone-narrow) {
+      max-width: 50vw;
+      top: 5vh;
     }
   }
 
