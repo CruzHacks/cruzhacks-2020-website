@@ -29,38 +29,11 @@
   @include svgContainer();
   width: 55px;
   height: 40px;
-  // width: 36px;
-  // height: 30px;
   position: absolute;
-  left: 3%;
-  top: 0.3%;
-  @include respond(tab-land) {
-    top: 0.3%;
-    // top: 0.875%;
-  }
-  @include respond(phone) {
-    top: 0.3%;
-    // top: 0.655%;
-  }
+  left: 0.1%;
+  top: 0.1%;
 }
 
 .lightbulb__svg {
-  @include svgContent();
-}
-
-/* HeroMlhBadge */
-
-.hero__mlh-badge {
-  order: 2;
-  @include svgContainer();
-  position: absolute;
-  // width: 86px;
-  // height: 150px;
-  width: 7.5%;
-  right: 43px;
-  top: 0;
-}
-
-.mlh-badge__svg {
   @include svgContent();
 }

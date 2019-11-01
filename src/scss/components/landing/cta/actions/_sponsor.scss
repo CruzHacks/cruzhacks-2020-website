@@ -39,6 +39,7 @@
 
   @include respond(phone) {
     margin: 0 auto;
+    max-width: 20em;
   }
 }
 &__sponsor-description {
