@@ -32,6 +32,11 @@
   position: absolute;
   left: 0.1%;
   top: 0.1%;
+  margin: 1% 0 0 1%;
+
+  @include respond(phone) {
+    margin: unset;
+  }
 }
 
 .lightbulb__svg {
