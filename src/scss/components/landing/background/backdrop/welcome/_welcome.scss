@@ -54,14 +54,14 @@
   &__mountain-mobile-image {
     position: absolute;
     display: none;
-    top: 1875px;
+    top: 1750px;
     background-position: center 0;
     @include respond(phone) {
       display: initial;
       object-fit: fill;
     }
     @include respond(smallest) {
-      top: 1925px;
+      top: 1800px;
     }
   }
   &__pillars-image {
@@ -76,7 +76,7 @@
     @include respond(tab-port) {
     }
     @include respond(phone) {
-      top: 1700px;
+      top: 1600px;
       max-width: 100%;
     }
     @include respond(smallest) {
