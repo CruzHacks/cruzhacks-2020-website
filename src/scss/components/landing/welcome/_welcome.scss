@@ -15,12 +15,8 @@
       min-height: 796px;
     }
     @include respond(phone) {
-      margin-top: -6em;
       padding-bottom: unset;
       min-height: 1536px;
-    }
-    @include respond(smallest) {
-      margin-top: -10em;
     }
   }
   @import './text/title';
