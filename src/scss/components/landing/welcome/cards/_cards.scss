@@ -53,9 +53,6 @@ $text-color: #2e2c5f;
     max-height: 23em;
     max-width: 15em;
   }
-  @include respond(smallest) {
-    min-height: 60vh;
-  }
 }
 /* Welcome card text related stuff */
 &__card-text {
