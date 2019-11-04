@@ -9,7 +9,7 @@
     min-height: 696px;
 
     @include respond(mission) {
-      top: 0;
+      // top: 0;
     }
     @include respond(tab-land) {
       align-items: center;

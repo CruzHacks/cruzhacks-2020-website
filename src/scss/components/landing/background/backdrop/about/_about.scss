@@ -35,7 +35,6 @@
       top: 2%;
     }
     @include respond(phone) {
-      top: -3%;
       max-width: 55%;
     }
   }
