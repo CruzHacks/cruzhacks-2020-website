@@ -32,11 +32,12 @@ const FooterButtonView: React.FC = () => {
       </div>
       <div
         className="footer-up__button"
-        onClick={() => {
-          window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-        }}
       >
         <svg
+        className="footer-up__image"
+          onClick={() => {
+              window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+          }}
           width="50"
           height="49"
           viewBox="0 0 50 49"

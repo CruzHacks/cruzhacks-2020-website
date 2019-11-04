@@ -27,10 +27,13 @@
 /* Footer up button */
 
 .footer-up__button {
-    cursor: pointer;
     width: 50%;
     text-align: right;
     float: right;
     padding-right: 1.7em;
+}
+
+.footer-up__image {
+    cursor: pointer;
 }
 
