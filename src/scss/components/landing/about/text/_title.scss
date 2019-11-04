@@ -7,18 +7,17 @@
     $letterSpace: 0.05em
   );
   font-family: Rubik Bold;
-
+  @include responsive-font(2.1vw, 1.2em, 2em);
   mix-blend-mode: normal;
 
   height: 15px;
-
-  @include respond(tab-land) {
-    font-size: 1.45em;
+  @include respond(phone) {
+    line-height: 22px;
   }
   @include respond(phone-narrow) {
     width: 10em;
     margin: auto;
     text-align: center;
-    padding-bottom: 2.5em;
+    padding-bottom: 2em;
   }
 }

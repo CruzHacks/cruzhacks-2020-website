@@ -6,7 +6,7 @@
     $letterSpace: 0.04em,
     $textIndent: 3px
   );
-  @include responsive-font(3vw, 1.15em, 1.3em);
+  @include responsive-font(2.1vw, 1em, 1.3em);
   margin-top: 10px;
   height: 25px;
 
