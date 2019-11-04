@@ -63,6 +63,7 @@ $text-color: #2e2c5f;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 2em;
   padding-left: 2em;
   padding-right: 2em;
 }
@@ -83,12 +84,14 @@ $text-color: #2e2c5f;
   padding-bottom: 2em;
   line-height: 1.5em;
   letter-spacing: 0.02em;
-  max-width: 242px;
+  margin-left: 12px;
+  max-width: 245px;
   height: 100px;
-  @include responsive-font(1.9vw, 12px, 18px);
+  text-align: left;
+  @include responsive-font(1.9vw, 12px, 16px);
 }
 &__card-tree {
-  padding: 1.4em;
+  padding: 1.4em 1.4em 0.8em 1.4em;
   @include respond(phone-narrow) {
     padding: 0 1em 0 1em;
   }
