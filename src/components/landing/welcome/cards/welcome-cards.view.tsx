@@ -28,8 +28,8 @@ const welcomeCards = template.map((t, i) => {
             className="welcome__card-tree"
             fill="none"
             width="100"
-            height="125"
-            viewBox="0 0 100 125"
+            height="100"
+            viewBox="0 0 100 100"
           >
             <path
               d="M79.303 99.38H20.078C8.991 99.38 0 90.39 0 79.304V20.078C0 8.991 8.99 0 20.078 0h59.233C90.39 0 99.38 8.99 99.38 20.078v59.233c0 11.079-8.991 20.07-20.078 20.07z"
@@ -156,8 +156,8 @@ const welcomeCards = template.map((t, i) => {
             className="welcome__card-tree"
             fill="none"
             width="100"
-            height="125"
-            viewBox="0 0 100 125"
+            height="100"
+            viewBox="0 0 100 100"
           >
             <path
               d="M79.31 99.38H20.079C8.991 99.38 0 90.39 0 79.304V20.078C.008 8.991 8.999 0 20.086 0h59.232c11.08 0 20.07 8.99 20.07 20.078v59.233c0 11.079-8.99 20.07-20.078 20.07z"
@@ -194,8 +194,8 @@ const welcomeCards = template.map((t, i) => {
             className="welcome__card-tree"
             fill="none"
             width="100"
-            height="125"
-            viewBox="0 0 100 125"
+            height="100"
+            viewBox="0 0 100 100"
           >
             <path
               d="M79.31 99.38H20.079C8.991 99.38 0 90.39 0 79.304V20.078C.008 8.991 8.999 0 20.086 0h59.232c11.08 0 20.07 8.99 20.07 20.078v59.233c0 11.079-8.99 20.07-20.078 20.07z"
@@ -240,8 +240,8 @@ export default WelcomeCardRowView;
   /* <svg
   className="welcome__card-tree"
   width="81"
-  height="125"
-  viewBox="0 0 81 125"
+  height="100"
+  viewBox="0 0 81 100"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
