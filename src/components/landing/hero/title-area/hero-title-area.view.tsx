@@ -32,7 +32,7 @@ const HeroTitleAreaView: React.FC = () => {
           href="mailto:sponsor@cruzhacks.com"
           className="hero-title-area__sponsor-button"
         >
-          <p className="hero-title-area__sponsor-button-text">SPONSOR US</p>
+          <p className="hero-title-area__sponsor-button-text">SPONSOR</p>
         </a>
       </div>
       <HeroSubscribeToEmailList />
