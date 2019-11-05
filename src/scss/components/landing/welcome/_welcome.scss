@@ -19,6 +19,10 @@
       min-height: 1536px;
     }
   }
+  &__text-container {
+    margin: 0 auto;
+    width: fit-content;
+  }
   @import './text/title';
   @import './text/subtitle';
   @import './cards/cards';

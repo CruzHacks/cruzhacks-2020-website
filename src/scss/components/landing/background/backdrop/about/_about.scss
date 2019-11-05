@@ -7,6 +7,9 @@
     @include respond(tab-land) {
       min-height: 696px;
     }
+    @include respond(smallest) {
+      min-height: 596px;
+    }
   }
 
   /* SVGs */
