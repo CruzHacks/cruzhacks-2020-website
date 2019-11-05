@@ -60,6 +60,7 @@ $text-color: #2e2c5f;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 2em;
   padding-left: 2em;
   padding-right: 2em;
 }
@@ -79,7 +80,8 @@ $text-color: #2e2c5f;
   font-family: SofiaProSoftW01-Regular;
   line-height: 1.5em;
   letter-spacing: 0.02em;
-  max-width: 242px;
+  margin-left: 12px;
+  max-width: 245px;
   height: 100px;
   @include responsive-font(2.5vw, 15px, 18px);
 }

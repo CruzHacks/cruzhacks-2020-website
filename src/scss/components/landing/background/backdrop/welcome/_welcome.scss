@@ -11,6 +11,12 @@
     @include respond(tab-port) {
       min-height: 996px;
     }
+    @media screen and (max-width: 1095px) {
+      min-height: 1106px;
+    }
+    @media screen and (max-width: 735px) {
+      min-height: 1306px;
+    }
     @include respond(phone) {
       bottom: 309.5em;
       min-height: 1596px;
@@ -28,12 +34,9 @@
     height: 100%;
     object-fit: contain;
     z-index: 2;
-    bottom: -400px;
+    bottom: -350px;
     @include respond(phone) {
       display: none;
-    }
-    @include respond(desktop) {
-      bottom: -400px;
     }
     @include respond(mission) {
       bottom: -250px;
@@ -42,16 +45,20 @@
     }
     @include respond(tab-land) {
       width: 160vw;
+      bottom: -350px;
     }
     @include respond(tab-port) {
       bottom: 150px;
       width: 200vw;
     }
+    @media screen and (max-width: 735px) {
+      bottom: 500px;
+    }
   }
   &__mountain-mobile-image {
     position: absolute;
     display: none;
-    top: 1650px;
+    top: 1625px;
     background-position: center 0;
     @include respond(phone) {
       display: initial;
