@@ -28,18 +28,15 @@
     height: 100%;
     object-fit: contain;
     z-index: 2;
+    bottom: -400px;
     @include respond(phone) {
       display: none;
-    }
-
-    @include respond(big-desktop) {
-      bottom: -400px;
     }
     @include respond(desktop) {
       bottom: -400px;
     }
     @include respond(mission) {
-      bottom: -450px;
+      bottom: -250px;
       height: 100vh;
       width: 120vw;
     }
@@ -47,7 +44,7 @@
       width: 160vw;
     }
     @include respond(tab-port) {
-      bottom: 0;
+      bottom: 150px;
       width: 200vw;
     }
   }
