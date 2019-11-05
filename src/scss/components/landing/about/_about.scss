@@ -27,6 +27,9 @@
       min-height: 756px;
       padding-bottom: 4em;
     }
+    @include respond(smallest) {
+      min-height: 656px;
+    }
   }
 
   @import './text/title';
