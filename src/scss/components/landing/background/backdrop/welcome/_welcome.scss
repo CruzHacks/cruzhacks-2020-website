@@ -47,25 +47,28 @@
       width: 160vw;
       bottom: -350px;
     }
+    @media screen and (max-width: 1095px) {
+      bottom: 0;
+    }
     @include respond(tab-port) {
       bottom: 150px;
       width: 200vw;
     }
     @media screen and (max-width: 735px) {
-      bottom: 500px;
+      bottom: 400px;
     }
   }
   &__mountain-mobile-image {
     position: absolute;
     display: none;
-    top: 1625px;
+    top: 1750px;
     background-position: center 0;
     @include respond(phone) {
       display: initial;
       object-fit: fill;
     }
     @include respond(smallest) {
-      top: 1600px;
+      top: 1735px;
     }
   }
   &__pillars-image {
@@ -80,11 +83,11 @@
     @include respond(tab-port) {
     }
     @include respond(phone) {
-      top: 1450px;
+      top: 1575px;
       max-width: 100%;
     }
     @include respond(smallest) {
-      top: 1400px;
+      top: 1525px;
     }
   }
 }
