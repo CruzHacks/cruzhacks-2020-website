@@ -44,6 +44,9 @@
     margin: 0 auto;
     max-width: 20em;
   }
+  @include respond(smallest) {
+    max-width: 18em;
+  }
 }
 &__join-description {
   font-family: SofiaProSoftW01-Regular;

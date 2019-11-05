@@ -1,7 +1,7 @@
 // Call To Action Styles
 .cta-backdrop__container {
   @include flexBox();
-  position: relative;
+  position: sticky;
   min-height: 856px;
   z-index: 1;
 
@@ -19,11 +19,10 @@
 /* SVGs */
 .cta-backdrop__image {
   position: absolute;
-  max-width: 36.5%;
+  width: 30em;
   height: auto;
   top: 1%;
   right: 0;
-
   @include respond(phone) {
     display: none;
   }
@@ -31,11 +30,14 @@
 
 .cta-backdrop-mobile__image {
   position: absolute;
-  right: 0;
-
+  right: -40px;
   display: none;
-
+  top: 150px;
   @include respond(phone) {
     display: initial;
+    width: 90vw;
+  }
+  @include respond(smallest) {
+    top: 75px;
   }
 }

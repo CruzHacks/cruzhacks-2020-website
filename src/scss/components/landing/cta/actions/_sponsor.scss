@@ -41,6 +41,9 @@
     margin: 0 auto;
     max-width: 20em;
   }
+  @include respond(smallest) {
+    max-width: 18em;
+  }
 }
 &__sponsor-description {
   font-family: SofiaProSoftW01-Regular;

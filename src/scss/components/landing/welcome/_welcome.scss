@@ -16,7 +16,7 @@
     }
     @include respond(phone) {
       padding-bottom: unset;
-      min-height: 1536px;
+      min-height: 1436px;
     }
   }
   &__text-container {

@@ -13,6 +13,13 @@
     @include respond(tab-land) {
       min-height: 776px;
     }
+    @include respond(phone) {
+      min-height: 776px;
+      margin-top: 28em;
+    }
+    @include respond(smallest) {
+      margin-top: 19em;
+    }
   }
   @import './button/button';
   @import './actions/join';
