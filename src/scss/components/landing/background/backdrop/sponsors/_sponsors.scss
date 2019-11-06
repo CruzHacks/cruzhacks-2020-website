@@ -5,4 +5,7 @@
   @include respond(desktop) {
     min-height: 576px;
   }
+  @include respond(smallest) {
+    min-height: 306px;
+  }
 }

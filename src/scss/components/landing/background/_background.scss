@@ -6,10 +6,11 @@
 @import './backdrop/faq/faq';
 @import './backdrop/sponsors/sponsors';
 @import './backdrop/footer/footer';
+@import './footer/footer';
 
 .background__container {
-    position: absolute;
-    width: 100vw;
-    z-index: -1;
+  position: absolute;
+  width: 100vw;
+  z-index: -1;
+  overflow: hidden;
 }
-

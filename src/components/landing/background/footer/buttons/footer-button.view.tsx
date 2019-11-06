@@ -1,42 +1,47 @@
 import React, { useState } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 
-import fbIcon from '../../../../assets/images/social/facebook-icon.png';
-import igIcon from '../../../../assets/images/social/instagram-icon.png';
-import mediumIcon from '../../../../assets/images/social/medium-icon.png';
-import ytIcon from '../../../../assets/images/social/youtube-icon.png';
+import fbIcon from '../../../../../assets/images/social/facebook-icon.png';
+import igIcon from '../../../../../assets/images/social/instagram-icon.png';
+import mediumIcon from '../../../../../assets/images/social/medium-icon.png';
+import ytIcon from '../../../../../assets/images/social/youtube-icon.png';
 
 const FooterButtonView: React.FC = () => {
   return (
     <div className="footer-button-container">
       <div className="footer-social__buttons">
         <div className="footer-social__button">
-          <a href="https://facebook.com">
+          <a
+            rel="noopener noreferrer"
+            target="__blank"
+            href="https://www.instagram.com/cruzhacks/"
+          >
             <img src={igIcon} alt="instagram_icon" />
           </a>
         </div>
         <div className="footer-social__button">
-          <a href="https://facebook.com">
+          <a
+            rel="noopener noreferrer"
+            target="__blank"
+            href="https://www.facebook.com/CruzHacks/"
+          >
             <img src={fbIcon} alt="facebook_icon" />
           </a>
         </div>
         <div className="footer-social__button">
-          <a href="https://facebook.com">
-            <img src={mediumIcon} alt="medium_icon" />
-          </a>
-        </div>
-        <div className="footer-social__button">
-          <a href="https://facebook.com">
+          <a
+            rel="noopener noreferrer"
+            target="__blank"
+            href="https://www.youtube.com/channel/UCUD8rjCLCokNzK_rcd4JUmA"
+          >
             <img src={ytIcon} alt="youtube_icon" />
           </a>
         </div>
       </div>
-      <div
-        className="footer-up__button"
-        onClick={() => {
-          window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-        }}
-      >
+      <div className="footer-up__button">
         <svg
+          className="footer-up__image"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           width="50"
           height="49"
           viewBox="0 0 50 49"

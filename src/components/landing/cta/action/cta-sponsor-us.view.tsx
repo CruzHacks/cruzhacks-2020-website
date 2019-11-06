@@ -14,7 +14,11 @@ const SponsorUsView: React.FC = () => {
         </p>
       </div>
       <div className="cta__button-container">
-        <a href="mailto:sponsor@cruzhacks.com" className="cta__button">
+        <a
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          href="mailto:sponsor@cruzhacks.com"
+          className="cta__button"
+        >
           <p className="cta__button-text">SPONSOR</p>
         </a>
       </div>

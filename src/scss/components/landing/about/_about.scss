@@ -16,10 +16,9 @@
       left: unset;
       padding-left: 2%;
       padding-right: 2%;
-      min-height: 596px;
     }
     @include respond(tab-port) {
-      min-height: 496px;
+      min-height: 596px;
     }
     @include respond(phone) {
       min-height: 826px;
@@ -27,6 +26,9 @@
     @include respond(phone-narrow) {
       min-height: 756px;
       padding-bottom: 4em;
+    }
+    @include respond(smallest) {
+      min-height: 656px;
     }
   }
 
@@ -50,13 +52,17 @@
 .about-text__container {
   position: absolute;
   top: 6em;
-  right: 7vw;
+  right: 26vw;
   padding-left: 3em;
+  max-width: 40em;
+  @include respond(desktop) {
+    right: 16vw;
+  }
   @include respond(tab-land) {
     top: 8em;
   }
   @include respond(tab-port) {
-    right: 10vw;
+    right: 8vw;
     width: 25em;
     top: 8em;
   }

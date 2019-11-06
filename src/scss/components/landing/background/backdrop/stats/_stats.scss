@@ -1,10 +1,13 @@
 // Placeholder for stats to keep everything in the correct position.
 .stats-backdrop__container {
-    background-color:#FFFFFF;
-    position: relative;
-    min-height: 786px;
-
-    @include respond(tab-land) {
-        min-height: 586px;
-    }
+  background-color: #ffffff;
+  position: sticky;
+  min-height: 786px;
+  z-index: -1;
+  @include respond(tab-land) {
+    min-height: 686px;
+  }
+  @media screen and (max-width: 680px) {
+    min-height: 986px;
+  }
 }

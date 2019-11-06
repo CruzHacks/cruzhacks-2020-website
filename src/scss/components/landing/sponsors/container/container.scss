@@ -6,13 +6,13 @@
     $lineHeight: 34px,
     $letterSpace: 0.05em
   );
+  @include responsive-font(4.1vw, 1.5em, 2.4em);
   font-family: Rubik Bold;
   display: block;
   text-transform: uppercase;
   text-align: center;
   margin: auto;
   word-wrap: break-word;
-  @include responsive-font(4vw, 1.8em, 2.4em);
 }
 
 &__divider {
@@ -36,9 +36,13 @@
   margin: 0 auto;
   @include respond(tab-port) {
     max-width: 600px;
+    margin-top: -2em;
   }
   @include respond(phone) {
     max-width: 500px;
+  }
+  @include respond(phone-narrow) {
+    max-width: 400px;
   }
   @include respond(smallest) {
     max-width: 300px;

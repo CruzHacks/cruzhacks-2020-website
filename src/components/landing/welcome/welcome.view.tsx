@@ -7,8 +7,10 @@ import WelcomeSubtitleView from './text/welcome-subtitle.view';
 const WelcomeView: React.FC = () => {
   return (
     <div className="welcome__container">
-      <WelcomeTitleView />
-      <WelcomeSubtitleView />
+      <div className="welcome__text-container">
+        <WelcomeTitleView />
+        <WelcomeSubtitleView />
+      </div>
       <WelcomeCardsView />
     </div>
   );

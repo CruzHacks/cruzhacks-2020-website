@@ -1,10 +1,13 @@
 &__sponsor-container {
   width: 100%;
+  @include respond(phone) {
+    margin-top: 1em;
+  }
 }
 &__sponsor-title-container {
-  margin: 5.91% 35.42% 0 12.07%;
+  margin: 0 35.42% 0 12.07%;
   @include respond(phone) {
-    margin: 3em auto -2em auto;
+    margin: 3em auto -3em auto;
   }
 }
 &__sponsor-title {
@@ -40,6 +43,9 @@
   @include respond(phone) {
     margin: 0 auto;
     max-width: 20em;
+  }
+  @include respond(smallest) {
+    max-width: 18em;
   }
 }
 &__sponsor-description {

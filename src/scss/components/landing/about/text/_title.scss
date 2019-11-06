@@ -10,7 +10,7 @@
   @include responsive-font(2.1vw, 1.2em, 2em);
   mix-blend-mode: normal;
 
-  height: 15px;
+  height: 10px;
   @include respond(phone) {
     line-height: 22px;
   }

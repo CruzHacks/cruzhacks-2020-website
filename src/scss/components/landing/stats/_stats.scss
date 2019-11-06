@@ -16,6 +16,9 @@
     @include respond(phone) {
       min-height: 1050px;
     }
+    @include respond(phone-narrow) {
+      min-height: 950px;
+    }
   }
   &__title {
     @include font-source-header(

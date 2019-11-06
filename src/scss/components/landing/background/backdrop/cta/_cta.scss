@@ -1,7 +1,7 @@
 // Call To Action Styles
 .cta-backdrop__container {
   @include flexBox();
-  position: relative;
+  position: sticky;
   min-height: 856px;
   z-index: 1;
 
@@ -14,28 +14,41 @@
   @include respond(tab-land) {
     min-height: 730px;
   }
+  @include respond(phone) {
+    min-height: 1306px;
+  }
 }
 
 /* SVGs */
 .cta-backdrop__image {
   position: absolute;
-  max-width: 36.5%;
+  width: 30em;
   height: auto;
   top: 1%;
   right: 0;
-
   @include respond(phone) {
     display: none;
+  }
+  @include respond(tab-land) {
+    width: 25em;
+    top: -5%;
+  }
+  @include respond(tab-port) {
+    top: 0%;
+    width: 18em;
   }
 }
 
 .cta-backdrop-mobile__image {
   position: absolute;
-  right: 0;
-
+  right: -40px;
   display: none;
-
+  top: 80px;
   @include respond(phone) {
     display: initial;
+    width: 90vw;
+  }
+  @include respond(smallest) {
+    top: -40px;
   }
 }
