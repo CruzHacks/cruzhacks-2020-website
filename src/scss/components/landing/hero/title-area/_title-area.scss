@@ -46,6 +46,7 @@
       bold,
       #222222
     );
+    font-family: 'Rubik Bold';
     mix-blend-mode: normal;
     @include responsive-font(3vw, 32px, 39px);
   }
