@@ -1,41 +1,22 @@
 .footer-view-container {
-  margin: 6em 1em 2em 1em;
+  margin: auto;
   position: relative;
 
-  min-height: 496px;
+  min-height: 100%;
 
-  top: 175px;
   @include respond(desktop) {
-    min-height: 696px;
   }
   @include respond(mission) {
-    min-height: 106px;
-    top: 656px;
   }
   @include respond(tab-port) {
-    bottom: 0;
-    min-height: 100px;
-    top: 376px;
   }
   @include respond(phone) {
-    bottom: 0;
-    top: 506px;
   }
   @media (max-width: 735px) {
-    top: 606px;
   }
-  /*
-  @include respond(tab-land) {
-    min-height: 546px;
-  }
-
-  @include respond(tab-port) {
-    min-height: 516px;
-  } */
 }
 
 .footer-view-content__container {
   position: absolute;
   width: 100vw;
-  bottom: 0.5%;
 }
