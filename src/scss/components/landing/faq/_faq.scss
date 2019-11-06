@@ -4,9 +4,10 @@
     text-align: center;
     position: relative;
     height: fit-content;
-    min-height: 796px;
+    height: 796px;
     @include respond(tab-port) {
-      min-height: 596px;
+      height: 596px;
+      padding-bottom: 4em;
     }
   }
   @import './container/container';

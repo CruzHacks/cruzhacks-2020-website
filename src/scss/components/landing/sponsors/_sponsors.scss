@@ -3,24 +3,20 @@
     @include flexBox();
     @include flexColumn();
     position: relative;
-    min-height: 696px;
+    min-height: 296px;
+    margin-top: 2em;
     @include respond(desktop) {
-      margin-top: -8em;
+      margin-top: 2em;
     }
+
     @include respond(tab-land) {
-      margin-top: -12em;
+      margin-top: -2em;
     }
-    @include respond(tab-port) {
-      //min-height: 396px;
-    }
-    @include respond(phone-narrow) {
-      margin-top: -10em;
-    }
+
     @include respond(smallest) {
-      margin-top: -13em;
     }
     @media screen and (max-width: 394px) {
-      margin-top: -15em;
+      margin-top: 4em;
     }
   }
   @import './container/container.scss';

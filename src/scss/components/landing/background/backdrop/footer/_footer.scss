@@ -1,33 +1,29 @@
 .footer-backdrop__container {
   @include flexBox();
   position: sticky;
-  margin-top: -92em;
+  margin-top: -91em;
   @include respond(desktop) {
   }
   @include respond(mission) {
-    margin-top: -70em;
+    margin-top: -78em;
   }
   @include respond(tab-land) {
-    margin-top: -58em;
+    margin-top: -75em;
   }
   @include respond(tab-port) {
-    margin-top: -65em;
+    margin-top: -74em;
   }
   @include respond(phone) {
     margin-top: -45em;
-  }
-  @include respond(phone-narrow) {
-    margin-top: -43em;
-    z-index: -1;
   }
   @include respond(smallest) {
     margin-top: -34em;
   }
   @media screen and (max-width: 394px) {
-    margin-top: -24.85em;
+    margin-top: -29.85em;
   }
   @media screen and (max-width: 354px) {
-    margin-top: -23em;
+    margin-top: -28em;
   }
 }
 
