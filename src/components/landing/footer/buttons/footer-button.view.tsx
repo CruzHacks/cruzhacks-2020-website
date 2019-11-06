@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 
 import fbIcon from '../../../../assets/images/social/facebook-icon.png';
 import igIcon from '../../../../assets/images/social/instagram-icon.png';
@@ -30,14 +31,10 @@ const FooterButtonView: React.FC = () => {
           </a>
         </div>
       </div>
-      <div
-        className="footer-up__button"
-      >
+      <div className="footer-up__button">
         <svg
-        className="footer-up__image"
-          onClick={() => {
-              window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-          }}
+          className="footer-up__image"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           width="50"
           height="49"
           viewBox="0 0 50 49"
