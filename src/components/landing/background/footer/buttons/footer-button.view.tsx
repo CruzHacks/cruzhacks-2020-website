@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { animateScroll as scroll } from 'react-scroll';
+import React from 'react';
 
 import fbIcon from '../../../../../assets/images/social/facebook-icon.png';
 import igIcon from '../../../../../assets/images/social/instagram-icon.png';
-import mediumIcon from '../../../../../assets/images/social/medium-icon.png';
 import ytIcon from '../../../../../assets/images/social/youtube-icon.png';
 
 const FooterButtonView: React.FC = () => {

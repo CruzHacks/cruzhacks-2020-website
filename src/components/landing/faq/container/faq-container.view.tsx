@@ -7,9 +7,6 @@ interface faqs {
   }[];
 }
 
-const scrollToRef = (faqRef: any) =>
-  window.scrollTo(0, faqRef.current.offsetTop);
-
 export const FAQBoxView: React.FC<faqs> = faqs => {
   const [toggle, setToggle] = useState(false);
   const [answeredQuestion, setAnswer] = useState();
