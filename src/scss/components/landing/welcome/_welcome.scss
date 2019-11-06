@@ -15,13 +15,13 @@
       min-height: 796px;
     }
     @include respond(phone) {
-      margin-top: -6em;
       padding-bottom: unset;
-      min-height: 1536px;
+      min-height: 1436px;
     }
-    @include respond(smallest) {
-      margin-top: -10em;
-    }
+  }
+  &__text-container {
+    margin: 0 auto;
+    width: fit-content;
   }
   @import './text/title';
   @import './text/subtitle';

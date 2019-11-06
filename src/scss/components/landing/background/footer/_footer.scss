@@ -1,0 +1,25 @@
+.footer-view-container {
+  margin: auto;
+  position: relative;
+
+  height: 6em;
+  bottom: 0.5em;
+  @include respond(desktop) {
+  }
+  @include respond(mission) {
+  }
+  @include respond(tab-port) {
+  }
+  @include respond(phone) {
+  }
+  @media (max-width: 735px) {
+  }
+}
+
+.footer-view-content__container {
+  position: absolute;
+  width: 100vw;
+}
+
+@import './buttons/buttons';
+@import './text/text';

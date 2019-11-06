@@ -1,11 +1,14 @@
 .about-backdrop {
   &__container {
     @include flexBox();
-    position: relative;
+    position: sticky;
     min-height: 596px;
 
     @include respond(tab-land) {
       min-height: 696px;
+    }
+    @include respond(smallest) {
+      min-height: 596px;
     }
   }
 
@@ -16,23 +19,24 @@
   }
 
   &__laptop-image {
-    top: 1%;
+    top: 3%;
     left: 0;
     /*
     width: 420px;
     height: 446px;
     */
 
-    max-width: 33%;
+    width: 30em;
     height: auto;
     @include respond(big-desktop) {
-      max-width: 25%;
+      width: 30em;
     }
     @include respond(desktop) {
       max-width: 28%;
     }
     @include respond(tab-land) {
       top: 2%;
+      max-width: 37%;
     }
     @include respond(phone) {
       max-width: 55%;

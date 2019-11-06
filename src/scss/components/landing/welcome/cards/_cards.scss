@@ -51,10 +51,7 @@ $text-color: #2e2c5f;
   }
   @include respond(phone) {
     max-height: 23em;
-    max-width: 15em;
-  }
-  @include respond(smallest) {
-    min-height: 60vh;
+    max-width: 17em;
   }
 }
 /* Welcome card text related stuff */
@@ -63,6 +60,7 @@ $text-color: #2e2c5f;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: -1em;
   padding-left: 2em;
   padding-right: 2em;
 }
@@ -75,16 +73,17 @@ $text-color: #2e2c5f;
     $letterSpace: 0.05em
   );
   font-family: Rubik Bold;
-  @include responsive-font(5vw, 1.2em, 1.45em);
+  @include responsive-font(3.5vw, 1.3em, 1.45em);
 }
 &__card-caption {
   color: #424242;
   font-family: SofiaProSoftW01-Regular;
   line-height: 1.5em;
   letter-spacing: 0.02em;
-  max-width: 242px;
+  margin-left: 12px;
+  max-width: 245px;
   height: 100px;
-  @include responsive-font(2.1vw, 12px, 18px);
+  @include responsive-font(2.5vw, 15px, 18px);
 }
 &__card-tree {
   padding: 0.5vw;

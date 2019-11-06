@@ -14,8 +14,9 @@
     margin: 0 1em 1em 1em;
   }
   @include respond(tab-port) {
-    height: 7em;
-    width: 8em;
+    height: 8em;
+    width: 9em;
+    margin-top: 2em;
   }
   @include respond(phone) {
     height: 11em;
@@ -43,7 +44,7 @@
   }
   @include respond(tab-port) {
     font-size: 1.25em;
-    padding: 0.5em 0.05em 0.125em 0.05em;
+    padding: 0.75em 0.05em 0.125em 0.05em;
   }
   @include respond(phone) {
     font-size: 2.5em;
@@ -62,7 +63,9 @@
   text-transform: uppercase;
   display: block;
   text-align: center;
-  min-width: 5em;
+  overflow-wrap: break-word;
+  width: 8em;
+  margin: 0 auto;
   @include respond(tab-land) {
     font-size: 1em;
     line-height: 22px;
@@ -93,9 +96,6 @@
   }
   @include respond(phone) {
     flex-direction: column;
-    bottom: 5em;
-  }
-  @include respond(smallest) {
-    margin: 6em 0 0 0;
+    bottom: 1em;
   }
 }

@@ -141,8 +141,8 @@ const BackdropCtaView: React.FC = () => {
       </svg>
       <svg
         className="cta-backdrop-mobile__image"
-        width="294"
-        height="344"
+        width="546"
+        height="594"
         viewBox="0 0 294 344"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

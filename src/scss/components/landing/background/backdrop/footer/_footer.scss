@@ -1,46 +1,44 @@
 .footer-backdrop__container {
   @include flexBox();
-  position: relative;
-  min-height: 966px;
-  margin-top: 20em;
+  position: sticky;
+  margin-top: -92em;
   @include respond(desktop) {
-    min-height: 666px;
-    margin-top: 20em;
   }
   @include respond(mission) {
-    min-height: 566px;
-    margin-top: 30em;
+    margin-top: -70em;
   }
   @include respond(tab-land) {
-    min-height: 496px;
+    margin-top: -58em;
   }
   @include respond(tab-port) {
-    min-height: 306px;
-    margin-top: 10em;
-  }
-  @media (max-width: 735px) {
-    margin-top: 47em;
-    height: 426px;
+    margin-top: -65em;
   }
   @include respond(phone) {
-    top: -100em;
-    height: 550px;
+    margin-top: -45em;
+  }
+  @include respond(phone-narrow) {
+    margin-top: -43em;
+    z-index: -1;
+  }
+  @include respond(smallest) {
+    margin-top: -34em;
+  }
+  @media screen and (max-width: 394px) {
+    margin-top: -24.85em;
+  }
+  @media screen and (max-width: 354px) {
+    margin-top: -23em;
   }
 }
 
 /* SVGs */
 .footer-backdrop-extended__image,
 .footer-backdrop-trees__image {
-  position: absolute;
+  position: static;
 }
 
 .footer-backdrop-extended__image {
-  width: 2000px;
-  margin-top: -200vh;
-  position: sticky;
-  @media (max-width: 681px) {
-    display: none;
-  }
+  object-fit: scale-down;
 }
 
 .background-footer-mobile__image {
@@ -50,9 +48,6 @@
   height: auto;
   width: 100%;
 
-  margin-top: 120vh;
-
   @media (max-width: 681px) {
-    display: relative;
   }
 }

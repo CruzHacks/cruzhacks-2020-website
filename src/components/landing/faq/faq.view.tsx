@@ -35,8 +35,13 @@ const faqs = [
   },
   {
     question: 'How can I be a sponsor?',
-    answer:
-      'Please contact Radhika, our sponsorship lead, at ragathwa@ucsc.edu and we can discuss the best way for your organization to get involved!',
+    answer: (
+      <span>
+        Please contact Radhika, our sponsorship lead, at{' '}
+        <a href="mailto:sponsor@cruzhacks.com">sponsor@cruzhacks.com</a> and we
+        can discuss the best way for your organization to get involved!
+      </span>
+    ),
   },
   {
     question: 'How many people can I have on my team?',
