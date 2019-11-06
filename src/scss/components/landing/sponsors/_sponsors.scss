@@ -12,11 +12,8 @@
     @include respond(tab-land) {
       margin-top: -2em;
     }
-
-    @include respond(smallest) {
-    }
     @media screen and (max-width: 394px) {
-      margin-top: 4em;
+      margin-top: -1em;
     }
   }
   @import './container/container.scss';
