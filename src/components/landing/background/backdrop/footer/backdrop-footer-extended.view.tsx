@@ -8,7 +8,6 @@ const BackdropFooterExtendedView: React.FC = () => {
         viewBox="0 0 1153 1506"
         width="100%"
         fill="none"
-        preserveAspectRatio="false"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
