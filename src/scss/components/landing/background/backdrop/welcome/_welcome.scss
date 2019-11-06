@@ -21,11 +21,13 @@
       min-height: 1406px;
     }
     @include respond(phone) {
-      min-height: 1596px;
-      margin-top: -98em;
+      min-height: 1436px;
+      margin-top: -95em;
+      padding-bottom: 100em;
     }
     @include respond(phone-narrow) {
-      margin-top: -95em;
+      margin-top: -92em;
+      padding-bottom: 95em;
     }
     @include respond(smallest) {
       margin-top: -92em;
