@@ -1,15 +1,9 @@
 .footer-button-container {
   position: relative;
   padding: 0 3.5em;
-  /*
   @include respond(mission) {
     padding: 0 1em;
   }
-
-  @include respond(tab-port) {
-    padding: 0 1em;
-  }
-  */
 }
 
 /* Left Social Media Buttons */
@@ -32,7 +26,7 @@
   width: 50%;
   text-align: right;
   float: right;
-  padding-right: 1.7em;
+  padding-right: 1vw;
   @include respond(smallest) {
     padding-right: 0em;
   }

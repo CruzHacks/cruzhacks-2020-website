@@ -4,20 +4,16 @@
   letter-spacing: 0.1em;
   padding: 1em 4.65em;
   font-size: 12px;
-
   @include respond(mission) {
-    padding: 1em 1.3em;
-  }
-
-  @include respond(smallest) {
-    padding: 0.9em 1.2em;
+    padding-left: 1em;
+    margin-top: -0.3em;
   }
 }
 
 /* Footer text */
 .footer-text__designers {
   text-align: left;
-  width: 50%;
+  width: 75%;
   float: left;
 }
 
