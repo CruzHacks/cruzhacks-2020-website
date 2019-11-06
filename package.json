@@ -9,6 +9,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-mail-form": "^2.0.2",
+    "react-remove-scroll": "^2.2.0",
     "react-router-dom": "^5.1.0",
     "react-scripts": "3.1.1",
     "react-scroll": "^1.7.14",
