@@ -21,9 +21,14 @@
       min-height: 1406px;
     }
     @include respond(phone) {
-      bottom: 409.5em;
       min-height: 1596px;
-      margin-top: -7em;
+      margin-top: -98em;
+    }
+    @include respond(phone-narrow) {
+      margin-top: -95em;
+    }
+    @include respond(smallest) {
+      margin-top: -92em;
     }
   }
   /* SVGs */
@@ -58,9 +63,9 @@
     position: absolute;
     display: none;
     top: 1750px;
-    background-position: center 0;
+
     @include respond(phone) {
-      display: initial;
+      display: unset;
       object-fit: fill;
     }
     @include respond(smallest) {
