@@ -1,5 +1,6 @@
 &__sponsor-container {
   width: 100%;
+  margin-top: 3em;
   @include respond(phone) {
     margin-top: 1em;
   }
