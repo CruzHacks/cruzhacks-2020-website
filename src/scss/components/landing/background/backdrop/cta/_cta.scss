@@ -43,12 +43,12 @@
   position: absolute;
   right: -40px;
   display: none;
-  top: 150px;
+  top: 80px;
   @include respond(phone) {
     display: initial;
     width: 90vw;
   }
   @include respond(smallest) {
-    top: 75px;
+    top: -40px;
   }
 }

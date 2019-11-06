@@ -9,10 +9,9 @@
     padding: 1em 1.3em;
   }
 
-  @include respond(tab-port) {
-    padding: 1em 1.3em;
+  @include respond(smallest) {
+    padding: 0.9em 1.2em;
   }
-
 }
 
 /* Footer text */

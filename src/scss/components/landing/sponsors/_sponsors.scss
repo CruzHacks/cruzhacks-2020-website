@@ -4,8 +4,23 @@
     @include flexColumn();
     position: relative;
     min-height: 696px;
+    @include respond(desktop) {
+      margin-top: -8em;
+    }
+    @include respond(tab-land) {
+      margin-top: -12em;
+    }
     @include respond(tab-port) {
-      min-height: 396px;
+      //min-height: 396px;
+    }
+    @include respond(phone-narrow) {
+      margin-top: -10em;
+    }
+    @include respond(smallest) {
+      margin-top: -13em;
+    }
+    @media screen and (max-width: 394px) {
+      margin-top: -15em;
     }
   }
   @import './container/container.scss';

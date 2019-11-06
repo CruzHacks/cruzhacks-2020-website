@@ -12,4 +12,7 @@
   @include respond(desktop) {
     min-height: 686px;
   }
+  @include respond(smallest) {
+    min-height: 586px;
+  }
 }
