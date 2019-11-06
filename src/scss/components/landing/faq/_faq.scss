@@ -9,6 +9,9 @@
       height: 596px;
       padding-bottom: 4em;
     }
+    @include respond(smallest) {
+      padding-top: 5em;
+    }
   }
   @import './container/container';
 }
