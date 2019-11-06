@@ -4,7 +4,7 @@
     @include flexColumn();
     flex: 0 0 50%;
     min-height: 696px;
-    width: 100vw;
+    width: 100%;
     position: relative;
     justify-content: space-around;
     @include respond(mission) {

@@ -2,7 +2,6 @@
   &__container {
     @include flexBox();
     position: sticky;
-
     min-height: 896px;
     // custom media queries
     @media (max-width: 75em) {

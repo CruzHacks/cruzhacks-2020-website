@@ -4,7 +4,7 @@
   position: sticky;
   min-height: 856px;
   z-index: 1;
-
+  overflow: hidden;
   /*
     @include respond(desktop) {
         min-height: 986px;
@@ -44,6 +44,7 @@
   right: -40px;
   display: none;
   top: 150px;
+  overflow: hidden;
   @include respond(phone) {
     display: initial;
     width: 90vw;

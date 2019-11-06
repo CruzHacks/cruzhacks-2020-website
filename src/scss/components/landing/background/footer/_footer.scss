@@ -3,7 +3,8 @@
   position: relative;
 
   height: 6em;
-  bottom: 0.5em;
+  bottom: 0;
+  padding-left: 1em;
   @include respond(desktop) {
   }
   @include respond(mission) {
