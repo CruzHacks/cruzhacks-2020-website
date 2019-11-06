@@ -21,6 +21,7 @@ import BackdropCtaView from './backdrop/cta/backdrop-cta.view';
 /* Footer Section */
 import BackdropFooterExtendedView from './backdrop/footer/backdrop-footer-extended.view';
 import BackdropFooterTreeView from './backdrop/footer/backdrop-footer-trees.view';
+import FooterView from './footer/footer.view';
 
 const BackdropView: React.FC = () => {
   return (
@@ -46,6 +47,7 @@ const BackdropView: React.FC = () => {
         <div className="footer-backdrop__container">
           <BackdropFooterExtendedView />
         </div>
+        <FooterView />
       </div>
     </>
   );

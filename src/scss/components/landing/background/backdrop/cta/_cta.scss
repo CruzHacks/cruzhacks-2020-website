@@ -14,6 +14,9 @@
   @include respond(tab-land) {
     min-height: 730px;
   }
+  @include respond(phone) {
+    min-height: 1306px;
+  }
 }
 
 /* SVGs */

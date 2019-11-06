@@ -1,43 +1,29 @@
 .footer-backdrop__container {
   @include flexBox();
-  position: relative;
-  min-height: 966px;
-  margin-top: 20em;
+  position: sticky;
+  margin-top: -80em;
   @include respond(desktop) {
-    min-height: 666px;
-    margin-top: 20em;
   }
   @include respond(mission) {
-    min-height: 566px;
-    margin-top: 30em;
   }
   @include respond(tab-land) {
-    min-height: 496px;
   }
   @include respond(tab-port) {
-    min-height: 306px;
-    margin-top: 10em;
   }
   @media (max-width: 735px) {
-    margin-top: 47em;
-    height: 426px;
   }
   @include respond(phone) {
-    top: -100em;
-    height: 550px;
   }
 }
 
 /* SVGs */
 .footer-backdrop-extended__image,
 .footer-backdrop-trees__image {
-  position: absolute;
+  position: static;
 }
 
 .footer-backdrop-extended__image {
-  width: 2000px;
-  margin-top: -200vh;
-  position: sticky;
+  object-fit: scale-down;
   @media (max-width: 681px) {
     display: none;
   }
@@ -50,9 +36,6 @@
   height: auto;
   width: 100%;
 
-  margin-top: 120vh;
-
   @media (max-width: 681px) {
-    display: relative;
   }
 }

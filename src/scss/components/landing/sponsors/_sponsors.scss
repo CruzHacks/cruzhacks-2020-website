@@ -3,7 +3,7 @@
     @include flexBox();
     @include flexColumn();
     position: relative;
-    min-height: 496px;
+    min-height: 696px;
     @include respond(tab-port) {
       min-height: 396px;
     }
