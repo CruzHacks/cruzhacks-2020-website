@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactContactForm from 'react-mail-form';
 import FAQBoxView from './container/faq-container.view';
 
 const faqs = [

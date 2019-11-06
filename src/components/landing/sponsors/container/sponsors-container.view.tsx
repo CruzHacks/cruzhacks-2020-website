@@ -8,7 +8,11 @@ const SponsorsContainer: React.FC = () => {
       <span className="sponsors__title">Thank You Sponsors</span>
       <span className="sponsors__divider"></span>
       <span className="sponsors__logosContainer"></span>
-      <img src={logos} className="sponsors__logos"></img>
+      <img
+        alt="Amazon, Microsoft, Poly"
+        src={logos}
+        className="sponsors__logos"
+      ></img>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import HeroSubscribeToEmailList from './hero-subscribe-to-email-list.view';
-import HeroNavigateToBottomButtonView from './hero-navigate-to-bottom-button.view';
 
 const HeroTitleAreaView: React.FC = () => {
   return (
