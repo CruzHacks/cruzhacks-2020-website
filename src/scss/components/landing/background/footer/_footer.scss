@@ -1,10 +1,9 @@
 .footer-view-container {
   margin: auto;
   position: relative;
-
+  
   height: 6em;
   bottom: 0;
-  padding-left: 1em;
   @include respond(desktop) {
   }
   @include respond(mission) {
@@ -20,6 +19,7 @@
 .footer-view-content__container {
   position: absolute;
   width: 100%;
+
 }
 
 @import './buttons/buttons';
