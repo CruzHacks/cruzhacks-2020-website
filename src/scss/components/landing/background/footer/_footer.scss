@@ -2,7 +2,7 @@
   margin: auto;
   position: relative;
 
-  min-height: 100%;
+  height: 6em;
 
   @include respond(desktop) {
   }
@@ -20,3 +20,6 @@
   position: absolute;
   width: 100vw;
 }
+
+@import './buttons/buttons';
+@import './text/text';

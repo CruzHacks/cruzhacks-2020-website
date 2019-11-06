@@ -3,7 +3,7 @@
     @include flexBox();
     text-align: center;
     position: relative;
-    max-height: fit-content;
+    height: fit-content;
     min-height: 796px;
     @include respond(tab-port) {
       min-height: 596px;
