@@ -1,18 +1,33 @@
 .footer-backdrop__container {
   @include flexBox();
   position: sticky;
-  margin-top: -80em;
+  margin-top: -92em;
   @include respond(desktop) {
   }
   @include respond(mission) {
+    margin-top: -70em;
   }
   @include respond(tab-land) {
+    margin-top: -58em;
   }
   @include respond(tab-port) {
-  }
-  @media (max-width: 735px) {
+    margin-top: -65em;
   }
   @include respond(phone) {
+    margin-top: -45em;
+  }
+  @include respond(phone-narrow) {
+    margin-top: -43em;
+    z-index: -1;
+  }
+  @include respond(smallest) {
+    margin-top: -34em;
+  }
+  @media screen and (max-width: 394px) {
+    margin-top: -24.85em;
+  }
+  @media screen and (max-width: 354px) {
+    margin-top: -23em;
   }
 }
 
@@ -24,9 +39,6 @@
 
 .footer-backdrop-extended__image {
   object-fit: scale-down;
-  @media (max-width: 681px) {
-    display: none;
-  }
 }
 
 .background-footer-mobile__image {

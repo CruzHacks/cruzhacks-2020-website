@@ -21,8 +21,9 @@
       min-height: 1406px;
     }
     @include respond(phone) {
-      bottom: 309.5em;
+      bottom: 409.5em;
       min-height: 1596px;
+      margin-top: -7em;
     }
   }
   /* SVGs */

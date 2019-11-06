@@ -5,21 +5,19 @@
   // max-height: 39em;
   max-width: 51em;
   min-height: fit-content;
-  height: 45em;
+  height: 36em;
   width: 80vw;
   background: #ffffff;
   border: 4px solid #7171cb;
   box-sizing: border-box;
   border-radius: 77px;
+  @include respond(tab-port) {
+    height: 35em;
+  }
   @include respond(phone) {
     border-radius: 25px;
-  }
-  @include respond(phone) {
-    min-height: 62em;
+    height: 40em;
     align-content: center;
-  }
-  @include respond(phone-narrow) {
-    min-height: 65em;
   }
   @include respond(smallest) {
     height: 48%;
@@ -34,6 +32,8 @@
     $lineHeight: 47px,
     $letterSpace: 0.05em
   );
+  @include responsive-font(3.1vw, 30px, 40px);
+  font-family: 'Rubik Bold';
   display: block;
   margin-top: 1em;
   padding-bottom: 0.25em;
@@ -58,14 +58,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
-  grid-column-gap: 4.375vw;
-  grid-row-gap: 5.87vh;
+  grid-column-gap: 12%;
+  grid-row-gap: 7%;
   justify-items: left;
   justify-content: center;
-  margin: 5.7vh;
+  margin: 5%;
   overflow-block: center;
   @include respond(phone) {
     display: block;
+    margin: 2%;
   }
 }
 
@@ -76,6 +77,7 @@
     $weight: normal,
     $lineHeight: 22px
   );
+  @include responsive-font(2.2vw, 0.81em, 1.25em);
   padding: 0;
   border: 1px solid #6f6fe8;
   border-radius: 26px;
@@ -88,8 +90,8 @@
     transition: background-color 0.2s ease-in, color 0.2s ease-in;
   }
   @include respond(phone) {
-    padding: 0.35em 0.3em 0.35em 0.3em;
-    margin: 1.8vh;
+    padding: 0.45em 0.4em 0.45em 0.4em;
+    margin: 0.8em;
   }
 }
 
