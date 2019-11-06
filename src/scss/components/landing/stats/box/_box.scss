@@ -88,6 +88,7 @@
   justify-content: space-evenly;
   position: relative;
   bottom: 4em;
+  max-width: 100%;
   @include respond(tab-land) {
     bottom: 7em;
   }
