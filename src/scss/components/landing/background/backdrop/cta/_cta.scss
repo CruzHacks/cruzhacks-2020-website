@@ -26,6 +26,14 @@
   @include respond(phone) {
     display: none;
   }
+  @include respond(tab-land) {
+    width: 25em;
+    top: -5%;
+  }
+  @include respond(tab-port) {
+    top: 0%;
+    width: 18em;
+  }
 }
 
 .cta-backdrop-mobile__image {

@@ -12,6 +12,9 @@
   box-sizing: border-box;
   border-radius: 77px;
   @include respond(phone) {
+    border-radius: 25px;
+  }
+  @include respond(phone) {
     min-height: 62em;
     align-content: center;
   }
