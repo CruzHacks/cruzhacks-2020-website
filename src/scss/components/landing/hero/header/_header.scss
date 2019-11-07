@@ -25,6 +25,7 @@
 /* HeroLightbulb */
 
 .hero__lightbulb {
+  cursor: pointer;
   order: 0;
   @include svgContainer();
   width: 55px;

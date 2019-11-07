@@ -1,0 +1,86 @@
+.team {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  &__title-area {
+    display: inline-block;
+    position: relative;
+    top: 25vh;
+  }
+  &__heading-text {
+    @include font-source-header(
+      39px,
+      46px,
+      0.04em,
+      3px,
+      false,
+      normal,
+      bold,
+      #222222
+    );
+  }
+  &__sub-heading-text {
+    @include font-source-body(
+      14px,
+      14px,
+      0.04em,
+      3px,
+      false,
+      false,
+      false,
+      #adadad
+    );
+  }
+  &__card-container {
+    display: inline-block;
+    position: relative;
+    top: 30vh;
+    padding: 0 12% 0 12%;
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: stretch;
+    justify-content: center;
+  }
+  &__card {
+    flex: 0 0 12vw;
+    padding: 3%;
+    margin: 1%;
+    border: 1px hidden #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    // text-align: center;
+  }
+  &__card-image {
+    border-radius: 75px;
+  }
+  &__card-name-text {
+    @include font-source-subheader(
+      15px,
+      20px,
+      0.03em,
+      3px,
+      center,
+      false,
+      false,
+      #222222
+    );
+    margin: 12% 0 0 0;
+  }
+  &__card-title-text {
+    @include font-source-subheader(
+      14px,
+      20px,
+      0.03em,
+      3px,
+      center,
+      false,
+      false,
+      #888787
+    );
+    margin: unset;
+  }
+  &__card-linkedin-icon {
+    margin: 8% 0 0 0;
+    cursor: pointer;
+  }
+}
