@@ -11,6 +11,9 @@
 /* Landing Styles */
 @import './components/landing/landing';
 
+/* Team Styles */
+@import './components/team/team';
+
 html,
 body {
   width: 100vw;
@@ -20,8 +23,8 @@ body {
   overflow: auto;
 }
 
-.routes {
-}
+// .routes {
+// }
 
 .app-root {
   display: block;
