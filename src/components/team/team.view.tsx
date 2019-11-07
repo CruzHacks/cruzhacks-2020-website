@@ -177,7 +177,7 @@ const TeamView: React.FC = () => {
         <div className="team__title-area">
           <h1 className="team__heading-text">OUR TEAM</h1>
           <p className="team__sub-heading-text">
-            Meet our team of creators, thinkers, strategists, and believers
+            Meet our team of creators, thinkers, strategists, and believers,
           </p>
           <p className="team__sub-heading-text">
             collaborating together to create something amazing.
