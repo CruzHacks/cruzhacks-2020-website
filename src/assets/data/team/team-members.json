@@ -1,0 +1,87 @@
+[
+  { "name": "Jennifer Dutra", "title": "President", "imgRef": "jen-dutra.jpg" },
+  {
+    "name": "Daniel Segobiano",
+    "title": "President",
+    "imgRef": "daniel-segobiano.jpg"
+  },
+  {
+    "name": "Kyle O'Brien",
+    "title": "Lead Engineer",
+    "imgRef": "kyle-obrien.jpg"
+  },
+  {
+    "name": "Sherry Huang",
+    "title": "Marketing Director",
+    "imgRef": "sherry-huang.jpg"
+  },
+  { "name": "Sean O'Hearn", "title": "Engineer", "imgRef": "sean-ohearn.jpg" },
+  { "name": "Eric Mockler", "title": "Engineer", "imgRef": "eric-mockler.jpg" },
+  {
+    "name": "Joseph Nguyen",
+    "title": "Engineer",
+    "imgRef": "joseph-nguyen.jpg"
+  },
+  {
+    "name": "Isai Lopez Rodas",
+    "title": "Engineer",
+    "imgRef": "isai-rodas.jpg"
+  },
+  {
+    "name": "Tiffany Luong",
+    "title": "Engineer",
+    "imgRef": "tiffany-luong.jpg"
+  },
+  { "name": "Ivy Chen", "title": "Designer", "imgRef": "ivy-chen.jpg" },
+  { "name": "Lily Lee", "title": "Designer", "imgRef": "lily-lee.jpg" },
+  {
+    "name": "Phoebe Achonwa",
+    "title": "Sponsorship",
+    "imgRef": "phoebe-achonwa.jpg"
+  },
+  {
+    "name": "Kaitlyn Allen",
+    "title": "Sponsorship",
+    "imgRef": "kaitlyn-allen.jpg"
+  },
+  {
+    "name": "Disha Mevada",
+    "title": "Sponsorship",
+    "imgRef": "disha-mevada.jpg"
+  },
+  {
+    "name": "Kelly Fesler",
+    "title": "Communications",
+    "imgRef": "kelly-fesler.jpg"
+  },
+  {
+    "name": "Navya Rao",
+    "title": "Communications",
+    "imgRef": "navya-rao.jpg"
+  },
+  {
+    "name": "Radhika Gathwala",
+    "title": "Logistics Director",
+    "imgRef": "radhika-gathwala.jpg"
+  },
+  {
+    "name": "Neha Pamidi",
+    "title": "Logistics & Operations",
+    "imgRef": "neha-pamidi.jpg"
+  },
+  {
+    "name": "Krishna Pandian",
+    "title": "Logistics & Operations",
+    "imgRef": "krishna-pandian.jpg"
+  },
+  {
+    "name": "Sonali Malik",
+    "title": "Logistics & Operations",
+    "imgRef": "sonali-malik.jpg"
+  },
+  {
+    "name": "Devanshi Thakar",
+    "title": "Logistics & Operations",
+    "imgRef": "devanshi-thakar.jpg"
+  }
+]
