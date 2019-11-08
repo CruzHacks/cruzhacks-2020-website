@@ -7,35 +7,6 @@ import ytIcon from '../../../../../assets/images/social/youtube-icon.png';
 const FooterButtonView: React.FC = () => {
   return (
     <div className="footer-button-container">
-      <div className="footer-social__buttons">
-        <div className="footer-social__button">
-          <a
-            rel="noopener noreferrer"
-            target="__blank"
-            href="https://www.instagram.com/cruzhacks/"
-          >
-            <img src={igIcon} alt="instagram_icon" />
-          </a>
-        </div>
-        <div className="footer-social__button">
-          <a
-            rel="noopener noreferrer"
-            target="__blank"
-            href="https://www.facebook.com/CruzHacks/"
-          >
-            <img src={fbIcon} alt="facebook_icon" />
-          </a>
-        </div>
-        <div className="footer-social__button">
-          <a
-            rel="noopener noreferrer"
-            target="__blank"
-            href="https://www.youtube.com/channel/UCUD8rjCLCokNzK_rcd4JUmA"
-          >
-            <img src={ytIcon} alt="youtube_icon" />
-          </a>
-        </div>
-      </div>
       <div className="footer-up__button">
         <svg
           className="footer-up__image"
@@ -69,6 +40,35 @@ const FooterButtonView: React.FC = () => {
             strokeLinejoin="round"
           />
         </svg>
+      </div>
+      <div className="footer-social__buttons">
+        <div className="footer-social__button">
+          <a
+            rel="noopener noreferrer"
+            target="__blank"
+            href="https://www.instagram.com/cruzhacks/"
+          >
+            <img src={igIcon} alt="instagram_icon" />
+          </a>
+        </div>
+        <div className="footer-social__button">
+          <a
+            rel="noopener noreferrer"
+            target="__blank"
+            href="https://www.facebook.com/CruzHacks/"
+          >
+            <img src={fbIcon} alt="facebook_icon" />
+          </a>
+        </div>
+        <div className="footer-social__button">
+          <a
+            rel="noopener noreferrer"
+            target="__blank"
+            href="https://www.youtube.com/channel/UCUD8rjCLCokNzK_rcd4JUmA"
+          >
+            <img src={ytIcon} alt="youtube_icon" />
+          </a>
+        </div>
       </div>
       <div style={{ clear: 'both' }}></div>
     </div>
