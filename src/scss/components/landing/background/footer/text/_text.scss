@@ -2,22 +2,37 @@
   font-family: SofiaProSoftW01-Regular;
   position: relative;
   letter-spacing: 0.1em;
-  padding: 1em 4.65em;
+  padding: 1em 0 1em 4.65em;
+  // padding: 1em 4.65em;
   font-size: 12px;
   @include respond(mission) {
-    padding-left: 1em;
+    padding-left: 1.3em;
+    padding-right: 1.5em;
     margin-top: -0.3em;
   }
+  @include respond(tab-land) {
+  }
   @include respond(phone) {
-    padding: 0 4.5em;
+    padding: 0 7.9em;
+  }
+  @include respond(phone-narrow) {
+    padding: 0 4.6em;
   }
 }
 
 /* Footer text */
 .footer-text__designers {
   text-align: left;
-  width: 75%;
+  width: 79.5%;
   float: left;
+
+  @include respond(mission) {
+    width: 76.5%;
+  }
+
+  @include respond(tab-land) {
+    width: 50%;
+  }
 
   @include respond(phone) {
     margin: 1.2em 0 3em 0;
@@ -26,5 +41,13 @@
 }
 
 .footer-text__copyright {
-  text-align: left;
+
+  @include respond(mission) {
+    float: right;
+  }
+
+  @include respond(phone) {
+    float: unset;
+    text-align: left;
+  }
 }
