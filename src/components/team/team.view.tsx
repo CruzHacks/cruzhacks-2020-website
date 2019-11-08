@@ -7,103 +7,26 @@ import MembersJson from '../../assets/data/team/team-members.json';
 
 const memberCards = MembersJson.map((t, i) => {
   const imagePath = t.imgRef;
-  if (i <= 15) {
-    return (
-      <div key={i} className="team__card">
+  return (
+    <div key={i} className="team__card">
+      <img
+        className="team__card-image"
+        src={require('../../assets/images/team/' + imagePath)}
+        width="140"
+        height="143"
+        alt={t.name}
+      ></img>
+      <p className="team__card-name-text">{t.name}</p>
+      <p className="team__card-title-text">{t.title}</p>
+      <a rel="noopener noreferrer" target="_blank" href={t.linkedIn}>
         <img
-          className="team__card-image"
-          src={require('../../assets/images/team/' + imagePath)}
-          width="140"
-          height="143"
-          alt={t.name}
+          className="team__card-linkedin-icon"
+          src={require('../../assets/images/team/linkedIn-icon.svg')}
+          alt="linkedIn"
         ></img>
-        <p className="team__card-name-text">{t.name}</p>
-        <p className="team__card-title-text">{t.title}</p>
-        <a rel="noopener noreferrer" target="_blank" href={t.linkedIn}>
-          <img
-            className="team__card-linkedin-icon"
-            src={require('../../assets/images/team/linkedIn-icon.svg')}
-            alt="linkedIn"
-          ></img>
-        </a>
-      </div>
-    );
-  } else if (i > 15 && i < 19) {
-    return (
-      <div
-        key={i}
-        className="team__card"
-        style={{ position: `relative`, left: `0.1vw` }}
-      >
-        <img
-          className="team__card-image"
-          src={require('../../assets/images/team/' + imagePath)}
-          width="140"
-          height="143"
-          alt={t.name}
-        ></img>
-        <p className="team__card-name-text">{t.name}</p>
-        <p className="team__card-title-text">{t.title}</p>
-        <a rel="noopener noreferrer" target="_blank" href={t.linkedIn}>
-          <img
-            className="team__card-linkedin-icon"
-            src={require('../../assets/images/team/linkedIn-icon.svg')}
-            alt="linkedIn"
-          ></img>
-        </a>
-      </div>
-    );
-  } else if (i === 19) {
-    return (
-      <div
-        key={i}
-        className="team__card"
-        style={{ position: `relative`, left: `-3.5vw`, margin: `1% 1% 1% 10%` }}
-      >
-        <img
-          className="team__card-image"
-          src={require('../../assets/images/team/' + imagePath)}
-          width="140"
-          height="143"
-          alt={t.name}
-        ></img>
-        <p className="team__card-name-text">{t.name}</p>
-        <p className="team__card-title-text">{t.title}</p>
-        <a rel="noopener noreferrer" target="_blank" href={t.linkedIn}>
-          <img
-            className="team__card-linkedin-icon"
-            src={require('../../assets/images/team/linkedIn-icon.svg')}
-            alt="linkedIn"
-          ></img>
-        </a>
-      </div>
-    );
-  } else {
-    return (
-      <div
-        key={i}
-        className="team__card"
-        style={{ position: `relative`, left: `-3.5vw` }}
-      >
-        <img
-          className="team__card-image"
-          src={require('../../assets/images/team/' + imagePath)}
-          width="140"
-          height="143"
-          alt={t.name}
-        ></img>
-        <p className="team__card-name-text">{t.name}</p>
-        <p className="team__card-title-text">{t.title}</p>
-        <a rel="noopener noreferrer" target="_blank" href={t.linkedIn}>
-          <img
-            className="team__card-linkedin-icon"
-            src={require('../../assets/images/team/linkedIn-icon.svg')}
-            alt="linkedIn"
-          ></img>
-        </a>
-      </div>
-    );
-  }
+      </a>
+    </div>
+  );
 });
 
 const TeamView: React.FC = () => {
