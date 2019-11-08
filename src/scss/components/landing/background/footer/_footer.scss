@@ -1,9 +1,9 @@
 .footer-view-container {
   margin: auto;
   position: relative;
-  
   height: 6em;
   bottom: 0;
+  overflow: visible;
   @include respond(desktop) {
   }
   @include respond(mission) {
@@ -11,6 +11,7 @@
   @include respond(tab-port) {
   }
   @include respond(phone) {
+    height: 18em;
   }
   @media (max-width: 735px) {
   }

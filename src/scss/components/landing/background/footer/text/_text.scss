@@ -8,6 +8,9 @@
     padding-left: 1em;
     margin-top: -0.3em;
   }
+  @include respond(phone) {
+    padding: 0 4.5em;
+  }
 }
 
 /* Footer text */
@@ -15,6 +18,11 @@
   text-align: left;
   width: 75%;
   float: left;
+
+  @include respond(phone) {
+    margin: 1.2em 0 3em 0;
+    width: 100%;
+  }
 }
 
 .footer-text__copyright {
