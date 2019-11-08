@@ -3,7 +3,6 @@
   position: relative;
   height: 6em;
   bottom: 0;
-  overflow: visible;
   @include respond(desktop) {
   }
   @include respond(mission) {
