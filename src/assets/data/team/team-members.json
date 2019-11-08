@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Jennifer Dutra",
+    "title": "President",
+    "imgRef": "jen-dutra.jpg",
+    "linkedIn": "https://www.linkedin.com/in/jennifer-dutra/"
+  },
+  {
+    "name": "Daniel Segobiano",
+    "title": "President",
+    "imgRef": "daniel-segobiano.jpg",
+    "linkedIn": "https://www.linkedin.com/in/daniel-segobiano/"
+  },
+  {
+    "name": "Kyle O'Brien",
+    "title": "Lead Engineer",
+    "imgRef": "kyle-obrien.jpg",
+    "linkedIn": "https://www.linkedin.com/in/kyle1668/"
+  },
+  {
+    "name": "Sherry Huang",
+    "title": "Marketing Director",
+    "imgRef": "sherry-huang.jpg",
+    "linkedIn": "https://www.linkedin.com/in/sherry-huang-502018b7/"
+  },
+  {
+    "name": "Sean O'Hearn",
+    "title": "Engineer",
+    "imgRef": "sean-ohearn.jpg",
+    "linkedIn": "https://www.linkedin.com/in/sean-ohearn/"
+  },
+  {
+    "name": "Eric Mockler",
+    "title": "Engineer",
+    "imgRef": "eric-mockler.jpg",
+    "linkedIn": "https://www.linkedin.com/in/mocklee/"
+  },
+  {
+    "name": "Joseph Nguyen",
+    "title": "Engineer",
+    "imgRef": "joseph-nguyen.jpg",
+    "linkedIn": "https://www.linkedin.com/in/joseph-nguyen-017167139/"
+  },
+  {
+    "name": "Isai Lopez Rodas",
+    "title": "Engineer",
+    "imgRef": "isai-rodas.jpg",
+    "linkedIn": "https://www.linkedin.com/in/ilopezro/"
+  },
+  {
+    "name": "Tiffany Luong",
+    "title": "Engineer",
+    "imgRef": "tiffany-luong.jpg",
+    "linkedIn": "https://www.linkedin.com/in/tiluong8150/"
+  },
+  {
+    "name": "Ivy Chen",
+    "title": "Designer",
+    "imgRef": "ivy-chen.jpg",
+    "linkedIn": "https://www.linkedin.com/in/ivy-chen-4065aab7/"
+  },
+  {
+    "name": "Lily Lee",
+    "title": "Designer",
+    "imgRef": "lily-lee.jpg",
+    "linkedIn": "https://www.linkedin.com/in/lilylee123/"
+  },
+  {
+    "name": "Phoebe Achonwa",
+    "title": "Sponsorship",
+    "imgRef": "phoebe-achonwa.jpg",
+    "linkedIn": "https://www.linkedin.com/in/phoebeachonwa9ba35b141/"
+  },
+  {
+    "name": "Kaitlyn Allen",
+    "title": "Sponsorship",
+    "imgRef": "kaitlyn-allen.jpg",
+    "linkedIn": "https://www.linkedin.com/in/kaitlynallen/"
+  },
+  {
+    "name": "Disha Mevada",
+    "title": "Sponsorship",
+    "imgRef": "disha-mevada.jpg",
+    "linkedIn": "https://www.linkedin.com/in/disha-mevada/"
+  },
+  {
+    "name": "Kelly Fesler",
+    "title": "Communications",
+    "imgRef": "kelly-fesler.jpg",
+    "linkedIn": "https://www.linkedin.com/in/kelly-fesler/"
+  },
+  {
+    "name": "Navya Rao",
+    "title": "Communications",
+    "imgRef": "navya-rao.jpg",
+    "linkedIn": "https://www.linkedin.com/in/navya-rao-682140142/"
+  },
+  {
+    "name": "Radhika Gathwala",
+    "title": "Logistics Director",
+    "imgRef": "radhika-gathwala.jpg",
+    "linkedIn": "https://www.linkedin.com/in/radhika-gathwala/"
+  },
+  {
+    "name": "Neha Pamidi",
+    "title": "Logistics & Operations",
+    "imgRef": "neha-pamidi.jpg",
+    "linkedIn": "https://www.linkedin.com/in/nehapamidi/"
+  },
+  {
+    "name": "Krishna Pandian",
+    "title": "Logistics & Operations",
+    "imgRef": "krishna-pandian.jpg",
+    "linkedIn": "https://www.linkedin.com/in/krishna-kumar-pandian/"
+  },
+  {
+    "name": "Sonali Malik",
+    "title": "Logistics & Operations",
+    "imgRef": "sonali-malik.jpg",
+    "linkedIn": "https://www.linkedin.com/in/sonalimalik/"
+  },
+  {
+    "name": "Devanshi Thakar",
+    "title": "Logistics & Operations",
+    "imgRef": "devanshi-thakar.jpg",
+    "linkedIn": "https://www.linkedin.com/in/devanshithakar/"
+  }
+]
