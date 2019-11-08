@@ -10,7 +10,9 @@ const FooterButtonView: React.FC = () => {
       <div className="footer-up__button">
         <svg
           className="footer-up__image"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
           width="50"
           height="49"
           viewBox="0 0 50 49"
