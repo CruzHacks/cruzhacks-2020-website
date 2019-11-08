@@ -2,7 +2,7 @@
   position: relative;
   padding: 0 3.5em;
   @include respond(mission) {
-    padding: 0 1em;
+    padding: 0 0 0 1em;
   }
 }
 
@@ -12,6 +12,18 @@
   bottom: 0;
   width: 50%;
   float: left;
+
+  @include respond(phone){
+    float: unset;
+    position: relative;
+    width: 100%;
+    padding: 0 5em;
+  }
+
+  @include respond(phone-narrow) {
+    padding-left: 1.3em;
+  }
+
 }
 
 .footer-social__button {
@@ -26,7 +38,21 @@
   width: 50%;
   text-align: right;
   float: right;
-  padding-right: 1vw;
+  @include respond(desktop) {
+    padding-right: 0.5em;
+  }
+
+  @include respond(mission) {
+    padding-right: 1em;
+  }
+
+  @include respond(phone) {
+    margin: 5.5em 0 2.5em 0;
+    text-align: center;
+    float: unset;
+    width: 100%;
+  }
+
   @include respond(smallest) {
     padding-right: 0em;
   }

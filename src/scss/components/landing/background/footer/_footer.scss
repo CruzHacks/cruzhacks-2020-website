@@ -1,7 +1,6 @@
 .footer-view-container {
   margin: auto;
   position: relative;
-  
   height: 6em;
   bottom: 0;
   @include respond(desktop) {
@@ -11,6 +10,7 @@
   @include respond(tab-port) {
   }
   @include respond(phone) {
+    height: 20.5em;
   }
   @media (max-width: 735px) {
   }
@@ -19,7 +19,6 @@
 .footer-view-content__container {
   position: absolute;
   width: 100%;
-
 }
 
 @import './buttons/buttons';
