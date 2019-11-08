@@ -19,11 +19,13 @@ const memberCards = MembersJson.map((t, i) => {
         ></img>
         <p className="team__card-name-text">{t.name}</p>
         <p className="team__card-title-text">{t.title}</p>
-        <img
-          className="team__card-linkedin-icon"
-          src={require('../../assets/images/team/linkedIn-icon.svg')}
-          alt="linkedIn"
-        ></img>
+        <a rel="noopener noreferrer" target="_blank" href={t.linkedIn}>
+          <img
+            className="team__card-linkedin-icon"
+            src={require('../../assets/images/team/linkedIn-icon.svg')}
+            alt="linkedIn"
+          ></img>
+        </a>
       </div>
     );
   } else if (i > 15 && i < 19) {
@@ -42,11 +44,13 @@ const memberCards = MembersJson.map((t, i) => {
         ></img>
         <p className="team__card-name-text">{t.name}</p>
         <p className="team__card-title-text">{t.title}</p>
-        <img
-          className="team__card-linkedin-icon"
-          src={require('../../assets/images/team/linkedIn-icon.svg')}
-          alt="linkedIn"
-        ></img>
+        <a rel="noopener noreferrer" target="_blank" href={t.linkedIn}>
+          <img
+            className="team__card-linkedin-icon"
+            src={require('../../assets/images/team/linkedIn-icon.svg')}
+            alt="linkedIn"
+          ></img>
+        </a>
       </div>
     );
   } else if (i === 19) {
@@ -65,11 +69,13 @@ const memberCards = MembersJson.map((t, i) => {
         ></img>
         <p className="team__card-name-text">{t.name}</p>
         <p className="team__card-title-text">{t.title}</p>
-        <img
-          className="team__card-linkedin-icon"
-          src={require('../../assets/images/team/linkedIn-icon.svg')}
-          alt="linkedIn"
-        ></img>
+        <a rel="noopener noreferrer" target="_blank" href={t.linkedIn}>
+          <img
+            className="team__card-linkedin-icon"
+            src={require('../../assets/images/team/linkedIn-icon.svg')}
+            alt="linkedIn"
+          ></img>
+        </a>
       </div>
     );
   } else {
@@ -88,11 +94,13 @@ const memberCards = MembersJson.map((t, i) => {
         ></img>
         <p className="team__card-name-text">{t.name}</p>
         <p className="team__card-title-text">{t.title}</p>
-        <img
-          className="team__card-linkedin-icon"
-          src={require('../../assets/images/team/linkedIn-icon.svg')}
-          alt="linkedIn"
-        ></img>
+        <a rel="noopener noreferrer" target="_blank" href={t.linkedIn}>
+          <img
+            className="team__card-linkedin-icon"
+            src={require('../../assets/images/team/linkedIn-icon.svg')}
+            alt="linkedIn"
+          ></img>
+        </a>
       </div>
     );
   }
