@@ -6,12 +6,30 @@
     margin: 0 auto;
     color: #4A38F2;
 
+    &__header {
+        margin-bottom: 2em;
+    }
+
+    &__first-name {
+        float: left;
+        margin-right: 20px;
+    }
+    &__last-name {
+        float: left;
+    }
+
     &__label {
         display: block;
     }
 
     &__input {
+        border-width: 0;
+        border: none;
+        background-color: #F4F4F4;
         display: block;
+        height: 40px;
+        width: 28vw;
+        font-size: 28px;
     }
 
 }
