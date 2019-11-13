@@ -1,0 +1,17 @@
+.application {
+    font-family: 'Rubik Regular';
+    position: relative;
+    top: 15vh;
+    max-width: 60vw;
+    margin: 0 auto;
+    color: #4A38F2;
+
+    &__label {
+        display: block;
+    }
+
+    &__input {
+        display: block;
+    }
+
+}
