@@ -4,7 +4,7 @@ const DemographicsView: React.FC = () => {
   return (
     <>
       <div className="demographics">
-        <h3 className="demographics__header">Demographics</h3>
+        <h3 className="application__header">Demographics</h3>
         <form className="demographics__form">
           <section className="first-last-section">
             <div className="demographics__first-name">
