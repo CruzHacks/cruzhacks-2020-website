@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DemographicsView from './forms/demographics.view';
+
 const ApplicationView: React.FC = () => {
   return (
     <>
@@ -8,6 +9,10 @@ const ApplicationView: React.FC = () => {
           <span className="application__titleBar-text">APPLICATION</span>
         </div>
         <DemographicsView />
+        <div className="application_pagination">
+          <span className="application_progress"></span>
+          <div className="application_pageButtons"></div>
+        </div>
       </div>
     </>
   );
