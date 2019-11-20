@@ -1,0 +1,35 @@
+&__appstatus {
+  right: 0;
+  margin: auto;
+  position: relative;
+  top: 6em;
+  background: #6f6fe8;
+  border-radius: 30px;
+  width: 43vw;
+  height: 66px;
+  font-family: 'Rubik Regular';
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.05em;
+}
+
+&__appstatus-container {
+  display: flex;
+  top: 1.5em;
+  left: 6em;
+  position: relative;
+}
+&__appstatus-text {
+  order: 1;
+  flex-basis: 55%;
+}
+
+&__appstatus-status-container {
+  order: 2;
+  position: relative;
+  background: #ffffff;
+  border-radius: 30px;
+  top: -10.5px;
+  height: 39px;
+  width: 10vw;
+}
