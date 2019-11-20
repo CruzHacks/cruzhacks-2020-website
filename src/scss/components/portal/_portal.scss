@@ -2,9 +2,17 @@
   position: relative;
   width: 100%;
   height: 90vh;
-  @import './titleBar/_titleBar';
+  background-color: #f2f0ff;
+  @import './navbar/navbar';
+  @import './appstatus/appstatus';
+  @import './announcements/announcements';
+
   &__application {
     position: relative;
-    top: 81.475vh;
+    top: 23vh;
   }
+}
+
+#mlh-badge {
+  visibility: hidden;
 }

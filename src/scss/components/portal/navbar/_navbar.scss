@@ -1,0 +1,32 @@
+&__navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  position: relative;
+  top: 0;
+  height: 5em;
+  background: #ffffff;
+  font-family: 'Rubik Regular';
+  font-weight: 600;
+  color: #5342f3;
+  letter-spacing: 0.05em;
+}
+
+&__navbar-text-container {
+  display: flex;
+  width: 100%;
+  left: 8em;
+  top: 2em;
+  position: relative;
+}
+
+&__navbar-title {
+  order: 1;
+  flex-basis: 85%;
+  //flex: 10;
+}
+
+&__navbar-logout {
+  order: 2;
+  justify-self: right;
+}
