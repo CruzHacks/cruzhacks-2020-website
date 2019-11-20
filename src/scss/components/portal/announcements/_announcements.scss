@@ -5,9 +5,10 @@
 }
 
 &__announcements-styletext {
-  position: absolute;
+  position: relative;
+  float: left;
   margin: auto;
-  left: 5.9em;
+  right: 0;
 
   font-family: 'Rubik Regular';
   font-weight: 600;
