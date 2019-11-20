@@ -1,0 +1,10 @@
+.portal {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  @import './titleBar/_titleBar';
+  &__application {
+    position: relative;
+    top: 81.475vh;
+  }
+}
