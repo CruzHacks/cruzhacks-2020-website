@@ -1,17 +1,14 @@
 /* Demographics related stuff */
 .demographics {
   font-family: 'Rubik Regular';
+  font-weight: 600;
   position: relative;
   top: 15vh;
   max-width: 60vw;
   margin: 0 auto;
   color: #4a38f2;
 
-  &__header {
-    margin-bottom: 2em;
-    // TODO border bottom
-  }
-
+  // labels
   &__first-name {
     float: left;
     margin-right: 1.4vw;
