@@ -3,6 +3,19 @@
   height: 100%;
   width: 100%;
   position: absolute;
+  &__titleBar {
+    top: 0;
+    height: 9.9em;
+    background-color: #6f6fe8;
+  }
+  &__titleBar-text {
+    font-family: 'Rubik Regular';
+    font-size: 1.75em;
+    color: white;
+    top: 37.5%;
+    margin-left: 3em;
+    position: relative;
+  }
 }
 .radio-button {
   margin: 0.6vw 0.9vw 0.6vw 0;
