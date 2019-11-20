@@ -6,13 +6,14 @@
 
 &__announcements-styletext {
   position: absolute;
-  left: 256px;
+  margin: auto;
+  left: 5.9em;
 
   font-family: 'Rubik Regular';
   font-weight: 600;
   font-size: 54px;
   line-height: 43px;
-  top: 8em;
+  top: 7.45em;
   letter-spacing: 0.07em;
   text-indent: 3px;
 
@@ -25,12 +26,23 @@
 &__announcements-box {
   right: 0;
   margin: auto;
-  top: 10em;
+  top: 12.5em;
+  left: 2em;
   background: #ffffff;
-  height: 35em;
-  width: 35em;
+  height: 33em;
+  width: 45em;
   position: relative;
 }
 
 &__announcements-box::after {
+  content: '';
+  margin: auto;
+  top: -2.5em;
+  left: -2em;
+  height: 33em;
+
+  width: 45em;
+  background: #6f6fe8;
+  position: absolute;
+  z-index: -1;
 }

@@ -17,7 +17,7 @@ const PortalView: React.FC = () => {
         <div className="portal__appstatus">
           <div className="portal__appstatus-container">
             <span className="portal__appstatus-text">
-              Your application is in review. Days until CruzHacks:
+              Your application is under review. Days until CruzHacks:
             </span>
             <div className="portal__appstatus-status-container"></div>
           </div>
