@@ -8,9 +8,11 @@ const PortalView: React.FC = () => {
     <>
       <div className="portal">
         <div className="portal__titleBar">
-          <HeroLightBulbView />>
-          <span className="portal__titleBar-title">Dashboard</span>
-          <span className="portal__titleBar-logout">Log out</span>
+          <HeroLightBulbView />
+          <div className="portal__titleBar-text-container">
+            <span className="portal__titleBar-title">Dashboard</span>
+            <span className="portal__titleBar-logout">Log out</span>
+          </div>
         </div>
         <div className="portal__appStatus"></div>
         <div className="portal__announcements"></div>
