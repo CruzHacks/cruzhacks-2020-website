@@ -1,97 +1,14 @@
 // !FIX GENDER SECTION
 .application {
-    font-family: 'Rubik Regular';
-    position: relative;
-    top: 15vh;
-    max-width: 60vw;
-    margin: 0 auto;
-    color: #4A38F2;
-
-    &__header {
-        margin-bottom: 2em;
-        // TODO border bottom
-    }
-
-    &__first-name {
-        float: left;
-        margin-right: 1.4vw;
-    }
-    &__last-name {
-        float: left;
-    }
-
-    &__age {
-        float: left;
-        margin-right: 10vw;
-    }
-
-    &__gender {
-        float: left;
-    }
-
-    /* Gender form section */
-    &__other-gender{
-        display: inline-block;
-    }
-
-    &__gender-label {
-        margin-right: 1vw;
-    }
-
-    &__label {
-        margin-bottom: 1.1vh;
-        display: block;
-    }
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
-/* Input related stuff */
-#first-name__input, #last-name__input  {
-    border-width: 0;
-    border: none;
-    background-color: #F4F4F4;
-    display: block;
-    height: 40px;
-    width: 29.2vw;
-    font-size: 28px;
-}
-
-#email__input, #password__input {
-    border-width: 0;
-    border: none;
-    background-color: #F4F4F4;
-    display: block;
-    height: 40px;
-    width: 60vw;
-    font-size: 28px;
-}
-
-#age__input {
-    border-width: 0;
-    border: none;
-    background-color: #F4F4F4;
-    display: block;
-    height: 40px;
-    width: 9vw;
-    font-size: 28px;
-}
-
-#other__input {
-    border-width: 0;
-    border: none;
-    background-color: #F4F4F4;
-    height: 40px;
-    width: 8vw;
-    font-size: 28px;
-}
-
 .radio-button {
-    margin: 0.6vw 0.9vw 0.6vw 0;
-    display: inline-block;
+  margin: 0.6vw 0.9vw 0.6vw 0;
+  display: inline-block;
 }
-
 .radio-label {
-    margin-right: 0.4vw;
+  margin-right: 0.4vw;
 }
-
-.email-section, .password-section {
-    margin: 3vh 0;
-}
+@import 'forms/demographics';
