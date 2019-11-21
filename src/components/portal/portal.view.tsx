@@ -23,8 +23,10 @@ const PortalView: React.FC = () => {
           </div>
         </div>
         <div className="portal__announcements">
-          <span className="portal__announcements-styletext">ANNOUNCEMENTS</span>
-          <div className="portal__announcements-box"></div>
+          <div className="portal__announcements-container">
+            <span className="portal__announcements-styletext">ANNOUNCEMENTS</span>
+            <div className="portal__announcements-box"></div>
+          </div>
         </div>
         <div className="portal__application">
           <ApplicationView />
