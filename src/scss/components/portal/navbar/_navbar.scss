@@ -18,15 +18,42 @@
   left: 8em;
   top: 2em;
   position: relative;
+  @include respond(desktop) {
+   width: 87%;
+  }
+  @include respond(tab-land) {
+    width: 83%;
+  }
+  @include respond(tab-port) {
+    width: 79%;
+  }
+  @include respond(phone) {
+    width: 73%;
+  }
+  @include respond(phone-narrow) {
+    width: 67%;
+  }
+  @include respond(smallest) {
+    width: 65%;
+    left: 6em;
+  }
 }
 
 &__navbar-title {
   order: 1;
   flex-basis: 93%;
+  flex-grow: 0.75;
+  @include respond(phone) {
+    flex-basis: 10%;
+  }
+  @include respond(smallest) {
+    padding-right: 28%;
+  }
   //flex: 10;
 }
 
 &__navbar-logout {
   order: 2;
   justify-self: right;
+  width: 5em;
 }
