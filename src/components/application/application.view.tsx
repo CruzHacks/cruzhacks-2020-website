@@ -1,5 +1,7 @@
 import React from 'react';
 import DemographicsView from './forms/demographics.view';
+import ExperiencesView from './forms/experiences.view';
+import LogisticsView from './forms/logistics.view';
 const ApplicationView: React.FC = () => {
   return (
     <>
@@ -8,6 +10,8 @@ const ApplicationView: React.FC = () => {
           <span className="application__titleBar-text">APPLICATION</span>
         </div>
         <DemographicsView />
+        <ExperiencesView />
+        <LogisticsView/>
       </div>
     </>
   );
