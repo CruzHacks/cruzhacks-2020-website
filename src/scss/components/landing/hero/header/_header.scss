@@ -34,13 +34,11 @@
   cursor: pointer;
   order: 0;
   @include svgContainer();
-  width: 55px;
-  height: 40px;
+  width: 80px;
+  height: 60px;
   position: absolute;
-  left: 0.1%;
-  top: 0.1%;
-  margin: 1% 0 0 1%;
-
+  top: 0.5em;
+  left: 0.25em;
   @include respond(phone) {
     margin: unset;
   }
