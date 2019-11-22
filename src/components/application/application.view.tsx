@@ -2,6 +2,7 @@ import React from 'react';
 import DemographicsView from './forms/demographics.view';
 import ExperiencesView from './forms/experiences.view';
 import LogisticsView from './forms/logistics.view';
+
 const ApplicationView: React.FC = () => {
   return (
     <>
