@@ -26,33 +26,33 @@ const LogisticsView: React.FC = () => {
                 <label className="logistics__label">Could you use a place to sleep?*</label>
                 <div className="radio-button">
                     <label className="radio-label">Yes</label>
-                    <input type="radio" name="place-to-sleep" value="true" />
+                    <input type="radio" name="sleep" value="true" onClick={handleInputChange}/>
                 </div>
                 <div className="radio-button">
                     <label className="radio-label">No</label>
-                    <input type="radio" name="place-to-sleep" value="false" />
+                    <input type="radio" name="sleep" value="false" onClick={handleInputChange}/>
                 </div>
             </section>
             <section className="transportation-section">
                 <label className="logistics__label">Could you use help with transportation?*</label>
                 <div className="radio-button">
                     <label className="radio-label">Yes</label>
-                    <input type="radio" name="transportation" value="true" />
+                    <input type="radio" name="transportation" value="true" onClick={handleInputChange}/>
                 </div>
                 <div className="radio-button">
                     <label className="radio-label">No</label>
-                    <input type="radio" name="transportation" value="false" />
+                    <input type="radio" name="transportation" value="false" onClick={handleInputChange}/>
                 </div>
             </section>
             <section className="place-to-park-section">
                 <label className="logistics__label">Do you need a place to park?*</label>
                 <div className="radio-button">
                     <label className="radio-label">Yes</label>
-                    <input type="radio" name="place-to-park" value="true" />
+                    <input type="radio" name="park" value="true" />
                 </div>
                 <div className="radio-button">
                     <label className="radio-label">No</label>
-                    <input type="radio" name="place-to-park" value="false" />
+                    <input type="radio" name="park" value="false" onClick={handleInputChange}/>
                 </div>
             </section>
             <section className="accommodations-section">
