@@ -1,4 +1,5 @@
-// !FIX GENDER SECTION
+// !FIX GENDER SECTION other text box not changing
+
 .application {
   height: 100%;
   width: 100%;
@@ -42,7 +43,14 @@
   margin: 0.6vw 0.9vw 0.6vw 0;
   display: inline-block;
 }
+.radio-button-spaced {
+  margin: 0.6vw 3vw 0.6vw 0;
+  display: inline-block;
+}
 .radio-label {
   margin-right: 0.4vw;
 }
+
 @import 'forms/demographics';
+@import 'forms/experiences';
+@import 'forms/logistics';

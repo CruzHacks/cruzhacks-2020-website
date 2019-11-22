@@ -3,7 +3,7 @@
   font-family: 'Rubik Regular';
   font-weight: 600;
   position: relative;
-  top: 15vh;
+  top: 7vh;
   max-width: 60vw;
   margin: 0 auto;
   color: #4a38f2;
@@ -19,11 +19,11 @@
 
   &__age {
     float: left;
-    margin-right: 10vw;
+    //margin-right: 13vw;
   }
 
   &__gender {
-    float: left;
+    float: right;
   }
 
   /* Gender form section */
@@ -39,6 +39,21 @@
     margin-bottom: 1.1vh;
     display: block;
   }
+
+  // education related
+  &__yog {
+    float: left;
+    margin-right: 4vw;
+  }
+  &__ucsc-student {
+    float: left;
+  }
+  &__college-affil {
+    float: right;
+  }
+
+  // major
+  
 }
 // inputs
 #first-name__input,
@@ -53,7 +68,11 @@
 }
 
 #email__input,
-#password__input {
+#password__input,
+#major__input,
+#linkedin__input,
+#github__input,
+#resume__input {
   border-width: 0;
   border: none;
   background-color: #f4f4f4;
@@ -78,11 +97,26 @@
   border: none;
   background-color: #f4f4f4;
   height: 40px;
-  width: 8vw;
+  width: 12vw;
+  font-size: 28px;
+}
+
+#yog__input {
+  border-width: 0;
+  border: none;
+  background-color: #f4f4f4;
+  height: 40px;
+  width: 11.5vw;
   font-size: 28px;
 }
 
 .email-section,
-.password-section {
+.password-section,
+.age-gender-section,
+.edu-demographics-section,
+.major-section,
+.linkedin-section,
+.github-section,
+.resume-section {
   margin: 3vh 0;
 }
