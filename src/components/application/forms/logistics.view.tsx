@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const LogisticsView: React.FC = () => {
-
   const [logisticsValues, setLogisticsValues] = useState({
     dietaryRestrictions: false,
     sleep: false,
