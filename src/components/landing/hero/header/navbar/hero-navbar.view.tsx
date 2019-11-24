@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import packet from '../../../../../assets/data/sponsor/sponsorship_packet.pdf';
 
 const HeroNavbarView: React.FC = () => {
   return (
@@ -10,7 +11,14 @@ const HeroNavbarView: React.FC = () => {
         </Link>
       </div>
       <div className="navbar__button">
-        <p className="navbar__button-text">SPONSOR</p>
+        <a
+          href="mailto:sponsor@cruzhacks.com"
+          style={{ textDecoration: 'none' }}
+        >
+          <p className="navbar__button-text" style={{ textDecoration: 'none' }}>
+            SPONSOR
+          </p>
+        </a>
       </div>
       {/* <div className="navbar__button">
         <p className="navbar__button-text">JOIN US</p>
