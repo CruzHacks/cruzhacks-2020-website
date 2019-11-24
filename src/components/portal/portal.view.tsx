@@ -6,6 +6,7 @@ import { applicationHasBeenSubmitted } from '../../account';
 
 class PortalView extends React.Component {
   state = {
+    hasSubmittedApplication: null,
     applicationStatusMessage: '',
   };
 
@@ -15,9 +16,11 @@ class PortalView extends React.Component {
         const message =
           hasSubmitted === true
             ? 'Your application is under review.'
-            : "You haven't yet submitted your application! Apply Here";
-        this.setState({ applicationStatusMessage: message });
-        console.log('ran');
+            : "You haven't yet submitted your application. Apply below!";
+        this.setState({
+          hasSubmittedApplication: hasSubmitted,
+          applicationStatusMessage: message,
+        });
       })
       .catch(error => {
         console.error(error);
@@ -44,17 +47,22 @@ class PortalView extends React.Component {
               {/* <div className="portal__appstatus-status-container"></div> */}
             </div>
           </div>
-          <div className="portal__announcements">
+          {/* <div className="portal__announcements">
             <div className="portal__announcements-container">
               <span className="portal__announcements-styletext">
                 ANNOUNCEMENTS
               </span>
               <div className="portal__announcements-box"></div>
             </div>
-          </div>
-          <div className="portal__application">
-            <ApplicationView />
-          </div>
+          </div> */}
+
+          {this.state.hasSubmittedApplication === false ? (
+            <div className="portal__application">
+              <ApplicationView />
+            </div>
+          ) : (
+            <div></div>
+          )}
         </div>
       </>
     );
