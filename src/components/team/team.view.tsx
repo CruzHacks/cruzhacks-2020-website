@@ -32,6 +32,17 @@ const memberCards = MembersJson.map((t, i) => {
 const TeamView: React.FC = () => {
   return (
     <>
+      <a
+        href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=white"
+        id="mlh-trust-badge"
+        target="__blank"
+      >
+        <img
+          alt="Major League Hacking 2020 Hackathon Season"
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-gray.svg"
+          id="mlh-trust-badge-img"
+        />
+      </a>
       <div className="team">
         <HeroHeaderView />
         <div className="team__title-area">
