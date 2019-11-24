@@ -57,7 +57,7 @@ const ApplicationView: React.FC = () => {
   };
 
   const handleInputChange = event => {
-    const { name, value } = event.target;
+    let { name, value } = event.target;
 
     switch (name) {
       case 'firstName':
@@ -117,7 +117,15 @@ const ApplicationView: React.FC = () => {
           setFormValid({ ...formValid, [name]: true });
         }
         break;
+      case 'ucscStudent':
+            value = value === "yes"
+        break;
       case 'collegeAffiliation':
+        console.log(formValues);
+
+        if (formValues.ucscStudent === true && value !== 'NA') {
+          setFormValid({ ...formValid, [name]: true });
+        }
         break;
       case 'yearOfGrad':
         if (value.length == 4) {
@@ -164,8 +172,8 @@ const ApplicationView: React.FC = () => {
         }
         break;
     }
-    console.log(name);
-    console.log(value);
+    // console.log(name);
+    // console.log(value);
 
     setFormValues({ ...formValues, [name]: value });
   };
@@ -453,7 +461,7 @@ const ApplicationView: React.FC = () => {
                     aria-label="yes"
                     aria-required="true"
                     id="UCSC Student"
-                    name="ucsc-student"
+                    name="ucscStudent"
                     value="yes"
                   />
                 </div>
@@ -465,7 +473,7 @@ const ApplicationView: React.FC = () => {
                     type="radio"
                     aria-label="no"
                     aria-required="true"
-                    name="ucsc-student"
+                    name="ucscStudent"
                     id="UCSC Student"
                     value="no"
                   />
@@ -479,10 +487,12 @@ const ApplicationView: React.FC = () => {
                   htmlFor="College Affiliation"
                   className="demographics__label"
                 >
-                  College Affiliation
+                  UCSC College Affiliation
                 </label>
                 <select id="College Affiliation" name="collegeAffiliation">
-                  <option aria-label="-" value=""></option>
+                  <option aria-label="-" value="">
+                    NA
+                  </option>
                   <option aria-label="Rachel Carson College" value="rcc">
                     Rachel Carson College
                   </option>
