@@ -12,6 +12,10 @@ export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
       return response.data.length !== 0;
     })
     .catch(error => {
-      return error;
+      if (error.response.status == 404) {
+        return Promise.resolve(false);
+      }
+
+      return Promise.reject(error);
     });
 }

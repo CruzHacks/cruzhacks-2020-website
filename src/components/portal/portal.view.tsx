@@ -11,8 +11,9 @@ class PortalView extends React.Component {
   };
 
   componentDidMount() {
-    applicationHasBeenSubmitted('kdobrien@ucsc.edu')
+    applicationHasBeenSubmitted('kdobrien@ucdsc.edu')
       .then(hasSubmitted => {
+        console.log(hasSubmitted);
         const message =
           hasSubmitted === true
             ? 'Your application is under review.'
@@ -21,6 +22,7 @@ class PortalView extends React.Component {
           hasSubmittedApplication: hasSubmitted,
           applicationStatusMessage: message,
         });
+        console.log(hasSubmitted);
       })
       .catch(error => {
         console.error(error);
@@ -30,24 +32,25 @@ class PortalView extends React.Component {
   render() {
     return (
       <>
-        <div className="portal">
-          <div className="portal__navbar">
-            <HeroLightBulbView />
-            <div className="portal__navbar-text-container">
-              <span className="portal__navbar-title">Dashboard</span>
-              <span className="portal__navbar-logout">Log out</span>
+        <div className="dashboard">
+          <div className="portal">
+            <div className="portal__navbar">
+              <HeroLightBulbView />
+              <div className="portal__navbar-text-container">
+                <span className="portal__navbar-title">Dashboard</span>
+                <span className="portal__navbar-logout">Log out</span>
+              </div>
             </div>
-          </div>
-          <div className="portal__appstatus">
-            <div className="portal__appstatus-container">
-              <span className="portal__appstatus-text">
-                {/* Your application is under review. Days until CruzHacks: */}
-                {this.state.applicationStatusMessage}
-              </span>
-              {/* <div className="portal__appstatus-status-container"></div> */}
+            <div className="portal__appstatus">
+              <div className="portal__appstatus-container">
+                <span className="portal__appstatus-text">
+                  {/* Your application is under review. Days until CruzHacks: */}
+                  {this.state.applicationStatusMessage}
+                </span>
+                {/* <div className="portal__appstatus-status-container"></div> */}
+              </div>
             </div>
-          </div>
-          {/* <div className="portal__announcements">
+            {/* <div className="portal__announcements">
             <div className="portal__announcements-container">
               <span className="portal__announcements-styletext">
                 ANNOUNCEMENTS
@@ -55,7 +58,7 @@ class PortalView extends React.Component {
               <div className="portal__announcements-box"></div>
             </div>
           </div> */}
-
+          </div>
           {this.state.hasSubmittedApplication === false ? (
             <div className="portal__application">
               <ApplicationView />
