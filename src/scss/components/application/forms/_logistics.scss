@@ -1,31 +1,37 @@
 .logistics {
-    font-family: 'Rubik Regular';
-    font-weight: 600;
-    position: relative;
-    top: 13vh;
-    max-width: 60vw;
-    margin: 0 auto;
-    color: #4a38f2;
+  font-family: 'Rubik Regular';
+  font-weight: 600;
+  position: relative;
+  top: 13vh;
+  max-width: 60vw;
+  margin: 0 auto;
+  color: #4a38f2;
 
-    &__label {
-        margin-bottom: 1.1vh;
-        display: block;
-    }
+  &__label {
+    margin-bottom: 1.1vh;
+    display: block;
+  }
+  &__header {
+    @include header;
+  }
+  &__header::before {
+    @include header-underline(5.5em);
+  }
 }
 
 #accommodations__input {
-    border-width: 0;
-    border: none;
-    background-color: #f4f4f4;
-    display: block;
-    height: 46px;
-    width: 60vw;
-    font-size: 28px;
+  border-width: 0;
+  border: none;
+  background-color: #f4f4f4;
+  display: block;
+  height: 46px;
+  width: 60vw;
+  font-size: 28px;
 }
 
 .place-to-sleep-section,
 .transportation-section,
 .place-to-park-section,
 .accommodations-section {
-    margin: 3vh 0;
+  margin: 3vh 0;
 }
