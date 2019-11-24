@@ -4,7 +4,6 @@ import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Auth0Provider } from './auth/auth';
-import authConfig from './auth/auth-config.json';
 import history from './utils/history';
 
 const onRedirectCallback = appState => {
@@ -17,8 +16,8 @@ const onRedirectCallback = appState => {
 
 ReactDOM.render(
   <Auth0Provider
-    domain={authConfig.domain}
-    client_id={authConfig.clientId}
+    domain={process.env.REACT_APP_AUTH0_DOMAIN + ''}
+    client_id={process.env.REACT_APP_AUTH0_CLIENTID + ''}
     redirect_uri={window.location.origin}
     onRedirectCallback={onRedirectCallback}
   >

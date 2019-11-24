@@ -24,8 +24,6 @@ interface Auth0ProviderOptions {
 const DEFAULT_REDIRECT_CALLBACK = () =>
   window.history.replaceState({}, document.title, window.location.pathname);
 
-console.log(DEFAULT_REDIRECT_CALLBACK); // REMOVE THIS LOG
-
 export const Auth0Context = React.createContext<Auth0Context | null>(null);
 export const useAuth0 = () => useContext(Auth0Context);
 export const Auth0Provider = ({
@@ -64,10 +62,10 @@ export const Auth0Provider = ({
     // eslint-disable-next-line
   }, []);
 
-  const loginWithPopup = async (params = {}) => {
+  const loginWithPopup = async (o: PopupLoginOptions) => {
     setPopupOpen(true);
     try {
-      await auth0Client!.loginWithPopup(params);
+      await auth0Client!.loginWithPopup(o);
     } catch (error) {
       console.error(error);
     } finally {
@@ -80,11 +78,12 @@ export const Auth0Provider = ({
 
   const handleRedirectCallback = async () => {
     setLoading(true);
-    await auth0Client!.handleRedirectCallback();
+    const result = await auth0Client!.handleRedirectCallback();
     const user = await auth0Client!.getUser();
     setLoading(false);
     setIsAuthenticated(true);
     setUser(user);
+    return result;
   };
   return (
     <Auth0Context.Provider
@@ -94,7 +93,7 @@ export const Auth0Provider = ({
         loading,
         popupOpen,
         loginWithPopup,
-        handleRedirectCallback: () => auth0Client!.handleRedirectCallback(),
+        handleRedirectCallback,
         getIdTokenClaims: (o: getIdTokenClaimsOptions | undefined) =>
           auth0Client!.getIdTokenClaims(o),
         loginWithRedirect: (o: RedirectLoginOptions) =>

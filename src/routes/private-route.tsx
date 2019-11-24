@@ -1,8 +1,8 @@
 import React, { useEffect, Component } from 'react';
 import { Route } from 'react-router-dom';
 import { useAuth0 } from '../auth/auth';
-import PortalView from '../components/portal/portal.view';
 import LandingView from '../components/landing/landing.view';
+// import signInConfig from '../auth/auth-signin-config.json'; [I may want to use this later]
 
 type PrivateRouteProps = {
   component: any;
@@ -18,12 +18,13 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({
 
   const { isAuthenticated, loginWithRedirect } = authContext;
 
+  // redirect_uri: process.env.REACT_APP_REDIRECT_URI || 'http://localhost:3000/portal',
+
   useEffect(() => {
     const fn = async () => {
       if (!isAuthenticated) {
         await loginWithRedirect({
-          redirect_uri: 'http://localhost:3000/portal', // only works for dev, need a condition to see if we're in prod
-          appState: { targetUrl: path },
+          appState: { targetUrl: path }, // params: JSON.stringify(signInConfig),
         });
       }
     };
@@ -32,7 +33,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({
 
   const render = () => (isAuthenticated === true ? component : <LandingView />);
 
-  return <Route exact path="/portal" render={render} />;
+  return <Route exact path={path} render={render} />;
 };
 
 export default PrivateRoute;
