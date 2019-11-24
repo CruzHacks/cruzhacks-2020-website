@@ -61,8 +61,8 @@ const ApplicationView: React.FC = () => {
         }
         break;
       case 'email':
-        console.log(name);
-        console.log(value);
+        // console.log(name);
+        // console.log(value);
         const emailRegExp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
         if (value.length < 256 && value.length > 0 && emailRegExp.test(value)) {
           setFormValid({...formValid, [name]: true});
@@ -117,7 +117,7 @@ const ApplicationView: React.FC = () => {
 
   const validForm = () => {
     for (const [key, value] of Object.entries(formValid)) {
-      console.log(`${key} : ${value}`);
+    //   console.log(`${key} : ${value}`);
       if (!value) {
         return false;
       }
@@ -730,7 +730,7 @@ const ApplicationView: React.FC = () => {
                 htmlFor="accommodations__input"
                 className="logistics__label"
               >
-                Do you require any special accommodations?
+                Do you require any special accommodations? (150 chars)
               </label>
               <input
                 name="accomadations"
