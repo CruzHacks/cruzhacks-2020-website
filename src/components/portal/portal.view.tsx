@@ -49,13 +49,10 @@ const PortalView: React.FC = () => {
           </div>
         </div>
         <div className="portal__appstatus">
-          <div className="portal__appstatus-container">
-            <span className="portal__appstatus-text">
-              {/* Your application is under review. Days until CruzHacks: */}
-              {applicationStatusMessage}
-            </span>
-            {/* <div className="portal__appstatus-status-container"></div> */}
-          </div>
+          <span className="portal__appstatus-text">
+            {/* Your application is under review. Days until CruzHacks: */}
+            {applicationStatusMessage}
+          </span>
         </div>
         {/* <div className="portal__announcements">
             <div className="portal__announcements-container">
