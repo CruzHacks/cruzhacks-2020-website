@@ -3,12 +3,12 @@
 .application {
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: relative;
   font-family: 'Rubik Regular';
   letter-spacing: 1px;
   &__titleBar {
     top: 0;
-    height: 9.9em;
+    height: 10.5em;
     background-color: #6f6fe8;
   }
   &__titleBar-text {
