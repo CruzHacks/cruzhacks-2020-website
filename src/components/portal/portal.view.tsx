@@ -6,9 +6,8 @@ import { useAuth0 } from '../../auth/auth';
 
 const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
-  const { user, logout } = authContext;
 
-  const userName = user.name.split('@')[0];
+  const { user, logout } = authContext;
 
   const [hasSubmittedApplication, setHasSubmitted] = useState(false);
   const [applicationStatusMessage, setMessage] = useState('');
@@ -18,17 +17,17 @@ const PortalView: React.FC = () => {
       .then(hasSubmitted => {
         const message =
           hasSubmitted === true
-            ? `Hi ${userName}, your application is under review.`
+            ? `Hi ${user.nickname}, your application is under review.`
             : user.email_verified === true
-            ? `Hi ${userName}, you haven't yet submitted your application. Apply below!`
-            : `Hi ${userName}, we need to verify your email first before you apply!`;
+            ? `Hi ${user.nickname}, you haven't submitted your application yet. Apply below!`
+            : `Hi ${user.nickname}, we need to verify your email first before you apply!`;
         setHasSubmitted(hasSubmitted);
         setMessage(message);
       })
       .catch(error => {
         console.error(error);
       });
-  }, []);
+  }, [user.email, user.email_verified, user.nickname]);
 
   const logoutWithRedirect = () =>
     logout({
@@ -66,7 +65,7 @@ const PortalView: React.FC = () => {
               <div className="portal__announcements-box"></div>
             </div>
           </div> */}
-        {hasSubmittedApplication === false ? (
+        {hasSubmittedApplication === false && user.email_verified === true ? (
           <div className="portal__application">
             <ApplicationView />
           </div>
