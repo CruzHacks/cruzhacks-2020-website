@@ -2,23 +2,7 @@ import React, { useState } from 'react';
 import ApplicationView from '../application/application.view';
 import { NavLink } from 'react-router-dom';
 import HeroLightBulbView from '../landing/hero/header/hero-lightbulb.view';
-import axios, { AxiosRequestConfig } from 'axios';
-
-function applicationHasBeenSubmitted(email: string): Promise<boolean> {
-  const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
-  const apiKey = process.env.REACT_APP_API_KEY + '';
-  const queryParams = `?authentication=${apiKey}&accountType=hacker&accountEmail=${email}`;
-
-  return axios
-    .get<Array<Object>>(endpoint + queryParams)
-    .then(response => {
-      console.log(response);
-      return response.data.length !== 0;
-    })
-    .catch(error => {
-      return error;
-    });
-}
+import { applicationHasBeenSubmitted } from '../../account';
 
 class PortalView extends React.Component {
   state = {
@@ -28,9 +12,10 @@ class PortalView extends React.Component {
   componentDidMount() {
     applicationHasBeenSubmitted('kdobrien@ucsc.edu')
       .then(hasSubmitted => {
-        const message = hasSubmitted === true
-          ? 'Your application is under review.'
-          : "You haven't yet submitted your application! Apply Here";
+        const message =
+          hasSubmitted === true
+            ? 'Your application is under review.'
+            : "You haven't yet submitted your application! Apply Here";
         this.setState({ applicationStatusMessage: message });
         console.log('ran');
       })
