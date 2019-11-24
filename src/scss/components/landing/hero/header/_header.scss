@@ -39,6 +39,7 @@
   position: absolute;
   top: 0.5em;
   left: 0.25em;
+  z-index: 5;
   @include respond(phone) {
     margin: unset;
   }
