@@ -1,5 +1,22 @@
 // !FIX GENDER SECTION other text box not changing
-
+@mixin header {
+  margin-bottom: 2em;
+  font-size: 1.25em;
+  max-width: 8em;
+  height: auto;
+}
+@mixin header-underline($width) {
+  position: absolute;
+  content: '';
+  background-image: url('underline.svg');
+  background-repeat: no-repeat;
+  background-position-y: 16px;
+  background-size: cover;
+  margin-left: -0.2em;
+  z-index: -1;
+  height: 1.5em;
+  width: $width;
+}
 .application {
   height: 100%;
   width: 100%;
@@ -18,31 +35,11 @@
     margin-left: 3em;
     position: relative;
   }
-  &__header {
-    margin-bottom: 2em;
-    font-size: 1.25em;
-    max-width: 8em;
-    height: auto;
-
-    // TODO border bottom
-  }
-  &__header::before {
-    position: absolute;
-    content: '';
-    background-image: url('underline.svg');
-    background-repeat: no-repeat;
-    background-position-y: 16px;
-    background-size: cover;
-    margin-left: -0.2em;
-    z-index: -1;
-    height: 1.5em;
-    width: 8.25em;
-  }
   &__button {
     margin-top: 50px;
     margin-bottom: 150px;
     color: white;
-    background-color: #6F6FE8;
+    background-color: #6f6fe8;
     border-radius: 10%;
     font-size: 24px;
     padding: 20px 25px 20px 25px;

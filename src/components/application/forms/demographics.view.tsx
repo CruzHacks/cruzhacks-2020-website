@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const DemographicsView: React.FC = () => {
-
   const [values, setValues] = useState({
     firstName: '',
     lastName: '',
@@ -21,31 +20,49 @@ const DemographicsView: React.FC = () => {
 
   const handleInputChange = e => {
     const { name, value } = e.target;
-    setValues({...values, [name]: value});
-  }
+    setValues({ ...values, [name]: value });
+  };
 
   // NEED ONSUBMIT
 
   return (
     <>
       <div className="demographics">
-        <h3 className="application__header">Demographics</h3>
+        <h3 className="demographics__header">Demographics</h3>
         <form className="demographics__form">
           <section className="first-last-section">
             <div className="demographics__first-name">
               <label className="demographics__label">First Name</label>
-              <input name="firstName" id="first-name__input" type="text" value={values.firstName} onChange={handleInputChange} />
+              <input
+                name="firstName"
+                id="first-name__input"
+                type="text"
+                value={values.firstName}
+                onChange={handleInputChange}
+              />
             </div>
             <div className="demographics__last-name">
               <label className="demographics__label">Last Name</label>
-              <input name="lastName" id="last-name__input" type="text" value={values.lastName} onChange={handleInputChange} />
+              <input
+                name="lastName"
+                id="last-name__input"
+                type="text"
+                value={values.lastName}
+                onChange={handleInputChange}
+              />
             </div>
             <br style={{ clear: 'both' }} />
           </section>
           <section className="email-section">
             <div className="demographics__email">
               <label className="demographics__label">Email</label>
-              <input name="email" id="email__input" type="email" value={values.email} onChange={handleInputChange}/>
+              <input
+                name="email"
+                id="email__input"
+                type="email"
+                value={values.email}
+                onChange={handleInputChange}
+              />
             </div>
           </section>
           <section className="password-section">
@@ -53,13 +70,25 @@ const DemographicsView: React.FC = () => {
               <label className="demographics__label">
                 Hack Portal Password
               </label>
-              <input name="password" id="password__input" type="password" value={values.password} onChange={handleInputChange}/>
+              <input
+                name="password"
+                id="password__input"
+                type="password"
+                value={values.password}
+                onChange={handleInputChange}
+              />
             </div>
           </section>
           <section className="age-gender-section">
             <div className="demographics__age">
               <label className="demographics__label">Age</label>
-              <input name="age" id="age__input" type="number" value={values.age} onChange={handleInputChange}/>
+              <input
+                name="age"
+                id="age__input"
+                type="number"
+                value={values.age}
+                onChange={handleInputChange}
+              />
             </div>
             <div className="demographics__gender" onChange={handleInputChange}>
               <label className="demographics__label">Gender</label>
@@ -88,10 +117,11 @@ const DemographicsView: React.FC = () => {
           </section>
 
           <section className="ethnicity-section">
-            <div className="demographics__ethnicity" onChange={handleInputChange}>
-              <label className="demographics__label">
-                Ethnicity
-              </label>
+            <div
+              className="demographics__ethnicity"
+              onChange={handleInputChange}
+            >
+              <label className="demographics__label">Ethnicity</label>
               <div className="radio-button-spaced">
                 <label className="radio-label">Asian</label>
                 <input type="radio" name="ethnicity" value="asian" />
@@ -121,15 +151,20 @@ const DemographicsView: React.FC = () => {
 
           <section className="edu-demographics-section">
             <div className="demographics__yog">
-              <label className="demographics__label">
-                Year of Graduation:
-              </label>
-              <input name="yearOfGrad" id="yog__input" type="text" value={values.yearOfGrad} onChange={handleInputChange}/>
+              <label className="demographics__label">Year of Graduation:</label>
+              <input
+                name="yearOfGrad"
+                id="yog__input"
+                type="text"
+                value={values.yearOfGrad}
+                onChange={handleInputChange}
+              />
             </div>
-            <div className="demographics__ucsc-student" onChange={handleInputChange}>
-              <label className="demographics__label">
-                UCSC Student
-              </label>
+            <div
+              className="demographics__ucsc-student"
+              onChange={handleInputChange}
+            >
+              <label className="demographics__label">UCSC Student</label>
               <div className="radio-button-spaced">
                 <label className="radio-label">Yes</label>
                 <input type="radio" name="ucsc-student" value="yes" checked />
@@ -139,10 +174,11 @@ const DemographicsView: React.FC = () => {
                 <input type="radio" name="ucsc-student" value="no" checked />
               </div>
             </div>
-            <div className="demographics__college-affil" onChange={handleInputChange}>
-              <label className="demographics__label">
-                College Affiliation
-              </label>
+            <div
+              className="demographics__college-affil"
+              onChange={handleInputChange}
+            >
+              <label className="demographics__label">College Affiliation</label>
               <select>
                 <option value="rcc">Rachel Carson College</option>
                 <option value="porter">Porter College</option>
@@ -159,20 +195,40 @@ const DemographicsView: React.FC = () => {
 
           <section className="major-section">
             <div className="demographics__major">
-              <label className="demographics__label">Major/Field of Study</label>
-              <input name="major" id="major__input" type="text" value={values.major} onChange={handleInputChange}/>
+              <label className="demographics__label">
+                Major/Field of Study
+              </label>
+              <input
+                name="major"
+                id="major__input"
+                type="text"
+                value={values.major}
+                onChange={handleInputChange}
+              />
             </div>
           </section>
           <section className="linkedin-section">
             <div className="demographics__major">
               <label className="demographics__label">LinkedIn URL</label>
-              <input name="linkedinUrl" id="linkedin__input" type="text" value={values.linkedinUrl} onChange={handleInputChange}/>
+              <input
+                name="linkedinUrl"
+                id="linkedin__input"
+                type="text"
+                value={values.linkedinUrl}
+                onChange={handleInputChange}
+              />
             </div>
           </section>
           <section className="github-section">
             <div className="demographics__major">
               <label className="demographics__label">Github URL</label>
-              <input name="githubUrl" id="github__input" type="text" value={values.githubUrl} onChange={handleInputChange}/>
+              <input
+                name="githubUrl"
+                id="github__input"
+                type="text"
+                value={values.githubUrl}
+                onChange={handleInputChange}
+              />
             </div>
           </section>
           <section className="resume-section">
