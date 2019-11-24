@@ -43,12 +43,14 @@ const PortalView: React.FC = () => {
           <HeroLightBulbView />
           <div className="portal__navbar-text-container">
             <span className="portal__navbar-title">Dashboard</span>
-            <span
-              className="portal__navbar-logout"
-              onClick={() => logoutWithRedirect()}
-            >
-              Log out
-            </span>
+            <div className="portal__navbar-logout-container">
+              <span
+                className="portal__navbar-logout"
+                onClick={() => logoutWithRedirect()}
+              >
+                Log out
+              </span>
+            </div>
           </div>
         </div>
         <div className="portal__appstatus">
