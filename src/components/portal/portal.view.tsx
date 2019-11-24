@@ -18,8 +18,10 @@ const PortalView: React.FC = () => {
       .then(hasSubmitted => {
         const message =
           hasSubmitted === true
-            ? `Hi ${userName}, Your application is under review.`
-            : `Hi ${userName}, You haven't yet submitted your application. Apply below!`;
+            ? `Hi ${userName}, your application is under review.`
+            : user.email_verified === true
+            ? `Hi ${userName}, you haven't yet submitted your application. Apply below!`
+            : `Hi ${userName}, we need to verify your email first before you apply!`;
         setHasSubmitted(hasSubmitted);
         setMessage(message);
       })
