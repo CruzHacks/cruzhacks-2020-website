@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { DH_UNABLE_TO_CHECK_GENERATOR } from 'constants';
 //import DemographicsView from './forms/demographics.view';
 //import ExperiencesView from './forms/experiences.view';
 //import LogisticsView from './forms/logistics.view';
@@ -31,17 +32,113 @@ const ApplicationView: React.FC = () => {
     specialAccomodations: '',
   });
 
+  const [formValid, setFormValid] = useState({
+    firstName: false,
+    lastName: false,
+    email: false,
+    password: false,
+    age: false, 
+    school: false,
+    yearOfGrad: false,
+    major: false,
+    linkedinUrl: false,
+    githubUrl: false,
+    participateQuestion: false,
+    seeAtCruzhacks: false,
+    specialAccomodations: false,
+  });
+
   const handleInputChange = event => {
     const { name, value } = event.target;
+
+    switch (name) {
+      case 'firstName':
+        if (value.length < 100 && value.length > 0) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'lastName':
+        if (value.length < 100 && value.length > 0) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'email':
+        console.log(name);
+        console.log(value);
+        const emailRegExp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+        if (value.length < 256 && value.length > 0 && emailRegExp.test(value)) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'password':
+        if (value.length < 100 && value.length > 0) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'age':
+        if (value.length <=3 && value.length > 0) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'school':
+        // need 1 more validation for alphanumber
+        if (value.length < 320 && value.length > 0) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'yearOfGrad':
+        if (value.length == 4) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'major': 
+        if (value.length < 320 && value.length > 0) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'linkedinUrl':
+        const linkedInRegexp = new RegExp(/^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/)
+        if (value.length < 256 && value.length > 0 && linkedInRegexp.test(value)) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'githubUrl':
+      const githubInRegexp = new RegExp(/^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/)
+        if (value.length < 256 && value.length > 0 && githubInRegexp.test(value)) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'participateQuestion':
+        if (value.length < 500 && value.length > 0) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+      case 'seeAtCruzhacks':
+        if (value.length < 500 && value.length > 0) {
+          setFormValid({...formValid, [name]: true});
+        }
+        break;
+    }
     setFormValues({ ...formValues, [name]: value });
-    console.log(formValues);
   };
 
+  const validForm = () => {
+    for (const [key, value] of Object.entries(formValid)) {
+      console.log(`${key} : ${value}`);
+      if (!value) {
+        return false;
+      }
+    }
+    return true;
+  }
+  
   // NEED API
   const handleApplicationSubmission = event => {
     console.log(formValues);
     event.preventDefault();
   };
+
+  const validform = validForm();
 
   return (
     <>
@@ -52,6 +149,58 @@ const ApplicationView: React.FC = () => {
         <div className="demographics">
           <h3 className="demographics__header">Demographics</h3>
           <form className="demographics__form">
+          <section className="first-last-section">
+            <div className="demographics__first-name">
+              <label className="demographics__label">First Name</label>
+              <input
+                name="firstName"
+                id="first-name__input"
+                type="text"
+                value={formValues.firstName}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="demographics__last-name">
+              <label className="demographics__label">Last Name</label>
+              <input
+                name="lastName"
+                id="last-name__input"
+                type="text"
+                value={formValues.lastName}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <br style={{ clear: 'both' }} />
+          </section>
+          <section className="email-section">
+            <div className="demographics__email">
+              <label className="demographics__label">Email</label>
+              <input
+                name="email"
+                id="email__input"
+                type="email"
+                value={formValues.email}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+          </section>
+          <section className="password-section">
+            <div className="demographics__password">
+              <label className="demographics__label">
+                Hack Portal Password
+              </label>
+              <input
+                name="password"
+                id="password__input"
+                type="password"
+                value={formValues.password}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+          </section>
             <section className="age-gender-section">
               <div className="demographics__age">
                 <label htmlFor="age" className="demographics__label">
@@ -65,6 +214,7 @@ const ApplicationView: React.FC = () => {
                   type="number"
                   value={formValues.age}
                   onChange={handleInputChange}
+                  required
                 />
               </div>
               <div
@@ -613,7 +763,7 @@ const ApplicationView: React.FC = () => {
                 onChange={handleInputChange}
               />
             </section>
-            <button type="submit" className="application__button">
+            <button type="submit" className="application__button" onClick={handleApplicationSubmission} >
               Submit
             </button>
           </form>
