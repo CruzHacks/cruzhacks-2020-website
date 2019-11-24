@@ -36,6 +36,7 @@ const ApplicationView: React.FC = () => {
     lastName: false,
     email: false,
     age: false,
+    gender: false,
     school: false,
     yearOfGrad: false,
     major: false,
@@ -46,7 +47,14 @@ const ApplicationView: React.FC = () => {
     specialAccomodations: false,
   });
 
-  const freeFormGenderInput = React.createRef<HTMLInputElement>();
+  //   const freeFormGenderInput = React.createRef<HTMLInputElement>();
+  const genderInputRefs = {
+    femaleGenderRadioInput: React.createRef<HTMLInputElement>(),
+    maleGenderRadioInput: React.createRef<HTMLInputElement>(),
+    transGenderRadioInput: React.createRef<HTMLInputElement>(),
+    nonBinaryGenderRadioInput: React.createRef<HTMLInputElement>(),
+    freeFormGenderInput: React.createRef<HTMLInputElement>(),
+  };
 
   const handleInputChange = event => {
     const { name, value } = event.target;
@@ -78,10 +86,31 @@ const ApplicationView: React.FC = () => {
         }
         break;
       case 'gender':
-        if (freeFormGenderInput.current && event.target.id !== 'other__input') {
-          freeFormGenderInput.current.value = '';
+        //   If the current change is in the freeform input, deslect the radio buttons.
+        // If a radio is clicked, clear the free form gender input.
+
+        const genderTextElement = genderInputRefs.freeFormGenderInput.current;
+        const eventID = event.target.id;
+
+        if (genderTextElement && eventID !== 'other__input') {
+          genderTextElement.value = '';
+        } else {
+          if (genderInputRefs.femaleGenderRadioInput.current) {
+            genderInputRefs.femaleGenderRadioInput.current.checked = false;
+          }
+          if (genderInputRefs.maleGenderRadioInput.current) {
+            genderInputRefs.maleGenderRadioInput.current.checked = false;
+          }
+          if (genderInputRefs.transGenderRadioInput.current) {
+            genderInputRefs.transGenderRadioInput.current.checked = false;
+          }
+          if (genderInputRefs.nonBinaryGenderRadioInput.current) {
+            genderInputRefs.nonBinaryGenderRadioInput.current.checked = false;
+          }
         }
-      // setFormValid({ ...formValid, [name]: true });
+
+        setFormValid({ ...formValid, [name]: true });
+        break;
       case 'school':
         // need 1 more validation for alphanumber
         if (value.length < 320 && value.length > 0) {
@@ -239,6 +268,7 @@ const ApplicationView: React.FC = () => {
                     aria-label="female"
                     aria-required="true"
                     value="female"
+                    ref={genderInputRefs.femaleGenderRadioInput}
                   />
                 </div>
                 <div className="radio-button">
@@ -252,6 +282,7 @@ const ApplicationView: React.FC = () => {
                     aria-required="true"
                     id="male"
                     value="male"
+                    ref={genderInputRefs.maleGenderRadioInput}
                   />
                 </div>
                 <div className="radio-button">
@@ -265,6 +296,7 @@ const ApplicationView: React.FC = () => {
                     aria-required="true"
                     id="trans"
                     value="trans"
+                    ref={genderInputRefs.transGenderRadioInput}
                   />
                 </div>
                 <div className="radio-button">
@@ -278,6 +310,7 @@ const ApplicationView: React.FC = () => {
                     aria-required="true"
                     id="nonBinary"
                     value="non-binary"
+                    ref={genderInputRefs.nonBinaryGenderRadioInput}
                   />
                 </div>
                 <div className="demographics__other-gender">
@@ -293,7 +326,7 @@ const ApplicationView: React.FC = () => {
                     aria-required="true"
                     type="text"
                     name="gender"
-                    ref={freeFormGenderInput}
+                    ref={genderInputRefs.freeFormGenderInput}
                   />
                 </div>
               </div>
