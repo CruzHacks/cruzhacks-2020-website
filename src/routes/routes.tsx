@@ -18,11 +18,6 @@ const Routes: React.FC = props => {
           <Switch>
             <Route exact path="/" render={() => <LandingView />} />
             <Route exact path="/team" render={() => <TeamView />} />
-            <Route
-              exact
-              path="/application"
-              render={() => <ApplicationView />}
-            />
             <Route exact path="/portal" render={() => <PortalView />} />
           </Switch>
         </Router>
