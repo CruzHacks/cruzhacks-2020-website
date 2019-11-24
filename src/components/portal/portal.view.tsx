@@ -16,7 +16,6 @@ const PortalView: React.FC = () => {
   useEffect(() => {
     applicationHasBeenSubmitted(user.email)
       .then(hasSubmitted => {
-        console.log(hasSubmitted);
         const message =
           hasSubmitted === true
             ? `Hi ${userName}, your application is under review.`
