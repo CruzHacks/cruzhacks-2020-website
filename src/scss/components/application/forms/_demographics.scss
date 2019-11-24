@@ -110,6 +110,12 @@
   font-size: 28px;
 }
 
+input[type='radio'] {
+  width: 17px;
+  height: 17px;
+  border: 3px solid #5252e2;
+}
+
 .email-section,
 .password-section,
 .age-gender-section,

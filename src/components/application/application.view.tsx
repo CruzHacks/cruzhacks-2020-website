@@ -233,12 +233,12 @@ const ApplicationView: React.FC = () => {
 
             <section className="participate-question">
                 <label className="experiences__label">Why do you want to participate? (500 chars)</label>
-                <textarea name="participateQuestion" className="experiences__textarea" value={formValues.participateQuestion} onChange={handleInputChange}/>            
+                <textarea name="participateQuestion" className="experiences__textarea" value={formValues.participateQuestion} onChange={handleInputChange}/>
             </section>
 
             <section className="see-question">
                 <label className="experiences__label">What would you like to see at CruzHacks 2020?* (500 chars)</label>
-                <textarea name="seeAtCruzhacks" className="experiences__textarea" onChange={handleInputChange}/>            
+                <textarea name="seeAtCruzhacks" className="experiences__textarea" onChange={handleInputChange}/>
             </section>
         </form>
       </div>
