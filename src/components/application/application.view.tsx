@@ -50,7 +50,7 @@ const ApplicationView: React.FC = () => {
           <span className="application__titleBar-text">APPLICATION</span>
         </div>
         <div className="demographics">
-          <h3 className="application__header">Demographics</h3>
+          <h3 className="demographics__header">Demographics</h3>
           <form className="demographics__form">
             <section className="first-last-section">
               <div className="demographics__first-name">
@@ -277,7 +277,7 @@ const ApplicationView: React.FC = () => {
           </form>
         </div>
         <div className="experiences">
-          <h3 className="application__header">Experiences</h3>
+          <h3 className="experiences__header">Experiences</h3>
           <form className="experiences__form">
             <section className="first-hackathon">
               <label className="experiences__label">First Hackathon?</label>
@@ -348,7 +348,7 @@ const ApplicationView: React.FC = () => {
           </form>
         </div>
         <div className="logistics">
-          <h3 className="application__header">Logistics</h3>
+          <h3 className="logistics__header">Logistics</h3>
           <form
             className="logistics__form"
             onSubmit={handleApplicationSubmission}
