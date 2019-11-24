@@ -20,7 +20,7 @@ const PortalView: React.FC = () => {
           hasSubmitted === true
             ? `Hi ${userName}, your application is under review.`
             : user.email_verified === true
-            ? `Hi ${userName}, you haven't yet submitted your application. Apply below!`
+            ? `Hi ${userName}, you haven't submitted your application yet. Apply below!`
             : `Hi ${userName}, we need to verify your email first before you apply!`;
         setHasSubmitted(hasSubmitted);
         setMessage(message);
@@ -64,7 +64,7 @@ const PortalView: React.FC = () => {
               <div className="portal__announcements-box"></div>
             </div>
           </div> */}
-        {hasSubmittedApplication === false ? (
+        {hasSubmittedApplication === false && user.email_verified === true ? (
           <div className="portal__application">
             <ApplicationView />
           </div>
