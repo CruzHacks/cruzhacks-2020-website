@@ -14,6 +14,12 @@
 /* Team Styles */
 @import './components/team/team';
 
+/* Application Styles */
+@import './components/application/application';
+
+/* Portal Styles */
+@import './components/portal/portal';
+
 html,
 body {
   width: 100%;
