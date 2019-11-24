@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios from 'axios';
 
 export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
   const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
@@ -12,7 +12,7 @@ export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
       return response.data.length !== 0;
     })
     .catch(error => {
-      if (error.response.status == 404) {
+      if (error.response.status === 404) {
         return Promise.resolve(false);
       }
 
