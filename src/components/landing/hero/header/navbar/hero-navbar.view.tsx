@@ -12,10 +12,9 @@ const HeroNavbarView: React.FC = () => {
       <div className="navbar__button">
         <p className="navbar__button-text">SPONSOR</p>
       </div>
-      <div className="navbar__button">
+      {/* <div className="navbar__button">
         <p className="navbar__button-text">JOIN US</p>
-      </div>
-
+      </div> */}
       <div className="navbar__button">
         <Link to="/team" style={{ textDecoration: `none` }}>
           <p className="navbar__button-text">TEAM</p>

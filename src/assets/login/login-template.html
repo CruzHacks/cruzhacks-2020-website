@@ -27,6 +27,7 @@
       var prompt = config.prompt;
       var languageDictionary;
       var language;
+      // var signInConfig = JSON.parse(config.extraParams.params) || {};
 
       if (config.dict && config.dict.signin && config.dict.signin.title) {
         languageDictionary = { title: config.dict.signin.title };
@@ -35,6 +36,20 @@
       }
       var loginHint = config.extraParams.login_hint;
       var colors = config.colors || {};
+
+      languageDictionary['success'] = {
+        logIn: 'Thanks for logging in.',
+        forgotPassword: "We've just sent you an email to reset your password.",
+        magicLink: 'We sent you a link to log in<br />to %s.',
+        signUp:
+          'Thanks for signing up! Please verify your email so you can access your account!',
+      };
+
+      languageDictionary['title'] = 'CruzHacks';
+
+      // console.log(config);
+      // console.log('my sign in config');
+      // console.log(signInConfig);
 
       // Available Lock configuration options: https://auth0.com/docs/libraries/lock/v11/configuration
       var lock = new Auth0Lock(config.clientID, config.auth0Domain, {
@@ -46,22 +61,21 @@
           params: config.internalOptions,
         },
         /* additional configuration needed for custom domains
-      configurationBaseUrl: config.clientConfigurationBaseUrl,
-      overrides: {
-        __tenant: config.auth0Tenant,
-        __token_issuer: 'YOUR_CUSTOM_DOMAIN'
-      }, */
+            configurationBaseUrl: config.clientConfigurationBaseUrl,
+            overrides: {
+              __tenant: config.auth0Tenant,
+              __token_issuer: 'YOUR_CUSTOM_DOMAIN'
+            }, */
+        // loginAfterSignUp: false,
         assetsUrl: config.assetsUrl,
         allowedConnections: connection ? [connection] : null,
         rememberLastLogin: !prompt,
         language: language,
         languageDictionary: languageDictionary,
         theme: {
-          logo:
-            'https://res.cloudinary.com/cruzhacks/image/upload/v1573689741/Frame_sjm05a.png',
+          logo: config.icon,
           primaryColor: colors.primary ? colors.primary : 'green',
         },
-        title: 'CruzHacks',
         prefill: loginHint ? { email: loginHint, username: loginHint } : null,
         closable: false,
         defaultADUsernameFromEmailPrefix: false,
