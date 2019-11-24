@@ -10,7 +10,6 @@ const ApplicationView: React.FC = () => {
     firstName: '',
     lastName: '',
     email: '',
-    password: '',
     age: undefined,
     gender: '',
     ethnicity: '',
@@ -36,8 +35,7 @@ const ApplicationView: React.FC = () => {
     firstName: false,
     lastName: false,
     email: false,
-    password: false,
-    age: false, 
+    age: false,
     school: false,
     yearOfGrad: false,
     major: false,
@@ -70,11 +68,6 @@ const ApplicationView: React.FC = () => {
           setFormValid({...formValid, [name]: true});
         }
         break;
-      case 'password':
-        if (value.length < 100 && value.length > 0) {
-          setFormValid({...formValid, [name]: true});
-        }
-        break;
       case 'age':
         if (value.length <=3 && value.length > 0) {
           setFormValid({...formValid, [name]: true});
@@ -91,7 +84,7 @@ const ApplicationView: React.FC = () => {
           setFormValid({...formValid, [name]: true});
         }
         break;
-      case 'major': 
+      case 'major':
         if (value.length < 320 && value.length > 0) {
           setFormValid({...formValid, [name]: true});
         }
@@ -131,7 +124,7 @@ const ApplicationView: React.FC = () => {
     }
     return true;
   }
-  
+
   // NEED API
   const handleApplicationSubmission = event => {
     console.log(formValues);
@@ -181,21 +174,6 @@ const ApplicationView: React.FC = () => {
                 id="email__input"
                 type="email"
                 value={formValues.email}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-          </section>
-          <section className="password-section">
-            <div className="demographics__password">
-              <label className="demographics__label">
-                Hack Portal Password
-              </label>
-              <input
-                name="password"
-                id="password__input"
-                type="password"
-                value={formValues.password}
                 onChange={handleInputChange}
                 required
               />
