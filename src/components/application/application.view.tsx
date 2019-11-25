@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { DH_UNABLE_TO_CHECK_GENERATOR } from 'constants';
+import axios from 'axios';
+import { submitApplication } from '../../account';
 //import DemographicsView from './forms/demographics.view';
 //import ExperiencesView from './forms/experiences.view';
 //import LogisticsView from './forms/logistics.view';
@@ -66,7 +68,7 @@ const ApplicationView: React.FC = () => {
 
     // optional
     specialAccomodations: true,
-    collegeAffiliation: false
+    collegeAffiliation: false,
   });
 
   //   const freeFormGenderInput = React.createRef<HTMLInputElement>();
@@ -267,23 +269,55 @@ const ApplicationView: React.FC = () => {
         if (value) setFormValid({ ...formValid, [name]: true });
       case 'placeToPark':
         if (value) setFormValid({ ...formValid, [name]: true });
+      case 'codeOfConduct':
+        console.log(`${name}: ${value}`);
+        if (value === 'yes') setFormValid({ ...formValid, [name]: true });
+        // console.log(formValid[name]);
+        break;
+      case 'mlhAffiliation':
+        console.log(`${name}: ${value}`);
+
+        if (value === 'yes') setFormValid({ ...formValid, [name]: true });
+        // console.log(formValid[name]);
+        break;
     }
+
     setFormValues({ ...formValues, [name]: value });
   };
 
   const [trySubmission, setTrySubmission] = useState(false);
   // NEED API
   const handleApplicationSubmission = event => {
+    event.preventDefault();
+    let isValidForm = true;
+
+    const requestBody = {};
+
     Object.keys(formValid).forEach(fieldName => {
       const value = formValid[fieldName];
-      console.log(`${fieldName}: ${formValues[fieldName]}`);
+
+      if (isValidForm === true && value === true) {
+        // console.log(`${fieldName}: ${formValues[fieldName]}`);
+        requestBody[fieldName.toLowerCase()] = formValues[fieldName];
+      } else {
+        setTrySubmission(true);
+        console.log(`${fieldName} is invalid`);
+        isValidForm = false;
+      }
     });
 
-    setTrySubmission(true);
-    // console.log(formValues);
-    event.preventDefault();
+    if (isValidForm === true) {
+      submitApplication(requestBody)
+        .then(response => {
+          console.log("we're chilling");
+          console.log(response);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
   };
-  //const validform = validForm();
+
   return (
     <>
       <div className="application">
@@ -1009,7 +1043,8 @@ const ApplicationView: React.FC = () => {
                 htmlFor="accommodations__input"
                 className="logistics__label"
               >
-                Do you require any special accommodations? (Including physical and dietary restrictions | 150 chars)
+                Do you require any special accommodations? (Including physical
+                and dietary restrictions | 150 chars)
               </label>
               <input
                 name="accomadations"
