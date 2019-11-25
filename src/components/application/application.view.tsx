@@ -259,6 +259,12 @@ const ApplicationView: React.FC = () => {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
+      case 'placeToSleep':
+        if (value) setFormValid({...formValid, [name]: true});
+      case 'transportation':
+        if (value) setFormValid({...formValid, [name]: true});
+      case 'placeToPark':
+        if (value) setFormValid({...formValid, [name]: true});
     }
     setFormValues({ ...formValues, [name]: value });
   };
@@ -866,7 +872,7 @@ const ApplicationView: React.FC = () => {
                   type="radio"
                   aria-label="yes"
                   aria-required="true"
-                  name="sleep"
+                  name="placeToSleep"
                   value="true"
                   onClick={handleInputChange}
                 />
@@ -877,7 +883,7 @@ const ApplicationView: React.FC = () => {
                 </label>
                 <input
                   type="radio"
-                  name="sleep"
+                  name="placeToSleep"
                   aria-label="no"
                   aria-required="true"
                   value="false"
