@@ -49,6 +49,7 @@
   // education related
   &__yog {
     float: left;
+    min-width: 336px;
     margin-right: 4vw;
   }
   &__ucsc-student {
@@ -57,14 +58,14 @@
   &__college-affil {
     float: right;
   }
-
   // major
 }
+
 // inputs
 #first-name__input,
 #last-name__input {
   border-width: 0;
-  border: none;
+  // border: none;
   background-color: #f4f4f4;
   display: block;
   height: 40px;
@@ -129,5 +130,11 @@ input[type='radio'] {
 .linkedin-section,
 .github-section,
 .resume-section {
-  margin: 3vh 0;
+  margin: 2.5vh 0;
+}
+
+.errors {
+  margin-top: 0.6em;
+  margin-bottom: 0;
+  color: red;
 }
