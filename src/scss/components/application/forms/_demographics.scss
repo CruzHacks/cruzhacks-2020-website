@@ -75,6 +75,7 @@
 
 #email__input,
 #password__input,
+#phone-number__input,
 #major__input,
 #linkedin__input,
 #github__input,
@@ -129,7 +130,8 @@ input[type='radio'] {
 .major-section,
 .linkedin-section,
 .github-section,
-.resume-section {
+.resume-section,
+.phone-section {
   margin: 2.5vh 0;
 }
 

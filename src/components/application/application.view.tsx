@@ -10,6 +10,7 @@ const ApplicationView: React.FC = () => {
     firstName: '',
     lastName: '',
     email: '',
+    phoneNumber: '',
     age: undefined,
     gender: '',
     ethnicity: '',
@@ -36,8 +37,8 @@ const ApplicationView: React.FC = () => {
     firstName: true,
     lastName: true,
     email: true,
+    phoneNumber: true,
     age: true,
-    gender: true,
     school: true,
     yearOfGrad: true,
     major: true,
@@ -46,10 +47,16 @@ const ApplicationView: React.FC = () => {
     participateQuestion: true,
     technologyQuestion: true,
     seeAtCruzhacks: true,
-    placeToSleep: true,
-    transportation: true,
-    placeToPark: true,
-    specialAccomodations: true,
+
+    // radio buttons
+    gender: false,
+    ethnicity: false,
+    ucscStudent: false,
+    firstHackathon: false,
+    firstCruzhacks: false,
+    placeToSleep: false,
+    transportation: false,
+    placeToPark: false,
   });
 
   //   const freeFormGenderInput = React.createRef<HTMLInputElement>();
@@ -63,7 +70,6 @@ const ApplicationView: React.FC = () => {
 
   const handleInputChange = event => {
     let { name, value } = event.target;
-
     switch (name) {
       case 'firstName':
         if (value.length < 100 && value.length > 0) {
@@ -100,10 +106,18 @@ const ApplicationView: React.FC = () => {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
+      case 'phoneNumber':
+        const phoneNumRegExp = new RegExp(/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/);
+        if (phoneNumRegExp.test(value)) {
+          setFormValid({...formValid, [name]: true});
+        }
+        else {
+          setFormValid({ ...formValid, [name]: false });
+        }
+        break;
       case 'gender':
         //   If the current change is in the freeform input, deslect the radio buttons.
         // If a radio is clicked, clear the free form gender input.
-
         const genderTextElement = genderInputRefs.freeFormGenderInput.current;
         const eventID = event.target.id;
 
@@ -124,7 +138,36 @@ const ApplicationView: React.FC = () => {
           }
         }
 
-        setFormValid({ ...formValid, [name]: true });
+        if (genderInputRefs.femaleGenderRadioInput.current 
+          || genderInputRefs.maleGenderRadioInput.current 
+          || genderInputRefs.transGenderRadioInput.current 
+          || genderInputRefs.nonBinaryGenderRadioInput.current
+          || (genderTextElement && genderTextElement.value != '')) {
+            setFormValid({ ...formValid, [name]: true });
+        }
+        else {
+          setFormValid({ ...formValid, [name]: false });
+        }
+        break;
+      case 'ethnicity':
+        if (value) {
+          setFormValid({ ...formValid, [name]: true });
+        }
+        break;
+      case 'ucscStudent':
+        if (value) {
+          setFormValid({...formValid, [name]: true})
+        };
+        break;
+      case 'firstHackathon':
+        if (value) {
+          setFormValid({ ...formValid, [name]: true });
+        }
+        break;
+      case 'firstCruzhacks':
+        if (value) {
+          setFormValid({ ...formValid, [name]: true });
+        }
         break;
       case 'school':
         // need 1 more validation for alphanumber
@@ -136,8 +179,6 @@ const ApplicationView: React.FC = () => {
             value = value === "yes"
         break;
       case 'collegeAffiliation':
-        console.log(formValues);
-
         if (formValues.ucscStudent === true && value !== 'NA') {
           setFormValid({ ...formValid, [name]: true });
         }
@@ -169,6 +210,9 @@ const ApplicationView: React.FC = () => {
         ) {
           setFormValid({ ...formValid, [name]: true });
         }
+        else {
+          setFormValid({ ...formValid, [name]: false });
+        }
         break;
       case 'githubUrl':
         const githubInRegexp = new RegExp(
@@ -180,44 +224,43 @@ const ApplicationView: React.FC = () => {
           githubInRegexp.test(value)
         ) {
           setFormValid({ ...formValid, [name]: true });
+        } 
+        else {
+          setFormValid({ ...formValid, [name]: false });
         }
+
         break;
       case 'participateQuestion':
         if (value.length < 500 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
+        } else {
+          setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'technologyQuestion':
         if (value.length < 500 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
         }
+        else {
+          setFormValid({ ...formValid, [name]: false });
+        }
         break;
       case 'seeAtCruzhacks':
         if (value.length < 500 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
         }
+        else {
+          setFormValid({ ...formValid, [name]: false });
+        }
         break;
     }
-    // console.log(name);
-    // console.log(value);
-
     setFormValues({ ...formValues, [name]: value });
   };
 
-  /*
-  const validForm = () => {
-    for (const [key, value] of Object.entries(formValid)) {
-      //   console.log(`${key} : ${value}`);
-      if (!value) {
-        return false;
-      }
-    }
-    return true;
-  };
-  */
-
+  const [trySubmission, setTrySubmission] = useState(false);
   // NEED API
   const handleApplicationSubmission = event => {
+    setTrySubmission(true);
     console.log(formValues);
     event.preventDefault();
   };
@@ -278,6 +321,24 @@ const ApplicationView: React.FC = () => {
                 </p>}
               </div>
             </section>
+
+            <section className="phone-section">
+              <div className="demographics__phone-number">
+                <label className="demographics__label">Phone Number</label>
+                <input
+                  name="phoneNumber"
+                  id="phone-number__input"
+                  type="text"
+                  value={formValues.phoneNumber}
+                  onChange={handleInputChange}
+                  required
+                />
+                { !formValid.phoneNumber && <p className="errors">
+                  Valid phone number is required.
+                </p>}
+              </div>
+            </section>
+
             <section className="age-gender-section">
               <div className="demographics__age">
                 <label htmlFor="age" className="demographics__label">
@@ -467,6 +528,7 @@ const ApplicationView: React.FC = () => {
                   />
                 </div>
               </div>
+              {trySubmission && !formValid.ethnicity && <p className="errors">Required</p>}
             </section>
 
             <section className="edu-demographics-section">
@@ -504,7 +566,7 @@ const ApplicationView: React.FC = () => {
                     aria-required="true"
                     id="UCSC Student"
                     name="ucscStudent"
-                    value="yes"
+                    value="true"
                   />
                 </div>
                 <div className="radio-button-spaced">
@@ -517,9 +579,10 @@ const ApplicationView: React.FC = () => {
                     aria-required="true"
                     name="ucscStudent"
                     id="UCSC Student"
-                    value="no"
+                    value="false"
                   />
                 </div>
+                {trySubmission && !formValid && <p className="errors">Required</p>}
               </div>
               <div
                 className="demographics__college-affil"
@@ -600,9 +663,6 @@ const ApplicationView: React.FC = () => {
                   value={formValues.linkedinUrl}
                   onChange={handleInputChange}
                 />
-                { !formValid.linkedinUrl && <p className="errors">
-                  LinkedIn URL is required.
-                </p>}
               </div>
             </section>
             <section className="github-section">
@@ -619,9 +679,6 @@ const ApplicationView: React.FC = () => {
                   value={formValues.githubUrl}
                   onChange={handleInputChange}
                 />
-                { !formValid.githubUrl && <p className="errors">
-                  Github URL is required.
-                </p>}
               </div>
             </section>
             <section className="resume-section">
@@ -672,6 +729,7 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                 />
               </div>
+              {trySubmission && !formValid.firstHackathon && <p className="errors">Required</p>}
             </section>
 
             <section className="first-cruzhacks">
@@ -704,6 +762,7 @@ const ApplicationView: React.FC = () => {
                   onClick={handleInputChange}
                 />
               </div>
+              {trySubmission && !formValid.firstCruzhacks && <p className="errors">Required</p>}
             </section>
 
             <section className="participate-question">
@@ -722,9 +781,12 @@ const ApplicationView: React.FC = () => {
                 value={formValues.participateQuestion}
                 onChange={handleInputChange}
               />
-              { !formValid.participateQuestion && <p className="errors">
+              { !formValid.participateQuestion && (formValues.participateQuestion.length == 0) &&<p className="errors">
                   Required
                 </p>}
+              { !formValid.participateQuestion &&  (formValues.participateQuestion.length > 500) &&<p className="errors">
+                  Over 500 characters
+              </p>}
             </section>
 
             <section className="technology-question">
@@ -743,9 +805,12 @@ const ApplicationView: React.FC = () => {
                 value={formValues.technologyQuestion}
                 onChange={handleInputChange}
               />
-              { !formValid.technologyQuestion && <p className="errors">
+              { !formValid.technologyQuestion && (formValues.technologyQuestion.length == 0) && <p className="errors">
                   Required
                 </p>}
+              { !formValid.technologyQuestion &&  (formValues.technologyQuestion.length > 500) &&<p className="errors">
+                  Over 500 characters
+              </p>}
             </section>
 
             <section className="see-question">
@@ -761,10 +826,14 @@ const ApplicationView: React.FC = () => {
                 aria-required="true"
                 id="What would you like to see at CruzHacks 2020?"
                 className="experiences__textarea"
+                value={formValues.seeAtCruzhacks}
                 onChange={handleInputChange}
               />
-              { !formValid.seeAtCruzhacks && <p className="errors">
+              { !formValid.seeAtCruzhacks && (formValues.seeAtCruzhacks.length == 0) && <p className="errors">
                   Required
+              </p>}
+              { !formValid.seeAtCruzhacks &&  (formValues.seeAtCruzhacks.length > 500) &&<p className="errors">
+                  Over 500 characters
               </p>}
             </section>
           </form>
@@ -808,6 +877,7 @@ const ApplicationView: React.FC = () => {
                   onClick={handleInputChange}
                 />
               </div>
+              {trySubmission && !formValid.placeToSleep && <p className="errors">Required</p>}
             </section>
             <section className="transportation-section">
               <label
@@ -844,6 +914,7 @@ const ApplicationView: React.FC = () => {
                   onClick={handleInputChange}
                 />
               </div>
+              {trySubmission && !formValid.transportation && <p className="errors">Required</p>}
             </section>
             <section className="place-to-park-section">
               <label htmlFor="park" className="logistics__label">
@@ -875,6 +946,7 @@ const ApplicationView: React.FC = () => {
                   onClick={handleInputChange}
                 />
               </div>
+              {trySubmission && !formValid.placeToPark && <p className="errors">Required</p>}
             </section>
             <section className="accommodations-section">
               <label
