@@ -58,6 +58,11 @@
   &__college-affil {
     float: right;
   }
+  &__currSchool {
+    float: left;
+    min-width: 336px;
+    margin-right: 4vw;
+  }
   // major
 }
 
@@ -116,6 +121,35 @@
   width: 11.5vw;
   font-size: 28px;
 }
+
+.currSchool__input {
+  border-width: 0;
+  border: none;
+  background-color: #f4f4f4;
+  display: block;
+  height: 40px;
+  width: 60vw;
+  font-size: 16px;
+  color: #4A38F2;
+  margin-bottom: 2.5vh;
+  letter-spacing: 0.04em;
+  text-indent: 3px;
+  font-weight: 500;
+}
+
+// .collegeAffiliation__input {
+//   border-width: 0;
+//   border: none;
+//   background-color: #f4f4f4;
+//   height: 40px;
+//   width: 29.2vw;
+//   font-size: 16px;
+//   color: #4A38F2;
+//   margin-bottom: 2.5vh;
+//   letter-spacing: 0.04em;
+//   text-indent: 3px;
+//   font-weight: 500;
+// }
 
 input[type='radio'] {
   width: 17px;
