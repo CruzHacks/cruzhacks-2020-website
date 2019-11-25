@@ -999,8 +999,8 @@ const ApplicationView: React.FC = () => {
                 I authorize you to share my
 application/registration information for event administration, ranking, MLH
 administration, pre- and post-event informational e-mails, and occasional messages
-about hackathons in-line with the MLH Privacy Policy. I further agree to the terms of
-both the MLH Contest Terms and Conditions and the MLH Privacy Policy.”
+about hackathons in-line with the <a href="https://mlh.io/privacy">MLH Privacy Policy.</a> I further agree to the terms of
+both the MLH Contest Terms and Conditions and the <a href="https://mlh.io/privacy">MLH Privacy Policy.</a>
                 </label>
               </div>
             </section>
