@@ -23,6 +23,7 @@ const ApplicationView: React.FC = () => {
     firstHackathon: false,
     firstCruzhacks: false,
     participateQuestion: '',
+    technologyQuestion: '',
     seeAtCruzhacks: '',
     dietaryRestrictions: false,
     placeToSleep: false,
@@ -32,19 +33,23 @@ const ApplicationView: React.FC = () => {
   });
 
   const [formValid, setFormValid] = useState({
-    firstName: false,
-    lastName: false,
-    email: false,
-    age: false,
-    gender: false,
-    school: false,
-    yearOfGrad: false,
-    major: false,
-    linkedinUrl: false,
-    githubUrl: false,
-    participateQuestion: false,
-    seeAtCruzhacks: false,
-    specialAccomodations: false,
+    firstName: true,
+    lastName: true,
+    email: true,
+    age: true,
+    gender: true,
+    school: true,
+    yearOfGrad: true,
+    major: true,
+    linkedinUrl: true,
+    githubUrl: true,
+    participateQuestion: true,
+    technologyQuestion: true,
+    seeAtCruzhacks: true,
+    placeToSleep: true,
+    transportation: true,
+    placeToPark: true,
+    specialAccomodations: true,
   });
 
   //   const freeFormGenderInput = React.createRef<HTMLInputElement>();
@@ -63,11 +68,15 @@ const ApplicationView: React.FC = () => {
       case 'firstName':
         if (value.length < 100 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
+        } else {
+          setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'lastName':
         if (value.length < 100 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
+        } else {
+          setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'email':
@@ -79,10 +88,16 @@ const ApplicationView: React.FC = () => {
         if (value.length < 256 && value.length > 0 && emailRegExp.test(value)) {
           setFormValid({ ...formValid, [name]: true });
         }
+        else {
+          setFormValid({ ...formValid, [name]: false });
+        }
         break;
       case 'age':
-        if (value.length <= 3 && value.length > 0) {
+        if (value.length <= 3 && value.length > 0 && Number.isInteger(parseInt(value))) {
           setFormValid({ ...formValid, [name]: true });
+        }
+        else {
+          setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'gender':
@@ -131,10 +146,16 @@ const ApplicationView: React.FC = () => {
         if (value.length == 4) {
           setFormValid({ ...formValid, [name]: true });
         }
+        else {
+          setFormValid({ ...formValid, [name]: false });
+        }
         break;
       case 'major':
         if (value.length < 320 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
+        }
+        else {
+          setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'linkedinUrl':
@@ -166,6 +187,11 @@ const ApplicationView: React.FC = () => {
           setFormValid({ ...formValid, [name]: true });
         }
         break;
+      case 'technologyQuestion':
+        if (value.length < 500 && value.length > 0) {
+          setFormValid({ ...formValid, [name]: true });
+        }
+        break;
       case 'seeAtCruzhacks':
         if (value.length < 500 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
@@ -178,6 +204,7 @@ const ApplicationView: React.FC = () => {
     setFormValues({ ...formValues, [name]: value });
   };
 
+  /*
   const validForm = () => {
     for (const [key, value] of Object.entries(formValid)) {
       //   console.log(`${key} : ${value}`);
@@ -187,15 +214,14 @@ const ApplicationView: React.FC = () => {
     }
     return true;
   };
+  */
 
   // NEED API
   const handleApplicationSubmission = event => {
     console.log(formValues);
     event.preventDefault();
   };
-
-  const validform = validForm();
-
+  //const validform = validForm();
   return (
     <>
       <div className="application">
@@ -211,10 +237,14 @@ const ApplicationView: React.FC = () => {
                 <input
                   name="firstName"
                   id="first-name__input"
+                  className="name-error"
                   type="text"
                   value={formValues.firstName}
                   onChange={handleInputChange}
                 />
+                { !formValid.firstName && <p className="errors">
+                  First name is required.
+                </p>}
               </div>
               <div className="demographics__last-name">
                 <label className="demographics__label">Last Name</label>
@@ -226,6 +256,9 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
+                { !formValid.lastName && <p className="errors">
+                  Last name is required.
+                </p>}
               </div>
               <br style={{ clear: 'both' }} />
             </section>
@@ -240,6 +273,9 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
+                { !formValid.email && <p className="errors">
+                  Valid email is required.
+                </p>}
               </div>
             </section>
             <section className="age-gender-section">
@@ -257,6 +293,9 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
+                { !formValid.age && <p className="errors">
+                  Valid age is required.
+                </p>}
               </div>
               <div
                 className="demographics__gender"
@@ -444,6 +483,9 @@ const ApplicationView: React.FC = () => {
                   value={formValues.yearOfGrad}
                   onChange={handleInputChange}
                 />
+                { !formValid.yearOfGrad && <p className="errors">
+                  Valid year of graduation is required.
+                </p>}
               </div>
               <div
                 className="demographics__ucsc-student"
@@ -536,6 +578,9 @@ const ApplicationView: React.FC = () => {
                   value={formValues.major}
                   onChange={handleInputChange}
                 />
+                { !formValid.major && <p className="errors">
+                  Major is required.
+                </p>}
               </div>
             </section>
             <section className="linkedin-section">
@@ -555,6 +600,9 @@ const ApplicationView: React.FC = () => {
                   value={formValues.linkedinUrl}
                   onChange={handleInputChange}
                 />
+                { !formValid.linkedinUrl && <p className="errors">
+                  LinkedIn URL is required.
+                </p>}
               </div>
             </section>
             <section className="github-section">
@@ -571,6 +619,9 @@ const ApplicationView: React.FC = () => {
                   value={formValues.githubUrl}
                   onChange={handleInputChange}
                 />
+                { !formValid.githubUrl && <p className="errors">
+                  Github URL is required.
+                </p>}
               </div>
             </section>
             <section className="resume-section">
@@ -671,6 +722,30 @@ const ApplicationView: React.FC = () => {
                 value={formValues.participateQuestion}
                 onChange={handleInputChange}
               />
+              { !formValid.participateQuestion && <p className="errors">
+                  Required
+                </p>}
+            </section>
+
+            <section className="technology-question">
+              <label
+                htmlFor="Where do you see technology pushing humanity’s goals?"
+                className="experiences__label"
+              >
+               Where do you see technology pushing humanity’s goals? (500 chars)
+              </label>
+              <textarea
+                name="technologyQuestion"
+                className="experiences__textarea"
+                aria-label="Where do you see technology pushing humanity’s goals?"
+                aria-required="true"
+                id="Where do you see technology pushing humanity’s goals?"
+                value={formValues.technologyQuestion}
+                onChange={handleInputChange}
+              />
+              { !formValid.technologyQuestion && <p className="errors">
+                  Required
+                </p>}
             </section>
 
             <section className="see-question">
@@ -678,7 +753,7 @@ const ApplicationView: React.FC = () => {
                 htmlFor="What would you like to see at CruzHacks 2020?"
                 className="experiences__label"
               >
-                What would you like to see at CruzHacks 2020?* (500 chars)
+                What would you like to see at CruzHacks 2020? (500 chars)
               </label>
               <textarea
                 name="seeAtCruzhacks"
@@ -688,6 +763,9 @@ const ApplicationView: React.FC = () => {
                 className="experiences__textarea"
                 onChange={handleInputChange}
               />
+              { !formValid.seeAtCruzhacks && <p className="errors">
+                  Required
+              </p>}
             </section>
           </form>
         </div>
