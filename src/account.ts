@@ -1,8 +1,9 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
+
+const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
+const apiKey = process.env.REACT_APP_API_KEY + '';
 
 export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
-  const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
-  const apiKey = process.env.REACT_APP_API_KEY + '';
   const queryParams = `?authentication=${apiKey}&accountType=hacker&accountEmail=${email}`;
 
   return axios
@@ -17,5 +18,22 @@ export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
       }
 
       return Promise.reject(error);
+    });
+}
+
+export function submitApplication(application: object): Promise<boolean> {
+  const requestConfig: AxiosRequestConfig = {
+    headers: {
+      authentication: apiKey,
+      'content-type': 'application/json',
+      accounttype: 'hacker',
+    },
+  };
+
+  return axios
+    .post<Object>(endpoint, application, requestConfig)
+    .then(response => {
+      console.log(response.data);
+      return true;
     });
 }
