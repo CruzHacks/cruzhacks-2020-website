@@ -6,6 +6,13 @@ import { submitApplication } from '../../account';
 //import ExperiencesView from './forms/experiences.view';
 //import LogisticsView from './forms/logistics.view';
 
+// import SchoolList from './us_institutions'
+import schoolList from './schoolsList'
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+
+// const finalList = SchoolList.filter((v,i,a) => a.indexOf(v) === i);
+
 const ApplicationView: React.FC = () => {
   // BOOLEAN VALEUS BECOMING STRING
   const [formValues, setFormValues] = useState({
@@ -607,6 +614,17 @@ const ApplicationView: React.FC = () => {
             </section>
 
             <section className="edu-demographics-section">
+              <div className="demographics__currSchool">
+                <label className="demographics__label">School/University</label>
+
+                  {/* <select className="currSchool__input" name="school" onChange={handleInputChange}>
+                    <option aria-label="Select" value="select">Select School</option>
+                    <option aria-label="international" value="intl">International</option>
+                    {finalList.map(item => 
+                      <option key={item} aria-label={item} value={item}>{item}</option>
+                      )}
+                  </select> */}
+              </div>
               <div className="demographics__yog">
                 <label htmlFor="yog__input" className="demographics__label">
                   Year of Graduation:
@@ -675,6 +693,7 @@ const ApplicationView: React.FC = () => {
                   UCSC College Affiliation
                 </label>
                 <select
+                  className="collegeAffiliation__input"
                   id="College Affiliation"
                   name="collegeAffiliation"
                   ref={ucscCollegeRef}
