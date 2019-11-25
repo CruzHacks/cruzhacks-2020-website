@@ -6,13 +6,6 @@ import { submitApplication } from '../../account';
 //import ExperiencesView from './forms/experiences.view';
 //import LogisticsView from './forms/logistics.view';
 
-// firstCruzhacks is invalid
-// application.view.tsx:304 placeToSleep is invalid
-// application.view.tsx:304 transportation is invalid
-// application.view.tsx:304 placeToPark is invalid
-// application.view.tsx:304 specialAccomodations is invalid
-// application.view.tsx:304 collegeAffiliation is invalid
-
 const ApplicationView: React.FC = () => {
   // BOOLEAN VALEUS BECOMING STRING
   const [formValues, setFormValues] = useState({
@@ -86,6 +79,8 @@ const ApplicationView: React.FC = () => {
     nonBinaryGenderRadioInput: React.createRef<HTMLInputElement>(),
     freeFormGenderInput: React.createRef<HTMLInputElement>(),
   };
+
+  const ucscCollegeRef = React.createRef<HTMLSelectElement>();
 
   const handleInputChange = event => {
     let { name, value } = event.target;
@@ -178,10 +173,17 @@ const ApplicationView: React.FC = () => {
         }
         break;
       case 'ucscStudent':
-        if (value === 'yes') {
-          setFormValid({ ...formValid, [name]: true });
-        }
-        break;
+        value = value === 'true';
+        setFormValid({ ...formValid, [name]: value });
+
+        if (ucscCollegeRef.current) {
+          if (value === false) {
+            ucscCollegeRef.current.value = '';
+            setFormValid({ ...formValid, collegeAffiliation: true });
+          } else if (ucscCollegeRef.current.value === '') {
+            setFormValid({ ...formValid, collegeAffiliation: false });
+          }
+        } else if (value === true) break;
       case 'firstHackathon':
         if (value) {
           setFormValid({ ...formValid, [name]: true });
@@ -198,12 +200,15 @@ const ApplicationView: React.FC = () => {
           setFormValid({ ...formValid, [name]: true });
         }
         break;
-      case 'ucscStudent':
-        value = value === 'yes';
-        break;
       case 'collegeAffiliation':
-        if (formValues.ucscStudent === true && value !== 'NA') {
-          setFormValid({ ...formValid, [name]: true });
+        // console.log(formValues.ucscStudent);
+        // console.log(value !== '');
+        // console.log(typeof formValues.ucscStudent);
+        // console.log(formValues.ucscStudent === true && value !== '');
+
+        if (formValues.ucscStudent === true) {
+          console.log('trueeeeeeeeee');
+          setFormValid({ ...formValid, [name]: value !== '' });
         }
         break;
       case 'yearOfGrad':
@@ -271,22 +276,22 @@ const ApplicationView: React.FC = () => {
         }
         break;
       case 'placeToSleep':
-        if (value) setFormValid({ ...formValid, [name]: true });
-      case 'transportation':
-        if (value) setFormValid({ ...formValid, [name]: true });
-      case 'placeToPark':
-        if (value) setFormValid({ ...formValid, [name]: true });
-      case 'codeOfConduct':
+        console.log(value);
         setFormValid({ ...formValid, [name]: true });
+      case 'transportation':
+        setFormValid({ ...formValid, [name]: true });
+      case 'placeToPark':
+        setFormValid({ ...formValid, [name]: true });
+      case 'codeOfConduct':
         value = event.target.checked;
+        setFormValid({ ...formValid, [name]: value });
         break;
       case 'mlhAffiliation':
-        setFormValid({ ...formValid, [name]: true });
         value = event.target.checked;
+        setFormValid({ ...formValid, [name]: value });
         break;
     }
 
-    console.log(`${name}: ${value}`);
     console.log(formValid);
 
     setFormValues({ ...formValues, [name]: value });
@@ -306,7 +311,7 @@ const ApplicationView: React.FC = () => {
       if (isValidForm === true && value === true) {
         // console.log(`${fieldName}: ${formValues[fieldName]}`);
         requestBody[fieldName.toLowerCase()] = formValues[fieldName];
-      } else {
+      } else if (isValidForm === true) {
         setTrySubmission(true);
         console.log(`${fieldName} is invalid`);
         isValidForm = false;
@@ -669,7 +674,11 @@ const ApplicationView: React.FC = () => {
                 >
                   UCSC College Affiliation
                 </label>
-                <select id="College Affiliation" name="collegeAffiliation">
+                <select
+                  id="College Affiliation"
+                  name="collegeAffiliation"
+                  ref={ucscCollegeRef}
+                >
                   <option aria-label="-" value="">
                     NA
                   </option>
