@@ -11,7 +11,7 @@ const ApplicationView: React.FC = () => {
     lastName: '',
     email: '',
     phoneNumber: '',
-    age: undefined,
+    age: '',
     gender: '',
     ethnicity: '',
     school: '',
@@ -285,7 +285,7 @@ const ApplicationView: React.FC = () => {
                   value={formValues.firstName}
                   onChange={handleInputChange}
                 />
-                { !formValid.firstName && <p className="errors">
+                { (!formValid.firstName || (trySubmission && formValues.firstName.length == 0)) && <p className="errors">
                   First name is required.
                 </p>}
               </div>
@@ -299,7 +299,7 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
-                { !formValid.lastName && <p className="errors">
+                { (!formValid.lastName || (trySubmission && formValues.lastName.length == 0)) && <p className="errors">
                   Last name is required.
                 </p>}
               </div>
@@ -316,7 +316,7 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
-                { !formValid.email && <p className="errors">
+                { (!formValid.email || (trySubmission && formValues.email.length == 0)) && <p className="errors">
                   Valid email is required.
                 </p>}
               </div>
@@ -333,7 +333,7 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
-                { !formValid.phoneNumber && <p className="errors">
+                { (!formValid.phoneNumber || (trySubmission && formValues.phoneNumber.length == 0)) && <p className="errors">
                   Valid phone number is required.
                 </p>}
               </div>
@@ -354,7 +354,7 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
-                { !formValid.age && <p className="errors">
+                { (!formValid.age || (trySubmission && formValues.age.length == 0)) && <p className="errors">
                   Valid age is required.
                 </p>}
               </div>
@@ -437,6 +437,7 @@ const ApplicationView: React.FC = () => {
                     ref={genderInputRefs.freeFormGenderInput}
                   />
                 </div>
+                {trySubmission && !formValid.gender && <p className="errors">Required</p>}
               </div>
               <br style={{ clear: 'both' }} />
             </section>
@@ -545,7 +546,7 @@ const ApplicationView: React.FC = () => {
                   value={formValues.yearOfGrad}
                   onChange={handleInputChange}
                 />
-                { !formValid.yearOfGrad && <p className="errors">
+                { (!formValid.yearOfGrad || (trySubmission && formValues.yearOfGrad.length == 0)) && <p className="errors">
                   Valid year of graduation is required.
                 </p>}
               </div>
@@ -582,7 +583,7 @@ const ApplicationView: React.FC = () => {
                     value="false"
                   />
                 </div>
-                {trySubmission && !formValid && <p className="errors">Required</p>}
+                {trySubmission && !formValid.ucscStudent && <p className="errors">Required</p>}
               </div>
               <div
                 className="demographics__college-affil"
@@ -641,7 +642,7 @@ const ApplicationView: React.FC = () => {
                   value={formValues.major}
                   onChange={handleInputChange}
                 />
-                { !formValid.major && <p className="errors">
+                { (!formValid.major || (trySubmission && formValues.major.length == 0))  && <p className="errors">
                   Major is required.
                 </p>}
               </div>
@@ -781,7 +782,7 @@ const ApplicationView: React.FC = () => {
                 value={formValues.participateQuestion}
                 onChange={handleInputChange}
               />
-              { !formValid.participateQuestion && (formValues.participateQuestion.length == 0) &&<p className="errors">
+              { (!formValid.participateQuestion || (trySubmission && formValues.participateQuestion.length == 0)) && (formValues.participateQuestion.length == 0) &&<p className="errors">
                   Required
                 </p>}
               { !formValid.participateQuestion &&  (formValues.participateQuestion.length > 500) &&<p className="errors">
@@ -805,7 +806,7 @@ const ApplicationView: React.FC = () => {
                 value={formValues.technologyQuestion}
                 onChange={handleInputChange}
               />
-              { !formValid.technologyQuestion && (formValues.technologyQuestion.length == 0) && <p className="errors">
+              { (!formValid.technologyQuestion || (trySubmission && formValues.technologyQuestion.length == 0)) && (formValues.technologyQuestion.length == 0) && <p className="errors">
                   Required
                 </p>}
               { !formValid.technologyQuestion &&  (formValues.technologyQuestion.length > 500) &&<p className="errors">
@@ -829,7 +830,7 @@ const ApplicationView: React.FC = () => {
                 value={formValues.seeAtCruzhacks}
                 onChange={handleInputChange}
               />
-              { !formValid.seeAtCruzhacks && (formValues.seeAtCruzhacks.length == 0) && <p className="errors">
+              { (!formValid.seeAtCruzhacks || (trySubmission && formValues.seeAtCruzhacks.length == 0)) && (formValues.seeAtCruzhacks.length == 0) && <p className="errors">
                   Required
               </p>}
               { !formValid.seeAtCruzhacks &&  (formValues.seeAtCruzhacks.length > 500) &&<p className="errors">
