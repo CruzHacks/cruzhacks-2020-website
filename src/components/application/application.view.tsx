@@ -31,6 +31,8 @@ const ApplicationView: React.FC = () => {
     transportation: false,
     placeToPark: false,
     specialAccomodations: '',
+    codeOfConduct: false,
+    mlhAffiliation: false,
   });
 
   const [formValid, setFormValid] = useState({
@@ -47,6 +49,10 @@ const ApplicationView: React.FC = () => {
     participateQuestion: true,
     technologyQuestion: true,
     seeAtCruzhacks: true,
+
+    // check boxes
+    codeOfConduct: false,
+    mlhAffiliation: false,
 
     // radio buttons
     gender: false,
@@ -964,6 +970,39 @@ const ApplicationView: React.FC = () => {
                 type="text"
                 onChange={handleInputChange}
               />
+            </section>
+
+            <section className="mlh-section">
+              <div className="checkbox-button">
+              <input
+                  type="checkbox"
+                  name="codeOfConduct"
+                  aria-label="yes"
+                  arua-required="true"
+                  value="yes"
+                  onClick={handleInputChange}
+                />
+                <label htmlFor="yes" className="checkbox-label">
+                  I have read agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a>
+                </label>
+              </div>
+              <div className="checkbox-button">
+                <input
+                  type="checkbox"
+                  name="mlhAffiliation"
+                  aria-label="no"
+                  aria-required="true"
+                  value="no"
+                  onClick={handleInputChange}
+                />
+                <label htmlFor="no" className="checkbox-label">
+                I authorize you to share my
+application/registration information for event administration, ranking, MLH
+administration, pre- and post-event informational e-mails, and occasional messages
+about hackathons in-line with the MLH Privacy Policy. I further agree to the terms of
+both the MLH Contest Terms and Conditions and the MLH Privacy Policy.”
+                </label>
+              </div>
             </section>
             <button
               type="submit"
