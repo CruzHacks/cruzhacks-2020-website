@@ -6,6 +6,13 @@ import { submitApplication } from '../../account';
 //import ExperiencesView from './forms/experiences.view';
 //import LogisticsView from './forms/logistics.view';
 
+// firstCruzhacks is invalid
+// application.view.tsx:304 placeToSleep is invalid
+// application.view.tsx:304 transportation is invalid
+// application.view.tsx:304 placeToPark is invalid
+// application.view.tsx:304 specialAccomodations is invalid
+// application.view.tsx:304 collegeAffiliation is invalid
+
 const ApplicationView: React.FC = () => {
   // BOOLEAN VALEUS BECOMING STRING
   const [formValues, setFormValues] = useState({
@@ -171,7 +178,7 @@ const ApplicationView: React.FC = () => {
         }
         break;
       case 'ucscStudent':
-        if (value) {
+        if (value === 'yes') {
           setFormValid({ ...formValid, [name]: true });
         }
         break;
@@ -270,17 +277,17 @@ const ApplicationView: React.FC = () => {
       case 'placeToPark':
         if (value) setFormValid({ ...formValid, [name]: true });
       case 'codeOfConduct':
-        console.log(`${name}: ${value}`);
-        if (value === 'yes') setFormValid({ ...formValid, [name]: true });
-        // console.log(formValid[name]);
+        setFormValid({ ...formValid, [name]: true });
+        value = event.target.checked;
         break;
       case 'mlhAffiliation':
-        console.log(`${name}: ${value}`);
-
-        if (value === 'yes') setFormValid({ ...formValid, [name]: true });
-        // console.log(formValid[name]);
+        setFormValid({ ...formValid, [name]: true });
+        value = event.target.checked;
         break;
     }
+
+    console.log(`${name}: ${value}`);
+    console.log(formValid);
 
     setFormValues({ ...formValues, [name]: value });
   };
@@ -813,10 +820,10 @@ const ApplicationView: React.FC = () => {
                 </label>
                 <input
                   type="radio"
-                  name="first-cruzhacks"
+                  name="firstCruzhacks"
                   aria-label="yes"
                   arua-required="true"
-                  value="yes"
+                  value="true"
                   onClick={handleInputChange}
                 />
               </div>
@@ -826,7 +833,7 @@ const ApplicationView: React.FC = () => {
                 </label>
                 <input
                   type="radio"
-                  name="first-cruzhacks"
+                  name="firstCruzhacks"
                   aria-label="no"
                   aria-required="true"
                   value="no"
