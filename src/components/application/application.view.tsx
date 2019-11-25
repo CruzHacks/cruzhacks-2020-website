@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DH_UNABLE_TO_CHECK_GENERATOR } from 'constants';
 import axios from 'axios';
 import { submitApplication } from '../../account';
+import { useAuth0 } from '../../auth/auth';
 //import DemographicsView from './forms/demographics.view';
 //import ExperiencesView from './forms/experiences.view';
 //import LogisticsView from './forms/logistics.view';
@@ -15,18 +16,24 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 
 const ApplicationView: React.FC = () => {
   // BOOLEAN VALEUS BECOMING STRING
+
+  const authContext = useAuth0()!;
+  const { user, logout } = authContext;
+
+  console.log(user);
+
   const [formValues, setFormValues] = useState({
     firstName: '',
     lastName: '',
-    email: '',
-    phoneNumber: '',
+    email: user.email,
+    phone: '',
     age: '',
     gender: '',
     ethnicity: '',
     school: '',
-    yearOfGrad: '',
+    gradYear: '',
     ucscStudent: false,
-    collegeAffiliation: '',
+    ucscCollegeAffiliation: '',
     major: '',
     linkedinUrl: '',
     githubUrl: '',
@@ -35,29 +42,30 @@ const ApplicationView: React.FC = () => {
     participateQuestion: '',
     technologyQuestion: '',
     seeAtCruzhacks: '',
-    // dietaryRestrictions: false,
     placeToSleep: false,
     transportation: false,
     placeToPark: false,
     specialAccomodations: '',
     codeOfConduct: false,
     mlhAffiliation: false,
+    authoid: user.sub,
   });
 
   const [formValid, setFormValid] = useState({
     firstName: true,
     lastName: true,
     email: true,
-    phoneNumber: true,
+    phone: true,
     age: true,
     school: true,
-    yearOfGrad: true,
+    gradYear: true,
     major: true,
     linkedinUrl: true,
     githubUrl: true,
     participateQuestion: true,
     technologyQuestion: true,
     seeAtCruzhacks: true,
+    authoid: true,
 
     // check boxes
     codeOfConduct: false,
@@ -75,7 +83,7 @@ const ApplicationView: React.FC = () => {
 
     // optional
     specialAccomodations: true,
-    collegeAffiliation: false,
+    ucscCollegeAffiliation: true,
   });
 
   //   const freeFormGenderInput = React.createRef<HTMLInputElement>();
@@ -129,7 +137,7 @@ const ApplicationView: React.FC = () => {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
-      case 'phoneNumber':
+      case 'phone':
         const phoneNumRegExp = new RegExp(
           /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/
         );
@@ -186,9 +194,9 @@ const ApplicationView: React.FC = () => {
         if (ucscCollegeRef.current) {
           if (value === false) {
             ucscCollegeRef.current.value = '';
-            setFormValid({ ...formValid, collegeAffiliation: true });
+            setFormValid({ ...formValid, ucscCollegeAffiliation: true });
           } else if (ucscCollegeRef.current.value === '') {
-            setFormValid({ ...formValid, collegeAffiliation: false });
+            setFormValid({ ...formValid, ucscCollegeAffiliation: false });
           }
         } else if (value === true) break;
       case 'firstHackathon':
@@ -207,18 +215,7 @@ const ApplicationView: React.FC = () => {
           setFormValid({ ...formValid, [name]: true });
         }
         break;
-      case 'collegeAffiliation':
-        // console.log(formValues.ucscStudent);
-        // console.log(value !== '');
-        // console.log(typeof formValues.ucscStudent);
-        // console.log(formValues.ucscStudent === true && value !== '');
-
-        if (formValues.ucscStudent === true) {
-          console.log('trueeeeeeeeee');
-          setFormValid({ ...formValid, [name]: value !== '' });
-        }
-        break;
-      case 'yearOfGrad':
+      case 'gradYear':
         if (value.length == 4) {
           setFormValid({ ...formValid, [name]: true });
         } else {
@@ -307,6 +304,7 @@ const ApplicationView: React.FC = () => {
   const [trySubmission, setTrySubmission] = useState(false);
   // NEED API
   const handleApplicationSubmission = event => {
+    console.log(formValues);
     event.preventDefault();
     let isValidForm = true;
 
@@ -401,15 +399,15 @@ const ApplicationView: React.FC = () => {
               <div className="demographics__phone-number">
                 <label className="demographics__label">Phone Number</label>
                 <input
-                  name="phoneNumber"
+                  name="phone"
                   id="phone-number__input"
                   type="text"
-                  value={formValues.phoneNumber}
+                  value={formValues.phone}
                   onChange={handleInputChange}
                   required
                 />
-                {(!formValid.phoneNumber ||
-                  (trySubmission && formValues.phoneNumber.length == 0)) && (
+                {(!formValid.phone ||
+                  (trySubmission && formValues.phone.length == 0)) && (
                   <p className="errors">Valid phone number is required.</p>
                 )}
               </div>
@@ -630,16 +628,16 @@ const ApplicationView: React.FC = () => {
                   Year of Graduation:
                 </label>
                 <input
-                  name="yearOfGrad"
+                  name="gradYear"
                   id="yog__input"
                   aria-label="Year of Graduation"
                   aria-required="true"
                   type="number"
-                  value={formValues.yearOfGrad}
+                  value={formValues.gradYear}
                   onChange={handleInputChange}
                 />
-                {(!formValid.yearOfGrad ||
-                  (trySubmission && formValues.yearOfGrad.length == 0)) && (
+                {(!formValid.gradYear ||
+                  (trySubmission && formValues.gradYear.length == 0)) && (
                   <p className="errors">
                     Valid year of graduation is required.
                   </p>
@@ -682,51 +680,55 @@ const ApplicationView: React.FC = () => {
                   <p className="errors">Required</p>
                 )}
               </div>
-              <div
-                className="demographics__college-affil"
-                onChange={handleInputChange}
-              >
-                <label
-                  htmlFor="College Affiliation"
-                  className="demographics__label"
+              {formValues.ucscStudent && (
+                <div
+                  className="demographics__college-affil"
+                  onChange={handleInputChange}
                 >
-                  UCSC College Affiliation
-                </label>
-                <select
-                  className="collegeAffiliation__input"
-                  id="College Affiliation"
-                  name="collegeAffiliation"
-                  ref={ucscCollegeRef}
-                >
-                  <option aria-label="-" value="">
-                    NA
-                  </option>
-                  <option aria-label="Rachel Carson College" value="rcc">
-                    Rachel Carson College
-                  </option>
-                  <option aria-label="Porter College" value="porter">
-                    Porter College
-                  </option>
-                  <option aria-label="Kresge College" value="kresge">
-                    Kresge College
-                  </option>
-                  <option aria-label="College 9" value="c9">
-                    College 9
-                  </option>
-                  <option aria-label="College 10" value="c10">
-                    College 10
-                  </option>
-                  <option aria-label="Crown College" value="crown">
-                    Crown College
-                  </option>
-                  <option aria-label="Merill College" value="merill">
-                    Merill College
-                  </option>
-                  <option aria-label="Stevenson College" value="stevenson">
-                    Stevenson College
-                  </option>
-                </select>
-              </div>
+                  <label
+                    htmlFor="College Affiliation"
+                    className="demographics__label"
+                  >
+                    UCSC College Affiliation
+                  </label>
+                  <select
+                    id="College Affiliation"
+                    name="ucscCollegeAffiliation"
+                    ref={ucscCollegeRef}
+                  >
+                    <option aria-label="Cowell College" value="cowell">
+                      Cowell College
+                    </option>
+                    <option aria-label="Rachel Carson College" value="rcc">
+                      Rachel Carson College
+                    </option>
+                    <option aria-label="Porter College" value="porter">
+                      Porter College
+                    </option>
+                    <option aria-label="Kresge College" value="kresge">
+                      Kresge College
+                    </option>
+                    <option aria-label="College 9" value="c9">
+                      College 9
+                    </option>
+                    <option aria-label="College 10" value="c10">
+                      College 10
+                    </option>
+                    <option aria-label="Crown College" value="crown">
+                      Crown College
+                    </option>
+                    <option aria-label="Merill College" value="merill">
+                      Merill College
+                    </option>
+                    <option aria-label="Stevenson College" value="stevenson">
+                      Stevenson College
+                    </option>
+                    <option aria-label="Oakes College" value="oakes">
+                      Oakes College
+                    </option>
+                  </select>
+                </div>
+              )}
               <br style={{ clear: 'both' }} />
             </section>
 
