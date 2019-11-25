@@ -8,7 +8,7 @@ const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
 
   const { user, logout } = authContext;
-  console.log(authContext)
+  console.log(authContext);
 
   const [hasSubmittedApplication, setHasSubmitted] = useState(false);
   const [applicationStatusMessage, setMessage] = useState('');
@@ -26,7 +26,8 @@ const PortalView: React.FC = () => {
         setMessage(message);
       })
       .catch(() => {
-        const message = "We're having trouble contacting the CruzHacks Cloud. We'll be operational soon!"
+        const message =
+          "We're having trouble contacting the CruzHacks Cloud. We'll be operational soon!";
         setHasSubmitted(true);
         setMessage(message);
       });
@@ -70,7 +71,7 @@ const PortalView: React.FC = () => {
           </div> */}
         {hasSubmittedApplication === false && user.email_verified === true ? (
           <div className="portal__application">
-            <ApplicationView userData={user} />
+            <ApplicationView />
           </div>
         ) : (
           <div></div>

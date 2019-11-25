@@ -26,7 +26,7 @@ const ApplicationView: React.FC = () => {
     participateQuestion: '',
     technologyQuestion: '',
     seeAtCruzhacks: '',
-    dietaryRestrictions: false,
+    // dietaryRestrictions: false,
     placeToSleep: false,
     transportation: false,
     placeToPark: false,
@@ -63,6 +63,10 @@ const ApplicationView: React.FC = () => {
     placeToSleep: false,
     transportation: false,
     placeToPark: false,
+
+    // optional
+    specialAccomodations: true,
+    collegeAffiliation: false
   });
 
   //   const freeFormGenderInput = React.createRef<HTMLInputElement>();
@@ -99,25 +103,28 @@ const ApplicationView: React.FC = () => {
         );
         if (value.length < 256 && value.length > 0 && emailRegExp.test(value)) {
           setFormValid({ ...formValid, [name]: true });
-        }
-        else {
+        } else {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'age':
-        if (value.length <= 3 && value.length > 0 && Number.isInteger(parseInt(value))) {
+        if (
+          value.length <= 3 &&
+          value.length > 0 &&
+          Number.isInteger(parseInt(value))
+        ) {
           setFormValid({ ...formValid, [name]: true });
-        }
-        else {
+        } else {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'phoneNumber':
-        const phoneNumRegExp = new RegExp(/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/);
+        const phoneNumRegExp = new RegExp(
+          /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/
+        );
         if (phoneNumRegExp.test(value)) {
-          setFormValid({...formValid, [name]: true});
-        }
-        else {
+          setFormValid({ ...formValid, [name]: true });
+        } else {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
@@ -144,14 +151,15 @@ const ApplicationView: React.FC = () => {
           }
         }
 
-        if (genderInputRefs.femaleGenderRadioInput.current 
-          || genderInputRefs.maleGenderRadioInput.current 
-          || genderInputRefs.transGenderRadioInput.current 
-          || genderInputRefs.nonBinaryGenderRadioInput.current
-          || (genderTextElement && genderTextElement.value != '')) {
-            setFormValid({ ...formValid, [name]: true });
-        }
-        else {
+        if (
+          genderInputRefs.femaleGenderRadioInput.current ||
+          genderInputRefs.maleGenderRadioInput.current ||
+          genderInputRefs.transGenderRadioInput.current ||
+          genderInputRefs.nonBinaryGenderRadioInput.current ||
+          (genderTextElement && genderTextElement.value != '')
+        ) {
+          setFormValid({ ...formValid, [name]: true });
+        } else {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
@@ -162,8 +170,8 @@ const ApplicationView: React.FC = () => {
         break;
       case 'ucscStudent':
         if (value) {
-          setFormValid({...formValid, [name]: true})
-        };
+          setFormValid({ ...formValid, [name]: true });
+        }
         break;
       case 'firstHackathon':
         if (value) {
@@ -182,7 +190,7 @@ const ApplicationView: React.FC = () => {
         }
         break;
       case 'ucscStudent':
-            value = value === "yes"
+        value = value === 'yes';
         break;
       case 'collegeAffiliation':
         if (formValues.ucscStudent === true && value !== 'NA') {
@@ -192,16 +200,14 @@ const ApplicationView: React.FC = () => {
       case 'yearOfGrad':
         if (value.length == 4) {
           setFormValid({ ...formValid, [name]: true });
-        }
-        else {
+        } else {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'major':
         if (value.length < 320 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
-        }
-        else {
+        } else {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
@@ -215,8 +221,7 @@ const ApplicationView: React.FC = () => {
           linkedInRegexp.test(value)
         ) {
           setFormValid({ ...formValid, [name]: true });
-        }
-        else {
+        } else {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
@@ -230,8 +235,7 @@ const ApplicationView: React.FC = () => {
           githubInRegexp.test(value)
         ) {
           setFormValid({ ...formValid, [name]: true });
-        } 
-        else {
+        } else {
           setFormValid({ ...formValid, [name]: false });
         }
 
@@ -246,25 +250,23 @@ const ApplicationView: React.FC = () => {
       case 'technologyQuestion':
         if (value.length < 500 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
-        }
-        else {
+        } else {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'seeAtCruzhacks':
         if (value.length < 500 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
-        }
-        else {
+        } else {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'placeToSleep':
-        if (value) setFormValid({...formValid, [name]: true});
+        if (value) setFormValid({ ...formValid, [name]: true });
       case 'transportation':
-        if (value) setFormValid({...formValid, [name]: true});
+        if (value) setFormValid({ ...formValid, [name]: true });
       case 'placeToPark':
-        if (value) setFormValid({...formValid, [name]: true});
+        if (value) setFormValid({ ...formValid, [name]: true });
     }
     setFormValues({ ...formValues, [name]: value });
   };
@@ -272,8 +274,13 @@ const ApplicationView: React.FC = () => {
   const [trySubmission, setTrySubmission] = useState(false);
   // NEED API
   const handleApplicationSubmission = event => {
+    Object.keys(formValid).forEach(fieldName => {
+      const value = formValid[fieldName];
+      console.log(`${fieldName}: ${formValues[fieldName]}`);
+    });
+
     setTrySubmission(true);
-    console.log(formValues);
+    // console.log(formValues);
     event.preventDefault();
   };
   //const validform = validForm();
@@ -297,9 +304,10 @@ const ApplicationView: React.FC = () => {
                   value={formValues.firstName}
                   onChange={handleInputChange}
                 />
-                { (!formValid.firstName || (trySubmission && formValues.firstName.length == 0)) && <p className="errors">
-                  First name is required.
-                </p>}
+                {(!formValid.firstName ||
+                  (trySubmission && formValues.firstName.length == 0)) && (
+                  <p className="errors">First name is required.</p>
+                )}
               </div>
               <div className="demographics__last-name">
                 <label className="demographics__label">Last Name</label>
@@ -311,9 +319,10 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
-                { (!formValid.lastName || (trySubmission && formValues.lastName.length == 0)) && <p className="errors">
-                  Last name is required.
-                </p>}
+                {(!formValid.lastName ||
+                  (trySubmission && formValues.lastName.length == 0)) && (
+                  <p className="errors">Last name is required.</p>
+                )}
               </div>
               <br style={{ clear: 'both' }} />
             </section>
@@ -328,9 +337,10 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
-                { (!formValid.email || (trySubmission && formValues.email.length == 0)) && <p className="errors">
-                  Valid email is required.
-                </p>}
+                {(!formValid.email ||
+                  (trySubmission && formValues.email.length == 0)) && (
+                  <p className="errors">Valid email is required.</p>
+                )}
               </div>
             </section>
 
@@ -345,9 +355,10 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
-                { (!formValid.phoneNumber || (trySubmission && formValues.phoneNumber.length == 0)) && <p className="errors">
-                  Valid phone number is required.
-                </p>}
+                {(!formValid.phoneNumber ||
+                  (trySubmission && formValues.phoneNumber.length == 0)) && (
+                  <p className="errors">Valid phone number is required.</p>
+                )}
               </div>
             </section>
 
@@ -366,9 +377,10 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                   required
                 />
-                { (!formValid.age || (trySubmission && formValues.age.length == 0)) && <p className="errors">
-                  Valid age is required.
-                </p>}
+                {(!formValid.age ||
+                  (trySubmission && formValues.age.length == 0)) && (
+                  <p className="errors">Valid age is required.</p>
+                )}
               </div>
               <div
                 className="demographics__gender"
@@ -449,7 +461,9 @@ const ApplicationView: React.FC = () => {
                     ref={genderInputRefs.freeFormGenderInput}
                   />
                 </div>
-                {trySubmission && !formValid.gender && <p className="errors">Required</p>}
+                {trySubmission && !formValid.gender && (
+                  <p className="errors">Required</p>
+                )}
               </div>
               <br style={{ clear: 'both' }} />
             </section>
@@ -541,7 +555,9 @@ const ApplicationView: React.FC = () => {
                   />
                 </div>
               </div>
-              {trySubmission && !formValid.ethnicity && <p className="errors">Required</p>}
+              {trySubmission && !formValid.ethnicity && (
+                <p className="errors">Required</p>
+              )}
             </section>
 
             <section className="edu-demographics-section">
@@ -558,9 +574,12 @@ const ApplicationView: React.FC = () => {
                   value={formValues.yearOfGrad}
                   onChange={handleInputChange}
                 />
-                { (!formValid.yearOfGrad || (trySubmission && formValues.yearOfGrad.length == 0)) && <p className="errors">
-                  Valid year of graduation is required.
-                </p>}
+                {(!formValid.yearOfGrad ||
+                  (trySubmission && formValues.yearOfGrad.length == 0)) && (
+                  <p className="errors">
+                    Valid year of graduation is required.
+                  </p>
+                )}
               </div>
               <div
                 className="demographics__ucsc-student"
@@ -595,7 +614,9 @@ const ApplicationView: React.FC = () => {
                     value="false"
                   />
                 </div>
-                {trySubmission && !formValid.ucscStudent && <p className="errors">Required</p>}
+                {trySubmission && !formValid.ucscStudent && (
+                  <p className="errors">Required</p>
+                )}
               </div>
               <div
                 className="demographics__college-affil"
@@ -654,9 +675,10 @@ const ApplicationView: React.FC = () => {
                   value={formValues.major}
                   onChange={handleInputChange}
                 />
-                { (!formValid.major || (trySubmission && formValues.major.length == 0))  && <p className="errors">
-                  Major is required.
-                </p>}
+                {(!formValid.major ||
+                  (trySubmission && formValues.major.length == 0)) && (
+                  <p className="errors">Major is required.</p>
+                )}
               </div>
             </section>
             <section className="linkedin-section">
@@ -742,7 +764,9 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                 />
               </div>
-              {trySubmission && !formValid.firstHackathon && <p className="errors">Required</p>}
+              {trySubmission && !formValid.firstHackathon && (
+                <p className="errors">Required</p>
+              )}
             </section>
 
             <section className="first-cruzhacks">
@@ -775,7 +799,9 @@ const ApplicationView: React.FC = () => {
                   onClick={handleInputChange}
                 />
               </div>
-              {trySubmission && !formValid.firstCruzhacks && <p className="errors">Required</p>}
+              {trySubmission && !formValid.firstCruzhacks && (
+                <p className="errors">Required</p>
+              )}
             </section>
 
             <section className="participate-question">
@@ -794,12 +820,16 @@ const ApplicationView: React.FC = () => {
                 value={formValues.participateQuestion}
                 onChange={handleInputChange}
               />
-              { (!formValid.participateQuestion || (trySubmission && formValues.participateQuestion.length == 0)) && (formValues.participateQuestion.length == 0) &&<p className="errors">
-                  Required
-                </p>}
-              { !formValid.participateQuestion &&  (formValues.participateQuestion.length > 500) &&<p className="errors">
-                  Over 500 characters
-              </p>}
+              {(!formValid.participateQuestion ||
+                (trySubmission &&
+                  formValues.participateQuestion.length == 0)) &&
+                formValues.participateQuestion.length == 0 && (
+                  <p className="errors">Required</p>
+                )}
+              {!formValid.participateQuestion &&
+                formValues.participateQuestion.length > 500 && (
+                  <p className="errors">Over 500 characters</p>
+                )}
             </section>
 
             <section className="technology-question">
@@ -807,7 +837,8 @@ const ApplicationView: React.FC = () => {
                 htmlFor="Where do you see technology pushing humanity’s goals?"
                 className="experiences__label"
               >
-               Where do you see technology pushing humanity’s goals? (500 chars)
+                Where do you see technology pushing humanity’s goals? (500
+                chars)
               </label>
               <textarea
                 name="technologyQuestion"
@@ -818,12 +849,15 @@ const ApplicationView: React.FC = () => {
                 value={formValues.technologyQuestion}
                 onChange={handleInputChange}
               />
-              { (!formValid.technologyQuestion || (trySubmission && formValues.technologyQuestion.length == 0)) && (formValues.technologyQuestion.length == 0) && <p className="errors">
-                  Required
-                </p>}
-              { !formValid.technologyQuestion &&  (formValues.technologyQuestion.length > 500) &&<p className="errors">
-                  Over 500 characters
-              </p>}
+              {(!formValid.technologyQuestion ||
+                (trySubmission && formValues.technologyQuestion.length == 0)) &&
+                formValues.technologyQuestion.length == 0 && (
+                  <p className="errors">Required</p>
+                )}
+              {!formValid.technologyQuestion &&
+                formValues.technologyQuestion.length > 500 && (
+                  <p className="errors">Over 500 characters</p>
+                )}
             </section>
 
             <section className="see-question">
@@ -842,12 +876,15 @@ const ApplicationView: React.FC = () => {
                 value={formValues.seeAtCruzhacks}
                 onChange={handleInputChange}
               />
-              { (!formValid.seeAtCruzhacks || (trySubmission && formValues.seeAtCruzhacks.length == 0)) && (formValues.seeAtCruzhacks.length == 0) && <p className="errors">
-                  Required
-              </p>}
-              { !formValid.seeAtCruzhacks &&  (formValues.seeAtCruzhacks.length > 500) &&<p className="errors">
-                  Over 500 characters
-              </p>}
+              {(!formValid.seeAtCruzhacks ||
+                (trySubmission && formValues.seeAtCruzhacks.length == 0)) &&
+                formValues.seeAtCruzhacks.length == 0 && (
+                  <p className="errors">Required</p>
+                )}
+              {!formValid.seeAtCruzhacks &&
+                formValues.seeAtCruzhacks.length > 500 && (
+                  <p className="errors">Over 500 characters</p>
+                )}
             </section>
           </form>
         </div>
@@ -890,7 +927,9 @@ const ApplicationView: React.FC = () => {
                   onClick={handleInputChange}
                 />
               </div>
-              {trySubmission && !formValid.placeToSleep && <p className="errors">Required</p>}
+              {trySubmission && !formValid.placeToSleep && (
+                <p className="errors">Required</p>
+              )}
             </section>
             <section className="transportation-section">
               <label
@@ -927,7 +966,9 @@ const ApplicationView: React.FC = () => {
                   onClick={handleInputChange}
                 />
               </div>
-              {trySubmission && !formValid.transportation && <p className="errors">Required</p>}
+              {trySubmission && !formValid.transportation && (
+                <p className="errors">Required</p>
+              )}
             </section>
             <section className="place-to-park-section">
               <label htmlFor="park" className="logistics__label">
@@ -959,14 +1000,16 @@ const ApplicationView: React.FC = () => {
                   onClick={handleInputChange}
                 />
               </div>
-              {trySubmission && !formValid.placeToPark && <p className="errors">Required</p>}
+              {trySubmission && !formValid.placeToPark && (
+                <p className="errors">Required</p>
+              )}
             </section>
             <section className="accommodations-section">
               <label
                 htmlFor="accommodations__input"
                 className="logistics__label"
               >
-                Do you require any special accommodations? (150 chars)
+                Do you require any special accommodations? (Including physical and dietary restrictions | 150 chars)
               </label>
               <input
                 name="accomadations"
@@ -980,7 +1023,7 @@ const ApplicationView: React.FC = () => {
 
             <section className="mlh-section">
               <div className="checkbox-button">
-              <input
+                <input
                   type="checkbox"
                   name="codeOfConduct"
                   aria-label="yes"
@@ -989,7 +1032,10 @@ const ApplicationView: React.FC = () => {
                   onClick={handleInputChange}
                 />
                 <label htmlFor="yes" className="checkbox-label">
-                  I have read agree to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a>
+                  I have read agree to the{' '}
+                  <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
+                    MLH Code of Conduct.
+                  </a>
                 </label>
               </div>
               <div className="checkbox-button">
@@ -1002,11 +1048,14 @@ const ApplicationView: React.FC = () => {
                   onClick={handleInputChange}
                 />
                 <label htmlFor="no" className="checkbox-label">
-                I authorize you to share my
-application/registration information for event administration, ranking, MLH
-administration, pre- and post-event informational e-mails, and occasional messages
-about hackathons in-line with the <a href="https://mlh.io/privacy">MLH Privacy Policy.</a> I further agree to the terms of
-both the MLH Contest Terms and Conditions and the <a href="https://mlh.io/privacy">MLH Privacy Policy.</a>
+                  I authorize you to share my application/registration
+                  information for event administration, ranking, MLH
+                  administration, pre- and post-event informational e-mails, and
+                  occasional messages about hackathons in-line with the{' '}
+                  <a href="https://mlh.io/privacy">MLH Privacy Policy.</a> I
+                  further agree to the terms of both the MLH Contest Terms and
+                  Conditions and the{' '}
+                  <a href="https://mlh.io/privacy">MLH Privacy Policy.</a>
                 </label>
               </div>
             </section>
