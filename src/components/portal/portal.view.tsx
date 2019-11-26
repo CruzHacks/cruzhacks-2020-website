@@ -8,7 +8,6 @@ const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
 
   const { user, logout } = authContext;
-  console.log(authContext);
 
   const [hasSubmittedApplication, setHasSubmitted] = useState(false);
   const [applicationStatusMessage, setMessage] = useState('');
