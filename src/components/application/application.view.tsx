@@ -9,16 +9,6 @@ import { useAuth0 } from '../../auth/auth';
 import { Dropdown } from 'semantic-ui-react';
 import SchoolList from './us_institutions';
 
-const SchoolDropdown = () => (
-  <Dropdown
-    placeholder="Select School"
-    fluid
-    search
-    selection
-    options={newList}
-  />
-);
-
 const finalList = SchoolList.filter((v, i, a) => a.indexOf(v) === i);
 const newList = finalList.map(name => ({
   key: name,
@@ -42,6 +32,7 @@ const ApplicationView: React.FC = () => {
     phone: '',
     age: '',
     gender: '',
+    resume: '',
     ethnicity: '',
     school: '',
     gradYear: '',
@@ -71,6 +62,7 @@ const ApplicationView: React.FC = () => {
     phone: true,
     age: true,
     school: true,
+    resume: false,
     gradYear: true,
     major: true,
     linkedinUrl: true,
@@ -208,6 +200,11 @@ const ApplicationView: React.FC = () => {
         if (ucscCollegeRef.current && value === false) {
           setFormValues({ ...formValues, ucscCollegeAffiliation: '' });
         }
+        break;
+      case 'resume':
+        console.log(event.target.files[0]);
+        value = event.target.files[0];
+        setFormValid({ ...formValid, [name]: true });
         break;
       case 'firstHackathon':
         if (value) {
@@ -842,7 +839,12 @@ const ApplicationView: React.FC = () => {
                   aria-label="Resume Input"
                   aria-required="true"
                   type="file"
+                  name="resume"
+                  onChange={handleInputChange}
                 />
+                {trySubmission && !formValid.resume && (
+                <p className="errors">Resume Required</p>
+              )}
               </div>
             </section>
           </form>
@@ -1184,7 +1186,10 @@ const ApplicationView: React.FC = () => {
               Submit
             </button>
             {!formValid.appSubmittedSuccessfully && (
-              <p className="errors">There was error in uploading your application to the CruzHacks Cloud. Our engineers have been alerted! Try again soon!</p>
+              <p className="errors">
+                There was error in uploading your application to the CruzHacks
+                Cloud. Our engineers have been alerted! Try again soon!
+              </p>
             )}
           </form>
         </div>

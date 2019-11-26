@@ -1,5 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { useAuth0 } from './auth/auth';
+import S3FileUpload from 'react-s3';
 
 const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
@@ -23,6 +24,16 @@ export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
     });
 }
 
+export function uploadResume(email: String, file: File) {
+  const awsS3Config = {
+    bucketName: process.env.REACT_APP_AWS_BUCKET_NAME,
+    region: process.env.REACT_APP_AWS_REGION,
+    dirName: `resumes/${email}`,
+    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY,
+    secretAccessKey: process.env.REACT_APP_AWS_SECRET_KEY,
+  };
+}
+
 //   authOID character varying(72) NOT NULL UNIQUE,
 //   email character varying(254) NOT NULL UNIQUE,
 
@@ -34,7 +45,7 @@ export function submitApplication(application: any): Promise<boolean> {
     delete application.collegeAffiliation;
   }
 
-//   application.authoid = auth0User;
+  //   application.authoid = auth0User;
 
   const requestConfig: AxiosRequestConfig = {
     headers: {
