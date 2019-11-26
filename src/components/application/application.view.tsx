@@ -289,13 +289,15 @@ const ApplicationView: React.FC = () => {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
-      case 'placeToSleep':
-        console.log(value);
-        setFormValid({ ...formValid, [name]: true });
-      case 'transportation':
-        setFormValid({ ...formValid, [name]: true });
-      case 'placeToPark':
-        setFormValid({ ...formValid, [name]: true });
+      //   case 'placeToSleep':
+      //     value = value === 'true';
+      //     setFormValid({ ...formValid, [name]: true });
+      //   case 'transportation':
+      //     value = value === 'true';
+      //     setFormValid({ ...formValid, [name]: true });
+      //   case 'placeToPark':
+      //     value = value === 'true';
+      //     setFormValid({ ...formValid, [name]: true });
       case 'codeOfConduct':
         value = event.target.checked;
         setFormValid({ ...formValid, [name]: value });
@@ -306,7 +308,12 @@ const ApplicationView: React.FC = () => {
         break;
     }
 
-    console.log(formValid);
+    if (Boolean(value)) {
+      value = value === 'true';
+    }
+
+    console.log(`${name}: ${value}`);
+    console.log(formValues);
 
     setFormValues({ ...formValues, [name]: value });
   };
