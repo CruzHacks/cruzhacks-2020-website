@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { DH_UNABLE_TO_CHECK_GENERATOR } from 'constants';
 import axios from 'axios';
-import { submitApplication } from '../../account';
+import { submitApplication, uploadResume } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 //import DemographicsView from './forms/demographics.view';
 //import ExperiencesView from './forms/experiences.view';
@@ -325,7 +325,7 @@ const ApplicationView: React.FC = () => {
     console.log(formValues);
     let isValidForm = true;
 
-    const requestBody = {};
+    const requestBody = { resume: undefined };
 
     setFormValid({ ...formValid, appSubmittedSuccessfully: true });
     formValid.appSubmittedSuccessfully = true;
@@ -346,12 +346,21 @@ const ApplicationView: React.FC = () => {
     });
 
     if (isValidForm === true) {
-      submitApplication(requestBody)
+      uploadResume(user.email, formValues.resume)
         .then(response => {
-          console.log("we're chilling");
-          console.log(response);
-          setFormValid({ ...formValid, appSubmittedSuccessfully: true });
-          window.location.reload(false);
+          delete requestBody.resume;
+
+          submitApplication(requestBody)
+            .then(response => {
+              console.log("we're chilling");
+              console.log(response);
+              setFormValid({ ...formValid, appSubmittedSuccessfully: true });
+              window.location.reload(false);
+            })
+            .catch(error => {
+              console.log(error);
+              setFormValid({ ...formValid, appSubmittedSuccessfully: false });
+            });
         })
         .catch(error => {
           console.log(error);
@@ -843,8 +852,8 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                 />
                 {trySubmission && !formValid.resume && (
-                <p className="errors">Resume Required</p>
-              )}
+                  <p className="errors">Resume Required</p>
+                )}
               </div>
             </section>
           </form>
