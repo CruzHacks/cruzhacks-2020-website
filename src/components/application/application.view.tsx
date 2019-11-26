@@ -356,7 +356,7 @@ const ApplicationView: React.FC = () => {
         });
     } else {
       event.preventDefault();
-      setFormValid({ ...formValid, appSubmittedSuccessfully: false });
+    //   setFormValid({ ...formValid, appSubmittedSuccessfully: false });
     }
   };
 
