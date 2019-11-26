@@ -320,6 +320,7 @@ const ApplicationView: React.FC = () => {
     const requestBody = {};
 
     setFormValid({ ...formValid, appSubmittedSuccessfully: true });
+    formValid.appSubmittedSuccessfully = true;
 
     Object.keys(formValid).forEach(fieldName => {
       const value = formValid[fieldName];
@@ -1117,7 +1118,7 @@ const ApplicationView: React.FC = () => {
                 and dietary restrictions | 150 chars)
               </label>
               <input
-                name="accomadations"
+                name="specialAccomodations"
                 id="accommodations__input"
                 aria-label="Do you require any special accommodations?"
                 aria-required="true"
