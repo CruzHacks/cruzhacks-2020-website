@@ -6,7 +6,28 @@ import { useAuth0 } from '../../auth/auth';
 //import DemographicsView from './forms/demographics.view';
 //import ExperiencesView from './forms/experiences.view';
 //import LogisticsView from './forms/logistics.view';
+import { Dropdown } from "semantic-ui-react";
+import SchoolList from './us_institutions'
 
+const SchoolDropdown = () => (
+  <Dropdown
+    placeholder="Select School"
+    fluid
+    search
+    selection
+    options={newList}
+  />
+);
+
+
+const finalList = SchoolList.filter((v,i,a) => a.indexOf(v) === i);
+const newList = finalList.map(name => ({
+  key: name, 
+  value: name, 
+  text: name
+}))
+
+console.log(newList.length)
 const ApplicationView: React.FC = () => {
   // BOOLEAN VALEUS BECOMING STRING
 
@@ -611,6 +632,17 @@ const ApplicationView: React.FC = () => {
             </section>
 
             <section className="edu-demographics-section">
+              <div className="demographics__currSchool">
+                <label className="demographics__label" onChange={handleInputChange}>School/University</label>
+                  {/* <select className="currSchool__input" name="school" onChange={handleInputChange}>
+                    <option aria-label="Select" value="select">Select School</option>
+                    <option aria-label="international" value="intl">International</option>
+                    {finalList.map(item => 
+                      <option key={item} aria-label={item} value={item}>{item}</option>
+                      )}
+                  </select> */}
+                  <SchoolDropdown />
+              </div>
               <div className="demographics__yog">
                 <label htmlFor="yog__input" className="demographics__label">
                   Year of Graduation:
