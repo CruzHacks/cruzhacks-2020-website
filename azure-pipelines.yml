@@ -31,9 +31,12 @@ steps:
       sudo chmod a+r $(envVars.secureFilePath)
       sudo ln -s -t $(System.DefaultWorkingDirectory) $(envVars.secureFilePath)
       cat $(System.DefaultWorkingDirectory)/.env
+      pwd
     displayName: 'symlink .env files from secure directory'
 
-  - script: npm run build
+  - script: |
+      npm run build 
+      pwd
     displayName: 'create build to deploy'
 
   - task: ArchiveFiles@2
