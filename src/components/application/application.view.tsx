@@ -26,7 +26,7 @@ const ApplicationView: React.FC = () => {
     school: '',
     gradYear: '',
     ucscStudent: false,
-    ucscCollegeAffiliation: '',
+    ucscCollegeAffiliation: 'Cowell College',
     major: '',
     linkedinUrl: '',
     githubUrl: '',
@@ -77,6 +77,7 @@ const ApplicationView: React.FC = () => {
     // optional
     specialAccomodations: true,
     ucscCollegeAffiliation: true,
+    appSubmittedSuccessfully: true,
   });
 
   //   const freeFormGenderInput = React.createRef<HTMLInputElement>();
@@ -182,16 +183,12 @@ const ApplicationView: React.FC = () => {
         break;
       case 'ucscStudent':
         value = value === 'true';
-        setFormValid({ ...formValid, [name]: value });
+        setFormValid({ ...formValid, [name]: true });
 
-        if (ucscCollegeRef.current) {
-          if (value === false) {
-            ucscCollegeRef.current.value = '';
-            setFormValid({ ...formValid, ucscCollegeAffiliation: true });
-          } else if (ucscCollegeRef.current.value === '') {
-            setFormValid({ ...formValid, ucscCollegeAffiliation: false });
-          }
-        } else if (value === true) break;
+        if (ucscCollegeRef.current && value === false) {
+          setFormValues({ ...formValues, ucscCollegeAffiliation: '' });
+        }
+        break;
       case 'firstHackathon':
         if (value) {
           setFormValid({ ...formValid, [name]: true });
@@ -298,17 +295,20 @@ const ApplicationView: React.FC = () => {
   // NEED API
   const handleApplicationSubmission = event => {
     console.log(formValues);
-    event.preventDefault();
     let isValidForm = true;
 
     const requestBody = {};
+
+    setFormValid({ ...formValid, appSubmittedSuccessfully: true });
 
     Object.keys(formValid).forEach(fieldName => {
       const value = formValid[fieldName];
 
       if (isValidForm === true && value === true) {
+        if (fieldName !== 'appSubmittedSuccessfully') {
+          requestBody[fieldName.toLowerCase()] = formValues[fieldName];
+        }
         // console.log(`${fieldName}: ${formValues[fieldName]}`);
-        requestBody[fieldName.toLowerCase()] = formValues[fieldName];
       } else if (isValidForm === true) {
         setTrySubmission(true);
         console.log(`${fieldName} is invalid`);
@@ -321,10 +321,16 @@ const ApplicationView: React.FC = () => {
         .then(response => {
           console.log("we're chilling");
           console.log(response);
+          setFormValid({ ...formValid, appSubmittedSuccessfully: true });
         })
         .catch(error => {
           console.log(error);
+          setFormValid({ ...formValid, appSubmittedSuccessfully: false });
+          event.preventDefault();
         });
+    } else {
+      event.preventDefault();
+      setFormValid({ ...formValid, appSubmittedSuccessfully: false });
     }
   };
 
@@ -1120,6 +1126,9 @@ const ApplicationView: React.FC = () => {
             >
               Submit
             </button>
+            {!formValid.appSubmittedSuccessfully && (
+              <p className="errors">Required</p>
+            )}
           </form>
         </div>
       </div>
