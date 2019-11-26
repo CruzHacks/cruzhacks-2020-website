@@ -308,7 +308,7 @@ const ApplicationView: React.FC = () => {
         break;
     }
 
-    if (Boolean(value)) {
+    if (value === 'true' || value === 'false') {
       value = value === 'true';
     }
 
