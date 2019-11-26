@@ -12,7 +12,6 @@ export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
   return axios
     .get<Array<Object>>(endpoint + queryParams)
     .then(response => {
-      console.log(response);
       return response.data.length !== 0;
     })
     .catch(error => {
@@ -33,7 +32,6 @@ export function uploadResume(email: any, resume: any): Promise<boolean> {
     secretAccessKey: process.env.REACT_APP_AWS_SECRET_KEY,
   };
   return S3FileUpload.uploadFile(resume, awsS3Config).then(response => {
-    console.log(response);
     return Promise.resolve(true);
   });
 }
@@ -62,7 +60,6 @@ export function submitApplication(application: any): Promise<boolean> {
   return axios
     .post<Object>(endpoint, application, requestConfig)
     .then(response => {
-      console.log(response.data);
       return true;
     });
 }
