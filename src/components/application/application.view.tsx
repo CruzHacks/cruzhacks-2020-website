@@ -289,15 +289,17 @@ const ApplicationView: React.FC = () => {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
-      //   case 'placeToSleep':
-      //     value = value === 'true';
-      //     setFormValid({ ...formValid, [name]: true });
-      //   case 'transportation':
-      //     value = value === 'true';
-      //     setFormValid({ ...formValid, [name]: true });
-      //   case 'placeToPark':
-      //     value = value === 'true';
-      //     setFormValid({ ...formValid, [name]: true });
+      case 'placeToSleep':
+        setFormValid({ ...formValid, [name]: true });
+        break;
+      case 'transportation':
+        setFormValid({ ...formValid, [name]: true });
+        break;
+
+      case 'placeToPark':
+        setFormValid({ ...formValid, [name]: true });
+        break;
+
       case 'codeOfConduct':
         value = event.target.checked;
         setFormValid({ ...formValid, [name]: value });
@@ -321,6 +323,8 @@ const ApplicationView: React.FC = () => {
   const [trySubmission, setTrySubmission] = useState(false);
   // NEED API
   const handleApplicationSubmission = event => {
+    event.preventDefault();
+
     console.log(formValues);
     let isValidForm = true;
 
@@ -350,11 +354,11 @@ const ApplicationView: React.FC = () => {
           console.log("we're chilling");
           console.log(response);
           setFormValid({ ...formValid, appSubmittedSuccessfully: true });
+          window.location.reload(false);
         })
         .catch(error => {
           console.log(error);
           setFormValid({ ...formValid, appSubmittedSuccessfully: false });
-          event.preventDefault();
         });
     } else {
       event.preventDefault();
