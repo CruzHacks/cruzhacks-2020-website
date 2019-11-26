@@ -6,17 +6,7 @@ import { useAuth0 } from '../../auth/auth';
 //import DemographicsView from './forms/demographics.view';
 //import ExperiencesView from './forms/experiences.view';
 //import LogisticsView from './forms/logistics.view';
-import { Dropdown } from 'semantic-ui-react';
-import SchoolList from './us_institutions';
 
-const finalList = SchoolList.filter((v, i, a) => a.indexOf(v) === i);
-const newList = finalList.map(name => ({
-  key: name,
-  value: name,
-  text: name,
-}));
-
-console.log(newList.length);
 const ApplicationView: React.FC = () => {
   // BOOLEAN VALEUS BECOMING STRING
 
