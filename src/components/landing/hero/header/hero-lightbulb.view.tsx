@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const HeroLightBulbView: React.FC = () => {
   return (
-    <Link to="/">
-      <div className="hero__lightbulb">
+    <div className="hero__lightbulb">
+      <Link to="/">
         <svg
           className="lightbulb__svg"
           viewBox="0 0 55 48"
@@ -32,8 +32,8 @@ const HeroLightBulbView: React.FC = () => {
             />
           </defs>
         </svg>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 export default HeroLightBulbView;

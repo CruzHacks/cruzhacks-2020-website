@@ -11,6 +11,8 @@
   font-weight: 500;
   color: white;
   letter-spacing: 0.05em;
+  text-align: center;
+  display: table;
 }
 
 &__appstatus-container {
@@ -22,8 +24,10 @@
 &__appstatus-text {
   order: 1;
   flex-basis: 55%;
-//   text-align: center;
+  text-align: center;
   margin: auto;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 &__appstatus-status-container {

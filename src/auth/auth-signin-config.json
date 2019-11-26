@@ -1,0 +1,22 @@
+{
+  "signInConfig": {
+    "additionalSignUpFields": [
+      {
+        "name": "first name",
+        "placeholder": "enter your first name"
+      },
+      {
+        "name": "last name",
+        "placeholder": "enter your last name"
+      },
+      {
+        "name": "phone number",
+        "placeholder": "000-000-0000"
+      },
+      {
+        "name": "email",
+        "placeholder": "<email>@<domain.com>"
+      }
+    ]
+  }
+}
