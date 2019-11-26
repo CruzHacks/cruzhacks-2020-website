@@ -1184,7 +1184,7 @@ const ApplicationView: React.FC = () => {
               Submit
             </button>
             {!formValid.appSubmittedSuccessfully && (
-              <p className="errors">Required</p>
+              <p className="errors">There was error in uploading your application to the CruzHacks Cloud. Our engineers have been alerted! Try again soon!</p>
             )}
           </form>
         </div>
