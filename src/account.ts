@@ -24,7 +24,7 @@ export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
     });
 }
 
-export function uploadResume(email: String, file: File) {
+export function uploadResume(email: any, resume: any): Promise<boolean> {
   const awsS3Config = {
     bucketName: process.env.REACT_APP_AWS_BUCKET_NAME,
     region: process.env.REACT_APP_AWS_REGION,
@@ -32,6 +32,10 @@ export function uploadResume(email: String, file: File) {
     accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY,
     secretAccessKey: process.env.REACT_APP_AWS_SECRET_KEY,
   };
+  return S3FileUpload.uploadFile(resume, awsS3Config).then(response => {
+    console.log(response);
+    return Promise.resolve(true);
+  });
 }
 
 //   authOID character varying(72) NOT NULL UNIQUE,
