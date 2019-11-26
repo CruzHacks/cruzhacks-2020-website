@@ -20,6 +20,9 @@
 *_LOCAL_*.txt
 *_REMOTE_*.txt
 
+## Auth0 ##
+auth-config.json
+
 ### Bit ###
 # Created by bit to organize component repositories
 *.bitmap

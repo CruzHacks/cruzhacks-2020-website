@@ -1,0 +1,39 @@
+.experiences {
+  font-family: 'Rubik Regular';
+  font-weight: 600;
+  position: relative;
+  top: 10vh;
+  max-width: 60vw;
+  margin: 0 auto;
+  color: #4a38f2;
+
+  &__label {
+    margin-bottom: 1.1vh;
+    display: block;
+  }
+
+  &__textarea {
+    border-width: 0;
+    border: none;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    resize: none;
+    width: 100%;
+    min-height: 160px;
+  }
+
+  &__header {
+    @include header;
+  }
+
+  &__header::before {
+    @include header-underline(7.25em);
+  }
+}
+
+.first-hackathon,
+.first-cruzhacks,
+.participate-question,
+.see-question {
+  margin: 3vh 0;
+}

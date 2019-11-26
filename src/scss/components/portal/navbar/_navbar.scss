@@ -14,12 +14,12 @@
 
 &__navbar-text-container {
   display: flex;
-  width: 93%;
+  width: 92%;
   left: 8em;
   top: 2em;
   position: relative;
   @include respond(desktop) {
-   width: 87%;
+    width: 87%;
   }
   @include respond(tab-land) {
     width: 83%;
@@ -52,8 +52,31 @@
   //flex: 10;
 }
 
-&__navbar-logout {
+&__navbar-logout-container {
+  cursor: pointer;
   order: 2;
   justify-self: right;
-  width: 5em;
+  border: 1px solid #6f6fe8;
+  width: 6em;
+  border-radius: 27px;
+  margin-bottom: 3.25em;
+  margin-top: -0.45em;
+  text-align: center;
+  z-index: 2;
+  text-decoration: none;
+  transition: background-color 0.5s ease-out;
+  &:hover {
+    background: #5555cf;
+    transition: background-color 0.5s ease-in;
+  }
+  transition: color 0.2s ease-out;
+  &:hover {
+    color: #ffffff;
+    transition: color 0.2s ease-in;
+  }
+}
+
+&__navbar-logout {
+  top: 0.3em;
+  position: relative;
 }
