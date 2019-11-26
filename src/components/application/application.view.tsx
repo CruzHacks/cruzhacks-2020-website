@@ -23,8 +23,6 @@ const ApplicationView: React.FC = () => {
   const authContext = useAuth0()!;
   const { user, logout } = authContext;
 
-  console.log(user);
-
   const [formValues, setFormValues] = useState({
     firstName: '',
     lastName: '',

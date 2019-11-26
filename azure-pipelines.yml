@@ -24,7 +24,7 @@ steps:
     name: envVars
     displayName: 'download environment variables'
     inputs:
-      secureFile: '.env'
+      secureFile: '.env.production'
 
   - script: |
       sudo chown root:root $(envVars.secureFilePath)
