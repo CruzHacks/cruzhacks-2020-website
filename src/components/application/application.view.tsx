@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
-import { DH_UNABLE_TO_CHECK_GENERATOR } from 'constants';
-import axios from 'axios';
 import { submitApplication, uploadResume } from '../../account';
-import { useAuth0 } from '../../auth/auth';
-//import DemographicsView from './forms/demographics.view';
-//import ExperiencesView from './forms/experiences.view';
-//import LogisticsView from './forms/logistics.view';
+import Auth0UserType from '../types/Auth0UserType';
 
-const ApplicationView: React.FC = () => {
-  // BOOLEAN VALEUS BECOMING STRING
+type ApplicationViewType = {
+  user: Auth0UserType;
+};
 
-  const authContext = useAuth0()!;
-  const { user, logout } = authContext;
-
+const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
   const [formValues, setFormValues] = useState({
     firstName: '',
     lastName: '',
@@ -109,10 +103,8 @@ const ApplicationView: React.FC = () => {
         }
         break;
       case 'email':
-        // console.log(name);
-        // console.log(value);
         const emailRegExp = new RegExp(
-          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
         if (value.length < 256 && value.length > 0 && emailRegExp.test(value)) {
           setFormValid({ ...formValid, [name]: true });
@@ -142,7 +134,7 @@ const ApplicationView: React.FC = () => {
         }
         break;
       case 'gender':
-        //   If the current change is in the freeform input, deslect the radio buttons.
+        // If the current change is in the freeform input, deslect the radio buttons.
         // If a radio is clicked, clear the free form gender input.
         const genderTextElement = genderInputRefs.freeFormGenderInput.current;
         const eventID = event.target.id;
@@ -169,7 +161,7 @@ const ApplicationView: React.FC = () => {
           genderInputRefs.maleGenderRadioInput.current ||
           genderInputRefs.transGenderRadioInput.current ||
           genderInputRefs.nonBinaryGenderRadioInput.current ||
-          (genderTextElement && genderTextElement.value != '')
+          (genderTextElement && genderTextElement.value !== '')
         ) {
           setFormValid({ ...formValid, [name]: true });
         } else {
@@ -190,9 +182,12 @@ const ApplicationView: React.FC = () => {
         }
         break;
       case 'resume':
-        console.log(event.target.files[0]);
         value = event.target.files[0];
-        setFormValid({ ...formValid, [name]: true });
+        if (value.type === 'application/pdf') {
+          setFormValid({ ...formValid, [name]: true });
+        } else {
+          setFormValid({ ...formValid, [name]: false });
+        }
         break;
       case 'firstHackathon':
         if (value) {
@@ -211,7 +206,7 @@ const ApplicationView: React.FC = () => {
         }
         break;
       case 'gradYear':
-        if (value.length == 4) {
+        if (value.length === 4) {
           setFormValid({ ...formValid, [name]: true });
         } else {
           setFormValid({ ...formValid, [name]: false });
@@ -303,9 +298,6 @@ const ApplicationView: React.FC = () => {
       value = value === 'true';
     }
 
-    // console.log(`${name}: ${value}`);
-    console.log(formValid);
-
     setFormValues({ ...formValues, [name]: value });
   };
 
@@ -314,7 +306,6 @@ const ApplicationView: React.FC = () => {
   const handleApplicationSubmission = event => {
     event.preventDefault();
 
-    console.log(formValues);
     let isValidForm = true;
 
     const requestBody = { resume: undefined };
@@ -329,7 +320,6 @@ const ApplicationView: React.FC = () => {
         if (fieldName !== 'appSubmittedSuccessfully') {
           requestBody[fieldName.toLowerCase()] = formValues[fieldName];
         }
-        // console.log(`${fieldName}: ${formValues[fieldName]}`);
       } else if (isValidForm === true) {
         setTrySubmission(true);
         console.log(`${fieldName} is invalid`);
@@ -360,7 +350,6 @@ const ApplicationView: React.FC = () => {
         });
     } else {
       event.preventDefault();
-      //   setFormValid({ ...formValid, appSubmittedSuccessfully: false });
     }
   };
 
@@ -385,7 +374,7 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                 />
                 {(!formValid.firstName ||
-                  (trySubmission && formValues.firstName.length == 0)) && (
+                  (trySubmission && formValues.firstName.length === 0)) && (
                   <p className="errors">First name is required.</p>
                 )}
               </div>
@@ -400,7 +389,7 @@ const ApplicationView: React.FC = () => {
                   required
                 />
                 {(!formValid.lastName ||
-                  (trySubmission && formValues.lastName.length == 0)) && (
+                  (trySubmission && formValues.lastName.length === 0)) && (
                   <p className="errors">Last name is required.</p>
                 )}
               </div>
@@ -436,7 +425,7 @@ const ApplicationView: React.FC = () => {
                   required
                 />
                 {(!formValid.phone ||
-                  (trySubmission && formValues.phone.length == 0)) && (
+                  (trySubmission && formValues.phone.length === 0)) && (
                   <p className="errors">Valid phone number is required.</p>
                 )}
               </div>
@@ -458,7 +447,7 @@ const ApplicationView: React.FC = () => {
                   required
                 />
                 {(!formValid.age ||
-                  (trySubmission && formValues.age.length == 0)) && (
+                  (trySubmission && formValues.age.length === 0)) && (
                   <p className="errors">Valid age is required.</p>
                 )}
               </div>
@@ -478,9 +467,9 @@ const ApplicationView: React.FC = () => {
                     name="gender"
                     id="female"
                     aria-label="female"
-                    aria-required="true"
                     value="female"
                     ref={genderInputRefs.femaleGenderRadioInput}
+                    required
                   />
                 </div>
                 <div className="radio-button">
@@ -491,10 +480,10 @@ const ApplicationView: React.FC = () => {
                     type="radio"
                     name="gender"
                     aria-label="male"
-                    aria-required="true"
                     id="male"
                     value="male"
                     ref={genderInputRefs.maleGenderRadioInput}
+                    required
                   />
                 </div>
                 <div className="radio-button">
@@ -505,10 +494,10 @@ const ApplicationView: React.FC = () => {
                     type="radio"
                     name="gender"
                     aria-label="trans"
-                    aria-required="true"
                     id="trans"
                     value="trans"
                     ref={genderInputRefs.transGenderRadioInput}
+                    required
                   />
                 </div>
                 <div className="radio-button">
@@ -519,10 +508,10 @@ const ApplicationView: React.FC = () => {
                     type="radio"
                     name="gender"
                     aria-label="Non-binary"
-                    aria-required="true"
                     id="nonBinary"
                     value="non-binary"
                     ref={genderInputRefs.nonBinaryGenderRadioInput}
+                    required
                   />
                 </div>
                 <div className="demographics__other-gender">
@@ -535,10 +524,10 @@ const ApplicationView: React.FC = () => {
                   <input
                     id="other__input"
                     aria-label="Other"
-                    aria-required="true"
                     type="text"
                     name="gender"
                     ref={genderInputRefs.freeFormGenderInput}
+                    required
                   />
                 </div>
                 {trySubmission && !formValid.gender && (
@@ -563,10 +552,10 @@ const ApplicationView: React.FC = () => {
                   <input
                     type="radio"
                     aria-label="Asian"
-                    aria-required="true"
                     id="Asian"
                     name="ethnicity"
                     value="asian"
+                    required
                   />
                 </div>
                 <div className="radio-button-spaced">
@@ -576,10 +565,10 @@ const ApplicationView: React.FC = () => {
                   <input
                     type="radio"
                     aria-label="Black"
-                    aria-required="true"
                     id="Black"
                     name="ethnicity"
                     value="black"
+                    required
                   />
                 </div>
                 <div className="radio-button-spaced">
@@ -589,10 +578,10 @@ const ApplicationView: React.FC = () => {
                   <input
                     type="radio"
                     aria-label="Chicanx or Latinx"
-                    aria-required="true"
                     name="ethnicity"
                     id="Chicanx or Latix"
                     value="chicanxOrLatinx"
+                    required
                   />
                 </div>
                 <div className="radio-button-spaced">
@@ -602,10 +591,10 @@ const ApplicationView: React.FC = () => {
                   <input
                     type="radio"
                     aria-label="Pacific Islander"
-                    aria-required="true"
                     id="Pacific Islander"
                     name="ethnicity"
                     value="pacificIslander"
+                    required
                   />
                 </div>
                 <div className="radio-button-spaced">
@@ -615,10 +604,10 @@ const ApplicationView: React.FC = () => {
                   <input
                     type="radio"
                     aria-label="White"
-                    aria-required="true"
                     id="White"
                     name="ethnicity"
                     value="white"
+                    required
                   />
                 </div>
                 <div className="radio-button-spaced">
@@ -628,10 +617,10 @@ const ApplicationView: React.FC = () => {
                   <input
                     type="radio"
                     aria-label="Mixed"
-                    aria-required="true"
                     id="mixed"
                     name="ethnicity"
                     value="mixed"
+                    required
                   />
                 </div>
               </div>
@@ -659,7 +648,7 @@ const ApplicationView: React.FC = () => {
                       required
                     />
                     {(!formValid.school ||
-                      (trySubmission && formValues.school.length == 0)) && (
+                      (trySubmission && formValues.school.length === 0)) && (
                       <p className="errors">Valid school is required.</p>
                     )}
                   </div>
@@ -680,7 +669,7 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                 />
                 {(!formValid.gradYear ||
-                  (trySubmission && formValues.gradYear.length == 0)) && (
+                  (trySubmission && formValues.gradYear.length === 0)) && (
                   <p className="errors">
                     Valid year of graduation is required.
                   </p>
@@ -700,10 +689,10 @@ const ApplicationView: React.FC = () => {
                   <input
                     type="radio"
                     aria-label="yes"
-                    aria-required="true"
                     id="UCSC Student"
                     name="ucscStudent"
                     value="true"
+                    required
                   />
                 </div>
                 <div className="radio-button-spaced">
@@ -713,10 +702,10 @@ const ApplicationView: React.FC = () => {
                   <input
                     type="radio"
                     aria-label="no"
-                    aria-required="true"
                     name="ucscStudent"
                     id="UCSC Student"
                     value="false"
+                    required
                   />
                 </div>
                 {trySubmission && !formValid.ucscStudent && (
@@ -790,7 +779,7 @@ const ApplicationView: React.FC = () => {
                   onChange={handleInputChange}
                 />
                 {(!formValid.major ||
-                  (trySubmission && formValues.major.length == 0)) && (
+                  (trySubmission && formValues.major.length === 0)) && (
                   <p className="errors">Major is required.</p>
                 )}
               </div>
@@ -838,13 +827,13 @@ const ApplicationView: React.FC = () => {
                 <input
                   id="resume__input"
                   aria-label="Resume Input"
-                  aria-required="true"
                   type="file"
                   name="resume"
                   onChange={handleInputChange}
+                  required
                 />
                 {trySubmission && !formValid.resume && (
-                  <p className="errors">Resume Required</p>
+                  <p className="errors">Resume Required (.pdf format)</p>
                 )}
               </div>
             </section>
@@ -865,9 +854,9 @@ const ApplicationView: React.FC = () => {
                   type="radio"
                   name="firstHackathon"
                   aria-label="yes"
-                  aria-required="true"
                   value="true"
                   onChange={handleInputChange}
+                  required
                 />
               </div>
               <div className="radio-button">
@@ -878,9 +867,9 @@ const ApplicationView: React.FC = () => {
                   type="radio"
                   name="firstHackathon"
                   aria-label="no"
-                  aria-required="true"
                   value="false"
                   onChange={handleInputChange}
+                  required
                 />
               </div>
               {trySubmission && !formValid.firstHackathon && (
@@ -913,9 +902,9 @@ const ApplicationView: React.FC = () => {
                   type="radio"
                   name="firstCruzhacks"
                   aria-label="no"
-                  aria-required="true"
                   value="no"
                   onClick={handleInputChange}
+                  required
                 />
               </div>
               {trySubmission && !formValid.firstCruzhacks && (
@@ -941,8 +930,8 @@ const ApplicationView: React.FC = () => {
               />
               {(!formValid.participateQuestion ||
                 (trySubmission &&
-                  formValues.participateQuestion.length == 0)) &&
-                formValues.participateQuestion.length == 0 && (
+                  formValues.participateQuestion.length === 0)) &&
+                formValues.participateQuestion.length === 0 && (
                   <p className="errors">Required</p>
                 )}
               {!formValid.participateQuestion &&
@@ -969,8 +958,9 @@ const ApplicationView: React.FC = () => {
                 onChange={handleInputChange}
               />
               {(!formValid.technologyQuestion ||
-                (trySubmission && formValues.technologyQuestion.length == 0)) &&
-                formValues.technologyQuestion.length == 0 && (
+                (trySubmission &&
+                  formValues.technologyQuestion.length === 0)) &&
+                formValues.technologyQuestion.length === 0 && (
                   <p className="errors">Required</p>
                 )}
               {!formValid.technologyQuestion &&
@@ -996,8 +986,8 @@ const ApplicationView: React.FC = () => {
                 onChange={handleInputChange}
               />
               {(!formValid.seeAtCruzhacks ||
-                (trySubmission && formValues.seeAtCruzhacks.length == 0)) &&
-                formValues.seeAtCruzhacks.length == 0 && (
+                (trySubmission && formValues.seeAtCruzhacks.length === 0)) &&
+                formValues.seeAtCruzhacks.length === 0 && (
                   <p className="errors">Required</p>
                 )}
               {!formValid.seeAtCruzhacks &&
@@ -1027,10 +1017,10 @@ const ApplicationView: React.FC = () => {
                 <input
                   type="radio"
                   aria-label="yes"
-                  aria-required="true"
                   name="placeToSleep"
                   value="true"
                   onClick={handleInputChange}
+                  required
                 />
               </div>
               <div className="radio-button">
@@ -1041,9 +1031,9 @@ const ApplicationView: React.FC = () => {
                   type="radio"
                   name="placeToSleep"
                   aria-label="no"
-                  aria-required="true"
                   value="false"
                   onClick={handleInputChange}
+                  required
                 />
               </div>
               {trySubmission && !formValid.placeToSleep && (
@@ -1064,11 +1054,11 @@ const ApplicationView: React.FC = () => {
                 <input
                   type="radio"
                   aria-label="yes"
-                  aria-required="true"
                   id="Could you use help with transportation?"
                   name="transportation"
                   value="true"
                   onClick={handleInputChange}
+                  required
                 />
               </div>
               <div className="radio-button">
@@ -1079,10 +1069,10 @@ const ApplicationView: React.FC = () => {
                   type="radio"
                   name="transportation"
                   aria-label="no"
-                  aria-required="true"
                   id="Could you use help with transportation?"
                   value="false"
                   onClick={handleInputChange}
+                  required
                 />
               </div>
               {trySubmission && !formValid.transportation && (
@@ -1100,11 +1090,11 @@ const ApplicationView: React.FC = () => {
                 <input
                   type="radio"
                   aria-label="No"
-                  aria-required="true"
                   name="placeToPark"
                   className="park"
                   onClick={handleInputChange}
                   value="true"
+                  required
                 />
               </div>
               <div className="radio-button">
@@ -1113,10 +1103,10 @@ const ApplicationView: React.FC = () => {
                   type="radio"
                   name="placeToPark"
                   aria-label="No"
-                  aria-required="true"
                   value="false"
                   className="park"
                   onClick={handleInputChange}
+                  required
                 />
               </div>
               {trySubmission && !formValid.placeToPark && (
@@ -1147,9 +1137,9 @@ const ApplicationView: React.FC = () => {
                   type="checkbox"
                   name="codeOfConduct"
                   aria-label="yes"
-                  arua-required="true"
                   value="yes"
                   onClick={handleInputChange}
+                  required
                 />
                 <label htmlFor="yes" className="checkbox-label">
                   I have read agree to the{' '}
@@ -1158,14 +1148,17 @@ const ApplicationView: React.FC = () => {
                   </a>
                 </label>
               </div>
+              {trySubmission && !formValid.codeOfConduct && (
+                <p className="errors">Required</p>
+              )}
               <div className="checkbox-button">
                 <input
                   type="checkbox"
                   name="mlhAffiliation"
                   aria-label="no"
-                  aria-required="true"
                   value="no"
                   onClick={handleInputChange}
+                  required
                 />
                 <label htmlFor="no" className="checkbox-label">
                   I authorize you to share my application/registration
@@ -1178,13 +1171,16 @@ const ApplicationView: React.FC = () => {
                   <a href="https://mlh.io/privacy">MLH Privacy Policy.</a>
                 </label>
               </div>
+              {trySubmission && !formValid.mlhAffiliation && (
+                <p className="errors">Required</p>
+              )}
             </section>
             <button
               type="submit"
               className="application__button"
               onClick={handleApplicationSubmission}
             >
-              Submit
+              <p className="application__button-text">Submit</p>
             </button>
             {!formValid.appSubmittedSuccessfully && (
               <p className="errors">
