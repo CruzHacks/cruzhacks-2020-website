@@ -804,7 +804,11 @@ const ApplicationView: React.FC = () => {
                   id="linkedin__input"
                   aria-label="LinkedIn URL"
                   aria-required="true"
+<<<<<<< HEAD
                   type="url"
+=======
+                  type="text"
+>>>>>>> f14f1d11aea31f9afc481df90b937a73278e116c
                   value={formValues.linkedinUrl}
                   onChange={handleInputChange}
                 />
@@ -820,7 +824,11 @@ const ApplicationView: React.FC = () => {
                   id="github__input"
                   aria-label="GitHub URL"
                   aria-required="true"
+<<<<<<< HEAD
                   type="url"
+=======
+                  type="text"
+>>>>>>> f14f1d11aea31f9afc481df90b937a73278e116c
                   value={formValues.githubUrl}
                   onChange={handleInputChange}
                 />
