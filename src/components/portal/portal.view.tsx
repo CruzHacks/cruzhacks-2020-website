@@ -62,15 +62,20 @@ const PortalView: React.FC = () => {
               {applicationStatusMessage}
             </span>
           </div>
-        </div>
-        {/* <div className="portal__announcements">
+          <div className="portal__announcements">
             <div className="portal__announcements-container">
-              <span className="portal__announcements-styletext">
-                ANNOUNCEMENTS
-              </span>
-              <div className="portal__announcements-box"></div>
+              <div className="portal__announcements-box">
+                <span className="portal__announcements-styletext">
+                  ANNOUNCEMENTS
+                </span>
+                <span className="portal__announcements-event-text">
+                  Check back here for future updates!
+                </span>
+              </div>
             </div>
-          </div> */}
+          </div>
+        </div>
+
         {hasSubmittedApplication === false &&
         authUser.email_verified === true ? (
           <div className="portal__application">

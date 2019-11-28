@@ -1,44 +1,50 @@
 &__announcements {
-  right: 0;
   margin: auto;
-  position: relative;
 }
 
 &__announcements-container {
-  max-width: fit-content;
-  right: 0;
-  margin: auto;
+  width: 45vw;
 }
 
 &__announcements-styletext {
-  position: relative;
-  float: left;
-  margin: auto;
-  right: 5.5em;
-
+  position: absolute;
+  left: 3em;
+  top: 0;
+  top: 3.5em;
+  left: -6.3em;
   font-family: 'Rubik Regular';
   font-weight: 600;
-  font-size: 54px;
+  font-size: 44px;
   line-height: 43px;
-  top: 7.45em;
   letter-spacing: 0.07em;
   text-indent: 3px;
-
   color: #ffffff;
-
   text-shadow: -2px 0 #5252e2, 0 2px #5252e2, 2px 0 #5252e2, 0 -2px #5252e2;
   transform: rotate(-90deg);
 }
 
+&__announcements-event-text {
+  @include font-source-body(
+    20px,
+    19px,
+    0.04em,
+    3px,
+    center,
+    normal,
+    500,
+    #5252e2
+  );
+  display: table-cell;
+  vertical-align: middle;
+}
+
 &__announcements-box {
   right: 0;
-  margin: auto;
-  top: 12.5em;
-  left: 2em;
   background: #ffffff;
-  height: 40vh;
+  height: 60vh;
   width: 45vw;
   position: relative;
+  display: table;
 }
 
 &__announcements-box::after {
@@ -46,8 +52,7 @@
   margin: auto;
   top: -2.5em;
   left: -2em;
-  height: 40vh;
-
+  height: 60vh;
   width: 45vw;
   background: #6f6fe8;
   position: absolute;
