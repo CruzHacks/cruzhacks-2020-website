@@ -804,7 +804,7 @@ const ApplicationView: React.FC = () => {
                   id="linkedin__input"
                   aria-label="LinkedIn URL"
                   aria-required="true"
-                  type="text"
+                  type="url"
                   value={formValues.linkedinUrl}
                   onChange={handleInputChange}
                 />
@@ -820,7 +820,7 @@ const ApplicationView: React.FC = () => {
                   id="github__input"
                   aria-label="GitHub URL"
                   aria-required="true"
-                  type="text"
+                  type="url"
                   value={formValues.githubUrl}
                   onChange={handleInputChange}
                 />
