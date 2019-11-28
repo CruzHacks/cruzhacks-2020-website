@@ -59,6 +59,7 @@
             (config.internalOptions || {}).response_type ||
             (config.callbackOnLocationHash ? 'token' : 'code'),
           params: config.internalOptions,
+          sso: false,
         },
         /* additional configuration needed for custom domains
                 configurationBaseUrl: config.clientConfigurationBaseUrl,

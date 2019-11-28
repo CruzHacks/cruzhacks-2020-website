@@ -3,24 +3,26 @@ import ApplicationView from '../application/application.view';
 import HeroLightBulbView from '../landing/hero/header/hero-lightbulb.view';
 import { applicationHasBeenSubmitted } from '../../account';
 import { useAuth0 } from '../../auth/auth';
+import Auth0UserType from '../types/Auth0UserType';
 
 const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
 
   const { user, logout } = authContext;
+  const authUser: Auth0UserType = user;
 
   const [hasSubmittedApplication, setHasSubmitted] = useState(false);
   const [applicationStatusMessage, setMessage] = useState('');
 
   useEffect(() => {
-    applicationHasBeenSubmitted(user.email)
+    applicationHasBeenSubmitted(authUser.email)
       .then(hasSubmitted => {
         const message =
           hasSubmitted === true
-            ? `Hi ${user.nickname}, your application is under review.`
-            : user.email_verified === true
-            ? `Hi ${user.nickname}, you haven't submitted your application yet. Apply below!`
-            : `Hi ${user.nickname}, we need to verify your email first before you apply!`;
+            ? `Hi ${authUser.nickname}, your application is under review.`
+            : authUser.email_verified === true
+            ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`
+            : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`;
         setHasSubmitted(hasSubmitted);
         setMessage(message);
       })
@@ -30,7 +32,7 @@ const PortalView: React.FC = () => {
         setHasSubmitted(true);
         setMessage(message);
       });
-  }, [user.email, user.email_verified, user.nickname]);
+  }, [authUser.email, authUser.email_verified, authUser.nickname]);
 
   const logoutWithRedirect = () =>
     logout({
@@ -54,23 +56,30 @@ const PortalView: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="portal__appstatus">
-          <span className="portal__appstatus-text">
-            {/* Your application is under review. Days until CruzHacks: */}
-            {applicationStatusMessage}
-          </span>
-        </div>
-        {/* <div className="portal__announcements">
+        <div className="portal__appstatus-container">
+          <div className="portal__appstatus">
+            <span className="portal__appstatus-text">
+              {applicationStatusMessage}
+            </span>
+          </div>
+          <div className="portal__announcements">
             <div className="portal__announcements-container">
-              <span className="portal__announcements-styletext">
-                ANNOUNCEMENTS
-              </span>
-              <div className="portal__announcements-box"></div>
+              <div className="portal__announcements-box">
+                <span className="portal__announcements-styletext">
+                  ANNOUNCEMENTS
+                </span>
+                <span className="portal__announcements-event-text">
+                  Check back here for future updates!
+                </span>
+              </div>
             </div>
-          </div> */}
-        {hasSubmittedApplication === false && user.email_verified === true ? (
+          </div>
+        </div>
+
+        {hasSubmittedApplication === false &&
+        authUser.email_verified === true ? (
           <div className="portal__application">
-            <ApplicationView />
+            <ApplicationView user={authUser} />
           </div>
         ) : (
           <div></div>
