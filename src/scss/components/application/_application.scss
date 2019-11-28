@@ -52,12 +52,11 @@
     box-sizing: border-box;
     box-shadow: 0 2px 4px hsla(0, 0%, 74.9%, 0.7);
     text-decoration: none;
-    -webkit-transition: background-color 0.5s ease-out;
-    transition: background-color 0.5s ease-out;
+    transition: background-color 0.2s ease-out;
 
     &:hover {
       background: #5555cf;
-      transition: background-color 0.5s ease-in;
+      transition: background-color 0.2s ease-in;
     }
   }
 

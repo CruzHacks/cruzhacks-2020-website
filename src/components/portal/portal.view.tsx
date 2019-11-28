@@ -76,6 +76,8 @@ const PortalView: React.FC = () => {
                     renderer={props => <span>{props.days}</span>}
                   />{' '}
                   days until CruzHacks 2020!
+                  <hr />
+                  <div>Check back here for future updates.</div>
                 </span>
               </div>
             </div>
