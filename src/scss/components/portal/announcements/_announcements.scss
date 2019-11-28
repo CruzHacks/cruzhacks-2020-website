@@ -1,9 +1,13 @@
 &__announcements {
-  margin: auto;
+  margin: 3vh auto 5vh auto;
+  @include respond(tab-land) {
+    margin-top: 0;
+  }
 }
 
 &__announcements-container {
   width: 45vw;
+  z-index: 2;
 }
 
 &__announcements-styletext {
@@ -21,6 +25,23 @@
   color: #ffffff;
   text-shadow: -2px 0 #5252e2, 0 2px #5252e2, 2px 0 #5252e2, 0 -2px #5252e2;
   transform: rotate(-90deg);
+  @media screen and (max-height: 776px) {
+    font-size: 38px;
+    left: -6.6em;
+  }
+  @media screen and (max-height: 674px) {
+    font-size: 33px;
+    left: -6.8em;
+  }
+  @media screen and (max-height: 592px) {
+    font-size: 28px;
+    left: -7em;
+  }
+  @include respond(phone-narrow) {
+    font-size: 23px;
+    left: -7.2em;
+    top: 2.35em;
+  }
 }
 
 &__announcements-event-text {
@@ -39,12 +60,17 @@
 }
 
 &__announcements-box {
-  right: 0;
+  left: 2em;
   background: #ffffff;
-  height: 60vh;
+  height: 50vh;
   width: 45vw;
   position: relative;
   display: table;
+  @include respond(phone-narrow) {
+    height: 35vh;
+    width: 55vw;
+    left: 1em;
+  }
 }
 
 &__announcements-box::after {
@@ -52,9 +78,13 @@
   margin: auto;
   top: -2.5em;
   left: -2em;
-  height: 60vh;
+  height: 50vh;
   width: 45vw;
   background: #6f6fe8;
   position: absolute;
   z-index: -1;
+  @include respond(phone-narrow) {
+    height: 35vh;
+    width: 55vw;
+  }
 }

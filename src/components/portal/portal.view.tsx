@@ -12,6 +12,7 @@ const PortalView: React.FC = () => {
 
   const [hasSubmittedApplication, setHasSubmitted] = useState(false);
   const [applicationStatusMessage, setMessage] = useState('');
+  const [applicationHidden, setHidden] = useState('portal');
 
   useEffect(() => {
     setMessage('Loading your profile status...');
@@ -82,7 +83,7 @@ const PortalView: React.FC = () => {
             <ApplicationView user={authUser} />
           </div>
         ) : (
-          <div></div>
+          <div className="portal__void"></div>
         )}
       </div>
     </>

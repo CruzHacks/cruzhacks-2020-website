@@ -7,7 +7,7 @@
   position: relative;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: calc(100vh - 5em);
   width: 100%;
   // with this^^ the application is always just below the current viewheight
   // continued from above : we could even include the application banner as part of this div
@@ -18,12 +18,15 @@
 }
 
 &__appstatus {
-  margin: auto;
+  margin: 2em auto 5em auto;
   background: #6f6fe8;
   border-radius: 30px;
   width: 45vw;
   height: 60px;
   display: table;
+  @include respond(phone-narrow) {
+    margin-top: -2em;
+  }
 }
 
 &__appstatus-text {
@@ -35,4 +38,5 @@
   letter-spacing: 0.05em;
   text-align: center;
   padding: 1em;
+  @include responsive-font(0.7vw, 0.75em, 1em);
 }
