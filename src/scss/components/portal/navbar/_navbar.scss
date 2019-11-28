@@ -11,6 +11,9 @@
   background-color: #ffffff;
   color: #5342f3;
   letter-spacing: 0.05em;
+  @include respond(phone) {
+    height: 4.5em;
+  }
 }
 
 &__navbar-text-container {
@@ -30,6 +33,7 @@
   }
   @include respond(phone) {
     width: 73%;
+    top: 1.75em;
   }
   @include respond(phone-narrow) {
     width: 67%;

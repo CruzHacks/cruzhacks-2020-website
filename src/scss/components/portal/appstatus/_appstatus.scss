@@ -15,6 +15,9 @@
   // padding: 15% 0 15% 0; // adjust these % as you see fit. It looks weird with too much space in mobile
   // the padding can be turned on if you change height to height: 0vh; And you comment out the announcements box
   background-color: #f2f0ff;
+  @include respond(phone) {
+    height: calc(100vh - 4.5em);
+  }
 }
 
 &__appstatus {
