@@ -6,15 +6,13 @@
 .portal {
   width: 100%;
   height: 10%;
-  //   margin-bottom: 30%;
   position: relative;
-  //   z-index: -1;
   @import './navbar/navbar';
   @import './appstatus/appstatus';
   @import './announcements/announcements';
 
   &__application {
     position: relative;
-    top: 25.75vh;
+    top: 0vh;
   }
 }

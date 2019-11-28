@@ -1,8 +1,26 @@
+&__appstatus-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  z-index: -1;
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  // we could get rid of the padding and instead have the following:
+  // height: 0vh;
+  // with this^^ the application is always just below the current viewheight
+  // continued from above : we could even include the application banner as part of this div
+  padding: 15% 0 15% 0; // adjust these % as you see fit. It looks weird with too much space in mobile
+  background-color: #f2f0ff;
+}
+
 &__appstatus {
   right: 0;
   margin: auto;
   position: relative;
-  top: 6em;
   background: #6f6fe8;
   border-radius: 30px;
   width: 43vw;
@@ -15,12 +33,6 @@
   display: table;
 }
 
-&__appstatus-container {
-  display: flex;
-  top: 1.5em;
-  left: 6em;
-  position: relative;
-}
 &__appstatus-text {
   order: 1;
   flex-basis: 55%;
