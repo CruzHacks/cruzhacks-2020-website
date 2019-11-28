@@ -4,6 +4,7 @@ import HeroLightBulbView from '../landing/hero/header/hero-lightbulb.view';
 import { applicationHasBeenSubmitted } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
+import Countdown from 'react-countdown-now';
 
 const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
@@ -70,7 +71,11 @@ const PortalView: React.FC = () => {
                   ANNOUNCEMENTS
                 </span>
                 <span className="portal__announcements-event-text">
-                  Check back here for future updates!
+                  <Countdown
+                    date={'Friday January 17 2020 16:59:59'}
+                    renderer={props => <span>{props.days}</span>}
+                  />{' '}
+                  days until CruzHacks 2020!
                 </span>
               </div>
             </div>
