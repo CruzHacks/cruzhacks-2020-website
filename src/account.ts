@@ -6,7 +6,6 @@ const apiKey = process.env.REACT_APP_API_KEY + '';
 
 export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
   const queryParams = `?authentication=${apiKey}&accountType=hacker&accountEmail=${email}`;
-
   return axios
     .get<Array<Object>>(endpoint + queryParams)
     .then(response => {

@@ -7,7 +7,6 @@ import Auth0UserType from '../types/Auth0UserType';
 
 const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
-
   const { user, logout } = authContext;
   const authUser: Auth0UserType = user;
 
@@ -15,6 +14,7 @@ const PortalView: React.FC = () => {
   const [applicationStatusMessage, setMessage] = useState('');
 
   useEffect(() => {
+    setMessage('Loading your profile status...');
     applicationHasBeenSubmitted(authUser.email)
       .then(hasSubmitted => {
         const message =
