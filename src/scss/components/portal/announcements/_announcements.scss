@@ -61,6 +61,7 @@
   vertical-align: middle;
   padding: 1em;
   @include responsive-font(2.1vw, 16px, 20px);
+  max-width: 10em;
 }
 
 &__announcements-box {
