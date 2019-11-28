@@ -84,8 +84,7 @@
 #phone-number__input,
 #major__input,
 #linkedin__input,
-#github__input,
-#resume__input {
+#github__input {
   border-width: 0;
   border: none;
   background-color: #f4f4f4;
@@ -93,6 +92,13 @@
   height: 40px;
   width: 60vw;
   font-size: 28px;
+}
+
+#resume__input {
+  border-width: 0;
+  border: none;
+  display: block;
+  font-size: 18px;
 }
 
 #age__input {

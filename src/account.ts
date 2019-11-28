@@ -1,10 +1,8 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { useAuth0 } from './auth/auth';
 import S3FileUpload from 'react-s3';
 
 const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
-// const auth0User = useAuth0()!.user;
 
 export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
   const queryParams = `?authentication=${apiKey}&accountType=hacker&accountEmail=${email}`;
