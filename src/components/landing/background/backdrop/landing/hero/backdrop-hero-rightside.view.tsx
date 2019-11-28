@@ -5,7 +5,7 @@ const BackdropHeroRightsideView: React.FC = () => {
     <>
       <svg
         className="hero-backdrop__rightside-image"
-        viewBox="0 0 1002 741"
+        viewBox="0 0 1056 741"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
