@@ -13,7 +13,6 @@ const PortalView: React.FC = () => {
 
   const [hasSubmittedApplication, setHasSubmitted] = useState(false);
   const [applicationStatusMessage, setMessage] = useState('');
-  const [applicationHidden, setHidden] = useState('portal');
 
   useEffect(() => {
     setMessage('Loading your profile status...');
