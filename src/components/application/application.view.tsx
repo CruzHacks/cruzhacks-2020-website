@@ -206,9 +206,15 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         }
         break;
       case 'school':
-        // need 1 more validation for alphanumber
-        if (value.length < 320 && value.length > 0) {
+        const schoolRegExp = new RegExp(/[0-9]/);
+        if (
+          value.length < 320 &&
+          value.length > 0 &&
+          !schoolRegExp.test(value)
+        ) {
           setFormValid({ ...formValid, [name]: true });
+        } else {
+          setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'gradYear':
