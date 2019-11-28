@@ -11,6 +11,9 @@
   background-color: #ffffff;
   color: #5342f3;
   letter-spacing: 0.05em;
+  @include respond(phone) {
+    height: 4.5em;
+  }
 }
 
 &__navbar-text-container {
@@ -30,6 +33,7 @@
   }
   @include respond(phone) {
     width: 73%;
+    top: 1.75em;
   }
   @include respond(phone-narrow) {
     width: 67%;
@@ -61,14 +65,14 @@
   height: 50%;
   border-radius: 27px;
   margin-bottom: 3.25em;
-  margin-top: -0.45em;
+  margin-top: -0.65em;
   text-align: center;
   z-index: 2;
   text-decoration: none;
-  transition: background-color 0.5s ease-out;
+  transition: background-color 0.2s ease-out;
   &:hover {
     background: #5555cf;
-    transition: background-color 0.5s ease-in;
+    transition: background-color 0.2s ease-in;
   }
   transition: color 0.2s ease-out;
   &:hover {
@@ -80,4 +84,5 @@
 &__navbar-logout {
   display: table-cell;
   vertical-align: middle;
+  padding: 0.2em;
 }

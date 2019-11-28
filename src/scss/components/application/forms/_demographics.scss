@@ -18,6 +18,7 @@
   &__first-name {
     float: left;
     margin-right: 1.4vw;
+    padding-bottom: 1.5em;
   }
   &__last-name {
     float: left;
@@ -25,11 +26,18 @@
 
   &__age {
     float: left;
+    padding-right: 2em;
     //margin-right: 13vw;
   }
 
   &__gender {
     float: right;
+    padding-right: 1em;
+    @media screen and (max-width: 1318px) {
+      padding-top: 1.5em;
+      padding-bottom: 0.75em;
+      float: left;
+    }
   }
 
   /* Gender form section */
@@ -49,18 +57,19 @@
   // education related
   &__yog {
     float: left;
-    min-width: 336px;
     margin-right: 4vw;
   }
   &__ucsc-student {
     float: left;
+    @media screen and (max-width: 530px) {
+      padding-top: 1.5em;
+    }
   }
   &__college-affil {
     float: right;
   }
   &__currSchool {
     float: left;
-    min-width: 336px;
     margin-right: 4vw;
   }
   // major
@@ -99,6 +108,7 @@
   border: none;
   display: block;
   font-size: 18px;
+  max-width: 14em;
 }
 
 #age__input {
