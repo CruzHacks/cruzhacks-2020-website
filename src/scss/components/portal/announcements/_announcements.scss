@@ -40,9 +40,9 @@
     top: 3.05em;
   }
   @include respond(phone-narrow) {
-    font-size: 25px;
-    left: -7.2em;
-    top: 2.8em;
+    font-size: 22px;
+    left: -6.8em;
+    top: 3.2em;
   }
 }
 
@@ -91,5 +91,7 @@
   @include respond(phone-narrow) {
     height: 35vh;
     width: 55vw;
+    top: -1em;
+    left: -1em;
   }
 }

@@ -4,6 +4,7 @@
   font-size: 1.25em;
   max-width: 8em;
   height: auto;
+  position: sticky;
 }
 @mixin header-underline($width) {
   position: absolute;
@@ -73,16 +74,31 @@
     );
   }
 }
+
+input[type='text'],
+input[type='url'],
+input[type='number'] {
+  width: 100%;
+  font-size: 12px;
+  padding: 12px 6px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: 'Rubik Regular';
+}
+
 .radio-button {
   margin: 0.6vw 0.9vw 0.6vw 0;
+  padding: 0 0 0 0.9em;
   display: inline-block;
 }
 .radio-button-spaced {
   margin: 0.6vw 3vw 0.6vw 0;
+  padding: 0 0 0 0.9em;
   display: inline-block;
 }
 .radio-label {
   margin-right: 0.4vw;
+  font-weight: 500;
 }
 
 .checkbox-label {

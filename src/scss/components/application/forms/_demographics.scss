@@ -33,7 +33,7 @@
   &__gender {
     float: right;
     padding-right: 1em;
-    @media screen and (max-width: 1318px) {
+    @media screen and (max-width: 1589px) {
       padding-top: 1.5em;
       padding-bottom: 0.75em;
       float: left;
@@ -43,6 +43,8 @@
   /* Gender form section */
   &__other-gender {
     display: inline-block;
+    font-weight: 500;
+    padding: 0 0 0 0.9em;
   }
 
   &__gender-label {
@@ -52,6 +54,13 @@
   &__label {
     margin-bottom: 1.1vh;
     display: block;
+  }
+
+  &__ethnicity {
+    @media screen and (max-width: 1762px) {
+      padding-bottom: 1.5em;
+      float: left;
+    }
   }
 
   // education related
@@ -84,7 +93,7 @@
   display: block;
   height: 40px;
   width: 29.2vw;
-  font-size: 28px;
+  font-size: 18px;
 }
 
 #email__input,
@@ -100,7 +109,7 @@
   display: block;
   height: 40px;
   width: 60vw;
-  font-size: 28px;
+  font-size: 18px;
 }
 
 #resume__input {
@@ -118,7 +127,7 @@
   display: block;
   height: 40px;
   width: 9vw;
-  font-size: 28px;
+  font-size: 18px;
 }
 
 #other__input {
@@ -127,7 +136,7 @@
   background-color: #f4f4f4;
   height: 40px;
   width: 12vw;
-  font-size: 28px;
+  font-size: 18px;
 }
 
 #yog__input {
@@ -136,7 +145,7 @@
   background-color: #f4f4f4;
   height: 40px;
   width: 11.5vw;
-  font-size: 28px;
+  font-size: 18px;
 }
 
 .currSchool__input {
