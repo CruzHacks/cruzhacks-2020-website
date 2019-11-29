@@ -37,6 +37,10 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
     authoid: user.sub,
   });
 
+  const [apiStatusUpdates, setApiStatusUpdates] = useState({
+    appSubmissionInProgress: false,
+  });
+
   const [formValid, setFormValid] = useState({
     firstName: true,
     lastName: true,
@@ -340,6 +344,10 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
     });
 
     if (isValidForm === true) {
+      setApiStatusUpdates({
+        ...apiStatusUpdates,
+        appSubmissionInProgress: true,
+      });
       uploadResume(user.email, formValues.resume)
         .then(response => {
           delete requestBody.resume;
@@ -353,11 +361,13 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             })
             .catch(error => {
               console.log(error);
+              setApiStatusUpdates({...apiStatusUpdates, appSubmissionInProgress: false})
               setFormValid({ ...formValid, appSubmittedSuccessfully: false });
             });
         })
         .catch(error => {
           console.log(error);
+          setApiStatusUpdates({...apiStatusUpdates, appSubmissionInProgress: false})
           setFormValid({ ...formValid, appSubmittedSuccessfully: false });
         });
     } else {
@@ -1210,6 +1220,11 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             >
               <p className="application__button-text">Submit</p>
             </button>
+            {apiStatusUpdates.appSubmissionInProgress === true && (
+              <p className="info">
+                Submitting your application to the CruzHacks Cloud!
+              </p>
+            )}
             {!formValid.appSubmittedSuccessfully && (
               <p className="errors">
                 There was error in uploading your application to the CruzHacks
