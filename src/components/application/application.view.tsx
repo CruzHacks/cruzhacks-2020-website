@@ -127,7 +127,11 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         const phoneNumRegExp = new RegExp(
           /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/
         );
-        if (phoneNumRegExp.test(value)) {
+        if (
+          value.length < 21 &&
+          value.length > 0 &&
+          phoneNumRegExp.test(value)
+        ) {
           setFormValid({ ...formValid, [name]: true });
         } else {
           setFormValid({ ...formValid, [name]: false });
@@ -161,7 +165,9 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           genderInputRefs.maleGenderRadioInput.current ||
           genderInputRefs.transGenderRadioInput.current ||
           genderInputRefs.nonBinaryGenderRadioInput.current ||
-          (genderTextElement && genderTextElement.value !== '')
+          (genderTextElement &&
+            genderTextElement.value !== '' &&
+            genderTextElement.value.length <= 320)
         ) {
           setFormValid({ ...formValid, [name]: true });
         } else {
@@ -200,9 +206,15 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         }
         break;
       case 'school':
-        // need 1 more validation for alphanumber
-        if (value.length < 320 && value.length > 0) {
+        const schoolRegExp = new RegExp(/[0-9]/);
+        if (
+          value.length < 320 &&
+          value.length > 0 &&
+          !schoolRegExp.test(value)
+        ) {
           setFormValid({ ...formValid, [name]: true });
+        } else {
+          setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'gradYear':
@@ -797,7 +809,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   id="linkedin__input"
                   aria-label="LinkedIn URL"
                   aria-required="true"
-                  type="text"
+                  type="url"
                   value={formValues.linkedinUrl}
                   onChange={handleInputChange}
                 />
@@ -813,7 +825,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   id="github__input"
                   aria-label="GitHub URL"
                   aria-required="true"
-                  type="text"
+                  type="url"
                   value={formValues.githubUrl}
                   onChange={handleInputChange}
                 />

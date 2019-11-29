@@ -4,10 +4,10 @@ import HeroLightBulbView from '../landing/hero/header/hero-lightbulb.view';
 import { applicationHasBeenSubmitted } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
+import Countdown from 'react-countdown-now';
 
 const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
-
   const { user, logout } = authContext;
   const authUser: Auth0UserType = user;
 
@@ -15,6 +15,7 @@ const PortalView: React.FC = () => {
   const [applicationStatusMessage, setMessage] = useState('');
 
   useEffect(() => {
+    setMessage('Loading your profile status...');
     applicationHasBeenSubmitted(authUser.email)
       .then(hasSubmitted => {
         const message =
@@ -69,7 +70,13 @@ const PortalView: React.FC = () => {
                   ANNOUNCEMENTS
                 </span>
                 <span className="portal__announcements-event-text">
-                  Check back here for future updates!
+                  <Countdown
+                    date={'Friday January 17 2020 16:59:59'}
+                    renderer={props => <span>{props.days}</span>}
+                  />{' '}
+                  days until CruzHacks 2020!
+                  <hr />
+                  <div>Check back here for future updates.</div>
                 </span>
               </div>
             </div>
@@ -82,7 +89,7 @@ const PortalView: React.FC = () => {
             <ApplicationView user={authUser} />
           </div>
         ) : (
-          <div></div>
+          <div className="portal__void"></div>
         )}
       </div>
     </>
