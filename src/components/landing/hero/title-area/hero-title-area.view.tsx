@@ -17,16 +17,17 @@ const HeroTitleAreaView: React.FC = () => {
       </div>
       <div className="hero-title-area__button-container">
         <a
-          href="https://2019.cruzhacks.com"
+          href="/portal"
           className="hero-title-area__2019-button"
           target="_blank"
           rel="noopener noreferrer"
         >
           <p className="hero-title-area__2019-button-text">
             <br />
-            CHECK OUT 2019
+            APPLY
           </p>
         </a>
+
         <a
           href="mailto:sponsor@cruzhacks.com"
           className="hero-title-area__sponsor-button"
