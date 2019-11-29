@@ -166,7 +166,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           genderInputRefs.transGenderRadioInput.current ||
           genderInputRefs.nonBinaryGenderRadioInput.current ||
           (genderTextElement &&
-            genderTextElement.value !== '' &&
+            genderTextElement.value.length > 0 &&
             genderTextElement.value.length <= 320)
         ) {
           setFormValid({ ...formValid, [name]: true });
@@ -376,7 +376,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           <form className="demographics__form">
             <section className="first-last-section">
               <div className="demographics__first-name">
-                <label className="demographics__label">First Name</label>
+                <label className="demographics__label">First Name*</label>
                 <input
                   name="firstName"
                   id="first-name__input"
@@ -391,7 +391,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 )}
               </div>
               <div className="demographics__last-name">
-                <label className="demographics__label">Last Name</label>
+                <label className="demographics__label">Last Name*</label>
                 <input
                   name="lastName"
                   id="last-name__input"
@@ -427,7 +427,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
 
             <section className="phone-section">
               <div className="demographics__phone-number">
-                <label className="demographics__label">Phone Number</label>
+                <label className="demographics__label">Phone Number*</label>
                 <input
                   name="phone"
                   id="phone-number__input"
@@ -1155,7 +1155,11 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 />
                 <label htmlFor="yes" className="checkbox-label">
                   I have read agree to the{' '}
-                  <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
+                  <a
+                    target="__blank"
+                    rel="noreferrer"
+                    href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+                  >
                     MLH Code of Conduct.
                   </a>
                 </label>
@@ -1177,10 +1181,22 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   information for event administration, ranking, MLH
                   administration, pre- and post-event informational e-mails, and
                   occasional messages about hackathons in-line with the{' '}
-                  <a href="https://mlh.io/privacy">MLH Privacy Policy.</a> I
-                  further agree to the terms of both the MLH Contest Terms and
+                  <a
+                    target="__blank"
+                    rel="noreferrer"
+                    href="https://mlh.io/privacy"
+                  >
+                    MLH Privacy Policy.
+                  </a>{' '}
+                  I further agree to the terms of both the MLH Contest Terms and
                   Conditions and the{' '}
-                  <a href="https://mlh.io/privacy">MLH Privacy Policy.</a>
+                  <a
+                    target="__blank"
+                    rel="noreferrer"
+                    href="https://mlh.io/privacy"
+                  >
+                    MLH Privacy Policy.
+                  </a>
                 </label>
               </div>
               {trySubmission && !formValid.mlhAffiliation && (

@@ -14,8 +14,23 @@ const faqs = [
   },
   {
     question: 'What are the rules?',
-    answer:
-      'As a Major League Hacking member event, we follow Major League Hacking’s Code of Conduct which ensures all attendees to CruzHacks are respectful regardless of who you are and where you come from. Additionally, to be considered for an award, you must only submit a project that your team wrote and worked on during the hackathon & agree to our 2018 Participation Agreement.',
+    answer: (
+      <span>
+        As a Major League Hacking member event, we follow Major League Hacking’s
+        &nbsp;
+        <a
+          target="__blank"
+          rel="noreferrer"
+          href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+        >
+          MLH Code of Conduct
+        </a>{' '}
+        which ensures all attendees to CruzHacks are respectful regardless of
+        who you are and where you come from. Additionally, to be considered for
+        an award, you must only submit a project that your team wrote and worked
+        on during the hackathon & agree to our 2018 Participation Agreement.
+      </span>
+    ),
   },
   {
     question: 'Is it completely free?',

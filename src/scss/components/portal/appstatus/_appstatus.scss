@@ -24,11 +24,12 @@
   margin: 2em auto 5em auto;
   background: #6f6fe8;
   border-radius: 30px;
-  width: 45vw;
+
   height: 60px;
   display: table;
   @include respond(phone-narrow) {
     margin-top: -2em;
+    max-width: 260px;
   }
 }
 
@@ -41,5 +42,5 @@
   letter-spacing: 0.05em;
   text-align: center;
   padding: 1em;
-  @include responsive-font(1.7vw, 0.75em, 1em);
+  @include responsive-font(2.3vw, 0.75em, 1em);
 }

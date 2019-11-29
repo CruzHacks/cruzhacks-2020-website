@@ -65,7 +65,7 @@
   height: 50%;
   border-radius: 27px;
   margin-bottom: 3.25em;
-  margin-top: -0.65em;
+  margin-top: -0.5em;
   text-align: center;
   z-index: 2;
   text-decoration: none;
@@ -85,4 +85,5 @@
   display: table-cell;
   vertical-align: middle;
   padding: 0.2em;
+  min-width: 2em;
 }
