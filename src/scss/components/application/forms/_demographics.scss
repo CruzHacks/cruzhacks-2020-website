@@ -61,6 +61,9 @@
       padding-bottom: 0.75em;
       float: left;
     }
+    @include respond(phone) {
+      padding-bottom: 1.5em;
+    }
   }
 
   // education related
