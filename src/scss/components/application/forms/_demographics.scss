@@ -58,11 +58,8 @@
 
   &__ethnicity {
     @media screen and (max-width: 1762px) {
-      padding-bottom: 0.75em;
-      float: left;
-    }
-    @include respond(phone) {
       padding-bottom: 1.5em;
+      float: left;
     }
   }
 
