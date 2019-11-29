@@ -9,7 +9,7 @@
 
 @include respond(phone) {
   div.hero-right-side-container {
-    top: 3%;
+    display: none;
   }
 
   div.hamburger {

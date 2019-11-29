@@ -48,8 +48,7 @@
       max-width: 50vw;
     }
     @include respond(phone) {
-      max-width: 50vw;
-      top: 5vh;
+      display: none;
     }
   }
 
