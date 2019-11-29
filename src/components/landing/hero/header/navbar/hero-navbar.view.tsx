@@ -33,6 +33,16 @@ const HeroNavbarView: React.FC = () => {
           <p className="navbar__button-text">TEAM</p>
         </Link>
       </div>
+      <div className="navbar__button">
+        <a
+          href="https://2019.cruzhacks.com/"
+          style={{ textDecoration: 'none' }}
+        >
+          <p className="navbar__button-text" style={{ textDecoration: 'none' }}>
+            2019 RETROSPECTIVE
+          </p>
+        </a>
+      </div>
     </div>
   );
 };
