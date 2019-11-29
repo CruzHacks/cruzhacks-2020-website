@@ -33,7 +33,7 @@
   &__gender {
     float: right;
     padding-right: 1em;
-    @media screen and (max-width: 1318px) {
+    @media screen and (max-width: 1589px) {
       padding-top: 1.5em;
       padding-bottom: 0.75em;
       float: left;
@@ -43,6 +43,7 @@
   /* Gender form section */
   &__other-gender {
     display: inline-block;
+    font-weight: 500;
   }
 
   &__gender-label {
@@ -52,6 +53,13 @@
   &__label {
     margin-bottom: 1.1vh;
     display: block;
+  }
+
+  &__ethnicity {
+    @media screen and (max-width: 1762px) {
+      padding-bottom: 0.75em;
+      float: left;
+    }
   }
 
   // education related
