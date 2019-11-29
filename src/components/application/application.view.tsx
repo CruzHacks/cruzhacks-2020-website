@@ -37,6 +37,10 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
     authoid: user.sub,
   });
 
+  const [apiStatusUpdates, setApiStatusUpdates] = useState({
+    appSubmissionInProgress: false,
+  });
+
   const [formValid, setFormValid] = useState({
     firstName: true,
     lastName: true,
@@ -340,6 +344,10 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
     });
 
     if (isValidForm === true) {
+      setApiStatusUpdates({
+        ...apiStatusUpdates,
+        appSubmissionInProgress: true,
+      });
       uploadResume(user.email, formValues.resume)
         .then(response => {
           delete requestBody.resume;
@@ -353,11 +361,13 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             })
             .catch(error => {
               console.log(error);
+              setApiStatusUpdates({...apiStatusUpdates, appSubmissionInProgress: false})
               setFormValid({ ...formValid, appSubmittedSuccessfully: false });
             });
         })
         .catch(error => {
           console.log(error);
+          setApiStatusUpdates({...apiStatusUpdates, appSubmissionInProgress: false})
           setFormValid({ ...formValid, appSubmittedSuccessfully: false });
         });
     } else {
@@ -446,7 +456,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             <section className="age-gender-section">
               <div className="demographics__age">
                 <label htmlFor="age" className="demographics__label">
-                  Age
+                  Age*
                 </label>
                 <input
                   name="age"
@@ -468,7 +478,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 onChange={handleInputChange}
               >
                 <label htmlFor="gender" className="demographics__label">
-                  Gender
+                  Gender*
                 </label>
                 <div className="radio-button">
                   <label htmlFor="female" className="radio-label">
@@ -555,7 +565,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 onChange={handleInputChange}
               >
                 <label htmlFor="ethnicity" className="demographics__label">
-                  Ethnicity
+                  Ethnicity*
                 </label>
                 <div className="radio-button-spaced">
                   <label htmlFor="Asian" className="radio-label">
@@ -647,7 +657,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   className="demographics__label"
                   onChange={handleInputChange}
                 >
-                  School/University (Full Name)
+                  School/University (Full Name)*
                 </label>
                 <section className="school-section">
                   <div className="demographics__school">
@@ -669,7 +679,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
               </div>
               <div className="demographics__yog">
                 <label htmlFor="yog__input" className="demographics__label">
-                  Year of Graduation:
+                  Year of Graduation:*
                 </label>
                 <input
                   name="gradYear"
@@ -692,7 +702,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 onChange={handleInputChange}
               >
                 <label htmlFor="UCSC Student" className="demographics__label">
-                  UCSC Student
+                  UCSC Student*
                 </label>
                 <div className="radio-button-spaced">
                   <label htmlFor="yes" className="radio-label">
@@ -733,7 +743,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     htmlFor="College Affiliation"
                     className="demographics__label"
                   >
-                    UCSC College Affiliation
+                    UCSC College Affiliation*
                   </label>
                   <select
                     id="College Affiliation"
@@ -779,7 +789,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             <section className="major-section">
               <div className="demographics__major">
                 <label htmlFor="major__input" className="demographics__label">
-                  Major/Field of Study
+                  Major/Field of Study*
                 </label>
                 <input
                   name="major"
@@ -834,7 +844,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             <section className="resume-section">
               <div className="demographics__major">
                 <label htmlFor="resume__input" className="demographics__label">
-                  Resume Upload
+                  Resume Upload*
                 </label>
                 <input
                   id="resume__input"
@@ -856,7 +866,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           <form className="experiences__form">
             <section className="first-hackathon">
               <label htmlFor="firstHackathon" className="experiences__label">
-                First Hackathon?
+                First Hackathon?*
               </label>
               <div className="radio-button">
                 <label htmlFor="yes" className="radio-label">
@@ -891,7 +901,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
 
             <section className="first-cruzhacks">
               <label htmlFor="first-cruzhacks" className="experiences__label">
-                First CruzHacks?
+                First CruzHacks?*
               </label>
               <div className="radio-button">
                 <label htmlFor="yes" className="radio-label">
@@ -929,7 +939,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 htmlFor="Why do you want to participate?"
                 className="experiences__label"
               >
-                Why do you want to participate? (500 chars)
+                Why do you want to participate? (500 chars)*
               </label>
               <textarea
                 name="participateQuestion"
@@ -958,7 +968,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 className="experiences__label"
               >
                 Where do you see technology pushing humanity’s goals? (500
-                chars)
+                chars)*
               </label>
               <textarea
                 name="technologyQuestion"
@@ -986,7 +996,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 htmlFor="What would you like to see at CruzHacks 2020?"
                 className="experiences__label"
               >
-                What would you like to see at CruzHacks 2020? (500 chars)
+                What would you like to see at CruzHacks 2020? (500 chars)*
               </label>
               <textarea
                 name="seeAtCruzhacks"
@@ -1161,7 +1171,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
                   >
                     MLH Code of Conduct.
-                  </a>
+                  </a>*
                 </label>
               </div>
               {trySubmission && !formValid.codeOfConduct && (
@@ -1196,7 +1206,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     href="https://mlh.io/privacy"
                   >
                     MLH Privacy Policy.
-                  </a>
+                  </a>*
                 </label>
               </div>
               {trySubmission && !formValid.mlhAffiliation && (
@@ -1210,6 +1220,11 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             >
               <p className="application__button-text">Submit</p>
             </button>
+            {apiStatusUpdates.appSubmissionInProgress === true && (
+              <p className="info">
+                Submitting your application to the CruzHacks Cloud!
+              </p>
+            )}
             {!formValid.appSubmittedSuccessfully && (
               <p className="errors">
                 There was error in uploading your application to the CruzHacks
