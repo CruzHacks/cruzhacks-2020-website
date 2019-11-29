@@ -4,6 +4,7 @@
   font-size: 1.25em;
   max-width: 8em;
   height: auto;
+  position: sticky;
 }
 @mixin header-underline($width) {
   position: absolute;
