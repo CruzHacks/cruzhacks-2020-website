@@ -16,14 +16,14 @@ const HeroTitleAreaView: React.FC = () => {
         <p>// Applications Release Nov.</p>
       </div>
       <div className="hero-title-area__button-container">
-        <a
+        {/* <a
           href="/portal"
           className="hero-title-area__sponsor-button"
           target="_blank"
           rel="noopener noreferrer"
         >
           <p className="hero-title-area__sponsor-button-text">APPLY</p>
-        </a>
+        </a> */}
 
         <a
           href="mailto:sponsor@cruzhacks.com"
