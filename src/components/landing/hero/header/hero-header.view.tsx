@@ -7,7 +7,7 @@ const HeroHeaderView: React.FC = () => {
   return (
     <div className="hero__header">
       <HeroLightBulb />
-      <HeroNavbarView />
+      {/* <HeroNavbarView /> */}
       <HeroHamburgerView />
     </div>
   );
