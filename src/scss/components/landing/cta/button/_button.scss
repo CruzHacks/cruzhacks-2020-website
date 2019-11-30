@@ -34,8 +34,16 @@
 &__button--mentor {
   @include button();
   margin: 0 1em 0 0;
+
+  @include respond(phone-narrow) {
+    margin: unset;
+  }
 }
 &__button--volunteer {
   @include button();
   margin: 0 0 0 1em;
+
+  @include respond(phone-narrow) {
+    margin: unset;
+  }
 }
