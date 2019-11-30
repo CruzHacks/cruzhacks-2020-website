@@ -17,13 +17,13 @@
     margin-top: -45em;
   }
   @include respond(smallest) {
-    margin-top: -38em;
-  }
-  @media screen and (max-width: 394px) {
     margin-top: -35em;
   }
+  @media screen and (max-width: 394px) {
+    margin-top: -32em;
+  }
   @media screen and (max-width: 354px) {
-    margin-top: -33em;
+    margin-top: -30em;
   }
 }
 
