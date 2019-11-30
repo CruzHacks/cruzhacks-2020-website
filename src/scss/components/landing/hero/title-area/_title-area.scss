@@ -139,11 +139,11 @@
     height: 50px;
     bottom: 18px;
     z-index: 2;
-    transition: color 0.5s ease-out;
+    transition: color 0.5s ease-in;
     @include responsive-font(2.5vw, 13.5px, 14px);
     &:hover {
       color: #ffffff;
-      transition: color 0.5s ease-in;
+      transition: color 0.5s ease-out;
     }
   }
   &__sponsor-button-text {

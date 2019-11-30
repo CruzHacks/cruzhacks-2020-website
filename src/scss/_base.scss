@@ -38,7 +38,7 @@ body {
 
 #mlh-trust-badge {
   margin-top: -1px;
-  @include respond(phone-narrow) {
+  @include respond(tab-port) {
     visibility: hidden;
   }
 }
