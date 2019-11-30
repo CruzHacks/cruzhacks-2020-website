@@ -17,7 +17,6 @@ const faqs = [
     answer: (
       <span>
         As a Major League Hacking member event, we follow Major League Hacking’s
-        &nbsp;
         <a
           target="__blank"
           rel="noreferrer"
