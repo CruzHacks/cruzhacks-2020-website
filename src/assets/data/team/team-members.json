@@ -13,7 +13,7 @@
   },
   {
     "name": "Kyle O'Brien",
-    "title": "Lead Engineer",
+    "title": "Engineering Director",
     "imgRef": "kyle-obrien.jpg",
     "linkedIn": "https://www.linkedin.com/in/kyle1668/"
   },
@@ -24,16 +24,22 @@
     "linkedIn": "https://www.linkedin.com/in/sherry-huang-502018b7/"
   },
   {
+    "name": "Radhika Gathwala",
+    "title": "Logistics Director",
+    "imgRef": "radhika-gathwala.jpg",
+    "linkedIn": "https://www.linkedin.com/in/radhika-gathwala/"
+  },
+  {
+    "name": "Eric Mockler",
+    "title": "Engineering Director",
+    "imgRef": "eric-mockler.jpg",
+    "linkedIn": "https://www.linkedin.com/in/mocklee/"
+  },
+  {
     "name": "Sean O'Hearn",
     "title": "Engineer",
     "imgRef": "sean-ohearn.jpg",
     "linkedIn": "https://www.linkedin.com/in/sean-ohearn/"
-  },
-  {
-    "name": "Eric Mockler",
-    "title": "Engineer",
-    "imgRef": "eric-mockler.jpg",
-    "linkedIn": "https://www.linkedin.com/in/mocklee/"
   },
   {
     "name": "Joseph Nguyen",
@@ -94,12 +100,6 @@
     "title": "Communications",
     "imgRef": "navya-rao.jpg",
     "linkedIn": "https://www.linkedin.com/in/navya-rao-682140142/"
-  },
-  {
-    "name": "Radhika Gathwala",
-    "title": "Logistics Director",
-    "imgRef": "radhika-gathwala.jpg",
-    "linkedIn": "https://www.linkedin.com/in/radhika-gathwala/"
   },
   {
     "name": "Neha Pamidi",
