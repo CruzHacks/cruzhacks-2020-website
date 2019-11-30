@@ -24,7 +24,6 @@
     }
     @include respond(smallest) {
       margin-top: 18em;
-      min-height: 816px;
     }
   }
   @import './button/button';
