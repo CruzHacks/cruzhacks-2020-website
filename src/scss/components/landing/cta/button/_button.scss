@@ -14,6 +14,11 @@
   box-shadow: 0 2px 2px #bfbfbf;
   text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.2s ease-out;
+  &:hover {
+    background: lighten(#5dcec6, 10%);
+    transition: background-color 0.2s ease-in;
+  }
 }
 &__button-container {
   margin: 3% 44.01% 0 12.33%;

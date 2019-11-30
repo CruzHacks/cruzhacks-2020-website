@@ -20,13 +20,13 @@ const JoinOurMissionView: React.FC = () => {
           href="https://forms.gle/rP8MGCwRk9CTdKJ67"
           className="cta__button--mentor"
         >
-          <p className="cta__button-text">MENTOR</p>
+          <p className="cta__button-text">HELP OUT</p>
         </a>
         <a
           href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing"
           className="cta__button--volunteer"
         >
-          <p className="cta__button-text">VOLUNTEER</p>
+          <p className="cta__button-text">LEARN MORE</p>
         </a>
       </div>
     </div>
