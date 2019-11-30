@@ -10,13 +10,12 @@ const HeroHamburgerView: React.FC = () => {
     document.removeEventListener('click', hideDropdownMenu);
   };
 
-  const showDropdownMenu = event => {
+  const showDropdownMenu = () => {
     if (displayMenu) {
       hideDropdownMenu();
       return;
     }
     setDisplayMenu(true);
-    console.log('dropped');
     document.addEventListener('click', hideDropdownMenu);
   };
 

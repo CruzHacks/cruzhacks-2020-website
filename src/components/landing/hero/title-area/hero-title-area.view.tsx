@@ -19,7 +19,6 @@ const HeroTitleAreaView: React.FC = () => {
         <a
           href="/portal"
           className="hero-title-area__sponsor-button"
-          target="_blank"
           rel="noopener noreferrer"
         >
           <p className="hero-title-area__sponsor-button-text">APPLY</p>
