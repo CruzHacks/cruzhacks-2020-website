@@ -14,10 +14,10 @@
   margin: 0.5em;
   text-decoration: none;
   z-index: 1;
-  transition: background-color 0.5s ease-out;
+  transition: background-color 0.2s ease-out;
   &:hover {
     background: #5555cf;
-    transition: background-color 0.5s ease-in;
+    transition: background-color 0.2s ease-in;
   }
   @include respond(phone-narrow) {
     width: 140px;
@@ -139,11 +139,11 @@
     height: 50px;
     bottom: 18px;
     z-index: 2;
-    transition: color 0.5s ease-in;
+    transition: color 0.2s ease-in;
     @include responsive-font(2.5vw, 13.5px, 14px);
     &:hover {
       color: #ffffff;
-      transition: color 0.5s ease-out;
+      transition: color 0.2s ease-out;
     }
   }
   &__sponsor-button-text {
@@ -195,17 +195,17 @@ div.hero-subscribe-to-email-list-container {
     );
   }
 
-  #emailInput.placeholder-sending::placeholder {
+  .placeholder-sending::placeholder {
     color: #adadad;
     @include responsive-font(1vw, 13.5px, 14px);
     font-style: oblique;
   }
 
-  #emailInput.placeholder-ok::placeholder {
+  .placeholder-ok::placeholder {
     color: #9ea0ff;
   }
 
-  #emailInput.placeholder-error::placeholder {
+  .placeholder-error::placeholder {
     color: red;
   }
 
@@ -234,10 +234,10 @@ div.hero-subscribe-to-email-list-container {
     cursor: pointer;
     display: block;
     margin: 0 0 0 auto;
+    transition: background-color 0.2s ease-out;
     &:hover {
-      background: #5555cf;
-      transition: background-color 0.5s ease-in;
-      transition: background-color 0.5s ease-out;
+      background-color: #5555cf;
+      transition: background-color 0.2s ease-in;
     }
   }
 }
