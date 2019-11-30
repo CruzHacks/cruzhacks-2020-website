@@ -1,4 +1,4 @@
-/* HeroHeader */
+/* Hero Header */
 
 .hero__header {
   display: flex;
@@ -8,27 +8,115 @@
   top: 0;
   z-index: 5;
   height: 11vh;
-  // background-color: #ffffff;
-  // box-shadow: 0 2px 6px #bfbfbf;
 }
 
 /* Hero Hamburger */
 
 .hamburger {
-  @include svgContainer();
-  width: 24px;
-  height: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
   position: absolute;
   right: 5%;
-  top: 30%;
+  top: 33%;
+  width: 30px;
+  height: 21px;
   visibility: hidden;
 
-  &__svg {
-    @include svgContent();
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: calc(100% + 25px);
+    right: 0;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  li a {
+    text-decoration: none;
+  }
+  li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+  li:hover {
+    background-color: #e5e5e5;
+    color: white;
+  }
+
+  &__button {
+    padding: 0 10px 0 10px;
+  }
+
+  &__button-text {
+    @include font-source-subheader(
+      13px,
+      16px,
+      0.06em,
+      3px,
+      center,
+      false,
+      600,
+      #373737
+    );
+  }
+
+  &__button-text:hover {
+    color: #5555cf;
+  }
+
+  &__icon {
+    all: unset;
+    cursor: pointer;
+
+    img {
+      width: 30px;
+      height: 21px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      width: 1px;
+      height: 1px;
+      background: rgba(111, 111, 232, 0.5);
+      opacity: 0;
+      border-radius: 100%;
+      transform: scale(1, 1) translate(-50%);
+      transform-origin: 50% 50%;
+    }
+
+    @include keyframes(ripple) {
+      0% {
+        transform: scale(0, 0);
+        opacity: 1;
+      }
+      20% {
+        transform: scale(25, 25);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(50, 50);
+      }
+    }
+
+    &:focus:not(:active)::after {
+      animation: ripple 1s ease-out;
+    }
   }
 }
 
-/* HeroLightbulb */
+/* Hero Lightbulb */
 
 .hero__lightbulb {
   cursor: pointer;

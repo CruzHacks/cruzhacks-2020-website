@@ -1,18 +1,84 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import HamburgerIcon from '../../../../assets/images/icons/hamburger.svg';
 
 const HeroHamburgerView: React.FC = () => {
+  const [displayMenu, setDisplayMenu] = useState(false);
+
+  const hideDropdownMenu = () => {
+    setDisplayMenu(false);
+    document.removeEventListener('click', hideDropdownMenu);
+  };
+
+  const showDropdownMenu = event => {
+    event.preventDefault();
+    setDisplayMenu(true);
+    document.addEventListener('click', hideDropdownMenu);
+  };
   return (
     <div className="hamburger">
-      {/* 
-      <svg className="hamburger__svg" viewBox="0 0 24 15" fill="none">
-        <path
-          stroke="#020202"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M1.5 1.5h21M1.5 7.5h14M1.5 13.5h21"
-        />
-      </svg> */}
+      <button className="hamburger__icon">
+        <img
+          src={HamburgerIcon}
+          alt="dropdown menu"
+          onClick={showDropdownMenu}
+        ></img>
+      </button>
+      {displayMenu ? (
+        <ul>
+          <li>
+            <div className="hamburger__button">
+              <Link to="/" style={{ textDecoration: `none` }}>
+                <p className="hamburger__button-text">HOME </p>
+              </Link>
+            </div>
+          </li>
+          <li>
+            <div className="hamburger__button">
+              <Link to="/portal" style={{ textDecoration: `none` }}>
+                <p className="hamburger__button-text">APPLY</p>
+              </Link>
+            </div>
+          </li>
+          <li>
+            <div className="hamburger__button">
+              <a
+                href="mailto:sponsor@cruzhacks.com"
+                style={{ textDecoration: 'none' }}
+              >
+                <p
+                  className="hamburger__button-text"
+                  style={{ textDecoration: 'none' }}
+                >
+                  SPONSOR
+                </p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div className="hamburger__button">
+              <Link to="/team" style={{ textDecoration: `none` }}>
+                <p className="hamburger__button-text">TEAM</p>
+              </Link>
+            </div>
+          </li>
+          <li>
+            <div className="hamburger__button">
+              <a
+                href="https://2019.cruzhacks.com/"
+                style={{ textDecoration: 'none' }}
+              >
+                <p
+                  className="hamburger__button-text"
+                  style={{ textDecoration: 'none' }}
+                >
+                  2019
+                </p>
+              </a>
+            </div>
+          </li>
+        </ul>
+      ) : null}
     </div>
   );
 };
