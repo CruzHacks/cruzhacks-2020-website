@@ -33,9 +33,6 @@ export function uploadResume(email: any, resume: any): Promise<boolean> {
   });
 }
 
-//   authOID character varying(72) NOT NULL UNIQUE,
-//   email character varying(254) NOT NULL UNIQUE,
-
 export function submitApplication(application: any): Promise<boolean> {
   delete application.codeofconduct;
   delete application.mlhaffiliation;
@@ -43,8 +40,6 @@ export function submitApplication(application: any): Promise<boolean> {
   if (application.ucscStudent === true) {
     delete application.collegeAffiliation;
   }
-
-  //   application.authoid = auth0User;
 
   const requestConfig: AxiosRequestConfig = {
     headers: {
