@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerIcon from '../../../../assets/images/icons/hamburger.svg';
 
@@ -6,18 +6,20 @@ const HeroHamburgerView: React.FC = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
 
   const hideDropdownMenu = () => {
-    setDisplayMenu(false);
     document.removeEventListener('click', hideDropdownMenu);
+    setDisplayMenu(false);
   };
 
   const showDropdownMenu = () => {
-    if (displayMenu) {
-      hideDropdownMenu();
-      return;
-    }
     setDisplayMenu(true);
-    document.addEventListener('click', hideDropdownMenu);
   };
+
+  useEffect(() => {
+    if (displayMenu) {
+      document.addEventListener('click', hideDropdownMenu);
+    }
+    return () => document.removeEventListener('click', hideDropdownMenu);
+  });
 
   return (
     <div className="hamburger">
