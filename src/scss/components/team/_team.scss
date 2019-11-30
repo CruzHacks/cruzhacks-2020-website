@@ -20,6 +20,7 @@
       bold,
       #222222
     );
+    font-family: 'Rubik Bold';
   }
   &__sub-heading-text {
     @include font-source-body(
@@ -47,7 +48,8 @@
     }
   }
   &__card {
-    flex: 0 0 12vw;
+    flex: 0 0 50%;
+    max-width: 10em;
     padding: 3%;
     margin: 1%;
     border: 1px hidden #ccc;
