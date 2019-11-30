@@ -13,7 +13,7 @@
   @include respond(tab-land) {
   }
   @include respond(phone) {
-    padding: 0 7.9em;
+    padding: 0 2.9em;
   }
   @include respond(phone-narrow) {
     padding: 0 3em;
@@ -41,7 +41,6 @@
 }
 
 .footer-text__copyright {
-
   @include respond(mission) {
     float: right;
   }

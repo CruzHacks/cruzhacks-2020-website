@@ -16,8 +16,8 @@
     @media screen and (max-width: 899px) {
       min-height: 996px;
     }
-    @media screen and (max-width: 782px) {
-      min-height: 1406px;
+    @media screen and (max-width: 765px) {
+      min-height: 1426px;
     }
     @include respond(phone) {
       min-height: 1436px;
