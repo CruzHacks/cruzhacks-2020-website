@@ -16,7 +16,7 @@ const faqs = [
     question: 'What are the rules?',
     answer: (
       <span>
-        As a Major League Hacking member event, we follow Major League Hacking’s
+        As a Major League Hacking member event, we follow Major League Hacking’s{' '}
         <a
           target="__blank"
           rel="noreferrer"
