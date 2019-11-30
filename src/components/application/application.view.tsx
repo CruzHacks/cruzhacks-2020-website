@@ -338,7 +338,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         }
       } else if (isValidForm === true) {
         setTrySubmission(true);
-        console.log(`${fieldName} is invalid`);
         isValidForm = false;
       }
     });
@@ -354,19 +353,15 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
 
           submitApplication(requestBody)
             .then(response => {
-              console.log("we're chilling");
-              console.log(response);
               setFormValid({ ...formValid, appSubmittedSuccessfully: true });
               window.location.reload(false);
             })
             .catch(error => {
-              console.log(error);
               setApiStatusUpdates({...apiStatusUpdates, appSubmissionInProgress: false})
               setFormValid({ ...formValid, appSubmittedSuccessfully: false });
             });
         })
         .catch(error => {
-          console.log(error);
           setApiStatusUpdates({...apiStatusUpdates, appSubmissionInProgress: false})
           setFormValid({ ...formValid, appSubmittedSuccessfully: false });
         });
