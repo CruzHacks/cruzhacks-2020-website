@@ -5,8 +5,19 @@ import HamburgerIcon from '../../../../assets/images/icons/hamburger.svg';
 const HeroHamburgerView: React.FC = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
 
+  const hideDropdownMenu = () => {
+    setDisplayMenu(false);
+    document.removeEventListener('click', hideDropdownMenu);
+  };
+
   const showDropdownMenu = event => {
-    displayMenu ? setDisplayMenu(false) : setDisplayMenu(true);
+    if (displayMenu) {
+      hideDropdownMenu();
+      return;
+    }
+    setDisplayMenu(true);
+    console.log('dropped');
+    document.addEventListener('click', hideDropdownMenu);
   };
 
   return (
