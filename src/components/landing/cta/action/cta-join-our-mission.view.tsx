@@ -15,14 +15,20 @@ const JoinOurMissionView: React.FC = () => {
           as a mentor or volunteer!
         </span>
       </div>
-      {/*<div className="cta__button-container">
-        <div className="cta__button--mentor">
+      <div className="cta__button-container">
+        <a
+          href="https://forms.gle/rP8MGCwRk9CTdKJ67"
+          className="cta__button--mentor"
+        >
           <p className="cta__button-text">MENTOR</p>
-        </div>
-        <div className="cta__button--volunteer">
+        </a>
+        <a
+          href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing"
+          className="cta__button--volunteer"
+        >
           <p className="cta__button-text">VOLUNTEER</p>
-        </div>
-      </div>*/}
+        </a>
+      </div>
     </div>
   );
 };
