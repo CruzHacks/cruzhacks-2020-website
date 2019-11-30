@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import packet from '../../../../../assets/data/sponsor/sponsorship_packet.pdf';
 
 const HeroNavbarView: React.FC = () => {
   return (
@@ -36,7 +35,7 @@ const HeroNavbarView: React.FC = () => {
           style={{ textDecoration: 'none' }}
         >
           <p className="navbar__button-text" style={{ textDecoration: 'none' }}>
-            2019 RETROSPECTIVE
+            2019
           </p>
         </a>
       </div>
