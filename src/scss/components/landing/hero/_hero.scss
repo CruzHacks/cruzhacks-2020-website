@@ -28,6 +28,10 @@
   div.hero__lightbulb {
     top: 1%;
   }
+
+  div.hamburger {
+    visibility: visible;
+  }
 }
 
 @include respond(phone) {
@@ -38,10 +42,6 @@
 
   div.hero-right-side-container {
     top: 3%;
-  }
-
-  div.hamburger {
-    visibility: visible;
   }
 
   div.hero__mlh-badge {
