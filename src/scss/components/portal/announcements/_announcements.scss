@@ -63,8 +63,9 @@
   }
   @include respond(phone-narrow) {
     font-size: 20px;
-    top: 3.4em;
-    left: -7em;
+    top: 3.8em;
+    left: -7.5em;
+    letter-spacing: 0.21em;
   }
 }
 
