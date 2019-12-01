@@ -22,7 +22,12 @@ const faqs = [
           rel="noreferrer"
           href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
         >
-          <p className="navbar__button-text">MLH Code of Conduct</p>
+          <p
+            className="navbar__button-text"
+            style={{ fontFamily: 'Rubik Regular' }}
+          >
+            MLH Code of Conduct
+          </p>
         </a>{' '}
         which ensures all attendees to CruzHacks are respectful regardless of
         who you are and where you come from. Additionally, to be considered for
@@ -43,8 +48,19 @@ const faqs = [
   },
   {
     question: "I'd like to help out!",
-    answer:
-      "If you're interested in volunteering for this year's hackathon, sign up when applications open!",
+    answer: (
+      <span>
+        If you're interested in volunteering for this year's hackathon,{' '}
+        <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+          <p
+            className="navbar__button-text"
+            style={{ fontFamily: 'Rubik Regular' }}
+          >
+            sign up here!
+          </p>
+        </a>
+      </span>
+    ),
   },
   {
     question: 'How can I be a sponsor?',
@@ -66,11 +82,21 @@ const faqs = [
       <span>
         We would love to have you as a mentor or judge.{' '}
         <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
-          <p className="navbar__button-text">Sign up here,</p>
+          <p
+            className="navbar__button-text"
+            style={{ fontFamily: 'Rubik Regular' }}
+          >
+            Sign up here,
+          </p>
         </a>
         or{' '}
         <a href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing">
-          <p className="navbar__button-text">learn more here!</p>
+          <p
+            className="navbar__button-text"
+            style={{ fontFamily: 'Rubik Regular' }}
+          >
+            learn more here!
+          </p>
         </a>
       </span>
     ),
