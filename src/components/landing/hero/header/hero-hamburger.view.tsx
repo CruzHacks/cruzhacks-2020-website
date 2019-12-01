@@ -4,14 +4,23 @@ import HamburgerIcon from '../../../../assets/images/icons/hamburger.svg';
 
 const HeroHamburgerView: React.FC = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
+  const [displayDrop, setDrop] = useState(false);
 
-  const hideDropdownMenu = () => {
-    document.removeEventListener('click', hideDropdownMenu);
-    setDisplayMenu(false);
+  const hideDropdownMenu = event => {
+    if (event.target.className != 'hamburger__button-text extended') {
+      document.removeEventListener('click', hideDropdownMenu);
+      console.log(event.target.className);
+      setDrop(false);
+      setDisplayMenu(false);
+    }
   };
 
   const showDropdownMenu = () => {
     setDisplayMenu(true);
+  };
+
+  const toggleExtended = () => {
+    displayDrop ? setDrop(false) : setDrop(true);
   };
 
   useEffect(() => {
@@ -27,14 +36,7 @@ const HeroHamburgerView: React.FC = () => {
         <img src={HamburgerIcon} alt="dropdown menu"></img>
       </button>
       {displayMenu ? (
-        <ul>
-          <li>
-            <div className="hamburger__button">
-              <Link to="/" style={{ textDecoration: `none` }}>
-                <p className="hamburger__button-text">HOME </p>
-              </Link>
-            </div>
-          </li>
+        <ul id="dropdown">
           <li>
             <div className="hamburger__button">
               <Link to="/portal" style={{ textDecoration: `none` }}>
@@ -44,19 +46,33 @@ const HeroHamburgerView: React.FC = () => {
           </li>
           <li>
             <div className="hamburger__button">
-              <a
-                href="mailto:sponsor@cruzhacks.com"
+              <p
+                className="hamburger__button-text extended"
                 style={{ textDecoration: 'none' }}
+                onClick={toggleExtended}
               >
-                <p
-                  className="hamburger__button-text"
-                  style={{ textDecoration: 'none' }}
-                >
-                  SPONSOR
-                </p>
-              </a>
+                HELP OUT
+              </p>
             </div>
           </li>
+          {displayDrop ? (
+            <li>
+              <div className="navbar__dropButton">
+                <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+                  <p className="navbar__button-text">Apply</p>
+                </a>
+              </div>
+            </li>
+          ) : null}
+          {displayDrop ? (
+            <li>
+              <div className="navbar__dropButton">
+                <a href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing">
+                  <p className="navbar__button-text">Learn More</p>
+                </a>
+              </div>
+            </li>
+          ) : null}
           <li>
             <div className="hamburger__button">
               <Link to="/team" style={{ textDecoration: `none` }}>
