@@ -41,13 +41,13 @@ const HeroHamburgerView: React.FC = () => {
       </button>
       {displayMenu ? (
         <ul id="dropdown">
-          <li>
-            <div className="hamburger__button">
-              <Link to="/portal" style={{ textDecoration: `none` }}>
+          <Link to="/portal" style={{ textDecoration: `none` }}>
+            <li>
+              <div className="hamburger__button">
                 <p className="hamburger__button-text">APPLY</p>
-              </Link>
-            </div>
-          </li>
+              </div>
+            </li>
+          </Link>
           <li onClick={toggleExtended} className="hamburger__extended">
             <div className="hamburger__button">
               <p
@@ -59,63 +59,75 @@ const HeroHamburgerView: React.FC = () => {
             </div>
           </li>
           {displayDrop ? (
-            <li style={{ border: 'none' }}>
-              <div className="navbar__dropButton" style={{ border: 'none' }}>
-                <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+            <a
+              href="https://forms.gle/rP8MGCwRk9CTdKJ67"
+              style={{ textDecoration: 'none' }}
+            >
+              <li style={{ border: 'none' }}>
+                <div className="navbar__dropButton">
                   <p className="navbar__button-text">Mentor</p>
-                </a>
-              </div>
-            </li>
+                </div>
+              </li>
+            </a>
           ) : null}
           {displayDrop ? (
-            <li style={{ border: 'none' }}>
-              <div className="navbar__dropButton">
-                <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+            <a
+              href="https://forms.gle/rP8MGCwRk9CTdKJ67"
+              style={{ textDecoration: 'none' }}
+            >
+              <li style={{ border: 'none' }}>
+                <div className="navbar__dropButton">
                   <p className="navbar__button-text">Judge</p>
-                </a>
-              </div>
-            </li>
+                </div>
+              </li>
+            </a>
           ) : null}
           {displayDrop ? (
-            <li style={{ border: 'none' }}>
-              <div className="navbar__dropButton">
-                <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+            <a
+              href="https://forms.gle/rP8MGCwRk9CTdKJ67"
+              style={{ textDecoration: 'none' }}
+            >
+              <li style={{ border: 'none' }}>
+                <div className="navbar__dropButton">
                   <p className="navbar__button-text">Volunteer</p>
-                </a>
-              </div>
-            </li>
+                </div>
+              </li>
+            </a>
           ) : null}
           {displayDrop ? (
-            <li>
-              <div className="navbar__dropButton">
-                <a href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing">
+            <a
+              href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing"
+              style={{ textDecoration: 'none' }}
+            >
+              <li>
+                <div className="navbar__dropButton">
                   <p className="navbar__button-text">Learn More</p>
-                </a>
+                </div>
+              </li>
+            </a>
+          ) : null}
+          <Link to="/team" style={{ textDecoration: `none` }}>
+            <li>
+              <div className="hamburger__button">
+                <p className="hamburger__button-text">TEAM</p>
               </div>
             </li>
-          ) : null}
-          <li>
-            <div className="hamburger__button">
-              <Link to="/team" style={{ textDecoration: `none` }}>
-                <p className="hamburger__button-text">TEAM</p>
-              </Link>
-            </div>
-          </li>
-          <li>
-            <div className="hamburger__button">
-              <a
-                href="https://2019.cruzhacks.com/"
-                style={{ textDecoration: 'none' }}
-              >
+          </Link>
+          <a
+            href="https://2019.cruzhacks.com/"
+            style={{ textDecoration: 'none' }}
+          >
+            <li>
+              <div className="hamburger__button">
                 <p
                   className="hamburger__button-text"
                   style={{ textDecoration: 'none' }}
                 >
                   2019
                 </p>
-              </a>
-            </div>
-          </li>
+              </div>
+            </li>
+          </a>
         </ul>
       ) : null}
     </div>
