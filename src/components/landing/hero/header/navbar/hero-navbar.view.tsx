@@ -36,7 +36,21 @@ const HeroNavbarView: React.FC = () => {
               <li>
                 <div className="navbar__dropButton">
                   <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
-                    <p className="navbar__button-text">Sign Up</p>
+                    <p className="navbar__button-text">Mentor</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div className="navbar__dropButton">
+                  <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+                    <p className="navbar__button-text">Judge</p>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div className="navbar__dropButton">
+                  <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+                    <p className="navbar__button-text">Volunteer</p>
                   </a>
                 </div>
               </li>
