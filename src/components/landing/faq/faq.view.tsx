@@ -22,7 +22,7 @@ const faqs = [
           rel="noreferrer"
           href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
         >
-          MLH Code of Conduct
+          <p className="navbar__button-text">MLH Code of Conduct</p>
         </a>{' '}
         which ensures all attendees to CruzHacks are respectful regardless of
         who you are and where you come from. Additionally, to be considered for
@@ -62,8 +62,18 @@ const faqs = [
   },
   {
     question: 'How can I become a mentor or a judge?',
-    answer:
-      'We would love to have you as a mentor or judge. Sign up when applications open!',
+    answer: (
+      <span>
+        We would love to have you as a mentor or judge.{' '}
+        <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+          <p className="navbar__button-text">Sign up here,</p>
+        </a>
+        or{' '}
+        <a href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing">
+          <p className="navbar__button-text">learn more here!</p>
+        </a>
+      </span>
+    ),
   },
 
   {
