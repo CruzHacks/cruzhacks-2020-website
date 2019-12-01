@@ -14,11 +14,11 @@ const HeroNavbarView: React.FC = () => {
 
   return (
     <div className="navbar">
-      <div className="navbar__button">
-        <Link to="/portal" style={{ textDecoration: `none` }}>
+      <Link to="/portal" style={{ textDecoration: `none` }}>
+        <div className="navbar__button">
           <p className="navbar__button-text">APPLY</p>
-        </Link>
-      </div>
+        </div>
+      </Link>
       <div
         onMouseEnter={showDropMenu}
         onMouseLeave={hideDropMenu}
@@ -33,54 +33,66 @@ const HeroNavbarView: React.FC = () => {
         {dropMenu ? (
           <div className="navbar__dropdown">
             <ul>
-              <li>
-                <div className="navbar__dropButton">
-                  <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+              <a
+                style={{ textDecoration: 'none' }}
+                href="https://forms.gle/rP8MGCwRk9CTdKJ67"
+              >
+                <li>
+                  <div className="navbar__dropButton">
                     <p
                       className="navbar__button-text"
                       style={{ fontWeight: 500 }}
                     >
                       Mentor
                     </p>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div className="navbar__dropButton">
-                  <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+                  </div>
+                </li>
+              </a>
+              <a
+                style={{ textDecoration: 'none' }}
+                href="https://forms.gle/rP8MGCwRk9CTdKJ67"
+              >
+                <li>
+                  <div className="navbar__dropButton">
                     <p
                       className="navbar__button-text"
                       style={{ fontWeight: 500 }}
                     >
                       Judge
                     </p>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div className="navbar__dropButton">
-                  <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+                  </div>
+                </li>
+              </a>
+              <a
+                style={{ textDecoration: 'none' }}
+                href="https://forms.gle/rP8MGCwRk9CTdKJ67"
+              >
+                <li>
+                  <div className="navbar__dropButton">
                     <p
                       className="navbar__button-text"
                       style={{ fontWeight: 500 }}
                     >
                       Volunteer
                     </p>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div className="navbar__dropButton">
-                  <a href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing">
+                  </div>
+                </li>
+              </a>
+              <a
+                style={{ textDecoration: 'none' }}
+                href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing"
+              >
+                <li>
+                  <div className="navbar__dropButton">
                     <p
                       className="navbar__button-text"
                       style={{ fontWeight: 500 }}
                     >
                       Learn More
                     </p>
-                  </a>
-                </div>
-              </li>
+                  </div>
+                </li>
+              </a>
             </ul>
           </div>
         ) : null}
