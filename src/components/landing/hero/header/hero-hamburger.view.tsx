@@ -5,9 +5,12 @@ import HamburgerIcon from '../../../../assets/images/icons/hamburger.svg';
 const HeroHamburgerView: React.FC = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
 
-  const hideDropdownMenu = () => {
-    document.removeEventListener('click', hideDropdownMenu);
-    setDisplayMenu(false);
+  const hideDropdownMenu = event => {
+    if (event.target.className != 'hamburger__button-text extended') {
+      document.removeEventListener('click', hideDropdownMenu);
+      console.log(event.target.className);
+      setDisplayMenu(false);
+    }
   };
 
   const showDropdownMenu = () => {
@@ -27,32 +30,32 @@ const HeroHamburgerView: React.FC = () => {
         <img src={HamburgerIcon} alt="dropdown menu"></img>
       </button>
       {displayMenu ? (
-        <ul>
-          <li>
+        <ul id="dropdown">
+          <li id="list">
             <div className="hamburger__button">
               <Link to="/portal" style={{ textDecoration: `none` }}>
                 <p className="hamburger__button-text">APPLY</p>
               </Link>
             </div>
           </li>
-          <li>
+          <li id="list">
             <div className="hamburger__button">
               <p
-                className="hamburger__button-text"
+                className="hamburger__button-text extended"
                 style={{ textDecoration: 'none' }}
               >
                 HELP OUT
               </p>
             </div>
           </li>
-          <li>
+          <li id="list">
             <div className="hamburger__button">
               <Link to="/team" style={{ textDecoration: `none` }}>
                 <p className="hamburger__button-text">TEAM</p>
               </Link>
             </div>
           </li>
-          <li>
+          <li id="list">
             <div className="hamburger__button">
               <a
                 href="https://2019.cruzhacks.com/"
