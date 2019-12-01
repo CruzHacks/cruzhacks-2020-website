@@ -10,6 +10,7 @@ const HeroHamburgerView: React.FC = () => {
     if (event.target.className != 'hamburger__button-text extended') {
       document.removeEventListener('click', hideDropdownMenu);
       console.log(event.target.className);
+      setDrop(false);
       setDisplayMenu(false);
     }
   };
@@ -36,31 +37,50 @@ const HeroHamburgerView: React.FC = () => {
       </button>
       {displayMenu ? (
         <ul id="dropdown">
-          <li id="list">
+          <li>
             <div className="hamburger__button">
               <Link to="/portal" style={{ textDecoration: `none` }}>
                 <p className="hamburger__button-text">APPLY</p>
               </Link>
             </div>
           </li>
-          <li id="list">
-            <div onClick={toggleExtended} className="hamburger__button">
+          <li>
+            <div className="hamburger__button">
               <p
                 className="hamburger__button-text extended"
                 style={{ textDecoration: 'none' }}
+                onClick={toggleExtended}
               >
                 HELP OUT
               </p>
             </div>
           </li>
-          <li id="list">
+          {displayDrop ? (
+            <li>
+              <div className="navbar__dropButton">
+                <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+                  <p className="navbar__button-text">Apply</p>
+                </a>
+              </div>
+            </li>
+          ) : null}
+          {displayDrop ? (
+            <li>
+              <div className="navbar__dropButton">
+                <a href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing">
+                  <p className="navbar__button-text">Learn More</p>
+                </a>
+              </div>
+            </li>
+          ) : null}
+          <li>
             <div className="hamburger__button">
               <Link to="/team" style={{ textDecoration: `none` }}>
                 <p className="hamburger__button-text">TEAM</p>
               </Link>
             </div>
           </li>
-          <li id="list">
+          <li>
             <div className="hamburger__button">
               <a
                 href="https://2019.cruzhacks.com/"
