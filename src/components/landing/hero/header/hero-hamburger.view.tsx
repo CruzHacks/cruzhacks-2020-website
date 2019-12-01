@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerIcon from '../../../../assets/images/icons/hamburger.svg';
+import { NONAME } from 'dns';
 
 const HeroHamburgerView: React.FC = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -58,10 +59,28 @@ const HeroHamburgerView: React.FC = () => {
             </div>
           </li>
           {displayDrop ? (
-            <li>
+            <li style={{ border: 'none' }}>
+              <div className="navbar__dropButton" style={{ border: 'none' }}>
+                <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+                  <p className="navbar__button-text">Mentor</p>
+                </a>
+              </div>
+            </li>
+          ) : null}
+          {displayDrop ? (
+            <li style={{ border: 'none' }}>
               <div className="navbar__dropButton">
                 <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
-                  <p className="navbar__button-text">Sign Up</p>
+                  <p className="navbar__button-text">Judge</p>
+                </a>
+              </div>
+            </li>
+          ) : null}
+          {displayDrop ? (
+            <li style={{ border: 'none' }}>
+              <div className="navbar__dropButton">
+                <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
+                  <p className="navbar__button-text">Volunteer</p>
                 </a>
               </div>
             </li>
