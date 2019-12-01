@@ -7,7 +7,10 @@ const HeroHamburgerView: React.FC = () => {
   const [displayDrop, setDrop] = useState(false);
 
   const hideDropdownMenu = event => {
-    if (event.target.className != 'hamburger__button-text extended') {
+    if (
+      event.target.className !== 'hamburger__extended' &&
+      event.target.className !== 'hamburger__button-text extended'
+    ) {
       document.removeEventListener('click', hideDropdownMenu);
       console.log(event.target.className);
       setDrop(false);
@@ -44,12 +47,11 @@ const HeroHamburgerView: React.FC = () => {
               </Link>
             </div>
           </li>
-          <li>
+          <li onClick={toggleExtended} className="hamburger__extended">
             <div className="hamburger__button">
               <p
                 className="hamburger__button-text extended"
                 style={{ textDecoration: 'none' }}
-                onClick={toggleExtended}
               >
                 GET INVOLVED
               </p>
