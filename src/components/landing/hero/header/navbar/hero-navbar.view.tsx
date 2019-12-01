@@ -28,7 +28,7 @@ const HeroNavbarView: React.FC = () => {
           className="navbar__button-text"
           style={{ textDecoration: 'none', cursor: 'context-menu' }}
         >
-          HELP OUT
+          GET INVOLVED
         </p>
         {dropMenu ? (
           <div className="navbar__dropdown">
@@ -36,7 +36,7 @@ const HeroNavbarView: React.FC = () => {
               <li>
                 <div className="navbar__dropButton">
                   <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
-                    <p className="navbar__button-text">Apply</p>
+                    <p className="navbar__button-text">Sign Up</p>
                   </a>
                 </div>
               </li>

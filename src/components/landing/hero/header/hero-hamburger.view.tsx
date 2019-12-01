@@ -51,7 +51,7 @@ const HeroHamburgerView: React.FC = () => {
                 style={{ textDecoration: 'none' }}
                 onClick={toggleExtended}
               >
-                HELP OUT
+                GET INVOLVED
               </p>
             </div>
           </li>
@@ -59,7 +59,7 @@ const HeroHamburgerView: React.FC = () => {
             <li>
               <div className="navbar__dropButton">
                 <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
-                  <p className="navbar__button-text">Apply</p>
+                  <p className="navbar__button-text">Sign Up</p>
                 </a>
               </div>
             </li>
