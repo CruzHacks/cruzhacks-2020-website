@@ -30,13 +30,6 @@ const HeroHamburgerView: React.FC = () => {
         <ul>
           <li>
             <div className="hamburger__button">
-              <Link to="/" style={{ textDecoration: `none` }}>
-                <p className="hamburger__button-text">HOME </p>
-              </Link>
-            </div>
-          </li>
-          <li>
-            <div className="hamburger__button">
               <Link to="/portal" style={{ textDecoration: `none` }}>
                 <p className="hamburger__button-text">APPLY</p>
               </Link>
@@ -44,17 +37,12 @@ const HeroHamburgerView: React.FC = () => {
           </li>
           <li>
             <div className="hamburger__button">
-              <a
-                href="mailto:sponsor@cruzhacks.com"
+              <p
+                className="hamburger__button-text"
                 style={{ textDecoration: 'none' }}
               >
-                <p
-                  className="hamburger__button-text"
-                  style={{ textDecoration: 'none' }}
-                >
-                  SPONSOR
-                </p>
-              </a>
+                HELP OUT
+              </p>
             </div>
           </li>
           <li>
