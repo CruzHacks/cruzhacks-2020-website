@@ -61,6 +61,11 @@
     top: 3.4em;
     left: -7.2em;
   }
+  @include respond(phone-narrow) {
+    font-size: 20px;
+    top: 3.4em;
+    left: -7em;
+  }
 }
 
 &__announcements-event-text {
