@@ -4,6 +4,7 @@ import HamburgerIcon from '../../../../assets/images/icons/hamburger.svg';
 
 const HeroHamburgerView: React.FC = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
+  const [displayDrop, setDrop] = useState(false);
 
   const hideDropdownMenu = event => {
     if (event.target.className != 'hamburger__button-text extended') {
@@ -15,6 +16,10 @@ const HeroHamburgerView: React.FC = () => {
 
   const showDropdownMenu = () => {
     setDisplayMenu(true);
+  };
+
+  const toggleExtended = () => {
+    displayDrop ? setDrop(false) : setDrop(true);
   };
 
   useEffect(() => {
@@ -39,7 +44,7 @@ const HeroHamburgerView: React.FC = () => {
             </div>
           </li>
           <li id="list">
-            <div className="hamburger__button">
+            <div onClick={toggleExtended} className="hamburger__button">
               <p
                 className="hamburger__button-text extended"
                 style={{ textDecoration: 'none' }}
