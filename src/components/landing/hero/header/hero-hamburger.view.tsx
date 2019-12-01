@@ -65,7 +65,12 @@ const HeroHamburgerView: React.FC = () => {
             >
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
-                  <p className="navbar__button-text">Mentor</p>
+                  <p
+                    className="navbar__button-text"
+                    style={{ fontWeight: 500 }}
+                  >
+                    Mentor
+                  </p>
                 </div>
               </li>
             </a>
@@ -77,7 +82,12 @@ const HeroHamburgerView: React.FC = () => {
             >
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
-                  <p className="navbar__button-text">Judge</p>
+                  <p
+                    className="navbar__button-text"
+                    style={{ fontWeight: 500 }}
+                  >
+                    Judge
+                  </p>
                 </div>
               </li>
             </a>
@@ -89,7 +99,12 @@ const HeroHamburgerView: React.FC = () => {
             >
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
-                  <p className="navbar__button-text">Volunteer</p>
+                  <p
+                    className="navbar__button-text"
+                    style={{ fontWeight: 500 }}
+                  >
+                    Volunteer
+                  </p>
                 </div>
               </li>
             </a>
@@ -101,7 +116,12 @@ const HeroHamburgerView: React.FC = () => {
             >
               <li>
                 <div className="navbar__dropButton">
-                  <p className="navbar__button-text">Learn More</p>
+                  <p
+                    className="navbar__button-text"
+                    style={{ fontWeight: 500 }}
+                  >
+                    Learn More
+                  </p>
                 </div>
               </li>
             </a>

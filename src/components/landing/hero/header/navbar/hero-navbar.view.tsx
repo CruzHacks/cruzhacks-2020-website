@@ -36,28 +36,48 @@ const HeroNavbarView: React.FC = () => {
               <li>
                 <div className="navbar__dropButton">
                   <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
-                    <p className="navbar__button-text">Mentor</p>
+                    <p
+                      className="navbar__button-text"
+                      style={{ fontWeight: 500 }}
+                    >
+                      Mentor
+                    </p>
                   </a>
                 </div>
               </li>
               <li>
                 <div className="navbar__dropButton">
                   <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
-                    <p className="navbar__button-text">Judge</p>
+                    <p
+                      className="navbar__button-text"
+                      style={{ fontWeight: 500 }}
+                    >
+                      Judge
+                    </p>
                   </a>
                 </div>
               </li>
               <li>
                 <div className="navbar__dropButton">
                   <a href="https://forms.gle/rP8MGCwRk9CTdKJ67">
-                    <p className="navbar__button-text">Volunteer</p>
+                    <p
+                      className="navbar__button-text"
+                      style={{ fontWeight: 500 }}
+                    >
+                      Volunteer
+                    </p>
                   </a>
                 </div>
               </li>
               <li>
                 <div className="navbar__dropButton">
                   <a href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing">
-                    <p className="navbar__button-text">Learn More</p>
+                    <p
+                      className="navbar__button-text"
+                      style={{ fontWeight: 500 }}
+                    >
+                      Learn More
+                    </p>
                   </a>
                 </div>
               </li>
