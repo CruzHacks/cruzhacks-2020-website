@@ -328,11 +328,17 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
 
     setFormValid({ ...formValid, appSubmittedSuccessfully: true });
     formValid.appSubmittedSuccessfully = true;
-
+    
     Object.keys(formValid).forEach(fieldName => {
       const value = formValid[fieldName];
-
-      if (isValidForm === true && value === true) {
+      if (fieldName === 'participateQuestion' || fieldName === 'technologyQuestion' || fieldName === 'seeAtCruzhacks') {
+        if (formValues[fieldName] === '') {
+          setTrySubmission(true);
+          console.log(`${fieldName} is invalid..`);
+          isValidForm = false;
+        }
+      }
+      else if (isValidForm === true && value === true) {
         if (fieldName !== 'appSubmittedSuccessfully') {
           requestBody[fieldName.toLowerCase()] = formValues[fieldName];
         }
