@@ -75,7 +75,7 @@
   }
   &__college-affil {
     float: right;
-    @media screen and (max-width: 996px) {
+    @media screen and (max-width: 1291px) {
       float: left;
       padding-top: 1em;
       padding-bottom: 0.6em;
@@ -206,7 +206,7 @@ input[type='radio'] {
 }
 
 .info {
-    margin-top: 0.6em;
-    margin-bottom: 0;
-    color: #5252e2;
-  }
+  margin-top: 0.6em;
+  margin-bottom: 0;
+  color: #5252e2;
+}
