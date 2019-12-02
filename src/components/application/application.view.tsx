@@ -19,7 +19,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
     school: '',
     gradYear: '',
     ucscStudent: false,
-    ucscCollegeAffiliation: 'Cowell College',
+    ucscCollegeAffiliation: '',
     major: '',
     linkedinUrl: '',
     githubUrl: '',
@@ -74,7 +74,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
 
     // optional
     specialAccomodations: true,
-    ucscCollegeAffiliation: true,
+    ucscCollegeAffiliation: false,
     appSubmittedSuccessfully: true,
   });
 
@@ -321,7 +321,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
 
   const handleApplicationSubmission = event => {
     event.preventDefault();
-
     let isValidForm = true;
 
     const requestBody = { resume: undefined };
@@ -341,7 +340,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         isValidForm = false;
       }
     });
-
     if (isValidForm === true) {
       setApiStatusUpdates({
         ...apiStatusUpdates,
@@ -357,12 +355,18 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
               window.location.reload(false);
             })
             .catch(error => {
-              setApiStatusUpdates({...apiStatusUpdates, appSubmissionInProgress: false})
+              setApiStatusUpdates({
+                ...apiStatusUpdates,
+                appSubmissionInProgress: false,
+              });
               setFormValid({ ...formValid, appSubmittedSuccessfully: false });
             });
         })
         .catch(error => {
-          setApiStatusUpdates({...apiStatusUpdates, appSubmissionInProgress: false})
+          setApiStatusUpdates({
+            ...apiStatusUpdates,
+            appSubmissionInProgress: false,
+          });
           setFormValid({ ...formValid, appSubmittedSuccessfully: false });
         });
     } else {
@@ -745,6 +749,9 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     name="ucscCollegeAffiliation"
                     ref={ucscCollegeRef}
                   >
+                    <option aria-label="Please select" value="">
+                      Please select
+                    </option>
                     <option aria-label="Cowell College" value="cowell">
                       Cowell College
                     </option>
@@ -778,6 +785,13 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   </select>
                 </div>
               )}
+              {trySubmission &&
+                formValues.ucscStudent &&
+                formValues.ucscCollegeAffiliation === '' && (
+                  <p className="errors" style={{ justifyContent: 'right' }}>
+                    College affiliation is required.
+                  </p>
+                )}
               <br style={{ clear: 'both' }} />
             </section>
 
@@ -1166,7 +1180,8 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
                   >
                     MLH Code of Conduct.
-                  </a>*
+                  </a>
+                  *
                 </label>
               </div>
               {trySubmission && !formValid.codeOfConduct && (
@@ -1201,7 +1216,8 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     href="https://mlh.io/privacy"
                   >
                     MLH Privacy Policy.
-                  </a>*
+                  </a>
+                  *
                 </label>
               </div>
               {trySubmission && !formValid.mlhAffiliation && (
@@ -1220,6 +1236,119 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 Submitting your application to the CruzHacks Cloud!
               </p>
             )}
+            {(trySubmission && formValues.firstName.length > 100) ||
+              (formValues.firstName.length < 1 && (
+                <p className="errors">Please check your first name!</p>
+              ))}
+            {(trySubmission && formValues.lastName.length > 100) ||
+              (formValues.lastName.length < 1 && (
+                <p className="errors">Please check your last name!</p>
+              ))}
+            {trySubmission &&
+              formValues.phone.length != 10 &&
+              !formValid.phone && (
+                <p className="errors">Please check your phone number!</p>
+              )}
+            {(trySubmission && formValues.age.length > 3) ||
+              (formValues.age.length < 1 && (
+                <p className="errors">
+                  Please check what you filled in for age!
+                </p>
+              ))}
+            {trySubmission && !formValid.gender && (
+              <p className="errors">
+                Please check what you filled in for gender!
+              </p>
+            )}
+            {trySubmission && !formValid.ethnicity && (
+              <p className="errors">
+                Please check what you filled in for ethnicity!
+              </p>
+            )}
+            {(trySubmission && formValues.school.length > 320) ||
+              (formValues.school.length < 1 && formValid.school && (
+                <p className="errors">
+                  Please check your answer for school/university!
+                </p>
+              ))}
+            {trySubmission && formValues.gradYear.length !== 4 && (
+              <p className="errors">
+                Please check what you filled in for grad year!
+              </p>
+            )}
+            {trySubmission && !formValid.ucscStudent && (
+              <p className="errors">
+                Please tell us if you are a UCSC student!
+              </p>
+            )}
+            {trySubmission &&
+              formValues.ucscStudent &&
+              formValues.ucscCollegeAffiliation === '' && (
+                <p className="errors">
+                  Please check your answer for college afilliation!
+                </p>
+              )}
+            {(trySubmission &&
+              !formValid.major &&
+              formValues.major.length > 320) ||
+              (formValues.major.length < 1 && (
+                <p className="errors">
+                  Please check what you filled in for major!
+                </p>
+              ))}
+            {trySubmission && !formValid.resume && (
+              <p className="errors">Please upload a valid resume!</p>
+            )}
+            {trySubmission && !formValid.firstHackathon && (
+              <p className="errors">
+                Please tell us if this is your first hackathon!
+              </p>
+            )}
+            {trySubmission && !formValid.firstCruzhacks && (
+              <p className="errors">
+                Please tell us if this is your first CruzHacks!
+              </p>
+            )}
+            {(trySubmission && formValues.participateQuestion.length > 500) ||
+              (formValues.participateQuestion.length < 1 &&
+                !formValid.participateQuestion && (
+                  <p className="errors">
+                    Please check your answer to 'Why do you want to
+                    participate?'
+                  </p>
+                ))}
+            {(trySubmission && formValues.technologyQuestion.length > 500) ||
+              (formValues.technologyQuestion.length < 1 &&
+                !formValid.technologyQuestion && (
+                  <p className="errors">
+                    Please check your answer to 'Where do you see technology
+                    pushing humanity’s goals?'
+                  </p>
+                ))}
+            {(trySubmission && formValues.seeAtCruzhacks.length > 500) ||
+              (formValues.seeAtCruzhacks.length < 1 &&
+                !formValid.seeAtCruzhacks && (
+                  <p className="errors">
+                    Please check your answer to 'What would you like to see at
+                    CruzHacks 2020?'
+                  </p>
+                ))}
+            {trySubmission && !formValid.placeToSleep && (
+              <p className="errors">
+                Please tell us if you need a place to sleep!
+              </p>
+            )}
+            {trySubmission && !formValid.transportation && (
+              <p className="errors">
+                Please tell us if you may need transportation!
+              </p>
+            )}
+            {trySubmission && !formValid.placeToPark && (
+              <p className="errors">
+                Please tell us if you need a place to park!
+              </p>
+            )}
+
             {!formValid.appSubmittedSuccessfully && (
               <p className="errors">
                 There was error in uploading your application to the CruzHacks
