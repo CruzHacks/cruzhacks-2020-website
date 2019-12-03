@@ -632,14 +632,14 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
 
             <section className="edu-demographics-section">
               <div className="demographics__currSchool">
-                <label
-                  className="demographics__label"
-                  onChange={handleInputChange}
-                >
-                  School/University (Full Name)*
-                </label>
                 <section className="school-section">
                   <div className="demographics__school">
+                    <label
+                      className="demographics__label"
+                      onChange={handleInputChange}
+                    >
+                      School/University (Full Name)*
+                    </label>
                     <input
                       name="school"
                       id="school__input"
@@ -1330,7 +1330,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 Please tell us if you need a place to park!
               </p>
             )}
-
             {!formValid.appSubmittedSuccessfully && (
               <p className="errors">
                 There was error in uploading your application to the CruzHacks
