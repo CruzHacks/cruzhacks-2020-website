@@ -187,9 +187,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         value = value === 'true';
         setFormValid({ ...formValid, [name]: true });
 
-        if (ucscCollegeRef.current && value === false) {
-          setFormValues({ ...formValues, ucscCollegeAffiliation: '' });
-        }
         break;
       case 'resume':
         value = event.target.files[0];
@@ -338,8 +335,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
       } else if (isValidForm === true) {
         setTrySubmission(true);
         isValidForm = false;
-        console.log('invalid');
-        console.log(value);
       }
     });
     if (isValidForm === true) {
@@ -419,24 +414,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
               </div>
               <br style={{ clear: 'both' }} />
             </section>
-            {/* <section className="email-section">
-              <div className="demographics__email">
-                <label className="demographics__label">Email</label>
-                <input
-                  name="email"
-                  id="email__input"
-                  type="email"
-                  value={formValues.email}
-                  onChange={handleInputChange}
-                  required
-                />
-                {(!formValid.email ||
-                  (trySubmission && formValues.email.length == 0)) && (
-                  <p className="errors">Valid email is required.</p>
-                )}
-              </div>
-            </section> */}
-
             <section className="phone-section">
               <div className="demographics__phone-number">
                 <label className="demographics__label">Phone Number*</label>
@@ -450,7 +427,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 />
                 {(!formValid.phone ||
                   (trySubmission && formValues.phone.length === 0)) && (
-                  <p className="errors">Valid phone number is required.</p>
+                  <p className="errors">10 digit phone number is required.</p>
                 )}
               </div>
             </section>
@@ -472,7 +449,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 />
                 {(!formValid.age ||
                   (trySubmission && formValues.age.length === 0)) && (
-                  <p className="errors">Valid age is required.</p>
+                  <p className="errors">Enter your age.</p>
                 )}
               </div>
               <div
@@ -673,7 +650,9 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     />
                     {(!formValid.school ||
                       (trySubmission && formValues.school.length === 0)) && (
-                      <p className="errors">Valid school is required.</p>
+                      <p className="errors">
+                        Enter your most recent school of attendance.
+                      </p>
                     )}
                   </div>
                 </section>
@@ -694,9 +673,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 />
                 {(!formValid.gradYear ||
                   (trySubmission && formValues.gradYear.length === 0)) && (
-                  <p className="errors">
-                    Valid year of graduation is required.
-                  </p>
+                  <p className="errors">Four digit year required.</p>
                 )}
               </div>
               <div
@@ -792,7 +769,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 formValues.ucscStudent &&
                 formValues.ucscCollegeAffiliation === '' && (
                   <p className="errors" style={{ justifyContent: 'right' }}>
-                    College affiliation is required.
+                    Please enter college affiliation.
                   </p>
                 )}
               <br style={{ clear: 'both' }} />
@@ -814,7 +791,9 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 />
                 {(!formValid.major ||
                   (trySubmission && formValues.major.length === 0)) && (
-                  <p className="errors">Major is required.</p>
+                  <p className="errors">
+                    Tell us your major, or undecided if you don't know.
+                  </p>
                 )}
               </div>
             </section>
@@ -867,7 +846,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   required
                 />
                 {trySubmission && !formValid.resume && (
-                  <p className="errors">Resume Required (.pdf format)</p>
+                  <p className="errors">Required (.pdf format)</p>
                 )}
               </div>
             </section>
