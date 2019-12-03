@@ -74,7 +74,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
 
     // optional
     specialAccomodations: true,
-    ucscCollegeAffiliation: false,
+    ucscCollegeAffiliation: true,
     appSubmittedSuccessfully: true,
   });
 
@@ -193,7 +193,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         break;
       case 'resume':
         value = event.target.files[0];
-        if (value.type === 'application/pdf') {
+        if (!value || value.type === 'application/pdf') {
           setFormValid({ ...formValid, [name]: true });
         } else {
           setFormValid({ ...formValid, [name]: false });
@@ -338,6 +338,8 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
       } else if (isValidForm === true) {
         setTrySubmission(true);
         isValidForm = false;
+        console.log('invalid');
+        console.log(value);
       }
     });
     if (isValidForm === true) {
@@ -371,6 +373,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         });
     } else {
       event.preventDefault();
+      console.log('error');
     }
   };
 
@@ -1236,25 +1239,26 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 Submitting your application to the CruzHacks Cloud!
               </p>
             )}
-            {(trySubmission && formValues.firstName.length > 100) ||
-              (formValues.firstName.length < 1 && (
-                <p className="errors">Please check your first name!</p>
-              ))}
-            {(trySubmission && formValues.lastName.length > 100) ||
-              (formValues.lastName.length < 1 && (
-                <p className="errors">Please check your last name!</p>
-              ))}
             {trySubmission &&
-              formValues.phone.length != 10 &&
-              !formValid.phone && (
-                <p className="errors">Please check your phone number!</p>
+              (formValues.firstName.length > 100 ||
+                (formValues.firstName.length < 1 && (
+                  <p className="errors">Please check your first name!</p>
+                )))}
+            {trySubmission &&
+              (formValues.lastName.length > 100 ||
+                formValues.lastName.length < 1) && (
+                <p className="errors">Please check your last name!</p>
               )}
-            {(trySubmission && formValues.age.length > 3) ||
-              (formValues.age.length < 1 && (
-                <p className="errors">
-                  Please check what you filled in for age!
-                </p>
-              ))}
+            {trySubmission && formValues.phone.length === 0 && (
+              <p className="errors">Please check your phone number!</p>
+            )}
+            {trySubmission &&
+              (formValues.age.length > 3 ||
+                (formValues.age.length < 1 && (
+                  <p className="errors">
+                    Please check what you filled in for age!
+                  </p>
+                )))}
             {trySubmission && !formValid.gender && (
               <p className="errors">
                 Please check what you filled in for gender!
@@ -1265,12 +1269,13 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 Please check what you filled in for ethnicity!
               </p>
             )}
-            {(trySubmission && formValues.school.length > 320) ||
-              (formValues.school.length < 1 && formValid.school && (
+            {trySubmission &&
+              (formValues.school.length > 320 ||
+                formValues.school.length < 1) && (
                 <p className="errors">
                   Please check your answer for school/university!
                 </p>
-              ))}
+              )}
             {trySubmission && formValues.gradYear.length !== 4 && (
               <p className="errors">
                 Please check what you filled in for grad year!
@@ -1288,14 +1293,13 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   Please check your answer for college afilliation!
                 </p>
               )}
-            {(trySubmission &&
-              !formValid.major &&
-              formValues.major.length > 320) ||
-              (formValues.major.length < 1 && (
+            {trySubmission &&
+              ((!formValid.major && formValues.major.length > 320) ||
+                formValues.major.length < 1) && (
                 <p className="errors">
                   Please check what you filled in for major!
                 </p>
-              ))}
+              )}
             {trySubmission && !formValid.resume && (
               <p className="errors">Please upload a valid resume!</p>
             )}
@@ -1309,30 +1313,29 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 Please tell us if this is your first CruzHacks!
               </p>
             )}
-            {(trySubmission && formValues.participateQuestion.length > 500) ||
-              (formValues.participateQuestion.length < 1 &&
-                !formValid.participateQuestion && (
-                  <p className="errors">
-                    Please check your answer to 'Why do you want to
-                    participate?'
-                  </p>
-                ))}
-            {(trySubmission && formValues.technologyQuestion.length > 500) ||
-              (formValues.technologyQuestion.length < 1 &&
-                !formValid.technologyQuestion && (
-                  <p className="errors">
-                    Please check your answer to 'Where do you see technology
-                    pushing humanity’s goals?'
-                  </p>
-                ))}
-            {(trySubmission && formValues.seeAtCruzhacks.length > 500) ||
-              (formValues.seeAtCruzhacks.length < 1 &&
-                !formValid.seeAtCruzhacks && (
-                  <p className="errors">
-                    Please check your answer to 'What would you like to see at
-                    CruzHacks 2020?'
-                  </p>
-                ))}
+            {(!formValid.participateQuestion ||
+              (trySubmission && formValues.participateQuestion.length === 0)) &&
+              formValues.participateQuestion.length === 0 && (
+                <p className="errors">
+                  Please check your answer to 'Why do you want to participate?'
+                </p>
+              )}
+            {(!formValid.technologyQuestion ||
+              (trySubmission && formValues.technologyQuestion.length === 0)) &&
+              formValues.technologyQuestion.length === 0 && (
+                <p className="errors">
+                  Please check your answer to 'Where do you see technology
+                  pushing humanity’s goals?'
+                </p>
+              )}
+            {(!formValid.seeAtCruzhacks ||
+              (trySubmission && formValues.seeAtCruzhacks.length === 0)) &&
+              formValues.seeAtCruzhacks.length === 0 && (
+                <p className="errors">
+                  Please check your answer to 'What would you like to see at
+                  CruzHacks 2020?'
+                </p>
+              )}
             {trySubmission && !formValid.placeToSleep && (
               <p className="errors">
                 Please tell us if you need a place to sleep!
