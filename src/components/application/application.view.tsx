@@ -367,8 +367,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           setFormValid({ ...formValid, appSubmittedSuccessfully: false });
         });
     } else {
-      event.preventDefault();
-      console.log('error');
+      setFormValid({ ...formValid, appSubmittedSuccessfully: false });
     }
   };
 
