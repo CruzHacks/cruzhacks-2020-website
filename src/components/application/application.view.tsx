@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { submitApplication, uploadResume } from '../../account';
 import Auth0UserType from '../types/Auth0UserType';
+import axios from 'axios';
 
 type ApplicationViewType = {
   user: Auth0UserType;
@@ -76,6 +77,8 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
     specialAccomodations: true,
     ucscCollegeAffiliation: true,
     appSubmittedSuccessfully: true,
+
+    criticalError: false,
   });
 
   //   const freeFormGenderInput = React.createRef<HTMLInputElement>();
@@ -319,7 +322,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
   const handleApplicationSubmission = event => {
     event.preventDefault();
     let isValidForm = true;
-
     const requestBody = { resume: undefined };
 
     setFormValid({ ...formValid, appSubmittedSuccessfully: true });
@@ -367,7 +369,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           setFormValid({ ...formValid, appSubmittedSuccessfully: false });
         });
     } else {
-      setFormValid({ ...formValid, appSubmittedSuccessfully: false });
+      setFormValid({ ...formValid, criticalError: true });
     }
   };
 
@@ -1215,6 +1217,14 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             {apiStatusUpdates.appSubmissionInProgress === true && (
               <p className="info">
                 Submitting your application to the CruzHacks Cloud!
+              </p>
+            )}
+            {formValid.criticalError && (
+              <p className="error">
+                Unfortunately an error prevented form submission! Please contact
+                us at
+                <a href="mailto:contact@cruzhacks.com">contact@cruzhacks.com</a>
+                .
               </p>
             )}
             {trySubmission &&
