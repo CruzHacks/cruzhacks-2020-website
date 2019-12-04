@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { submitApplication, uploadResume } from '../../account';
 import Auth0UserType from '../types/Auth0UserType';
-import axios from 'axios';
 
 type ApplicationViewType = {
   user: Auth0UserType;
@@ -107,16 +106,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
-      case 'email':
-        const emailRegExp = new RegExp(
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-        if (value.length < 256 && value.length > 0 && emailRegExp.test(value)) {
-          setFormValid({ ...formValid, [name]: true });
-        } else {
-          setFormValid({ ...formValid, [name]: false });
-        }
-        break;
       case 'age':
         if (
           value.length <= 3 &&
@@ -174,9 +163,13 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             genderTextElement.value.length > 0 &&
             genderTextElement.value.length <= 320)
         ) {
-          setFormValid({ ...formValid, [name]: true });
-        } else {
-          setFormValid({ ...formValid, [name]: false });
+          if (genderTextElement && genderTextElement.value.length <= 320)
+            setFormValid({ ...formValid, [name]: true });
+          else if (!genderTextElement) {
+            setFormValid({ ...formValid, [name]: true });
+          } else {
+            setFormValid({ ...formValid, [name]: false });
+          }
         }
         break;
       case 'ethnicity':
@@ -321,6 +314,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
     event.preventDefault();
     let isValidForm = true;
     const requestBody = { resume: undefined };
+    console.log(formValues.githubUrl.length);
 
     setFormValid({ ...formValid, appSubmittedSuccessfully: true });
     formValid.appSubmittedSuccessfully = true;
@@ -531,7 +525,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   />
                 </div>
                 {trySubmission && !formValid.gender && (
-                  <p className="errors">Required</p>
+                  <p className="errors">Required / too many characters</p>
                 )}
               </div>
               <br style={{ clear: 'both' }} />
@@ -813,6 +807,12 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   value={formValues.linkedinUrl}
                   onChange={handleInputChange}
                 />
+                {(!formValid.linkedinUrl ||
+                  (trySubmission &&
+                    formValues.linkedinUrl.length > 256 &&
+                    formValues.linkedinUrl.length > 0)) && (
+                  <p className="errors">URL too many characters</p>
+                )}
               </div>
             </section>
             <section className="github-section">
@@ -829,6 +829,12 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   value={formValues.githubUrl}
                   onChange={handleInputChange}
                 />
+                {(!formValid.githubUrl ||
+                  (trySubmission &&
+                    formValues.githubUrl.length > 256 &&
+                    formValues.githubUrl.length > 0)) && (
+                  <p className="errors">URL too many characters</p>
+                )}
               </div>
             </section>
             <section className="resume-section">
@@ -1280,6 +1286,18 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
               )}
             {trySubmission && !formValid.resume && (
               <p className="errors">Please upload a valid resume!</p>
+            )}
+            {(!formValid.linkedinUrl ||
+              (trySubmission &&
+                formValues.linkedinUrl.length > 256 &&
+                formValues.linkedinUrl.length > 0)) && (
+              <p className="errors">LinkedIn URL too many characters</p>
+            )}
+            {(!formValid.linkedinUrl ||
+              (trySubmission &&
+                formValues.githubUrl.length > 256 &&
+                formValues.githubUrl.length > 0)) && (
+              <p className="errors">GitHub URL too many characters</p>
             )}
             {trySubmission && !formValid.firstHackathon && (
               <p className="errors">

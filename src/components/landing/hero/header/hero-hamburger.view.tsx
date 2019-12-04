@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerIcon from '../../../../assets/images/icons/hamburger.svg';
-import { NONAME } from 'dns';
 
 const HeroHamburgerView: React.FC = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
