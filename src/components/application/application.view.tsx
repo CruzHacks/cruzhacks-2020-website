@@ -94,14 +94,14 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
     let { name, value } = event.target;
     switch (name) {
       case 'firstName':
-        if (value.length < 100 && value.length > 0) {
+        if (value.length <= 100 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
         } else {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
       case 'lastName':
-        if (value.length < 100 && value.length > 0) {
+        if (value.length <= 100 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
         } else {
           setFormValid({ ...formValid, [name]: false });
@@ -123,7 +123,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/
         );
         if (
-          value.length < 21 &&
+          value.length <= 20 &&
           value.length > 0 &&
           phoneNumRegExp.test(value)
         ) {
@@ -204,7 +204,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
       case 'school':
         const schoolRegExp = new RegExp(/[0-9]/);
         if (
-          value.length < 320 &&
+          value.length <= 320 &&
           value.length > 0 &&
           !schoolRegExp.test(value)
         ) {
@@ -221,7 +221,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         }
         break;
       case 'major':
-        if (value.length < 320 && value.length > 0) {
+        if (value.length <= 320 && value.length > 0) {
           setFormValid({ ...formValid, [name]: true });
         } else {
           setFormValid({ ...formValid, [name]: false });
@@ -240,7 +240,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         //   setFormValid({ ...formValid, [name]: false });
         // }
 
-        setFormValid({ ...formValid, [name]: value.length < 256 });
+        setFormValid({ ...formValid, [name]: value.length <= 256 });
 
         break;
       case 'githubUrl':
@@ -257,7 +257,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         //   setFormValid({ ...formValid, [name]: false });
         // }
 
-        setFormValid({ ...formValid, [name]: value.length < 256 });
+        setFormValid({ ...formValid, [name]: value.length <= 256 });
 
         break;
       case 'participateQuestion':
