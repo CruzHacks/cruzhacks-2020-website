@@ -123,7 +123,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/
         );
         if (
-          value.length < 20 &&
+          value.length < 21 &&
           value.length > 0 &&
           phoneNumRegExp.test(value)
         ) {
@@ -803,6 +803,10 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   value={formValues.linkedinUrl}
                   onChange={handleInputChange}
                 />
+                {(!formValid.linkedinUrl ||
+                  (trySubmission && formValues.linkedinUrl.length < 256)) && (
+                  <p className="errors">URL too many characters</p>
+                )}
               </div>
             </section>
             <section className="github-section">
@@ -819,6 +823,10 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   value={formValues.githubUrl}
                   onChange={handleInputChange}
                 />
+                {(!formValid.githubUrl ||
+                  (trySubmission && formValues.githubUrl.length < 256)) && (
+                  <p className="errors">URL too many characters</p>
+                )}
               </div>
             </section>
             <section className="resume-section">
