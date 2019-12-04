@@ -77,8 +77,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
     specialAccomodations: true,
     ucscCollegeAffiliation: true,
     appSubmittedSuccessfully: true,
-
-    criticalError: false,
   });
 
   //   const freeFormGenderInput = React.createRef<HTMLInputElement>();
@@ -369,7 +367,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           setFormValid({ ...formValid, appSubmittedSuccessfully: false });
         });
     } else {
-      setFormValid({ ...formValid, criticalError: true });
+      //setFormValid({ ...formValid, criticalError: true });
     }
   };
 
@@ -1217,14 +1215,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             {apiStatusUpdates.appSubmissionInProgress === true && (
               <p className="info">
                 Submitting your application to the CruzHacks Cloud!
-              </p>
-            )}
-            {formValid.criticalError && (
-              <p className="error">
-                Unfortunately an error prevented form submission! Please contact
-                us at
-                <a href="mailto:contact@cruzhacks.com">contact@cruzhacks.com</a>
-                .
               </p>
             )}
             {trySubmission &&
