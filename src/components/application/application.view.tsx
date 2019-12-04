@@ -310,6 +310,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
     event.preventDefault();
     let isValidForm = true;
     const requestBody = { resume: undefined };
+    console.log(formValues.githubUrl.length);
 
     setFormValid({ ...formValid, appSubmittedSuccessfully: true });
     formValid.appSubmittedSuccessfully = true;
@@ -803,7 +804,9 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   onChange={handleInputChange}
                 />
                 {(!formValid.linkedinUrl ||
-                  (trySubmission && formValues.linkedinUrl.length < 256)) && (
+                  (trySubmission &&
+                    formValues.linkedinUrl.length > 256 &&
+                    formValues.linkedinUrl.length > 0)) && (
                   <p className="errors">URL too many characters</p>
                 )}
               </div>
@@ -823,7 +826,9 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   onChange={handleInputChange}
                 />
                 {(!formValid.githubUrl ||
-                  (trySubmission && formValues.githubUrl.length < 256)) && (
+                  (trySubmission &&
+                    formValues.githubUrl.length > 256 &&
+                    formValues.githubUrl.length > 0)) && (
                   <p className="errors">URL too many characters</p>
                 )}
               </div>
