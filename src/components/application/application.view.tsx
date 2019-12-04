@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { submitApplication, uploadResume } from '../../account';
 import Auth0UserType from '../types/Auth0UserType';
-import axios from 'axios';
 
 type ApplicationViewType = {
   user: Auth0UserType;
