@@ -163,9 +163,13 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
             genderTextElement.value.length > 0 &&
             genderTextElement.value.length <= 320)
         ) {
-          setFormValid({ ...formValid, [name]: true });
-        } else {
-          setFormValid({ ...formValid, [name]: false });
+          if (genderTextElement && genderTextElement.value.length <= 320)
+            setFormValid({ ...formValid, [name]: true });
+          else if (!genderTextElement) {
+            setFormValid({ ...formValid, [name]: true });
+          } else {
+            setFormValid({ ...formValid, [name]: false });
+          }
         }
         break;
       case 'ethnicity':
@@ -521,7 +525,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   />
                 </div>
                 {trySubmission && !formValid.gender && (
-                  <p className="errors">Required</p>
+                  <p className="errors">Required / too many characters</p>
                 )}
               </div>
               <br style={{ clear: 'both' }} />
@@ -1282,6 +1286,18 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
               )}
             {trySubmission && !formValid.resume && (
               <p className="errors">Please upload a valid resume!</p>
+            )}
+            {(!formValid.linkedinUrl ||
+              (trySubmission &&
+                formValues.linkedinUrl.length > 256 &&
+                formValues.linkedinUrl.length > 0)) && (
+              <p className="errors">LinkedIn URL too many characters</p>
+            )}
+            {(!formValid.linkedinUrl ||
+              (trySubmission &&
+                formValues.githubUrl.length > 256 &&
+                formValues.githubUrl.length > 0)) && (
+              <p className="errors">GitHub URL too many characters</p>
             )}
             {trySubmission && !formValid.firstHackathon && (
               <p className="errors">
