@@ -107,16 +107,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           setFormValid({ ...formValid, [name]: false });
         }
         break;
-      case 'email':
-        const emailRegExp = new RegExp(
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-        if (value.length < 256 && value.length > 0 && emailRegExp.test(value)) {
-          setFormValid({ ...formValid, [name]: true });
-        } else {
-          setFormValid({ ...formValid, [name]: false });
-        }
-        break;
       case 'age':
         if (
           value.length <= 3 &&
@@ -133,7 +123,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
           /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/
         );
         if (
-          value.length < 21 &&
+          value.length < 20 &&
           value.length > 0 &&
           phoneNumRegExp.test(value)
         ) {
