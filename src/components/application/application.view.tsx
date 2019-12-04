@@ -109,7 +109,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
         break;
       case 'age':
         if (
-          value.length <= 3 &&
+          value.length < 3 &&
           value.length > 0 &&
           Number.isInteger(parseInt(value))
         ) {
@@ -1234,12 +1234,12 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 </p>
               )}
               {trySubmission &&
-                (formValues.firstName.length > 100 ||
+                (formValues.firstName.length >= 100 ||
                   (formValues.firstName.length < 1 && (
                     <p className="errors">Please check your first name!</p>
                   )))}
               {trySubmission &&
-                (formValues.lastName.length > 100 ||
+                (formValues.lastName.length >= 100 ||
                   formValues.lastName.length < 1) && (
                   <p className="errors">Please check your last name!</p>
                 )}
@@ -1264,7 +1264,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 </p>
               )}
               {trySubmission &&
-                (formValues.school.length > 320 ||
+                (formValues.school.length >= 320 ||
                   formValues.school.length < 1) && (
                   <p className="errors">
                     Please check your answer for school/university!
@@ -1288,7 +1288,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   </p>
                 )}
               {trySubmission &&
-                ((!formValid.major && formValues.major.length > 320) ||
+                ((!formValid.major && formValues.major.length >= 320) ||
                   formValues.major.length < 1) && (
                   <p className="errors">
                     Please check what you filled in for major!
@@ -1299,13 +1299,13 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
               )}
               {(!formValid.linkedinUrl ||
                 (trySubmission &&
-                  formValues.linkedinUrl.length > 256 &&
+                  formValues.linkedinUrl.length >= 256 &&
                   formValues.linkedinUrl.length > 0)) && (
                 <p className="errors">LinkedIn URL too many characters</p>
               )}
               {(!formValid.linkedinUrl ||
                 (trySubmission &&
-                  formValues.githubUrl.length > 256 &&
+                  formValues.githubUrl.length >= 256 &&
                   formValues.githubUrl.length > 0)) && (
                 <p className="errors">GitHub URL too many characters</p>
               )}
