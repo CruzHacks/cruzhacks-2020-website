@@ -1,0 +1,53 @@
+&__quote-container {
+  display: grid;
+  grid-template-rows: 1fr 0.25fr auto 0.25fr 2fr;
+  grid-template-columns: 0.25fr 3fr auto 0.5fr 1fr;
+  grid-template-areas:
+    'top top top top .'
+    '. . . . .'
+    '. main main main .'
+    '. . . . .'
+    '. . em credit bottom ';
+}
+
+&__quote-open {
+  grid-area: top;
+}
+
+&__quote-close {
+  grid-area: bottom;
+  bottom: 0;
+  position: relative;
+}
+
+&__quote-text {
+  grid-area: main;
+  font-family: 'Rubik Bold';
+  color: #494949;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  @include responsive-font(2.1vw, 14px, 20px);
+}
+
+&__quote-emDash {
+  grid-area: em;
+  justify-self: right;
+  padding-right: 1em;
+  padding-top: 6px;
+}
+
+&__quote-credit-container {
+  grid-area: credit;
+  padding-right: 20px;
+}
+
+&__quote-credit-text {
+  font-family: 'Rubik Regular';
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  font-size: 8px;
+  line-height: 15px;
+  letter-spacing: 0.12em;
+  display: block;
+  white-space: nowrap;
+}

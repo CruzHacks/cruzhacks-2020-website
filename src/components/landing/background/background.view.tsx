@@ -38,6 +38,7 @@ const BackdropView: React.FC = () => {
           <WelcomePillarsView />
         </div>
         <div className="stats-backdrop__container"></div>
+        <div className="retrospective-backdrop__container"></div>
         <div className="cta-backdrop__container">
           <BackdropCtaView />
         </div>

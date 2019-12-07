@@ -1,0 +1,14 @@
+.retrospective {
+  &__container {
+    width: 80%;
+    margin: auto;
+    right: 0;
+    position: relative;
+  }
+  @import './quote/quote';
+
+  &__image {
+    border-radius: 50%;
+    border: 17px solid #8dddce;
+  }
+}

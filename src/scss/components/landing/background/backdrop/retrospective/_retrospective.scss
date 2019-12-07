@@ -1,0 +1,11 @@
+.retrospective-backdrop__container {
+  position: relative;
+  min-height: 676px;
+
+  @include respond(desktop) {
+    min-height: 576px;
+  }
+  @include respond(smallest) {
+    min-height: 306px;
+  }
+}
