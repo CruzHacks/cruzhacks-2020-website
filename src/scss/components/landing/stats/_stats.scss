@@ -11,7 +11,7 @@
       min-height: 700px;
     }
     @include respond(tab-land) {
-      min-height: 530px;
+      min-height: 480px;
     }
     @include respond(phone) {
       min-height: 1050px;

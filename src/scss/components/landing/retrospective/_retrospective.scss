@@ -4,11 +4,42 @@
     margin: auto;
     right: 0;
     position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+    @include respond(tab-land) {
+      margin-top: 0;
+    }
+    @include respond(tab-port) {
+      margin-top: -4em;
+      flex-direction: column;
+    }
+    @include respond(phone) {
+      margin-top: -0;
+    }
   }
   @import './quote/quote';
 
   &__image {
     border-radius: 50%;
+    margin: -1.5em 8em 2em -2em;
+    right: 5em;
+    position: relative;
+    width: 35%;
+    height: auto;
     border: 17px solid #8dddce;
+    @include respond(tab-land) {
+      margin: -1.5em 2em 6em 2em;
+      border: 12px solid #8dddce;
+    }
+    @include respond(tab-port) {
+      margin: 0;
+      right: 0;
+      align-self: center;
+    }
+    @include respond(phone) {
+      max-width: 65%;
+      border: 8px solid #8dddce;
+    }
   }
 }
