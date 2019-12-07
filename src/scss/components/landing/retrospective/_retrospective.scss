@@ -29,7 +29,7 @@
     height: auto;
     border: 17px solid #8dddce;
     @include respond(tab-land) {
-      margin: -1.5em 2em 6em 2em;
+      margin: -1.5em 2em 8em 5em;
       border: 12px solid #8dddce;
     }
     @include respond(tab-port) {

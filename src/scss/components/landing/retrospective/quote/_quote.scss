@@ -1,5 +1,6 @@
 &__quote-container {
   display: grid;
+  margin-top: 5em;
   max-width: 25em;
   grid-template-rows: 0.4fr auto 0.25fr 2fr;
   grid-template-columns: 0.25fr 3fr auto 0.5fr 1fr;
@@ -8,6 +9,9 @@
     '. main main main .'
     '. . . . .'
     '. . em credit bottom ';
+  @include respond(tab-land) {
+    margin-top: 0;
+  }
   @include respond(tab-port) {
     align-self: center;
   }
