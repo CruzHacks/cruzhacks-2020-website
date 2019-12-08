@@ -1,0 +1,105 @@
+&__quote-container {
+  display: grid;
+  grid-column: 4 / 5;
+  grid-row: 1;
+  margin-top: 5em;
+  position: relative;
+  left: 8em;
+  padding-bottom: 5em;
+  min-width: 29em;
+  grid-template-rows: 0.4fr auto 0.25fr 2fr;
+  grid-template-columns: 0.25fr 3fr auto 0.5fr 1fr;
+  grid-template-areas:
+    'top top top top .'
+    '. main main main .'
+    '. . . . .'
+    '. . em credit bottom ';
+  @include respond(tab-land) {
+    top: -4em;
+    grid-column: 3;
+    left: 4em;
+    min-width: 21em;
+  }
+  @include respond(tab-port) {
+    align-self: center;
+    top: 0;
+    min-width: 17em;
+  }
+  @include respond(phone) {
+    top: 76%;
+    position: relative;
+    min-width: unset;
+    max-width: 16em;
+    left: 0;
+  }
+  @include respond(phone-narrow) {
+    top: 74%;
+  }
+  @include respond(smallest) {
+    top: 72%;
+  }
+}
+
+&__quote-open {
+  grid-area: top;
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+&__quote-close {
+  grid-area: bottom;
+  bottom: 0;
+  position: relative;
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+&__quote-text {
+  grid-area: main;
+  text-align: center;
+  font-family: 'Rubik Bold';
+  color: #494949;
+  line-height: 31px;
+  padding-top: 10px;
+  letter-spacing: 0.03em;
+  @include responsive-font(1.3vw, 12px, 18px);
+  @include respond(phone) {
+    font-size: 17px;
+    padding-bottom: 15px;
+  }
+}
+
+&__quote-emDash {
+  grid-area: em;
+  justify-self: right;
+  padding-right: 1em;
+  padding-top: 6px;
+}
+
+&__quote-credit-container {
+  grid-area: credit;
+  padding-right: 20px;
+}
+
+&__quote-credit-text {
+  font-family: 'Rubik Regular';
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  font-size: 8px;
+  line-height: 15px;
+  letter-spacing: 0.12em;
+  display: block;
+  white-space: nowrap;
+  @include respond(phone) {
+    font-size: 9px;
+  }
+}
+
+&__quoteMobile {
+  display: none;
+  @include respond(phone) {
+    display: inline;
+  }
+}

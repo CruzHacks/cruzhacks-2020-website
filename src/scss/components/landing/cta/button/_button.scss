@@ -3,8 +3,8 @@
   height: 41px;
   background-color: #5dcec6;
   font-family: SofiaProSoftW01-Regular;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 15px;
+  line-height: 10px;
   letter-spacing: 0.07em;
   text-indent: 3px;
   color: #fffefe;
@@ -39,6 +39,10 @@
 }
 &__button {
   @include button();
+  background-color: #4141a9;
+  &:hover {
+    background: lighten(#4141a9, 10%);
+  }
 }
 &__button--mentor {
   @include button();

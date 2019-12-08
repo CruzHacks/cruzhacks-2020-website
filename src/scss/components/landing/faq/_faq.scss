@@ -5,6 +5,7 @@
     position: relative;
     height: fit-content;
     height: 796px;
+    z-index: 2;
     @include respond(tab-port) {
       height: 596px;
       padding-bottom: 4em;

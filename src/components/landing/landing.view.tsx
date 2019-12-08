@@ -4,6 +4,7 @@ import HeroView from './hero/hero.view';
 import AboutView from './about/about.view';
 import WelcomeView from './welcome/welcome.view';
 import StatsView from './stats/stats.view';
+import RetrospectiveView from './retrospective/retrospective.view';
 import CtaView from './cta/cta.view';
 import FAQView from './faq/faq.view';
 import SponsorsView from './sponsors/sponsors.view';
@@ -29,6 +30,7 @@ export const LandingView: React.FC = () => {
         <AboutView />
         <WelcomeView />
         <StatsView />
+        <RetrospectiveView />
         <CtaView />
         <FAQView />
         <SponsorsView />
