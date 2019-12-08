@@ -14,7 +14,11 @@ const QuoteView: React.FC<quotes> = quotes => {
     <>
       <div className="retrospective__quote-container">
         <img className="retrospective__quote-open" src={openQuote} />
-        <span className="retrospective__quote-text">{quotes.quote}</span>
+        <span className="retrospective__quote-text">
+          <span className="retrospective__quoteMobile">"</span>
+          {quotes.quote}
+          <span className="retrospective__quoteMobile">"</span>
+        </span>
         <img className="retrospective__quote-emDash" src={emDash} />
         <div className="retrospective__quote-credit-container">
           <span className="retrospective__quote-credit-text">

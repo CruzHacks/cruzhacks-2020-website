@@ -10,14 +10,14 @@
     @include respond(tab-port) {
       min-height: 996px;
     }
-    @media screen and (max-width: 1139px) {
-      min-height: 1196px;
+    @media screen and (max-width: 1196px) {
+      min-height: 1090px;
     }
-    @media screen and (max-width: 899px) {
+    @media screen and (max-width: 900px) {
       min-height: 996px;
     }
     @media screen and (max-width: 778px) {
-      min-height: 1596px;
+      min-height: 1386px;
     }
     @include respond(phone) {
       min-height: 1436px;

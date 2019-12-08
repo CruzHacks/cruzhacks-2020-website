@@ -11,18 +11,15 @@ const RetrospectiveView: React.FC = () => {
       <div className="retrospective__container">
         <img className="retrospective__image-1" src={retroImage1} />
         <QuoteView
-          quote="The idea seemed difficult to accomplish in 36 hours, but luckily we had guidance and inspiration from Cruzhacks' mentors."
+          quote="I'd like to thank Cruzhacks 2019 and its mentors for making my first hackathon experience absolutely unreal!"
           attendee="4TH YEAR UNDERGRADUATE"
           school="UC SANTA CRUZ"
         />
-        <span className="retrospective__flexBreak" />
         <img className="retrospective__image-2" src={retroImage2} />
-        <span className="retrospective__flexBreak" />
         <img className="retrospective__image-3" src={retroImage3} />
-        <span className="retrospective__flexBreak" />
         <div className="retrospective__secondQuote">
           <QuoteView
-            quote="I'm happy to say that I am officially committing to pursue 
+            quote="I am officially committing to pursue 
           my first long-term personal project thanks to all of the
           encouragement and positive feedback we got at the event!"
             attendee="2ND YEAR UNDERGRADUATE"

@@ -3,12 +3,19 @@
   min-height: 1196px;
 
   @include respond(tab-land) {
-    min-height: 1696px;
+    min-height: 1066px;
   }
-  @media screen and (max-width: 1138px) {
-    min-height: 1196px;
+
+  @include respond(tab-port) {
+    min-height: 836px;
+  }
+  @include respond(phone) {
+    min-height: 2366px;
+  }
+  @include respond(phone-narrow) {
+    min-height: 2166px;
   }
   @include respond(smallest) {
-    min-height: 306px;
+    min-height: 1966px;
   }
 }

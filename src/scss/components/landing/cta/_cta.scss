@@ -19,11 +19,16 @@
       min-height: 796px;
     }
     @include respond(phone) {
-      min-height: 966px;
-      margin-top: 28em;
+      min-height: 1556px;
+      top: 32em;
+    }
+    @include respond(phone-narrow) {
+      top: 18em;
+      min-height: 1276px;
     }
     @include respond(smallest) {
-      margin-top: 18em;
+      top: -4em;
+      min-height: 896px;
     }
   }
   @import './button/button';

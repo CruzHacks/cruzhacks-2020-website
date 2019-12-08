@@ -46,22 +46,21 @@ $text-color: #2e2c5f;
   box-sizing: border-box;
   border-radius: 25px;
   max-width: 25vw;
-  height: 28em;
+  min-height: 28em;
   @include respond(desktop) {
     margin: 0 auto;
   }
   @include respond(tab-land) {
-    min-height: 45vh;
     max-width: 25em;
     margin: 2em 1em 1em 1em;
   }
   @include respond(tab-port) {
     margin: 1.5em 0.75em 1.5em 0.75em;
     max-width: 22em;
-    height: 24em;
+    max-height: 24em;
   }
   @include respond(phone) {
-    max-height: 23em;
+    min-height: 23em;
     max-width: 17em;
   }
 }

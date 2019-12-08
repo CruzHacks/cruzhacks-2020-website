@@ -2,29 +2,27 @@
   @include flexBox();
   position: sticky;
   margin-top: -72em;
+  bottom: 0;
   @include respond(big-desktop) {
-    margin-top: -91em;
+    margin-top: -90em;
   }
   @include respond(mission) {
-    margin-top: -78em;
+    margin-top: -64em;
   }
   @include respond(tab-land) {
-    margin-top: -75em;
-  }
-  @include respond(tab-port) {
-    margin-top: -69em;
+    margin-top: -65em;
   }
   @include respond(phone) {
-    margin-top: -45em;
+    margin-top: -39.5em;
   }
+  @include respond(phone-narrow) {
+    margin-top: -41.5em;
+  }
+
   @include respond(smallest) {
-    margin-top: -35em;
-  }
-  @media screen and (max-width: 394px) {
-    margin-top: -32em;
-  }
-  @media screen and (max-width: 354px) {
-    margin-top: -30em;
+    margin-top: -30.5em;
+    width: 170%;
+    margin-right: 20%;
   }
 }
 

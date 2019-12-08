@@ -13,7 +13,7 @@
     align-self: center;
   }
   @include respond(phone) {
-    border: 8px solid #8dddce;
+    width: 100%;
   }
 }
 .retrospective {
@@ -38,6 +38,12 @@
       height: 746px;
     }
     @include respond(phone) {
+      display: flex;
+      margin-bottom: 107em;
+      top: -9em;
+      flex-direction: column;
+    }
+    @include respond(phone-narrow) {
     }
   }
   @import './quote/quote';
@@ -52,11 +58,25 @@
       right: 10em;
     }
     @include respond(tab-land) {
-      top: -1em;
-      right: 11em;
+      top: 0;
+      right: 8em;
     }
     @include respond(tab-port) {
+      top: -1em;
       right: 4em;
+    }
+    @include respond(phone) {
+      right: 0;
+      left: 0;
+      margin: 0 auto 0 auto;
+      top: 127%;
+    }
+    @include respond(phone-narrow) {
+      top: 111%;
+    }
+    @include respond(smallest) {
+      top: 93%;
+      display: initial;
     }
   }
   &__image-1 {
@@ -83,6 +103,13 @@
       margin-top: -4em;
     }
     @include respond(phone) {
+      margin: 0 auto 4em auto;
+      right: 0;
+      left: 0;
+      flex-basis: 100%;
+      max-width: 75%;
+
+      align-self: center;
     }
   }
   &__image-2 {
@@ -110,6 +137,17 @@
       top: 20em;
       max-width: 72%;
     }
+    @include respond(phone) {
+      flex-basis: 100%;
+      min-width: 70%;
+      margin: 1em auto 4em auto;
+      top: 120%;
+      left: 0;
+      right: 0;
+    }
+    @include respond(phone-narrow) {
+      top: 119.5%;
+    }
   }
   &__image-3 {
     @include image;
@@ -136,6 +174,17 @@
       max-width: 50%;
     }
     @include respond(phone) {
+      left: 0;
+      right: 0;
+      min-width: 70%;
+      margin: 1em auto 4em auto;
+      top: 175%;
+    }
+    @include respond(phone-narrow) {
+      top: 165%;
+    }
+    @include respond(smallest) {
+      top: 155%;
     }
   }
   &__image-4 {
@@ -159,10 +208,17 @@
       max-width: 37%;
     }
     @include respond(phone) {
+      max-width: 72%;
+      left: 0;
+      right: 0;
+      margin: 1em auto 2em auto;
+      top: 276%;
     }
-  }
-  &__flexBreak {
-    height: 0;
-    flex-basis: 100%;
+    @include respond(phone-narrow) {
+      top: 260%;
+    }
+    @include respond(smallest) {
+      top: 240%;
+    }
   }
 }
