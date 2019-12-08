@@ -1336,9 +1336,8 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 </p>
               )}
               {(!formValid.seeAtCruzhacks ||
-                (trySubmission &&
-                  formValues.seeAtCruzhacks.length === 0 &&
-                  formValues.seeAtCruzhacks.length > 500)) && (
+                (trySubmission && formValues.seeAtCruzhacks.length === 0) ||
+                  formValues.seeAtCruzhacks.length > 500) && (
                 <p className="errors">
                   Please check your answer to 'What would you like to see at
                   CruzHacks 2020?'
