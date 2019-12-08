@@ -17,6 +17,14 @@ $text-color: #2e2c5f;
   padding: 4em 2em 0 2em;
   justify-content: center;
   flex-wrap: wrap;
+  right: 0;
+  margin: auto;
+  @include respond(big-desktop) {
+    max-width: 85%;
+  }
+  @include respond(desktop) {
+    max-width: 90%;
+  }
   @include respond(tab-land) {
     padding-top: 2em;
   }
@@ -30,7 +38,7 @@ $text-color: #2e2c5f;
 
 &__card {
   display: flex;
-  margin: 0 auto;
+  margin: 0 4em 0 4em;
   justify-content: space-around;
   align-items: center;
   border: 3px solid #83e2dc;
@@ -39,6 +47,9 @@ $text-color: #2e2c5f;
   border-radius: 25px;
   max-width: 25vw;
   height: 28em;
+  @include respond(desktop) {
+    margin: 0 auto;
+  }
   @include respond(tab-land) {
     min-height: 45vh;
     max-width: 25em;

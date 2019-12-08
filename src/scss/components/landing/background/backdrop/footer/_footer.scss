@@ -1,8 +1,9 @@
 .footer-backdrop__container {
   @include flexBox();
   position: sticky;
-  margin-top: -91em;
-  @include respond(desktop) {
+  margin-top: -72em;
+  @include respond(big-desktop) {
+    margin-top: -91em;
   }
   @include respond(mission) {
     margin-top: -78em;

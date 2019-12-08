@@ -4,9 +4,9 @@
   grid-row: 1;
   margin-top: 5em;
   position: relative;
-  left: 6em;
+  left: 8em;
   padding-bottom: 5em;
-  max-width: 25em;
+  min-width: 27em;
   grid-template-rows: 0.4fr auto 0.25fr 2fr;
   grid-template-columns: 0.25fr 3fr auto 0.5fr 1fr;
   grid-template-areas:
@@ -15,10 +15,15 @@
     '. . . . .'
     '. . em credit bottom ';
   @include respond(tab-land) {
-    margin-top: 0;
+    top: -4em;
+    grid-column: 3;
+    min-width: 20em;
   }
   @include respond(tab-port) {
     align-self: center;
+    top: 0;
+    left: 2em;
+    min-width: 18em;
   }
 }
 
@@ -40,7 +45,7 @@
   line-height: 31px;
   padding-top: 10px;
   letter-spacing: 0.03em;
-  @include responsive-font(1.9vw, 12px, 16px);
+  @include responsive-font(1.3vw, 12px, 18px);
 }
 
 &__quote-emDash {
