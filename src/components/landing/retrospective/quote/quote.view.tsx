@@ -13,13 +13,17 @@ const QuoteView: React.FC<quotes> = quotes => {
   return (
     <>
       <div className="retrospective__quote-container">
-        <img className="retrospective__quote-open" src={openQuote} />
+        <img
+          className="retrospective__quote-open"
+          alt="Quote open"
+          src={openQuote}
+        />
         <span className="retrospective__quote-text">
           <span className="retrospective__quoteMobile">"</span>
           {quotes.quote}
           <span className="retrospective__quoteMobile">"</span>
         </span>
-        <img className="retrospective__quote-emDash" src={emDash} />
+        <img className="retrospective__quote-emDash" alt="" src={emDash} />
         <div className="retrospective__quote-credit-container">
           <span className="retrospective__quote-credit-text">
             {quotes.attendee}
@@ -28,7 +32,11 @@ const QuoteView: React.FC<quotes> = quotes => {
             {quotes.school}
           </span>
         </div>
-        <img className="retrospective__quote-close" src={closeQuote} />
+        <img
+          className="retrospective__quote-close"
+          alt="Quote close"
+          src={closeQuote}
+        />
       </div>
     </>
   );

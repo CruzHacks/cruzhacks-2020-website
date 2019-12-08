@@ -11,13 +11,13 @@
       min-height: 996px;
     }
     @media screen and (max-width: 1196px) {
-      min-height: 1090px;
+      min-height: 1036px;
     }
     @media screen and (max-width: 900px) {
-      min-height: 996px;
+      min-height: 1166px;
     }
-    @media screen and (max-width: 778px) {
-      min-height: 1386px;
+    @media screen and (max-width: 796px) {
+      min-height: 1686px;
     }
     @include respond(phone) {
       min-height: 1436px;

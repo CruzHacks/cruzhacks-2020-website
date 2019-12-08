@@ -12,15 +12,18 @@
   @include respond(tab-land) {
     margin-top: -65em;
   }
+  @media screen and (max-width: 900px) {
+    margin-top: -76em;
+  }
   @include respond(phone) {
-    margin-top: -39.5em;
+    margin-top: -36.5em;
   }
   @include respond(phone-narrow) {
-    margin-top: -41.5em;
+    margin-top: -44.5em;
   }
 
   @include respond(smallest) {
-    margin-top: -30.5em;
+    margin-top: -31.5em;
     width: 170%;
     margin-right: 20%;
   }
