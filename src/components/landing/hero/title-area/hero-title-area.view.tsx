@@ -34,7 +34,9 @@ const HeroTitleAreaView: React.FC = () => {
           </p>
         </a>
       </div>
+      {/*
       <HeroSubscribeToEmailList />
+      */}
     </div>
   );
 };

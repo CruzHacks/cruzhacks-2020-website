@@ -74,9 +74,9 @@ const PortalView: React.FC = () => {
                     date={'Friday January 17 2020 16:59:59'}
                     renderer={props => <span>{props.days}</span>}
                   />{' '}
-                  days until CruzHacks 2020!
+                  days to apply for a spot at CruzHacks 2020!
                   <hr />
-                  <div>Check back here for future updates.</div>
+                  <div>Application deadline December 22nd!</div>
                 </span>
               </div>
             </div>

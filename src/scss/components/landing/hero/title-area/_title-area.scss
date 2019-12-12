@@ -34,7 +34,9 @@
   align-items: center;
   left: 115px;
   top: 275px;
-
+  @include respond(smallest) {
+    top: 225px;
+  }
   &__title-text {
     @include font-source-header(
       39px,
@@ -47,6 +49,7 @@
       #222222
     );
     font-family: 'Rubik Bold';
+    margin-top: 80px;
     mix-blend-mode: normal;
     @include responsive-font(3vw, 32px, 39px);
   }
@@ -107,20 +110,20 @@
   &__sponsor-button {
     @include button(#6f6fe8);
     @include respond(phone-narrow) {
-      top: 200px;
+      top: 19%;
     }
     left: 0;
     // top: 266px;
-    top: 225px;
+    top: 27%;
   }
   &__2019-button {
     @include button(#ffffff);
     @include respond(phone-narrow) {
-      top: 200px;
+      top: 19%;
     }
     left: 0;
     // top: 266px;
-    top: 225px;
+    top: 27%;
   }
   &__2019-button-text {
     position: relative;
@@ -158,7 +161,7 @@
       false,
       #fffefe
     );
-    bottom: 1px;
+    bottom: 3px;
     text-align: center;
   }
 }
