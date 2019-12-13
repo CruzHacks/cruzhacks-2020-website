@@ -29,9 +29,9 @@ steps:
       sudo ln -s -t $(System.DefaultWorkingDirectory) $(envVars.secureFilePath)
     displayName: 'symlink .env files from secure directory'
 
-  # - script: |
-  #     npm run build
-  #   displayName: 'create build to deploy'
+  - script: |
+      npm run build
+    displayName: 'create build to deploy'
 
   - task: ArchiveFiles@2
     displayName: 'Archive files'
