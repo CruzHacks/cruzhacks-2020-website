@@ -1,5 +1,4 @@
 import React from 'react';
-import HeroSubscribeToEmailList from './hero-subscribe-to-email-list.view';
 
 const HeroTitleAreaView: React.FC = () => {
   return (
@@ -13,7 +12,9 @@ const HeroTitleAreaView: React.FC = () => {
       <div className="hero-title-area__eventInfo hero-title-area__eventInfo-text">
         <p>// January 17-19th, 2020</p>
         <p>// Stevenson Event Center, UC Santa Cruz</p>
-        <p>// Applications Open</p>
+        <p style={{ marginTop: '-5px' }}>
+          // Apply by Dec. 18<sup>th</sup>
+        </p>
       </div>
       <div className="hero-title-area__button-container">
         <a

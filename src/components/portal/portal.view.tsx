@@ -74,7 +74,7 @@ const PortalView: React.FC = () => {
                     date={'Wednesday December 18 2019 23:59:59'}
                     renderer={props => (
                       <span>
-                        {props.days} {props.days == 1 ? 'day' : 'days'}
+                        {props.days} {props.days === 1 ? 'day' : 'days'}
                       </span>
                     )}
                   />{' '}
