@@ -1214,20 +1214,21 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 {trySubmission && !formValid.mlhAffiliation && (
                   <p className="errors">Required</p>
                 )}
+                <p className="info" style={{ color: 'lightgray' }}>
+                  If you have any issues please reach out to{' '}
+                  <a
+                    style={{ color: 'lightgray' }}
+                    href="mailto:contact@cruzhacks.com"
+                  >
+                    contact@cruzhacks.com
+                  </a>
+                  .
+                </p>
               </section>
               <button type="submit" className="application__button">
                 <p className="application__button-text">Submit</p>
               </button>
-              <p className="info" style={{ color: 'lightgray' }}>
-                If you have any issues please reach out to{' '}
-                <a
-                  style={{ color: 'lightgray' }}
-                  href="mailto:contact@cruzhacks.com"
-                >
-                  contact@cruzhacks.com
-                </a>
-                .
-              </p>
+
               {apiStatusUpdates.appSubmissionInProgress === true && (
                 <p className="info">
                   Submitting your application to the CruzHacks Cloud!
@@ -1337,7 +1338,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
               )}
               {(!formValid.seeAtCruzhacks ||
                 (trySubmission && formValues.seeAtCruzhacks.length === 0) ||
-                  formValues.seeAtCruzhacks.length > 500) && (
+                formValues.seeAtCruzhacks.length > 500) && (
                 <p className="errors">
                   Please check your answer to 'What would you like to see at
                   CruzHacks 2020?'
