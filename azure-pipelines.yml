@@ -17,9 +17,6 @@ steps:
       tsc --target ES6 --strict true --project tsconfig.json
     displayName: 'typescript compilation to ES6'
 
-  # - script: npm run CItest
-  #   displayName: 'run automated tests'
-
   - task: DownloadSecureFile@1
     name: envVars
     displayName: 'download environment variables'

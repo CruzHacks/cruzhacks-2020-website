@@ -71,12 +71,16 @@ const PortalView: React.FC = () => {
                 </span>
                 <span className="portal__announcements-event-text">
                   <Countdown
-                    date={'Friday January 17 2020 16:59:59'}
-                    renderer={props => <span>{props.days}</span>}
+                    date={'Wednesday December 18 2019 23:59:59'}
+                    renderer={props => (
+                      <span>
+                        {props.days} {props.days === 1 ? 'day' : 'days'}
+                      </span>
+                    )}
                   />{' '}
-                  days until CruzHacks 2020!
+                  to apply for a spot at CruzHacks!
                   <hr />
-                  <div>Check back here for future updates.</div>
+                  <div>Applications will be reviewed soon.</div>
                 </span>
               </div>
             </div>
