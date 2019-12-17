@@ -8,8 +8,8 @@ const SponsorUsView: React.FC = () => {
       </div>
       <div className="cta__sponsor-description-container">
         <p className="cta__sponsor-description">
-          Without the help of our sponsors Cruzhacks simply would not be
-          possible. If you're interested in bringing your brand to Cruzhacks
+          Without the help of our sponsors CruzHacks simply would not be
+          possible. If you're interested in bringing your brand to CruzHacks
           2020— please register your interest below.
         </p>
       </div>

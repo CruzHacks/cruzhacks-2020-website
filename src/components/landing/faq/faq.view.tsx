@@ -103,7 +103,7 @@ const faqs = [
   },
 
   {
-    question: 'How can I keep up to date on Cruzhacks 2020 news?',
+    question: 'How can I keep up to date on CruzHacks 2020 news?',
     answer:
       'Subscribe to our mailing list for updates! Follow us on Instagram or Facebook for details regarding the event!',
   },
