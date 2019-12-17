@@ -1,3 +1,6 @@
+&__subtitle-container {
+  margin: auto;
+}
 &__subtitle {
   @include font-source-subheader(
     $size: 1.5em,
@@ -9,7 +12,6 @@
   @include responsive-font(2.1vw, 1em, 1.3em);
   margin-top: 10px;
   height: 25px;
-  text-align: left;
   position: static;
   margin: auto;
   @include respond(tab-land) {

@@ -4,7 +4,8 @@
     flex-direction: column;
     position: relative;
     width: 100%;
-    text-align: center;
+    margin: 0 auto;
+    position: relative;
     min-height: 756px;
     padding-bottom: 6em;
     @include respond(tab-land) {
@@ -21,7 +22,7 @@
   }
   &__text-container {
     margin: 0 auto;
-    width: fit-content;
+    display: table;
   }
   @import './text/title';
   @import './text/subtitle';

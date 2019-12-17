@@ -4,8 +4,9 @@
   grid-row: 1;
   margin-top: 5em;
   position: relative;
-  left: 8em;
   padding-bottom: 5em;
+  padding-left: 2em;
+  margin-right: -8em;
   min-width: 29em;
   grid-template-rows: 0.4fr auto 0.25fr 2fr;
   grid-template-columns: 0.25fr 3fr auto 0.5fr 1fr;
