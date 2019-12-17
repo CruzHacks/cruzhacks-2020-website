@@ -6,6 +6,7 @@ import TeamView from '../components/team/team.view';
 import PortalView from '../components/portal/portal.view';
 import PrivateRoute from './private-route';
 import LoadingView from '../components/misc/loading.view';
+import LiveView from '../components/live/live.view';
 import { useAuth0 } from '../auth/auth';
 
 const Routes: React.FC = () => {
@@ -23,6 +24,7 @@ const Routes: React.FC = () => {
             <Route exact path="/" render={() => <LandingView />} />
             <Route exact path="/team" render={() => <TeamView />} />
             <PrivateRoute path="/portal" component={<PortalView />} />
+            <PrivateRoute path="/live" component={<LiveView />} />
           </Switch>
         </Router>
       </div>
