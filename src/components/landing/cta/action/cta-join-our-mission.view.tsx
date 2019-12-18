@@ -8,7 +8,7 @@ const JoinOurMissionView: React.FC = () => {
       </div>
       <div className="cta__join-description-container">
         <span className="cta__join-description">
-          Cruzhacks is entirely student organized and run. If you have
+          CruzHacks is entirely student organized and run. If you have
           experience in the industry, hackers at CruzHacks could use your
           support while building their projects! Student volunteers are also
           paramount to the event, helping with logistics. Consider registering

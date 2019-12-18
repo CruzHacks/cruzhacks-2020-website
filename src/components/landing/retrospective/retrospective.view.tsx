@@ -11,7 +11,7 @@ const RetrospectiveView: React.FC = () => {
       <div className="retrospective__container">
         <img className="retrospective__image-1" alt="" src={retroImage1} />
         <QuoteView
-          quote="I'd like to thank Cruzhacks 2019 and its mentors for making my first hackathon experience absolutely unreal!"
+          quote="I'd like to thank CruzHacks 2019 and its mentors for making my first hackathon experience absolutely unreal!"
           attendee="4TH YEAR UNDERGRADUATE"
           school="UC SANTA CRUZ"
         />

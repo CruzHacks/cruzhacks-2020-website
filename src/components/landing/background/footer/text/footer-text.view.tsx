@@ -7,7 +7,7 @@ const FooterTextView: React.FC = () => {
         Made with love by the CruzHacks Team.
       </span>
       <span className="footer-text__copyright">
-      @ 2020 Cruzhacks. All rights reserved.
+        @ 2020 CruzHacks. All rights reserved.
       </span>
       <div style={{ clear: 'both' }}></div>
     </div>
