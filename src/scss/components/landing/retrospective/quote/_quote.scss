@@ -31,12 +31,8 @@
     position: relative;
     min-width: unset;
     max-width: 16em;
-<<<<<<< HEAD
-    left: -4.75em;
-=======
     margin: 0 auto;
     left: -0.8em;
->>>>>>> master
   }
   @include respond(phone-narrow) {
   }
