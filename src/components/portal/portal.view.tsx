@@ -42,8 +42,8 @@ const PortalView: React.FC = () => {
 
   const Completionist = () => (
     <span>
-      <span style={{ lineHeight: '1.5em' }}>Second pass has begun!</span>
-      <br />
+      <span style={{ paddingBottom: '1.5em' }}>Second pass has begun!</span>
+      <hr style={{ width: '65%' }} />
       <span>Limited spots available.</span>
     </span>
   );
