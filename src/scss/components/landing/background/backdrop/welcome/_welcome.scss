@@ -4,9 +4,6 @@
     position: sticky;
     min-height: 896px;
     // custom media queries
-    @media (max-width: 75em) {
-      min-height: 686px;
-    }
     @include respond(tab-port) {
       min-height: 996px;
     }
