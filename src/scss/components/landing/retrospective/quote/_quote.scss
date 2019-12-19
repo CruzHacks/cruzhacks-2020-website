@@ -31,7 +31,7 @@
     position: relative;
     min-width: unset;
     max-width: 16em;
-    left: 0;
+    left: -4.75em;
   }
   @include respond(phone-narrow) {
     top: 74%;

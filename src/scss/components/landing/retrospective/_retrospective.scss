@@ -55,15 +55,14 @@
     grid-row: 4;
     @include respond(mission) {
       top: 4em;
-      right: 10em;
     }
     @include respond(tab-land) {
       top: 0;
-      right: 8em;
+      right: 11em;
     }
     @include respond(tab-port) {
       top: -1em;
-      right: 4em;
+      right: 8em;
     }
     @include respond(phone) {
       right: 0;
@@ -200,11 +199,11 @@
     }
     @include respond(tab-land) {
       top: 39%;
-      left: -2%;
+      left: 10%;
     }
     @include respond(tab-port) {
       top: 50%;
-      left: 5%;
+      left: 12%;
       max-width: 37%;
     }
     @include respond(phone) {
