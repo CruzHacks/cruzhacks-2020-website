@@ -13,7 +13,11 @@ const HeroTitleAreaView: React.FC = () => {
         <p>// January 17-19th, 2020</p>
         <p>// Stevenson Event Center, UC Santa Cruz</p>
         <p style={{ marginTop: '-5px' }}>
-          // Apply by Dec. 18<sup>th</sup>
+          //{' '}
+          <span style={{ textDecorationLine: 'line-through' }}>
+            Apply by Dec. 18<sup>th</sup>
+          </span>{' '}
+          Second pass limited!
         </p>
       </div>
       <div className="hero-title-area__button-container">
