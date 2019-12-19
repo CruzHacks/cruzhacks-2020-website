@@ -79,7 +79,7 @@ const PortalView: React.FC = () => {
                 </span>
                 <span className="portal__announcements-event-text">
                   <Countdown
-                    date={'Wednesday December 17 2019 23:59:59'}
+                    date={'Wednesday December 18 2019 23:59:59'}
                     renderer={props =>
                       props.completed ? (
                         <Completionist />
