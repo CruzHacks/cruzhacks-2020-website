@@ -17,7 +17,7 @@
     '. . em credit bottom ';
   @include respond(tab-land) {
     top: -4em;
-    grid-column: 3;
+    grid-column: 3 / 4;
     left: 4em;
     min-width: 21em;
   }
@@ -27,17 +27,20 @@
     min-width: 17em;
   }
   @include respond(phone) {
-    top: 76%;
+    top: calc(31em + 41vw);
     position: relative;
     min-width: unset;
     max-width: 16em;
+<<<<<<< HEAD
     left: -4.75em;
+=======
+    margin: 0 auto;
+    left: -0.8em;
+>>>>>>> master
   }
   @include respond(phone-narrow) {
-    top: 74%;
   }
   @include respond(smallest) {
-    top: 72%;
   }
 }
 

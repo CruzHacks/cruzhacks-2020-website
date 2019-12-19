@@ -58,24 +58,30 @@
     }
     @include respond(tab-land) {
       top: 0;
-      right: 11em;
+      right: 10em;
     }
     @include respond(tab-port) {
-      top: -1em;
+      top: 1em;
       right: 8em;
     }
     @include respond(phone) {
-      right: 0;
-      left: 0;
-      margin: 0 auto 0 auto;
-      top: 127%;
+      margin: 0 auto;
+      right: unset;
+      margin-top: 77%;
+      top: calc(34em - 20vw);
+    }
+    @media screen and (max-width: 620px) {
+      top: calc(35em - 20vw);
     }
     @include respond(phone-narrow) {
-      top: 111%;
+      top: calc(28em - 15vw);
+    }
+    @media screen and (max-width: 516px) {
+      top: calc(31em - 20vw);
     }
     @include respond(smallest) {
-      top: 93%;
       display: initial;
+      top: calc(25.5em - 20vw);
     }
   }
   &__image-1 {
@@ -199,7 +205,7 @@
     }
     @include respond(tab-land) {
       top: 39%;
-      left: 10%;
+      left: 20%;
     }
     @include respond(tab-port) {
       top: 50%;

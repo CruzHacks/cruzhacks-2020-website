@@ -5,9 +5,16 @@ const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
 
 export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
-  const queryParams = `?authentication=${apiKey}&accountType=hacker&accountEmail=${email}`;
+  const requestConfig: AxiosRequestConfig = {
+    params: {
+      authentication: apiKey,
+      accountType: 'hacker',
+      accountEmail: email,
+    },
+  };
+
   return axios
-    .get<Array<Object>>(endpoint + queryParams)
+    .get<Array<Object>>(endpoint, requestConfig)
     .then(response => {
       return response.data.length !== 0;
     })
