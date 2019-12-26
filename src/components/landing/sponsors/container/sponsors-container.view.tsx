@@ -20,21 +20,21 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'tera' && (
-                <a
-                  key={sponsor.name}
-                  href={sponsor.URL}
-                  rel="noopener"
-                  target="__blank"
-                >
-                  <span className="sponsor__imgTera">
+                <div className="sponsors__logos-imgTera">
+                  <a
+                    key={sponsor.name}
+                    href={sponsor.URL}
+                    rel="noopener"
+                    target="__blank"
+                  >
                     <img
-                      className={'sponsor__logos-' + sponsor.class}
+                      className={'sponsors__logos-' + sponsor.class}
                       src={sponsor.logo}
                       key={sponsor.name}
                       alt={sponsor.name}
                     />
-                  </span>
-                </a>
+                  </a>
+                </div>
               )
           )}
         </div>
@@ -42,20 +42,20 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'giga' && (
-                <a
-                  key={sponsor.name}
-                  href={sponsor.URL}
-                  rel="noopener"
-                  target="__blank"
-                >
-                  <span className="sponsor__imgGiga">
+                <div className="sponsors__logos-imgGiga">
+                  <a
+                    key={sponsor.name}
+                    href={sponsor.URL}
+                    rel="noopener"
+                    target="__blank"
+                  >
                     <img
-                      className={'sponsor__logos-' + sponsor.class}
+                      className={'sponsors__logos-' + sponsor.class}
                       src={sponsor.logo}
                       alt={sponsor.name}
                     />
-                  </span>
-                </a>
+                  </a>
+                </div>
               )
           )}
         </div>
@@ -63,20 +63,20 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'kilo' && (
-                <a
-                  key={sponsor.name}
-                  href={sponsor.URL}
-                  rel="noopener"
-                  target="__blank"
-                >
-                  <span className="sponsor__imgKilo">
+                <div className="sponsors__logos-imgKilo">
+                  <a
+                    key={sponsor.name}
+                    href={sponsor.URL}
+                    rel="noopener"
+                    target="__blank"
+                  >
                     <img
-                      className={'sponsor__logos-' + sponsor.class}
+                      className={'sponsors__logos-' + sponsor.class}
                       src={sponsor.logo}
                       alt={sponsor.name}
                     />
-                  </span>
-                </a>
+                  </a>
+                </div>
               )
           )}
         </div>
@@ -84,20 +84,20 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'mega' && (
-                <a
-                  key={sponsor.name}
-                  href={sponsor.URL}
-                  rel="noopener"
-                  target="__blank"
-                >
-                  <span className="sponsor__imgMega">
+                <div className="sponsors__logos-imgMega">
+                  <a
+                    key={sponsor.name}
+                    href={sponsor.URL}
+                    rel="noopener"
+                    target="__blank"
+                  >
                     <img
-                      className={'sponsor__logos-' + sponsor.class}
+                      className={'sponsors__logos-' + sponsor.class}
                       src={sponsor.logo}
                       alt={sponsor.name}
                     />
-                  </span>
-                </a>
+                  </a>
+                </div>
               )
           )}
         </div>

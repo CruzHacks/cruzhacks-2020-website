@@ -1,0 +1,40 @@
+// mega
+&__logos-iD {
+  position: relative;
+  bottom: 0.25em;
+}
+&__logos-theArts {
+  position: relative;
+  bottom: 1em;
+  @include respond(tab-port) {
+    bottom: 0.75em;
+  }
+}
+&__logos-sctb {
+  position: relative;
+  bottom: 1em;
+}
+&__logos-scw {
+  position: relative;
+  bottom: 0.65em;
+}
+&__logos-stickermule {
+  position: relative;
+
+  bottom: 0.25em;
+}
+&__logos-shawee {
+  position: relative;
+
+  top: 0.25em;
+}
+&__logos-stickermule {
+  position: relative;
+
+  bottom: 0.25em;
+}
+&__logos-guayaki {
+  position: relative;
+
+  bottom: 0.55em;
+}

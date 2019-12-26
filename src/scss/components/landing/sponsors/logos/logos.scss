@@ -1,0 +1,45 @@
+@mixin logosContainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+// img classes
+&__logos-imgTera {
+  margin: 0 2vw 0 2vw;
+  @include respond(tab-port) {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+&__logos-imgGiga {
+  margin: 0 2vw 0 2vw;
+  @include respond(tab-port) {
+    position: relative;
+    margin: 1em auto;
+    margin-left: -1em;
+    width: 80%;
+  }
+}
+&__logos-imgKilo {
+  margin: 1.25em 1.75vw 0 1.75vw;
+  @include respond(tab-port) {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 100%;
+  }
+}
+&__logos-imgMega {
+  margin: -0.45em 1.25vw 0 1.25vw;
+}
+
+@import './tera.scss';
+@import './giga.scss';
+@import './kilo.scss';
+@import './mega.scss';
+@import './containers.scss';

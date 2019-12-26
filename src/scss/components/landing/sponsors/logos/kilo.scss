@@ -1,0 +1,28 @@
+// kilo
+&__logos-gradDiv {
+  width: 109%;
+}
+&__logos-chooseSC {
+  position: relative;
+  bottom: 1.55em;
+  width: 123%;
+  right: 0.95vw;
+  @include respond(tab-port) {
+    bottom: 1em;
+  }
+}
+&__logos-microsoft {
+  position: relative;
+  bottom: 0.25em;
+}
+&__logos-gcp {
+  position: relative;
+  bottom: 0.8em;
+  @include respond(tab-port) {
+    bottom: 1em;
+  }
+}
+&__logos-southSwell {
+  position: relative;
+  bottom: 0.25em;
+}

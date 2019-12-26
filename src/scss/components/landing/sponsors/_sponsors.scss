@@ -4,13 +4,38 @@
     @include flexColumn();
     position: relative;
     top: -2.5em;
-    @include respond(tab-land) {
-      margin-top: -2em;
-    }
     @media screen and (max-width: 394px) {
-      margin-top: -1em;
+      margin-top: -0.25em;
     }
   }
   @import './container/container.scss';
-  @import './container/logos.scss';
+  @import './logos/logos.scss';
+}
+
+.sponsors__logos-imgTera img {
+  width: 100%;
+  @include respond(tab-port) {
+    width: 80%;
+  }
+}
+
+.sponsors__logos-imgGiga img {
+  width: 100%;
+  @include respond(tab-port) {
+    width: 80%;
+  }
+}
+
+.sponsors__logos-imgKilo img {
+  width: 100%;
+  @include respond(tab-port) {
+    width: 80%;
+  }
+}
+
+.sponsors__logos-imgMega img {
+  width: 100%;
+  @include respond(tab-port) {
+    width: 80%;
+  }
 }

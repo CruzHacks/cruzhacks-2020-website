@@ -1,0 +1,15 @@
+// tera
+&__logos-mlh {
+  position: relative;
+  top: 1.75em;
+  @include respond(tab-port) {
+    right: -4em;
+  }
+}
+&__logos-amazon {
+  position: relative;
+  top: 2.75em;
+  @include respond(tab-port) {
+    left: -2em;
+  }
+}

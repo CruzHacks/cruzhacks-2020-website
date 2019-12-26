@@ -1,0 +1,22 @@
+// giga
+&__logos-productops {
+  position: relative;
+  @include respond(tab-port) {
+    right: -0.75em;
+  }
+}
+&__logos-baskin {
+  position: relative;
+  top: 0.75em;
+  @include respond(tab-port) {
+    right: -1em;
+    margin-left: -1.5em;
+  }
+}
+&__logos-looker {
+  position: relative;
+  top: 0.4em;
+  @include respond(tab-port) {
+    right: 4em;
+  }
+}
