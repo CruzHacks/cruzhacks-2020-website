@@ -11,6 +11,9 @@
   @include respond(tab-port) {
     max-width: fit-content;
   }
+  @include respond(phone) {
+    margin-top: -1em;
+  }
 }
 
 &__logos-kilo {
