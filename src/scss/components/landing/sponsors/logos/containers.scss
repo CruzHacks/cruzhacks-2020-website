@@ -16,8 +16,8 @@
 &__logos-kilo {
   @include logosContainer;
   margin-top: -0.5em;
-
   @include respond(tab-port) {
+    margin-top: 0;
   }
 }
 

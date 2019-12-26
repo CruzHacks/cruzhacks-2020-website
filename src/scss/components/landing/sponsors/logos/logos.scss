@@ -28,13 +28,17 @@
   margin: 1.25em 1.75vw 0 1.75vw;
   @include respond(tab-port) {
     position: relative;
-    margin: 1.25em 1.75vw 0 1.75vw;
-    margin-top: 1em;
+    margin: 2.5vw 1.75vw 0 1.75vw;
     width: 12vw;
   }
 }
 &__logos-imgMega {
   margin: -0.45em 1.25vw 0 1.25vw;
+  @include respond(tab-port) {
+    position: relative;
+    margin: -0.45vw 1.25vw 0 1.25vw;
+    width: 10vw;
+  }
 }
 
 @import './tera.scss';

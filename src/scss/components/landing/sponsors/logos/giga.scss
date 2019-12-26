@@ -30,7 +30,6 @@
     top: 0;
   }
   @include respond(phone-narrow) {
-    top: 0em;
     max-width: 90%;
   }
 }

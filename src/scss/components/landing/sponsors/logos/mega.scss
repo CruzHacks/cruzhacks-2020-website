@@ -2,21 +2,31 @@
 &__logos-iD {
   position: relative;
   bottom: 0.25em;
+  @include respond(tab-port) {
+    bottom: 0.25vw;
+  }
 }
 &__logos-theArts {
   position: relative;
   bottom: 1em;
   @include respond(tab-port) {
-    bottom: 0.75em;
+    bottom: 2vw;
   }
 }
 &__logos-sctb {
   position: relative;
   bottom: 1em;
+  @include respond(tab-port) {
+    bottom: 3vw;
+    max-width: 70%;
+  }
 }
 &__logos-scw {
   position: relative;
   bottom: 0.65em;
+}
+&__logos-notivize {
+  bottom: 0.25vw;
 }
 &__logos-stickermule {
   position: relative;
@@ -25,16 +35,25 @@
 }
 &__logos-shawee {
   position: relative;
-
   top: 0.25em;
+  @include respond(tab-port) {
+    top: 1vw;
+  }
 }
 &__logos-stickermule {
   position: relative;
-
   bottom: 0.25em;
 }
 &__logos-guayaki {
   position: relative;
-
   bottom: 0.55em;
+  @include respond(tab-port) {
+    bottom: 2vw;
+  }
+}
+&__logos-pathrise {
+  @include respond(tab-port) {
+    position: relative;
+    top: 0.7vw;
+  }
 }
