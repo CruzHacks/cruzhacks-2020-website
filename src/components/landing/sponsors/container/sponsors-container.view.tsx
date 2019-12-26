@@ -19,7 +19,13 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'tera' && (
-                <img src={sponsor.logo} alt="sponsor.name" />
+                <a href={sponsor.URL} rel="noopener" target="__blank">
+                  <img
+                    className="sponsors__logos-img"
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                  />
+                </a>
               )
           )}
         </div>
@@ -27,7 +33,13 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'giga' && (
-                <img src={sponsor.logo} alt="sponsor.name" />
+                <a href={sponsor.URL} rel="noopener" target="__blank">
+                  <img
+                    className="sponsors__logos-img"
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                  />
+                </a>
               )
           )}
         </div>
@@ -35,7 +47,13 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'kilo' && (
-                <img src={sponsor.logo} alt="sponsor.name" />
+                <a href={sponsor.URL} rel="noopener" target="__blank">
+                  <img
+                    className="sponsors__logos-img"
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                  />
+                </a>
               )
           )}
         </div>
@@ -43,7 +61,13 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'mega' && (
-                <img src={sponsor.logo} alt="sponsor.name" />
+                <a href={sponsor.URL} rel="noopener" target="__blank">
+                  <img
+                    className="sponsors__logos-img"
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                  />
+                </a>
               )
           )}
         </div>
