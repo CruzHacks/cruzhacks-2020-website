@@ -19,10 +19,16 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'tera' && (
-                <a href={sponsor.URL} rel="noopener" target="__blank">
+                <a
+                  key={sponsor.name}
+                  href={sponsor.URL}
+                  rel="noopener"
+                  target="__blank"
+                >
                   <img
                     className="sponsors__logos-img"
                     src={sponsor.logo}
+                    key={sponsor.name}
                     alt={sponsor.name}
                   />
                 </a>
@@ -33,7 +39,12 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'giga' && (
-                <a href={sponsor.URL} rel="noopener" target="__blank">
+                <a
+                  key={sponsor.name}
+                  href={sponsor.URL}
+                  rel="noopener"
+                  target="__blank"
+                >
                   <img
                     className="sponsors__logos-img"
                     src={sponsor.logo}
@@ -47,7 +58,12 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'kilo' && (
-                <a href={sponsor.URL} rel="noopener" target="__blank">
+                <a
+                  key={sponsor.name}
+                  href={sponsor.URL}
+                  rel="noopener"
+                  target="__blank"
+                >
                   <img
                     className="sponsors__logos-img"
                     src={sponsor.logo}
@@ -61,7 +77,12 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'mega' && (
-                <a href={sponsor.URL} rel="noopener" target="__blank">
+                <a
+                  key={sponsor.name}
+                  href={sponsor.URL}
+                  rel="noopener"
+                  target="__blank"
+                >
                   <img
                     className="sponsors__logos-img"
                     src={sponsor.logo}
