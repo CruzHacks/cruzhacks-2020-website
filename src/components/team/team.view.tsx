@@ -4,6 +4,7 @@ import HeroHeaderView from '../landing/hero/header/hero-header.view';
 import MembersJson from '../../assets/data/team/team-members.json';
 // import FooterButtonView from '../landing/background/footer/buttons/footer-button.view';
 // import FooterTextView from '../landing/background/footer/text/footer-text.view'; // /text/footer-text.view';
+import FooterView from '../landing/background/footer/footer.view';
 
 const memberCards = MembersJson.map((t, i) => {
   const imagePath = t.imgRef;
@@ -56,12 +57,13 @@ const TeamView: React.FC = () => {
         </div>
         <div className="team__card-container">{memberCards}</div>
       </div>
-      {/* <div className="footer-view-container">
+      <div className="footer-view-container">
         <div className="footer-view-content__container">
-          <FooterButtonView />
-          <FooterTextView />
+          {/* <FooterButtonView /> */}
+          {/* <FooterTextView /> */}
+          <FooterView />
         </div>
-      </div> */}
+      </div>
     </>
   );
 };

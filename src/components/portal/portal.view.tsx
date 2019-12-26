@@ -5,6 +5,7 @@ import { applicationHasBeenSubmitted } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
 import Countdown from 'react-countdown-now';
+import FooterView from '../landing/background/footer/footer.view';
 
 const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
@@ -40,6 +41,14 @@ const PortalView: React.FC = () => {
       returnTo: window.location.origin,
     });
 
+  const Completionist = () => (
+    <span>
+      <span style={{ paddingBottom: '1.5em' }}>Second pass has begun!</span>
+      <hr style={{ width: '65%' }} />
+      <span>Limited spots available.</span>
+    </span>
+  );
+
   return (
     <>
       <div className="portal">
@@ -73,20 +82,23 @@ const PortalView: React.FC = () => {
                   <Countdown
                     date={'Wednesday December 18 2019 23:59:59'}
                     renderer={props =>
-                      props.days >= 1 ? (
+                      props.completed ? (
+                        <Completionist />
+                      ) : props.days >= 1 ? (
                         <span>
-                          {props.days} {props.days === 1 ? 'day' : 'days'}
+                          {props.days} {props.days === 1 ? 'day' : 'days'} to
+                          apply for a spot at CruzHacks!
                         </span>
                       ) : (
                         <span>
-                          {props.hours} {props.hours === 1 ? 'hour' : 'hours'}
+                          {props.hours} {props.hours === 1 ? 'hour' : 'hours'}{' '}
+                          to apply for a spot at CruzHacks!
                         </span>
                       )
                     }
-                  />{' '}
-                  to apply for a spot at CruzHacks!
+                  />
                   <hr />
-                  <div>Applications will be reviewed soon.</div>
+                  <div>Decisions will be sent on a rolling basis.</div>
                 </span>
               </div>
             </div>
@@ -95,12 +107,19 @@ const PortalView: React.FC = () => {
 
         {hasSubmittedApplication === false &&
         authUser.email_verified === true ? (
-          <div className="portal__application">
+        <div className="portal__application">
             <ApplicationView user={authUser} />
           </div>
         ) : (
           <div className="portal__void"></div>
         )}
+
+        {/* <div className="footer-view-container">
+          <div className="footer-view-content__container">
+            <FooterView />
+          </div>
+        </div> */}
+
       </div>
     </>
   );
