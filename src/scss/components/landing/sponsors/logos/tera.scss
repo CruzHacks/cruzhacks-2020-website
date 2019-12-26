@@ -5,11 +5,31 @@
   @include respond(tab-port) {
     right: -4em;
   }
+  @include respond(phone-narrow) {
+    top: 1em;
+  }
+}
+&__logos-cied {
+  position: relative;
+  @include respond(tab-port) {
+    top: 0.25em;
+    max-width: 40%;
+    left: 8vw;
+  }
+  @include respond(phone-narrow) {
+    left: 9vw;
+  }
+  @include respond(smallest) {
+    left: 10vw;
+  }
 }
 &__logos-amazon {
   position: relative;
   top: 2.75em;
   @include respond(tab-port) {
     left: -2em;
+  }
+  @include respond(phone-narrow) {
+    top: 1.75em;
   }
 }
