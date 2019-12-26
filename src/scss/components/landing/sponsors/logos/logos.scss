@@ -28,9 +28,9 @@
   margin: 1.25em 1.75vw 0 1.75vw;
   @include respond(tab-port) {
     position: relative;
-    margin: 0 auto;
+    margin: 1.25em 1.75vw 0 1.75vw;
     margin-top: 1em;
-    width: 40%;
+    width: 12vw;
   }
 }
 &__logos-imgMega {

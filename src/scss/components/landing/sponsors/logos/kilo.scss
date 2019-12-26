@@ -1,6 +1,17 @@
 // kilo
 &__logos-gradDiv {
+  position: relative;
   width: 109%;
+  @include respond(tab-port) {
+    min-width: 110%;
+  }
+}
+&__logos-citris {
+  position: relative;
+  @include respond(tab-port) {
+    top: 0.5vw;
+    min-width: 105%;
+  }
 }
 &__logos-chooseSC {
   position: relative;
@@ -8,21 +19,30 @@
   width: 123%;
   right: 0.95vw;
   @include respond(tab-port) {
-    bottom: 1em;
+    bottom: 2vw;
+    right: 0;
   }
 }
 &__logos-microsoft {
   position: relative;
   bottom: 0.25em;
+  @include respond(tab-port) {
+    bottom: 0;
+    right: 2vw;
+    min-width: 110%;
+  }
 }
 &__logos-gcp {
   position: relative;
   bottom: 0.8em;
   @include respond(tab-port) {
-    bottom: 1em;
+    bottom: 2.5vw;
   }
 }
 &__logos-southSwell {
   position: relative;
   bottom: 0.25em;
+  @include respond(tab-port) {
+    bottom: 0;
+  }
 }
