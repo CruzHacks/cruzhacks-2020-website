@@ -5,6 +5,7 @@ import { applicationHasBeenSubmitted } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
 import Countdown from 'react-countdown-now';
+import FooterView from '../landing/background/footer/footer.view';
 
 const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
@@ -106,12 +107,19 @@ const PortalView: React.FC = () => {
 
         {hasSubmittedApplication === false &&
         authUser.email_verified === true ? (
-          <div className="portal__application">
+        <div className="portal__application">
             <ApplicationView user={authUser} />
           </div>
         ) : (
           <div className="portal__void"></div>
         )}
+
+        <div className="footer-view-container">
+          <div className="footer-view-content__container">
+            <FooterView />
+          </div>
+        </div>
+
       </div>
     </>
   );
