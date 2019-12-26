@@ -6,6 +6,7 @@ interface sponsors {
     URL: string;
     tier: string;
     name: string;
+    class: string;
   }[];
 }
 
@@ -25,12 +26,14 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
                   rel="noopener"
                   target="__blank"
                 >
-                  <img
-                    className="sponsors__logos-img"
-                    src={sponsor.logo}
-                    key={sponsor.name}
-                    alt={sponsor.name}
-                  />
+                  <span className="sponsor__imgTera">
+                    <img
+                      className={'sponsor__logos-' + sponsor.class}
+                      src={sponsor.logo}
+                      key={sponsor.name}
+                      alt={sponsor.name}
+                    />
+                  </span>
                 </a>
               )
           )}
@@ -45,11 +48,13 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
                   rel="noopener"
                   target="__blank"
                 >
-                  <img
-                    className="sponsors__logos-img"
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                  />
+                  <span className="sponsor__imgGiga">
+                    <img
+                      className={'sponsor__logos-' + sponsor.class}
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                    />
+                  </span>
                 </a>
               )
           )}
@@ -64,11 +69,13 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
                   rel="noopener"
                   target="__blank"
                 >
-                  <img
-                    className="sponsors__logos-img"
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                  />
+                  <span className="sponsor__imgKilo">
+                    <img
+                      className={'sponsor__logos-' + sponsor.class}
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                    />
+                  </span>
                 </a>
               )
           )}
@@ -83,11 +90,13 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
                   rel="noopener"
                   target="__blank"
                 >
-                  <img
-                    className="sponsors__logos-img"
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                  />
+                  <span className="sponsor__imgMega">
+                    <img
+                      className={'sponsor__logos-' + sponsor.class}
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                    />
+                  </span>
                 </a>
               )
           )}

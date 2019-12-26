@@ -3,12 +3,7 @@
     @include flexBox();
     @include flexColumn();
     position: relative;
-    min-height: 296px;
-    margin-top: 2em;
-    @include respond(desktop) {
-      margin-top: 2em;
-    }
-
+    top: -2.5em;
     @include respond(tab-land) {
       margin-top: -2em;
     }
@@ -17,4 +12,5 @@
     }
   }
   @import './container/container.scss';
+  @import './container/logos.scss';
 }

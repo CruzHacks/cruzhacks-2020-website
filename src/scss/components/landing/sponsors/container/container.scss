@@ -1,12 +1,20 @@
+@mixin logosContainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  position: relative;
+}
 &__title {
   @include font-source-header(
-    $size: 2.4em,
+    $size: 1.6em,
     $color: #262626,
     $weight: bold,
     $lineHeight: 34px,
     $letterSpace: 0.05em
   );
-  @include responsive-font(4.1vw, 1.5em, 2.4em);
+  @include responsive-font(3.1vw, 0.9em, 1.6em);
   font-family: Rubik Bold;
   display: block;
   text-transform: uppercase;
@@ -31,24 +39,23 @@
   }
 }
 
-&__logos {
-  display: block;
-  margin: 0 auto;
-  @include respond(tab-port) {
-    max-width: 600px;
-    margin-top: -2em;
-  }
-  @include respond(phone) {
-    max-width: 500px;
-  }
-  @include respond(phone-narrow) {
-    max-width: 400px;
-  }
-  @include respond(smallest) {
-    max-width: 300px;
-  }
+&__logos-tera {
+  @include logosContainer;
 }
 
+&__logos-giga {
+  @include logosContainer;
+}
+
+&__logos-kilo {
+  @include logosContainer;
+}
+
+&__logos-mega {
+  @include logosContainer;
+  align-self: center;
+  max-width: 80%;
+}
 &__boxContainer {
   @include flexBox();
   position: relative;
