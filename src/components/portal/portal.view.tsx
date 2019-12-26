@@ -114,11 +114,11 @@ const PortalView: React.FC = () => {
           <div className="portal__void"></div>
         )}
 
-        <div className="footer-view-container">
+        {/* <div className="footer-view-container">
           <div className="footer-view-content__container">
             <FooterView />
           </div>
-        </div>
+        </div> */}
 
       </div>
     </>
