@@ -1,9 +1,6 @@
 // containers
 &__logos-tera {
   @include logosContainer;
-  @include respond(phone) {
-    margin-top: -2em;
-  }
 }
 
 &__logos-giga {

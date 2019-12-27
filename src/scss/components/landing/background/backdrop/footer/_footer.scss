@@ -7,25 +7,25 @@
     margin-top: -90em;
   }
   @include respond(mission) {
-    margin-top: -64em;
-  }
-  @include respond(tab-land) {
     margin-top: -65em;
   }
-  @media screen and (max-width: 900px) {
-    margin-top: -76em;
+  @include respond(tab-land) {
+    margin-top: -67.5em;
+  }
+  @media screen and (max-width: 977px) {
+    margin-top: -80em;
+    width: 170%;
+    margin-right: 20%;
   }
   @include respond(phone) {
-    margin-top: -36.5em;
+    margin-top: -48em;
   }
   @include respond(phone-narrow) {
     margin-top: -44.5em;
   }
 
   @include respond(smallest) {
-    margin-top: -31.5em;
-    width: 170%;
-    margin-right: 20%;
+    margin-top: -27.5em;
   }
 }
 

@@ -4,9 +4,9 @@
     @include flexColumn();
     position: relative;
     top: -2.5em;
-    @media screen and (max-width: 394px) {
-      margin-top: -0.25em;
-    }
+  }
+  @include respond(phone) {
+    margin-top: 2vw;
   }
   @import './container/container.scss';
   @import './logos/logos.scss';

@@ -4,17 +4,21 @@
     position: sticky;
     min-height: 896px;
     // custom media queries
+    @include respond(tab-land) {
+      min-height: 796px;
+    }
     @include respond(tab-port) {
       min-height: 996px;
     }
     @media screen and (max-width: 1196px) {
-      min-height: 1036px;
+      min-height: 1234px;
     }
     @media screen and (max-width: 900px) {
       min-height: 1166px;
     }
-    @media screen and (max-width: 796px) {
-      min-height: 1686px;
+    // welcome flexbox in column wrap
+    @media screen and (max-width: 779px) {
+      min-height: 1662px;
     }
     @include respond(phone) {
       min-height: 1436px;

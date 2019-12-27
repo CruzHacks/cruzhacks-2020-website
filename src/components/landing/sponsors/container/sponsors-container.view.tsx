@@ -20,13 +20,8 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'tera' && (
-                <div className="sponsors__logos-imgTera">
-                  <a
-                    key={sponsor.name}
-                    href={sponsor.URL}
-                    rel="noopener"
-                    target="__blank"
-                  >
+                <div key={sponsor.name} className="sponsors__logos-imgTera">
+                  <a href={sponsor.URL} rel="noopener" target="__blank">
                     <img
                       className={'sponsors__logos-' + sponsor.class}
                       src={sponsor.logo}
@@ -42,13 +37,8 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'giga' && (
-                <div className="sponsors__logos-imgGiga">
-                  <a
-                    key={sponsor.name}
-                    href={sponsor.URL}
-                    rel="noopener"
-                    target="__blank"
-                  >
+                <div key={sponsor.name} className="sponsors__logos-imgGiga">
+                  <a href={sponsor.URL} rel="noopener" target="__blank">
                     <img
                       className={'sponsors__logos-' + sponsor.class}
                       src={sponsor.logo}
@@ -63,13 +53,8 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'kilo' && (
-                <div className="sponsors__logos-imgKilo">
-                  <a
-                    key={sponsor.name}
-                    href={sponsor.URL}
-                    rel="noopener"
-                    target="__blank"
-                  >
+                <div key={sponsor.name} className="sponsors__logos-imgKilo">
+                  <a href={sponsor.URL} rel="noopener" target="__blank">
                     <img
                       className={'sponsors__logos-' + sponsor.class}
                       src={sponsor.logo}
@@ -84,13 +69,8 @@ const SponsorsContainer: React.FC<sponsors> = sponsors => {
           {sponsors.logos.map(
             sponsor =>
               sponsor.tier === 'mega' && (
-                <div className="sponsors__logos-imgMega">
-                  <a
-                    key={sponsor.name}
-                    href={sponsor.URL}
-                    rel="noopener"
-                    target="__blank"
-                  >
+                <div key={sponsor.name} className="sponsors__logos-imgMega">
+                  <a href={sponsor.URL} rel="noopener" target="__blank">
                     <img
                       className={'sponsors__logos-' + sponsor.class}
                       src={sponsor.logo}
