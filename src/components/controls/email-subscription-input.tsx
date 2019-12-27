@@ -26,27 +26,26 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
     const CORSproxy = 'https://cors-anywhere.herokuapp.com/';
 
     let body = {
-      email_address: '' + email,
-      status: 'subscribed',
+      email_address: '' + email
     };
     inputRef.current.value = '';
 
-    let username: string = '' + process.env.REACT_APP_MAILCHIMP_USER;
-    let password: string = '' + process.env.REACT_APP_MAILCHIMP_SECRET;
-    let mailchimpEndpoint: string =
-      CORSproxy + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT;
+    let key: string = '' + process.env.REACT_APP_API_KEY;
 
+    let mailingServiceEndpoint: string =
+      CORSproxy + process.env.REACT_APP_MAILING_SUBSCRIBERS_ENDPOINT; 
+    
     let axiosConfig: AxiosRequestConfig = {
-      auth: { username, password },
       headers: {
+        'authentication': key,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': '*'
       },
     };
 
     try {
       inputRef.current.placeholder = 'Sending...';
-      const response = await axios.post(mailchimpEndpoint, body, axiosConfig);
+      const response = await axios.post(mailingServiceEndpoint, body, axiosConfig);
       if (response.status === 200) {
         inputRef.current.classList.add('placeholder-ok');
         inputRef.current.placeholder = 'Added to Email List!';
@@ -127,6 +126,6 @@ const EmailSubscriptionInput: React.FC<
     console.trace();
     return null;
   }
-};
+  };
 
 export default EmailSubscriptionInput;
