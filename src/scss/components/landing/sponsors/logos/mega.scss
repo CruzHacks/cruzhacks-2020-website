@@ -49,6 +49,9 @@
 &__logos-stickermule {
   position: relative;
   bottom: 0.25em;
+  @include respond(phone-narrow) {
+    top: calc(0.4em - 1.75vw);
+  }
 }
 &__logos-guayaki {
   position: relative;
