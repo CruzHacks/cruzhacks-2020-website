@@ -1,4 +1,10 @@
 // mega
+&__logos-earthHacks {
+  position: relative;
+  @include respond(phone-narrow) {
+    bottom: calc(0.8em - 2.75vw);
+  }
+}
 &__logos-iD {
   position: relative;
   bottom: 0.25em;
