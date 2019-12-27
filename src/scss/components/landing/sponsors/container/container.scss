@@ -12,17 +12,17 @@
   text-transform: uppercase;
   text-align: center;
   margin: auto;
+  padding-bottom: 0.25em;
   word-wrap: break-word;
 }
 
 &__divider {
-  border: 2px solid #2e2c5f;
+  border: 1px solid #2e2c5f;
   display: block;
   width: 30em;
   margin: 1vw auto 1vw;
   @include respond(phone) {
     width: 25em;
-    border: 1px solid #2e2c5f;
   }
   @include respond(phone-narrow) {
     width: 20em;
