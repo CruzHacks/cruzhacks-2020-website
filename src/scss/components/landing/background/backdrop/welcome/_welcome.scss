@@ -17,7 +17,7 @@
       min-height: 1166px;
     }
     // welcome flexbox in column wrap
-    @media screen and (max-width: 779px) {
+    @media screen and (max-width: 796px) {
       min-height: 1662px;
     }
     @include respond(phone) {
