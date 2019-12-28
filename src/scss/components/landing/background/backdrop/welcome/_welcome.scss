@@ -10,14 +10,14 @@
     @include respond(tab-port) {
       min-height: 996px;
     }
-    @media screen and (max-width: 1196px) {
+    @media screen and (max-width: 1199px) {
       min-height: 1234px;
     }
     @media screen and (max-width: 900px) {
       min-height: 1166px;
     }
     // welcome flexbox in column wrap
-    @media screen and (max-width: 796px) {
+    @media screen and (max-width: 779px) {
       min-height: 1662px;
     }
     @include respond(phone) {
