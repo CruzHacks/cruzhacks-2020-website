@@ -24,7 +24,7 @@ const Routes: React.FC = () => {
             <Route exact path="/" render={() => <LandingView />} />
             <Route exact path="/team" render={() => <TeamView />} />
             <PrivateRoute path="/portal" component={<PortalView />} />
-            <PrivateRoute path="/live" component={<LiveView />} />
+            <Route exact path="/live" render={() => <LiveView />} />
           </Switch>
         </Router>
       </div>
