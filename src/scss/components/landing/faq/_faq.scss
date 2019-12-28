@@ -10,7 +10,11 @@
       height: 696px;
       padding-bottom: 4em;
     }
+    @include respond(phone) {
+      margin-top: -15vw;
+    }
     @include respond(smallest) {
+      margin-top: -5vw;
       height: 706px;
     }
     @media screen and (max-width: 395px) {
