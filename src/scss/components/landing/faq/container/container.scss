@@ -129,7 +129,7 @@
   );
   display: block;
   text-align: center;
-  margin: calc(8.5vh - 3em) auto;
+  margin: calc(7.5vh - 2em) auto;
   max-height: fit-content;
   max-width: 25em;
 }
@@ -146,8 +146,7 @@
 
 &__popupContainer {
   @include flexBox();
-  margin: 7vh;
-  margin-top: 5vh;
+  margin: 5vh 7vh 5vh 7vh;
   display: block;
 }
 
