@@ -684,7 +684,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     <input
                       type="radio"
                       aria-label="yes"
-                      id="UCSC Student"
+                      aria-checked="false"
                       name="ucscStudent"
                       value="true"
                       required
@@ -698,7 +698,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                       type="radio"
                       aria-label="no"
                       name="ucscStudent"
-                      id="UCSC Student"
+                      aria-checked="false"
                       value="false"
                       required
                     />
@@ -1063,10 +1063,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 )}
               </section>
               <section className="transportation-section">
-                <label
-                  htmlFor="Could you use help with transportation?"
-                  className="logistics__label"
-                >
+                <label className="logistics__label">
                   Could you use help with transportation?*
                 </label>
                 <div className="radio-button">
@@ -1076,7 +1073,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   <input
                     type="radio"
                     aria-label="yes"
-                    id="Could you use help with transportation?"
+                    aria-checked="false"
                     name="transportation"
                     value="true"
                     onClick={handleInputChange}
@@ -1091,7 +1088,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     type="radio"
                     name="transportation"
                     aria-label="no"
-                    id="Could you use help with transportation?"
+                    aria-checked="false"
                     value="false"
                     onClick={handleInputChange}
                     required
