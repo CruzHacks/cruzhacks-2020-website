@@ -1,6 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
 
 const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
+const resumeEndpoint: string = process.env.REACT_APP_API_UPLOAD_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
 
 export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
@@ -28,16 +29,16 @@ export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
 
 export function uploadResume(email: any, resume: any): Promise<boolean> {
   const headers = {
-    'Content-Type': 'application/json',
+    authentication: apiKey,
+    'Content-Type': 'multipart/form-data',
   };
 
-  const data = {
-    email: email,
-    resume: resume,
-  };
+  let formData = new FormData();
+  formData.append('email', email);
+  formData.append('resume', resume);
 
   return axios
-    .post(endpoint, data, {
+    .post(resumeEndpoint, formData, {
       headers: headers,
     })
     .then(response => {
