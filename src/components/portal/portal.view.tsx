@@ -42,9 +42,9 @@ const PortalView: React.FC = () => {
 
   const Completionist = () => (
     <span>
-      <span style={{ paddingBottom: '1.5em' }}>Second pass has begun!</span>
-      <hr style={{ width: '65%' }} />
-      <span>Limited spots available.</span>
+      <span style={{ paddingBottom: '1.75em' }}>
+        Keep an eye on your email.
+      </span>
     </span>
   );
 
@@ -79,25 +79,25 @@ const PortalView: React.FC = () => {
                 </span>
                 <span className="portal__announcements-event-text">
                   <Countdown
-                    date={'Wednesday December 18 2019 23:59:59'}
+                    date={'Friday January 3 2020 23:59:59'}
                     renderer={props =>
                       props.completed ? (
                         <Completionist />
                       ) : props.days >= 1 ? (
                         <span>
                           {props.days} {props.days === 1 ? 'day' : 'days'} to
-                          apply for a spot at CruzHacks!
+                          apply for a spot at CruzHacks.
                         </span>
                       ) : (
                         <span>
                           {props.hours} {props.hours === 1 ? 'hour' : 'hours'}{' '}
-                          to apply for a spot at CruzHacks!
+                          to apply for a spot at CruzHacks.
                         </span>
                       )
                     }
                   />
                   <hr />
-                  <div>Decisions will be sent on a rolling basis.</div>
+                  <div>Decisions will roll out shortly!</div>
                 </span>
               </div>
             </div>

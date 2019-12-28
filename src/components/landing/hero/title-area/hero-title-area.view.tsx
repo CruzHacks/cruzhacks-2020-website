@@ -1,6 +1,8 @@
 import React from 'react';
+import Countdown from 'react-countdown-now';
 
 const HeroTitleAreaView: React.FC = () => {
+  const Completionist = () => <span> Decisions rolling out…</span>;
   return (
     <div className="hero-title-area">
       <div className="hero-title-area__title-text">
@@ -12,12 +14,25 @@ const HeroTitleAreaView: React.FC = () => {
       <div className="hero-title-area__eventInfo hero-title-area__eventInfo-text">
         <p>// January 17-19th, 2020</p>
         <p>// Stevenson Event Center, UC Santa Cruz</p>
-        <p style={{ marginTop: '-5px' }}>
-          //{' '}
-          <span style={{ textDecorationLine: 'line-through' }}>
-            Apply by Dec. 18<sup>th</sup>
-          </span>{' '}
-          Second pass limited!
+        <p>
+          //
+          {
+            <Countdown
+              date={'Friday January 3 2019 23:59:59'}
+              renderer={props =>
+                props.completed ? (
+                  <Completionist />
+                ) : (
+                  <>
+                    <span>
+                      {' '}
+                      {props.days} days left to apply. Second pass limited!
+                    </span>
+                  </>
+                )
+              }
+            />
+          }
         </p>
       </div>
       <div className="hero-title-area__button-container">
