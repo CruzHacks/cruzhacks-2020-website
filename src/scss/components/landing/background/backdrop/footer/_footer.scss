@@ -16,7 +16,7 @@
     margin-top: -72em;
   }
   @include respond(tab-land) {
-    margin-top: -67.5em;
+    margin-top: -66.75em;
   }
   @media screen and (max-width: 977px) {
     margin-top: -94.5em;
@@ -24,28 +24,27 @@
     margin-right: 20%;
   }
   @include respond(tab-port) {
-    margin-top: -88.5em;
+    margin-top: -88em;
   }
   @media screen and (max-width: 780px) {
-    margin-top: -83em;
+    margin-top: -82.5em;
   }
   @include respond(phone) {
     margin-top: -56.5em;
   }
   @include respond(phone-narrow) {
-    margin-top: -60.5em;
+    margin-top: -58.5em;
   }
   @media screen and (max-width: 494px) {
-    margin-top: -55.5em;
+    margin-top: -54.5em;
   }
   @include respond(smallest) {
-    margin-top: -40.5em;
+    margin-top: -40.75em;
   }
-  @media screen and (max-width: 394px) {
+  @media screen and (max-width: 395px) {
     margin-top: -33em;
   }
 }
-
 /* SVGs */
 .footer-backdrop-extended__image,
 .footer-backdrop-trees__image {
