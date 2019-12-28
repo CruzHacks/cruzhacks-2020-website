@@ -5,7 +5,7 @@ import MLH from '../../../assets/images/sponsors/tera/mlh.svg';
 import CIED from '../../../assets/images/sponsors/tera/cied.svg';
 import Amazon from '../../../assets/images/sponsors/tera/amazon.svg';
 // giga
-import ProductOps from '../../../assets/images/sponsors/giga/productOps.svg';
+import ProductOps from '../../../assets/images/sponsors/giga/productops.svg';
 import Baskin from '../../../assets/images/sponsors/giga/baskin.svg';
 import Looker from '../../../assets/images/sponsors/giga/looker.svg';
 // kilo
