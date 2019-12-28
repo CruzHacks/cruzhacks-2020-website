@@ -84,7 +84,7 @@ const PortalView: React.FC = () => {
                       props.completed ? (
                         <Completionist />
                       ) : props.days >= 1 ? (
-                        <span>
+                        <span style={{ bottom: '0.5vh', position: 'relative' }}>
                           {props.days} {props.days === 1 ? 'day' : 'days'} to
                           apply for a spot at CruzHacks.
                         </span>
