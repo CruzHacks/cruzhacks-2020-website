@@ -1,5 +1,4 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import S3FileUpload from 'react-s3';
 
 const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
