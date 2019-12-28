@@ -42,7 +42,11 @@ export function uploadResume(email: any, resume: any): Promise<boolean> {
       headers: headers,
     })
     .then(response => {
-      return Promise.resolve(true);
+      if (response.status === 200) {
+        return Promise.resolve(true);
+      } else {
+        return Promise.reject(response.status);
+      }
     })
     .catch(error => {
       if (error.response.status === 404) {

@@ -129,15 +129,16 @@
   );
   display: block;
   text-align: center;
-  margin: 7vh auto;
-  max-width: 20em;
+  margin: calc(8.5vh - 3em) auto;
+  max-height: fit-content;
+  max-width: 25em;
 }
 
 &__popupExit {
   color: #7171cb;
   padding: 0;
   border: 1px solid #6f6fe8;
-  padding: 0.25em;
+  padding: 0.25em 0.5em 0.25em 0.5em;
   border-radius: 26px;
   background: none;
   font-size: 1em;
@@ -146,6 +147,7 @@
 &__popupContainer {
   @include flexBox();
   margin: 7vh;
+  margin-top: 5vh;
   display: block;
 }
 
