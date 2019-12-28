@@ -18,7 +18,7 @@ const HeroTitleAreaView: React.FC = () => {
           //
           {
             <Countdown
-              date={'Friday January 3 2019 23:59:59'}
+              date={'Friday January 3 2020 23:59:59'}
               renderer={props =>
                 props.completed ? (
                   <Completionist />
