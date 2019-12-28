@@ -7,25 +7,30 @@
     margin-top: -90em;
   }
   @include respond(mission) {
-    margin-top: -64em;
-  }
-  @include respond(tab-land) {
     margin-top: -65em;
   }
-  @media screen and (max-width: 900px) {
-    margin-top: -76em;
+  @include respond(tab-land) {
+    margin-top: -67.5em;
   }
-  @include respond(phone) {
-    margin-top: -36.5em;
-  }
-  @include respond(phone-narrow) {
-    margin-top: -44.5em;
-  }
-
-  @include respond(smallest) {
-    margin-top: -31.5em;
+  @media screen and (max-width: 977px) {
+    margin-top: -83em;
     width: 170%;
     margin-right: 20%;
+  }
+  @media screen and (max-width: 780px) {
+    margin-top: -78em;
+  }
+  @include respond(phone) {
+    margin-top: -48em;
+  }
+  @include respond(phone-narrow) {
+    margin-top: -52.5em;
+  }
+  @include respond(smallest) {
+    margin-top: -37.5em;
+  }
+  @media screen and (max-width: 394px) {
+    margin-top: -27em;
   }
 }
 
