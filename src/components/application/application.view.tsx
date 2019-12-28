@@ -1222,15 +1222,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   .
                 </p>
               </section>
-              <button type="submit" className="application__button">
-                <p className="application__button-text">Submit</p>
-              </button>
 
-              {apiStatusUpdates.appSubmissionInProgress === true && (
-                <p className="info">
-                  Submitting your application to the CruzHacks Cloud!
-                </p>
-              )}
               {trySubmission &&
                 (formValues.firstName.length >= 100 ||
                   (formValues.firstName.length < 1 && (
@@ -1360,6 +1352,15 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 <p className="errors">
                   There was error in uploading your application to the CruzHacks
                   Cloud. Our engineers have been alerted! Try again soon!
+                </p>
+              )}
+              <button type="submit" className="application__button">
+                <p className="application__button-text">Submit</p>
+              </button>
+
+              {apiStatusUpdates.appSubmissionInProgress === true && (
+                <p className="info">
+                  Submitting your application to the CruzHacks Cloud!
                 </p>
               )}
             </div>
