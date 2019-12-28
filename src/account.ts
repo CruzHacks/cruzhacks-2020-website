@@ -28,16 +28,29 @@ export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
 }
 
 export function uploadResume(email: any, resume: any): Promise<boolean> {
-  const awsS3Config = {
-    bucketName: process.env.REACT_APP_AWS_BUCKET_NAME,
-    region: process.env.REACT_APP_AWS_REGION,
-    dirName: `resumes/${email}`,
-    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY,
-    secretAccessKey: process.env.REACT_APP_AWS_SECRET_KEY,
+  const headers = {
+    'Content-Type': 'application/json',
   };
-  return S3FileUpload.uploadFile(resume, awsS3Config).then(response => {
-    return Promise.resolve(true);
-  });
+
+  const data = {
+    email: email,
+    resume: resume,
+  };
+
+  return axios
+    .post(endpoint, data, {
+      headers: headers,
+    })
+    .then(response => {
+      return Promise.resolve(true);
+    })
+    .catch(error => {
+      if (error.response.status === 404) {
+        return Promise.resolve(false);
+      }
+
+      return Promise.reject(error);
+    });
 }
 
 export function submitApplication(application: any): Promise<boolean> {
