@@ -291,7 +291,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
       case 'placeToPark':
         setFormValid({ ...formValid, [name]: true });
         break;
-
       case 'codeOfConduct':
         value = event.target.checked;
         setFormValid({ ...formValid, [name]: value });
@@ -299,6 +298,9 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
       case 'mlhAffiliation':
         value = event.target.checked;
         setFormValid({ ...formValid, [name]: value });
+        break;
+      case 'specialAccomodations':
+        setFormValid({ ...formValid, [name]: value.length <= 500 });
         break;
     }
 
@@ -1138,7 +1140,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   className="logistics__label"
                 >
                   Do you require any special accommodations? (Including physical
-                  and dietary restrictions | 150 chars)
+                  and dietary restrictions | 500 chars)
                 </label>
                 <input
                   name="specialAccomodations"
@@ -1148,6 +1150,14 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   type="text"
                   onChange={handleInputChange}
                 />
+                {(!formValid.specialAccomodations ||
+                  (trySubmission &&
+                    formValues.specialAccomodations.length > 500 &&
+                    formValues.specialAccomodations.length > 0)) && (
+                  <p className="errors">
+                    Special Accomodations too many characters
+                  </p>
+                )}
               </section>
 
               <section className="mlh-section">
@@ -1352,6 +1362,14 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 <p className="errors">
                   There was error in uploading your application to the CruzHacks
                   Cloud. Our engineers have been alerted! Try again soon!
+                </p>
+              )}
+              {(!formValid.specialAccomodations ||
+                (trySubmission &&
+                  formValues.specialAccomodations.length > 500 &&
+                  formValues.specialAccomodations.length > 0)) && (
+                <p className="errors">
+                  Special Accomodations has too many characters
                 </p>
               )}
               <button type="submit" className="application__button">
