@@ -48,20 +48,20 @@ async function subscribeToEmailList(email_address: string, inputRef: any, e: any
         inputRef.current.placeholder = 'Added to Email List!';
       }
     } catch (error) {
-      if (error.response && error.response.status === 400) {
-        if (error.response.data.title === 'Member Exists') {
-          let err_msg = 'Already subscribed!';
-          inputRef.current.classList.add('placeholder-ok');
-          inputRef.current.placeholder = err_msg;
-          console.error(err_msg);
-        } else if (
-          error.response.data.title === 'Forgotten Email Not Subscribed'
-        ) {
-          let err_msg = "Previously unsubscribed! Can't add email :(";
-          inputRef.current.classList.add('placeholder-error');
-          inputRef.current.placeholder = err_msg;
-          console.error(err_msg);
-        }
+      if (error.response && error.response.status === 500) {
+        // if (error.response.data.title === 'Member Exists') {
+        let err_msg = 'Already subscribed!';
+        inputRef.current.classList.add('placeholder-ok');
+        inputRef.current.placeholder = err_msg;
+        console.error(err_msg);
+      // } else if (
+      //     error.response.data.title === 'Forgotten Email Not Subscribed'
+      //   ) {
+      //     let err_msg = "Previously unsubscribed! Can't add email :(";
+      //     inputRef.current.classList.add('placeholder-error');
+      //     inputRef.current.placeholder = err_msg;
+      //     console.error(err_msg);
+      // }
       } else {
         let err_msg = 'Something Went Wrong';
         inputRef.current.classList.add('placeholder-error');
