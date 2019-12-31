@@ -18,43 +18,31 @@ function validateInputSubmission(): boolean {
   return false;
 }
 
-async function subscribeToEmailList(email: string, inputRef: any, e: any) {
+async function subscribeToEmailList(email_address: string, inputRef: any, e: any) {
   e.preventDefault();
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
   if (validateInputSubmission()) {
-    const CORSproxy = 'https://cors-anywhere.herokuapp.com/';
 
     let body = {
-      email_address: '' + email
+      email: '' + email_address,
     };
     inputRef.current.value = '';
 
-    // let key: string = '' + process.env.REACT_APP_MAILING_API_KEY;
-    // let mailingServiceEndpoint: string = '' + CORSproxy + process.env.REACT_APP_MAILING_SUBSCRIBERS_ENDPOINT; 
+    let key: string = '' + process.env.REACT_APP_MAILING_API_KEY;
+    let mailingServiceEndpoint: string = '' + process.env.REACT_APP_MAILING_SUBSCRIBERS_ENDPOINT; 
     
     let axiosConfig: AxiosRequestConfig = {
       headers: {
-        'Authentication': process.env.REACT_APP_MAILING_API_KEY,
-        'Accept': 'application/json',
+        'Authentication': key,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        // 'Access-Control-Allow-Methods':
-          // 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
       },
     };
 
     try {
       inputRef.current.placeholder = 'Sending...';
-      // const response = await axios.post(mailingServiceEndpoint, body, axiosConfig);
-      axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-    
-      const response = await axios.post(
-        CORSproxy + process.env.REACT_APP_MAILING_SUBSCRIBERS_ENDPOINT,
-        body,
-        axiosConfig
-      );
+      const response = await axios.post(mailingServiceEndpoint, body, axiosConfig);
+      
       if (response.status === 200) {
         inputRef.current.classList.add('placeholder-ok');
         inputRef.current.placeholder = 'Added to Email List!';
