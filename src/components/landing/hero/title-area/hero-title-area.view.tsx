@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroSubscribeToEmailList from './hero-subscribe-to-email-list.view';
 
 const HeroTitleAreaView: React.FC = () => {
   return (
@@ -39,8 +40,8 @@ const HeroTitleAreaView: React.FC = () => {
           </p>
         </a>
       </div>
-      {/*
       <HeroSubscribeToEmailList />
+      {/*
       */}
     </div>
   );
