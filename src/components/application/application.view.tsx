@@ -291,7 +291,6 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
       case 'placeToPark':
         setFormValid({ ...formValid, [name]: true });
         break;
-
       case 'codeOfConduct':
         value = event.target.checked;
         setFormValid({ ...formValid, [name]: value });
@@ -299,6 +298,9 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
       case 'mlhAffiliation':
         value = event.target.checked;
         setFormValid({ ...formValid, [name]: value });
+        break;
+      case 'specialAccomodations':
+        setFormValid({ ...formValid, [name]: value.length <= 500 });
         break;
     }
 
@@ -684,7 +686,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     <input
                       type="radio"
                       aria-label="yes"
-                      id="UCSC Student"
+                      aria-checked="false"
                       name="ucscStudent"
                       value="true"
                       required
@@ -698,7 +700,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                       type="radio"
                       aria-label="no"
                       name="ucscStudent"
-                      id="UCSC Student"
+                      aria-checked="false"
                       value="false"
                       required
                     />
@@ -1063,10 +1065,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 )}
               </section>
               <section className="transportation-section">
-                <label
-                  htmlFor="Could you use help with transportation?"
-                  className="logistics__label"
-                >
+                <label className="logistics__label">
                   Could you use help with transportation?*
                 </label>
                 <div className="radio-button">
@@ -1076,7 +1075,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   <input
                     type="radio"
                     aria-label="yes"
-                    id="Could you use help with transportation?"
+                    aria-checked="false"
                     name="transportation"
                     value="true"
                     onClick={handleInputChange}
@@ -1091,7 +1090,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                     type="radio"
                     name="transportation"
                     aria-label="no"
-                    id="Could you use help with transportation?"
+                    aria-checked="false"
                     value="false"
                     onClick={handleInputChange}
                     required
@@ -1141,7 +1140,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   className="logistics__label"
                 >
                   Do you require any special accommodations? (Including physical
-                  and dietary restrictions | 150 chars)
+                  and dietary restrictions | 500 chars)
                 </label>
                 <input
                   name="specialAccomodations"
@@ -1151,6 +1150,14 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   type="text"
                   onChange={handleInputChange}
                 />
+                {(!formValid.specialAccomodations ||
+                  (trySubmission &&
+                    formValues.specialAccomodations.length > 500 &&
+                    formValues.specialAccomodations.length > 0)) && (
+                  <p className="errors">
+                    Special Accomodations too many characters
+                  </p>
+                )}
               </section>
 
               <section className="mlh-section">
@@ -1225,15 +1232,7 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                   .
                 </p>
               </section>
-              <button type="submit" className="application__button">
-                <p className="application__button-text">Submit</p>
-              </button>
 
-              {apiStatusUpdates.appSubmissionInProgress === true && (
-                <p className="info">
-                  Submitting your application to the CruzHacks Cloud!
-                </p>
-              )}
               {trySubmission &&
                 (formValues.firstName.length >= 100 ||
                   (formValues.firstName.length < 1 && (
@@ -1363,6 +1362,23 @@ const ApplicationView: React.FC<ApplicationViewType> = ({ user, ...rest }) => {
                 <p className="errors">
                   There was error in uploading your application to the CruzHacks
                   Cloud. Our engineers have been alerted! Try again soon!
+                </p>
+              )}
+              {(!formValid.specialAccomodations ||
+                (trySubmission &&
+                  formValues.specialAccomodations.length > 500 &&
+                  formValues.specialAccomodations.length > 0)) && (
+                <p className="errors">
+                  Special Accomodations has too many characters
+                </p>
+              )}
+              <button type="submit" className="application__button">
+                <p className="application__button-text">Submit</p>
+              </button>
+
+              {apiStatusUpdates.appSubmissionInProgress === true && (
+                <p className="info">
+                  Submitting your application to the CruzHacks Cloud!
                 </p>
               )}
             </div>

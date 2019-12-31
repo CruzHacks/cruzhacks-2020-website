@@ -1,0 +1,39 @@
+// containers
+&__logos-tera {
+  @include logosContainer;
+}
+
+&__logos-giga {
+  @include logosContainer;
+  @include respond(tab-port) {
+    max-width: fit-content;
+  }
+}
+
+&__logos-kilo {
+  @include logosContainer;
+  margin-top: -0.5em;
+  @include respond(tab-port) {
+    margin-top: 0;
+  }
+}
+
+&__logos-mega {
+  @include logosContainer;
+  align-self: center;
+  max-width: 70%;
+  flex-wrap: wrap;
+  @include respond(tab-land) {
+    max-width: 74%;
+  }
+  @media screen and (max-width: 1044px) {
+    max-width: 80%;
+  }
+  @media screen and (max-width: 944px) {
+    max-width: 85%;
+  }
+  @include respond(tab-port) {
+    max-width: 90%;
+    margin-top: 0.5em;
+  }
+}

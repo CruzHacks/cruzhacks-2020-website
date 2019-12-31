@@ -72,7 +72,7 @@
 &__announcements-event-text {
   @include font-source-body(
     20px,
-    19px,
+    24px,
     0.04em,
     3px,
     center,
@@ -82,7 +82,7 @@
   );
   display: table-cell;
   vertical-align: middle;
-  padding: 1em;
+  padding: 0.5em;
   @include responsive-font(2.1vw, 16px, 20px);
   max-width: 10em;
 }
