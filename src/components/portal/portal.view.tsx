@@ -5,6 +5,7 @@ import { applicationHasBeenSubmitted } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
 import Countdown from 'react-countdown-now';
+import FooterView from '../landing/background/footer/footer.view';
 
 const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
