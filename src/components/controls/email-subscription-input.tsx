@@ -30,22 +30,31 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
     };
     inputRef.current.value = '';
 
-    let key: string = '' + process.env.REACT_APP_API_KEY;
-
-    let mailingServiceEndpoint: string =
-      CORSproxy + process.env.REACT_APP_MAILING_SUBSCRIBERS_ENDPOINT; 
+    // let key: string = '' + process.env.REACT_APP_MAILING_API_KEY;
+    // let mailingServiceEndpoint: string = '' + CORSproxy + process.env.REACT_APP_MAILING_SUBSCRIBERS_ENDPOINT; 
     
     let axiosConfig: AxiosRequestConfig = {
       headers: {
-        'authentication': key,
+        'Authentication': process.env.REACT_APP_MAILING_API_KEY,
+        'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Methods':
+          // 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
       },
     };
 
     try {
       inputRef.current.placeholder = 'Sending...';
-      const response = await axios.post(mailingServiceEndpoint, body, axiosConfig);
+      // const response = await axios.post(mailingServiceEndpoint, body, axiosConfig);
+      axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+    
+      const response = await axios.post(
+        CORSproxy + process.env.REACT_APP_MAILING_SUBSCRIBERS_ENDPOINT,
+        body,
+        axiosConfig
+      );
       if (response.status === 200) {
         inputRef.current.classList.add('placeholder-ok');
         inputRef.current.placeholder = 'Added to Email List!';
