@@ -19,7 +19,6 @@
   width: $width;
 }
 .application {
-  overflow:hidden;
   height: 100%;
   width: 100%;
   position: relative;
@@ -48,7 +47,6 @@
     background-color: #6f6fe8;
     font-size: 20px;
     float: right;
-    align-self: flex-end;
     border-radius: 30px;
     width: 196px;
     height: 64px;
