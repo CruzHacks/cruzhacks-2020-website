@@ -7,11 +7,18 @@
     height: 796px;
     z-index: 2;
     @include respond(tab-port) {
-      height: 596px;
+      height: 696px;
       padding-bottom: 4em;
     }
+    @include respond(phone) {
+      margin-top: -15vw;
+    }
     @include respond(smallest) {
-      padding-top: 5em;
+      margin-top: -5vw;
+      height: 706px;
+    }
+    @media screen and (max-width: 395px) {
+      height: 796px;
     }
   }
   @import './container/container';

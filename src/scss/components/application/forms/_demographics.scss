@@ -77,6 +77,10 @@
     float: right;
     @media screen and (max-width: 1291px) {
       float: left;
+      padding-bottom: 0.6em;
+    }
+    @media screen and (max-width: 1095px) {
+      float: left;
       padding-top: 1em;
       padding-bottom: 0.6em;
     }

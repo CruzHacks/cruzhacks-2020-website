@@ -1,25 +1,26 @@
 &__title {
   @include font-source-header(
-    $size: 2.4em,
+    $size: 1.6em,
     $color: #262626,
     $weight: bold,
     $lineHeight: 34px,
     $letterSpace: 0.05em
   );
-  @include responsive-font(4.1vw, 1.5em, 2.4em);
+  @include responsive-font(3.1vw, 0.9em, 1.6em);
   font-family: Rubik Bold;
   display: block;
   text-transform: uppercase;
   text-align: center;
   margin: auto;
+  padding-bottom: 0.25em;
   word-wrap: break-word;
 }
 
 &__divider {
-  border: 2px solid #2e2c5f;
+  border: 1px solid #2e2c5f;
   display: block;
   width: 30em;
-  margin: 22px auto 49px;
+  margin: 1vw auto 1vw;
   @include respond(phone) {
     width: 25em;
   }
@@ -28,24 +29,6 @@
   }
   @include respond(smallest) {
     width: 15em;
-  }
-}
-
-&__logos {
-  display: block;
-  margin: 0 auto;
-  @include respond(tab-port) {
-    max-width: 600px;
-    margin-top: -2em;
-  }
-  @include respond(phone) {
-    max-width: 500px;
-  }
-  @include respond(phone-narrow) {
-    max-width: 400px;
-  }
-  @include respond(smallest) {
-    max-width: 300px;
   }
 }
 
