@@ -24,6 +24,7 @@ async function subscribeToEmailList(
   e: any
 ) {
   e.preventDefault();
+  inputRef.current.disabled = true;
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
   if (validateInputSubmission()) {
@@ -45,6 +46,7 @@ async function subscribeToEmailList(
 
     try {
       inputRef.current.placeholder = 'Sending...';
+
       const response = await axios.post(
         mailingServiceEndpoint,
         body,
@@ -69,7 +71,7 @@ async function subscribeToEmailList(
         console.error(err_msg);
       }
     }
-    emailInputRef.current.isSending = false;
+    inputRef.current.disabled = false;
   }
 }
 
@@ -91,7 +93,6 @@ const EmailSubscriptionInput: React.FC<ITextInputProps> = initialTextInputData =
               className="placeholder-sending"
               placeholder={textInputData.placeholder}
               value={textInputData.value}
-              disabled={textInputData.isSending}
               onChange={e =>
                 setTextInputData({ ...textInputData, value: e.target.value })
               }
