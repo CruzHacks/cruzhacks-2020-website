@@ -11,13 +11,6 @@ export interface ITextInputProps {
   containerClass: string;
 }
 
-function validateInputSubmission(): boolean {
-  if (emailInputRef.current.reportValidity()) {
-    return true;
-  }
-  return false;
-}
-
 async function subscribeToEmailList(
   email_address: string,
   inputRef: any,
@@ -26,7 +19,7 @@ async function subscribeToEmailList(
   e.preventDefault();
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
-  if (validateInputSubmission()) {
+  if (emailInputRef.current.reportValidity()) {
     let body = {
       email: '' + email_address,
     };
