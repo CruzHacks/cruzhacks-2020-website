@@ -23,7 +23,7 @@ const PortalView: React.FC = () => {
         const message =
           hasSubmitted === true
             ? `Hi ${authUser.nickname}, your application is under review.`
-            : deadline < now
+            : deadline > now
             ? authUser.email_verified === true
               ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`
               : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`
@@ -83,7 +83,7 @@ const PortalView: React.FC = () => {
                 </span>
                 <span className="portal__announcements-event-text">
                   <Countdown
-                    date={'Friday January 3 2019 23:59:59'}
+                    date={'Friday January 3 2020 23:59:59'}
                     renderer={props =>
                       props.completed ? (
                         <Completionist />
@@ -108,7 +108,7 @@ const PortalView: React.FC = () => {
           </div>
         </div>
         <Countdown
-          date={'Friday January 3 2019 23:59:59'}
+          date={'Friday January 3 2020 23:59:59'}
           renderer={props =>
             !props.completed ? (
               hasSubmittedApplication === false &&
