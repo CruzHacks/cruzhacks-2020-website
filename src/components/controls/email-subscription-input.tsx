@@ -24,7 +24,6 @@ async function subscribeToEmailList(
   e: any
 ) {
   e.preventDefault();
-  inputRef.current.disabled = true;
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
   if (validateInputSubmission()) {
@@ -43,7 +42,7 @@ async function subscribeToEmailList(
         'Content-Type': 'application/json',
       },
     };
-
+    inputRef.current.disabled = true;
     try {
       inputRef.current.placeholder = 'Sending...';
 
