@@ -18,12 +18,16 @@ const PortalView: React.FC = () => {
     setMessage('Loading your profile status...');
     applicationHasBeenSubmitted(authUser.email)
       .then(hasSubmitted => {
+        const deadline = new Date('January 3, 2020 23:59:59');
+        const now = new Date();
         const message =
           hasSubmitted === true
             ? `Hi ${authUser.nickname}, your application is under review.`
-            : authUser.email_verified === true
-            ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`
-            : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`;
+            : deadline > now
+            ? authUser.email_verified === true
+              ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`
+              : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`
+            : `Hi ${authUser.nickname}, applications have closed. Try again next year!`;
         setHasSubmitted(hasSubmitted);
         setMessage(message);
       })
@@ -103,15 +107,23 @@ const PortalView: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {hasSubmittedApplication === false &&
-        authUser.email_verified === true ? (
-          <div className="portal__application">
-            <ApplicationView user={authUser} />
-          </div>
-        ) : (
-          <div className="portal__void"></div>
-        )}
+        <Countdown
+          date={'Friday January 3 2020 23:59:59'}
+          renderer={props =>
+            !props.completed ? (
+              hasSubmittedApplication === false &&
+              authUser.email_verified === true ? (
+                <div className="portal__application">
+                  <ApplicationView user={authUser} />
+                </div>
+              ) : (
+                <div className="portal__void"></div>
+              )
+            ) : (
+              <div className="portal__void"></div>
+            )
+          }
+        />
 
         {/* <div className="footer-view-container">
           <div className="footer-view-content__container">
