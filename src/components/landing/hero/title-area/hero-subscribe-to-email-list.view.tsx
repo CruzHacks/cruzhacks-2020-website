@@ -8,8 +8,8 @@ const HeroSubscribeToEmailList: React.FC = () => {
       value=""
       isSending={false}
       buttonText="SUBSCRIBE"
-      containerClass="hero-subscribe-to-email-list-container"
-    ></EmailSubscriptionInput>
+      containerClass="hero-subscribe-container"
+    />
   );
 };
 

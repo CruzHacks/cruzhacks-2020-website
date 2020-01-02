@@ -1,5 +1,6 @@
 import React from 'react';
 import Countdown from 'react-countdown-now';
+import HeroSubscribeToEmailList from './hero-subscribe-to-email-list.view';
 
 const HeroTitleAreaView: React.FC = () => {
   const Completionist = () => <span> Decisions rolling out…</span>;
@@ -54,9 +55,7 @@ const HeroTitleAreaView: React.FC = () => {
           </p>
         </a>
       </div>
-      {/*
       <HeroSubscribeToEmailList />
-      */}
     </div>
   );
 };
