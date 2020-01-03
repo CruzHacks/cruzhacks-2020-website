@@ -23,14 +23,29 @@ const HeroTitleAreaView: React.FC = () => {
               renderer={props =>
                 props.completed ? (
                   <Completionist />
-                ) : (
+                ) : props.days > 1 ? (
                   <>
                     <span>
                       {' '}
                       {props.days} days left to apply. Second pass limited!
                     </span>
                   </>
-                )
+                ) : props.days === 1 ? (
+                  <span>
+                    {' '}
+                    {props.days} day left to apply. Second pass limited!
+                  </span>
+                ) : props.hours === 1 ? (
+                  <span>
+                    {' '}
+                    {props.hours} hour left to apply. Second pass limited!
+                  </span>
+                ) : props.hours < 24 ? (
+                  <span>
+                    {' '}
+                    {props.hours} hours left to apply. Second pass limited!
+                  </span>
+                ) : null
               }
             />
           }
@@ -42,12 +57,7 @@ const HeroTitleAreaView: React.FC = () => {
           className="hero-title-area__sponsor-button"
           rel="noopener noreferrer"
         >
-          <p className="hero-title-area__sponsor-button-text">
-            <Countdown
-              date={'Friday January 3 2020 23:59:59'}
-              renderer={props => (!props.completed ? 'APPLY' : 'DECISIONS')}
-            />
-          </p>
+          <p className="hero-title-area__sponsor-button-text">APPLY</p>
         </a>
 
         <a
