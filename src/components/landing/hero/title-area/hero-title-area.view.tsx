@@ -23,29 +23,21 @@ const HeroTitleAreaView: React.FC = () => {
               renderer={props =>
                 props.completed ? (
                   <Completionist />
-                ) : props.days > 1 ? (
+                ) : props.days >= 1 ? (
                   <>
                     <span>
                       {' '}
-                      {props.days} days left to apply. Second pass limited!
+                      {props.days} {props.days === 1 ? 'day' : 'days'} left to
+                      apply. Second pass limited!
                     </span>
                   </>
-                ) : props.days === 1 ? (
+                ) : (
                   <span>
                     {' '}
-                    {props.days} day left to apply. Second pass limited!
+                    {props.hours} {props.hours === 1 ? 'hour' : 'hours'} left to
+                    apply. Second pass limited!
                   </span>
-                ) : props.hours === 1 ? (
-                  <span>
-                    {' '}
-                    {props.hours} hour left to apply. Second pass limited!
-                  </span>
-                ) : props.hours < 24 ? (
-                  <span>
-                    {' '}
-                    {props.hours} hours left to apply. Second pass limited!
-                  </span>
-                ) : null
+                )
               }
             />
           }
