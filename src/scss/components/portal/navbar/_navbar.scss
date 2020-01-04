@@ -63,11 +63,13 @@
   border: 1px solid #6f6fe8;
   width: 6em;
   height: 50%;
+  position: relative;
+  bottom: 0.5em;
   border-radius: 27px;
-  margin-bottom: 3.25em;
-  margin-top: -0.7em;
+  align-items: baseline;
   text-align: center;
   z-index: 2;
+  white-space: nowrap;
   text-decoration: none;
   transition: background-color 0.2s ease-out;
   &:hover {
