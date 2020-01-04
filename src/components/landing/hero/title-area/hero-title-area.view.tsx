@@ -49,7 +49,12 @@ const HeroTitleAreaView: React.FC = () => {
           className="hero-title-area__sponsor-button"
           rel="noopener noreferrer"
         >
-          <p className="hero-title-area__sponsor-button-text">APPLY</p>
+          <p className="hero-title-area__sponsor-button-text">
+            <Countdown
+              date={'Friday January 3 2020 23:59:59'}
+              renderer={props => (!props.completed ? 'APPLY' : 'DECISIONS')}
+            />
+          </p>
         </a>
 
         <a
