@@ -1,0 +1,16 @@
+.liveBackground{
+   &__container{
+       position: sticky; 
+       top: 0; 
+       z-index: -1;
+   }
+
+   &__image{
+       height: auto;
+       width: 100%;
+       @include respond(phone){
+           height: auto; 
+           width: 100%;
+       }
+   }
+}

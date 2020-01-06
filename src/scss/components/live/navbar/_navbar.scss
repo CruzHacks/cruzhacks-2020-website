@@ -1,7 +1,7 @@
 .liveNavbar{
     &__container{
         float: right;
-        position: sticky;
+        position: fixed;
         display: flex;
         flex-direction: column;
         top: 100px; 
@@ -16,7 +16,7 @@
         @include respond(phone){
             z-index: 1;
             display: flex;
-            position: absolute;
+            position: fixed;
             // bottom: 0px;
             top: 86vh;
             left: 0px;
