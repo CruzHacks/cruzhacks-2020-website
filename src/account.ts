@@ -4,6 +4,28 @@ const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
 const resumeEndpoint: string = process.env.REACT_APP_API_UPLOAD_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
 
+export function getUserInfo(email: string): Promise<Object> {
+  const requestConfig: AxiosRequestConfig = {
+    params: {
+      authentication: apiKey,
+      accountType: 'hacker',
+      accountEmail: email,
+    },
+  };
+  
+  return axios
+    .get<Array<Object>>(endpoint, requestConfig)
+    .then(response => {
+      return response.data;
+    })
+    .catch(error => {
+      if (error.response.status === 404) {
+        return Promise.resolve(false);
+      }
+      return Promise.reject(error);
+    });
+}
+
 export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
   const requestConfig: AxiosRequestConfig = {
     params: {
