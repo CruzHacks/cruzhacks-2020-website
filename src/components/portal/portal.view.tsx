@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApplicationView from '../application/application.view';
 import HeroLightBulbView from '../landing/hero/header/hero-lightbulb.view';
-import { applicationHasBeenSubmitted } from '../../account';
+import { getUserInfo } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
 import Countdown from 'react-countdown-now';
@@ -11,30 +11,24 @@ const PortalView: React.FC = () => {
   const { user, logout } = authContext;
   const authUser: Auth0UserType = user;
 
-  const [hasSubmittedApplication, setHasSubmitted] = useState(false);
+  const [isAccepted, setIsAccepted] = useState(false);
   const [applicationStatusMessage, setMessage] = useState('');
 
   useEffect(() => {
     setMessage('Loading your profile status...');
-    applicationHasBeenSubmitted(authUser.email)
-      .then(hasSubmitted => {
-        const deadline = new Date('January 3, 2020 23:59:59');
-        const now = new Date();
+    getUserInfo(authUser.email)
+      .then(userObj => {
         const message =
-          hasSubmitted === true
-            ? `Hi ${authUser.nickname}, your application is under review.`
-            : deadline > now
-            ? authUser.email_verified === true
-              ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`
-              : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`
-            : `Hi ${authUser.nickname}, applications have closed. Try again next year!`;
-        setHasSubmitted(hasSubmitted);
+          userObj[0].confirmeduser === true
+            ? `Hi ${authUser.nickname}, congratulations! You have been accepted to CruzHacks 2020!`
+            : `Hi ${authUser.nickname}, you have not been accepted to participate in CruzHacks2020.`
+        setIsAccepted(userObj[0].confirmeduser);
         setMessage(message);
       })
       .catch(() => {
         const message =
           "We're having trouble contacting the CruzHacks Cloud. We'll be operational soon!";
-        setHasSubmitted(true);
+        setIsAccepted(true);
         setMessage(message);
       });
   }, [authUser.email, authUser.email_verified, authUser.nickname]);
@@ -45,9 +39,17 @@ const PortalView: React.FC = () => {
     });
 
   const Completionist = () => (
+    isAccepted 
+    ?
+      <span>
+        <span style={{ paddingBottom: '1.75em' }}>
+          Keep an eye on your email for a QR code that will be needed for entering the event.
+        </span>
+      </span>
+    :
     <span>
-      <span style={{ paddingBottom: '1.75em' }}>
-        Keep an eye on your email.
+      <span style={{paddingBottom: '1.75em'}}>
+        Please apply again next year!
       </span>
     </span>
   );
@@ -82,26 +84,7 @@ const PortalView: React.FC = () => {
                   ANNOUNCEMENTS
                 </span>
                 <span className="portal__announcements-event-text">
-                  <Countdown
-                    date={'Friday January 3 2020 23:59:59'}
-                    renderer={props =>
-                      props.completed ? (
-                        <Completionist />
-                      ) : props.days >= 1 ? (
-                        <span style={{ bottom: '0.5vh', position: 'relative' }}>
-                          {props.days} {props.days === 1 ? 'day' : 'days'} to
-                          apply for a spot at CruzHacks.
-                        </span>
-                      ) : (
-                        <span>
-                          {props.hours} {props.hours === 1 ? 'hour' : 'hours'}{' '}
-                          to apply for a spot at CruzHacks.
-                        </span>
-                      )
-                    }
-                  />
-                  <hr />
-                  <div>Decisions will roll out shortly!</div>
+                  <Completionist/>
                 </span>
               </div>
             </div>
@@ -111,7 +94,7 @@ const PortalView: React.FC = () => {
           date={'Friday January 3 2020 23:59:59'}
           renderer={props =>
             !props.completed ? (
-              hasSubmittedApplication === false &&
+              isAccepted === false &&
               authUser.email_verified === true ? (
                 <div className="portal__application">
                   <ApplicationView user={authUser} />
