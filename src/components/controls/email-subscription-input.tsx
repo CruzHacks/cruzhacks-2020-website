@@ -11,61 +11,51 @@ export interface ITextInputProps {
   containerClass: string;
 }
 
-function validateInputSubmission(): boolean {
-  if (emailInputRef.current.reportValidity()) {
-    return true;
-  }
-  return false;
-}
-
-async function subscribeToEmailList(email: string, inputRef: any, e: any) {
+async function subscribeToEmailList(
+  email_address: string,
+  inputRef: any,
+  e: any
+) {
   e.preventDefault();
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
-  if (validateInputSubmission()) {
-    const CORSproxy = 'https://cors-anywhere.herokuapp.com/';
-
+  if (emailInputRef.current.reportValidity()) {
     let body = {
-      email_address: '' + email,
-      status: 'subscribed',
+      email: '' + email_address,
     };
     inputRef.current.value = '';
 
-    let username: string = '' + process.env.REACT_APP_MAILCHIMP_USER;
-    let password: string = '' + process.env.REACT_APP_MAILCHIMP_SECRET;
-    let mailchimpEndpoint: string =
-      CORSproxy + process.env.REACT_APP_MAILCHIMP_SUBSCRIBERS_ENDPOINT;
+    let key: string = '' + process.env.REACT_APP_MAILING_API_KEY;
+    let mailingServiceEndpoint: string =
+      '' + process.env.REACT_APP_MAILING_SUBSCRIBERS_ENDPOINT;
 
     let axiosConfig: AxiosRequestConfig = {
-      auth: { username, password },
       headers: {
+        Authentication: key,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
       },
     };
-
+    inputRef.current.disabled = true;
     try {
       inputRef.current.placeholder = 'Sending...';
-      const response = await axios.post(mailchimpEndpoint, body, axiosConfig);
+
+      const response = await axios.post(
+        mailingServiceEndpoint,
+        body,
+        axiosConfig
+      );
+
       if (response.status === 200) {
         inputRef.current.classList.add('placeholder-ok');
         inputRef.current.placeholder = 'Added to Email List!';
       }
     } catch (error) {
-      if (error.response && error.response.status === 400) {
-        if (error.response.data.title === 'Member Exists') {
-          let err_msg = 'Already subscribed!';
-          inputRef.current.classList.add('placeholder-ok');
-          inputRef.current.placeholder = err_msg;
-          console.error(err_msg);
-        } else if (
-          error.response.data.title === 'Forgotten Email Not Subscribed'
-        ) {
-          let err_msg = "Previously unsubscribed! Can't add email :(";
-          inputRef.current.classList.add('placeholder-error');
-          inputRef.current.placeholder = err_msg;
-          console.error(err_msg);
-        }
+      if (error.response && error.response.status === 500) {
+        // if (error.response.data.title === 'Member Exists') {
+        let err_msg = 'Already subscribed!';
+        inputRef.current.classList.add('placeholder-ok');
+        inputRef.current.placeholder = err_msg;
+        console.error(err_msg);
       } else {
         let err_msg = 'Something Went Wrong';
         inputRef.current.classList.add('placeholder-error');
@@ -73,13 +63,11 @@ async function subscribeToEmailList(email: string, inputRef: any, e: any) {
         console.error(err_msg);
       }
     }
-    emailInputRef.current.isSending = false;
+    inputRef.current.disabled = false;
   }
 }
 
-const EmailSubscriptionInput: React.FC<
-  ITextInputProps
-> = initialTextInputData => {
+const EmailSubscriptionInput: React.FC<ITextInputProps> = initialTextInputData => {
   const [
     textInputData,
     setTextInputData,
@@ -89,28 +77,30 @@ const EmailSubscriptionInput: React.FC<
     return (
       <div className={textInputData.containerClass}>
         <form>
-          <input
-            ref={emailInputRef}
-            id="emailInput"
-            type="email"
-            className="placeholder-sending"
-            placeholder={textInputData.placeholder}
-            value={textInputData.value}
-            disabled={textInputData.isSending}
-            onChange={e =>
-              setTextInputData({ ...textInputData, value: e.target.value })
-            }
-            onFocus={() => {
-              emailInputRef.current.placeholder = '';
-            }}
-            onBlur={() => {
-              emailInputRef.current.placeholder = textInputData.placeholder;
-              emailInputRef.current.classList.remove('placeholder-error');
-              emailInputRef.current.classList.remove('placeholder-ok');
-              emailInputRef.current.classList.add('placeholder-sending');
-            }}
-            required
-          />
+          <div id="emailInputContainer">
+            <input
+              ref={emailInputRef}
+              id="emailInput"
+              type="email"
+              className="placeholder-sending"
+              placeholder={textInputData.placeholder}
+              value={textInputData.value}
+              onChange={e =>
+                setTextInputData({ ...textInputData, value: e.target.value })
+              }
+              onFocus={() => {
+                emailInputRef.current.placeholder = '';
+              }}
+              onBlur={() => {
+                emailInputRef.current.placeholder = textInputData.placeholder;
+                emailInputRef.current.classList.remove('placeholder-error');
+                emailInputRef.current.classList.remove('placeholder-ok');
+                emailInputRef.current.classList.add('placeholder-sending');
+              }}
+              required
+            />
+          </div>
+
           <button
             type="submit"
             onClick={e =>

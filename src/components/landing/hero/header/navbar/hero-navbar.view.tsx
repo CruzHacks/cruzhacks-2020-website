@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Countdown from 'react-countdown-now';
 
 const HeroNavbarView: React.FC = () => {
   const [dropMenu, setDropMenu] = useState(false);
@@ -16,7 +17,12 @@ const HeroNavbarView: React.FC = () => {
     <div className="navbar">
       <div className="navbar__button">
         <Link to="/portal" style={{ textDecoration: `none` }}>
-          <p className="navbar__button-text">APPLY</p>
+          <p className="navbar__button-text">
+            <Countdown
+              date={'Friday January 3 2020 23:59:59'}
+              renderer={props => (!props.completed ? 'APPLY' : 'DECISIONS')}
+            />
+          </p>
         </Link>
       </div>
 

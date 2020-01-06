@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import S3FileUpload from 'react-s3';
 
 const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
+const resumeEndpoint: string = process.env.REACT_APP_API_UPLOAD_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
 
 export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
@@ -28,16 +28,33 @@ export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
 }
 
 export function uploadResume(email: any, resume: any): Promise<boolean> {
-  const awsS3Config = {
-    bucketName: process.env.REACT_APP_AWS_BUCKET_NAME,
-    region: process.env.REACT_APP_AWS_REGION,
-    dirName: `resumes/${email}`,
-    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY,
-    secretAccessKey: process.env.REACT_APP_AWS_SECRET_KEY,
+  const headers = {
+    authentication: apiKey,
+    'Content-Type': 'multipart/form-data',
   };
-  return S3FileUpload.uploadFile(resume, awsS3Config).then(response => {
-    return Promise.resolve(true);
-  });
+
+  let formData = new FormData();
+  formData.append('email', email);
+  formData.append('resume', resume);
+
+  return axios
+    .post(resumeEndpoint, formData, {
+      headers: headers,
+    })
+    .then(response => {
+      if (response.status === 200) {
+        return Promise.resolve(true);
+      } else {
+        return Promise.reject(response.status);
+      }
+    })
+    .catch(error => {
+      if (error.response.status === 404) {
+        return Promise.resolve(false);
+      }
+
+      return Promise.reject(error);
+    });
 }
 
 export function submitApplication(application: any): Promise<boolean> {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Countdown from 'react-countdown-now';
 import HamburgerIcon from '../../../../assets/images/icons/hamburger.svg';
 
 const HeroHamburgerView: React.FC = () => {
@@ -43,7 +44,14 @@ const HeroHamburgerView: React.FC = () => {
           <Link to="/portal" style={{ textDecoration: `none` }}>
             <li>
               <div className="hamburger__button">
-                <p className="hamburger__button-text">APPLY</p>
+                <p className="hamburger__button-text">
+                  <Countdown
+                    date={'Friday January 3 2020 23:59:59'}
+                    renderer={props =>
+                      !props.completed ? 'APPLY' : 'DECISIONS'
+                    }
+                  />
+                </p>
               </div>
             </li>
           </Link>

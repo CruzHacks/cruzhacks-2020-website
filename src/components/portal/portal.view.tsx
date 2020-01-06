@@ -5,7 +5,6 @@ import { applicationHasBeenSubmitted } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
 import Countdown from 'react-countdown-now';
-import FooterView from '../landing/background/footer/footer.view';
 
 const PortalView: React.FC = () => {
   const authContext = useAuth0()!;
@@ -19,12 +18,16 @@ const PortalView: React.FC = () => {
     setMessage('Loading your profile status...');
     applicationHasBeenSubmitted(authUser.email)
       .then(hasSubmitted => {
+        const deadline = new Date('January 3, 2020 23:59:59');
+        const now = new Date();
         const message =
           hasSubmitted === true
             ? `Hi ${authUser.nickname}, your application is under review.`
-            : authUser.email_verified === true
-            ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`
-            : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`;
+            : deadline > now
+            ? authUser.email_verified === true
+              ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`
+              : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`
+            : `Hi ${authUser.nickname}, applications have closed. Try again next year!`;
         setHasSubmitted(hasSubmitted);
         setMessage(message);
       })
@@ -43,9 +46,9 @@ const PortalView: React.FC = () => {
 
   const Completionist = () => (
     <span>
-      <span style={{ paddingBottom: '1.5em' }}>Second pass has begun!</span>
-      <hr style={{ width: '65%' }} />
-      <span>Limited spots available.</span>
+      <span style={{ paddingBottom: '1.75em' }}>
+        Keep an eye on your email.
+      </span>
     </span>
   );
 
@@ -80,46 +83,53 @@ const PortalView: React.FC = () => {
                 </span>
                 <span className="portal__announcements-event-text">
                   <Countdown
-                    date={'Wednesday December 18 2019 23:59:59'}
+                    date={'Friday January 3 2020 23:59:59'}
                     renderer={props =>
                       props.completed ? (
                         <Completionist />
                       ) : props.days >= 1 ? (
-                        <span>
+                        <span style={{ bottom: '0.5vh', position: 'relative' }}>
                           {props.days} {props.days === 1 ? 'day' : 'days'} to
-                          apply for a spot at CruzHacks!
+                          apply for a spot at CruzHacks.
                         </span>
                       ) : (
                         <span>
                           {props.hours} {props.hours === 1 ? 'hour' : 'hours'}{' '}
-                          to apply for a spot at CruzHacks!
+                          to apply for a spot at CruzHacks.
                         </span>
                       )
                     }
                   />
                   <hr />
-                  <div>Decisions will be sent on a rolling basis.</div>
+                  <div>Decisions will roll out shortly!</div>
                 </span>
               </div>
             </div>
           </div>
         </div>
-
-        {hasSubmittedApplication === false &&
-        authUser.email_verified === true ? (
-        <div className="portal__application">
-            <ApplicationView user={authUser} />
-          </div>
-        ) : (
-          <div className="portal__void"></div>
-        )}
+        <Countdown
+          date={'Friday January 3 2020 23:59:59'}
+          renderer={props =>
+            !props.completed ? (
+              hasSubmittedApplication === false &&
+              authUser.email_verified === true ? (
+                <div className="portal__application">
+                  <ApplicationView user={authUser} />
+                </div>
+              ) : (
+                <div className="portal__void"></div>
+              )
+            ) : (
+              <div className="portal__void"></div>
+            )
+          }
+        />
 
         {/* <div className="footer-view-container">
           <div className="footer-view-content__container">
             <FooterView />
           </div>
         </div> */}
-
       </div>
     </>
   );

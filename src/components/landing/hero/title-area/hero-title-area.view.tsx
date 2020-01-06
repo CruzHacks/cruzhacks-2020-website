@@ -1,6 +1,9 @@
 import React from 'react';
+import Countdown from 'react-countdown-now';
+import HeroSubscribeToEmailList from './hero-subscribe-to-email-list.view';
 
 const HeroTitleAreaView: React.FC = () => {
+  const Completionist = () => <span> Decisions rolling out…</span>;
   return (
     <div className="hero-title-area">
       <div className="hero-title-area__title-text">
@@ -12,12 +15,32 @@ const HeroTitleAreaView: React.FC = () => {
       <div className="hero-title-area__eventInfo hero-title-area__eventInfo-text">
         <p>// January 17-19th, 2020</p>
         <p>// Stevenson Event Center, UC Santa Cruz</p>
-        <p style={{ marginTop: '-5px' }}>
-          //{' '}
-          <span style={{ textDecorationLine: 'line-through' }}>
-            Apply by Dec. 18<sup>th</sup>
-          </span>{' '}
-          Second pass limited!
+        <p>
+          //
+          {
+            <Countdown
+              date={'Friday January 3 2020 23:59:59'}
+              renderer={props =>
+                props.completed ? (
+                  <Completionist />
+                ) : props.days >= 1 ? (
+                  <>
+                    <span>
+                      {' '}
+                      {props.days} {props.days === 1 ? 'day' : 'days'} left to
+                      apply. Second pass limited!
+                    </span>
+                  </>
+                ) : (
+                  <span>
+                    {' '}
+                    {props.hours} {props.hours === 1 ? 'hour' : 'hours'} left to
+                    apply. Second pass limited!
+                  </span>
+                )
+              }
+            />
+          }
         </p>
       </div>
       <div className="hero-title-area__button-container">
@@ -26,7 +49,12 @@ const HeroTitleAreaView: React.FC = () => {
           className="hero-title-area__sponsor-button"
           rel="noopener noreferrer"
         >
-          <p className="hero-title-area__sponsor-button-text">APPLY</p>
+          <p className="hero-title-area__sponsor-button-text">
+            <Countdown
+              date={'Friday January 3 2020 23:59:59'}
+              renderer={props => (!props.completed ? 'APPLY' : 'DECISIONS')}
+            />
+          </p>
         </a>
 
         <a
@@ -39,9 +67,7 @@ const HeroTitleAreaView: React.FC = () => {
           </p>
         </a>
       </div>
-      {/*
       <HeroSubscribeToEmailList />
-      */}
     </div>
   );
 };

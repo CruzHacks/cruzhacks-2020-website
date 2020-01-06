@@ -52,6 +52,6 @@
     top: 120px;
   }
   @include respond(smallest) {
-    top: 10px;
+    top: -30px;
   }
 }

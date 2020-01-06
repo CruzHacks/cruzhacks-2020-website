@@ -1,0 +1,50 @@
+// kilo
+&__logos-gradDiv {
+  position: relative;
+  width: 109%;
+  @include respond(tab-port) {
+    min-width: 110%;
+  }
+}
+&__logos-citris {
+  position: relative;
+  @include respond(tab-port) {
+    top: 0.5vw;
+    min-width: 105%;
+  }
+}
+&__logos-chooseSC {
+  position: relative;
+  bottom: 1.55em;
+  width: 123%;
+  right: -0.25vw;
+  @include respond(tab-port) {
+    bottom: 2vw;
+    right: -0.95vw;
+  }
+}
+&__logos-microsoft {
+  position: relative;
+  bottom: 0.25em;
+  @include respond(tab-port) {
+    bottom: 0;
+    right: 2vw;
+    min-width: 110%;
+  }
+}
+&__logos-gcp {
+  position: relative;
+  bottom: 0.8em;
+  left: 0.75vw;
+  @include respond(tab-port) {
+    bottom: 2.5vw;
+  }
+}
+&__logos-southSwell {
+  position: relative;
+  bottom: 0.25em;
+  min-width: 102%;
+  @include respond(tab-port) {
+    bottom: 0;
+  }
+}
