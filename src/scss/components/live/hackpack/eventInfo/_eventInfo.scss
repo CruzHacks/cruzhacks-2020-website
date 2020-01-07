@@ -1,0 +1,89 @@
+.event-info{
+    &__card{
+        width: 914px;
+        height: 745px; 
+        background: #FFFFFF;
+        box-shadow: 0px 2px 20px rgba(205, 205, 205, 0.5);
+        border-radius: 12px;
+        display: block;
+        position: relative;
+        left: 20vw;
+        right: 20vw;
+        margin-bottom: 51px;
+    }
+
+    &__small-txt{
+        @include font-source-subheader(
+            $size: 22px,
+            $color: #575757,
+            $weight: bold,
+            $lineHeight: 3.56em,
+            $letterSpace: 0.05em, 
+            $fontStyle: normal
+        );
+        margin-left: 50px;
+        font-family: Avenir Next;
+        text-transform: uppercase;
+    }
+
+    &__title{
+        @include font-source-subheader(
+            $size: 64px,
+            $color: #5C68D7,
+            $weight: bold,
+            $lineHeight: 3.56em,
+            $letterSpace: 0.05em, 
+            $fontStyle: normal
+        );
+
+        font-family: Avenir Next;
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__color-legend, &__slack{
+        margin-top: 40px; 
+    }
+
+    &__wifi-title, &__legend-title, &__slack-title{
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #424242,
+            $weight: 600,
+            $lineHeight: 30px,
+            $letterSpace: 0.05em
+        );
+        display: block;
+        font-family: Avenir Next;
+        font-style: bold;
+        text-align: left;
+        margin-left: 150px;
+        margin-right: 150px;
+        // margin-bottom: 60px;
+    }
+
+    &__wifi-user, &__wifi-pass,
+    &__legend-org, &__legend-mentors, &__legend-judges,
+    &__slack-info{
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #424242,
+            $weight: normal,
+            $lineHeight: 30px,
+            $letterSpace: 0.05em
+        );
+        display: block;
+        font-family: Avenir Next;
+        font-style: normal;
+        text-align: left;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    &__slack-link{
+        text-decoration: none;
+        color: inherit;
+        font-style: italic;
+    }
+}
