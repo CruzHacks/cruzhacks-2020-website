@@ -4,6 +4,7 @@ import Backdrop from '../background/backdrop.view';
 import HackerPacketCardView from './hackerPacket/hackerpacket.view';
 import CrowdForgeCardView from './crowdforge/crowdforge.view';
 import DevpostCardView from './devpost/devpost.view';
+import EventInfoCardView from './eventInfo/eventInfo.view';
 
 const HackPackView: React.FC = () => {
     return (
@@ -14,6 +15,7 @@ const HackPackView: React.FC = () => {
             <HackerPacketCardView />
             <CrowdForgeCardView />
             <DevpostCardView />
+            <EventInfoCardView />
         </div>
     );
 };
