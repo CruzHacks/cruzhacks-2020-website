@@ -32,7 +32,9 @@
         }
     }
     
-    &__live-update-title, &__general-schedule-title{
+    &__live-update-title, 
+    &__general-schedule-title, 
+    &__question-title{
         @include font-source-subheader(
             $size: 2.625em,
             $color: #5C68D7,
@@ -46,7 +48,7 @@
         @include responsive-font(3.1vw, 28px, 64px);
         display: block;
         text-transform: uppercase;
-        padding-left: 22vw;
+        text-align: center;
     }
 
     &__live-update-blinker{
@@ -68,8 +70,7 @@
 
     &__updates-card, 
     &__gen-schedule-card, 
-    &__workshops-card,
-    &__questions-card{
+    &__workshops-card{
         min-height: 413px;
         max-width: 913px;
         height: auto;
@@ -82,4 +83,7 @@
         right: 20vw;
         margin-bottom: 51px;
     }
+
 }
+
+@import './question/question';

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../navbar/navbar.view'
 import Backdrop from '../background/backdrop.view'
+import QuestionView from './question/question.view'
 
 const LiveHomepage: React.FC = () => {
     return (
@@ -12,8 +13,10 @@ const LiveHomepage: React.FC = () => {
             </div>
             <div className="homepage__updates-card-container">
                 <div className="homepage__updates-card">
-                    <span className="homepage__live-update-blinker"></span>
-                    <span className="homepage__live-update-title">Live Updates</span>
+                    <span className="homepage__live-update-title">
+                        <span className="homepage__live-update-blinker"></span>
+                        Live Updates
+                    </span>
                 </div>
             </div>
             <div className="homepage__gen-schedule-card-container">
@@ -26,11 +29,7 @@ const LiveHomepage: React.FC = () => {
                     <span className="homepage__workshops-title">Workshops</span>
                 </div>
             </div>
-            <div className="homepage__questions-card-container">
-                <div className="homepage__questions-card">
-                    <span className="homepage__question-title">Have a Question?</span>
-                </div>
-            </div>
+            <QuestionView />
         </div>
     );
 };
