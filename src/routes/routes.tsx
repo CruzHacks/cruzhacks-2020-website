@@ -8,6 +8,8 @@ import PrivateRoute from './private-route';
 import LoadingView from '../components/misc/loading.view';
 import LiveHomepage from '../components/live/homepage/homepage.view';
 import MapPage from '../components/live/mapPage/map.view'
+import HackPackView from '../components/live/hackPack/hackPack.view'
+import SupportView from '../components/live/support/support.view'
 import { useAuth0 } from '../auth/auth';
 
 const Routes: React.FC = () => {
@@ -27,6 +29,8 @@ const Routes: React.FC = () => {
             <PrivateRoute path="/portal" component={<PortalView />} />
             <Route exact path="/live" render={() => <LiveHomepage />} />
             <Route exact path="/live/map" render={() => <MapPage />} />
+            <Route exact path="/live/hackpack" render={() => <HackPackView />} />
+            <Route exact path="/live/support" render={() => <SupportView />} />
           </Switch>
         </Router>
       </div>

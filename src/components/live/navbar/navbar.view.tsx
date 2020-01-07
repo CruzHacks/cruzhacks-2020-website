@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../../assets/live/logo.svg'
-import homeIcon from '../../../assets/live/homeIcon.svg'
-import mainSiteIcon from '../../../assets/live/mainSiteIcon.svg'
-import mapIcon from '../../../assets/live/mapicon.svg'
-import hackPackIcon from '../../../assets/live/hackPackIcon.svg'
-import supportIcon from '../../../assets/live/supportIcon.svg'
+import logo from '../../../assets/live/navbar/logo.svg'
+import homeIcon from '../../../assets/live/navbar/homeIcon.svg'
+import mainSiteIcon from '../../../assets/live/navbar/mainSiteIcon.svg'
+import mapIcon from '../../../assets/live/navbar/mapicon.svg'
+import hackPackIcon from '../../../assets/live/navbar/hackPackIcon.svg'
+import supportIcon from '../../../assets/live/navbar/supportIcon.svg'
 
 const Navbar: React.FC = () => {
     return (
