@@ -21,7 +21,7 @@ const PortalView: React.FC = () => {
         const message =
           userObj[0].confirmeduser === true
             ? `Hi ${authUser.nickname}, congratulations! You have been accepted to CruzHacks 2020!`
-            : `Hi ${authUser.nickname}, you have not been accepted to participate in CruzHacks2020.`
+            : `Hi ${authUser.nickname}, you have not been accepted to participate in CruzHacks2020.`;
         setIsAccepted(userObj[0].confirmeduser);
         setMessage(message);
       })
@@ -38,21 +38,20 @@ const PortalView: React.FC = () => {
       returnTo: window.location.origin,
     });
 
-  const Completionist = () => (
-    isAccepted 
-    ?
+  const Completionist = () =>
+    isAccepted ? (
       <span>
         <span style={{ paddingBottom: '1.75em' }}>
-          Keep an eye on your email for a QR code that will be needed for entering the event.
+          Keep an eye on your email.
         </span>
       </span>
-    :
-    <span>
-      <span style={{paddingBottom: '1.75em'}}>
-        Please apply again next year!
+    ) : (
+      <span>
+        <span style={{ paddingBottom: '1.75em' }}>
+          Please apply again next year!
+        </span>
       </span>
-    </span>
-  );
+    );
 
   return (
     <>
@@ -84,7 +83,7 @@ const PortalView: React.FC = () => {
                   ANNOUNCEMENTS
                 </span>
                 <span className="portal__announcements-event-text">
-                  <Completionist/>
+                  <Completionist />
                 </span>
               </div>
             </div>
@@ -94,8 +93,7 @@ const PortalView: React.FC = () => {
           date={'Friday January 3 2020 23:59:59'}
           renderer={props =>
             !props.completed ? (
-              isAccepted === false &&
-              authUser.email_verified === true ? (
+              isAccepted === false && authUser.email_verified === true ? (
                 <div className="portal__application">
                   <ApplicationView user={authUser} />
                 </div>
