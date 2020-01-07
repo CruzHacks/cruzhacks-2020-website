@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApplicationView from '../application/application.view';
 import HeroLightBulbView from '../landing/hero/header/hero-lightbulb.view';
-import { applicationHasBeenSubmitted } from '../../account';
+import { getHackers } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
 import Countdown from 'react-countdown-now';
@@ -16,13 +16,24 @@ const PortalView: React.FC = () => {
 
   useEffect(() => {
     setMessage('Loading your profile status...');
-    applicationHasBeenSubmitted(authUser.email)
-      .then(hasSubmitted => {
+    getHackers(authUser.email)
+      .then(hackers => {
+        hackers = [];
         const deadline = new Date('January 3, 2020 23:59:59');
         const now = new Date();
+        const hasSubmitted = hackers.length > 0;
+        // const reviewingApplications =
+        //   process.env.REACT_APP_REVIEWING_APPLICATIONS;
+        const reviewingApplications = false;
+        const acceptedMessage = hackers[0].accepted
+          ? `Congratulations ${authUser.nickname}, your application has been accepted`
+          : `Hi ${authUser.nickname}, we're sorry to inform you that your application has been rejected`;
+
         const message =
           hasSubmitted === true
-            ? `Hi ${authUser.nickname}, your application is under review.`
+            ? reviewingApplications
+              ? `Hi ${authUser.nickname}, your application is under review.`
+              : acceptedMessage
             : deadline > now
             ? authUser.email_verified === true
               ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`

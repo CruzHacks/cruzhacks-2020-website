@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApplicationView from '../application/application.view';
 import HeroLightBulbView from '../landing/hero/header/hero-lightbulb.view';
-import { applicationHasBeenSubmitted } from '../../account';
+import { getHackers } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
 import Countdown from 'react-countdown-now';
@@ -16,16 +16,17 @@ const ExtendedAppPortalView: React.FC = () => {
 
   useEffect(() => {
     setMessage('Loading your profile status...');
-    applicationHasBeenSubmitted(authUser.email)
-      .then(hasSubmitted => {
-        const message =
-          hasSubmitted === true
-            ? `Hi ${authUser.nickname}, your application is under review.`
-            : authUser.email_verified === true
-            ? `Hi ${authUser.nickname}, this is the extended invite-only application. Apply as soon as you can!`
-            : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`;
-        setHasSubmitted(hasSubmitted);
-        setMessage(message);
+    getHackers(authUser.email)
+      .then(hackers => {
+        console.log(hackers);
+        // const message =
+        //   hasSubmitted === true
+        //     ? `Hi ${authUser.nickname}, your application is under review.`
+        //     : authUser.email_verified === true
+        //     ? `Hi ${authUser.nickname}, this is the extended invite-only application. Apply as soon as you can!`
+        //     : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`;
+        // setHasSubmitted(hasSubmitted);
+        // setMessage(message);
       })
       .catch(() => {
         const message =
