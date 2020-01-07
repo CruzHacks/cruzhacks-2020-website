@@ -6,6 +6,7 @@
    }
 
    &__image{
+       @include svgContainer();
        height: auto;
        width: 100%;
        @include respond(phone){
