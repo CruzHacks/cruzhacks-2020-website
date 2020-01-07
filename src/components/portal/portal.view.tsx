@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApplicationView from '../application/application.view';
 import HeroLightBulbView from '../landing/hero/header/hero-lightbulb.view';
-import { getUserInfo } from '../../account';
+import { applicationHasBeenSubmitted, getUserInfo } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
 import Countdown from 'react-countdown-now';
@@ -12,16 +12,36 @@ const PortalView: React.FC = () => {
   const authUser: Auth0UserType = user;
 
   const [isAccepted, setIsAccepted] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
   const [applicationStatusMessage, setMessage] = useState('');
 
   useEffect(() => {
     setMessage('Loading your profile status...');
+    applicationHasBeenSubmitted(authUser.email)
+      .then(submit => {
+        // submit === true ? continue : break;
+        setHasSubmitted(submit);
+      })
+      .catch(()=>{
+        const message =
+          "We're having trouble contacting the CruzHacks Cloud. We'll be operational soon!";
+        setHasSubmitted(true);
+        setMessage(message);
+      });
     getUserInfo(authUser.email)
       .then(userObj => {
+        const deadline = new Date('January 3, 2020 23:59:59');
+        const now = new Date();
         const message =
-          userObj[0].confirmeduser === true
-            ? `Hi ${authUser.nickname}, congratulations! You have been accepted to CruzHacks 2020!`
-            : `Hi ${authUser.nickname}, you have not been accepted to participate in CruzHacks2020.`;
+          hasSubmitted === true 
+            ? userObj[0].confirmeduser === true
+              ? `Hi ${authUser.nickname}, congratulations! You have been accepted to CruzHacks 2020!`
+              : `Hi ${authUser.nickname}, you have not been accepted to participate in CruzHacks2020.`
+            : deadline > now 
+            ? authUser.email_verified === true
+              ? `Hi ${authUser.nickname}, applications have closed. Try again next year!`
+              : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`
+            : `Hi ${authUser.nickname}, applications have closed. Try again next year!`;
         setIsAccepted(userObj[0].confirmeduser);
         setMessage(message);
       })
@@ -31,7 +51,7 @@ const PortalView: React.FC = () => {
         setIsAccepted(true);
         setMessage(message);
       });
-  }, [authUser.email, authUser.email_verified, authUser.nickname]);
+  }, [authUser.email, authUser.email_verified, authUser.nickname, hasSubmitted]);
 
   const logoutWithRedirect = () =>
     logout({
