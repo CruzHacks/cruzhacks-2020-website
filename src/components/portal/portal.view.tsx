@@ -18,16 +18,16 @@ const PortalView: React.FC = () => {
     setMessage('Loading your profile status...');
     getHackers(authUser.email)
       .then(hackers => {
-        hackers = [];
         const deadline = new Date('January 3, 2020 23:59:59');
         const now = new Date();
         const hasSubmitted = hackers.length > 0;
-        // const reviewingApplications =
-        //   process.env.REACT_APP_REVIEWING_APPLICATIONS;
-        const reviewingApplications = false;
-        const acceptedMessage = hackers[0].accepted
-          ? `Congratulations ${authUser.nickname}, your application has been accepted`
-          : `Hi ${authUser.nickname}, we're sorry to inform you that your application has been rejected`;
+        const reviewingApplications =
+          process.env.REACT_APP_REVIEWING_APPLICATIONS;
+
+        let acceptedMessage = '';
+        if (hasSubmitted) {
+          acceptedMessage = hackers[0].accepted ? 'Accepted' : 'Not Accepted';
+        }
 
         const message =
           hasSubmitted === true

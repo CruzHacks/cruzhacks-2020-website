@@ -18,15 +18,29 @@ const ExtendedAppPortalView: React.FC = () => {
     setMessage('Loading your profile status...');
     getHackers(authUser.email)
       .then(hackers => {
-        console.log(hackers);
-        // const message =
-        //   hasSubmitted === true
-        //     ? `Hi ${authUser.nickname}, your application is under review.`
-        //     : authUser.email_verified === true
-        //     ? `Hi ${authUser.nickname}, this is the extended invite-only application. Apply as soon as you can!`
-        //     : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`;
-        // setHasSubmitted(hasSubmitted);
-        // setMessage(message);
+        const deadline = new Date('January 3, 2020 23:59:59');
+        const now = new Date();
+        const hasSubmitted = hackers.length > 0;
+        const reviewingApplications =
+          process.env.REACT_APP_REVIEWING_APPLICATIONS;
+
+        let acceptedMessage = '';
+        if (hasSubmitted) {
+          acceptedMessage = hackers[0].accepted ? 'Accepted' : 'Not Accepted';
+        }
+
+        const message =
+          hasSubmitted === true
+            ? reviewingApplications
+              ? `Hi ${authUser.nickname}, your application is under review.`
+              : acceptedMessage
+            : deadline > now
+            ? authUser.email_verified === true
+              ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`
+              : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`
+            : `Hi ${authUser.nickname}, applications have closed. Try again next year!`;
+        setHasSubmitted(hasSubmitted);
+        setMessage(message);
       })
       .catch(() => {
         const message =
