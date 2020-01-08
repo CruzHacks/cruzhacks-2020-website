@@ -16,7 +16,7 @@ const PortalView: React.FC = () => {
 
   useEffect(() => {
     setMessage('Loading your profile status...');
-    getHackers(authUser.email)
+    getHackers('prnaraya@ucsc.edu')
       .then(hackers => {
         const deadline = new Date('January 3, 2020 23:59:59');
         const now = new Date();
@@ -26,7 +26,12 @@ const PortalView: React.FC = () => {
 
         let acceptedMessage = '';
         if (hasSubmitted) {
-          acceptedMessage = hackers[0].accepted ? 'Accepted' : 'Not Accepted';
+          const acceptedStatusMessage = `Congratulations ${authUser.nickname}! Your application for CruzHacks 2020 has been accepted. Check your emails for updates and instructions.`;
+          const rejectedStatusMessage = '';
+
+          acceptedMessage = hackers[0].accepted
+            ? acceptedStatusMessage
+            : rejectedStatusMessage;
         }
 
         const message =
@@ -112,7 +117,7 @@ const PortalView: React.FC = () => {
                     }
                   />
                   <hr />
-                  <div>Decisions will roll out shortly!</div>
+                  <div>Decisions announced!</div>
                 </span>
               </div>
             </div>
