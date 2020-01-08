@@ -16,10 +16,8 @@ const PortalView: React.FC = () => {
 
   useEffect(() => {
     setMessage('Loading your profile status...');
-    getHackers("prnaraya@ucsc.edu")
+    getHackers(user.email)
       .then(hackers => {
-        const deadline = new Date('January 3, 2020 23:59:59');
-        const now = new Date();
         const hasSubmitted = hackers.length > 0;
 
         const rejectedStatusMessage =
