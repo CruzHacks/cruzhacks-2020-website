@@ -25,10 +25,11 @@
 
   &__image {
     display: block;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
-    max-width: 305vw;
+    width: 35vw;
   }
   &__paragraph {
     @include font-source-subheader(
