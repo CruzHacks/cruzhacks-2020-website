@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApplicationView from '../application/application.view';
 import HeroLightBulbView from '../landing/hero/header/hero-lightbulb.view';
-import { applicationHasBeenSubmitted } from '../../account';
+import { getHackers } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
 import Countdown from 'react-countdown-now';
@@ -16,18 +16,27 @@ const PortalView: React.FC = () => {
 
   useEffect(() => {
     setMessage('Loading your profile status...');
-    applicationHasBeenSubmitted(authUser.email)
-      .then(hasSubmitted => {
-        const deadline = new Date('January 3, 2020 23:59:59');
-        const now = new Date();
-        const message =
-          hasSubmitted === true
-            ? `Hi ${authUser.nickname}, your application is under review.`
-            : deadline > now
-            ? authUser.email_verified === true
-              ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`
-              : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`
-            : `Hi ${authUser.nickname}, applications have closed. Try again next year!`;
+    getHackers(user.email)
+      .then(hackers => {
+        const hasSubmitted = hackers.length > 0;
+
+        const rejectedStatusMessage =
+          'Thank you for your interest in CruzHacks. Unfortunately, due to limited space, we are unable to offer you a spot at our event this year. We appreciate your time and encourage you to apply again next year. ' +
+          'If you would like to participate as a volunteer, please register here: https://bit.ly/2ZYu4AG';
+
+        let message = '';
+
+        if (hasSubmitted) {
+          const firstName = hackers[0].firstname;
+          const acceptedStatusMessage = `Congratulations ${firstName}!  We’re excited to offer you a spot at CruzHacks 2020. Please check your email for updates and further instructions.`;
+
+          message = hackers[0].accepted
+            ? acceptedStatusMessage
+            : rejectedStatusMessage;
+        } else {
+          message = rejectedStatusMessage;
+        }
+
         setHasSubmitted(hasSubmitted);
         setMessage(message);
       })
@@ -101,7 +110,7 @@ const PortalView: React.FC = () => {
                     }
                   />
                   <hr />
-                  <div>Decisions will roll out shortly!</div>
+                  <div>Decisions announced!</div>
                 </span>
               </div>
             </div>
