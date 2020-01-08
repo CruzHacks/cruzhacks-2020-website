@@ -5,6 +5,7 @@ const resumeEndpoint: string = process.env.REACT_APP_API_UPLOAD_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
 
 type HackerType = {
+  firstname: string;
   accepted: boolean;
 };
 
