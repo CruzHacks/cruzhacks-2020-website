@@ -1,83 +1,79 @@
-.questions{
-    &__card{
-        // min-height: 413px;
-        // max-width: 913px;
-        width: 914px;
-        height: 750px; 
-        background: #FFFFFF;
-        box-shadow: 0px 2px 20px rgba(205, 205, 205, 0.5);
-        border-radius: 12px;
-        display: block;
-        position: relative;
-        left: 20vw;
-        right: 20vw;
-        margin-bottom: 51px;
-    }
+.questions {
+  &__card {
+    @include card;
+  }
 
-    &__title{
-        @include font-source-subheader(
-            $size: 2.625em,
-            $color: #5C68D7,
-            $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em, 
-            $fontStyle: normal
-        );
+  &__card-container {
+    @include cardContainer;
+  }
 
-        font-family: Avenir Next;
-        @include responsive-font(3.1vw, 28px, 64px);
-        display: block;
-        text-transform: uppercase;
-        text-align: center;
-    }
+  &__title {
+    @include font-source-subheader(
+      $size: 2.625em,
+      $color: #5c68d7,
+      $weight: bold,
+      $lineHeight: 3.56em,
+      $letterSpace: 0.05em,
+      $fontStyle: normal
+    );
 
-    &__image{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 15px;
-    }
-    &__paragraph{
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #424242,
-            $weight: normal,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        display: block;
-        font-family: Avenir Next;
-        font-style: normal;
-        text-align: center;
-        margin-top: 50px;
-        margin-left: 200px;
-        margin-right: 200px;
-        margin-bottom: 60px;
-    }
+    @include responsive-font(3.1vw, 28px, 64px);
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+  }
 
-    &__join-slack, 
-    &__goto-hackpack{
-        padding: 20px;
-        background: #5C68D7;
-        border-radius: 7px;
-        text-align: center;
-        display: block;
-        margin-left: 60px;
-        margin-right: 60px;
-        margin-bottom: 15px;
-        text-decoration: none;
+  &__image {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: 35vw;
+  }
+  &__paragraph {
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #424242,
+      $weight: normal,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    display: block;
+    font-style: normal;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: calc(20px + 5vw);
+    margin-right: calc(20px + 5vw);
+    margin-bottom: 60px;
+  }
 
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #ffffff,
-            $weight: 600,
-            $lineHeight: 25px,
-            $letterSpace: 0.05em
-        );
-    }
-    
-    &__join-slack:hover, 
-    &__goto-hackpack:hover{
-        background: #3D49BA;
-    }
+  &__button-container {
+    padding-bottom: 12px;
+  }
+  &__join-slack,
+  &__goto-hackpack {
+    padding: 20px;
+    background: #5c68d7;
+    border-radius: 7px;
+    text-align: center;
+    display: block;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 15px;
+    text-decoration: none;
+
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #ffffff,
+      $weight: 600,
+      $lineHeight: 25px,
+      $letterSpace: 0.05em
+    );
+  }
+
+  &__join-slack:hover,
+  &__goto-hackpack:hover {
+    background: #3d49ba;
+  }
 }
