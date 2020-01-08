@@ -16,38 +16,30 @@ const PortalView: React.FC = () => {
 
   useEffect(() => {
     setMessage('Loading your profile status...');
-    getHackers('prnaraya@ucsc.edu')
+    getHackers(user.email)
       .then(hackers => {
         const deadline = new Date('January 3, 2020 23:59:59');
         const now = new Date();
         const hasSubmitted = hackers.length > 0;
-        const reviewingApplications =
-          process.env.REACT_APP_REVIEWING_APPLICATIONS;
 
-        let acceptedMessage = '';
+        const rejectedStatusMessage =
+          'Thank you for your interest in attending CruzHacks. Unfortunately, we do not have enough' +
+          "space to offer you a spot for this year's event. We appreciate your interest and hope you apply again next year. " +
+          "You may still participate as a volunteer organizer. If you're interested in volunteering, apply here - https://bit.ly/2ZYu4AG. ";
+
+        let message = '';
+
         if (hasSubmitted) {
           const firstName = hackers[0].firstname;
           const acceptedStatusMessage = `Congratulations ${firstName}! Your application for CruzHacks 2020 has been accepted. Check your email for updates and instructions.`;
-          const rejectedStatusMessage =
-            'Thank you for your interest in attending CruzHacks. Unfortunately, we do not have enough' +
-            "space to offer you a spot for this year's event. We appreciate your interest and hope you apply again next year. " +
-            "You may still participate as a volunteer organizer. If you're interested in volunteering, apply here - https://bit.ly/2ZYu4AG. ";
 
-          acceptedMessage = hackers[0].accepted
+          message = hackers[0].accepted
             ? acceptedStatusMessage
             : rejectedStatusMessage;
+        } else {
+          message = rejectedStatusMessage;
         }
 
-        const message =
-          hasSubmitted === true
-            ? reviewingApplications
-              ? `Hi ${authUser.nickname}, your application is under review.`
-              : acceptedMessage
-            : deadline > now
-            ? authUser.email_verified === true
-              ? `Hi ${authUser.nickname}, you haven't submitted your application yet. Apply below!`
-              : `Hi ${authUser.nickname}, we need to verify your email first before you apply!`
-            : `Hi ${authUser.nickname}, applications have closed. Try again next year!`;
         setHasSubmitted(hasSubmitted);
         setMessage(message);
       })
