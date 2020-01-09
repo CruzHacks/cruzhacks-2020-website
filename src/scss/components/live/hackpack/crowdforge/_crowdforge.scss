@@ -1,17 +1,9 @@
 .crowd-forge{
+    &__container {
+        @include cardContainer(); 
+    }
     &__card{
-        // min-height: 413px;
-        // max-width: 913px;
-        width: 914px;
-        height: 760px; 
-        background: #FFFFFF;
-        box-shadow: 0px 2px 20px rgba(205, 205, 205, 0.5);
-        border-radius: 12px;
-        display: block;
-        position: relative;
-        left: 20vw;
-        right: 20vw;
-        margin-bottom: 51px;
+        @include card();
     }
 
     &__find-team{
@@ -119,6 +111,10 @@
 
     &__team-link:hover{
         background: #32AA7F;
+    }
+
+    &__link-container {
+        padding-bottom: 12px;
     }
 
 }

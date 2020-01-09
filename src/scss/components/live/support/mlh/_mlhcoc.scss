@@ -1,18 +1,13 @@
 .mlhcoc-support{
-    &__card{
-        width: 914px;
-        height: 460px; 
-        background: #FFFFFF;
-        box-shadow: 0px 2px 20px rgba(205, 205, 205, 0.5);
-        border-radius: 12px;
-        display: block;
-        position: relative;
-        left: 20vw;
-        right: 20vw;
-        margin-bottom: 51px;
+    &__container {
+        @include cardContainer(); 
     }
 
-    &__title{
+    &__card {
+        @include card(); 
+    }
+
+    &__title {
         @include font-source-subheader(
             $size: 2.625em,
             $color: #5C68D7,
@@ -51,7 +46,6 @@
         border-radius: 7px;
         text-align: center;
         display: block;
-        margin-top: 80px;
         margin-left: 60px;
         margin-right: 60px;
         margin-bottom: 15px;
@@ -69,4 +63,8 @@
     &__link:hover{
         background: #32AA7F;
     }
+
+    &__button-container {
+        padding-bottom: 12px;
+      }
 }

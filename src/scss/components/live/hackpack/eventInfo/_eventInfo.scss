@@ -1,15 +1,11 @@
 .event-info{
-    &__card{
-        width: 914px;
-        height: 745px; 
-        background: #FFFFFF;
-        box-shadow: 0px 2px 20px rgba(205, 205, 205, 0.5);
-        border-radius: 12px;
-        display: block;
-        position: relative;
-        left: 20vw;
-        right: 20vw;
-        margin-bottom: 51px;
+
+    &__container {
+        @include cardContainer(); 
+    }
+
+    &__card {
+        @include card(); 
     }
 
     &__small-txt{
@@ -60,7 +56,6 @@
         text-align: left;
         margin-left: 150px;
         margin-right: 150px;
-        // margin-bottom: 60px;
     }
 
     &__wifi-user, &__wifi-pass,
@@ -79,6 +74,10 @@
         text-align: left;
         margin-left: 150px;
         margin-right: 150px;
+    }
+
+    &__wifi-section, &__color-legend, &__slack {
+        padding-bottom: 12px;
     }
 
     &__slack-link{

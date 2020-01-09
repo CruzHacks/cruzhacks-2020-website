@@ -1,17 +1,10 @@
 .faq-support{
+    &__container{
+        @include cardContainer();
+    }
+
     &__card{
-        width: 914px;
-        // height: 745px; 
-        min-height: 500px;
-        height: auto; 
-        background: #FFFFFF;
-        box-shadow: 0px 2px 20px rgba(205, 205, 205, 0.5);
-        border-radius: 12px;
-        display: block;
-        position: relative;
-        left: 20vw;
-        right: 20vw;
-        margin-bottom: 51px;
+        @include card(); 
     }
 
     &__title{
@@ -28,5 +21,44 @@
         display: block;
         text-transform: uppercase;
         text-align: center;
+    }
+
+    &__questions-container{
+        display: flex;
+        align-self: auto;
+        flex-direction: column;
+        margin-left: 156px;
+    }
+
+    &__question1{
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #5f5f5f,
+            $weight: medium,
+            $lineHeight: 25px,
+            $letterSpace: 0.05em
+        );
+        text-decoration: none;
+        padding: 0;
+        border: none;
+        background: none;
+        margin-bottom: 30px;
+        text-align: left;
+        width: 400px; 
+    }
+
+    &__answer-container{
+        display: none;
+    }
+
+    &__answer{
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #5f5f5f,
+            $weight: medium,
+            $lineHeight: 25px,
+            $letterSpace: 0.05em
+        );
+        font-family: Avenir Next;
     }
 }

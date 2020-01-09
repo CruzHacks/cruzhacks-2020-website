@@ -1,15 +1,10 @@
 .emergency-contact{
+    &__container{
+        @include cardContainer(); 
+    }
+
     &__card{
-        width: 914px;
-        height: 520px; 
-        background: #FFFFFF;
-        box-shadow: 0px 2px 20px rgba(205, 205, 205, 0.5);
-        border-radius: 12px;
-        display: block;
-        position: relative;
-        left: 20vw;
-        right: 20vw;
-        margin-bottom: 51px;
+        @include card(); 
     }
 
     &__title{
@@ -62,7 +57,7 @@
         margin-right: 150px;
     }
 
-    &__fire, &__jen, &__daniel{
-        margin-top: 30px;
+    &__fire, &__jen, &__daniel, &__police{
+        padding-bottom: 30px;
     }
 }

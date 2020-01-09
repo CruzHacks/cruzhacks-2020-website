@@ -12,23 +12,21 @@
 
     &__title{
         position: absolute;
-        top: 187px; 
-        left: 239px; 
+        top: 10vh;
+        left: calc(22vw - 10vh);
         @include font-source-subheader(
-            $size: 4em,
-            $color: #ffffff,
-            $weight: 600,
-            $lineHeight: 80px,
-            $letterSpace: 0.05em
+          $size: 4em,
+          $color: #ffffff,
+          $weight: 600,
+          $lineHeight: 80px,
+          $letterSpace: 0.05em
         );
-        font-family: Avenir Next;
-
         @include responsive-font(3.1vw, 36px, 64px);
-
-        @include respond(phone){
-            position: absolute; 
-            top: 6.5vh; 
-            left: 6.5vw;
+    
+        @include respond(phone) {
+          position: absolute;
+          top: 6.5vh;
+          left: 6.5vw;
         }
     }
 }
