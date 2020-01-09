@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../navbar/navbar.view'
 import Backdrop from '../background/backdrop.view'
+import MapCardView from './mapcard/mapCard.view';
 
 const MapPage: React.FC = () =>{
     return(
@@ -10,6 +11,7 @@ const MapPage: React.FC = () =>{
             <div className="liveMap__title">
                 Venue Map
             </div>
+            <MapCardView />
         </div>
     );
 };
