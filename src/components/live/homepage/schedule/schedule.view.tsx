@@ -3,9 +3,9 @@ import React from 'react';
 const ScheduleView: React.FC = () => {
   return (
     <>
-      <div className="homepage__gen-schedule-card-container">
-        <div className="homepage__gen-schedule-card">
-          <span className="homepage__general-schedule-title">
+      <div className="gen-schedule__container">
+        <div className="gen-schedule__card">
+          <span className="gen-schedule__title">
             General Schedule
           </span>
         </div>
