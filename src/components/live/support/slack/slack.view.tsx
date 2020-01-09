@@ -14,7 +14,16 @@ const SlackCardView: React.FC = () => {
                     Slack will be our main form of communication through out the entire hackathon. 
                     Please join our slack to stay updated with annoucements and news!
                 </span>
-                <a className="support-slack__link" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Join Our Slack</a>
+                <div className="support-slack__button-container">
+                    <a 
+                    className="support-slack__link" 
+                    href="https://join.slack.com/t/cruzhacks-attendees20/shared_invite/enQtODg4NDcyNjE0ODQ5LWZhODhjNzQ3MDVmYmE1ZWYxMGIzZjNiMzZiZTJkNzcwNmE5NDQxNWFjZGJhMmYzM2RkMjk0MDhkNjU4N2ZmZTg" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    >
+                    Join Our Slack
+                    </a>
+                </div>
             </div>
         </div>
     ); 

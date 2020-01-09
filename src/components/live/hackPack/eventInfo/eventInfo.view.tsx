@@ -40,7 +40,14 @@ const EventInfoCardView: React.FC = () => {
                         Slack
                     </span>
                     <span className="event-info__slack-info">
-                        Slack will be used for communication during the event. Join our Slack <a className="event-info__slack-link" href="https://www.slack.com" target="_blank" rel="noopener noreferrer">here</a>.
+                        Slack will be used for communication during the event. Join our Slack 
+                        <a 
+                        className="event-info__slack-link" 
+                        href="https://join.slack.com/t/cruzhacks-attendees20/shared_invite/enQtODg4NDcyNjE0ODQ5LWZhODhjNzQ3MDVmYmE1ZWYxMGIzZjNiMzZiZTJkNzcwNmE5NDQxNWFjZGJhMmYzM2RkMjk0MDhkNjU4N2ZmZTg" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        > here
+                        </a>.
                     </span>
                 </div>
             </div>

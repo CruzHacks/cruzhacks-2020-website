@@ -10,10 +10,26 @@ interface faqs {
 
 const FAQCardView: React.FC<faqs> = faqs => {
 
+    function onToggle(questionNum: String){
+        switch(questionNum) {
+            case "one":
+                var question = document.getElementById("faq-support__question1");
+                // var answer = question.nextElementSibling;
+        }
+    }
+
     const Questions = () =>{
         return(
             <span className="faq-support__questions-grid">
-                
+                {faqs.qAndA.map(questions =>(
+                    <button
+                    className="faq-support__questions"
+                    key={questions.question}
+                    // onClick={() => onToggle()}
+                  >
+                    {questions.question}
+                  </button>
+                ))}
             </span>
         ); 
     }
@@ -25,7 +41,19 @@ const FAQCardView: React.FC<faqs> = faqs => {
                     FAQ
                 </div>
                 <div className="faq-support__questions-container">
-
+                    {/* <Questions /> */}
+                    <button className="faq-support__question1" onClick={() => {
+                        let question = document.getElementById("faq-support__question1")!;
+                        // var answer = question.nextElementSibling;
+                        console.log(question)
+                    }}>
+                        Are we allowed to build on past projects?
+                    </button>
+                    <div className="faq-support__answer-container">
+                        <span className="faq-support__answer">
+                            Ask team about this.
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

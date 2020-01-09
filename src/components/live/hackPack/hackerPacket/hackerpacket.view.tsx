@@ -14,7 +14,9 @@ const HackerPacketCardView: React.FC = () => {
                     You can find everything you need to know in our hacker packet PDF. 
                     It covers what you need to bring, travel info, workshop info, and more.
                 </span>
-                <a className="hacker-packet__packet" href="https://www.google.com" target="_blank" rel="noopener noreferrer">View Hacker Packet</a>
+                <div className="hacker-packet__link-container">
+                    <a className="hacker-packet__packet" href="https://www.google.com" target="_blank" rel="noopener noreferrer">View Hacker Packet</a>
+                </div>
             </div>
         </div>
     );

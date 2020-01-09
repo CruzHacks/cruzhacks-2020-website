@@ -15,7 +15,7 @@ const QuestionView: React.FC = () => {
         <div className="questions__button-container">
           <a
             className="questions__join-slack"
-            href="https://www.google.com"
+            href="https://join.slack.com/t/cruzhacks-attendees20/shared_invite/enQtODg4NDcyNjE0ODQ5LWZhODhjNzQ3MDVmYmE1ZWYxMGIzZjNiMzZiZTJkNzcwNmE5NDQxNWFjZGJhMmYzM2RkMjk0MDhkNjU4N2ZmZTg"
             target="_blank"
             rel="noopener noreferrer"
           >
