@@ -20,7 +20,7 @@ const ExtendedAppPortalView: React.FC = () => {
       .then(hackers => {
         const deadline = new Date('January 3, 2020 23:59:59');
         const now = new Date();
-        const hasSubmitted = hackers.length > 0;
+        let hasSubmitted = hackers.length > 0;
         const reviewingApplications =
           process.env.REACT_APP_REVIEWING_APPLICATIONS;
 
@@ -80,44 +80,48 @@ const ExtendedAppPortalView: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* <div className="portal__appstatus-container">
-          <div className="portal__appstatus">
-            <span className="portal__appstatus-text">
-              {applicationStatusMessage}
-            </span>
-          </div>
-          <div className="portal__announcements">
-            <div className="portal__announcements-container">
-              <div className="portal__announcements-box">
-                <span className="portal__announcements-styletext">
-                  ANNOUNCEMENTS
-                </span>
-                <span className="portal__announcements-event-text">
-                  <Countdown
-                    date={'Friday January 3 2020 23:59:59'}
-                    renderer={props =>
-                      props.completed ? (
-                        <Completionist />
-                      ) : props.days >= 1 ? (
-                        <span style={{ bottom: '0.5vh', position: 'relative' }}>
-                          {props.days} {props.days === 1 ? 'day' : 'days'} to
-                          apply for a spot at CruzHacks.
-                        </span>
-                      ) : (
-                        <span>
-                          {props.hours} {props.hours === 1 ? 'hour' : 'hours'}{' '}
-                          to apply for a spot at CruzHacks.
-                        </span>
-                      )
-                    }
-                  />
-                  <hr />
-                  <div>Decisions will roll out shortly!</div>
-                </span>
+        {hasSubmittedApplication && (
+          <div className="portal__appstatus-container">
+            <div className="portal__appstatus">
+              <span className="portal__appstatus-text">
+                {applicationStatusMessage}
+              </span>
+            </div>
+            <div className="portal__announcements">
+              <div className="portal__announcements-container">
+                <div className="portal__announcements-box">
+                  <span className="portal__announcements-styletext">
+                    ANNOUNCEMENTS
+                  </span>
+                  <span className="portal__announcements-event-text">
+                    <Countdown
+                      date={'Friday January 3 2020 23:59:59'}
+                      renderer={props =>
+                        props.completed ? (
+                          <Completionist />
+                        ) : props.days >= 1 ? (
+                          <span
+                            style={{ bottom: '0.5vh', position: 'relative' }}
+                          >
+                            {props.days} {props.days === 1 ? 'day' : 'days'} to
+                            apply for a spot at CruzHacks.
+                          </span>
+                        ) : (
+                          <span>
+                            {props.hours} {props.hours === 1 ? 'hour' : 'hours'}{' '}
+                            to apply for a spot at CruzHacks.
+                          </span>
+                        )
+                      }
+                    />
+                    <hr />
+                    <div>Decisions will roll out shortly!</div>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div> */}
+        )}
 
         {hasSubmittedApplication === false &&
         authUser.email_verified === true ? (
