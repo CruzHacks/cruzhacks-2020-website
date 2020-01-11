@@ -80,7 +80,7 @@ const ExtendedAppPortalView: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="portal__appstatus-container">
+        {/* <div className="portal__appstatus-container">
           <div className="portal__appstatus">
             <span className="portal__appstatus-text">
               {applicationStatusMessage}
@@ -117,7 +117,7 @@ const ExtendedAppPortalView: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {hasSubmittedApplication === false &&
         authUser.email_verified === true ? (
