@@ -1,0 +1,68 @@
+.day-two {
+    &__schedule {
+        display: block;
+        padding-top: 6vh;
+        padding-left: 10vw;
+    }
+
+    &__title {
+        @include font-source-subheader(
+            $size: 20px,
+            $color: #646262,
+            $weight: bold,
+            $lineHeight: 30px,
+            $letterSpace: 0.05em
+        );
+        font-family: Avenir Next;
+    }
+
+    &__line-break {
+        border: 1px solid #A6A6A6;
+        margin-top: 2vh;
+        margin-left: 0vw;
+        margin-bottom: 2vh;
+        width: 35vw;
+    }
+
+    &__workshop-annoucement {
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #75B47C,
+            $weight: 500,
+            $lineHeight: 27px,
+            $letterSpace: 0.05em
+        );
+        font-style: italic;
+    }
+
+    &__events-container {
+        padding-top: 12px;
+        padding-bottom: 12px; 
+    }
+
+    &__events {
+        margin-bottom: 4vh;
+    }
+
+    &__events-title {
+        @include font-source-subheader(
+            $size: 20px,
+            $color: #424242,
+            $weight: 600,
+            $lineHeight: 30px,
+            $letterSpace: 0.05em
+        );
+    }
+
+    &__events-time {
+        @include font-source-subheader(
+            $size: 20px,
+            $color: #424242,
+            $weight: normal,
+            $lineHeight: 30px,
+            $letterSpace: 0.05em
+        );
+        float: right;
+        margin-right: 10vw;
+    }
+}
