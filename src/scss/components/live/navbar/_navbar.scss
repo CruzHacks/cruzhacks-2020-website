@@ -31,7 +31,7 @@
       float: none;
       flex-direction: row;
       width: auto;
-      max-height: 118px;
+      max-height: 100px;
       border-radius: 0px;
       justify-content: space-evenly;
     }
@@ -41,7 +41,7 @@
     text-decoration: none;
     display: block;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 1.75vh;
     @include font-source-subheader(
       $size: 18px,
       $color: #5f5f5f,

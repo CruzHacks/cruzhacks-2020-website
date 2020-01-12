@@ -10,6 +10,12 @@
   left: 20vw;
   right: 20vw;
   margin-bottom: 51px;
+  @include respond(phone) {
+    left: unset;
+    right: unset;
+    margin: 0 auto 51px auto;
+    min-width: 310px;
+  }
 }
 
 @mixin cardContainer {
