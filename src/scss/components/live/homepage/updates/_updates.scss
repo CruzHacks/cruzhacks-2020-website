@@ -17,24 +17,24 @@
     background-color: #82d06f;
     border-radius: 50%;
     display: block;
-    animation: blink 1s infinite;
+    animation: blink 1.8s infinite ease-out;
   }
 
   @keyframes blink {
     0% {
-      background-color: #82d06f;
+      opacity: 0;
     }
-    49% {
-      background-color: transparent;
+    25% {
+      opacity: 0.5;
     }
     50% {
-      background-color: transparent;
+      opacity: 1;
     }
-    99% {
-      background-color: transparent;
+    75% {
+      opacity: 0.5;
     }
     100% {
-      background-color: #82d06f;
+      opacity: 0;
     }
   }
 }
