@@ -1,25 +1,13 @@
 .workshops {
-    &__container {
-        @include cardContainer();
-    }
+  &__container {
+    @include cardContainer();
+  }
 
-    &__card {
-        @include card(); 
-    }
+  &__card {
+    @include card();
+  }
 
-    &__title {
-        @include font-source-subheader(
-            $size: 2.625em,
-            $color: #5c68d7,
-            $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em,
-            $fontStyle: normal
-        );
-        font-family: Avenir Next;
-        @include responsive-font(3.1vw, 28px, 64px);
-        display: block;
-        text-transform: uppercase;
-        text-align: center;
-    }
+  &__title {
+    @include cardTitle;
+  }
 }
