@@ -11,33 +11,30 @@
     @include cardTitle;
   }
 
-  &__blinker-container {
-    animation: blink 1s infinite;
-  }
-
   &__blinker {
     height: 25px;
     width: 25px;
-    background: #82d06f;
+    background-color: #82d06f;
     border-radius: 50%;
     display: block;
+    animation: blink 1s infinite;
   }
 
   @keyframes blink {
     0% {
-      color: #82d06f;
+      background-color: #82d06f;
     }
     49% {
-      color: transparent;
+      background-color: transparent;
     }
     50% {
-      color: transparent;
+      background-color: transparent;
     }
     99% {
-      color: transparent;
+      background-color: transparent;
     }
     100% {
-      color: #82d06f;
+      background-color: #82d06f;
     }
   }
 }
