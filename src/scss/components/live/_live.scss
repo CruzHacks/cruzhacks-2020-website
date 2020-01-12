@@ -16,6 +16,9 @@
     margin: 25px auto 25px auto;
     min-width: 310px;
   }
+  @include respond(smallest) {
+    min-width: 290px;
+  }
 }
 
 @mixin cardContainer {
