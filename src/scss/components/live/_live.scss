@@ -13,7 +13,7 @@
   @include respond(phone) {
     left: unset;
     right: unset;
-    margin: 0 auto 51px auto;
+    margin: 25px auto 25px auto;
     min-width: 310px;
   }
 }

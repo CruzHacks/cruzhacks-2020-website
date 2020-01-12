@@ -1,9 +1,6 @@
 .questions {
   &__card {
     @include card;
-    @include respond(phone) {
-      bottom: 3.5em;
-    }
   }
 
   &__card-container {
