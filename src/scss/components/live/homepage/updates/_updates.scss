@@ -16,8 +16,8 @@
     width: 25px;
     background-color: #82d06f;
     border-radius: 50%;
-    display: block;
     animation: blink 1.8s infinite ease-out;
+    display: inline-block;
   }
 
   @keyframes blink {
