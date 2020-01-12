@@ -17,7 +17,7 @@
       left: 80vw;
     }
     @include respond(tab-port) {
-      left: 77vw;
+      left: calc(76vw - 1vh);
     }
     @include respond(phone) {
       z-index: 1;
