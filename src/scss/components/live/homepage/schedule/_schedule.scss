@@ -1,3 +1,25 @@
+@mixin dayTitle {
+  @include font-source-subheader(
+    $size: 20px,
+    $color: #646262,
+    $weight: bold,
+    $lineHeight: 30px,
+    $letterSpace: 0.05em
+  );
+  @include responsive-font(2.1vw, 14px, 20px);
+}
+@mixin eventTime {
+  @include font-source-subheader(
+    $size: 20px,
+    $color: #424242,
+    $weight: normal,
+    $lineHeight: 30px,
+    $letterSpace: 0.05em
+  );
+  @include responsive-font(2.8vw, 14px, 20px);
+  position: absolute;
+  right: 0;
+}
 .gen-schedule {
   &__container {
     @include cardContainer();
@@ -32,6 +54,7 @@
       $lineHeight: 30px,
       $letterSpace: 0.05em
     );
+    @include responsive-font(2.8vw, 12px, 18px);
     background: none;
     border-radius: 25.5px;
   }
@@ -43,13 +66,7 @@
   &__link-day-three.active,
   &__link-day-three:active {
     background-color: #f2f2f2;
-    @include font-source-subheader(
-      $size: 18px,
-      $color: #424242,
-      $weight: bold,
-      $lineHeight: 30px,
-      $letterSpace: 0.05em
-    );
+    font-weight: bold;
     outline: 0;
   }
 }
