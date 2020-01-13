@@ -1,55 +1,54 @@
 .day-three {
   &__schedule {
-    display: block;
+    position: relative;
     padding-top: 6vh;
-    padding-left: 10vw;
+    max-width: 55%;
+    margin: 0 auto;
+    @include respond(tab-land) {
+      max-width: 65%;
+    }
+    @include respond(phone) {
+      max-width: 75%;
+    }
   }
 
   &__title {
-    @include font-source-subheader(
-      $size: 20px,
-      $color: #646262,
-      $weight: bold,
-      $lineHeight: 30px,
-      $letterSpace: 0.05em
-    );
+    @include dayTitle;
+    @include respond(phone) {
+      max-width: 12em;
+      overflow-wrap: break-word;
+    }
   }
 
   &__line-break {
     border: 1px solid #a6a6a6;
-    margin-top: 2vh;
+    margin-top: calc(1vw + 1vh);
     margin-left: 0vw;
-    margin-bottom: 2vh;
-    width: 35vw;
+    margin-bottom: calc(1vw + 1vh);
   }
 
   &__events-container {
     padding-bottom: 12px;
+    position: relative;
   }
 
   &__events {
-    margin-bottom: 4vh;
+    margin-bottom: calc(1.5vw + 1.5vh);
   }
 
   &__events-title {
-    @include font-source-subheader(
-      $size: 20px,
-      $color: #424242,
-      $weight: 600,
-      $lineHeight: 30px,
-      $letterSpace: 0.05em
-    );
+    @include dayTitle;
+    font-weight: 600;
   }
 
   &__events-time {
-    @include font-source-subheader(
-      $size: 20px,
-      $color: #424242,
-      $weight: normal,
-      $lineHeight: 30px,
-      $letterSpace: 0.05em
-    );
-    float: right;
-    margin-right: 10vw;
+    @include eventTime;
+  }
+}
+
+#longEventTitle {
+  @include respond(tab-port) {
+    max-width: 8em;
+    overflow-wrap: break-word;
   }
 }

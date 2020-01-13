@@ -3,20 +3,26 @@
     $size: 20px,
     $color: #646262,
     $weight: bold,
-    $lineHeight: 30px,
+    $lineHeight: 20px,
     $letterSpace: 0.05em
   );
-  @include responsive-font(2.1vw, 14px, 20px);
+  @include responsive-font(1.4vw, 14px, 20px);
+  position: relative;
+  display: inline-block;
+  @include respond(phone) {
+    max-width: 9em;
+    overflow-wrap: break-word;
+  }
 }
 @mixin eventTime {
   @include font-source-subheader(
     $size: 20px,
     $color: #424242,
     $weight: normal,
-    $lineHeight: 30px,
+    $lineHeight: 20px,
     $letterSpace: 0.05em
   );
-  @include responsive-font(2.8vw, 14px, 20px);
+  @include responsive-font(1.4vw, 14px, 20px);
   position: absolute;
   right: 0;
 }
@@ -39,7 +45,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin: 0 auto;
-    width: 300px;
+    width: calc(30vw + 10vh);
   }
 
   &__link-day-one,
@@ -48,14 +54,16 @@
     text-decoration: none;
     border: none;
     @include font-source-subheader(
-      $size: 18px,
+      $size: 20px,
       $color: #424242,
       $weight: normal,
       $lineHeight: 30px,
       $letterSpace: 0.05em
     );
-    @include responsive-font(2.8vw, 12px, 18px);
+    @include responsive-font(2.8vw, 12px, 20px);
     background: none;
+    min-width: calc(10vw + 5vh);
+    padding: 5% 20% 5% 20%;
     border-radius: 25.5px;
   }
 

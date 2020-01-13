@@ -1,26 +1,30 @@
 .day-two {
   &__schedule {
-    display: block;
+    position: relative;
     padding-top: 6vh;
-    padding-left: 10vw;
+    max-width: 55%;
+    margin: 0 auto;
+    @include respond(tab-land) {
+      max-width: 65%;
+    }
+    @include respond(phone) {
+      max-width: 75%;
+    }
   }
 
   &__title {
-    @include font-source-subheader(
-      $size: 20px,
-      $color: #646262,
-      $weight: bold,
-      $lineHeight: 30px,
-      $letterSpace: 0.05em
-    );
+    @include dayTitle;
+    @include respond(phone) {
+      max-width: 12em;
+      overflow-wrap: break-word;
+    }
   }
 
   &__line-break {
     border: 1px solid #a6a6a6;
-    margin-top: 2vh;
+    margin-top: calc(1vw + 1vh);
     margin-left: 0vw;
-    margin-bottom: 2vh;
-    width: 35vw;
+    margin-bottom: calc(0.25vw + 0.25vh);
   }
 
   &__workshop-annoucement {
@@ -28,15 +32,19 @@
       $size: 18px,
       $color: #75b47c,
       $weight: 500,
-      $lineHeight: 27px,
+      $lineHeight: calc(1vw + 1vh),
       $letterSpace: 0.05em
     );
     font-style: italic;
+    position: relative;
+    white-space: nowrap;
+    @include responsive-font(1.8vw, 12px, 18px);
   }
 
   &__events-container {
-    padding-top: 12px;
     padding-bottom: 12px;
+    padding-top: 10px;
+    position: relative;
   }
 
   &__events {
@@ -44,24 +52,11 @@
   }
 
   &__events-title {
-    @include font-source-subheader(
-      $size: 20px,
-      $color: #424242,
-      $weight: 600,
-      $lineHeight: 30px,
-      $letterSpace: 0.05em
-    );
+    @include dayTitle;
+    font-weight: 600;
   }
 
   &__events-time {
-    @include font-source-subheader(
-      $size: 20px,
-      $color: #424242,
-      $weight: normal,
-      $lineHeight: 30px,
-      $letterSpace: 0.05em
-    );
-    float: right;
-    margin-right: 10vw;
+    @include eventTime;
   }
 }
