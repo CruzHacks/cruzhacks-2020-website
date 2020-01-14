@@ -11,7 +11,6 @@ const SchedulePage: React.FC = () => {
       <HeroLightBulb />
       <Backdrop />
       <HeroNavbarView />
-      {/* <span className="homepage__title">CruzHacks 2020 Event Scheduke</span> */}
       <div className="homepage__cards-container">
         <ScheduleView />
       </div>
