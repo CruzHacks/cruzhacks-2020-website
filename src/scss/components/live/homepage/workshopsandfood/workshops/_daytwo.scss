@@ -3,6 +3,8 @@
         display: block;
         padding-top: 6vh;
         padding-left: 10vw;
+        height: 100%;
+        // overflow: hidden;
     }
 
     &__date {
@@ -26,7 +28,9 @@
 
     &__events-container {
         padding-top: 12px;
-        padding-bottom: 12px; 
+        padding-bottom: 12px;
+        height: 50vh;
+        overflow: hidden;
     }
 
     &__events {
