@@ -1,4 +1,6 @@
 import React from 'react';
+import PerfectScrollbar from 'react-perfect-scrollbar'
+import 'react-perfect-scrollbar/dist/css/styles.css';
 
 const WorkshopsDayTwoView: React.FC = () => {
     return(
@@ -8,14 +10,16 @@ const WorkshopsDayTwoView: React.FC = () => {
             </span>
             <div className="workshop-schedule-two__line-break"></div>
             <div className="workshop-schedule-two__events-container">
-                <div className="workshop-schedule-two__events">
-                    <span className="workshop-schedule-two__event-title">Intro to Git</span>
-                    <span className="workshop-schedule-two__event-location">
-                        Stevenson Room 240
-                        <span className="workshop-schedule-two__event-time">10:00pm-10:30pm</span>
-                    </span>
-                    <span className="workshop-schedule-two__event-difficulty">Beginner</span>
-                </div>
+                <PerfectScrollbar>
+                    <div className="workshop-schedule-two__events">
+                        <span className="workshop-schedule-two__event-title">Intro to Git</span>
+                        <span className="workshop-schedule-two__event-location">
+                            Stevenson Room 240
+                            <span className="workshop-schedule-two__event-time">10:00pm-10:30pm</span>
+                        </span>
+                        <span className="workshop-schedule-two__event-difficulty">Beginner</span>
+                    </div>
+                </PerfectScrollbar>
             </div>
         </div>
     );
