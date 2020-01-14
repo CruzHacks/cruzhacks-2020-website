@@ -82,11 +82,6 @@ const ExtendedAppPortalView: React.FC = () => {
         </div>
         {hasSubmittedApplication && (
           <div className="portal__appstatus-container">
-            <div className="portal__appstatus">
-              <span className="portal__appstatus-text">
-                {applicationStatusMessage}
-              </span>
-            </div>
             <div className="portal__announcements">
               <div className="portal__announcements-container">
                 <div className="portal__announcements-box">
