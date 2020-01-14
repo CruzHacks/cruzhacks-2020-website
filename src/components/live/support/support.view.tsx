@@ -9,7 +9,7 @@ import FAQCardView from './faq/faq.view';
 const FAQQandA = [
     {
         question: "Are we allowed to build on past projects?",
-        answer: "Ask team about this."
+        answer: "Unfortunately, you are only allowed to work on projects initiated during this hackathon."
     }, 
     {
         question: "How many people can be on my team?", 
@@ -17,11 +17,11 @@ const FAQQandA = [
     }, 
     {
         question: "What are the rules?", 
-        answer: "redirect them to rules?"
+        answer: "We follow MLH's Code of Conduct, which you can read more about here."
     }, 
     {
         question: "What if I don't know how to code.", 
-        answer: "Beep boop beep. There is no need!"
+        answer: "Beep boop beep. There is no need! This event is open to all!"
     }, 
     {
         question: "How can I get a mentor?", 
