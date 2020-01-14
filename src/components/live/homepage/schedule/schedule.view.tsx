@@ -10,17 +10,26 @@ const ScheduleView: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isDayThree, setDayThree] = useState(false);
 
+  function cleanActives(name: string) {
+    while(name.includes("active")){
+        name = name.replace("active", "");
+    }
+    return name; 
+  }
+
   function onToggle(day: String) {
     switch(day){
       case "one":
         var one = document.getElementsByClassName("gen-schedule__link-day-one");
-        one[0].className += " active"
+        if(!one[0].className.includes("active")){
+          one[0].className += " active";
+        }
 
         var two = document.getElementsByClassName("gen-schedule__link-day-two");
-        two[0].className = two[0].className.replace("active", "");
+        two[0].className = cleanActives(two[0].className);
 
         var three = document.getElementsByClassName("gen-schedule__link-day-three");
-        three[0].className = three[0].className.replace("active", "");
+        three[0].className = cleanActives(three[0].className);
         
         setDayOne(true);
         setDayTwo(false);
@@ -29,13 +38,15 @@ const ScheduleView: React.FC = () => {
         break;
       case "two":
         var two2 = document.getElementsByClassName("gen-schedule__link-day-two");
-        two2[0].className += " active"
+        if(!two2[0].className.includes("active")){
+          two2[0].className += " active";
+        }
 
         var one2 = document.getElementsByClassName("gen-schedule__link-day-one");
-        one2[0].className = one2[0].className.replace("active", "");
+        one2[0].className = cleanActives(one2[0].className);
 
         var three2 = document.getElementsByClassName("gen-schedule__link-day-three");
-        three2[0].className = three2[0].className.replace("active", "");
+        three2[0].className = cleanActives(three2[0].className);
         
         setDayOne(false);
         setDayTwo(true);
@@ -44,13 +55,15 @@ const ScheduleView: React.FC = () => {
         break;
       case "three":
         var three3 = document.getElementsByClassName("gen-schedule__link-day-three");
-        three3[0].className += " active"
+        if(!three3[0].className.includes("active")){
+          three3[0].className += " active";
+        }
 
         var one3 = document.getElementsByClassName("gen-schedule__link-day-one");
-        one3[0].className = one3[0].className.replace("active", "");
+        one3[0].className = cleanActives(one3[0].className);
 
         var two3 = document.getElementsByClassName("gen-schedule__link-day-two");
-        two3[0].className = two3[0].className.replace("active", "");
+        two3[0].className = cleanActives(two3[0].className);
 
         setDayOne(false);
         setDayTwo(false);
