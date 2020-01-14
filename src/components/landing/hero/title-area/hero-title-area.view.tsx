@@ -58,12 +58,12 @@ const HeroTitleAreaView: React.FC = () => {
         </a>
 
         <a
-          href="mailto:sponsor@cruzhacks.com"
+          href="/schedule"
           className="hero-title-area__2019-button"
         >
           <p className="hero-title-area__2019-button-text">
             <br />
-            SPONSOR
+            EVENT SCHEDULE
           </p>
         </a>
       </div>
