@@ -10,6 +10,16 @@
     }
   }
 
+  &__cards-container {
+    @include respond(tab-land) {
+      margin-top: 3vh;
+    }
+    @include respond(phone) {
+      position: relative;
+      margin: 5vh auto 12vh auto;
+    }
+  }
+
   &__title {
     position: absolute;
     top: 10vh;

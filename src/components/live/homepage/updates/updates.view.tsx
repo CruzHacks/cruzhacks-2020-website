@@ -5,10 +5,10 @@ const UpdatesView: React.FC = () => {
     <>
       <div className="updates-card__container">
         <div className="updates-card__card">
-          <span className="updates-card__title">
+          <div className="updates-card__title-container">
             <span className="updates-card__blinker"></span>
-            Live Updates
-          </span>
+            <span className="updates-card__title">Live Updates</span>
+          </div>
         </div>
       </div>
     </>

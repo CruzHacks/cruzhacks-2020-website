@@ -12,10 +12,12 @@ const LiveHomepage: React.FC = () => {
       <Backdrop />
       <Navbar />
       <span className="homepage__title">CruzHacks 2020 Live</span>
-      <UpdatesView />
-      <ScheduleView />
-      <WorkshopsView />
-      <QuestionView />
+      <div className="homepage__cards-container">
+        <UpdatesView />
+        <ScheduleView />
+        <WorkshopsView />
+        <QuestionView />
+      </div>
     </div>
   );
 };
