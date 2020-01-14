@@ -7,6 +7,7 @@
   }
   @include respond(phone-narrow) {
     top: 1em;
+    right: -2.5em;
   }
 }
 &__logos-cied {
@@ -17,10 +18,10 @@
     left: 8vw;
   }
   @include respond(phone-narrow) {
-    left: 9vw;
+    left: 8vw;
   }
   @include respond(smallest) {
-    left: 10vw;
+    left: 9vw;
   }
 }
 &__logos-amazon {
@@ -30,6 +31,10 @@
     left: -2em;
   }
   @include respond(phone-narrow) {
-    top: 1.5em;
+    top: calc(1.5em + 1vw);
+    left: -1em;
+  }
+  @include respond(smallest) {
+    top: calc(1.25em + 1vw);
   }
 }
