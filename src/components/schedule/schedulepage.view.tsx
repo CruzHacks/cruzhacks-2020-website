@@ -8,10 +8,8 @@ import ScheduleView from '../live/homepage/schedule/schedule.view';
 const SchedulePage: React.FC = () => {
   return (
     <div className="schedulepage__container">
-      <HeroLightBulb />
       <Backdrop />
-      <HeroNavbarView />
-      <div className="homepage__cards-container">
+      <div style={{ margin: 'auto' }}>
         <ScheduleView />
       </div>
     </div>

@@ -17,7 +17,7 @@ const DayThreeSchedule: React.FC = () => {
           <span className="day-three__events-time">10:00 am</span>
         </div>
         <div className="day-three__events">
-          <span className="day-three__events-title">Luncy</span>
+          <span className="day-three__events-title">Lunch</span>
           <span className="day-three__events-time">1:00 pm</span>
         </div>
         <div className="day-three__events">
