@@ -9,11 +9,6 @@
   right: 0;
   height: calc(100vh - 5em);
   width: 100%;
-  // with this^^ the application is always just below the current viewheight
-  // continued from above : we could even include the application banner as part of this div
-
-  // padding: 15% 0 15% 0; // adjust these % as you see fit. It looks weird with too much space in mobile
-  // the padding can be turned on if you change height to height: 0vh; And you comment out the announcements box
   background-color: #f2f0ff;
   @include respond(phone) {
     height: calc(100vh - 4.5em);
@@ -21,15 +16,22 @@
 }
 
 &__appstatus {
-  margin: 2em auto 5em auto;
+  margin: 2em auto 4em auto;
   background: #6f6fe8;
   border-radius: 30px;
-
   height: 60px;
+  max-width: 50vw;
   display: table;
+  @include respond(mission) {
+    max-width: 75vw;
+  }
   @include respond(phone-narrow) {
-    margin-top: -2em;
-    max-width: 260px;
+    max-width: 10em;
+    min-width: 75%;
+  }
+  @include respond(smallest) {
+    margin-bottom: 2em;
+    margin-top: 0;
   }
 }
 
@@ -40,7 +42,11 @@
   font-weight: 500;
   color: white;
   letter-spacing: 0.05em;
+  line-height: 24px;
   text-align: center;
   padding: 1em;
   @include responsive-font(2.3vw, 0.75em, 1em);
+  @include respond(phone) {
+    line-height: 20px;
+  }
 }

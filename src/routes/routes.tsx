@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LandingView from '../components/landing/landing.view';
 import TeamView from '../components/team/team.view';
 import PortalView from '../components/portal/portal.view';
+import ExtendedAppPortalView from '../components/portal/extended-portal.view';
 import PrivateRoute from './private-route';
 import LoadingView from '../components/misc/loading.view';
 import LiveHomepage from '../components/live/homepage/homepage.view';
@@ -37,6 +38,10 @@ const Routes: React.FC = () => {
               render={() => <HackPackView />}
             />
             <Route exact path="/live/support" render={() => <SupportView />} />
+            <PrivateRoute
+              path="/extended-application"
+              component={<ExtendedAppPortalView />}
+            />
           </Switch>
         </Router>
       </div>
