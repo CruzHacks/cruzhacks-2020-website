@@ -4,7 +4,7 @@ import Backdrop from '../background/backdrop.view';
 import QuestionView from './question/question.view';
 import UpdatesView from './updates/updates.view';
 import ScheduleView from './schedule/schedule.view';
-import WorkshopsView from './workshops/workshops.view';
+import WorkshopFoodView from './workshopfood/workshopfood.view';
 
 const LiveHomepage: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const LiveHomepage: React.FC = () => {
       <span className="homepage__title">CruzHacks 2020 Live</span>
       <UpdatesView />
       <ScheduleView />
-      <WorkshopsView />
+      <WorkshopFoodView />
       <QuestionView />
     </div>
   );
