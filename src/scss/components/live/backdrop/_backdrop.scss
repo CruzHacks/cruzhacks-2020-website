@@ -1,0 +1,19 @@
+.liveBackground {
+  &__container {
+    position: sticky;
+    top: 0;
+    z-index: -1;
+  }
+
+  &__image {
+    @include svgContainer();
+    height: auto;
+    max-height: 40vh;
+    min-height: 30vh;
+    width: 100%;
+    @include respond(phone) {
+      height: auto;
+      width: 100%;
+    }
+  }
+}

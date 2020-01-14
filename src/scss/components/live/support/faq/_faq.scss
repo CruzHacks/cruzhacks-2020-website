@@ -1,0 +1,64 @@
+.faq-support{
+    &__container{
+        @include cardContainer();
+    }
+
+    &__card{
+        @include card(); 
+    }
+
+    &__title{
+        @include font-source-subheader(
+            $size: 64px,
+            $color: #5C68D7,
+            $weight: bold,
+            $lineHeight: 3.56em,
+            $letterSpace: 0.05em, 
+            $fontStyle: normal
+        );
+
+        font-family: Avenir Next;
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__questions-container{
+        display: flex;
+        align-self: auto;
+        flex-direction: column;
+        margin-left: 156px;
+    }
+
+    &__question1{
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #5f5f5f,
+            $weight: medium,
+            $lineHeight: 25px,
+            $letterSpace: 0.05em
+        );
+        text-decoration: none;
+        padding: 0;
+        border: none;
+        background: none;
+        margin-bottom: 30px;
+        text-align: left;
+        width: 400px; 
+    }
+
+    &__answer-container{
+        display: none;
+    }
+
+    &__answer{
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #5f5f5f,
+            $weight: medium,
+            $lineHeight: 25px,
+            $letterSpace: 0.05em
+        );
+        font-family: Avenir Next;
+    }
+}

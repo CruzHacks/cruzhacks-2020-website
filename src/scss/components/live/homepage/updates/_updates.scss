@@ -1,0 +1,53 @@
+.updates-card {
+  &__container {
+    @include cardContainer();
+  }
+
+  &__card {
+    @include card();
+  }
+  &__title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    @include cardTitle;
+  }
+
+  &__blinker {
+    height: calc(10px + 1.5vw);
+    width: calc(10px + 1.5vw);
+    background-color: #82d06f;
+    border-radius: 50%;
+    animation: blink 1.8s infinite ease-out;
+    display: inline-block;
+    position: relative;
+
+    right: 2vw;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    12% {
+      opacity: 0.25;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    62% {
+      opacity: 0.75;
+    }
+    75% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

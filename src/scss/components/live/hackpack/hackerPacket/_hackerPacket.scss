@@ -1,0 +1,85 @@
+.hacker-packet{
+    &__container {
+        @include cardContainer(); 
+    }
+
+    &__card{
+        @include card(); 
+    }
+
+    &__slug-on{
+        @include font-source-subheader(
+            $size: 22px,
+            $color: #575757,
+            $weight: bold,
+            $lineHeight: 3.56em,
+            $letterSpace: 0.05em, 
+            $fontStyle: normal
+        );
+        margin-left: 50px;
+        font-family: Avenir Next;
+        text-transform: uppercase;
+    }
+
+    &__title{
+        @include font-source-subheader(
+            $size: 2.625em,
+            $color: #5C68D7,
+            $weight: bold,
+            $lineHeight: 3.56em,
+            $letterSpace: 0.05em, 
+            $fontStyle: normal
+        );
+
+        font-family: Avenir Next;
+        @include responsive-font(3.1vw, 28px, 64px);
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__info{
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #424242,
+            $weight: normal,
+            $lineHeight: 30px,
+            $letterSpace: 0.05em
+        );
+        display: block;
+        font-family: Avenir Next;
+        font-style: normal;
+        text-align: left;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-bottom: 60px;
+    }
+
+    &__packet{
+        padding: 20px;
+        background: #45C899;
+        border-radius: 7px;
+        text-align: center;
+        display: block;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 15px;
+        text-decoration: none;
+
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #ffffff,
+            $weight: 600,
+            $lineHeight: 25px,
+            $letterSpace: 0.05em
+        );
+    }
+
+    &__packet:hover{
+        background: #32AA7F;
+    }
+
+    &__link-container {
+        padding-bottom: 12px;
+    }
+}
