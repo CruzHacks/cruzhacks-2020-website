@@ -48,13 +48,6 @@ const HeroHamburgerView: React.FC = () => {
               </div>
             </li>
           </Link>
-          <Link to="/schedule" style={{ textDecoration: `none` }}>
-            <li>
-              <div className="hamburger__button">
-                <p className="hamburger__button-text">EVENT SCHEDULE</p>
-              </div>
-            </li>
-          </Link>
           <Link to="/portal" style={{ textDecoration: `none` }}>
             <li>
               <div className="hamburger__button">
