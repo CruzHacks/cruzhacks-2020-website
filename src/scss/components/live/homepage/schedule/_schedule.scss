@@ -1,65 +1,82 @@
+@mixin dayTitle {
+  @include font-source-subheader(
+    $size: 20px,
+    $color: #646262,
+    $weight: bold,
+    $lineHeight: 20px,
+    $letterSpace: 0.05em
+  );
+  @include responsive-font(1.4vw, 14px, 20px);
+  position: relative;
+  display: inline-block;
+  @include respond(phone) {
+    max-width: 9em;
+    overflow-wrap: break-word;
+  }
+}
+@mixin eventTime {
+  @include font-source-subheader(
+    $size: 20px,
+    $color: #424242,
+    $weight: normal,
+    $lineHeight: 20px,
+    $letterSpace: 0.05em
+  );
+  @include responsive-font(1.4vw, 14px, 20px);
+  position: absolute;
+  right: 0;
+}
 .gen-schedule {
-    &__container {
-        @include cardContainer(); 
-    }
+  &__container {
+    @include cardContainer();
+  }
 
-    &__card {
-        @include card();
-    }
+  &__card {
+    @include card();
+  }
 
-    &__title{
-        @include font-source-subheader(
-            $size: 2.625em,
-            $color: #5c68d7,
-            $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em,
-            $fontStyle: normal
-        );
-        font-family: Avenir Next;
-        @include responsive-font(3.1vw, 28px, 64px);
-        display: block;
-        text-transform: uppercase;
-        text-align: center;
-    }
+  &__title {
+    @include cardTitle;
+  }
 
-    &__links{
-        display: flex;
-        flex-flow: row;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-left: 15vw;
-        width: 300px;
-    }
+  &__links {
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: calc(30vw + 10vh);
+  }
 
-    &__link-day-one, &__link-day-two, &__link-day-three {
-        text-decoration: none;
-        border: none;
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #424242,
-            $weight: normal,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        background: none;
-        border-radius: 25.5px;
-    }
+  &__link-day-one,
+  &__link-day-two,
+  &__link-day-three {
+    text-decoration: none;
+    border: none;
+    @include font-source-subheader(
+      $size: 20px,
+      $color: #424242,
+      $weight: normal,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    @include responsive-font(2.8vw, 12px, 20px);
+    background: none;
+    min-width: calc(10vw + 5vh);
+    padding: 5% 20% 5% 20%;
+    border-radius: 25.5px;
+  }
 
-    &__link-day-one.active, &__link-day-one:active, 
-    &__link-day-two.active, &__link-day-two:active,
-    &__link-day-three.active, &__link-day-three:active 
-    {
-        background-color: #F2F2F2;
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #424242,
-            $weight: bold,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        outline: 0;
-    }
+  &__link-day-one.active,
+  &__link-day-one:active,
+  &__link-day-two.active,
+  &__link-day-two:active,
+  &__link-day-three.active,
+  &__link-day-three:active {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    outline: 0;
+  }
 }
 
 @import './dayone/dayone';
