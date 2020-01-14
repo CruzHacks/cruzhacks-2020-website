@@ -29,7 +29,13 @@ const CrowdForgeCardView: React.FC = () => {
                     </span>
                 </div>
                 <div className="crowd-forge__link-container">
-                    <a className="crowd-forge__team-link" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Find a Team</a>
+                    <a className="crowd-forge__team-link" 
+                    href="https://crowdforge.io/hackathons/CruzHacks2020" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    >
+                        Find a Team
+                    </a>
                 </div>
             </div>
         </div>
