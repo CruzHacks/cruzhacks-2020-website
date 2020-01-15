@@ -33,3 +33,13 @@
     top: 1.5em;
   }
 }
+&__logos-poly {
+  position: relative;
+  top: 2.5em;
+  @include respond(tab-port) {
+    left: -2.75em;
+  }
+  @include respond(phone-narrow) {
+    top: 1em;
+  }
+}
