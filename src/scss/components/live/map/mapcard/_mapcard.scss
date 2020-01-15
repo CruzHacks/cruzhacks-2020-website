@@ -1,0 +1,13 @@
+.map-card {
+    &__container {
+        @include cardContainer(); 
+    }
+
+    &__card {
+        @include card(); 
+    }
+
+    &__image-container-1, &__image-container-2 {
+        padding: 12px;
+    }
+}

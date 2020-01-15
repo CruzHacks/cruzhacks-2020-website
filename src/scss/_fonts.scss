@@ -74,6 +74,40 @@
     /* iOS 4.1- */ url('../assets/fonts/subheader/AvenirBook.svg#Avenir Book')
       format('svg');
 }
+/* Subheader font medium*/
+@font-face {
+  font-family: 'AvenirBook';
+  src: url('../assets/fonts/subheader/AvenirMedium.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/subheader/AvenirMedium.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../assets/fonts/subheader/AvenirMedium.otf')
+      format('opentype'),
+    /* Open Type Font */ url('../assets/fonts/subheader/AvenirMedium.svg')
+      format('svg'),
+    /* Legacy iOS */ url('../assets/fonts/subheader/AvenirMedium.ttf')
+      format('truetype'),
+    /* Modern Browsers */ url('../assets/fonts/subheader/AvenirMedium.woff2')
+      format('woff2'); /* Modern Browsers */
+  font-weight: 600;
+  font-style: normal;
+}
+/* Subheader font bold*/
+@font-face {
+  font-family: 'AvenirBook';
+  src: url('../assets/fonts/subheader/AvenirHeavy.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/subheader/AvenirHeavy.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../assets/fonts/subheader/AvenirHeavy.otf')
+      format('opentype'),
+    /* Open Type Font */ url('../assets/fonts/subheader/AvenirHeavy.svg')
+      format('svg'),
+    /* Legacy iOS */ url('../assets/fonts/subheader/AvenirHeavy.ttf')
+      format('truetype'),
+    /* Modern Browsers */ url('../assets/fonts/subheader/AvenirHeavy.woff2')
+      format('woff2'); /* Modern Browsers */
+  font-weight: bold;
+  font-style: normal;
+}
 
 /* Body font */
 @font-face {

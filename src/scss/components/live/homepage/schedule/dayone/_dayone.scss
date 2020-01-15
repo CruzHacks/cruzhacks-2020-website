@@ -1,0 +1,47 @@
+.day-one {
+  &__schedule {
+    position: relative;
+    padding-top: 6vh;
+    max-width: 55%;
+    margin: 0 auto;
+    @include respond(tab-land) {
+      max-width: 65%;
+    }
+    @include respond(phone) {
+      max-width: 75%;
+    }
+  }
+
+  &__title {
+    @include dayTitle;
+    @include respond(phone) {
+      max-width: 10em;
+      overflow-wrap: break-word;
+    }
+  }
+
+  &__line-break {
+    border: 1px solid #a6a6a6;
+    margin-top: calc(1vw + 1vh);
+    margin-left: 0vw;
+    margin-bottom: calc(1vw + 1vh);
+  }
+
+  &__events-container {
+    padding-bottom: 12px;
+    position: relative;
+  }
+
+  &__events {
+    margin-bottom: 4vh;
+  }
+
+  &__events-title {
+    @include dayTitle;
+    font-weight: 600;
+  }
+
+  &__events-time {
+    @include eventTime;
+  }
+}

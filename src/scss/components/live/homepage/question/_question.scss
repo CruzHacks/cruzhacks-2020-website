@@ -1,0 +1,67 @@
+.questions {
+  &__card {
+    @include card;
+  }
+
+  &__card-container {
+    @include cardContainer;
+  }
+
+  &__title {
+    @include cardTitle;
+  }
+
+  &__image {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: 35vw;
+  }
+  &__paragraph {
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #424242,
+      $weight: normal,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    display: block;
+    font-style: normal;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: calc(20px + 5vw);
+    margin-right: calc(20px + 5vw);
+    margin-bottom: 60px;
+  }
+
+  &__button-container {
+    padding-bottom: 12px;
+  }
+  &__join-slack,
+  &__goto-hackpack {
+    padding: 20px;
+    background: #5c68d7;
+    border-radius: 7px;
+    text-align: center;
+    display: block;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 15px;
+    text-decoration: none;
+
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #ffffff,
+      $weight: 600,
+      $lineHeight: 25px,
+      $letterSpace: 0.05em
+    );
+  }
+
+  &__join-slack:hover,
+  &__goto-hackpack:hover {
+    background: #3d49ba;
+  }
+}

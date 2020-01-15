@@ -1,0 +1,88 @@
+.event-info{
+
+    &__container {
+        @include cardContainer(); 
+    }
+
+    &__card {
+        @include card(); 
+    }
+
+    &__small-txt{
+        @include font-source-subheader(
+            $size: 22px,
+            $color: #575757,
+            $weight: bold,
+            $lineHeight: 3.56em,
+            $letterSpace: 0.05em, 
+            $fontStyle: normal
+        );
+        margin-left: 50px;
+        font-family: Avenir Next;
+        text-transform: uppercase;
+    }
+
+    &__title{
+        @include font-source-subheader(
+            $size: 64px,
+            $color: #5C68D7,
+            $weight: bold,
+            $lineHeight: 3.56em,
+            $letterSpace: 0.05em, 
+            $fontStyle: normal
+        );
+
+        font-family: Avenir Next;
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__color-legend, &__slack{
+        margin-top: 40px; 
+    }
+
+    &__wifi-title, &__legend-title, &__slack-title{
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #424242,
+            $weight: 600,
+            $lineHeight: 30px,
+            $letterSpace: 0.05em
+        );
+        display: block;
+        font-family: Avenir Next;
+        font-style: bold;
+        text-align: left;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    &__wifi-user, &__wifi-pass,
+    &__legend-org, &__legend-mentors, &__legend-judges,
+    &__slack-info{
+        @include font-source-subheader(
+            $size: 18px,
+            $color: #424242,
+            $weight: normal,
+            $lineHeight: 30px,
+            $letterSpace: 0.05em
+        );
+        display: block;
+        font-family: Avenir Next;
+        font-style: normal;
+        text-align: left;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    &__wifi-section, &__color-legend, &__slack {
+        padding-bottom: 12px;
+    }
+
+    &__slack-link{
+        text-decoration: none;
+        color: inherit;
+        font-style: italic;
+    }
+}

@@ -3,7 +3,7 @@ import Countdown from 'react-countdown-now';
 import HeroSubscribeToEmailList from './hero-subscribe-to-email-list.view';
 
 const HeroTitleAreaView: React.FC = () => {
-  const Completionist = () => <span> Decisions rolling out…</span>;
+  const Completionist = () => <span> Check-in @ 5pm</span>;
   return (
     <div className="hero-title-area">
       <div className="hero-title-area__title-text">
@@ -14,7 +14,6 @@ const HeroTitleAreaView: React.FC = () => {
       </div>
       <div className="hero-title-area__eventInfo hero-title-area__eventInfo-text">
         <p>// January 17-19th, 2020</p>
-        <p>// Stevenson Event Center, UC Santa Cruz</p>
         <p>
           //
           {
@@ -42,6 +41,7 @@ const HeroTitleAreaView: React.FC = () => {
             />
           }
         </p>
+        <p>// Stevenson Event Center, UC Santa Cruz</p>
       </div>
       <div className="hero-title-area__button-container">
         <a
@@ -57,13 +57,10 @@ const HeroTitleAreaView: React.FC = () => {
           </p>
         </a>
 
-        <a
-          href="mailto:sponsor@cruzhacks.com"
-          className="hero-title-area__2019-button"
-        >
+        <a href="/schedule" className="hero-title-area__2019-button">
           <p className="hero-title-area__2019-button-text">
             <br />
-            SPONSOR
+            SCHEDULE
           </p>
         </a>
       </div>
