@@ -8,19 +8,7 @@
     }
 
     &__title{
-        @include font-source-subheader(
-            $size: 2.625em,
-            $color: #5C68D7,
-            $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em, 
-            $fontStyle: normal
-        );
-
-        font-family: Avenir Next;
-        display: block;
-        text-transform: uppercase;
-        text-align: center;
+        @include cardTitle();
     }
 
     &__police-title, &__fire-title, 
@@ -33,7 +21,6 @@
             $letterSpace: 0.05em
         );
         display: block;
-        font-family: Avenir Next;
         font-style: bold;
         text-align: left;
         margin-left: 150px;
@@ -50,7 +37,6 @@
             $letterSpace: 0.05em
         );
         display: block;
-        font-family: Avenir Next;
         font-style: normal;
         text-align: left;
         margin-left: 150px;
