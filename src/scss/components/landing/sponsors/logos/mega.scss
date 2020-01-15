@@ -66,3 +66,17 @@
     top: 0.7vw;
   }
 }
+&__logos-ripplematch {
+  position: relative;
+  bottom: -0.65em;
+  @include respond(tab-port) {
+    bottom: -1.5vw; 
+    min-width: 105%;
+  }
+  @include respond(phone) {
+    bottom: -0.4em;
+  }
+  @include respond(phone-narrow) {
+    bottom: -0.02em;
+  }
+}
