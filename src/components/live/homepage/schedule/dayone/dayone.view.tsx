@@ -22,6 +22,10 @@ const DayOneSchedule: React.FC = () => {
           <span className="day-one__events-title">Hacking Begins</span>
           <span className="day-one__events-time">9:00 pm</span>
         </div>
+        <div className="day-one__events">
+          <span className="day-one__events-title">Midnight Snack</span>
+          <span className="day-one__events-time">12:00 am</span>
+        </div>
       </div>
     </div>
   );
