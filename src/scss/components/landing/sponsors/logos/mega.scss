@@ -32,12 +32,30 @@
   bottom: 0.65em;
 }
 &__logos-notivize {
-  bottom: 0.25vw;
+  position: relative;
+  bottom: 0.5em;
+  @include respond(tab-port) {
+    bottom: calc(0.1em - 1.3vw);
+  }
+  @include respond(phone-narrow) {
+    bottom: calc(0.1em - 1.4vw);
+  }
+  @include respond(smallest) {
+    bottom: calc(0.07em - 1.9vw);
+  }
 }
 &__logos-stickermule {
   position: relative;
-
-  bottom: 0.25em;
+  bottom: 0.5em;
+  @include respond(tab-port) {
+    bottom: calc(0.1em - 1.3vw);
+  }
+  @include respond(phone-narrow) {
+    bottom: calc(0.1em - 1.4vw);
+  }
+  @include respond(smallest) {
+    bottom: calc(0.07em - 1.9vw);
+  }
 }
 &__logos-shawee {
   position: relative;
