@@ -59,15 +59,17 @@
         text-decoration: none;
         border: none;
         @include font-source-subheader(
-            $size: 18px,
+            $size: 20px,
             $color: #424242,
             $weight: normal,
             $lineHeight: 30px,
             $letterSpace: 0.05em
         );
+        @include responsive-font(2.8vw, 12px, 20px);
         background: none;
+        min-width: calc(10vw + 5vh);
+        padding: 5% 20% 5% 20%;
         border-radius: 25.5px;
-        outline:0;
     }
 
     &__day-button-one.active, &__day-button-one:active,
@@ -84,54 +86,100 @@
         outline: 0;
     }
 
-    &__toggle-buttons {
-        padding-bottom: 60px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    &__toggle-buttons-container {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        top: calc(50%-(40%/2));
+        left: calc(50%-(40%/2));
     }
 
-    &__checkbox {
-        height: 0;
-        width: 0;
-        visibility: hidden;
+    &__toggle-component {
+        margin: 0 auto;
+        width: 36vw;
+        height: 11vh;
+        background: #EEEEEE;
+        border: 1px solid #EEE;
+        position: relative;
+        border-radius: 55.5px;
+        cursor: pointer;
+        transition: border-color background-color 0.3s;
+        z-index: 0;
     }
 
-    &__label{
-        display: block;
-        margin-left: 25vw;
-        width: 450px;
-        height: 50px;
-        background: grey;
-        border-radius: 100px;
-        // position: relative;
-        transition: background-color .2s;
-        // z-index: 1;
+    &__toggle-component.active {
+        background: #EEEEEE;
     }
 
-    &__button, &__label {
-        content: '';
+    &__toggle-component.active &__toggle-button {
+        right: -2px;
+        width: 13vw;
+        &:before {
+            content: "Food";
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            padding-left: 1.5vw;
+        }
+    }
+
+    &__toggle-component &__toggle-button {
         position: absolute;
-        top: 12px;
-        left: 2px;
-        width: 450px;
-        height: 45px;
-        border-radius: 45px;
-        transition: 0.2s;
+        right: 53%;
+        height: 11vh;
+        width: 17vw;
         background: #5C72EA;
-        box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+        border-radius: 55.5px;
+        transition: right 0.3s;
     }
 
-    &__checkbox:checked + &__label, &__button {
-        display: block;
-        left: 2vw;
-        transform: translateX(-100%);
-        background-color: #EEEEEE;
+    &__toggle-button:before {
+        content: "Workshop";
+        position: relative;
+        top: 2.5vh;
+        left: 1.5vw;
+        @include font-source-subheader(
+            $size: 35px,
+            $color: #FFFFFF,
+            $weight: bold,
+            $lineHeight: 48px,
+            $letterSpace: 0.02em
+        );
+        @include responsive-font(2.7vw, 10px, 30px);
+        text-transform: uppercase;
+    }
+    
+    &__toggle-button {
+        width: 12vw; 
     }
 
-    &__label:active, &__button {
-        width: 450px;
+    &__workshop-toggle{
+        @include font-source-subheader(
+            $size: 35px,
+            $color: #AEAEAE,
+            $weight: bold,
+            $lineHeight: 48px,
+            $letterSpace: 0.02em
+        );
+        @include responsive-font(2.7vw, 10px, 30px);
+        text-transform: uppercase;
+        position: relative;
+        top: 2.5vh;
+        left: 2.5vw;
+    }
+
+    &__food-toggle {
+        @include font-source-subheader(
+            $size: 35px,
+            $color: #AEAEAE,
+            $weight: bold,
+            $lineHeight: 48px,
+            $letterSpace: 0.02em
+        );
+        @include responsive-font(2.7vw, 10px, 30px);
+        text-transform: uppercase;
+        position: relative;
+        padding-left: 23vw;
+        top: 2.5vh;
     }
 }
 
