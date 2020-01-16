@@ -10,10 +10,10 @@
     height: auto;
     max-height: 40vh;
     min-height: 30vh;
-    min-width: 100%;
+    width: 100%;
     @include respond(phone) {
       height: auto;
-      max-width: 100%;
+      width: 100%;
     }
   }
 }
