@@ -25,7 +25,7 @@
 
     &__events-container {
         padding-top: 12px;
-        padding-bottom: 12px;
+        padding-bottom: 36px;
         height: 50vh;
         overflow: hidden;
     }
@@ -44,7 +44,6 @@
             $lineHeight: 30px,
             $letterSpace: 0.05em
         );
-        font-family: Avenir Next;
     }
 
     &__event-location {
@@ -55,7 +54,6 @@
             $lineHeight: 30px,
             $letterSpace: 0.05em
         );
-        font-family: Avenir Next;
     }
 
     &__event-difficulty {
@@ -66,7 +64,6 @@
             $lineHeight: 30px,
             $letterSpace: 0.05em
         );
-        font-family: Avenir Next;
     }
 
     &__event-time {
