@@ -35,11 +35,13 @@
   position: relative;
   bottom: 0.5em;
   @include respond(tab-port) {
-    bottom: 0;
-    top: 0.6em;
+    bottom: calc(0.1em - 1.3vw);
   }
   @include respond(phone-narrow) {
-    top: 0.25em;
+    bottom: calc(0.1em - 1.4vw);
+  }
+  @include respond(smallest) {
+    bottom: calc(0.07em - 1.9vw);
   }
 }
 &__logos-shawee {
