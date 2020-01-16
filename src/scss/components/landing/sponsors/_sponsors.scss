@@ -5,6 +5,11 @@
     position: relative;
     top: -2.5em;
   }
+  &__logosContainer {
+    @include respond(tab-port) {
+      max-width: 89vw;
+    }
+  }
   @include respond(phone) {
     margin-top: 2vw;
   }

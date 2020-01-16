@@ -4,7 +4,14 @@ const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
 const resumeEndpoint: string = process.env.REACT_APP_API_UPLOAD_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
 
-export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
+type HackerType = {
+  firstname: string;
+  accepted: boolean;
+};
+
+export default HackerType;
+
+export function getHackers(email: string): Promise<Array<HackerType>> {
   const requestConfig: AxiosRequestConfig = {
     params: {
       authentication: apiKey,
@@ -14,13 +21,13 @@ export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
   };
 
   return axios
-    .get<Array<Object>>(endpoint, requestConfig)
+    .get<Array<HackerType>>(endpoint, requestConfig)
     .then(response => {
-      return response.data.length !== 0;
+      return response.data;
     })
     .catch(error => {
       if (error.response.status === 404) {
-        return Promise.resolve(false);
+        return Promise.resolve([]);
       }
 
       return Promise.reject(error);
