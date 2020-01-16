@@ -19,11 +19,9 @@ const FAQCardView: React.FC<faqs> = faqs => {
                             className={`faq-support__questions ${questions.question}`}
                             onClick={() => {
                                 var currElement = document.getElementById(`faq-support__answers ${questions.question}`);
-                                console.log(currElement!.style.display)
                                 currElement!.style.display === "none"
                                 ? currElement!.style.display = "block"
                                 : currElement!.style.display = "none"
-                                
                             }}
                             type="button"
                         >
