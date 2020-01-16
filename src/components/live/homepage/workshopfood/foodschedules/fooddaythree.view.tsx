@@ -15,7 +15,7 @@ const FoodDayThreeView: React.FC = () => {
                             <span className="food-schedule-three__food-place">{event.food}</span>
                             <div className="food-schedule-three__food-description-container">
                                 {event.description.map(descript => (
-                                    <span className="food-schedule-three__food-description"> {descript} </span>
+                                    <span className="food-schedule-three__food-description" key={descript}> {descript} </span>
                                 ))}
                             </div>
                         </div>
