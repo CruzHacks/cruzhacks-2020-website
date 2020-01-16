@@ -11,8 +11,7 @@
 
 .background__container {
   position: absolute;
-  width: 100%;
+  min-width: 100vw;
   z-index: 0;
   overflow: hidden;
-  z-index: 0;
 }

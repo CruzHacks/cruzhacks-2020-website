@@ -65,7 +65,7 @@
             $lineHeight: 30px,
             $letterSpace: 0.05em
         );
-        @include responsive-font(2.8vw, 12px, 20px);
+        cursor: pointer;
         background: none;
         min-width: calc(10vw + 5vh);
         padding: 5% 20% 5% 20%;

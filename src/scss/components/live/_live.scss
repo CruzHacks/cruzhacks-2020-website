@@ -7,8 +7,8 @@
   border-radius: 12px;
   display: block;
   position: relative;
-  left: 20vw;
   right: 20vw;
+  left: 20vw;
   margin-bottom: 51px;
   @include respond(phone) {
     left: unset;
