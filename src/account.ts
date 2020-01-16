@@ -3,6 +3,32 @@ import axios, { AxiosRequestConfig } from 'axios';
 const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
 const resumeEndpoint: string = process.env.REACT_APP_API_UPLOAD_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
+const annoucementEndpoint: string = process.env.REACT_APP_ANNOUCEMENT_API_ENDPOINT + '';
+
+export function getAnnoucements(): Promise<Object> {
+  var data: any;
+  var posts: any; 
+  const requestConfig: AxiosRequestConfig = {
+    params: {
+      authentication: apiKey
+    },
+  };
+
+  return axios
+    .get<Array<Object>>(annoucementEndpoint, requestConfig)
+    .then(response => {
+      data = response.data; 
+      posts = data.announcement.posts;
+      return posts;
+    })
+    .catch(error => {
+      if (error.response.status === 404) {
+        return Promise.resolve(error);
+      }
+
+      return Promise.reject(error);
+    });
+}
 
 export function applicationHasBeenSubmitted(email: string): Promise<boolean> {
   const requestConfig: AxiosRequestConfig = {
