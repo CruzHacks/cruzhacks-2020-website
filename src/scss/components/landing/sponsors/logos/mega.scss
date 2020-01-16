@@ -44,6 +44,19 @@
     bottom: calc(0.07em - 1.9vw);
   }
 }
+&__logos-stickermule {
+  position: relative;
+  bottom: 0.5em;
+  @include respond(tab-port) {
+    bottom: calc(0.1em - 1.3vw);
+  }
+  @include respond(phone-narrow) {
+    bottom: calc(0.1em - 1.4vw);
+  }
+  @include respond(smallest) {
+    bottom: calc(0.07em - 1.9vw);
+  }
+}
 &__logos-shawee {
   position: relative;
   top: 0.25em;
@@ -53,10 +66,7 @@
 }
 &__logos-stickermule {
   position: relative;
-  bottom: 0.5em;
-  @media screen and (max-width: 1313px) {
-    bottom: 0.25em;
-  }
+  bottom: 0.25em;
   @include respond(phone-narrow) {
     top: calc(0.4em - 1.75vw);
   }
@@ -79,7 +89,7 @@
   top: 0.9em;
   @include respond(tab-port) {
     top: unset;
-    bottom: -1.5vw;
+    bottom: calc(0.8em - 3vw);
     min-width: 105%;
   }
   @include respond(phone) {
