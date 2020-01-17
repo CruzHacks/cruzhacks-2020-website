@@ -15,7 +15,7 @@ const HackerPacketCardView: React.FC = () => {
                     It covers what you need to bring, travel info, workshop info, and more.
                 </span>
                 <div className="hacker-packet__link-container">
-                    <a className="hacker-packet__packet" href="https://www.google.com" target="_blank" rel="noopener noreferrer">View Hacker Packet</a>
+                    <a className="hacker-packet__packet" href="https://github.com/CruzHacks/Cruzhacks-Hacker-Packs" target="_blank" rel="noopener noreferrer">View Hacker Packet</a>
                 </div>
             </div>
         </div>
