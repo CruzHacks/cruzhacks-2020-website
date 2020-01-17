@@ -16,7 +16,8 @@
             $letterSpace: 0.05em, 
             $fontStyle: normal
         );
-        margin-left: 50px;
+        margin-left: calc(20px + 5vw);
+        @include responsive-font(1.4vw, 14px, 22px);
         text-transform: uppercase;
     }
 
@@ -35,8 +36,8 @@
         display: block;
         font-style: normal;
         text-align: left;
-        margin-left: 200px;
-        margin-right: 200px;
+        margin-left: calc(20px + 5vw);
+        margin-right: calc(20px + 5vw);
         margin-bottom: 60px;
     }
 

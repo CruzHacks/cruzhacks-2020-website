@@ -1,5 +1,4 @@
 .event-info{
-
     &__container {
         @include cardContainer(); 
     }
@@ -17,8 +16,8 @@
             $letterSpace: 0.05em, 
             $fontStyle: normal
         );
-        margin-left: 50px;
-        font-family: Avenir Next;
+        margin-left: calc(10px + 5vw);
+        @include responsive-font(1.4vw, 14px, 22px);
         text-transform: uppercase;
     }
 
@@ -39,10 +38,10 @@
             $letterSpace: 0.05em
         );
         display: block;
-        font-style: bold;
+        font-style: normal;
         text-align: left;
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: calc(20px + 9vw);
+        margin-right: calc(20px + 6vw);
     }
 
     &__wifi-user, &__wifi-pass,
@@ -58,8 +57,8 @@
         display: block;
         font-style: normal;
         text-align: left;
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: calc(20px + 9vw);
+        margin-right: calc(20px + 6vw);
     }
 
     &__wifi-section, &__color-legend, &__slack {
