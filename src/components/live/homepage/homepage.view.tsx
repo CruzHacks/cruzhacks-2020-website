@@ -13,7 +13,7 @@ const LiveHomepage: React.FC = () => {
       <Navbar />
       <span className="homepage__title">CruzHacks 2020 Live</span>
       <div className="homepage__cards-container">
-        <UpdatesView />
+        {/* <UpdatesView /> */}
         <ScheduleView />
         <WorkshopFoodView />
         <QuestionView />

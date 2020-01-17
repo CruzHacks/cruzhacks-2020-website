@@ -27,6 +27,17 @@ const HeroNavbarView: React.FC = () => {
       </div>
 
       <div className="navbar__button">
+        <Link to="/live" style={{ textDecoration: `none` }}>
+          <p
+            className="navbar__button-text"
+            style={{ textDecoration: 'none', cursor: 'context-menu' }}
+          >
+            LIVE EVENT INFO
+          </p>
+        </Link>
+      </div>
+
+      <div className="navbar__button">
         <Link to="/portal" style={{ textDecoration: `none` }}>
           <p className="navbar__button-text">
             <Countdown
