@@ -50,12 +50,12 @@ const WorkshopFoodView: React.FC = () => {
             <div className="workshop-and-food__placeholder-container">
               <div className="workshop-and-food__toggle-button">
                 <span className="workshop-and-food__toggle-text">
-                  {isToggleActive ? 'Food' : 'Workshop'}
+                  {isToggleActive ? 'Food' : 'Workshops'}
                 </span>
               </div>
               {isToggleActive ? (
                 <span className="workshop-and-food__workshop-toggle">
-                  Workshop
+                  Workshops
                 </span>
               ) : (
                 <span className="workshop-and-food__food-toggle">Food</span>
