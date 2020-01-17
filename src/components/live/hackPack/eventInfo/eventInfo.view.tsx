@@ -7,9 +7,9 @@ const EventInfoCardView: React.FC = () => {
                 <span className="event-info__small-txt">
                     Need Something?
                 </span>
-                <div className="event-info__title">
+                <span className="event-info__title">
                     Event Info
-                </div>
+                </span>
                 <div className="event-info__wifi-section">
                     <span className="event-info__wifi-title">
                         WiFi

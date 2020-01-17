@@ -7,9 +7,9 @@ const DevpostCardView: React.FC = () => {
                 <span className="devpost__submit-info">
                     Ready to Submit Your Project?
                 </span>
-                <div className="devpost__title">
+                <span className="devpost__title">
                     Devpost
-                </div>
+                </span>
                 <span className="devpost__description">
                     Once your team is completed with your project, submit it to DevPost under the guidelines and rules.
                 </span>

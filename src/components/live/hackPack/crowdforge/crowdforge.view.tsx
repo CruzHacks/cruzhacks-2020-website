@@ -7,9 +7,9 @@ const CrowdForgeCardView: React.FC = () => {
                 <span className="crowd-forge__find-team">
                     Find a team to Join
                 </span>
-                <div className="crowd-forge__title">
+                <span className="crowd-forge__title">
                     CrowdForge
-                </div>
+                </span>
                 <div className="crowd-forge__instructions">
                     <span className="crowd-forge__line-one-description">
                         You can find everything you need to know in our hacker Join or create your own team using CrowdForge.
