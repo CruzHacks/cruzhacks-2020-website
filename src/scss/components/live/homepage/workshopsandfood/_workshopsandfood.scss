@@ -204,7 +204,7 @@
     text-transform: uppercase;
     position: absolute;
     @include respond(phone-narrow) {
-      padding-right: 2.5em;
+      padding-right: 2em;
     }
   }
 }
