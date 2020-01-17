@@ -27,6 +27,7 @@
             $lineHeight: 25px,
             $letterSpace: 0.05em
         );
+        cursor: pointer;
         text-decoration: none;
         outline: 0;
         padding: 0;
@@ -34,7 +35,8 @@
         background: none;
         margin-bottom: 30px;
         text-align: left;
-        width: 400px; 
+        margin-left: calc(20px + 5vw);
+        margin-right: calc(20px + 5vw);
     }
 
     &__answers{
@@ -46,7 +48,8 @@
             $letterSpace: 0.05em
         );
         display: none;
-        margin-top: -12px;
+        margin-left: calc(20px + 5vw);
+        margin-right: calc(20px + 5vw);
         padding-bottom: 12px;
         @include responsive-font(1.4vw, 14px, 18px);
         left: 0;
