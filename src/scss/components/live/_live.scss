@@ -7,7 +7,8 @@
   border-radius: 12px;
   display: block;
   position: relative;
-  margin: 0 auto;
+  right: 20vw;
+  left: 20vw;
   margin-bottom: 51px;
   @include respond(phone) {
     left: unset;
@@ -46,3 +47,7 @@
 @import './map/map';
 @import './hackpack/hackpack';
 @import './support/support';
+
+.li {
+  list-style-type: disc;
+}

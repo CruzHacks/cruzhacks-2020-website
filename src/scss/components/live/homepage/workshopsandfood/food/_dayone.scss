@@ -1,4 +1,4 @@
-.workshop-schedule-two {
+.food-schedule-one {
   &__container {
     position: relative;
     padding-top: 6vh;
@@ -14,6 +14,10 @@
 
   &__date {
     @include dayTitle;
+    @include respond(phone) {
+      max-width: 11em;
+      overflow-wrap: break-word;
+    }
   }
 
   &__line-break {
@@ -23,35 +27,24 @@
     margin-bottom: calc(1vw + 1vh);
   }
 
-  &__events-container {
+  &__food-container {
     padding-top: 12px;
-    padding-bottom: 36px;
-    height: 50vh;
-    overflow: hidden;
+    padding-bottom: 3vh;
   }
 
-  &__events {
-    margin-bottom: 4vh;
-    display: flex;
-    flex-direction: column;
+  &__food {
+    padding-bottom: 12px;
   }
 
-  &__event-title {
-    @include EventTitle;
-    @include respond(phone) {
-      max-width: 10em;
-    }
+  &__food-type-and-time {
+    @include FoodTypeAndTime();
   }
 
-  &__event-location {
-    @include EventLocation;
+  &__food-place {
+    @include FoodPlace();
   }
 
-  &__event-difficulty {
-    @include EventDifficulty;
-  }
-
-  &__event-time {
-    @include WorkshopTime;
+  &__food-description {
+    @include FoodDescription();
   }
 }

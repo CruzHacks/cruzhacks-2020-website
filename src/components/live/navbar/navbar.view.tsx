@@ -7,42 +7,53 @@ import mapIcon from '../../../assets/live/navbar/mapicon.svg'
 import hackPackIcon from '../../../assets/live/navbar/hackPackIcon.svg'
 import supportIcon from '../../../assets/live/navbar/supportIcon.svg'
 
+const Links = [
+    {
+        name: "Home", 
+        class: "home",
+        link: "/live", 
+        icon: homeIcon
+    }, 
+    {
+        name: "Hack Pack", 
+        class: "hackPack",
+        link: "/live/hackpack", 
+        icon: hackPackIcon
+    }, 
+    {
+        name: "Map", 
+        class: "map",
+        link: "/live/map", 
+        icon: mapIcon
+    },
+    {
+        name: "Support",
+        class: "support",
+        link: "/live/support", 
+        icon: supportIcon
+    },
+    {
+        name: "Main Site",
+        class: "mainSite",
+        link: "/", 
+        icon: mainSiteIcon
+    }
+]
+
 const Navbar: React.FC = () => {
     return (
         <div className="liveNavbar__container">
                 <div className="liveNavbar__logo-container">
                     <img src={logo} alt="Logo" className="liveNavbar__logo"/>
                 </div>
-                <div className="liveNavbar__homeLink">
-                    <NavLink to="/live" className="liveNavbar__link" rel="noopener noreferrer">
-                        <img src={homeIcon} alt="Home Icon" className="liveNavbar__link-logos"/> 
-                        Home
-                    </NavLink>
-                </div>
-                <div className="liveNavbar__hackPackLink">
-                    <NavLink to="/live/hackpack" className="liveNavbar__link" rel="noopener noreferrer">
-                        <img src={hackPackIcon} alt="Logo" className="liveNavbar__link-logos"/> 
-                        Hack Pack
-                    </NavLink>
-                </div>
-                <div className="liveNavbar__mapLink">
-                    <NavLink to="/live/map" className="liveNavbar__link" rel="noopener noreferrer">
-                        <img src={mapIcon} alt="Logo" className="liveNavbar__link-logos"/> 
-                        Map
-                    </NavLink>
-                </div>
-                <div className="liveNavbar__supportLink">
-                    <NavLink to="/live/support" className="liveNavbar__link" rel="noopener noreferrer">
-                        <img src={supportIcon} alt="Logo" className="liveNavbar__link-logos"/> 
-                        Support
-                    </NavLink>
-                </div>
-                <div className="liveNavbar__mainSiteLink">
-                    <NavLink to="/" className="liveNavbar__link" rel="noopener noreferrer">
-                        <img src={mainSiteIcon} alt="Logo" className="liveNavbar__link-logos"/> 
-                        Main Site
-                    </NavLink>
-                </div>
+                {Links.map(item => (
+                    <div className={`liveNavbar__${item.class}Link`} key={item.name}>
+                        <NavLink to={item.link} className="liveNavbar__link" rel="noopener noreferrer">
+                            <img src={item.icon} alt={`${item.name} Icon`} className="liveNavbar__link-logos"/>
+                            {item.name}
+                        </NavLink>  
+                    </div>
+                ))}
         </div>
     );
 };

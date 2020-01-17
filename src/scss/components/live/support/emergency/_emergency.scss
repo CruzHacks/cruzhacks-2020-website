@@ -8,19 +8,7 @@
     }
 
     &__title{
-        @include font-source-subheader(
-            $size: 2.625em,
-            $color: #5C68D7,
-            $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em, 
-            $fontStyle: normal
-        );
-
-        font-family: Avenir Next;
-        display: block;
-        text-transform: uppercase;
-        text-align: center;
+        @include cardTitle();
     }
 
     &__police-title, &__fire-title, 
@@ -32,12 +20,12 @@
             $lineHeight: 30px,
             $letterSpace: 0.05em
         );
+        @include responsive-font(1.4vw, 14px, 18px);
         display: block;
-        font-family: Avenir Next;
         font-style: bold;
         text-align: left;
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: calc(20px + 5vw);
+        margin-right: calc(20px + 5vw);
     }
 
     &__police-number, &__fire-number,
@@ -49,12 +37,12 @@
             $lineHeight: 30px,
             $letterSpace: 0.05em
         );
+        @include responsive-font(1.4vw, 14px, 18px);
         display: block;
-        font-family: Avenir Next;
         font-style: normal;
         text-align: left;
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: calc(20px + 5vw);
+        margin-right: calc(20px + 5vw);
     }
 
     &__fire, &__jen, &__daniel, &__police{
