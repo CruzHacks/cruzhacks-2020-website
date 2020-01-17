@@ -16,18 +16,15 @@ const UpdatesView: React.FC = () => {
   const [postArray, setPostArray] = useState<Post[]>([]);
   const [tempArray, setTempArray] = useState<Post[]>([]);
   const [isMounted, setIsMounted] = useState(false);
-  const [isPageLoading, setIsPageLoading] = useState(true);
+  const [isEqual, setIsEqual] = useState(false);
 
   useInterval(function() {
     getAnnoucements()
       .then(response => {
         posts = response;
-        console.log("running request")
         if(posts.length !== tempArray.length){
           setTempArray(posts.reverse());
-          setIsMounted(isMounted => true);
-          // setIsPageLoading(true);
-          console.log("set is mounted to false to go into effect")
+          setIsEqual(false);
         }
       })
       .catch(err => {
@@ -35,29 +32,26 @@ const UpdatesView: React.FC = () => {
       });
   }, isMounted ? 3000 : null);
 
-  useEffect(() => {
-    console.log("using effect")
-    // if(!isMounted){
-    //   setIsMounted(isMounted => true);
-    // }
+  useEffect(() => { 
+    if(!isMounted){
+      setIsMounted(isMounted => !isMounted);
+    }
     getAnnoucements()
       .then(response => {
-        if(!isMounted){
-          console.log("rerunning")
+        if(!isEqual){
           posts = response; 
           posts = posts.reverse();
           setPostArray(posts);
-          setTempArray(posts);
+          setIsEqual(true);
         }
-        setIsPageLoading(false);
       })
       .catch(err => {
         console.log(err)
       });
-      setIsMounted(true);
-    // return function cleanup () {
-    //   setIsMounted(isMounted => false);
-    // };
+
+      return function cleanup() {
+        setIsMounted(true)
+      }
   }, [tempArray])
 
   const Updates = () => {
