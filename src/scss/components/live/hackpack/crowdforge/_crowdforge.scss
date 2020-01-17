@@ -1,102 +1,106 @@
-.crowd-forge{
-    &__container {
-        @include cardContainer(); 
-    }
-    &__card{
-        @include card();
-    }
+.crowd-forge {
+  &__container {
+    @include cardContainer();
+  }
+  &__card {
+    @include card();
+  }
 
-    &__find-team{
-        @include font-source-subheader(
-            $size: 22px,
-            $color: #575757,
-            $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em, 
-            $fontStyle: normal
-        );
-        margin-left: calc(20px + 5vw);
-        @include responsive-font(1.4vw, 14px, 22px);
-        text-transform: uppercase;
-    }
+  &__find-team {
+    @include font-source-subheader(
+      $size: 22px,
+      $color: #575757,
+      $weight: bold,
+      $lineHeight: 4.56em,
+      $letterSpace: 0.05em,
+      $fontStyle: normal
+    );
+    padding-left: calc(10px + 2vw);
+    @include responsive-font(1.4vw, 14px, 22px);
+    text-transform: uppercase;
+  }
 
-    &__title{
-        @include cardTitle()
-    }
+  &__title {
+    @include cardTitle();
+    margin-top: -1em;
+  }
 
-    &__line-one-description{
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #424242,
-            $weight: normal,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        display: block;
-        font-style: normal;
-        text-align: left;
-        margin-left: calc(20px + 5vw);
-        margin-right: calc(20px + 5vw);
-        margin-bottom: 60px;
-    }
+  &__instructions {
+    padding-bottom: 40px;
+  }
 
-    &__guidelines{
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #424242,
-            $weight: bold,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        display: block;
-        font-style: bold;
-        text-align: left;
-        margin-left: calc(20px + 5vw);
-        margin-right: calc(20px + 5vw);
-    }
+  &__line-one-description {
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #424242,
+      $weight: normal,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    display: block;
+    font-style: normal;
+    text-align: left;
+    margin-left: calc(20px + 5vw);
+    margin-right: calc(20px + 5vw);
+    margin-bottom: 40px;
+  }
 
-    &__item1, &__item2, &__item3{
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #424242,
-            $weight: normal,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        display: block;
-        font-style: normal;
-        text-align: left;
-        margin-left: calc(20px + 5vw);
-        margin-right: calc(20px + 5vw);
-        margin-bottom: 10px;
-    }
+  &__guidelines {
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #424242,
+      $weight: bold,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    display: block;
+    font-style: bold;
+    text-align: left;
+    margin-left: calc(20px + 5vw);
+    margin-right: calc(20px + 5vw);
+  }
 
-    &__team-link{
-        padding: 20px;
-        background: #45C899;
-        border-radius: 7px;
-        text-align: center;
-        display: block;
-        margin-left: 60px;
-        margin-right: 60px;
-        margin-bottom: 15px;
-        text-decoration: none;
+  &__item {
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #424242,
+      $weight: normal,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    display: list-item;
+    font-style: normal;
+    text-align: left;
+    margin-left: calc(20px + 5vw);
+    margin-right: calc(20px + 5vw);
+    margin-bottom: 10px;
+  }
 
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #ffffff,
-            $weight: 600,
-            $lineHeight: 25px,
-            $letterSpace: 0.05em
-        );
-    }
+  &__team-link {
+    padding: 20px;
+    background: #45c899;
+    border-radius: 7px;
+    text-align: center;
+    display: block;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 15px;
+    text-decoration: none;
 
-    &__team-link:hover{
-        background: #32AA7F;
-    }
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #ffffff,
+      $weight: 600,
+      $lineHeight: 25px,
+      $letterSpace: 0.05em
+    );
+  }
 
-    &__link-container {
-        padding-bottom: 12px;
-    }
+  &__team-link:hover {
+    background: #32aa7f;
+  }
 
+  &__link-container {
+    padding-bottom: 12px;
+  }
 }

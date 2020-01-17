@@ -1,72 +1,75 @@
-.devpost{
-    &__container {
-        @include cardContainer(); 
-    }
+.devpost {
+  &__container {
+    @include cardContainer();
+  }
 
-    &__card {
-        @include card(); 
-    }
+  &__card {
+    @include card();
+  }
 
-    &__submit-info{
-        @include font-source-subheader(
-            $size: 22px,
-            $color: #575757,
-            $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em, 
-            $fontStyle: normal
-        );
-        margin-left: calc(10px + 5vw);
-        @include responsive-font(1.4vw, 14px, 22px);
-        text-transform: uppercase;
+  &__submit-info {
+    @include font-source-subheader(
+      $size: 22px,
+      $color: #575757,
+      $weight: bold,
+      $lineHeight: 4.56em,
+      $letterSpace: 0.05em,
+      $fontStyle: normal
+    );
+    padding-left: calc(10px + 2vw);
+    @include responsive-font(1.4vw, 14px, 22px);
+    text-transform: uppercase;
+    @include respond(smallest) {
+      padding-left: calc(2px + 2vw);
     }
+  }
 
-    &__title{
-        @include cardTitle();
-    }
+  &__title {
+    @include cardTitle();
+    margin-top: -1em;
+  }
 
-    &__description{
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #424242,
-            $weight: normal,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        display: block;
-        font-style: normal;
-        text-align: left;
-        margin-left: calc(20px + 9vw);
-        margin-right: calc(20px + 6vw);
-        margin-bottom: 60px;
-    }
+  &__description {
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #424242,
+      $weight: normal,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    display: block;
+    font-style: normal;
+    text-align: left;
+    margin-left: calc(20px + 9vw);
+    margin-right: calc(20px + 6vw);
+    margin-bottom: 60px;
+  }
 
-    &__link{
-        padding: 20px;
-        background: #45C899;
-        border-radius: 7px;
-        text-align: center;
-        display: block;
-        margin-left: 60px;
-        margin-right: 60px;
-        margin-bottom: 15px;
-        text-decoration: none;
+  &__link {
+    padding: 20px;
+    background: #45c899;
+    border-radius: 7px;
+    text-align: center;
+    display: block;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 15px;
+    text-decoration: none;
 
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #ffffff,
-            $weight: 600,
-            $lineHeight: 25px,
-            $letterSpace: 0.05em
-        );
-    }
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #ffffff,
+      $weight: 600,
+      $lineHeight: 25px,
+      $letterSpace: 0.05em
+    );
+  }
 
-    &__link:hover{
-        background: #32AA7F;
-    }
+  &__link:hover {
+    background: #32aa7f;
+  }
 
-    &__link-container {
-        padding-bottom: 12px;
-    }
+  &__link-container {
+    padding-bottom: 12px;
+  }
 }
-

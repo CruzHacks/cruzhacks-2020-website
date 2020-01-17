@@ -1,34 +1,41 @@
-.hackpack{
-    &__container{
-        position: relative;
-        max-height: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-        @include respond(phone) {
-          position: relative;
-        }
+.hackpack {
+  &__container {
+    position: relative;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    @include respond(phone) {
+      position: relative;
     }
+  }
 
-    &__title{
-        position: absolute;
-        top: 10vh;
-        left: calc(22vw - 10vh);
-        @include font-source-subheader(
-          $size: 4em,
-          $color: #ffffff,
-          $weight: 600,
-          $lineHeight: 80px,
-          $letterSpace: 0.05em
-        );
-        @include responsive-font(3.1vw, 30px, 64px);
-    
-        @include respond(phone) {
-          position: absolute;
-          top: 6.5vh;
-          left: 6.5vw;
-        }
+  &__cards-container {
+    @include respond(phone) {
+      position: relative;
+      margin: auto auto 12vh auto;
     }
+  }
+
+  &__title {
+    position: absolute;
+    top: 10vh;
+    left: calc(22vw - 10vh);
+    @include font-source-subheader(
+      $size: 4em,
+      $color: #ffffff,
+      $weight: 600,
+      $lineHeight: 50px,
+      $letterSpace: 0.05em
+    );
+    @include responsive-font(3.1vw, 30px, 64px);
+
+    @include respond(phone) {
+      position: absolute;
+      top: 6.5vh;
+      left: 6.5vw;
+    }
+  }
 }
 
 @import './hackerPacket/hackerPacket';

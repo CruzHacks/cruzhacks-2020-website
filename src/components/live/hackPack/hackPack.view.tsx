@@ -7,17 +7,19 @@ import DevpostCardView from './devpost/devpost.view';
 import EventInfoCardView from './eventInfo/eventInfo.view';
 
 const HackPackView: React.FC = () => {
-    return (
-        <div className="hackpack__container">
-            <Backdrop />
-            <Navbar />
-            <span className="hackpack__title">Everything you need here.</span>
-            <HackerPacketCardView />
-            <CrowdForgeCardView />
-            <DevpostCardView />
-            <EventInfoCardView />
-        </div>
-    );
+  return (
+    <div className="hackpack__container">
+      <div className="hackpack__cards-container">
+        <Backdrop />
+        <Navbar />
+        <span className="hackpack__title">Everything you need here.</span>
+        <HackerPacketCardView />
+        <CrowdForgeCardView />
+        <DevpostCardView />
+        <EventInfoCardView />
+      </div>
+    </div>
+  );
 };
 
-export default HackPackView; 
+export default HackPackView;
