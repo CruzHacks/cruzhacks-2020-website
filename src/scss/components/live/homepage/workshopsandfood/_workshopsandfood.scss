@@ -135,6 +135,9 @@
       text-align: center;
       padding-left: 1.5vw;
     }
+    @include respond(phone-narrow) {
+      width: 5em;
+    }
   }
 
   &__toggle-component &__toggle-button {
@@ -162,7 +165,7 @@
       $lineHeight: 48px,
       $letterSpace: 0.02em
     );
-    @include responsive-font(1.9vw, 10px, 30px);
+    @include responsive-font(1.9vw, 12px, 30px);
     text-transform: uppercase;
   }
 
@@ -178,10 +181,13 @@
       $lineHeight: 48px,
       $letterSpace: 0.02em
     );
-    @include responsive-font(1.9vw, 10px, 30px);
+    @include responsive-font(1.9vw, 12px, 30px);
     text-transform: uppercase;
     position: absolute;
-    left: 7%;
+    padding-left: calc(4vw / 3);
+    @include respond(mission) {
+      padding-left: calc(7vw / 3);
+    }
   }
 
   &__food-toggle {
@@ -192,11 +198,14 @@
       $lineHeight: 48px,
       $letterSpace: 0.02em
     );
-    @include responsive-font(1.9vw, 10px, 30px);
+    @include responsive-font(1.9vw, 12px, 30px);
     right: 0;
     padding-right: calc(12vw / 3.5);
     text-transform: uppercase;
     position: absolute;
+    @include respond(phone-narrow) {
+      padding-right: 2.5em;
+    }
   }
 }
 
