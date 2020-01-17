@@ -7,9 +7,9 @@ const SlackCardView: React.FC = () => {
                 <span className="support-slack__annoucements">
                     Stay Updated with Annoucements
                 </span>
-                <div className="support-slack__title">
+                <span className="support-slack__title">
                     Join Our Slack
-                </div>
+                </span>
                 <span className="support-slack__description">
                     Slack will be our main form of communication through out the entire hackathon. 
                     Please join our slack to stay updated with annoucements and news!
