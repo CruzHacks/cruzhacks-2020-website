@@ -53,6 +53,7 @@
 
   &__updates-container {
     height: fit-content;
+    max-height: 50vh;
     overflow: hidden;
     margin: 0 auto;
     width: calc(30vw + 10vh);
