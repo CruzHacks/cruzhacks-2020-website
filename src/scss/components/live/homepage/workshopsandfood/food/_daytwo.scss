@@ -15,7 +15,7 @@
   &__date {
     @include dayTitle;
     @include respond(phone) {
-      max-width: 11em;
+      max-width: 12em;
       overflow-wrap: break-word;
     }
   }
@@ -29,7 +29,7 @@
 
   &__food-container {
     padding-top: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 6vh;
     height: 50vh;
     overflow: hidden;
   }

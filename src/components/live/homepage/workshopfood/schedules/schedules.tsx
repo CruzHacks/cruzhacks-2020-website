@@ -128,7 +128,7 @@ export const DayOneFood = [
     ],
   },
   {
-    typeAndTime: 'Midnight Snack - 12:00 AM',
+    typeAndTime: 'Midnight Snack - 12:00am',
     food: 'Pacific Cookie Company',
     description: ['COOKIES!!'],
   },
@@ -141,7 +141,7 @@ export const DayTwoFood = [
     description: ['Bagels', 'Cream Cheese'],
   },
   {
-    typeAndTime: 'Lunch - 1:00 PM',
+    typeAndTime: 'Lunch - 1:00pm',
     food: "HOM's Korean Kitchen",
     description: [
       'White Rice',
@@ -164,7 +164,7 @@ export const DayTwoFood = [
     ],
   },
   {
-    typeAndTime: 'Late Night Snack - 12:00 am',
+    typeAndTime: 'Late Night Snack - 12:00am',
     food: "Ferrel's Donuts",
     description: ['DONUTS!!'],
   },
