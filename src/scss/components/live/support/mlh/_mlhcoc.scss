@@ -8,19 +8,7 @@
     }
 
     &__title {
-        @include font-source-subheader(
-            $size: 2.625em,
-            $color: #5C68D7,
-            $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em, 
-            $fontStyle: normal
-        );
-
-        font-family: Avenir Next;
-        display: block;
-        text-transform: uppercase;
-        text-align: center;
+        @include cardTitle();
     }
 
     &__description{
@@ -28,15 +16,15 @@
             $size: 18px,
             $color: #424242,
             $weight: normal,
-            $lineHeight: 35px,
+            $lineHeight: 30px,
             $letterSpace: 0.05em
         );
         display: block;
-        font-family: Avenir Next;
         font-style: normal;
-        text-align: left;
-        margin-left: 150px;
-        margin-right: 150px;
+        text-align: center;
+        margin-top: 50px;
+        margin-left: calc(20px + 5vw);
+        margin-right: calc(20px + 5vw);
         margin-bottom: 60px;
     }
 

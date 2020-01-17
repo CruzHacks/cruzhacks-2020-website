@@ -8,29 +8,18 @@
     }
 
     &__title{
-        @include font-source-subheader(
-            $size: 64px,
-            $color: #5C68D7,
-            $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em, 
-            $fontStyle: normal
-        );
-
-        font-family: Avenir Next;
-        display: block;
-        text-transform: uppercase;
-        text-align: center;
+        @include cardTitle();
     }
 
     &__questions-container{
         display: flex;
         align-self: auto;
         flex-direction: column;
-        margin-left: 156px;
+        margin: 0 auto;
+        width: calc(30vw + 10vh);
     }
 
-    &__question1{
+    &__questions{
         @include font-source-subheader(
             $size: 18px,
             $color: #5f5f5f,
@@ -38,27 +27,31 @@
             $lineHeight: 25px,
             $letterSpace: 0.05em
         );
+        cursor: pointer;
         text-decoration: none;
+        outline: 0;
         padding: 0;
         border: none;
         background: none;
         margin-bottom: 30px;
         text-align: left;
-        width: 400px; 
+        margin-left: calc(20px + 5vw);
+        margin-right: calc(20px + 5vw);
     }
 
-    &__answer-container{
-        display: none;
-    }
-
-    &__answer{
+    &__answers{
         @include font-source-subheader(
-            $size: 18px,
-            $color: #5f5f5f,
+            $size: 20px,
+            $color: #696969,
             $weight: medium,
             $lineHeight: 25px,
             $letterSpace: 0.05em
         );
-        font-family: Avenir Next;
+        display: none;
+        margin-left: calc(20px + 5vw);
+        margin-right: calc(20px + 5vw);
+        padding-bottom: 12px;
+        @include responsive-font(1.4vw, 14px, 18px);
+        left: 0;
     }
 }

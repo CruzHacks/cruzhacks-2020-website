@@ -36,7 +36,7 @@
   }
 
   &__title {
-    @include cardTitle;
+    @include cardTitle();
   }
 
   &__links {
@@ -61,6 +61,8 @@
       $letterSpace: 0.05em
     );
     @include responsive-font(2.8vw, 12px, 20px);
+    cursor: pointer;
+    white-space: nowrap;
     background: none;
     min-width: calc(9vw + 5vh);
     padding: 5% 20% 5% 20%;

@@ -7,15 +7,15 @@ const HackerPacketCardView: React.FC = () => {
                 <span className="hacker-packet__slug-on">
                     Ready to get your slug on?
                 </span>
-                <div className="hacker-packet__title">
+                <span className="hacker-packet__title">
                     Hacker Packet
-                </div>
+                </span>
                 <span className="hacker-packet__info">
                     You can find everything you need to know in our hacker packet PDF. 
                     It covers what you need to bring, travel info, workshop info, and more.
                 </span>
                 <div className="hacker-packet__link-container">
-                    <a className="hacker-packet__packet" href="https://www.google.com" target="_blank" rel="noopener noreferrer">View Hacker Packet</a>
+                    <a className="hacker-packet__packet" href="https://github.com/CruzHacks/Cruzhacks-Hacker-Packs" target="_blank" rel="noopener noreferrer">View Hacker Packet</a>
                 </div>
             </div>
         </div>

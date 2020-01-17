@@ -1,0 +1,45 @@
+.food-schedule-two {
+    &__container {
+        position: relative;
+        padding-top: 6vh;
+        max-width: 55%;
+        margin: 0 auto;
+        @include respond(tab-land) {
+            max-width: 65%;
+        }
+        @include respond(phone) {
+            max-width: 75%;
+        }
+    }
+
+    &__date {
+        @include dayTitle;
+    }
+
+    &__line-break {
+        border: 1px solid #a6a6a6;
+        margin-top: calc(1vw + 1vh);
+        margin-left: 0vw;
+        margin-bottom: calc(1vw + 1vh);
+    }
+
+    &__food-container {
+        padding-top: 12px;
+        padding-bottom: 12px; 
+        height: 50vh;
+        width: 35vw;
+        overflow: hidden;
+    }
+
+    &__food-type-and-time {
+        @include FoodTypeAndTime();
+    }
+
+    &__food-place {
+        @include FoodPlace(); 
+    }
+
+    &__food-description {
+        @include FoodDescription();
+    }
+}

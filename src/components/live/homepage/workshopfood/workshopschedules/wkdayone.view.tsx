@@ -1,24 +1,37 @@
 import React from 'react';
+import { DayOneWorkshops } from '../schedules/schedules';
 
 const WorkshopsDayOneView: React.FC = () => {
-    return(
-        <div className="workshop-schedule-one__container">
-            <span className="workshop-schedule-one__date">
-                Friday, January 17th
+  const WorkshopsView = () => {
+    return (
+      <div className="workshop-schedule-one__events-container">
+        {DayOneWorkshops.map(event => (
+          <div className="workshop-schedule-one__events" key={event.title}>
+            <span className="workshop-schedule-one__event-time">
+              {event.time}
             </span>
-            <div className="workshop-schedule-one__line-break"></div>
-            <div className="workshop-schedule-one__events-container">
-                <div className="workshop-schedule-one__events">
-                    <span className="workshop-schedule-one__event-title">Intro to Git</span>
-                    <span className="workshop-schedule-one__event-location">
-                        Stevenson Room 240
-                        <span className="workshop-schedule-one__event-time">10:00pm-10:30pm</span>
-                    </span>
-                    <span className="workshop-schedule-one__event-difficulty">Beginner</span>
-                </div>
-            </div>
-        </div>
+            <span className="workshop-schedule-one__event-title">
+              {event.title}
+            </span>
+            <span className="workshop-schedule-one__event-location">
+              {event.location}
+            </span>
+            <span className="workshop-schedule-one__event-difficulty">
+              {event.difficulty}
+            </span>
+          </div>
+        ))}
+      </div>
     );
+  };
+
+  return (
+    <div className="workshop-schedule-one__container">
+      <span className="workshop-schedule-one__date">Friday, January 17th</span>
+      <div className="workshop-schedule-one__line-break"></div>
+      <WorkshopsView />
+    </div>
+  );
 };
 
 export default WorkshopsDayOneView;

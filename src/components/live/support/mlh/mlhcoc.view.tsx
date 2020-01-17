@@ -14,7 +14,7 @@ const MLHCodeOfConductCardView: React.FC = () => {
                 <div className="mlhcoc-support__button-container">
                     <a 
                     className="mlhcoc-support__link" 
-                    href="https://www.google.com" 
+                    href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     >
