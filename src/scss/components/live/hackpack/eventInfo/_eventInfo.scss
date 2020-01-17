@@ -1,73 +1,82 @@
-.event-info{
-    &__container {
-        @include cardContainer(); 
-    }
+.event-info {
+  &__container {
+    @include cardContainer();
+  }
 
-    &__card {
-        @include card(); 
-    }
+  &__card {
+    @include card();
+  }
 
-    &__small-txt{
-        @include font-source-subheader(
-            $size: 22px,
-            $color: #575757,
-            $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em, 
-            $fontStyle: normal
-        );
-        margin-left: calc(10px + 5vw);
-        @include responsive-font(1.4vw, 14px, 22px);
-        text-transform: uppercase;
-    }
+  &__small-txt {
+    @include font-source-subheader(
+      $size: 22px,
+      $color: #575757,
+      $weight: bold,
+      $lineHeight: 4.56em,
+      $letterSpace: 0.05em,
+      $fontStyle: normal
+    );
+    padding-left: calc(10px + 2vw);
+    @include responsive-font(1.4vw, 14px, 22px);
+    text-transform: uppercase;
+  }
 
-    &__title{
-        @include cardTitle();
-    }
+  &__title {
+    @include cardTitle();
+    margin-top: -1em;
+  }
 
-    &__color-legend, &__slack{
-        margin-top: 40px; 
-    }
+  &__color-legend,
+  &__slack {
+    margin-top: 40px;
+  }
 
-    &__wifi-title, &__legend-title, &__slack-title{
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #424242,
-            $weight: 600,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        display: block;
-        font-style: normal;
-        text-align: left;
-        margin-left: calc(20px + 9vw);
-        margin-right: calc(20px + 6vw);
-    }
+  &__wifi-title,
+  &__legend-title,
+  &__slack-title {
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #424242,
+      $weight: 600,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    display: block;
+    font-style: normal;
+    text-align: left;
+    margin-left: calc(20px + 9vw);
+    margin-right: calc(20px + 6vw);
+  }
 
-    &__wifi-user, &__wifi-pass,
-    &__legend-org, &__legend-mentors, &__legend-judges,
-    &__slack-info{
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #424242,
-            $weight: normal,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        display: block;
-        font-style: normal;
-        text-align: left;
-        margin-left: calc(20px + 9vw);
-        margin-right: calc(20px + 6vw);
-    }
+  &__wifi-user,
+  &__wifi-pass,
+  &__legend-org,
+  &__legend-mentors,
+  &__legend-judges,
+  &__slack-info {
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #424242,
+      $weight: normal,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    display: block;
+    font-style: normal;
+    text-align: left;
+    margin-left: calc(20px + 9vw);
+    margin-right: calc(20px + 6vw);
+  }
 
-    &__wifi-section, &__color-legend, &__slack {
-        padding-bottom: 12px;
-    }
+  &__wifi-section,
+  &__color-legend,
+  &__slack {
+    padding-bottom: 12px;
+  }
 
-    &__slack-link{
-        text-decoration: none;
-        color: inherit;
-        font-style: italic;
-    }
+  &__slack-link {
+    text-decoration: none;
+    color: inherit;
+    font-style: italic;
+  }
 }
