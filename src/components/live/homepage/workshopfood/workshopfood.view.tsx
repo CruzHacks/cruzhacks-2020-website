@@ -47,18 +47,20 @@ const WorkshopFoodView: React.FC = () => {
             className={classNameForToggle}
             onClick={() => setToggleActive(!isToggleActive)}
           >
-            <div className="workshop-and-food__toggle-button">
-              <span className="workshop-and-food__toggle-text">
-                {isToggleActive ? 'Food' : 'Workshop'}
-              </span>
+            <div className="workshop-and-food__placeholder-container">
+              <div className="workshop-and-food__toggle-button">
+                <span className="workshop-and-food__toggle-text">
+                  {isToggleActive ? 'Food' : 'Workshop'}
+                </span>
+              </div>
+              {isToggleActive ? (
+                <span className="workshop-and-food__workshop-toggle">
+                  Workshop
+                </span>
+              ) : (
+                <span className="workshop-and-food__food-toggle">Food</span>
+              )}
             </div>
-            {isToggleActive ? (
-              <span className="workshop-and-food__workshop-toggle">
-                Workshop
-              </span>
-            ) : (
-              <span className="workshop-and-food__food-toggle">Food</span>
-            )}
           </div>
         </div>
         <div className="workshop-and-food__day-button-container">
