@@ -38,3 +38,23 @@
     top: calc(1.25em + 1vw);
   }
 }
+&__logos-poly {
+  position: relative;
+  top: 2.5em;
+  @include respond(tab-land) {
+    top: 2.65em;
+  }
+  @include respond(tab-port) {
+    top: 2.1em;
+    left: -1.75em;
+  }
+  @include respond(phone-narrow) {
+    top: calc(0.5em + 2.75vw);
+    left: -1em;
+    }
+  @include respond(smallest) {
+    top: 1.25em;
+    left: -0.8em;
+  }
+}
+    
