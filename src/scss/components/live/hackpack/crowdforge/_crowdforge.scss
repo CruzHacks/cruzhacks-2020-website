@@ -25,6 +25,10 @@
     margin-top: -1em;
   }
 
+  &__instructions {
+    padding-bottom: 40px;
+  }
+
   &__line-one-description {
     @include font-source-subheader(
       $size: 18px,
@@ -38,7 +42,7 @@
     text-align: left;
     margin-left: calc(20px + 5vw);
     margin-right: calc(20px + 5vw);
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   &__guidelines {
@@ -56,9 +60,7 @@
     margin-right: calc(20px + 5vw);
   }
 
-  &__item1,
-  &__item2,
-  &__item3 {
+  &__item {
     @include font-source-subheader(
       $size: 18px,
       $color: #424242,
@@ -66,7 +68,7 @@
       $lineHeight: 30px,
       $letterSpace: 0.05em
     );
-    display: block;
+    display: list-item;
     font-style: normal;
     text-align: left;
     margin-left: calc(20px + 5vw);

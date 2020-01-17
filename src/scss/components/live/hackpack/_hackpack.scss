@@ -10,6 +10,13 @@
     }
   }
 
+  &__cards-container {
+    @include respond(phone) {
+      position: relative;
+      margin: auto auto 12vh auto;
+    }
+  }
+
   &__title {
     position: absolute;
     top: 10vh;

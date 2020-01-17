@@ -28,7 +28,7 @@
 
   &__color-legend,
   &__slack {
-    margin-top: 40px;
+    margin-top: calc(10px + 1vw);
   }
 
   &__wifi-title,
@@ -49,6 +49,11 @@
   }
 
   &__wifi-user,
+  &__wifi-pass {
+    white-space: nowrap;
+  }
+
+  &__wifi-user,
   &__wifi-pass,
   &__legend-org,
   &__legend-mentors,
@@ -66,12 +71,35 @@
     text-align: left;
     margin-left: calc(20px + 9vw);
     margin-right: calc(20px + 6vw);
+    max-width: 20em;
+    padding-left: 2vw;
+  }
+
+  &__legend-org-li,
+  &__legend-mentors-li,
+  &__legend-judges-li {
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #424242,
+      $weight: normal,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    display: list-item;
+    font-style: normal;
+    text-align: left;
+    white-space: nowrap;
+    margin-left: calc(20px + 11vw);
+    margin-right: calc(20px + 6vw);
   }
 
   &__wifi-section,
-  &__color-legend,
+  &__color-legend {
+    padding-bottom: 10px;
+  }
+
   &__slack {
-    padding-bottom: 12px;
+    padding-bottom: 6vh;
   }
 
   &__slack-link {
