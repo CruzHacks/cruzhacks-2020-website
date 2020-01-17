@@ -1,186 +1,212 @@
 @mixin FoodTypeAndTime {
-    @include font-source-subheader(
-            $size: 20px,
-            $color: #424242,
-            $weight: bold,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-    );
-    display: block;
-    padding-bottom: 12px;
+  @include font-source-subheader(
+    $size: 20px,
+    $color: #424242,
+    $weight: bold,
+    $lineHeight: 30px,
+    $letterSpace: 0.05em
+  );
+  display: block;
+  padding-bottom: 12px;
 }
 
 @mixin FoodPlace {
-    @include font-source-subheader(
-            $size: 18px,
-            $color: #696969,
-            $weight: medium,
-            $lineHeight: 20px,
-            $letterSpace: 0.05em
-    );
-    display: block;
-    padding-bottom: 12px;
-    padding-left: 20px; 
+  @include font-source-subheader(
+    $size: 18px,
+    $color: #696969,
+    $weight: medium,
+    $lineHeight: 20px,
+    $letterSpace: 0.05em
+  );
+  display: block;
+  padding-bottom: 12px;
+  padding-left: 20px;
 }
 
 @mixin FoodDescription {
-    @include font-source-subheader(
-            $size: 16px,
-            $color: #ADADAD,
-            $weight: normal,
-            $lineHeight: 20px,
-            $letterSpace: 0.05em
-    );
-    display: block;
-    padding-bottom: 12px;
-    padding-left: 20px; 
+  @include font-source-subheader(
+    $size: 16px,
+    $color: #adadad,
+    $weight: normal,
+    $lineHeight: 20px,
+    $letterSpace: 0.05em
+  );
+  display: block;
+  padding-bottom: 12px;
+  padding-left: 20px;
 }
 
 .workshop-and-food {
-    &__container {
-        @include cardContainer();
-    }
+  &__container {
+    @include cardContainer();
+  }
 
-    &__card {
-        @include card(); 
-    }
+  &__card {
+    @include card();
+  }
 
-    &__day-button-container {
-        display: flex;
-        flex-flow: row;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin: 0 auto;
-        width: calc(30vw + 10vh);
-    }
+  &__day-button-container {
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: calc(30vw + 10vh);
+  }
 
-    &__day-button-one, &__day-button-two, 
-    &__day-button-three {
-        text-decoration: none;
-        border: none;
-        @include font-source-subheader(
-            $size: 20px,
-            $color: #424242,
-            $weight: normal,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        cursor: pointer;
-        background: none;
-        min-width: calc(10vw + 5vh);
-        padding: 5% 20% 5% 20%;
-        border-radius: 25.5px;
-    }
+  &__day-button-one,
+  &__day-button-two,
+  &__day-button-three {
+    text-decoration: none;
+    border: none;
+    @include font-source-subheader(
+      $size: 20px,
+      $color: #424242,
+      $weight: normal,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    cursor: pointer;
+    background: none;
+    min-width: calc(10vw + 5vh);
+    padding: 5% 20% 5% 20%;
+    border-radius: 25.5px;
+  }
 
-    &__day-button-one.active, &__day-button-one:active,
-    &__day-button-two.active, &__day-button-two:active, 
-    &__day-button-three.active, &__day-button-three:active { 
-        background-color: #F2F2F2;
-        @include font-source-subheader(
-            $size: 18px,
-            $color: #424242,
-            $weight: bold,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-        outline: 0;
-    }
+  &__day-button-one.active,
+  &__day-button-one:active,
+  &__day-button-two.active,
+  &__day-button-two:active,
+  &__day-button-three.active,
+  &__day-button-three:active {
+    background-color: #f2f2f2;
+    @include font-source-subheader(
+      $size: 18px,
+      $color: #424242,
+      $weight: bold,
+      $lineHeight: 30px,
+      $letterSpace: 0.05em
+    );
+    outline: 0;
+  }
 
-    &__toggle-buttons-container {
-        padding-top: 1em;
-        padding-bottom: 1em;
-        top: calc(50%-(40%/2));
-        left: calc(50%-(40%/2));
-    }
+  &__toggle-buttons-container {
+    padding-top: calc(2vw + 4vh);
+    padding-bottom: calc(1vw + 2vh);
+    top: calc(50% - (40% / 2));
+    left: calc(50% - (40% / 2));
+  }
 
-    &__toggle-component {
-        margin: 0 auto;
-        width: 36vw;
-        height: 11vh;
-        background: #EEEEEE;
-        border: 1px solid #EEE;
-        position: relative;
-        border-radius: 55.5px;
-        cursor: pointer;
-        transition: border-color background-color 0.3s;
-        z-index: 0;
-    }
+  &__placeholder-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 
-    &__toggle-component.active {
-        background: #EEEEEE;
+  &__toggle-component {
+    margin: 0 auto;
+    max-width: 50em;
+    min-width: 30%;
+    width: 50%;
+    height: calc(4em + 2vw);
+    background: #eeeeee;
+    border: 1px solid #eee;
+    position: relative;
+    border-radius: 55.5px;
+    cursor: pointer;
+    transition: border-color background-color 0.3s;
+    z-index: 0;
+    @include respond(mission) {
+      width: 60%;
     }
+  }
 
-    &__toggle-component.active &__toggle-button {
-        right: -2px;
-        width: 13vw;
-        &:before {
-            content: "Food";
-            position: relative;
-            display: inline-block;
-            text-align: center;
-            padding-left: 1.5vw;
-        }
-    }
+  &__toggle-component.active {
+    background: #eeeeee;
+  }
 
-    &__toggle-component &__toggle-button {
-        position: absolute;
-        right: 53%;
-        height: 11vh;
-        width: 17vw;
-        background: #5C72EA;
-        border-radius: 55.5px;
-        transition: right 0.3s;
+  &__toggle-component.active &__toggle-button {
+    left: unset;
+    right: 0;
+    width: 13vw;
+    &:before {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      padding-left: 1.5vw;
     }
+    @include respond(phone-narrow) {
+      width: 5em;
+    }
+  }
 
-    &__toggle-button:before {
-        content: "Workshop";
-        position: relative;
-        top: 2.5vh;
-        left: 1.5vw;
-        @include font-source-subheader(
-            $size: 35px,
-            $color: #FFFFFF,
-            $weight: bold,
-            $lineHeight: 48px,
-            $letterSpace: 0.02em
-        );
-        @include responsive-font(2.7vw, 10px, 30px);
-        text-transform: uppercase;
-    }
-    
-    &__toggle-button {
-        width: 12vw; 
-    }
+  &__toggle-component &__toggle-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+    left: 0;
+    height: calc(4em + 2vw);
+    width: 50%;
+    max-width: calc(20em - 2vw);
+    background: #5c72ea;
+    border-radius: 55.5px;
+    transition: left 0.3s, right 0.3s;
+  }
 
-    &__workshop-toggle{
-        @include font-source-subheader(
-            $size: 35px,
-            $color: #AEAEAE,
-            $weight: bold,
-            $lineHeight: 48px,
-            $letterSpace: 0.02em
-        );
-        @include responsive-font(2.7vw, 10px, 30px);
-        text-transform: uppercase;
-        position: relative;
-        top: 2.5vh;
-        left: 2.5vw;
-    }
+  &__toggle-button &__toggle-text {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    @include font-source-subheader(
+      $size: 35px,
+      $color: #ffffff,
+      $weight: bold,
+      $lineHeight: 48px,
+      $letterSpace: 0.02em
+    );
+    @include responsive-font(1.9vw, 12px, 30px);
+    text-transform: uppercase;
+  }
 
-    &__food-toggle {
-        @include font-source-subheader(
-            $size: 35px,
-            $color: #AEAEAE,
-            $weight: bold,
-            $lineHeight: 48px,
-            $letterSpace: 0.02em
-        );
-        @include responsive-font(2.7vw, 10px, 30px);
-        text-transform: uppercase;
-        position: relative;
-        padding-left: 23vw;
-        top: 2.5vh;
+  &__toggle-button {
+    width: 12vw;
+  }
+
+  &__workshop-toggle {
+    @include font-source-subheader(
+      $size: 35px,
+      $color: #aeaeae,
+      $weight: bold,
+      $lineHeight: 48px,
+      $letterSpace: 0.02em
+    );
+    @include responsive-font(1.9vw, 12px, 30px);
+    text-transform: uppercase;
+    position: absolute;
+    padding-left: calc(4vw / 3);
+    @include respond(mission) {
+      padding-left: calc(7vw / 3);
     }
+  }
+
+  &__food-toggle {
+    @include font-source-subheader(
+      $size: 35px,
+      $color: #aeaeae,
+      $weight: bold,
+      $lineHeight: 48px,
+      $letterSpace: 0.02em
+    );
+    @include responsive-font(1.9vw, 12px, 30px);
+    right: 0;
+    padding-right: calc(12vw / 3.5);
+    text-transform: uppercase;
+    position: absolute;
+    @include respond(phone-narrow) {
+      padding-right: 2em;
+    }
+  }
 }
 
 @import './workshops/dayone';
