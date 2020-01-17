@@ -9,15 +9,26 @@ import FAQCardView from './faq/faq.view';
 const FAQQandA = [
     {
         question: "Are we allowed to build on past projects?",
-        answer: "Unfortunately, you are only allowed to work on projects initiated during this hackathon."
+        answer: "Project ideas for CruzHacks 2020 may be preconceived or spontaneously created at the event."
     }, 
     {
         question: "How many people can be on my team?", 
-        answer: "You and 4 others."
+        answer: "You and up to 4 others."
     }, 
     {
         question: "What are the rules?", 
-        answer: "We follow MLH's Code of Conduct, which you can read more about here."
+        answer: (
+            <span>
+                As a Major League Hacking member event, we follow Major League Hacking’s{' '}
+                 <a
+                    target="__blank"
+                    rel="noreferrer"
+                    href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+                >    
+                    Code of Conduct.
+                </a>{' '}
+            </span>
+        )
     }, 
     {
         question: "What if I don't know how to code.", 
@@ -25,7 +36,7 @@ const FAQQandA = [
     }, 
     {
         question: "How can I get a mentor?", 
-        answer: "Good question. Answer this later"
+        answer: "Come see us at the help desk and we will connect you with one of our many mentors!"
     }, 
     {
         question: "I don't see my question here.",
