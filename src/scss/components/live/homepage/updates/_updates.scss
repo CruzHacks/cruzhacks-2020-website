@@ -52,7 +52,7 @@
   }
 
   &__updates-container {
-    height: 60vh;
+    height: fit-content;
     overflow: hidden;
     margin: 0 auto;
     width: calc(30vw + 10vh);
@@ -61,7 +61,7 @@
   &__post-time {
     @include font-source-subheader(
       $size: 18px,
-      $color: #61A564,
+      $color: #61a564,
       $weight: normal,
       $lineHeight: 25px,
       $letterSpace: 0.02em
@@ -85,7 +85,7 @@
   &__post-date {
     @include font-source-subheader(
       $size: 18px,
-      $color: #A2A2A2,
+      $color: #a2a2a2,
       $weight: normal,
       $lineHeight: 25px,
       $letterSpace: 0.02em
@@ -102,5 +102,4 @@
     margin-left: 0vw;
     margin-bottom: calc(1vw + 1vh);
   }
-  
 }
