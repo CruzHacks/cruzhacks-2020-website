@@ -116,6 +116,9 @@
     cursor: pointer;
     transition: border-color background-color 0.3s;
     z-index: 0;
+    @include respond(mission) {
+      width: 60%;
+    }
   }
 
   &__toggle-component.active {
@@ -191,7 +194,7 @@
     );
     @include responsive-font(1.9vw, 10px, 30px);
     right: 0;
-    padding-right: 13%;
+    padding-right: calc(12vw / 3.5);
     text-transform: uppercase;
     position: absolute;
   }
