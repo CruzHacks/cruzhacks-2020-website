@@ -9,7 +9,7 @@ const DayOneSchedule: React.FC = () => {
       <div className="day-one__events-container">
         {
           GeneralDayOne.map(event => (
-            <div className="day-one__events">
+            <div className="day-one__events" key={event.title}>
               <span className="day-one__events-title">{event.title}</span>
               <span className="day-one__events-time">{event.time}</span>
             </div>
