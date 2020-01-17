@@ -3,13 +3,13 @@ import axios, { AxiosRequestConfig } from 'axios';
 const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
 const resumeEndpoint: string = process.env.REACT_APP_API_UPLOAD_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
-const annoucementEndpoint: string = process.env.REACT_APP_ANNOUCEMENT_API_ENDPOINT + '';
+const annoucementEndpoint: string = process.env.REACT_APP_ANNOUNCEMENT_SERVICE_ENDPOINT + '';
 
 export function getAnnoucements(): Promise<Object> {
   var data: any;
   var posts: any; 
   const requestConfig: AxiosRequestConfig = {
-    params: {
+    headers: {
       authentication: apiKey
     },
   };
@@ -17,8 +17,9 @@ export function getAnnoucements(): Promise<Object> {
   return axios
     .get<Array<Object>>(annoucementEndpoint, requestConfig)
     .then(response => {
-      data = response.data; 
-      posts = data.announcement.posts;
+      // data = response.data; 
+      // posts = data.announcement.posts;
+      console.log(response)
       return posts;
     })
     .catch(error => {
