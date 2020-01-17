@@ -60,7 +60,7 @@ const HeroTitleAreaView: React.FC = () => {
         <a href="/schedule" className="hero-title-area__2019-button">
           <p className="hero-title-area__2019-button-text">
             <br />
-            SCHEDULE
+            Live Application
           </p>
         </a>
       </div>
