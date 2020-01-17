@@ -14,44 +14,59 @@ const UpdatesView: React.FC = () => {
 
   var posts: any; 
   const [postArray, setPostArray] = useState<Post[]>([]);
+  const [tempArray, setTempArray] = useState<Post[]>([]);
   const [isMounted, setIsMounted] = useState(false);
+  const [isPageLoading, setIsPageLoading] = useState(true);
 
   useInterval(function() {
     getAnnoucements()
       .then(response => {
         posts = response;
-        setPostArray(posts.reverse());
-      })
-      .catch(err => {
-        console.log(err)
-      });
-  }, isMounted ? 5000 : null);
-
-  useEffect(() => {
-    setIsMounted(isMounted => !isMounted);
-    getAnnoucements()
-      .then(response => {
-        if(!isMounted){
-          posts = response; 
-          setPostArray(posts.reverse());
+        console.log("running request")
+        if(posts.length !== tempArray.length){
+          setTempArray(posts.reverse());
+          setIsMounted(isMounted => true);
+          // setIsPageLoading(true);
+          console.log("set is mounted to false to go into effect")
         }
       })
       .catch(err => {
         console.log(err)
       });
+  }, isMounted ? 3000 : null);
 
-    return () => {
-      setIsMounted(isMounted => !isMounted);
-    };
-  }, [])
+  useEffect(() => {
+    console.log("using effect")
+    // if(!isMounted){
+    //   setIsMounted(isMounted => true);
+    // }
+    getAnnoucements()
+      .then(response => {
+        if(!isMounted){
+          console.log("rerunning")
+          posts = response; 
+          posts = posts.reverse();
+          setPostArray(posts);
+          setTempArray(posts);
+        }
+        setIsPageLoading(false);
+      })
+      .catch(err => {
+        console.log(err)
+      });
+      setIsMounted(true);
+    // return function cleanup () {
+    //   setIsMounted(isMounted => false);
+    // };
+  }, [tempArray])
 
   const Updates = () => {
     return(
       <div className="updates-card__updates-container">
-        <PerfectScrollbar>
+        <PerfectScrollbar className="updates-card__scrollbar">
           {
             postArray.map((post, i) => (
-              <div className="updates-card__announcement" key={post.announcement}>
+              <div className="updates-card__announcement" key={post.datetime}>
                 <span className="updates-card__post-time">{getTimeToString(post)}</span>
                 <span className="updates-card__post-info">{post.announcement}</span>
                 <span className="updates-card__post-date">{getDateToString(post)}</span>

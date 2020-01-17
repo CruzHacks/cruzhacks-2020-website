@@ -1,4 +1,5 @@
 import React from 'react';
+import { GeneralDayTwo } from '../schedules/schedules';
 
 const DayTwoSchedule: React.FC = () => {
     return(
@@ -11,38 +12,14 @@ const DayTwoSchedule: React.FC = () => {
           Workshops held throughout the day**
         </span>
         <div className="day-two__events-container">
-          <div className="day-two__events">
-            <span className="day-two__events-title">
-              Breakfast
-            </span>
-            <span className="day-two__events-time">
-              8:00 am
-            </span>
-          </div>
-          <div className="day-two__events">
-            <span className="day-two__events-title">
-            Lunch
-            </span>
-            <span className="day-two__events-time">
-              1:00 pm
-            </span>
-          </div>
-          <div className="day-two__events">
-            <span className="day-two__events-title">
-            Dinner
-            </span>
-            <span className="day-two__events-time">
-                5:30 pm
-            </span>
-          </div>
-          <div className="day-two__events">
-            <span className="day-two__events-title">
-            Midnight Snack
-            </span>
-            <span className="day-two__events-time">
-              12:00 am
-            </span>
-          </div>
+          {
+            GeneralDayTwo.map(event => (
+              <div className="day-one__events">
+                <span className="day-one__events-title">{event.title}</span>
+                <span className="day-one__events-time">{event.time}</span>
+              </div>
+            ))
+          }
         </div>
       </div>
     );
