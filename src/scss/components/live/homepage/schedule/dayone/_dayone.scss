@@ -15,7 +15,7 @@
   &__title {
     @include dayTitle;
     @include respond(phone) {
-      max-width: 10em;
+      max-width: 11em;
       overflow-wrap: break-word;
     }
   }

@@ -1,70 +1,59 @@
 .workshop-schedule-one {
-    &__container {
-        position: relative;
-        padding-top: 6vh;
-        max-width: 55%;
-        margin: 0 auto;
-        @include respond(tab-land) {
-            max-width: 65%;
-        }
-        @include respond(phone) {
-            max-width: 75%;
-        }
+  &__container {
+    position: relative;
+    padding-top: 6vh;
+    max-width: 55%;
+    margin: 0 auto;
+    @include respond(tab-land) {
+      max-width: 65%;
     }
+    @include respond(phone) {
+      max-width: 75%;
+    }
+  }
 
-    &__date {
-        @include dayTitle;
+  &__date {
+    @include dayTitle;
+    @include respond(phone) {
+      max-width: 11em;
+      overflow-wrap: break-word;
     }
+  }
 
-    &__line-break {
-        border: 1px solid #a6a6a6;
-        margin-top: calc(1vw + 1vh);
-        margin-left: 0vw;
-        margin-bottom: calc(1vw + 1vh);
-    }
+  &__line-break {
+    border: 1px solid #a6a6a6;
+    margin-top: calc(1vw + 1vh);
+    margin-left: 0vw;
+    margin-bottom: calc(1vw + 1vh);
+  }
 
-    &__events-container {
-        padding-top: 12px;
-        padding-bottom: 12px; 
-    }
+  &__events-container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 
-    &__events {
-        margin-bottom: 4vh;
-        display: flex;
-        flex-direction: column;
-    }
+  &__events {
+    margin-bottom: 4vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-    &__event-title {
-        @include font-source-subheader(
-            $size: 20px,
-            $color: #424242,
-            $weight: normal,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
+  &__event-title {
+    @include EventTitle;
+    @include respond(phone) {
+      max-width: 10em;
     }
+  }
 
-    &__event-location {
-        @include font-source-subheader(
-            $size: 20px,
-            $color: #696969,
-            $weight: normal,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-    }
+  &__event-location {
+    @include EventLocation;
+  }
 
-    &__event-difficulty {
-        @include font-source-subheader(
-            $size: 20px,
-            $color: #A7A7A7,
-            $weight: normal,
-            $lineHeight: 30px,
-            $letterSpace: 0.05em
-        );
-    }
+  &__event-difficulty {
+    @include EventDifficulty;
+  }
 
-    &__event-time {
-        @include eventTime;
-    }
+  &__event-time {
+    @include eventTime;
+  }
 }

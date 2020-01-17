@@ -36,6 +36,38 @@
   padding-left: 20px;
 }
 
+@mixin EventTitle {
+  @include font-source-subheader(
+    $size: 20px,
+    $color: #424242,
+    $weight: bold,
+    $lineHeight: 30px,
+    $letterSpace: 0.05em
+  );
+  @include responsive-font(1.4vw, 14px, 20px);
+}
+
+@mixin EventLocation {
+  @include font-source-subheader(
+    $size: 20px,
+    $color: #696969,
+    $weight: normal,
+    $lineHeight: 30px,
+    $letterSpace: 0.05em
+  );
+  @include responsive-font(1.4vw, 14px, 20px);
+}
+
+@mixin EventDifficulty {
+  @include font-source-subheader(
+    $size: 20px,
+    $color: #a7a7a7,
+    $weight: normal,
+    $lineHeight: 30px,
+    $letterSpace: 0.05em
+  );
+  @include responsive-font(1.4vw, 14px, 20px);
+}
 .workshop-and-food {
   &__container {
     @include cardContainer();

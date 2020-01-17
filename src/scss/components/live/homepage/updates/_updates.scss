@@ -53,11 +53,11 @@
 
   &__updates-container {
     position: relative;
-    height: 50vh;
+    height: max-content;
     max-height: 50vh;
     overflow: hidden;
     margin: 0 auto;
-    width: calc(30vw + 10vh);;
+    width: calc(30vw + 10vh);
   }
 
   &__scrollbar {
