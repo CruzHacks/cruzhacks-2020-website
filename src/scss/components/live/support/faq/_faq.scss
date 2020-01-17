@@ -15,7 +15,8 @@
         display: flex;
         align-self: auto;
         flex-direction: column;
-        margin-left: 156px;
+        margin: 0 auto;
+        width: calc(30vw + 10vh);
     }
 
     &__questions{
