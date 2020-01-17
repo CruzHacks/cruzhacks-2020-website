@@ -4,6 +4,7 @@ import SponsorsContainer from './container/sponsors-container.view';
 import MLH from '../../../assets/images/sponsors/tera/mlh.svg';
 import CIED from '../../../assets/images/sponsors/tera/cied.svg';
 import Amazon from '../../../assets/images/sponsors/tera/amazon.svg';
+import Poly from '../../../assets/images/sponsors/tera/poly.svg';
 // giga
 import ProductOps from '../../../assets/images/sponsors/giga/productops.svg';
 import Baskin from '../../../assets/images/sponsors/giga/baskin.svg';
@@ -27,6 +28,7 @@ import Stickermule from '../../../assets/images/sponsors/mega/stickermule.svg';
 import Shawee from '../../../assets/images/sponsors/mega/shawee.svg';
 import Guayaki from '../../../assets/images/sponsors/mega/guayaki.svg';
 import Pathrise from '../../../assets/images/sponsors/mega/pathrise.svg';
+import RippleMatch from '../../../assets/images/sponsors/mega/ripplematch.svg';
 
 const logos = [
   {
@@ -49,6 +51,13 @@ const logos = [
     URL: 'https://aws.amazon.com/education/awseducate/',
     name: 'Amazon',
     class: 'amazon',
+  },
+  {
+    tier: 'tera',
+    logo: Poly,
+    URL: 'https://www.poly.com/us/en',
+    name: 'Poly',
+    class: 'poly',
   },
   {
     tier: 'giga',
@@ -189,6 +198,13 @@ const logos = [
     URL: 'https://www.pathrise.com/',
     name: 'Pathrise',
     class: 'pathrise',
+  },
+  {
+    tier: 'mega',
+    logo: RippleMatch,
+    URL: 'https://ripplematch.com/',
+    name: 'RippleMatch',
+    class: 'ripplematch',
   },
 ];
 
