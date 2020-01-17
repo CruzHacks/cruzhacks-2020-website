@@ -28,7 +28,7 @@ import Stickermule from '../../../assets/images/sponsors/mega/stickermule.svg';
 import Shawee from '../../../assets/images/sponsors/mega/shawee.svg';
 import Guayaki from '../../../assets/images/sponsors/mega/guayaki.svg';
 import Pathrise from '../../../assets/images/sponsors/mega/pathrise.svg';
-import RippleMatch from '../../../assets/images/sponsors/mega/rippleMatch.svg';
+import RippleMatch from '../../../assets/images/sponsors/mega/ripplematch.svg';
 
 const logos = [
   {
