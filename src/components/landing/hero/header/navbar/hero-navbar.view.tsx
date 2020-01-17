@@ -32,18 +32,7 @@ const HeroNavbarView: React.FC = () => {
             className="navbar__button-text"
             style={{ textDecoration: 'none', cursor: 'context-menu' }}
           >
-            LIVE EVENT INFO
-          </p>
-        </Link>
-      </div>
-
-      <div className="navbar__button">
-        <Link to="/portal" style={{ textDecoration: `none` }}>
-          <p className="navbar__button-text">
-            <Countdown
-              date={'Friday January 3 2020 23:59:59'}
-              renderer={props => (!props.completed ? 'APPLY' : 'DECISIONS')}
-            />
+            LIVE INFO
           </p>
         </Link>
       </div>

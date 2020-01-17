@@ -45,22 +45,20 @@ const HeroTitleAreaView: React.FC = () => {
       </div>
       <div className="hero-title-area__button-container">
         <a
-          href="/portal"
+          href="/live"
           className="hero-title-area__sponsor-button"
           rel="noopener noreferrer"
         >
-          <p className="hero-title-area__sponsor-button-text">
-            <Countdown
-              date={'Friday January 3 2020 23:59:59'}
-              renderer={props => (!props.completed ? 'APPLY' : 'DECISIONS')}
-            />
-          </p>
+          <p className="hero-title-area__sponsor-button-text">LIVE</p>
         </a>
 
-        <a href="/live" className="hero-title-area__2019-button">
+        <a
+          href="https://2019.cruzhacks.com"
+          className="hero-title-area__2019-button"
+        >
           <p className="hero-title-area__2019-button-text">
             <br />
-            Live Application
+            2019
           </p>
         </a>
       </div>
