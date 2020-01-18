@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import account, { postAnnouncement } from '../../account';
+import { postAnnouncement } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
-import organizers from '../../auth/organizers.json';
 
 const AnnouncementsDashboard: React.FC = () => {
   const authContext = useAuth0()!;
@@ -10,15 +9,24 @@ const AnnouncementsDashboard: React.FC = () => {
   const authUser: Auth0UserType = user;
   const [announcementMessage, setAnnouncementMessage] = useState('');
   const [tokenValid, setTokenValid] = useState(false);
+  const [token, setToken] = useState('');
+  const [twilio, setTwilio] = useState(false);
 
   const ANNOUNCEMENT_TOKEN = process.env.REACT_APP_ANNOUNCEMENT_TOKEN + '';
 
   const handleInputChanges = event => {
     let { name, value } = event.target;
-    if (name === 'announcement-token') {
-      setTokenValid(authenticatePermissions(value));
-    } else {
-      setAnnouncementMessage(value);
+    switch (name) {
+      case 'announcement-token':
+        setTokenValid(authenticatePermissions(value));
+        setToken(value);
+        break;
+      case 'announcement-body':
+        setAnnouncementMessage(value);
+        break;
+      case 'twilio-checkbox':
+        setTwilio(value);
+        break;
     }
   };
 
@@ -46,17 +54,17 @@ const AnnouncementsDashboard: React.FC = () => {
   const pushAnnouncement = () => {
     if (tokenValid) {
       console.log('pushing announcement');
-      //   postAnnouncement(announcementMessage, authUser)
-      //     .then(() => {
-      //       window.alert(
-      //         `pushed announcement successfully: ${announcementMessage}`
-      //       );
-      //     })
-      //     .catch(error => {
-      //       if (error.msg === 'not an organizer') {
-      //         window.alert('you must be an organizer to post announcements');
-      //       }
-      //     });
+      postAnnouncement(authUser, announcementMessage, token, twilio)
+        .then(() => {
+          window.alert(
+            `pushed announcement successfully: ${announcementMessage}`
+          );
+        })
+        .catch(error => {
+          if (error.msg === 'not an organizer') {
+            window.alert('you must be an organizer to post announcements');
+          }
+        });
     }
   };
 
@@ -78,6 +86,13 @@ const AnnouncementsDashboard: React.FC = () => {
         <input
           type="text"
           name="announcement-token"
+          onChange={handleInputChanges}
+        ></input>
+        <br></br>
+        Twilio: <br></br>
+        <input
+          type="checkbox"
+          name="twilio-checkbox"
           onChange={handleInputChanges}
         ></input>
         <br></br>

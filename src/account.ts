@@ -32,17 +32,27 @@ export function getAnnoucements(): Promise<Object> {
 
 export function postAnnouncement(
   authUser,
-  announcementMessage
+  announcementMessage,
+  token,
+  twilio
 ): Promise<Object> {
   let isOrganizer = checkOrganizerStatus(authUser);
   if (isOrganizer) {
-    const requestConfig: AxiosRequestConfig = {
-      params: {
-        authentication: apiKey,
-      },
+    const headers = {
+      authentication: apiKey,
     };
+
+    const data = {
+      password: token,
+      twilio: twilio,
+      announcement: announcementMessage,
+    };
+
     return axios
-      .post<string>(annoucementEndpoint, announcementMessage, requestConfig)
+      .post<string>(annoucementEndpoint, announcementMessage, {
+        headers: headers,
+        data: data,
+      })
       .then(response => {
         if (response.status === 200) {
           return Promise.resolve(true);
