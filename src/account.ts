@@ -4,7 +4,7 @@ import organizers from './auth/organizers.json';
 const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
 const resumeEndpoint: string = process.env.REACT_APP_API_UPLOAD_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
-const annoucementEndpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
+const annoucementEndpoint: string = process.env.REACT_APP_ANNOUNCEMENT_SERVICE_ENDPOINT + '';
 
 
 export function getAnnoucements(): Promise<Object> {
