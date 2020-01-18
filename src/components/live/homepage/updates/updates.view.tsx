@@ -57,7 +57,7 @@ const UpdatesView: React.FC = () => {
   const Updates = () => {
     return(
       <div className="updates-card__updates-container">
-        <PerfectScrollbar className="updates-card__scrollbar">
+        <PerfectScrollbar options={{suppressScrollX: false}}>
           {
             postArray.map((post, i) => (
               <div className="updates-card__announcement" key={i}>
