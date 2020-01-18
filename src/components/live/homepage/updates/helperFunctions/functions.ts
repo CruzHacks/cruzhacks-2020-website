@@ -15,7 +15,7 @@ export function getTimeToString(post) {
       actualMinutes = `0${minutes}`;
     }
 
-    return `${hours}:${actualMinutes} ${isAm ? 'AM':'PM'}`;
+    return `${hours}:${minutes.toLocaleString().length === 1 ? actualMinutes : minutes} ${isAm ? 'AM':'PM'}`;
 }
 
 export function getDateToString(post) {
