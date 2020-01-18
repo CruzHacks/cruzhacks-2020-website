@@ -7,8 +7,15 @@ export function getTimeToString(post) {
     var isAm = true; 
     hours > 12 ? isAm = false : isAm = true; 
     isAm ? hours = hours - 0 : hours = hours - 12; 
+    if(hours === 0){
+      hours += 12;
+    }
+    var actualMinutes = "";
+    if(minutes.toLocaleString().length === 1){
+      actualMinutes = `0${minutes}`;
+    }
 
-    return `${hours}:${minutes} ${isAm ? 'AM':'PM'}`;
+    return `${hours}:${actualMinutes} ${isAm ? 'AM':'PM'}`;
 }
 
 export function getDateToString(post) {
