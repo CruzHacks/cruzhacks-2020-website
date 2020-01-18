@@ -10,6 +10,8 @@ const AnnouncementsDashboard: React.FC = () => {
   const [announcementMessage, setAnnouncementMessage] = useState('');
   const [token, setToken] = useState('');
   const [twilio, setTwilio] = useState(false);
+  const [validMessage, setValidMessage] = useState(false);
+  const [messageLength, setMessageLength] = useState(0);
 
   const handleInputChanges = event => {
     let { name, value } = event.target;
@@ -18,6 +20,12 @@ const AnnouncementsDashboard: React.FC = () => {
         setToken(value);
         break;
       case 'announcement-body':
+        setMessageLength(value.length);
+        if (value.length < 160) {
+          setValidMessage(true);
+        } else {
+          setValidMessage(false);
+        }
         setAnnouncementMessage(value);
         break;
       case 'twilio-checkbox':
@@ -28,13 +36,16 @@ const AnnouncementsDashboard: React.FC = () => {
 
   const confirmAnnouncement = event => {
     event.preventDefault();
-    let value = event.target.elements[0].value;
-    if (
-      window.confirm(
-        `Are you sure you want to push the following announcement?\n${value}`
-      )
-    ) {
-      pushAnnouncement();
+    if (validMessage) {
+      if (
+        window.confirm(
+          `Are you sure you want to push the following announcement?\n${announcementMessage}`
+        )
+      ) {
+        pushAnnouncement();
+      }
+    } else {
+      window.alert('Message length too long');
     }
   };
 
@@ -68,6 +79,9 @@ const AnnouncementsDashboard: React.FC = () => {
             cols={90}
           ></textarea>
         </p>
+        Message Length: {messageLength}
+        <br></br>
+        <br></br>
         <br></br>
         Auth Token: <br></br>
         <input
@@ -82,6 +96,7 @@ const AnnouncementsDashboard: React.FC = () => {
           name="twilio-checkbox"
           onChange={handleInputChanges}
         ></input>
+        <br></br>
         <br></br>
         <input type="submit" value="Submit"></input>
       </form>
