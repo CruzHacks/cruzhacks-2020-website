@@ -30,9 +30,9 @@ const UpdatesView: React.FC = () => {
       .catch(err => {
         console.log(err)
       });
-  }, isMounted ? 3000 : null);
+  }, isMounted ? 60000 : null);
 
-  useEffect(() => { 
+  useEffect(() => {
     if(!isMounted){
       setIsMounted(isMounted => !isMounted);
     }
@@ -42,7 +42,6 @@ const UpdatesView: React.FC = () => {
           posts = response; 
           posts = posts.reverse();
           setPostArray(posts);
-          setIsEqual(true);
         }
       })
       .catch(err => {
@@ -50,7 +49,8 @@ const UpdatesView: React.FC = () => {
       });
 
       return function cleanup() {
-        setIsMounted(true)
+        setIsMounted(true);
+        setIsEqual(false);
       }
   }, [tempArray])
 
@@ -60,12 +60,11 @@ const UpdatesView: React.FC = () => {
         <PerfectScrollbar className="updates-card__scrollbar">
           {
             postArray.map((post, i) => (
-              <div className="updates-card__announcement" key={post.datetime}>
+              <div className="updates-card__announcement" key={i}>
                 <span className="updates-card__post-time">{getTimeToString(post)}</span>
                 <span className="updates-card__post-info">{post.announcement}</span>
                 <span className="updates-card__post-date">{getDateToString(post)}</span>
                 {i === postArray.length-1 ? <div className="updates-card__end-line-break"></div>:<div className="updates-card__line-break"></div>}
-                
               </div>
             ))
           }
