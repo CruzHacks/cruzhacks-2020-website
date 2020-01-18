@@ -16,7 +16,7 @@ const PortalView: React.FC = () => {
 
   useEffect(() => {
     setMessage('Loading your profile status...');
-    getHackers(user.email)
+    getHackers(authUser.email)
       .then(hackers => {
         const hasSubmitted = hackers.length > 0;
 
