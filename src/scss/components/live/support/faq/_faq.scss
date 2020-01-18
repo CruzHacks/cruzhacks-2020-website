@@ -9,6 +9,11 @@
 
     &__title{
         @include cardTitle();
+        max-width: 12em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin: 0 auto;
+        line-height: 60px;
     }
 
     &__questions-container{

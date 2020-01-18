@@ -18,6 +18,10 @@
         padding-left: calc(10px + 2vw);
         @include responsive-font(1.4vw, 14px, 22px);
         text-transform: uppercase;
+        white-space: nowrap;
+        @include respond(phone) {
+            font-size: 12px
+        }
     }
 
     &__title{

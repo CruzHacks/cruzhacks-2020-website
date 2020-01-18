@@ -52,10 +52,13 @@ const SupportView: React.FC = () => {
             <div className="support__title">
                 Support and FAQ
             </div>
-            <SlackCardView />
+            <div className="support__cards-container">
+                <SlackCardView />
             <FAQCardView qAndA={FAQQandA}/>
             <MLHCodeOfConductCardView />
             <EmergencyContactCardView />
+            </div>
+            
         </div>
     );
 };
