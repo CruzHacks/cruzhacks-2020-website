@@ -31,8 +31,8 @@ const FAQQandA = [
         )
     }, 
     {
-        question: "What if I don't know how to code.", 
-        answer: "Beep boop beep. There is no need! This event is open to all!"
+        question: "What if I don't know how to code?", 
+        answer: "Beep boop beep. This event is open to all! Think user experiences, design aesthetics, and envisioning a project with a team. It's all about building exciting projects with the tools we have; use what you know best! "
     }, 
     {
         question: "How can I get a mentor?", 
@@ -53,7 +53,7 @@ const SupportView: React.FC = () => {
                 Support and FAQ
             </div>
             <div className="support__cards-container">
-                <SlackCardView />
+            <SlackCardView />
             <FAQCardView qAndA={FAQQandA}/>
             <MLHCodeOfConductCardView />
             <EmergencyContactCardView />
