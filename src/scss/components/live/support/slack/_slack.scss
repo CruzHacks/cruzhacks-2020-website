@@ -11,17 +11,22 @@
             $size: 22px,
             $color: #575757,
             $weight: bold,
-            $lineHeight: 3.56em,
-            $letterSpace: 0.05em, 
+            $lineHeight: 4.56em,
+            $letterSpace: 0.05em,
             $fontStyle: normal
         );
-        margin-left: calc(20px + 5vw);
-        @include responsive-font(1.4vw, 12px, 22px);
+        padding-left: calc(10px + 2vw);
+        @include responsive-font(1.4vw, 14px, 22px);
         text-transform: uppercase;
+        white-space: nowrap;
+        @include respond(phone) {
+            font-size: 12px
+        }
     }
 
     &__title{
         @include cardTitle();
+        margin-top: -1em;
     }
 
     &__description{
@@ -34,8 +39,7 @@
         );
         display: block;
         font-style: normal;
-        text-align: center;
-        margin-top: 50px;
+        text-align: left;
         margin-left: calc(20px + 5vw);
         margin-right: calc(20px + 5vw);
         margin-bottom: 60px;
@@ -43,7 +47,7 @@
 
     &__link{
         padding: 20px;
-        background: #45C899;
+        background: #45c899;
         border-radius: 7px;
         text-align: center;
         display: block;

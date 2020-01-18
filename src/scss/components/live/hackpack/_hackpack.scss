@@ -28,12 +28,14 @@
       $lineHeight: 50px,
       $letterSpace: 0.05em
     );
-    @include responsive-font(3.1vw, 30px, 64px);
+    @include responsive-font(3.1vw, 26px, 64px);
 
     @include respond(phone) {
       position: absolute;
       top: 6.5vh;
       left: 6.5vw;
+      top: 25px;
+      line-height: 40px;
     }
   }
 }

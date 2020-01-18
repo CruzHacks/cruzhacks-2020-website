@@ -8,7 +8,7 @@ const annoucementEndpoint: string =
   process.env.REACT_APP_ANNOUCEMENT_API_ENDPOINT + '';
 
 export function getAnnoucements(): Promise<Object> {
-  var data: any;
+  // var data: any;
   var posts: any;
   const requestConfig: AxiosRequestConfig = {
     params: {
@@ -18,9 +18,9 @@ export function getAnnoucements(): Promise<Object> {
 
   return axios
     .get<Array<Object>>(annoucementEndpoint, requestConfig)
-    .then(response => {
-      data = response.data;
-      posts = data.announcement.posts;
+    .then(() => {
+      // data = response.data;
+      // posts = data.announcement.posts;
       return posts;
     })
     .catch(error => {
@@ -149,9 +149,7 @@ export function submitApplication(application: any): Promise<boolean> {
     },
   };
 
-  return axios
-    .post<Object>(endpoint, application, requestConfig)
-    .then(response => {
-      return true;
-    });
+  return axios.post<Object>(endpoint, application, requestConfig).then(() => {
+    return true;
+  });
 }
