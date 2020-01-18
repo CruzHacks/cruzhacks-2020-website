@@ -10,7 +10,7 @@ const annoucementEndpoint: string =
 export function getAnnoucements(): Promise<Object> {
   var data: any;
   const requestConfig: AxiosRequestConfig = {
-    params: {
+    headers: {
       authentication: apiKey,
     },
   };
