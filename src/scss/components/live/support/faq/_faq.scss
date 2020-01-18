@@ -9,14 +9,19 @@
 
     &__title{
         @include cardTitle();
+        max-width: 12em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin: 0 auto;
+        line-height: 60px;
     }
 
     &__questions-container{
         display: flex;
         align-self: auto;
         flex-direction: column;
-        margin: 0 auto;
-        width: calc(30vw + 10vh);
+        margin-left: calc(20px + 5vw);
+        margin-right: calc(20px + 5vw);
     }
 
     &__questions{
@@ -48,9 +53,10 @@
             $letterSpace: 0.05em
         );
         display: none;
-        margin-left: calc(20px + 5vw);
+        margin-left: calc(20px + 8vw);
         margin-right: calc(20px + 5vw);
         padding-bottom: 12px;
+        margin-top: -3vh;
         @include responsive-font(1.4vw, 14px, 18px);
         left: 0;
     }
