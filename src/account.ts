@@ -7,7 +7,6 @@ const annoucementEndpoint: string = process.env.REACT_APP_ANNOUNCEMENT_SERVICE_E
 
 export function getAnnoucements(): Promise<Object> {
   var data: any;
-  var posts: any; 
   const requestConfig: AxiosRequestConfig = {
     headers: {
       authentication: apiKey
@@ -17,10 +16,8 @@ export function getAnnoucements(): Promise<Object> {
   return axios
     .get<Array<Object>>(annoucementEndpoint, requestConfig)
     .then(response => {
-      // data = response.data; 
-      // posts = data.announcement.posts;
-      console.log(response)
-      return posts;
+      data = response.data; 
+      return data.data;
     })
     .catch(error => {
       if (error.response.status === 404) {

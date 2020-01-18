@@ -7,7 +7,7 @@ const WorkshopsDayTwoView: React.FC = () => {
   const WorkshopView = () => {
     return (
       <div className="workshop-schedule-two__events-container">
-        <PerfectScrollbar>
+        <PerfectScrollbar options={{suppressScrollX: true}}>
           {DayTwoWorkshops.map(event => (
             <div className="workshop-schedule-two__events" key={event.title}>
               <span className="workshop-schedule-two__event-time">

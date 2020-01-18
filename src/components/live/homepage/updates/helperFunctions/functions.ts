@@ -1,7 +1,7 @@
 import {useEffect, useRef} from 'react';
 
 export function getTimeToString(post) {
-    var date = new Date(post.datetime);
+    var date = new Date(post.announcedatetime);
     var hours = date.getHours()
     var minutes = date.getMinutes(); 
     var isAm = true; 
@@ -12,7 +12,7 @@ export function getTimeToString(post) {
 }
 
 export function getDateToString(post) {
-    var date = new Date(post.datetime);
+    var date = new Date(post.announcedatetime);
     var weekday = date.getDay(); 
     var month = date.getMonth();
     var day = date.getDate();
