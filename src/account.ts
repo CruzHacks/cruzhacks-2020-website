@@ -47,6 +47,7 @@ export function postAnnouncement(
       password: token,
       twilio: twilio,
       announcement: announcementMessage,
+      announcementDate: new Date()
     };
 
     return axios
