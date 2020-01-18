@@ -1,23 +1,25 @@
 import axios, { AxiosRequestConfig } from 'axios';
+import organizers from './auth/organizers.json';
 
 const endpoint: string = process.env.REACT_APP_API_ENDPOINT + '';
 const resumeEndpoint: string = process.env.REACT_APP_API_UPLOAD_ENDPOINT + '';
 const apiKey = process.env.REACT_APP_API_KEY + '';
-const annoucementEndpoint: string = process.env.REACT_APP_ANNOUCEMENT_API_ENDPOINT + '';
+const annoucementEndpoint: string =
+  process.env.REACT_APP_ANNOUCEMENT_API_ENDPOINT + '';
 
 export function getAnnoucements(): Promise<Object> {
   var data: any;
-  var posts: any; 
+  var posts: any;
   const requestConfig: AxiosRequestConfig = {
     params: {
-      authentication: apiKey
+      authentication: apiKey,
     },
   };
 
   return axios
     .get<Array<Object>>(annoucementEndpoint, requestConfig)
     .then(response => {
-      data = response.data; 
+      data = response.data;
       posts = data.announcement.posts;
       return posts;
     })
@@ -29,6 +31,47 @@ export function getAnnoucements(): Promise<Object> {
       return Promise.reject(error);
     });
 }
+
+export function postAnnouncement(
+  authUser,
+  announcementMessage
+): Promise<Object> {
+  let isOrganizer = checkOrganizerStatus(authUser);
+  if (isOrganizer) {
+    const requestConfig: AxiosRequestConfig = {
+      params: {
+        authentication: apiKey,
+      },
+    };
+    return axios
+      .post<string>(annoucementEndpoint, announcementMessage, requestConfig)
+      .then(response => {
+        if (response.status === 200) {
+          return Promise.resolve(true);
+        } else {
+          return Promise.reject(response.status);
+        }
+      })
+      .catch(error => {
+        if (error.response.status === 404) {
+          return Promise.resolve(error);
+        }
+        return Promise.reject(error);
+      });
+  } else {
+    window.alert('You must be an organizer to post announcement messages');
+    return Promise.reject(new Error('not an organizer'));
+  }
+}
+
+const checkOrganizerStatus = authUser => {
+  for (var idx = 0; idx < organizers.length; idx++) {
+    if (organizers[idx].email === authUser.email) {
+      return true;
+    }
+  }
+  return false;
+};
 
 type HackerType = {
   firstname: string;
