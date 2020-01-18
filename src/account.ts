@@ -10,7 +10,7 @@ const annoucementEndpoint: string =
 export function getAnnoucements(): Promise<Object> {
   var data: any;
   const requestConfig: AxiosRequestConfig = {
-    params: {
+    headers: {
       authentication: apiKey,
     },
   };
@@ -47,6 +47,7 @@ export function postAnnouncement(
       password: token,
       twilio: twilio,
       announcement: announcementMessage,
+      announcementDate: new Date().toLocaleString()
     };
 
     return axios
