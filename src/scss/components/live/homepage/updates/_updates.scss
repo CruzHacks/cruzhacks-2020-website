@@ -11,8 +11,10 @@
     align-items: center;
     justify-content: center;
   }
+
   &__title {
     @include cardTitle;
+    line-height: calc(2.5vw + 5vh);
   }
 
   &__blinker {
@@ -48,6 +50,34 @@
     }
     100% {
       opacity: 0;
+    }
+  }
+
+  &__link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -3.5em;
+  }
+
+  &__live-stream-link {
+    @include font-source-subheader(
+    $size: 1em,
+    $color: #5c68d7,
+    $weight: normal,
+    $lineHeight: calc(3vw + 2vh),
+    $letterSpace: 0.05em,
+    $fontStyle: normal
+  );
+    line-height: 0;
+    padding-top: 0.5em;
+    @include responsive-font(1.7vw, 14px, 24px);
+
+    @include respond(mission) {
+      line-height: 1.75em;
+    }
+    @include respond(tab-port) {
+      line-height: 2.75em;
     }
   }
 
