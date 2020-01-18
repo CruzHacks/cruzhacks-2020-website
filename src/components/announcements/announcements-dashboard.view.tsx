@@ -8,17 +8,13 @@ const AnnouncementsDashboard: React.FC = () => {
   const { user } = authContext;
   const authUser: Auth0UserType = user;
   const [announcementMessage, setAnnouncementMessage] = useState('');
-  const [tokenValid, setTokenValid] = useState(false);
   const [token, setToken] = useState('');
   const [twilio, setTwilio] = useState(false);
-
-  const ANNOUNCEMENT_TOKEN = process.env.REACT_APP_ANNOUNCEMENT_TOKEN + '';
 
   const handleInputChanges = event => {
     let { name, value } = event.target;
     switch (name) {
       case 'announcement-token':
-        setTokenValid(authenticatePermissions(value));
         setToken(value);
         break;
       case 'announcement-body':
@@ -30,42 +26,33 @@ const AnnouncementsDashboard: React.FC = () => {
     }
   };
 
-  const authenticatePermissions = token => {
-    return token === ANNOUNCEMENT_TOKEN;
-  };
-
   const confirmAnnouncement = event => {
     event.preventDefault();
-
-    if (tokenValid) {
-      let value = event.target.elements[0].value;
-      if (
-        window.confirm(
-          `Are you sure you want to push the following announcement?\n${value}`
-        )
-      ) {
-        pushAnnouncement();
-      }
-    } else {
-      window.alert(`token invalid, unable to send announcement`);
+    let value = event.target.elements[0].value;
+    if (
+      window.confirm(
+        `Are you sure you want to push the following announcement?\n${value}`
+      )
+    ) {
+      pushAnnouncement();
     }
   };
 
   const pushAnnouncement = () => {
-    if (tokenValid) {
-      console.log('pushing announcement');
-      postAnnouncement(authUser, announcementMessage, token, twilio)
-        .then(() => {
-          window.alert(
-            `pushed announcement successfully: ${announcementMessage}`
-          );
-        })
-        .catch(error => {
-          if (error.msg === 'not an organizer') {
-            window.alert('you must be an organizer to post announcements');
-          }
-        });
-    }
+    postAnnouncement(authUser, announcementMessage, token, twilio)
+      .then(() => {
+        window.alert(
+          `pushed announcement successfully: ${announcementMessage}`
+        );
+      })
+      .catch(error => {
+        if (error.msg === 'not an organizer') {
+          window.alert('you must be an organizer to post announcements');
+        }
+        if (error.response.status === 401) {
+          window.alert('incorrect password');
+        }
+      });
   };
 
   return (
