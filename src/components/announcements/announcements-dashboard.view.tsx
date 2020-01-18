@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import account, { postAnnouncement } from '../../account';
+import { postAnnouncement } from '../../account';
 import { useAuth0 } from '../../auth/auth';
 import Auth0UserType from '../types/Auth0UserType';
-import organizers from '../../auth/organizers.json';
 
 const AnnouncementsDashboard: React.FC = () => {
   const authContext = useAuth0()!;
@@ -46,17 +45,17 @@ const AnnouncementsDashboard: React.FC = () => {
   const pushAnnouncement = () => {
     if (tokenValid) {
       console.log('pushing announcement');
-      //   postAnnouncement(announcementMessage, authUser)
-      //     .then(() => {
-      //       window.alert(
-      //         `pushed announcement successfully: ${announcementMessage}`
-      //       );
-      //     })
-      //     .catch(error => {
-      //       if (error.msg === 'not an organizer') {
-      //         window.alert('you must be an organizer to post announcements');
-      //       }
-      //     });
+        postAnnouncement(announcementMessage, authUser)
+          .then(() => {
+            window.alert(
+              `pushed announcement successfully: ${announcementMessage}`
+            );
+          })
+          .catch(error => {
+            if (error.msg === 'not an organizer') {
+              window.alert('you must be an organizer to post announcements');
+            }
+          });
     }
   };
 
