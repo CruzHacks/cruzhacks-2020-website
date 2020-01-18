@@ -54,14 +54,11 @@
   &__updates-container {
     position: relative;
     height: max-content;
+    min-height: 20vh;
     max-height: 50vh;
     overflow: hidden;
     margin: 0 auto;
     width: calc(30vw + 10vh);
-  }
-
-  &__scrollbar {
-    position: absolute;
   }
 
   &__post-time {
@@ -108,4 +105,9 @@
     margin-left: 0vw;
     margin-bottom: calc(1vw + 1vh);
   }
+}
+
+.updates-card__updates-container .scrollbar-container {
+  height: 20em;
+  padding-bottom: 5vh;
 }
