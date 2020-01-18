@@ -12,6 +12,7 @@ import SchedulePage from '../components/schedule/schedulepage.view';
 import MapPage from '../components/live/mapPage/map.view';
 import HackPackView from '../components/live/hackPack/hackPack.view';
 import SupportView from '../components/live/support/support.view';
+import AnnouncementsDashboard from '../components/announcements/announcements-dashboard.view';
 import { useAuth0 } from '../auth/auth';
 
 const Routes: React.FC = () => {
@@ -41,6 +42,10 @@ const Routes: React.FC = () => {
             <PrivateRoute
               path="/extended-application"
               component={<ExtendedAppPortalView />}
+            />
+            <PrivateRoute
+              path="/announcements"
+              component={<AnnouncementsDashboard />}
             />
           </Switch>
         </Router>
