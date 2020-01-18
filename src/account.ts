@@ -40,6 +40,7 @@ export function postAnnouncement(
   if (isOrganizer) {
     const headers = {
       authentication: apiKey,
+      'Content-Type': 'application/json'
     };
 
     const data = {
@@ -49,7 +50,7 @@ export function postAnnouncement(
     };
 
     return axios
-      .post<string>(annoucementEndpoint, announcementMessage, {
+      .post<Object>(annoucementEndpoint, data, {
         headers: headers,
         data: data,
       })
