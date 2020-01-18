@@ -84,7 +84,7 @@ const UpdatesView: React.FC = () => {
           </div>
           <div className="updates-card__link-container">
             <p className="updates-card__live-stream-info">
-                <a className="updates-card__live-stream-link" href="https://twitch.tv/cruzhacks" rel="noopener noreferrer" target="_blank">Watch Us Live on Twitch!</a>
+                <a className="updates-card__live-stream-link" href="https://twitch.tv/cruzhacks" rel="noopener noreferrer" target="_blank">Event Center Live!</a>
             </p>
           </div>
           {<Updates /> }
