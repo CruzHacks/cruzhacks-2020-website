@@ -30,7 +30,7 @@ const UpdatesView: React.FC = () => {
       .catch(err => {
         console.log(err)
       });
-  }, isMounted ? 60000 : null);
+  }, isMounted ? 10000 : null);
 
   useEffect(() => {
     if(!isMounted){
