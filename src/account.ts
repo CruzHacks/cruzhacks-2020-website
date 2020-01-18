@@ -11,7 +11,7 @@ export function getAnnoucements(): Promise<Object> {
   var data: any;
   const requestConfig: AxiosRequestConfig = {
     headers: {
-      authentication: apiKey,
+      authentication: apiKey
     },
   };
 
