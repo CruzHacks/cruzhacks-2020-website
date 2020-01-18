@@ -80,7 +80,12 @@ const UpdatesView: React.FC = () => {
         <div className="updates-card__card">
           <div className="updates-card__title-container">
             <span className="updates-card__blinker"></span>
-            <span className="updates-card__title">Live Updates</span>
+            <p className="updates-card__title">Live Updates</p>
+          </div>
+          <div className="updates-card__link-container">
+            <p className="updates-card__live-stream-info">
+                <a className="updates-card__live-stream-link" href="https://twitch.tv/cruzhacks" rel="noopener noreferrer" target="_blank">Watch Us Live on Twitch!</a>
+            </p>
           </div>
           {<Updates /> }
         </div>
