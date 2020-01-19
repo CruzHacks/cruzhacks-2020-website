@@ -101,13 +101,13 @@ export const DayTwoWorkshops = [
   {
     title: 'Docker',
     location: 'Stevenson 151',
-    time: '6:30pm 7:15pm',
+    time: '8:15pm - 9:00pm',
     difficulty: 'Intermediate',
   },
   {
     title: 'Intro to Web Scraping',
     location: 'Stevenson 152',
-    time: '6:30pm 7:15pm',
+    time: '8:15pm - 9:00pm',
     difficulty: 'Advanced',
   },
 ];
