@@ -48,7 +48,7 @@ export const GeneralDayThree = [
   },
   {
     title: 'Code Freeze: Submit Projects',
-    time: '10:00am',
+    time: '11:00am',
     id: 'longEventTitle',
   },
   {
