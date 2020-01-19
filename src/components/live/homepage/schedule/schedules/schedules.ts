@@ -47,8 +47,18 @@ export const GeneralDayThree = [
     id: '',
   },
   {
+    title: 'Devpost Hard Deadline',
+    time: '9:00am',
+    id: 'longEventTitle',
+  },
+  {
     title: 'Code Freeze: Submit Projects',
     time: '11:00am',
+    id: 'longEventTitle',
+  },
+  {
+    title: 'Judging',
+    time: '11:30am',
     id: 'longEventTitle',
   },
   {
