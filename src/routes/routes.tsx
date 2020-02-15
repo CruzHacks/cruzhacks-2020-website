@@ -14,6 +14,7 @@ import HackPackView from '../components/live/hackPack/hackPack.view';
 import SupportView from '../components/live/support/support.view';
 import AnnouncementsDashboard from '../components/announcements/announcements-dashboard.view';
 import { useAuth0 } from '../auth/auth';
+import PostLandingView from '../components/postLanding/postLanding.view';
 
 const Routes: React.FC = () => {
   const { loading } = useAuth0()!;
@@ -27,7 +28,7 @@ const Routes: React.FC = () => {
       <div className="routes">
         <Router>
           <Switch>
-            <Route exact path="/" render={() => <LandingView />} />
+            <Route exact path="/" render={() => <PostLandingView />} />
             <Route exact path="/team" render={() => <TeamView />} />
             <PrivateRoute path="/portal" component={<PortalView />} />
             <Route exact path="/schedule" render={() => <SchedulePage />} />
