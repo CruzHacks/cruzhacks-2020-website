@@ -1,0 +1,38 @@
+.post-landing-navbar {
+    &__container {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 0;
+        right: 159px;
+    }
+
+    &__link {
+        text-decoration: none;
+        @include font-source-subheader(
+            13px,
+            16px,
+            0.06em,
+            3px,
+            center,
+            false,
+            600,
+            #373737
+        );
+        text-transform: uppercase;
+        padding: 16px 30px;
+        margin-top: 1em;
+        margin-right: 1em;
+    }
+
+    &__mlh-banner {
+        display: block;
+        max-width: 100px;
+        min-width: 60px;
+        position: fixed;
+        right: 50px;
+        top: 0;
+        width: 10%;
+        z-index: 10000;
+    }
+}
