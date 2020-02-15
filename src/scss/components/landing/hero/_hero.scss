@@ -36,11 +36,6 @@
 }
 
 @include respond(phone) {
-  svg.hero-backdrop__rightside-image {
-    // top: 6%;
-    visibility: hidden;
-  }
-
   div.hero-right-side-container {
     top: 3%;
   }
