@@ -1,11 +1,11 @@
 import React from 'react';
-import NavbarView from './navbar/navbar.view'
+import PostLandingHeroView from './hero/postLandingHero.view';
 
 const PostLandingView: React.FC = () => {
     return(
         <>
             <div className="post-landing__container">
-                <NavbarView/>
+                <PostLandingHeroView/>
             </div>
         </>
     )
