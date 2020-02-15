@@ -1,11 +1,13 @@
 import React from 'react';
 import Navbar from './navbar/navbar.view';
 import RightBackdrop from '../../../assets/postLanding/right-backdrop.svg';
+import LeftPillars from '../../../assets/postLanding/left-pillars.svg';
 
 const PostLandingHeroView: React.FC = () => {
     return(
         <>
         <div className="post-landing-hero__container">
+            <img className="post-landing-hero__left-pillars" src={LeftPillars} alt="Left Pillars"/>
             <img className="post-landing-hero__backdrop-image-right" src={RightBackdrop} alt="Hero Background"/>
             <Navbar/>
             <div className="post-landing-hero__title-container">
