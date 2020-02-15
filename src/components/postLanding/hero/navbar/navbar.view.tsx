@@ -10,7 +10,7 @@ const links = [
         name: "2019", 
         link: "https://2019.cruzhacks.com/"
     }
-]
+];
 
 const LinkView = () => {
     return(
@@ -24,7 +24,7 @@ const LinkView = () => {
         }
         </>
     )
-}
+};
 
 const NavbarView: React.FC = () => {
     return(

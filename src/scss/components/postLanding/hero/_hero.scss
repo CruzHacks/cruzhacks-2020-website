@@ -9,9 +9,9 @@
         z-index: -1;
         position: absolute;
         top: 0;
-        right: -4em;
+        right: 0;
 
-        max-height: 100vh;
+        max-height: 90vh;
         width: 65vw;
 
         @include respond(tab-land) {

@@ -7,6 +7,11 @@
         right: 159px;
     }
 
+    &__links-container {
+        margin-top: 1.5em;
+        margin-right: 1em;
+    }
+
     &__link {
         text-decoration: none;
         @include font-source-subheader(
@@ -21,8 +26,6 @@
         );
         text-transform: uppercase;
         padding: 16px 30px;
-        margin-top: 1em;
-        margin-right: 1em;
     }
 
     &__mlh-banner {
@@ -33,6 +36,6 @@
         right: 50px;
         top: 0;
         width: 10%;
-        z-index: 10000;
+        z-index: 1;
     }
 }
