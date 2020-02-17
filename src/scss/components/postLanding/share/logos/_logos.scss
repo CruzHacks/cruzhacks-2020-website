@@ -1,0 +1,24 @@
+@mixin icon {
+  margin: 0 2%;
+  width: 10%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  border-radius: 5%;
+  background: #79e2ce;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(15px);
+  transition: transform 0.2s ease, background 0.5s ease;
+}
+&__slack {
+  @include icon;
+}
+&__twitter {
+  @include icon;
+}
+&__facebook {
+  @include icon;
+}
+&__linkedin {
+  @include icon;
+}

@@ -1,8 +1,11 @@
 .post-landing {
-    &__container {
-        height: 100%;
-        width: 100%;
-    }
+  &__container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
 }
 
 @import './hero/hero';
+
+@import './share/share';

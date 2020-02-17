@@ -1,0 +1,33 @@
+.postLanding-share {
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__links-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  &__links-title {
+    @include font-source-header(
+      $size: 27px,
+      $lineHeight: 32px,
+      $letterSpace: 0.05em,
+      $textIndent: 0px,
+      $textAlign: center,
+      $fontStyle: false,
+      $weight: 700,
+      $color: #2e2c5f
+    );
+  }
+  &__links {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+
+  @import './logos/logos';
+}
