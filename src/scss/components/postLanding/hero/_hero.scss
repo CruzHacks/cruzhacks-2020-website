@@ -1,91 +1,38 @@
 .post-landing-hero {
-    &__container {
-        overflow: hidden;
-        min-height: 100vh;
-        position: relative;
+  &__container {
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(65vw - 5vh);
+    max-width: 105vh;
+    @include respond(desktop) {
+      width: calc(60vw - 5vh);
     }
-    
-    &__backdrop-image-right {
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        max-height: 90vh;
-        width: 65vw;
-
-        @include respond(tab-land) {
-            max-width: 63vw;
-        }
-        @include respond(tab-port) {
-            max-width: 50vw;
-        }
-        @include respond(phone) {
-            display: none;
-        }
+    @include respond(mission) {
+      width: calc(70vw - 5vh);
     }
-
-    &__title-container {
-        width: fit-content;
-        height: max-content;
-        margin-top: 17em;
-        margin-left: 10em;
-        display: flex;
-        flex-direction: column;
-        z-index: 0;
+  }
+  &__title-container {
+    position: relative;
+    bottom: calc(20vh + 37vw);
+    left: calc(10vw - 4em);
+    @include respond(mission) {
+      left: -3em;
     }
-
-    &__title {
-        @include font-source-body(
-            $size: 39px,
-            $lineHeight: 46px,
-            $letterSpace: 0.04em,
-            $textIndent: 3px,
-            $fontStyle: bold,
-            $weight: 500,
-            $color: #222222
-        );
-        text-transform: lowercase;
+  }
+  &__pillars {
+    position: relative;
+    top: 10vh;
+    max-width: 55%;
+  }
+  &__lowPillar {
+    @include respond(mission) {
+      display: none;
     }
-
-    &__description {
-        @include font-source-body(
-            $size: 22px,
-            $lineHeight: 28px,
-            $letterSpace: 0.06em,
-            $textIndent: 3px,
-            $weight: 500,
-            $color: #9e9eff
-        );
-        text-align: right;
-        padding-bottom: 6em;
-    }
-
-    &__brand {
-        text-decoration: none;
-        text-transform: uppercase;
-        background: #6F6FE8;
-        box-shadow: 0px 2px 6px #BFBFBF;
-        border-radius: 23px;
-        text-align: center;
-        padding-top: 1em;
-        padding-bottom: 1em;
-
-        @include font-source-body(
-            $size: 14px,
-            $lineHeight: 18px,
-            $letterSpace: 0.07em,
-            $weight: normal,
-            $color: #FFFEFE
-        );
-    }
-
-    &__left-pillars {
-        position: absolute;
-        margin-top:12em;
-        z-index: -1;
-    }
-
+  }
 }
-
-@import './navbar/navbar';
