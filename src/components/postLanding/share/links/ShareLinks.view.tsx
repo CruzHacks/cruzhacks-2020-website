@@ -11,15 +11,20 @@ interface media {
 const ShareLinksView: React.FC<media> = media => {
   return (
     <>
-      <div className="postLanding-share__links">
-        <span className="postLanding-share__links-title">
-          Share this retrospective!
-        </span>
+      <div className="postLanding-share__link-container">
+        <div>
+          <p
+            style={{ textAlign: 'center' }}
+            className="postLanding-share__links-title"
+          >
+            Share this retrospective!
+          </p>
+        </div>
         <div className="postLanding-share__links">
           {media.accounts.map(profile => (
             <a
               className={'postLanding-share__' + profile.type}
-              href={profile.link}
+              href={profile.copy ? undefined : profile.link}
               key={profile.type}
               target="__blank"
               rel="noopener noreferrer"
