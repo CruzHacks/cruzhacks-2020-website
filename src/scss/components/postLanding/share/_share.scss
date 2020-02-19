@@ -1,18 +1,8 @@
 .postLanding-share {
   &__container {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
+    max-height: 18em;
   }
-
-  &__squiggle {
-    position: relative;
-    height: 18em;
-    bottom: 1em;
-  }
-
   &__links-container {
     position: absolute;
     display: flex;
@@ -23,25 +13,34 @@
     @include font-source-header(
       $size: 27px,
       $lineHeight: 32px,
-      $letterSpace: 0.05em,
+      $letterSpace: 0.02em,
       $textIndent: 0px,
       $textAlign: center,
       $fontStyle: false,
-      $weight: 700,
+      $weight: bold,
       $color: #2e2c5f
     );
+    font-family: 'Rubik Bold';
     display: block;
     text-align: center;
+    margin: 0 auto;
     min-width: 15.5em;
+    @include responsive-font(3.1vw, 18px, 27px);
   }
   &__link-container {
+    position: relative;
     display: flex;
     flex-direction: column;
+    bottom: 20em;
   }
   &__links {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
-
+  &__links img {
+    margin: 0 auto;
+  }
   @import './logos/logos';
+  @import './backdrop/backdrop';
 }

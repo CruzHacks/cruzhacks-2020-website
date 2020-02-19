@@ -1,7 +1,7 @@
 import React from 'react';
-import { ReactComponent as Pillars } from './pillars.svg';
-import { ReactComponent as Squiggle } from './squiggle.svg';
+
 import ShareLinksView from './links/ShareLinks.view';
+import ShareBackdropView from './backdrop/ShareBackdrop.view';
 
 const PostLandingShareView: React.FC = () => {
   const profiles = [
@@ -35,13 +35,8 @@ const PostLandingShareView: React.FC = () => {
   return (
     <>
       <div className="postLanding-share__container">
-        <div className="postLanding-share__pillars">
-          <Pillars />
-        </div>
+        <ShareBackdropView />
         <ShareLinksView accounts={profiles} />
-        <div className="postLanding-share__squiggle">
-          <Squiggle />
-        </div>
       </div>
     </>
   );

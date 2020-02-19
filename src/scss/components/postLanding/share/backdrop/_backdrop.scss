@@ -1,0 +1,10 @@
+&__backdrop {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+&__squiggle {
+  position: relative;
+  height: 15em;
+  right: -0.3em;
+}

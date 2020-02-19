@@ -13,12 +13,9 @@ const ShareLinksView: React.FC<media> = media => {
     <>
       <div className="postLanding-share__link-container">
         <div>
-          <p
-            style={{ textAlign: 'center' }}
-            className="postLanding-share__links-title"
-          >
+          <span className="postLanding-share__links-title">
             Share this retrospective!
-          </p>
+          </span>
         </div>
         <div className="postLanding-share__links">
           {media.accounts.map(profile => (
@@ -34,7 +31,7 @@ const ShareLinksView: React.FC<media> = media => {
                   'https://icongr.am/simple/' +
                   profile.type +
                   '.svg?size=' +
-                  '64' +
+                  '28' +
                   '&color=' +
                   '#ffffff' +
                   '+=&colored=true'
