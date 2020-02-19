@@ -2,6 +2,12 @@
   &__container {
     position: relative;
     max-height: 18em;
+    @include respond(tab-port) {
+      max-height: 14em;
+    }
+    @include respond(phone) {
+      max-height: 10em;
+    }
   }
   &__links-container {
     position: absolute;
@@ -33,6 +39,15 @@
     display: flex;
     flex-direction: column;
     bottom: 20em;
+    @include respond(tab-port) {
+      bottom: 13em;
+    }
+    @include respond(phone) {
+      bottom: 10em;
+    }
+    @include respond(phone-narrow) {
+      bottom: 18em;
+    }
   }
   &__links {
     display: flex;
@@ -41,6 +56,9 @@
   }
   &__links img {
     margin: 0 auto;
+    @include respond(tab-port) {
+      transform: scale(0.75);
+    }
   }
   @import './logos/logos';
   @import './backdrop/backdrop';

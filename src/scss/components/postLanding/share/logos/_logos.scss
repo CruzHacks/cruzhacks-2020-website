@@ -1,15 +1,22 @@
 @mixin icon {
-  margin: 0 1em 0 1em;
-  width: 3em;
-  height: 3em;
+  margin: calc(4vh - 0.25em) 1em 0 1em;
+  padding: calc((3% - 0.1em) * 0.4);
   display: flex;
   align-items: center;
   border-radius: 100%;
   background: #79e2ce;
-  fill: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transform: translateY(15px);
   transition: transform 0.2s ease, background 0.5s ease;
+  @include respond(big-desktop) {
+    padding: 1.25em;
+  }
+  @include respond(phone-narrow) {
+    margin: calc((4vh - 0.25em) * 0.5) 1em 0 1em;
+  }
+  &:hover {
+    transform: translateY(-0.25vh);
+    background: lighten($color: #79e2ce, $amount: 10%);
+  }
 }
 
 &__slack {
