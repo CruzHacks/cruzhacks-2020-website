@@ -24,6 +24,7 @@
     display: block;
     text-align: center;
     margin: 0 auto;
+    padding-bottom: calc(2vh - 0.5em);
     min-width: 15.5em;
     @include responsive-font(3.1vw, 18px, 27px);
   }

@@ -27,15 +27,9 @@ const ShareLinksView: React.FC<media> = media => {
               rel="noopener noreferrer"
             >
               <img
-                src={
-                  'https://icongr.am/simple/' +
+                src={require('../../../../assets/postLanding/shareButtons/' +
                   profile.type +
-                  '.svg?size=' +
-                  '28' +
-                  '&color=' +
-                  '#ffffff' +
-                  '+=&colored=true'
-                }
+                  '.svg')}
                 alt={profile.type}
               />
             </a>
