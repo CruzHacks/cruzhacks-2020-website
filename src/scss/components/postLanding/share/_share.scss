@@ -8,6 +8,11 @@
     @include respond(phone) {
       max-height: 10em;
     }
+    @include respond(phone-narrow) {
+      max-height: 6em;
+      margin-bottom: 11em;
+      top: 8em;
+    }
   }
   &__links-container {
     position: absolute;
@@ -16,23 +21,7 @@
     align-items: center;
   }
   &__links-title {
-    @include font-source-header(
-      $size: 27px,
-      $lineHeight: 32px,
-      $letterSpace: 0.02em,
-      $textIndent: 0px,
-      $textAlign: center,
-      $fontStyle: false,
-      $weight: bold,
-      $color: #2e2c5f
-    );
-    font-family: 'Rubik Bold';
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: calc(2vh - 0.5em);
-    min-width: 15.5em;
-    @include responsive-font(3.1vw, 18px, 27px);
+    @include postLandingTitle;
   }
   &__link-container {
     position: relative;
