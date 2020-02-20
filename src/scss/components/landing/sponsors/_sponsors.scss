@@ -3,7 +3,6 @@
     @include flexBox();
     @include flexColumn();
     position: relative;
-    top: -2.5em;
   }
   &__logosContainer {
     @include respond(tab-port) {
