@@ -1,5 +1,4 @@
 import React from 'react';
-import Countdown from 'react-countdown-now';
 import HeroSubscribeToEmailList from '../../../landing/hero/titleArea/hero-subscribe-to-email-list.view';
 
 const TitleAreaView: React.FC = () => {
