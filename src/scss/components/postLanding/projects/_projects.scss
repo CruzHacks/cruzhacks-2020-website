@@ -1,6 +1,7 @@
 .post-landing-projects {
     &__container {
         position: relative;
+        display: inline;
         min-height: 25em;
     }
 
@@ -8,21 +9,29 @@
         position: absolute;
         z-index: -1;
         width: 100%;
-    }
+
+        @include respond(phone){
+            display: block;
+            width: 1vw;
+            height: auto;
+        }
+     }
 
     &__title {
         @include font-source-header(
-            $size: 27px,
+            $size: 1.6em,
             $color: #2E2C5F,
             $weight: bold,
             $fontStyle: normal,
             $lineHeight: 32px,
             $letterSpace: 0.05em
         );
+        // @include responsive-font(1.1em, 1.25em, 1.6em);
         font-family: Rubik Bold;
         text-align: center;
-        // margin-top: 6em;
         position: relative;
+        padding-top: 6em;
+        padding-bottom: 2em;
     }
 
     &__button {
@@ -36,6 +45,12 @@
         height: 5em;
         width: 21em;
         margin-left: 37%;
+        
+        @include respond(phone) {
+            height: 4em;
+            width: 14em;
+            margin-left: 30%;
+        }
     }
 
     &__button-text {
@@ -49,5 +64,8 @@
             $letterSpace: 0.02em
         );
         top: 1.5em;
+        @include respond(phone) {
+            top: .85em;
+        }
     }
 }
