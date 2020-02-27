@@ -4,6 +4,7 @@ import PostLandingShareView from './share/postLandingShare.view';
 import PostLandingCTAview from './cta/postLandingCTA.view';
 import SponsorsView from '../landing/sponsors/sponsors.view';
 import PostLandingAboutView from './about/about.view';
+import PostLandingStatsView from './stats/stats.view';
 
 const PostLandingView: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const PostLandingView: React.FC = () => {
       <div className="postLanding__container">
         <PostLandingHeroView />
         <PostLandingAboutView/>
+        <PostLandingStatsView />
         <SponsorsView />
         <PostLandingCTAview />
         <PostLandingShareView />
