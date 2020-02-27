@@ -1,0 +1,56 @@
+.post-landing-info {
+    &__container {
+        position: relative;
+        min-height: 35em;
+    }
+
+    &__stat-container {
+        position: relative;
+        padding-left: 25em;
+        padding-bottom: 2em;
+
+        @include respond(tab-port) {
+            padding-left: 1.5em;
+        }
+
+        // @include respond(tab-land) {
+        //     padding-left: 20em;
+        // }
+
+        @include respond(phone) {
+            padding-left: 1.5em;
+        }
+    }
+
+    &__title-container {
+        max-width: 37em;
+        text-align: center;
+        padding-bottom: 2em;
+    }
+
+    &__text-container {
+        max-width: 36.4em;
+    }
+    
+    &__title {
+        @include font-source-header(
+            $size: 27px,
+            $lineHeight: 32px,
+            $letterSpace: 0.05em,
+            $fontStyle: normal,
+            $weight: bold,
+            $color: #2E2C5F
+        );
+    }
+
+    &__text {
+        @include font-source-body(
+            $size: 18px,
+            $lineHeight: 27px,
+            $letterSpace: 0.02em,
+            $fontStyle: normal,
+            $weight: normal,
+            $color: #383636
+        );
+    }
+}
