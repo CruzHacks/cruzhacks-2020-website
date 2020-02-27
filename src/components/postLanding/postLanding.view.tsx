@@ -6,6 +6,7 @@ import SponsorsView from '../landing/sponsors/sponsors.view';
 import PostLandingAboutView from './about/about.view';
 import PostLandingStatsView from './stats/stats.view';
 import PostLandingInfoView from './info/info.view';
+import PostLandingProjectsView from './projects/projects.view';
 
 const PostLandingView: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const PostLandingView: React.FC = () => {
         <PostLandingAboutView/>
         <PostLandingStatsView />
         <PostLandingInfoView />
+        <PostLandingProjectsView />
         <SponsorsView />
         <PostLandingCTAview />
         <PostLandingShareView />
