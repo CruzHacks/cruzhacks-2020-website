@@ -25,9 +25,9 @@
   @include responsive-font(3.1vw, 18px, 27px);
 }
 @import './hero/hero';
-
-@import './cta/cta';
-@import './share/share';
 @import './about/about';
 @import './stats/stats';
 @import './info/info';
+@import './photos/photos';
+@import './cta/cta';
+@import './share/share';
