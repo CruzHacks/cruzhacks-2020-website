@@ -7,11 +7,11 @@ interface BoxProps {
 export const PostLandingStatsBoxView: React.FC<BoxProps> = BoxProps => {
   return (
     <>
-      <div className="stats__box-container">
+      <div className="post-landing-stats__box-container">
         {BoxProps.stats.map(metric => (
-          <div className="stats__box" key={metric.category}>
-            <span className="stats__box-stat">{metric.stat}</span>
-            <span className="stats__box-category">{metric.category}</span>
+          <div className="post-landing-stats__box" key={metric.category}>
+            <span className="post-landing-stats__box-stat">{metric.stat}</span>
+            <span className="post-landing-stats__box-category">{metric.category}</span>
           </div>
         ))}
       </div>

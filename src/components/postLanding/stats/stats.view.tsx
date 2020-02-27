@@ -24,8 +24,8 @@ let stats = [
 const PostLandingStatsView: React.FC = () => {
     return(
         <>
-            <div className="stats__container">
-                <span className="stats__title">2020 Success Stats</span>
+            <div className="post-landing-stats__container">
+                <span className="post-landing-stats__title">2020 Success Stats</span>
                 <PostLandingStatsTreeView />
                 <PostLandingStatsBoxView stats={stats} />
             </div>

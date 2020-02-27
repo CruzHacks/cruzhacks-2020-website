@@ -1,0 +1,51 @@
+.post-landing-stats {
+    &__container {
+        @include flexBox();
+        @include flexColumn();
+        flex: 0 0 50%;
+        min-height: 696px;
+        width: 100%;
+        position: relative;
+        justify-content: space-around;
+        @include respond(mission) {
+          min-height: 700px;
+        }
+        @include respond(tab-land) {
+          min-height: 480px;
+        }
+        @include respond(phone) {
+          min-height: 1050px;
+          padding-top: 2em;
+        }
+        @include respond(phone-narrow) {
+          min-height: 950px;
+        }
+    }
+    &__title {
+        @include font-source-header(
+            $size: 2.5em,
+            $color: #2e2c5f,
+            $weight: bold,
+            $lineHeight: 32px,
+            $letterSpace: 0.05em
+        );
+        font-family: Rubik Bold;
+        text-transform: uppercase;
+        mix-blend-mode: normal;
+    
+        height: 15px;
+    
+        @include respond(tab-land) {
+          font-size: 1.85em;
+        }
+        @include respond(phone-narrow) {
+          width: 10em;
+          margin: auto;
+          text-align: center;
+          padding-bottom: 2.5em;
+        }
+    }
+      // import tree & box children
+      @import './tree/tree';
+      @import './box/box';
+}
