@@ -2,6 +2,7 @@ import React from 'react';
 import PostLandingHeroView from './hero/postLandingHero.view';
 import PostLandingShareView from './share/postLandingShare.view';
 import PostLandingCTAview from './cta/postLandingCTA.view';
+import PostLandingPhotosView from './photos/postLandingPhotos.view';
 import SponsorsView from '../landing/sponsors/sponsors.view';
 import PostLandingAboutView from './about/about.view';
 import PostLandingStatsView from './stats/stats.view';
@@ -13,10 +14,11 @@ const PostLandingView: React.FC = () => {
     <>
       <div className="postLanding__container">
         <PostLandingHeroView />
-        <PostLandingAboutView/>
+        <PostLandingAboutView />
         <PostLandingStatsView />
         <PostLandingInfoView />
         <PostLandingProjectsView />
+        <PostLandingPhotosView />
         <SponsorsView />
         <PostLandingCTAview />
         <PostLandingShareView />
