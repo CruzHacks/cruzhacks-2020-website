@@ -1,0 +1,53 @@
+.post-landing-projects {
+    &__container {
+        position: relative;
+        min-height: 25em;
+    }
+
+    &__backdrop {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+    }
+
+    &__title {
+        @include font-source-header(
+            $size: 27px,
+            $color: #2E2C5F,
+            $weight: bold,
+            $fontStyle: normal,
+            $lineHeight: 32px,
+            $letterSpace: 0.05em
+        );
+        font-family: Rubik Bold;
+        text-align: center;
+        // margin-top: 6em;
+        position: relative;
+    }
+
+    &__button {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        background: #5DCEC6;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        height: 5em;
+        width: 21em;
+        margin-left: 37%;
+    }
+
+    &__button-text {
+        position: relative;
+        @include font-source-header(
+            $size: 18px,
+            $color: #FFFFFF,
+            $weight: Bold,
+            $fontStyle: normal,
+            $lineHeight: 20px,
+            $letterSpace: 0.02em
+        );
+        top: 1.5em;
+    }
+}
