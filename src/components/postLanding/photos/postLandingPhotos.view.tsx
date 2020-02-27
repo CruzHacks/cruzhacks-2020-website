@@ -6,6 +6,13 @@ const PostLandingPhotosView: React.FC = () => {
     <>
       <div className="postLanding-photos__container">
         <PhotosBackdropView />
+        <div className="postLanding-photos__linkContainer">
+          <img
+            src={require('../../../assets/postLanding/photoThumb/cruzhacksGallery.png')}
+            alt="CruzHacks 2020 Gallery"
+            className="postLanding-photos__thumbnail"
+          />
+        </div>
       </div>
     </>
   );

@@ -1,3 +1,13 @@
 .postLanding-photos {
   @import './backdrop/backdrop';
+  &__container {
+    text-align: center;
+    display: inline;
+  }
+  &__thumbnail {
+    position: relative;
+    display: inline;
+    margin: -20em auto 0 auto;
+    max-width: 40%;
+  }
 }

@@ -1,4 +1,6 @@
 &__backdrop {
   position: relative;
+  display: inline;
   max-width: 100vw;
+  z-index: -1;
 }
