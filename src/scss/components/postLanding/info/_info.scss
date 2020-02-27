@@ -6,19 +6,19 @@
 
     &__stat-container {
         position: relative;
-        padding-left: 25em;
+        padding-left: calc(24em + 4vw);
         padding-bottom: 2em;
 
         @include respond(tab-port) {
-            padding-left: 1.5em;
+            padding-left: calc(3em + 4vw);
         }
 
-        // @include respond(tab-land) {
-        //     padding-left: 20em;
-        // }
+        @include respond(tab-land) {
+            padding-left: calc(22em + 4vw);
+        }
 
         @include respond(phone) {
-            padding-left: 1.5em;
+            padding-left: calc(.1em + 4vw);
         }
     }
 
