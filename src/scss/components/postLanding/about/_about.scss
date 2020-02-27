@@ -1,5 +1,70 @@
 .post-landing-about{
     &__container {
         position: relative;
-  }
+        min-height: 100vh;
+    }
+
+    &__left-backdrop {
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 2.2em;
+    }
+
+    &__right-backdrop {
+        z-index: -1; 
+        position: absolute;
+        top: 17em;
+        right: 14em; 
+    }
+
+    &__description-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin: calc(35em / 3) calc(50% - 4em) auto;
+        align-items: flex-start;
+
+        @include respond(tab-land) {
+            margin: calc(25em / 3) calc(50% - 1em) auto;
+        }
+
+        @include respond(tab-port) {
+            margin: calc(25em / 3) calc(50% + 1em) auto;
+        }
+    }
+
+    &__title-container {
+        margin-bottom: 4em;
+        width: 35vw;
+    }
+
+    &__title {
+        @include font-source-header(
+          $size: 27px,
+          $color: #2E2C5F,
+          $weight: bold,
+          $fontStyle: normal,
+          $lineHeight: 32px,
+          $letterSpace: 0.05em
+        );
+        @include responsive-font(2.1vw, 1.2em, 2em);
+        text-transform: uppercase;
+        mix-blend-mode: normal;
+    }
+
+    &__text-container {
+        width: calc(36em);
+    }
+    
+    &__text {
+        @include font-source-body(
+          $size: 18px,
+          $color: #383636,
+          $weight: normal,
+          $fontStyle: normal,
+          $lineHeight: 150%,
+          $letterSpace: 0.02em
+        );
+    }
 }
