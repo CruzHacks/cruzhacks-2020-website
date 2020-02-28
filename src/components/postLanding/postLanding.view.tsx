@@ -8,6 +8,7 @@ import PostLandingAboutView from './about/about.view';
 import PostLandingStatsView from './stats/stats.view';
 import PostLandingInfoView from './info/info.view';
 import PostLandingProjectsView from './projects/projects.view';
+import PostLandingWinnersView from './winners/winners.view';
 
 const PostLandingView: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const PostLandingView: React.FC = () => {
         <PostLandingStatsView />
         <PostLandingInfoView />
         <PostLandingProjectsView />
+        <PostLandingWinnersView />
         <PostLandingPhotosView />
         <SponsorsView />
         <PostLandingCTAview />

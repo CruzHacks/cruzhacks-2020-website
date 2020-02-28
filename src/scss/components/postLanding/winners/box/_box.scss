@@ -1,0 +1,42 @@
+&__project-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+&__box-container {
+    position: relative;
+    display: block;
+    width: 28em;
+}
+
+&__top-box {
+    position: absolute;
+    display: block;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 28em;
+    height: 15em;
+    background-color: lightblue;
+}
+
+&__bottom-box {
+    display: block;
+    position: absolute;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 28em;
+    height: 14em;
+    background-color: #5DCEC6;
+    top: 14em;
+}
+
+&__title {
+    @include ProjectTitle();
+}
+
+&__description {
+    @include ProjectDescription();
+}
