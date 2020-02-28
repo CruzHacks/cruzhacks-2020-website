@@ -2,12 +2,13 @@
   @import './backdrop/backdrop';
   &__container {
     text-align: center;
-    display: inline;
+    position: relative;
+    display: block;
+    min-height: 30em;
   }
   &__thumbnail {
     position: relative;
-    display: inline;
-    margin: -20em auto 0 auto;
-    max-width: 40%;
+    margin: 0 auto;
+    max-width: 20em;
   }
 }

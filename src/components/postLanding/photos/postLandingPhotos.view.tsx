@@ -5,7 +5,9 @@ const PostLandingPhotosView: React.FC = () => {
   return (
     <>
       <div className="postLanding-photos__container">
-        <PhotosBackdropView />
+        <div className="postLanding-photos__backdropContainer">
+          <PhotosBackdropView />
+        </div>
         <div className="postLanding-photos__linkContainer">
           <img
             src={require('../../../assets/postLanding/photoThumb/cruzhacksGallery.png')}
