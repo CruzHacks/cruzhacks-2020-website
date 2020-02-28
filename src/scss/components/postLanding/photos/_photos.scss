@@ -6,9 +6,28 @@
     display: block;
     min-height: 30em;
   }
-  &__thumbnail {
+  &__linkContainer {
     position: relative;
+    display: inline-block;
+    max-height: 15em;
+  }
+  &__linkContainer img {
     margin: 0 auto;
-    max-width: 20em;
+    max-height: 15em;
+    border-radius: 23px;
+  }
+  &__linkContainer:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(93, 206, 198);
+    opacity: 50%;
+    right: 0;
+    border-radius: 23px;
+    transition: all 0.3s linear;
+  }
+  &__linkContainer:hover:after {
+    opacity: 0;
   }
 }
