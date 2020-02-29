@@ -1,16 +1,6 @@
 import React from 'react';
 import WinnersBoxView from './box/box.view';
 
-interface BoxProps {
-    projectTitle: string;
-    projectDescription: string;
-    category: string;
-    listOfWinners: {
-        name: string;
-        linkedin: string;
-    }[];
-};
-
 let winners = [
     {
         projectTitle: "TaileredChef",
@@ -35,7 +25,57 @@ let winners = [
             },
             {
                 name: "Noel Gomez",
-                linkedin: "/#"
+                linkedin: "https://www.linkedin.com/in/noel-gomez/"
+            }
+        ]
+    },
+    {
+        projectTitle: "Transparency Project", 
+        projectDescription: "The Transparency Project facilitates the understanding of our political process through interactive data visualization. By aggregating data from social media platforms, search engines, and ad...",
+        category: "Justice Hacks",
+        listOfWinners: [
+            {
+                name: "Oasys Okubu",
+                linkedin: "https://www.linkedin.com/in/oasysokubo/"
+            },
+            {
+                name: "Garrett Leising",
+                linkedin: "https://www.linkedin.com/in/garrett-leising-501425159/"
+            },
+            {
+                name: "Julian Lehrer",
+                linkedin: "https://www.linkedin.com/in/julian-lehrer1/"
+            },
+            {
+                name: "Anders Poirel",
+                linkedin: "https://www.linkedin.com/in/anders-p-732595160/"
+            },
+            {
+                name: "Sean Breckenridge",
+                linkedin: "https://www.linkedin.com/in/sean-breckenridge/"
+            }
+        ]
+    },
+    {
+        projectTitle: "InSight",
+        projectDescription: "Monitors and records your mental health through emotion recongnition using Machine Learning.",
+        category: "Health Hacks",
+        listOfWinners: [
+            {
+                name: "Neal Chokshi",
+                linkedin: "https://www.linkedin.com/in/neal-chokshi-73b00a192/"
+            },
+            {
+                name: "Vela Rajesh",
+                linkedin: "https://www.linkedin.com/in/singaravelavan-rajesh/"
+            },
+            {
+                name: "Neville Hiramanek",
+                linkedin: "https://www.linkedin.com/in/neville-hiramanek-a78754191/"
+            },
+            {
+                name: "Jaidev Gopakumar",
+                linkedin: "https://www.linkedin.com/in/jaidev-gopakumar-86a004195/"
             }
         ]
     }
