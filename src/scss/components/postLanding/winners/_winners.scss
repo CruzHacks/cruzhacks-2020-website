@@ -4,9 +4,10 @@
         $color: #FFFFFF,
         $weight: bold,
         $lineHeight: 20px,
-        $textIndent: 1em,
+        $textIndent: 2em,
         $letterSpace: 0.02em
     );
+    font-family: 'Rubik Bold';
 }
 
 @mixin ProjectDescription {
@@ -16,14 +17,18 @@
         $weight: normal,
         $lineHeight: 27px,
         $letterSpace: 0.02em
-    )
+    );
+    margin-left: 2em;
 }
 
 .post-landing-winner {
     &__container {
         position: relative;
-        display: block;
-        height: 40em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 105em;
+        margin-top: 5em;
     }
 
     @import './box/box';

@@ -3,12 +3,14 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    min-height: 33em;
+    max-height: 80em;
 }
 
 &__box-container {
     position: relative;
-    display: block;
+    display: flex;
     width: 28em;
 }
 
@@ -20,6 +22,28 @@
     width: 28em;
     height: 15em;
     background-color: lightblue;
+    overflow: hidden;
+}
+
+&__banner {
+    position: absolute;
+    background-color: #2E2C5F;
+    transform: rotate(-46.14deg);
+    height: 3em;
+    width: 12em;
+    left: -3em;
+    top: 1em;
+}
+
+&__banner-text {
+    text-align: center;
+    @include ProjectTitle();
+    margin-left: -2.8em;
+    text-transform: uppercase;
+}
+
+&__image {
+    width: 28em;
 }
 
 &__bottom-box {
