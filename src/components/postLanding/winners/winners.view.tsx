@@ -3,9 +3,10 @@ import WinnersBoxView from './box/box.view';
 
 let winners = [
     {
-        projectTitle: "TaileredChef",
+        projectTitle: "TailoredChef",
         projectDescription: "An app that creates tailored-made meal recommendations for young professionals to achieve nutritional goals, develop culinary mastery, and live healthier and more sustainable lives.",
         category: "Health Hacks",
+        path: "tailoredchef",
         listOfWinners: [
             {
                 name: "Timothy Nguyen",
@@ -33,6 +34,7 @@ let winners = [
         projectTitle: "Transparency Project", 
         projectDescription: "The Transparency Project facilitates the understanding of our political process through interactive data visualization. By aggregating data from social media platforms, search engines, and ad...",
         category: "Justice Hacks",
+        path: "transparencyproject",
         listOfWinners: [
             {
                 name: "Oasys Okubu",
@@ -60,6 +62,7 @@ let winners = [
         projectTitle: "InSight",
         projectDescription: "Monitors and records your mental health through emotion recongnition using Machine Learning.",
         category: "Health Hacks",
+        path: "insight",
         listOfWinners: [
             {
                 name: "Neal Chokshi",
