@@ -1,0 +1,14 @@
+<svg className="postLanding-news__pillarsRight" viewBox="0 0 241 296" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 44L72 80L72 296L0 259L0 44Z" fill="url(#paint0_linear)"/>
+<path d="M241 0L169 36L169 252L241 215L241 0Z" fill="url(#paint1_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="36" y1="44" x2="36" y2="296" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6F6FE8"/>
+<stop offset="1" stop-color="#E3FCF8" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="205" y1="3.14722e-06" x2="205" y2="252" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6F6FE8"/>
+<stop offset="1" stop-color="#E3FCF8" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

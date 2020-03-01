@@ -1,0 +1,15 @@
+&__backdrop-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+&__pillarsLeft {
+  position: relative;
+  height: 22em;
+}
+
+&__pillarsRight {
+  position: relative;
+  height: 22em;
+}

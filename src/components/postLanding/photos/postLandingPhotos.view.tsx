@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotosBackdropView from './backdrop/postLandingPhotosBackdrop.view';
+import PhotosBackdropView from './backdrop/PhotosBackdrop.view';
 
 const PostLandingPhotosView: React.FC = () => {
   return (
