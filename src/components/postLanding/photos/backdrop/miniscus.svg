@@ -1,7 +1,7 @@
 <svg className="postLanding-photos__backdrop" viewBox="0 0 1152 408" fill="none" preserveAspectRatio="none" sxmlns="http://www.w3.org/2000/svg">
-  <path d="M1163 18.5C994.5 236.5 150.5 215 0 0V408H1163V18.5Z" fill="url(#paint0_linear)"/>
+  <path d="M1163 18.5C994.5 236.5 150.5 215 0 0V408H1163V18.5Z" fill="url(#miniscusPaint0_linear)"/>
   <defs>
-    <linearGradient id="paint0_linear" x1="586.5" y1="32" x2="586.12" y2="422.702" gradientUnits="userSpaceOnUse">
+    <linearGradient id="miniscusPaint0_linear" x1="586.5" y1="32" x2="586.12" y2="422.702" gradientUnits="userSpaceOnUse">
       <stop offset="0.546875" stop-color="#C3F8F5"/>
       <stop offset="1" stop-color="white" stop-opacity="0"/>
     </linearGradient>

@@ -4,4 +4,18 @@
   &__container {
     position: relative;
   }
+
+  &__title-container {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    top: 4em;
+    right: 0;
+    left: 0;
+  }
+
+  &__title {
+    @include postLandingTitle;
+    position: relative;
+  }
 }

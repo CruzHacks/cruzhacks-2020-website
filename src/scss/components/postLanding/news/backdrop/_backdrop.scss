@@ -4,12 +4,25 @@
   justify-content: space-between;
 }
 
-&__pillarsLeft {
+@mixin newsPillars {
   position: relative;
-  height: 22em;
+  height: calc(20em + 10vh);
+  @include respond(mission) {
+    height: calc(18em + 8vh);
+  }
+  @include respond(tab-port) {
+    max-width: 11em;
+  }
+  @include respond(phone) {
+    height: calc(14em + 8vh);
+    max-width: 6em;
+  }
+}
+
+&__pillarsLeft {
+  @include newsPillars;
 }
 
 &__pillarsRight {
-  position: relative;
-  height: 22em;
+  @include newsPillars;
 }

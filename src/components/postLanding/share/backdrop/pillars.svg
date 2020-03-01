@@ -1,16 +1,16 @@
 <svg className="postLanding-share__pillars" preserveAspectRatio="none" width="70" height="356" viewBox="0 0 108 556" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0)">
-<path d="M18.95 0.811379L-35.05 37.9219C-41.15 42.1141 -45 50.6907 -45 60.0646V487.345C-45 493.021 -40.65 496.719 -36.95 494.176L23.93 452.351C25.81 451.059 27 448.406 27 445.52V7.65622C27 1.96593 22.65 -1.71764 18.95 0.811379Z" fill="url(#paint0_linear)"/>
+<path d="M18.95 0.811379L-35.05 37.9219C-41.15 42.1141 -45 50.6907 -45 60.0646V487.345C-45 493.021 -40.65 496.719 -36.95 494.176L23.93 452.351C25.81 451.059 27 448.406 27 445.52V7.65622C27 1.96593 22.65 -1.71764 18.95 0.811379Z" fill="url(#pillarsPaint0_linear)"/>
 </g>
 <g clip-path="url(#clip1)">
-<path d="M76.46 85.4946L103.28 104.952C106.18 107.055 108 111.205 108 115.712V551.823C108 555.052 105.46 557.058 103.43 555.423L73.51 531.43C72.57 530.688 72 529.314 72 527.83V89.1773C72 86.0306 74.43 84.0243 76.46 85.4946Z" fill="url(#paint1_linear)"/>
+<path d="M76.46 85.4946L103.28 104.952C106.18 107.055 108 111.205 108 115.712V551.823C108 555.052 105.46 557.058 103.43 555.423L73.51 531.43C72.57 530.688 72 529.314 72 527.83V89.1773C72 86.0306 74.43 84.0243 76.46 85.4946Z" fill="url(#pillarsPaint1_linear)"/>
 </g>
 <defs>
-<linearGradient id="paint0_linear" x1="-9" y1="-0.000488281" x2="-9" y2="494.993" gradientUnits="userSpaceOnUse">
+<linearGradient id="pillarsPaint0_linear" x1="-9" y1="-0.000488281" x2="-9" y2="494.993" gradientUnits="userSpaceOnUse">
 <stop stop-color="#79E2CE"/>
 <stop offset="1" stop-color="white" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint1_linear" x1="90" y1="85.0034" x2="90" y2="556.004" gradientUnits="userSpaceOnUse">
+<linearGradient id="pillarsPaint1_linear" x1="90" y1="85.0034" x2="90" y2="556.004" gradientUnits="userSpaceOnUse">
 <stop stop-color="#79E2CE"/>
 <stop offset="0.59375" stop-color="white"/>
 </linearGradient>
