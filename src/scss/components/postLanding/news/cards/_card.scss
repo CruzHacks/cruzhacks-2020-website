@@ -5,6 +5,11 @@
   justify-content: space-between;
 }
 
+&__card-link {
+  width: 50em;
+  margin: 0 auto;
+}
+
 &__card-thumb {
   position: absolute;
   height: 13em;
