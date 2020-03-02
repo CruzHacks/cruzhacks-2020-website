@@ -8,11 +8,11 @@ const NewsLinks = [
     source: 'City on a Hill Press',
     url: 'https://www.cityonahillpress.com/2020/01/24/programmers-paradise/',
     description:
-      'Friday evening witnessed a legion of 450 coders, hackers, programmers, engineers and techies amass into an unkempt column marching through Stevenson College. Equipped with paper bowls filled with pizza in one hand and laptops in the other, teams of experienced and novice tech lovers from UC Santa Cruz, community colleges and even middle schools…',
+      'Friday evening witnessed a legion of 450 coders, hackers, programmers, engineers and techies amass into an unkempt column marching through Stevenson College. Equipped with paper bowls filled with pizza in one hand and laptops in the other, teams of experienced and novice tech lovers from UC Santa Cruz, community colleges and even middle…',
     thumb: 'chp',
   },
   {
-    title: 'CruzHacks 2020 Students Defining a Future of Impactful Innovation',
+    title: 'CruzHacks 2020: Impactful Innovation',
     source: 'Santa Cruz Works',
     url:
       'https://www.santacruzworks.org/news/cruzhacks-2020-students-defining-a-future-of-impactful-innovation',

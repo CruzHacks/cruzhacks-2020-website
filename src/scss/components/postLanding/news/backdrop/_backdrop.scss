@@ -7,19 +7,8 @@
 @mixin newsPillars {
   position: relative;
   height: calc(15em + 6vh);
-  @include respond(mission) {
-    max-width: calc(14em + 4vw);
-  }
-  @include respond(tab-port) {
-    max-width: 11em;
-  }
-  @include respond(phone) {
-    height: calc(14em + 8vh);
-    max-width: 6em;
-  }
-  @include respond(phone-narrow) {
-    height: calc(12em + 8vh);
-  }
+  max-width: calc(25vw - 1.5em);
+  min-width: 5em;
 }
 
 &__pillarsLeft {
