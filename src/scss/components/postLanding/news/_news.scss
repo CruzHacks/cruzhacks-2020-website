@@ -1,5 +1,7 @@
 .postLanding-news {
   @import './backdrop/backdrop';
+  @import './cards/card';
+  @import './cards/cards';
 
   &__container {
     position: relative;
@@ -17,5 +19,9 @@
   &__title {
     @include postLandingTitle;
     position: relative;
+    min-width: unset;
+    @include respond(phone) {
+      max-width: 5em;
+    }
   }
 }

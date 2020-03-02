@@ -1,0 +1,13 @@
+&__card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+&__card-thumb {
+  position: relative;
+  max-width: 25%;
+  max-height: auto;
+}
+
+@import './cards';

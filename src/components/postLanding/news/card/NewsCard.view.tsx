@@ -15,15 +15,21 @@ const NewsCardView: React.FC<NewsLink> = NewsLinks => {
     <>
       <div className="postLanding-news__card-container">
         {NewsLinks.links.map(link => (
-          <a className="postLanding-news__card-link" href={link.url}>
+          <a
+            className="postLanding-news__card-link"
+            href={link.url}
+            target="__blank"
+            rel="noopener noreferrer"
+          >
             <div
-              className={'postLanding-news__card-' + link.source}
+              className={'postLanding-news__card-' + link.thumb}
               key={link.source}
             >
               <img
                 className="postLanding-news__card-thumb"
                 src={require('../../../../assets/postLanding/newsThumb/' +
-                  link.thumb)}
+                  link.thumb +
+                  '.png')}
                 alt={link.title + ' thumbnail'}
               />
               <div className="postLanding-news__card-text">
