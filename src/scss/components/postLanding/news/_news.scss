@@ -5,6 +5,9 @@
 
   &__container {
     position: relative;
+    top: calc(5vh);
+    bottom: calc(30vh - 1em);
+    max-height: 1100px;
   }
 
   &__title-container {

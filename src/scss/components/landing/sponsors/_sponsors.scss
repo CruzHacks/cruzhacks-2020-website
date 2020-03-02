@@ -9,9 +9,7 @@
       max-width: 89vw;
     }
   }
-  @include respond(phone) {
-    margin-top: 2vw;
-  }
+
   @import './container/container.scss';
   @import './logos/logos.scss';
 }

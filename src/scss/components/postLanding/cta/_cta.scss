@@ -5,6 +5,7 @@
     align-items: center;
     position: relative;
     padding: 0 0 calc(8vh - 0.2em) 0;
+    top: calc(8vh - 2em);
   }
   &__title {
     @include postLandingTitle;

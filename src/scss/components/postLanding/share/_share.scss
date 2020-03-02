@@ -2,6 +2,7 @@
   &__container {
     position: relative;
     max-height: 18em;
+    top: calc(8vh - 2em);
     @include respond(tab-port) {
       max-height: 14em;
     }
@@ -10,8 +11,8 @@
     }
     @include respond(phone-narrow) {
       max-height: 6em;
-      margin-bottom: 11em;
-      top: 8em;
+      margin-bottom: 13em;
+      top: calc(4em + 10vh);
     }
   }
   &__links-container {
