@@ -1,71 +1,61 @@
 .post-landing-projects {
-    &__container {
-        position: relative;
-        display: inline;
-        min-height: 25em;
+  @import './backdrop/backdrop';
+
+  &__container {
+    position: relative;
+    display: inline;
+    min-height: 25em;
+  }
+
+  &__title {
+    @include font-source-header(
+      $size: 1.6em,
+      $color: #2e2c5f,
+      $weight: bold,
+      $fontStyle: normal,
+      $lineHeight: 32px,
+      $letterSpace: 0.05em
+    );
+    // @include responsive-font(1.1em, 1.25em, 1.6em);
+    font-family: Rubik Bold;
+    text-align: center;
+    position: relative;
+    padding-top: 6em;
+    padding-bottom: 2em;
+  }
+
+  &__button {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background: #5dcec6;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    height: 5em;
+    width: 21em;
+    margin-left: 37%;
+
+    @include respond(phone) {
+      height: 4em;
+      width: 14em;
+      margin-left: 30%;
     }
+  }
 
-    &__backdrop {
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-
-        @include respond(phone){
-            display: block;
-            width: 1vw;
-            height: auto;
-        }
-     }
-
-    &__title {
-        @include font-source-header(
-            $size: 1.6em,
-            $color: #2E2C5F,
-            $weight: bold,
-            $fontStyle: normal,
-            $lineHeight: 32px,
-            $letterSpace: 0.05em
-        );
-        // @include responsive-font(1.1em, 1.25em, 1.6em);
-        font-family: Rubik Bold;
-        text-align: center;
-        position: relative;
-        padding-top: 6em;
-        padding-bottom: 2em;
+  &__button-text {
+    position: relative;
+    @include font-source-header(
+      $size: 18px,
+      $color: #ffffff,
+      $weight: Bold,
+      $fontStyle: normal,
+      $lineHeight: 20px,
+      $letterSpace: 0.02em
+    );
+    top: 1.5em;
+    @include respond(phone) {
+      top: 0.85em;
     }
-
-    &__button {
-        position: relative;
-        display: block;
-        text-decoration: none;
-        text-align: center;
-        background: #5DCEC6;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 30px;
-        height: 5em;
-        width: 21em;
-        margin-left: 37%;
-        
-        @include respond(phone) {
-            height: 4em;
-            width: 14em;
-            margin-left: 30%;
-        }
-    }
-
-    &__button-text {
-        position: relative;
-        @include font-source-header(
-            $size: 18px,
-            $color: #FFFFFF,
-            $weight: Bold,
-            $fontStyle: normal,
-            $lineHeight: 20px,
-            $letterSpace: 0.02em
-        );
-        top: 1.5em;
-        @include respond(phone) {
-            top: .85em;
-        }
-    }
+  }
 }

@@ -1,0 +1,22 @@
+&__backdrop {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  top: calc(15em - 14.5vw);
+}
+
+&__backdrop--greenWaves {
+  min-width: 100vw;
+  min-height: 20em;
+  max-height: 30em;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+&__backdrop--purpleWaves {
+  min-width: 100vw;
+  min-height: 20em;
+  max-height: 30em;
+}

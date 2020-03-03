@@ -1,0 +1,9 @@
+<svg className="post-landing-projects__backdrop--greenWaves" preserveAspectRatio="none" viewBox="0 0 1149 429" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-8 122.901L279.347 8.593C308.136 -2.86006 342.159 -2.86433 370.947 8.58017L577.97 90.8677C616.464 106.168 661.948 106.19 700.463 90.919L804.506 49.6769C823.971 41.9603 846.97 42.0116 866.38 49.818L1048.13 122.901L1149 161.805V426.862L-8 429V122.901Z" fill="url(#greenWaves__paint0_linear)" fill-opacity="0.7"/>
+<defs>
+<linearGradient id="greenWaves__paint0_linear" x1="572.021" y1="66.5788" x2="567.948" y2="973.756" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B7F7F3"/>
+<stop offset="0.348958" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
