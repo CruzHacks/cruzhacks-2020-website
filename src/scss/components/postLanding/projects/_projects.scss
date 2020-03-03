@@ -34,7 +34,7 @@
     border-radius: 30px;
     height: 5em;
     width: 21em;
-    margin-left: 37%;
+    margin: 0 auto;
 
     @include respond(phone) {
       height: 4em;

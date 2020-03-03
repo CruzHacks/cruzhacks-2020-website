@@ -12,7 +12,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  animation: wave 40s cubic-bezier(0.57, 0.1, 0.5, 1.03) infinite;
+  animation: wave 30s cubic-bezier(0.57, 0.1, 0.5, 1.03) infinite;
   transform: translate3d(0, 0, 0);
 }
 
@@ -25,7 +25,7 @@
   position: absolute;
   left: 0;
   right: -3em;
-  animation: wave 50s cubic-bezier(0.75, 0.22, 0.5, 1.03) -0.125s infinite,
+  animation: wave 40s cubic-bezier(0.75, 0.22, 0.5, 1.03) -0.125s infinite,
     swell 14s ease-in -1.25s infinite;
   transform: translate3d(0, 0, 0);
 }
@@ -43,7 +43,7 @@
   50% {
     margin-left: -700px;
   }
-  75% {
+  85% {
     margin-right: -900px;
   }
 }
