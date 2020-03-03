@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg className="post-landing-projects__backdrop--purpleWaves" preserveAspectRatio="none" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1152 365" style="enable-background:new 0 0 1152 365;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="575.2836" y1="-560.7516" x2="578.5449" y2="-1287.6119" gradientTransform="matrix(1 0 0 -1 0 -486)">
+	<stop  offset="0" style="stop-color:#D7C9FC"/>
+	<stop  offset="0.349" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<path class="st0" d="M1152,105.8c-21.9-1-38.1-5.9-48.5-9.9c-48.9-18.8-60.2-53.4-106.8-68.2c-21.6-6.9-43-7.1-44.2-7.1
+	c-6.1,0.2-15.3,0.8-26.3,2.5c-65.2,9.6-92.7,40.2-138.8,54.1c-22.8,6.9-56.6,11.6-103,0L596.7,42c-16.4-6.6-34.8-4.3-52,0.1
+	c0,0-197.1,53.6-286-0.1S0,77.1,0,77.1V363l1152,1.6C1152,278.3,1152,192.1,1152,105.8z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1200.5" y1="287" x2="1200.5" y2="287" gradientTransform="matrix(1 0 0 -1 0 366)">
+	<stop  offset="0" style="stop-color:#D7C9FC"/>
+	<stop  offset="0.349" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<path class="st1" d="M1200.5,79"/>
+</svg>
