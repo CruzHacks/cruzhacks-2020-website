@@ -20,10 +20,10 @@ const NewsCardView: React.FC<NewsLink> = NewsLinks => {
             href={link.url}
             target="__blank"
             rel="noopener noreferrer"
+            key={link.source}
           >
             <div
               className={'postLanding-news__card-' + link.thumb}
-              key={link.source}
             >
               <img
                 className="postLanding-news__card-thumb"
