@@ -24,6 +24,7 @@ const ShareLinksView: React.FC<media> = media => {
               href={profile.copy ? undefined : profile.link}
               key={profile.type}
               target="__blank"
+              onClick={e => { if (profile.copy) {profile.copy()}}}
               rel="noopener noreferrer"
             >
               <img

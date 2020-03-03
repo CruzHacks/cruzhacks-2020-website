@@ -46,6 +46,7 @@
   }
   &__links img {
     margin: 0 auto;
+    cursor: pointer;
     @include respond(tab-port) {
       transform: scale(0.75);
     }
