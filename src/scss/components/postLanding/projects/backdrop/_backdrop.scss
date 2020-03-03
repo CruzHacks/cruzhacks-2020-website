@@ -9,32 +9,34 @@
   min-width: 100vw;
   min-height: 20em;
   max-height: 30em;
+  object-fit: cover;
   position: absolute;
   left: 0;
   right: 0;
-  animation: wave2 30s cubic-bezier(0.57, 0.1, 0.5, 1.03) infinite;
+  animation: wave2 60s cubic-bezier(0.57, 0.1, 0.5, 1.03) infinite;
   transform: translate3d(0, 0, 0);
 }
 
 &__backdrop--purpleWaves {
   min-width: 100vw;
   min-height: 20em;
+  object-fit: cover;
   top: 1em;
   background: url('./purpleWaves.svg') repeat-x;
   opacity: 0.6;
   position: absolute;
   left: 0;
   right: -3em;
-  animation: wave1 40s cubic-bezier(0.75, 0.22, 0.5, 1.03) -0.125s infinite,
-    swell 14s ease-in -1.25s infinite;
+  animation: wave1 80s cubic-bezier(0.75, 0.22, 0.5, 1.03) -0.125s infinite,
+    swell 14s ease -1.25s infinite;
   transform: translate3d(0, 0, 0);
 }
 
 @keyframes wave1 {
   0% {
-    margin-left: 0;
+    margin-left: -100px;
   }
-  20% {
+  10% {
     margin-left: -800px;
   }
   60% {
@@ -42,6 +44,9 @@
   }
   75% {
     margin-right: -900px;
+  }
+  100% {
+    margin-left: -100px;
   }
 }
 
@@ -56,18 +61,18 @@
     margin-right: -700px;
   }
   85% {
-    margin-left: -30px;
+    margin-left: -200px;
   }
 }
 
 @keyframes swell {
   0% {
-    transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -5px, 0);
   }
   50% {
     transform: translate3d(0, 10px, 0);
   }
   100% {
-    transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -5px, 0);
   }
 }
