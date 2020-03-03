@@ -43,6 +43,10 @@ body {
   max-width: 100%;
 }
 
+.tooltip{
+  @include tooltip;
+}
+
 #mlh-trust-badge {
   margin-top: -1px;
   @include respond(tab-port) {
