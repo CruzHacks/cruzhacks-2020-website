@@ -12,7 +12,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  animation: wave 30s cubic-bezier(0.57, 0.1, 0.5, 1.03) infinite;
+  animation: wave2 30s cubic-bezier(0.57, 0.1, 0.5, 1.03) infinite;
   transform: translate3d(0, 0, 0);
 }
 
@@ -25,26 +25,38 @@
   position: absolute;
   left: 0;
   right: -3em;
-  animation: wave 40s cubic-bezier(0.75, 0.22, 0.5, 1.03) -0.125s infinite,
+  animation: wave1 40s cubic-bezier(0.75, 0.22, 0.5, 1.03) -0.125s infinite,
     swell 14s ease-in -1.25s infinite;
   transform: translate3d(0, 0, 0);
 }
 
-@keyframes wave {
+@keyframes wave1 {
   0% {
     margin-left: 0;
   }
   20% {
     margin-left: -800px;
   }
+  60% {
+    margin-left: -500px;
+  }
+  75% {
+    margin-right: -900px;
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    margin-left: 0;
+  }
   30% {
     margin-left: -500px;
   }
   50% {
-    margin-left: -700px;
+    margin-right: -700px;
   }
   85% {
-    margin-right: -900px;
+    margin-left: -30px;
   }
 }
 
