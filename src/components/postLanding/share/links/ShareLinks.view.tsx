@@ -11,12 +11,12 @@ interface media {
 const ShareLinksView: React.FC<media> = media => {
   const tooltip = (e, message, cl, link) => {
     let el = document.createElement('div');
-    el.innerHTML = message
+    el.classList.add("tooltip")
     while (cl && !e.className.includes(cl)) e = e.parentElement;
-    
+    el.innerHTML = message
     if([...e.children].reduce((open, el) => [...el.classList].includes('tooltip') && (open = true), false)) return
     e.appendChild(el)
-    setTimeout(() => el.classList.add("tooltip"), 200)
+    
     setTimeout(() => el.classList.add("__invisible"), 2000)
     setTimeout(() => e.removeChild(el), 2200)
     if (link) {
