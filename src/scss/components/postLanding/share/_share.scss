@@ -3,6 +3,7 @@
     position: relative;
     max-height: 18em;
     top: calc(8vh - 2em);
+    margin-bottom: calc(8vh - 2em);
     @include respond(tab-port) {
       max-height: 14em;
     }
@@ -11,8 +12,7 @@
     }
     @include respond(phone-narrow) {
       max-height: 6em;
-      margin-bottom: 13em;
-      top: calc(4em + 10vh);
+      margin-bottom: calc(12vh - 1em);
     }
   }
   &__links-container {
@@ -30,10 +30,10 @@
     flex-direction: column;
     bottom: 20em;
     @include respond(tab-port) {
-      bottom: 13em;
+      bottom: 18em;
     }
     @include respond(phone) {
-      bottom: 10em;
+      bottom: 15em;
     }
     @include respond(phone-narrow) {
       bottom: 18em;
@@ -43,6 +43,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    @include respond(phone) {
+      margin-top: -2vh;
+    }
   }
   &__links img {
     margin: 0 auto;

@@ -4,8 +4,17 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 0 0 calc(8vh - 0.2em) 0;
+    padding: 20px 0 calc(8vh - 0.2em) 0;
     top: calc(8vh - 2em);
+    min-height: 475px;
+  }
+  &__button-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 200px;
   }
   &__title {
     @include postLandingTitle;
@@ -13,6 +22,7 @@
   }
   &__info {
     width: 25em;
+    padding-bottom: 10px;
     @include font-source-body(
       $size: 18px,
       $lineHeight: 27px,
@@ -23,21 +33,10 @@
       $weight: false,
       $color: #383636
     );
-    @include responsive-font(2.1vw, 12px, 18px);
+    @include responsive-font(2.7vw, 12px, 18px);
   }
-  &__packetButton {
-    background: #5dcec6;
-    box-shadow: 0px 2px 6px #bfbfbf;
-    border-radius: 23px;
-    @include font-source-header(
-      14px,
-      18px,
-      0.07em,
-      false,
-      false,
-      false,
-      false,
-      #ffffff
-    );
-  }
+}
+
+.postLanding-cta .ctaButton:nth-child(2) {
+  padding: 14px 32px;
 }

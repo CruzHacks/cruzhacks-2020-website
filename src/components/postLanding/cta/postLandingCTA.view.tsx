@@ -4,7 +4,7 @@ import CTAbuttonView from '../../controls/ctaButton';
 const PostLandingCTAview: React.FC = () => {
   const packetButtonProps = [
     {
-      color: { color: '#5dcec6' },
+      color: { background: '#5dcec6' },
       text: '2020 SPONSORSHIP PACKET',
       link:
         'https://drive.google.com/file/d/1_a1ybnqm1AMRUCTjO_jPJFXiq0WjdPeU/view',
@@ -12,7 +12,7 @@ const PostLandingCTAview: React.FC = () => {
   ];
   const mailButtonProps = [
     {
-      color: { color: '#5dcec6' },
+      color: { background: '#5dcec6' },
       text: 'BRING YOUR COMPANY TO 2021',
       link: 'mailto:sponsor@cruzhacks.com',
     },
@@ -28,8 +28,10 @@ const PostLandingCTAview: React.FC = () => {
           internet, merch, and more for the ~40 continuous hours that CruzHacks
           spans. Help us put on 2021!
         </span>
-        <CTAbuttonView info={packetButtonProps} />
-        <CTAbuttonView info={mailButtonProps} />
+        <div className="postLanding-cta__button-container">
+          <CTAbuttonView info={packetButtonProps} />
+          <CTAbuttonView info={mailButtonProps} />
+        </div>
       </div>
     </>
   );

@@ -17,9 +17,8 @@ const CTAbuttonView: React.FC<ButtonProps> = ButtonProps => {
             className="ctaButton__link"
             style={button.color}
             href={button.link}
-            key={button.link}
           >
-            {button.text}
+            <span className="ctaButton__text">{button.text}</span>
           </a>
         ))}
       </div>

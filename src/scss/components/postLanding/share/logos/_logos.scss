@@ -1,5 +1,5 @@
 @mixin icon {
-  margin: calc(4vh - 0.25em) 1em 0 1em;
+  margin: calc(5vh - 0.1em) 1em 0 1em;
   padding: calc((3% - 0.1em) * 0.4);
   display: flex;
   align-items: center;
@@ -11,9 +11,7 @@
   @include respond(big-desktop) {
     padding: 1.25em;
   }
-  @include respond(phone-narrow) {
-    margin: calc((4vh - 0.25em) * 0.5) 1em 0 1em;
-  }
+
   &:hover {
     transform: translateY(-0.25vh);
     background: lighten($color: #79e2ce, $amount: 10%);
