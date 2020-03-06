@@ -1,15 +1,3 @@
-@mixin ProjectTitle {
-    @include font-source-header(
-        $size: 1.12em,
-        $color: #FFFFFF,
-        $weight: bold,
-        $lineHeight: 20px,
-        $textIndent: 2em,
-        $letterSpace: 0.02em
-    );
-    font-family: 'Rubik Bold';
-}
-
 @mixin ProjectDescription {
     @include font-source-body(
         $size: 1.12em,

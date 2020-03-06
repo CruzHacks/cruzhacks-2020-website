@@ -37,7 +37,7 @@
 
 &__banner-text {
     text-align: center;
-    @include ProjectTitle();
+    @include postLandingTitle();
     margin-left: -2.8em;
     text-transform: uppercase;
 }
@@ -58,7 +58,7 @@
 }
 
 &__title {
-    @include ProjectTitle();
+    @include postLandingTitle;
 }
 
 &__description {
