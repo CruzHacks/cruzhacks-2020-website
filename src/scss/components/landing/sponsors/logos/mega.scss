@@ -30,6 +30,9 @@
 &__logos-scw {
   position: relative;
   bottom: 0.65em;
+  @include respond(phone-narrow) {
+    bottom: 0.5em
+  }
 }
 &__logos-notivize {
   position: relative;

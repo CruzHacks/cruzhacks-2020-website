@@ -28,14 +28,15 @@
   position: relative;
   top: 2.75em;
   @include respond(tab-port) {
-    left: -2em;
+    left: -1.25em;
   }
   @include respond(phone-narrow) {
-    top: calc(1.5em + 1vw);
+    top: calc(1.5em + 0.5vw);
     left: -1em;
   }
   @include respond(smallest) {
     top: calc(1.25em + 1vw);
+    left: -0.5em;
   }
 }
 &__logos-poly {

@@ -28,7 +28,7 @@
   bottom: 0.25em;
   @include respond(tab-port) {
     bottom: 0;
-    right: 2vw;
+    right: 1.25vw;
     min-width: 110%;
   }
 }
