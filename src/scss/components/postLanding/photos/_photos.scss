@@ -16,11 +16,15 @@
     z-index: 1;
     position: absolute;
     top: 43%;
-    right: 22.5%;
-    left: 22.5%;
+    right: 21%;
+    left: 21%;
     transition: transform 0.2s ease, background 0.5s ease;
     &:hover {
       transform: translateY(-0.25vh);
+    }
+    @include respond(phone) {
+      right: 16.5%;
+      left: 16.5%;
     }
   }
   &__linkContainer {
@@ -35,6 +39,9 @@
     border-radius: 15px;
     padding: 1em 2em;
     text-decoration: none;
+    @include respond(phone) {
+      padding: 0.75em 1.75em;
+    }
   }
   &__buttonText {
     white-space: nowrap;
