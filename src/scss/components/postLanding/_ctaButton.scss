@@ -9,12 +9,18 @@
     padding: 12px 30px;
     min-width: fit-content;
     text-decoration: none;
+    transition: background-color 0.2s ease-out;
+    background: #5dcec6;
     margin: calc(2vh - 0.1em) 0;
     @include respond(tab-port) {
       padding: 10px 26px;
     }
     @include respond(phone-narrow) {
       padding: 8px 24px;
+    }
+    &:hover {
+      transition: background-color 0.2s ease-in;
+      background: lighten(#5dcec6, 8%);
     }
   }
   &__text {

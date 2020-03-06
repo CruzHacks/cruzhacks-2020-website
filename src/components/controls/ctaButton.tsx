@@ -2,7 +2,6 @@ import React from 'react';
 
 interface ButtonProps {
   [index: string]: {
-    color: any;
     text: string;
     link: string;
   }[];
@@ -15,8 +14,9 @@ const CTAbuttonView: React.FC<ButtonProps> = ButtonProps => {
         {ButtonProps.info.map(button => (
           <a
             className="ctaButton__link"
-            style={button.color}
             href={button.link}
+            target="__blank"
+            rel="noopener noreferrer"
           >
             <span className="ctaButton__text">{button.text}</span>
           </a>
