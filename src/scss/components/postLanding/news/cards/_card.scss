@@ -8,6 +8,15 @@
 &__card-link {
   width: 50em;
   margin: 0 auto;
+  @include respond(tab-land) {
+    width: 40em;
+  }
+  @include respond(tab-port) {
+    width: 30em;
+  }
+  @include respond(phone-narrow) {
+    width: 20em;
+  }
 }
 
 &__card-thumb {
@@ -18,6 +27,18 @@
   object-fit: cover;
   bottom: 0;
   border-radius: 30px 0 0 30px;
+  @include respond(tab-land) {
+    height: 13em;
+    max-width: 17em;
+  }
+  @include respond(tab-port) {
+    height: 10.5em;
+    max-width: 13em;
+  }
+  @include respond(phone-narrow) {
+    height: 10.5em;
+    max-width: 6em;
+  }
 }
 
 &__card-text {
@@ -25,6 +46,64 @@
   right: 3em;
   max-width: 25em;
   top: 2em;
+  @include respond(tab-land) {
+    max-width: 18em;
+    right: 3.5em;
+    top: 2em;
+  }
+  @include respond(tab-port) {
+    max-width: 15em;
+    right: 1em;
+    top: 1em;
+  }
+  @include respond(phone-narrow) {
+    max-width: 10em;
+    top: 0.75em;
+  }
+}
+&__card-text--title {
+  @include font-source-header(18px, 20px, 0.02em, 0, false, left, 900, #2e2c5f);
+  font-family: 'Rubik Bold';
+  margin-top: -0.75em;
+  white-space: nowrap;
+  @include respond(tab-land) {
+    font-size: 14px;
+  }
+  @include respond(tab-port) {
+    font-size: 11px;
+  }
+  @include respond(phone-narrow) {
+    font-size: 8px;
+  }
+}
+&__card-text--description {
+  @include font-source-body(14px, 22px, 0.02em, 0, false, false, 500, #afafaf);
+  @include respond(tab-port) {
+    font-size: 11px;
+  }
+  @include respond(phone-narrow) {
+    font-size: 8px;
+  }
+}
+
+&__card-text--source {
+  @include font-source-header(
+    14px,
+    20px,
+    0.02em,
+    0,
+    false,
+    false,
+    500,
+    #afafafaf
+  );
+  @include respond(tab-port) {
+    font-size: 11px;
+  }
+  @include respond(phone-narrow) {
+    font-size: 8px;
+  }
+  font-family: 'Rubik';
 }
 
 @import './cards';
