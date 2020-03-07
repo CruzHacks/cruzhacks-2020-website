@@ -48,7 +48,7 @@
     justify-content: center;
     margin-top: calc(8vh - 0.5em);
     @include respond(phone) {
-      margin-top: calc(8vh - 2em);
+      margin-top: calc(6vh - 2em);
     }
   }
   &__links img {

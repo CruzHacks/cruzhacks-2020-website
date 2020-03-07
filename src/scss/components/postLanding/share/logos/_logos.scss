@@ -11,11 +11,8 @@
   @include respond(big-desktop) {
     padding: 1.25em;
   }
-  @include respond(phone-narrow) {
-    padding: calc((3.5% - 0.075em) * 0.5);
-  }
-  @include respond(smallest) {
-    padding: calc((3.5% - 0.075em) * 0.9);
+  @include respond(tab-port) {
+    padding: calc(0.5em + 1vw);
   }
   &:hover {
     transform: translateY(-0.25vh);
