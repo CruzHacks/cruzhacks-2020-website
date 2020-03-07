@@ -15,15 +15,6 @@
       margin-bottom: calc(12vh - 1em);
     }
   }
-  &__links-container {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  &__links-title {
-    @include postLandingTitle;
-  }
   &__link-container {
     position: relative;
     display: flex;
@@ -39,10 +30,23 @@
       bottom: 18em;
     }
   }
+
+  &__links-container {
+    margin: calc(5vh - 0.1em) 1em 0 1em;
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__links-title {
+    @include postLandingTitle;
+  }
   &__links {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: calc(8vh - 2em);
     @include respond(phone) {
       margin-top: -2vh;
     }
@@ -53,6 +57,7 @@
       transform: scale(0.75);
     }
   }
+
   @import './logos/logos';
   @import './backdrop/backdrop';
 }

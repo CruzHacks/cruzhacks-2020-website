@@ -1,6 +1,6 @@
 @mixin icon {
-  margin: calc(5vh - 0.1em) 1em 0 1em;
-  padding: calc((3% - 0.1em) * 0.4);
+  margin: 0 1em 0.25em 1em;
+  padding: calc((3.5% - 0.075em) * 0.4);
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -11,14 +11,19 @@
   @include respond(big-desktop) {
     padding: 1.25em;
   }
-
+  @include respond(phone-narrow) {
+    padding: calc((3.5% - 0.075em) * 0.5);
+  }
+  @include respond(smallest) {
+    padding: calc((3.5% - 0.075em) * 0.9);
+  }
   &:hover {
     transform: translateY(-0.25vh);
     background: lighten($color: #79e2ce, $amount: 10%);
   }
 }
 
-&__slack {
+&__link {
   @include icon;
 }
 &__twitter {

@@ -6,7 +6,7 @@ import ShareBackdropView from './backdrop/ShareBackdrop.view';
 const PostLandingShareView: React.FC = () => {
   const profiles = [
     {
-      type: 'slack',
+      type: 'link',
       copy: () => {
         const el = document.createElement('textarea');
         el.value = window.location.href;

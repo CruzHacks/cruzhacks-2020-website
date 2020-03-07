@@ -11,20 +11,31 @@ interface media {
 const ShareLinksView: React.FC<media> = media => {
   const tooltip = (e, message, cl, link) => {
     let el = document.createElement('div');
-    el.classList.add("tooltip")
+    el.classList.add('tooltip');
     while (cl && !e.className.includes(cl)) e = e.parentElement;
-    el.innerHTML = message
-    if([...e.children].reduce((open, el) => [...el.classList].includes('tooltip') && (open = true), false)) return
-    e.appendChild(el)
-    
-    setTimeout(() => el.classList.add("__invisible"), 2000)
-    setTimeout(() => e.removeChild(el), 2200)
+    el.innerHTML = message;
+    if (
+      [...e.children].reduce(
+        (open, el) => [...el.classList].includes('tooltip') && (open = true),
+        false
+      )
+    )
+      return;
+    e.appendChild(el);
+
+    setTimeout(() => el.classList.add('__invisible'), 2000);
+    setTimeout(() => e.removeChild(el), 2200);
     if (link) {
-      setTimeout(() => Object.assign(
-        document.body.appendChild(document.createElement("a")), { href: link }
-      ).click(), 1000)
+      setTimeout(
+        () =>
+          Object.assign(
+            document.body.appendChild(document.createElement('a')),
+            { href: link }
+          ).click(),
+        1000
+      );
     }
-  }
+  };
   return (
     <>
       <div className="postLanding-share__link-container">
@@ -40,7 +51,17 @@ const ShareLinksView: React.FC<media> = media => {
               href={profile.copy ? undefined : profile.link}
               key={profile.type}
               target="__blank"
-              onClick={e => { if (profile.copy) {profile.copy(); tooltip(e.target, `Link copied!`, `postLanding-share__`, profile.link)}}}
+              onClick={e => {
+                if (profile.copy) {
+                  profile.copy();
+                  tooltip(
+                    e.target,
+                    `Copied!`,
+                    `postLanding-share__links`,
+                    profile.link
+                  );
+                }
+              }}
               rel="noopener noreferrer"
             >
               <img
