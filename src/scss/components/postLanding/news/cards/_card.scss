@@ -61,6 +61,7 @@
     top: 0.75em;
   }
 }
+
 &__card-text--title {
   @include font-source-header(18px, 20px, 0.02em, 0, false, left, 900, #2e2c5f);
   font-family: 'Rubik Bold';
@@ -72,17 +73,15 @@
   @include respond(tab-port) {
     font-size: 11px;
   }
-  @include respond(phone-narrow) {
-    font-size: 8px;
-  }
 }
+
 &__card-text--description {
   @include font-source-body(14px, 22px, 0.02em, 0, false, false, 500, #afafaf);
   @include respond(tab-port) {
     font-size: 11px;
   }
   @include respond(phone-narrow) {
-    font-size: 8px;
+    line-height: 14px;
   }
 }
 
@@ -101,7 +100,8 @@
     font-size: 11px;
   }
   @include respond(phone-narrow) {
-    font-size: 8px;
+    font-size: 10px;
+    top: 5px;
   }
   font-family: 'Rubik';
 }

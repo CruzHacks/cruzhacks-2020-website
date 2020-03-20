@@ -12,7 +12,7 @@ const NewsLinks = [
     thumb: 'chp',
   },
   {
-    title: 'CruzHacks 2020: Impactful Innovation',
+    title: 'Impactful Innovation',
     source: 'Santa Cruz Works',
     url:
       'https://www.santacruzworks.org/news/cruzhacks-2020-students-defining-a-future-of-impactful-innovation',

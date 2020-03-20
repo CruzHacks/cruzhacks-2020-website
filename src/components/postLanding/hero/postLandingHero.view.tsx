@@ -9,16 +9,15 @@ const PostLandingHeroView: React.FC = () => {
   return (
     <>
       <div className="post-landing-hero__container">
+        {/* Placeholder */}
+        <HeroHamburgerView />
+        {/* Placeholder */}
         <div className="post-landing-hero__bg">
           <BackdropHeroRightSideView />
         </div>
         <div className="post-landing-hero__pillars">
           <BackdropHeroAllPillars />
         </div>
-
-        {/* Placeholder */}
-        <HeroHamburgerView />
-        {/* Placeholder */}
 
         <NavbarView />
         <div className="post-landing-hero__title-container">
