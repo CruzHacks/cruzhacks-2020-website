@@ -4,6 +4,13 @@
   width: 28em;
   height: 28em;
   padding-bottom: calc(2em + 1vw);
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: translateY(-0.25vh);
+    .post-landing-winner__bottom-box {
+      background: lighten($color: #5dcec6, $amount: 10%);
+    }
+  }
 }
 
 &__top-box {
@@ -25,13 +32,11 @@
   width: 12em;
   left: -3em;
   top: 1em;
-}
-
-&__banner-text {
-  text-align: center;
-  @include postLandingTitle();
-  margin-left: -2.8em;
-  text-transform: uppercase;
+  &:after {
+    content: 'WINNER';
+    position: relative;
+    margin: 0 auto;
+  }
 }
 
 &__image {
@@ -45,7 +50,8 @@
   border-bottom-right-radius: 30px;
   width: 28em;
   height: 14em;
-  background-color: #5dcec6;
+  background: #5dcec6;
+  transition: background 0.5s ease;
   top: 14em;
 }
 
