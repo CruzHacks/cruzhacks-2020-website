@@ -4,16 +4,17 @@
   width: 28em;
   height: 28em;
   padding-bottom: calc(2em + 1vw);
-  padding-left: 5em;
+  padding-left: 1em;
   position: relative;
 }
 
 &__category-name {
   @include postLandingTitle;
-  @include responsive-font(3.4vw, 20px, 24px);
+  text-align: justify;
+  text-indent: 15px;
   margin-left: 0;
   // this might need responsive units
-  margin-bottom: -0.25em;
+  margin-bottom: 0.25em;
 }
 
 &__winner-name {
@@ -29,7 +30,7 @@
 }
 
 &__linkedin-logo {
-  margin: 1.85em 1em 0 1em;
+  margin: 1.72em 1em 0 1em;
   padding: calc((3% - 0.2em));
   display: inline-block;
   border-radius: 100%;

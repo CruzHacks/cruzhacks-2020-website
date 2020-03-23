@@ -34,8 +34,11 @@
   top: 1em;
   &:after {
     content: 'WINNER';
-    position: relative;
-    margin: 0 auto;
+    position: fixed;
+    color: white;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -45%);
   }
 }
 
