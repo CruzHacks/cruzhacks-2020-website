@@ -8,6 +8,10 @@
   );
   padding: 0.5em 2em 2em 2em;
   margin: 0 auto;
+  @include responsive-font(2.4vw, 0.8em, 1.12em);
+  @include respond(phone-narrow) {
+    line-height: 20px;
+  }
 }
 
 .post-landing-winner {
@@ -30,6 +34,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding-bottom: calc(5em + 3vw);
+    @include respond(phone-narrow) {
+      padding-bottom: calc(3em + 1vw);
+    }
   }
   &__project-container:nth-child(2) {
     flex-wrap: wrap-reverse;
