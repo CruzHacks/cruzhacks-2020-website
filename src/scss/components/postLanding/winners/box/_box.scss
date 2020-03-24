@@ -60,7 +60,12 @@
 
 &__title {
   @include postLandingTitle;
-  @include responsive-font(3.4vw, 18px, 22px);
+  @include responsive-font(3.4vw, 16px, 20px);
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  font-family: 'Rubik';
+  text-align: justify;
+  padding-left: 1.7em;
   // this might need responsive units
   margin-top: 1em;
   margin-bottom: -0.5em;
