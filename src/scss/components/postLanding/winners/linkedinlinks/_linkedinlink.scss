@@ -40,6 +40,7 @@
   }
   @include respond(smallest) {
     font-size: 20px;
+    text-align: unset;
   }
 }
 

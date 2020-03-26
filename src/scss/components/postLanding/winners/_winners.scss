@@ -25,6 +25,9 @@
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 5em;
+    @include respond(smallest) {
+      width: auto;
+    }
   }
 
   &__project-container {
