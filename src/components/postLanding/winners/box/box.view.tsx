@@ -7,6 +7,7 @@ interface BoxProps {
     projectDescription: string;
     category: string;
     path: string;
+    devpost: string;
     listOfWinners: {
       name: string;
       linkedin: string;
@@ -18,20 +19,27 @@ function LeftBoxView(props) {
   return (
     <div className="post-landing-winner__project-container">
       <div className="post-landing-winner__box-container">
-        <div className="post-landing-winner__top-box">
-          <div className="post-landing-winner__banner" />
-          <img
-            className="post-landing-winner__image"
-            src={require('./winnerimages/' + props.path + '.png')}
-            alt={`${props.projectTitle} Icon`}
-          />
-        </div>
-        <div className="post-landing-winner__bottom-box">
-          <p className="post-landing-winner__title">{props.title}</p>
-          <p className="post-landing-winner__description">
-            {props.description}
-          </p>
-        </div>
+        <a
+          className="post-landing-winner__devpost"
+          href={props.devpost}
+          target="__blank"
+          rel="noopener noreferrer"
+        >
+          <div className="post-landing-winner__top-box">
+            <div className="post-landing-winner__banner" />
+            <img
+              className="post-landing-winner__image"
+              src={require('./winnerimages/' + props.path + '.png')}
+              alt={`${props.projectTitle} Icon`}
+            />
+          </div>
+          <div className="post-landing-winner__bottom-box">
+            <p className="post-landing-winner__title">{props.title}</p>
+            <p className="post-landing-winner__description">
+              {props.description}
+            </p>
+          </div>
+        </a>
       </div>
       <div className="post-landing-winner__linkedin-links-container">
         <p className="post-landing-winner__category-name">
@@ -53,20 +61,27 @@ function RightBoxView(props) {
         <LinkedInLinksView ListOfWinners={props.listOfWinners} />
       </div>
       <div className="post-landing-winner__box-container">
-        <div className="post-landing-winner__top-box">
-          <div className="post-landing-winner__banner" />
-          <img
-            className="post-landing-winner__image"
-            src={require('./winnerimages/' + props.path + '.png')}
-            alt={`${props.projectTitle} Icon`}
-          />
-        </div>
-        <div className="post-landing-winner__bottom-box">
-          <p className="post-landing-winner__title">{props.title}</p>
-          <p className="post-landing-winner__description">
-            {props.description}
-          </p>
-        </div>
+        <a
+          className="post-landing-winner__devpost"
+          href={props.devpost}
+          target="__blank"
+          rel="noopener noreferrer"
+        >
+          <div className="post-landing-winner__top-box">
+            <div className="post-landing-winner__banner" />
+            <img
+              className="post-landing-winner__image"
+              src={require('./winnerimages/' + props.path + '.png')}
+              alt={`${props.projectTitle} Icon`}
+            />
+          </div>
+          <div className="post-landing-winner__bottom-box">
+            <p className="post-landing-winner__title">{props.title}</p>
+            <p className="post-landing-winner__description">
+              {props.description}
+            </p>
+          </div>
+        </a>
       </div>
     </div>
   );
@@ -83,6 +98,7 @@ const WinnersBoxView: React.FC<BoxProps> = BoxProps => {
             description={winner.projectDescription}
             category={winner.category}
             path={winner.path}
+            devpost={winner.devpost}
             listOfWinners={winner.listOfWinners}
           />
         ) : (
@@ -92,6 +108,7 @@ const WinnersBoxView: React.FC<BoxProps> = BoxProps => {
             description={winner.projectDescription}
             category={winner.category}
             path={winner.path}
+            devpost={winner.devpost}
             listOfWinners={winner.listOfWinners}
           />
         )

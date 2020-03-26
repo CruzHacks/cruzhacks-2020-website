@@ -3,7 +3,7 @@
   display: flex;
   width: 28em;
   height: 28em;
-  padding-bottom: calc(2em + 1vw);
+  margin-bottom: calc(2em + 1vw);
   transition: transform 0.2s ease;
   &:hover {
     transform: translateY(-0.25vh);
