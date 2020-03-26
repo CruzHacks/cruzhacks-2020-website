@@ -24,6 +24,7 @@
 
 &__category-name {
   @include postLandingTitle;
+  padding-bottom: calc(1.25vh - 0.5em);
   letter-spacing: 0.05em;
   text-align: justify;
   text-indent: 0px;
