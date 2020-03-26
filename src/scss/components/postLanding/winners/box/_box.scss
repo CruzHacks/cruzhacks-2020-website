@@ -86,11 +86,9 @@
   font-family: 'Rubik';
   text-align: justify;
   padding-left: 1.7em;
+  // this might need responsive units
   margin-top: 1em;
-  margin-bottom: calc(-2% - 0.5em);
-  @include respond(phone-narrow) {
-    margin-bottom: -1em;
-  }
+  margin-bottom: -0.5em;
 }
 
 &__description {

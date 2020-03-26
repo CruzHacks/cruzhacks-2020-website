@@ -43,6 +43,11 @@
   @include respond(smallest) {
     font-size: 20px;
   }
+
+  // adjust text alignment after column flex wrap engages
+  @media screen and (max-width: 1023px) {
+    text-align: center;
+  }
 }
 
 &__winner-name {
