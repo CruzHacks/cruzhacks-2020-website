@@ -4,7 +4,7 @@
   width: 28em;
   height: 28em;
   padding-bottom: calc(2em + 1vw);
-  padding-left: 1em;
+  padding-left: 1.6em;
   position: relative;
   @include respond(phone-narrow) {
     width: 80vw;
@@ -31,7 +31,7 @@
   // this might need responsive units
   margin-bottom: 0.25em;
   @include respond(mission) {
-    font-size: 32px;
+    font-size: 28px;
   }
   @include respond(phone-narrow) {
     font-size: 24px;
@@ -47,7 +47,7 @@
 &__winner-name {
   display: inline-block;
   @include font-source-header(
-    $size: 32px,
+    $size: 20px,
     $color: #afafaf,
     $weight: bold,
     $lineHeight: 20px,
@@ -56,16 +56,16 @@
   );
   font-family: 'Rubik Regular';
   @include respond(mission) {
-    font-size: 28px;
+    font-size: 18px;
   }
   @include respond(phone-narrow) {
-    font-size: 20px;
+    font-size: 16px;
     text-indent: 0;
     margin: 0 auto;
     text-align: center;
   }
   @include respond(smallest) {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 

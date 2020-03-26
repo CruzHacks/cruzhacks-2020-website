@@ -36,7 +36,7 @@
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: calc(5em + 3vw);
+    padding-bottom: calc(3em + 3vw);
     @include respond(phone-narrow) {
       padding-bottom: calc(3em + 1vw);
     }
