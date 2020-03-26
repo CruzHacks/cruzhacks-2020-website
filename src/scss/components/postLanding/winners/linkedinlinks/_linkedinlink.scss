@@ -75,9 +75,9 @@
   }
 }
 
-&__linkedin-logo {
-  margin: 1.72em 1em 0 1em;
-  padding: calc((3% - 0.2em));
+&__linkedin-button {
+  margin: 1.9em 1em 0 1em;
+  padding: calc((4% - 0.2em));
   display: inline-block;
   border-radius: 100%;
   background: #fff;
@@ -88,4 +88,12 @@
     transform: translateY(-0.25vh);
     background: lighten($color: #fff, $amount: 10%);
   }
+  @include respond(smallest) {
+    padding: calc((6% - 0.2em));
+  }
+}
+&__linkedin-logo {
+  // centering logo by cancelling out hover transform
+  transform: translateY(0.25vh);
+  max-width: 1em;
 }
