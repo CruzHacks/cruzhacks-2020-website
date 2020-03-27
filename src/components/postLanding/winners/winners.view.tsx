@@ -35,7 +35,7 @@ let winners = [
   {
     projectTitle: 'Transparency Project',
     projectDescription:
-      'The Transparency Project facilitates the understanding of our political process through interactive data visualization. By aggregating data from social media platforms, search engines, and ad...',
+      'The Transparency Project facilitates the understanding of our political process through interactive data visualization. We equip voters with the ability to make more informed decisions.',
     category: 'Justice Hacks',
     path: 'transparencyproject',
     devpost: 'https://devpost.com/software/transparency-project',
@@ -65,7 +65,7 @@ let winners = [
   {
     projectTitle: 'InSight',
     projectDescription:
-      'Monitors and records your mental health through emotion recongnition using Machine Learning. ',
+      'Monitors and records your mental health through emotion recognition using Machine Learning. ',
     category: 'Health Hacks',
     path: 'insight',
     devpost: 'https://devpost.com/software/insight-jr7cs8',
