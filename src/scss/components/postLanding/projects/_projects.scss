@@ -35,6 +35,7 @@
     height: 5em;
     width: 21em;
     margin: 0 auto;
+    margin-bottom: calc(6em + 6vh);
     transition: background-color 0.2s ease-out;
     @include respond(phone) {
       width: 16em;
