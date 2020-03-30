@@ -21,7 +21,7 @@
     font-family: Rubik Bold;
     text-align: center;
     position: relative;
-    padding: calc(14em - 8vw) 1em 2em 1em;
+    padding: calc(14em - 10vw) 1em 2em 1em;
   }
 
   &__button {
@@ -35,6 +35,10 @@
     height: 5em;
     width: 21em;
     margin: 0 auto;
+    @include respond(phone) {
+      width: 14em;
+      height: 4em;
+    }
   }
 
   &__button-text {

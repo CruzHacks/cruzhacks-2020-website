@@ -19,6 +19,15 @@
     padding-bottom: 0;
   }
 }
+&__box-textContainer {
+  margin: 0 auto;
+  display: relative;
+  height: fit-content;
+  width: 85%;
+  @include respond(phone) {
+    width: 90%;
+  }
+}
 
 &__top-box {
   position: absolute;
@@ -85,10 +94,8 @@
   letter-spacing: 0.07em;
   font-family: 'Rubik';
   text-align: justify;
-  padding-left: 1.7em;
   // this might need responsive units
   margin-top: 1em;
-  margin-bottom: -0.5em;
 }
 
 &__description {

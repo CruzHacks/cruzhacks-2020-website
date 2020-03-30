@@ -6,7 +6,6 @@
     $lineHeight: 27px,
     $letterSpace: 0.02em
   );
-  padding: 0.5em 2em 2em 2em;
   margin: 0 auto;
   @include responsive-font(2.4vw, 0.8em, 1.12em);
   @include respond(phone-narrow) {

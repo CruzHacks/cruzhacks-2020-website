@@ -34,10 +34,12 @@ function LeftBoxView(props) {
             />
           </div>
           <div className="post-landing-winner__bottom-box">
-            <p className="post-landing-winner__title">{props.title}</p>
-            <p className="post-landing-winner__description">
-              {props.description}
-            </p>
+            <div className="post-landing-winner__box-textContainer">
+              <p className="post-landing-winner__title">{props.title}</p>
+              <p className="post-landing-winner__description">
+                {props.description}
+              </p>
+            </div>
           </div>
         </a>
       </div>
@@ -76,10 +78,12 @@ function RightBoxView(props) {
             />
           </div>
           <div className="post-landing-winner__bottom-box">
-            <p className="post-landing-winner__title">{props.title}</p>
-            <p className="post-landing-winner__description">
-              {props.description}
-            </p>
+            <div className="post-landing-winner__box-textContainer">
+              <p className="post-landing-winner__title">{props.title}</p>
+              <p className="post-landing-winner__description">
+                {props.description}
+              </p>
+            </div>
           </div>
         </a>
       </div>
