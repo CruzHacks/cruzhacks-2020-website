@@ -26,21 +26,15 @@
 
   &__button {
     position: relative;
-    display: block;
+    display: flex;
     text-decoration: none;
-    text-align: center;
+    justify-content: center;
     background: #5dcec6;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     height: 5em;
     width: 21em;
     margin: 0 auto;
-
-    @include respond(phone) {
-      height: 4em;
-      width: 14em;
-      margin-left: 30%;
-    }
   }
 
   &__button-text {
@@ -53,9 +47,6 @@
       $lineHeight: 20px,
       $letterSpace: 0.02em
     );
-    top: 1.5em;
-    @include respond(phone) {
-      top: 0.85em;
-    }
+    align-self: center;
   }
 }
