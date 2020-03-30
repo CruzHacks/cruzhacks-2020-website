@@ -35,9 +35,14 @@
     height: 5em;
     width: 21em;
     margin: 0 auto;
+    transition: background-color 0.2s ease-out;
     @include respond(phone) {
-      width: 14em;
-      height: 4em;
+      width: 16em;
+      height: 4.5em;
+    }
+    &:hover {
+      transition: background-color 0.2s ease-in;
+      background: lighten(#5dcec6, 8%);
     }
   }
 
@@ -49,8 +54,10 @@
       $weight: Bold,
       $fontStyle: normal,
       $lineHeight: 20px,
-      $letterSpace: 0.02em
+      $letterSpace: 0.07em
     );
     align-self: center;
+    font-family: 'Rubik';
+    @include responsive-font(2.4vw, 14px, 18px);
   }
 }
