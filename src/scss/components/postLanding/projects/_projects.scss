@@ -17,11 +17,11 @@
       $letterSpace: 0.05em
     );
     // @include responsive-font(1.1em, 1.25em, 1.6em);
+    text-transform: uppercase;
     font-family: Rubik Bold;
     text-align: center;
     position: relative;
-    padding-top: calc(10em - 3vw);
-    padding-bottom: 2em;
+    padding: calc(14em - 8vw) 1em 2em 1em;
   }
 
   &__button {
