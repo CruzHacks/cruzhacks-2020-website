@@ -1,8 +1,11 @@
 &__backdrop {
-  position: absolute;
+  position: relative;
   z-index: -1;
   width: 100vw;
   top: calc(15em - 14.5vw);
+  @include respond(big-desktop) {
+    top: -1em;
+  }
 }
 
 &__backdrop--greenWaves {
