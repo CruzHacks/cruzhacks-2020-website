@@ -8,9 +8,17 @@
 &__right-backdrop {
   z-index: -1; 
   position: absolute;
-  display: inline;
+  height: 50em;
   top: 2em;
   @include respond(tab-land) {
-    right: -1em;
+    right: -10%;
+    height: 45em;
+  }
+}
+
+// hide top backdrop pillar on small screens
+&__right-backdrop--topHidden {
+  @include respond(tab-land) {
+      visibility: hidden;
   }
 }

@@ -12,10 +12,10 @@ const RightBackdropAboutView: React.FC = () => {
             </defs>
             <style>
             </style>
-            <use id="Frame" href="#pillar-1" transform="translate(503)"/>
-            <use id="3rd" href="#pillar-2" transform="translate(297 356)"/>
-            <use id="4th" href="#pillar-3" transform="translate(18 304) scale(1.2)"/>
-            <use id="2nd" href="#pillar-3" transform="translate(427 291) scale(1.2)"/>
+            <use id="Frame" className="post-landing-about__right-backdrop--topHidden" href="#pillar-1" transform="translate(503)"/>
+            <use id="3rd" href="#pillar-2" transform="translate(297 306)"/>
+            <use id="4th" href="#pillar-3" transform="translate(18 254) scale(1.2)"/>
+            <use id="2nd" href="#pillar-3" transform="translate(427 241) scale(1.2)"/>
         </svg>
         </>
     );
