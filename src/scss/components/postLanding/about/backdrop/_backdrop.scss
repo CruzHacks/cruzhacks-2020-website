@@ -5,6 +5,7 @@
   top: 0;
   width: 50%;
   max-width: 30em;
+  min-width: 17em;
   @include respond(tab-land) {
     max-width: 40%;
   }
@@ -17,23 +18,31 @@
   top: 2em;
   @include respond(tab-land) {
     top: 4em;
-    right: -5%;
     height: 45em;
+    right: calc(-50vw + 3em);
   }
   @include respond(tab-port) {
-    right: calc(-20vw + 3em);
-    top: 2em;
+    right: calc(-50vw + 3em);
   }
   @include respond(phone) {
     margin: unset;
-    top: 3em;
+    width: 26em;
+    left: -3em;
+    top: 5em;
     right: 0;
   }
 }
 
-// hide top backdrop pillar on small screens
+// hide top right-backdrop pillar on small screens
 &__right-backdrop--topHidden {
   @include respond(tab-land) {
-      visibility: hidden;
+    visibility: hidden;
+  }
+}
+
+// hide left-backdrop pillars on small screens
+&__left-backdrop--hidden {
+  @include respond(phone) {
+    visibility: hidden;
   }
 }
