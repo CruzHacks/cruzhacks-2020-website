@@ -2,7 +2,12 @@
   z-index: -1;
   position: absolute;
   left: 0;
-  top: 2.2em;
+  top: 0;
+  width: 50%;
+  max-width: 30em;
+  @include respond(tab-land) {
+    max-width: 40%;
+  }
 }
 
 &__right-backdrop {
@@ -11,8 +16,18 @@
   height: 50em;
   top: 2em;
   @include respond(tab-land) {
-    right: -10%;
+    top: 4em;
+    right: -5%;
     height: 45em;
+  }
+  @include respond(tab-port) {
+    right: calc(-20vw + 3em);
+    top: 2em;
+  }
+  @include respond(phone) {
+    margin: unset;
+    top: 3em;
+    right: 0;
   }
 }
 

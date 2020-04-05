@@ -3,7 +3,7 @@ import React from 'react';
 const LeftBackdropView: React.FC = () => {
     return(
         <>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 800" width="450" height="800" className="post-landing-about__left-backdrop">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 800" className="post-landing-about__left-backdrop">
                 <defs>
                 <image width="72" height="252" id="img1" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iMjUyIiB2aWV3Qm94PSIwIDAgNzIgMjUyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMCAwTDcyIDM2VjI1MkwwIDIxNVYwWiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIgZmlsbC1vcGFjaXR5PSIwLjkiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjM2IiB5MT0iMCIgeDI9IjM2IiB5Mj0iMjUyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGNkY1RkYiLz4KPHN0b3Agb2Zmc2V0PSIwLjc1NTIwOCIgc3RvcC1jb2xvcj0iI0Y0RkVGRCIvPgo8c3RvcCBvZmZzZXQ9IjAuOTc5MTY3IiBzdG9wLWNvbG9yPSJ3aGl0ZSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo="/>
                 <image width="36" height="347" id="img2" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzQ3IiB2aWV3Qm94PSIwIDAgMzYgMzQ3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMzYgMEwwIDE5VjM0N0wzNiAzMjZWMFoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiIGZpbGwtb3BhY2l0eT0iMC45Ii8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSIxOCIgeTE9IjAiIHgyPSIxOCIgeTI9IjM0NyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBvZmZzZXQ9IjAuMTc3MDgzIiBzdG9wLWNvbG9yPSIjRjZGNUZGIi8+CjxzdG9wIG9mZnNldD0iMC41ODg1NDIiIHN0b3AtY29sb3I9IiNGMkZFRkQiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJ3aGl0ZSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo="/>
