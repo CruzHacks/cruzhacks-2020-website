@@ -47,6 +47,7 @@
           $letterSpace: 0.05em
         );
         @include responsive-font(2.1vw, 1.1em, 2em);
+        font-family: 'Rubik';
         text-transform: uppercase;
         mix-blend-mode: normal;
     }
