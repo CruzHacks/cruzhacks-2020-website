@@ -9,5 +9,9 @@
   z-index: -1; 
   position: absolute;
   display: inline;
+  max-width: fit-content;
   top: 2em;
+  @include respond(tab-land) {
+    right: -1em;
+  }
 }
