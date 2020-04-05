@@ -17,6 +17,7 @@ const CTAbuttonView: React.FC<ButtonProps> = ButtonProps => {
             href={button.link}
             target="__blank"
             rel="noopener noreferrer"
+            key={button.text}
           >
             <span className="ctaButton__text">{button.text}</span>
           </a>

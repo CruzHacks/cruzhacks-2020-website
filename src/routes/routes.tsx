@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-// import LandingView from '../components/landing/landing.view';
+import LandingView from '../components/landing/landing.view';
 import TeamView from '../components/team/team.view';
 // import PortalView from '../components/portal/portal.view';
 // import ExtendedAppPortalView from '../components/portal/extended-portal.view';
@@ -29,8 +29,9 @@ const Routes: React.FC = () => {
       <div className="routes">
         <Router>
           <Switch>
-            <Route exact path="/" render={() => <PostLandingView />} />
+            <Route exact path="/" render={() => <LandingView />} />
             <Route exact path="/team" render={() => <TeamView />} />
+            <Route exact path="/retrospective" render={() => <PostLandingView />} />
             {/* <PrivateRoute path="/portal" component={<PortalView />} />
             <Route exact path="/schedule" render={() => <SchedulePage />} />
             <Route exact path="/live" render={() => <LiveHomepage />} />

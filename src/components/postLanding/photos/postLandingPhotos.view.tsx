@@ -1,6 +1,5 @@
 import React from 'react';
 import PhotosBackdropView from './backdrop/PhotosBackdrop.view';
-import CTAbuttonView from '../../controls/ctaButton';
 
 const PostLandingPhotosView: React.FC = () => {
   return (

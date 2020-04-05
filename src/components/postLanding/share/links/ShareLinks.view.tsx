@@ -48,7 +48,7 @@ const ShareLinksView: React.FC<media> = media => {
           {media.accounts.map(profile => (
             <a
               className={'postLanding-share__' + profile.type}
-              href={profile.copy ? undefined : profile.link}
+              href={profile.copy ? '#' : profile.link}
               key={profile.type}
               target="__blank"
               onClick={e => {
