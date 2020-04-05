@@ -48,11 +48,12 @@ const ShareLinksView: React.FC<media> = media => {
           {media.accounts.map(profile => (
             <a
               className={'postLanding-share__' + profile.type}
-              href={profile.copy ? '#' : profile.link}
+              href={profile.copy ? '/#' : profile.link}
               key={profile.type}
-              target="__blank"
+              target={profile.copy ? '' : "__blank"}
               onClick={e => {
                 if (profile.copy) {
+                  e.preventDefault();
                   profile.copy();
                   tooltip(
                     e.target,
