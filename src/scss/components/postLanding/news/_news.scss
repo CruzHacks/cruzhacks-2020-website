@@ -1,0 +1,30 @@
+.postLanding-news {
+  @import './backdrop/backdrop';
+  @import './cards/card';
+  @import './cards/cards';
+
+  &__container {
+    position: relative;
+    top: calc(5vh);
+    bottom: calc(30vh - 1em);
+    max-height: 1100px;
+  }
+
+  &__title-container {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    top: 4em;
+    right: 0;
+    left: 0;
+  }
+
+  &__title {
+    @include postLandingTitle;
+    position: relative;
+    min-width: unset;
+    @include respond(phone) {
+      max-width: 5em;
+    }
+  }
+}

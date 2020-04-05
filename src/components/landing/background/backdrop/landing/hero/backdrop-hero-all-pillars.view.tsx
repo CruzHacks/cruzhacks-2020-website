@@ -3,7 +3,7 @@ import React from 'react';
 const BackdropHeroAllPillars: React.FC = () => {
   return (
     <svg
-      className="hero-backdrop__all-pillars-image"
+      className="post-landing-hero__pillars"
       viewBox="0 0 384 593"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,10 @@ const BackdropHeroAllPillars: React.FC = () => {
             transform="translate(93.0807 62)"
           />
         </clipPath>
-        <clipPath id="hero-all-pillars_clip3">
+        <clipPath
+          className="post-landing-hero__lowPillar"
+          id="hero-all-pillars_clip3"
+        >
           <rect
             width="36.0312"
             height="342.76"

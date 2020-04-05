@@ -1,0 +1,35 @@
+@mixin newsCard {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: calc(8vh - 1em);
+  min-height: 15em;
+  width: 50em;
+  transition: transform 0.2s ease, background 0.5s ease;
+  &:hover {
+    transform: translateY(-0.25vh);
+  }
+  @include respond(tab-land) {
+    width: 40em;
+  }
+  @include respond(tab-port) {
+    width: 30em;
+    min-height: 13em;
+  }
+  @include respond(phone-narrow) {
+    width: 18em;
+    min-height: 13.5em;
+  }
+}
+
+&__card-chp {
+  @include newsCard;
+}
+
+&__card-scw {
+  @include newsCard;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import HeroHeaderView from './header/hero-header.view';
-import HeroTitleAreaView from './title-area/hero-title-area.view';
+import HeroTitleAreaView from './titleArea/hero-title-area.view';
 
 const HeroView: React.FC = () => {
   return (

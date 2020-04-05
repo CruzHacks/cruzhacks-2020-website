@@ -1,0 +1,23 @@
+&__backdrop-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin newsPillars {
+  position: relative;
+  height: calc(15em + 6vh);
+  max-width: calc(25vw - 1.5em);
+  min-width: 5em;
+  @include respond(tab-port) {
+    height: calc(11em + 6vh);
+  }
+}
+
+&__pillarsLeft {
+  @include newsPillars;
+}
+
+&__pillarsRight {
+  @include newsPillars;
+}

@@ -1,0 +1,63 @@
+.postLanding-share {
+  &__container {
+    position: relative;
+    max-height: 18em;
+    top: calc(8vh - 2em);
+    margin-bottom: calc(8vh - 2em);
+    @include respond(tab-port) {
+      max-height: 14em;
+    }
+    @include respond(phone) {
+      max-height: 10em;
+    }
+    @include respond(phone-narrow) {
+      max-height: 6em;
+      margin-bottom: calc(12vh - 1em);
+    }
+  }
+  &__link-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 20em;
+    @include respond(tab-port) {
+      bottom: 18em;
+    }
+    @include respond(phone) {
+      bottom: 15em;
+    }
+    @include respond(phone-narrow) {
+      bottom: 18em;
+    }
+  }
+
+  &__links-container {
+    margin: calc(5vh - 0.1em) 1em 0 1em;
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__links-title {
+    @include postLandingTitle;
+  }
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: calc(8vh - 0.5em);
+    @include respond(phone) {
+      margin-top: calc(6vh - 2em);
+    }
+  }
+  &__links img {
+    margin: 0 auto;
+    @include respond(tab-port) {
+      transform: scale(0.75);
+    }
+  }
+
+  @import './logos/logos';
+  @import './backdrop/backdrop';
+}

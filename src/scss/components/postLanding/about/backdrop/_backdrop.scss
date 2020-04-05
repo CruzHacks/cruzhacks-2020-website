@@ -1,0 +1,48 @@
+&__left-backdrop {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  max-width: 30em;
+  min-width: 17em;
+  @include respond(tab-land) {
+    max-width: 40%;
+  }
+}
+
+&__right-backdrop {
+  z-index: -1; 
+  position: absolute;
+  height: 50em;
+  top: 2em;
+  @include respond(tab-land) {
+    top: 4em;
+    height: 45em;
+    right: calc(-50vw + 3em);
+  }
+  @include respond(tab-port) {
+    right: calc(-50vw + 3em);
+  }
+  @include respond(phone) {
+    margin: unset;
+    width: 26em;
+    left: -3em;
+    top: 5em;
+    right: 0;
+  }
+}
+
+// hide top right-backdrop pillar on small screens
+&__right-backdrop--topHidden {
+  @include respond(tab-land) {
+    visibility: hidden;
+  }
+}
+
+// hide left-backdrop pillars on small screens
+&__left-backdrop--hidden {
+  @include respond(phone) {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,60 @@
+.post-landing-info {
+  &__container {
+    position: relative;
+    min-height: 35em;
+    @include respond(phone) {
+      top: 4em;
+      padding-bottom: 3em;
+    }
+  }
+
+  &__stat-container {
+    position: relative;
+    padding-bottom: calc(2em + 3vh);
+    @include respond(phone) {
+      padding-bottom: calc(3em + 3vh);
+
+    }
+  }
+
+  &__title-container {
+    margin: 0 auto;
+    max-width: 37em;
+    text-align: center;
+    padding-bottom: 2em;
+  }
+
+  &__text-container {
+    margin: 0 auto;
+    max-width: 36.4em;
+    @include respond(phone) {
+      max-width: 90vw;
+    }
+  }
+
+  &__title {
+    @include font-source-header(
+      $size: 27px,
+      $lineHeight: 32px,
+      $letterSpace: 0.05em,
+      $fontStyle: normal,
+      $weight: bold,
+      $color: #2e2c5f
+    );
+    font-family: 'Rubik';
+    text-transform: uppercase;
+    @include responsive-font(3.1vw, 18px, 27px);
+  }
+
+  &__text {
+    @include font-source-body(
+      $size: 18px,
+      $lineHeight: 27px,
+      $letterSpace: 0.02em,
+      $fontStyle: normal,
+      $weight: normal,
+      $color: #383636
+    );
+    @include responsive-font(2.4vw, 14px, 18px);
+  }
+}

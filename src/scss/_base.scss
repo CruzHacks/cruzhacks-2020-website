@@ -26,6 +26,9 @@
 
 @import './components/announcements/announcements-dashboard';
 
+/* Post Landing Styles */
+@import './components/postLanding/postLanding';
+
 html,
 body {
   width: 100%;
@@ -38,6 +41,10 @@ body {
 .app-root {
   display: block;
   max-width: 100%;
+}
+
+.tooltip {
+  @include tooltip;
 }
 
 #mlh-trust-badge {

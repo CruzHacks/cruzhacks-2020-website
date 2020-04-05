@@ -1,0 +1,92 @@
+.postLanding-photos {
+  @import './backdrop/backdrop';
+  &__container {
+    text-align: center;
+    position: relative;
+    display: block;
+    min-height: 30em;
+    top: 11em;
+    padding-bottom: 3em;
+    @include respond(phone) {
+      padding-bottom: unset;
+      margin-bottom: -3em;
+      top: 8em;
+      min-height: 25em;
+    }
+  }
+  &__buttonContainer {
+    z-index: 1;
+    position: absolute;
+    top: 43%;
+    right: 21%;
+    left: 21%;
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: translateY(-0.25vh);
+    }
+    @include respond(phone) {
+      right: 16.5%;
+      left: 16.5%;
+    }
+  }
+  &__linkContainer {
+    position: relative;
+    display: inline-block;
+    max-height: 15em;
+  }
+
+  &__button {
+    background: #5dcec6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 1em 2em;
+    text-decoration: none;
+    @include respond(phone) {
+      padding: 0.75em 1.75em;
+    }
+  }
+  &__buttonText {
+    white-space: nowrap;
+    height: 100%;
+    @include font-source-header(
+      18px,
+      18px,
+      0.07em,
+      0,
+      center,
+      false,
+      bold,
+      #ffffff
+    );
+    @include respond(phone) {
+      font-size: 14px;
+    }
+  }
+
+  &__linkContainer img {
+    margin: 0 auto;
+    max-height: 15em;
+    border-radius: 23px;
+    @include respond(phone) {
+      max-height: 10em;
+    }
+  }
+  &__linkContainer:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100%);
+    background: rgb(93, 206, 198);
+    opacity: 50%;
+    right: 0;
+    top: 0;
+    border-radius: 23px;
+    transition: all 0.3s linear;
+    @include respond(phone) {
+      height: calc(100% - 3px);
+    }
+  }
+  &__linkContainer:hover:after {
+    opacity: 0;
+  }
+}

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Countdown from 'react-countdown-now';
 
 const HeroNavbarView: React.FC = () => {
   const [dropMenu, setDropMenu] = useState(false);

@@ -1,0 +1,49 @@
+@mixin ProjectDescription {
+  @include font-source-body(
+    $size: 1.12em,
+    $color: #ffffff,
+    $weight: normal,
+    $lineHeight: 27px,
+    $letterSpace: 0.02em
+  );
+  margin: 0 auto;
+  @include responsive-font(2.4vw, 0.8em, 1.12em);
+  @include respond(phone-narrow) {
+    line-height: 20px;
+  }
+}
+
+.post-landing-winner {
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 105em;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5em;
+    @include respond(smallest) {
+      width: auto;
+    }
+  }
+
+  &__project-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: calc(3em + 3vw);
+    @include respond(phone-narrow) {
+      padding-bottom: calc(3em + 1vw);
+    }
+  }
+  &__project-container:nth-child(2) {
+    flex-wrap: wrap-reverse;
+  }
+
+  @import './box/box';
+  @import './linkedinlinks/linkedinlink';
+}

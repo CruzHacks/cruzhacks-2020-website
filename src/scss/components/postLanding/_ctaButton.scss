@@ -1,0 +1,46 @@
+.ctaButton {
+  position: relative;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  &__link {
+    box-shadow: 0 2px 6px #bfbfbf;
+    border-radius: 23px;
+    padding: 12px 30px;
+    min-width: fit-content;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out;
+    background: #5dcec6;
+    margin: calc(2vh - 0.1em) 0;
+    @include respond(tab-port) {
+      padding: 10px 26px;
+    }
+    @include respond(phone-narrow) {
+      padding: 8px 24px;
+    }
+    &:hover {
+      transition: background-color 0.2s ease-in;
+      background: lighten(#5dcec6, 8%);
+    }
+  }
+  &__text {
+    white-space: nowrap;
+    height: 100%;
+    @include font-source-body(
+      15px,
+      18px,
+      0.07em,
+      0,
+      center,
+      false,
+      500,
+      #ffffff
+    );
+    @include respond(tab-port) {
+      font-size: 14px;
+    }
+    @include respond(phone-narrow) {
+      font-size: 10px;
+    }
+  }
+}

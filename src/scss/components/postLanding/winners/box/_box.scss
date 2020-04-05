@@ -1,0 +1,100 @@
+&__box-container {
+  position: relative;
+  display: flex;
+  width: 28em;
+  height: 28em;
+  margin-bottom: calc(2em + 1vw);
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: translateY(-0.25vh);
+    .post-landing-winner__bottom-box {
+      background: lighten($color: #5dcec6, $amount: 10%);
+    }
+  }
+  @include respond(desktop) {
+  }
+  @include respond(phone-narrow) {
+    max-width: 300px;
+    height: 24em;
+    padding-bottom: 0;
+  }
+}
+&__box-textContainer {
+  margin: 0 auto;
+  display: relative;
+  height: fit-content;
+  width: 85%;
+}
+
+&__top-box {
+  position: absolute;
+  display: block;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 28em;
+  height: 15em;
+  background-color: lightblue;
+  overflow: hidden;
+  @include respond(phone-narrow) {
+    max-width: 300px;
+  }
+}
+
+&__banner {
+  position: absolute;
+  background-color: #2e2c5f;
+  transform: rotate(-46.14deg);
+  font-family: 'Rubik';
+  letter-spacing: 0.07em;
+  height: 3em;
+  width: 12em;
+  left: -3em;
+  top: 1em;
+  &:after {
+    content: 'WINNER';
+    position: fixed;
+    color: white;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -45%);
+  }
+}
+
+&__image {
+  width: 28em;
+  @include respond(phone-narrow) {
+    width: 19em;
+  }
+}
+
+&__bottom-box {
+  display: block;
+  position: absolute;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 28em;
+  height: 14em;
+  background: #5dcec6;
+  transition: background 0.5s ease;
+  top: 14em;
+  @include respond(phone-narrow) {
+    max-width: 300px;
+    top: 9.5em;
+    height: 11.5em;
+  }
+}
+
+&__title {
+  @include postLandingTitle;
+  @include responsive-font(3.4vw, 16px, 20px);
+  color: #ffffff;
+  letter-spacing: 0.07em;
+  font-family: 'Rubik';
+  text-align: justify;
+  // this might need responsive units
+  margin-top: 1em;
+}
+
+&__description {
+  @include ProjectDescription();
+}

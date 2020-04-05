@@ -1,0 +1,26 @@
+&__tree {
+    @include svgContent();
+    width: 1000px;
+    max-height: 235px;
+    top: 80px;
+    position: relative;
+    @include respond(tab-land) {
+      width: 600px;
+    }
+    @include respond(tab-port) {
+      width: 550px;
+    }
+  }
+  &__tree-container {
+    @include svgContainer();
+    height: 400px;
+    width: auto;
+    top: 10vh;
+    position: static;
+    vertical-align: middle;
+    align-self: center;
+    @include respond(phone) {
+      display: none;
+    }
+  }
+  

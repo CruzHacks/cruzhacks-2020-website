@@ -1,0 +1,99 @@
+&__linkedin-links-container {
+  display: flex;
+  flex-direction: column;
+  width: 28em;
+  height: 28em;
+  padding-bottom: calc(2em + 1vw);
+  padding-left: 1.6em;
+  position: relative;
+  @include respond(phone-narrow) {
+    width: 80vw;
+    padding-left: 0;
+  }
+  @include respond(smallest) {
+    width: 100vw;
+  }
+}
+
+&__linkedin-container {
+  @include respond(phone-narrow) {
+    margin: 0 auto;
+    width: 70vw;
+  }
+}
+
+&__category-name {
+  @include postLandingTitle;
+  padding-bottom: calc(1.25vh - 0.5em);
+  letter-spacing: 0.05em;
+  text-align: justify;
+  text-indent: 0px;
+  margin-left: 0;
+  // this might need responsive units
+  margin-bottom: 0.25em;
+  @include respond(mission) {
+    font-size: 28px;
+  }
+  @include respond(phone-narrow) {
+    font-size: 24px;
+    text-indent: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  @include respond(smallest) {
+    font-size: 20px;
+  }
+
+  // adjust text alignment after column flex wrap engages
+  @media screen and (max-width: 1023px) {
+    text-align: center;
+  }
+}
+
+&__winner-name {
+  display: inline-block;
+  @include font-source-header(
+    $size: 20px,
+    $color: #afafaf,
+    $weight: bold,
+    $lineHeight: 20px,
+    $textIndent: 1em,
+    $letterSpace: 0.07em
+  );
+  font-family: 'Rubik Regular';
+  @include respond(mission) {
+    font-size: 18px;
+  }
+  @include respond(phone-narrow) {
+    font-size: 16px;
+    text-indent: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  @include respond(smallest) {
+    font-size: 14px;
+  }
+}
+
+&__linkedin-button {
+  margin: 1.87em 1em 0 1em;
+  padding: calc((4% - 0.2em));
+  display: inline-block;
+  border-radius: 100%;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background 0.5s ease;
+
+  &:hover {
+    transform: translateY(-0.25vh);
+    background: lighten($color: #fff, $amount: 10%);
+  }
+  @include respond(smallest) {
+    padding: calc((6% - 0.2em));
+  }
+}
+&__linkedin-logo {
+  // centering logo by cancelling out hover transform
+  transform: translateY(0.25vh);
+  max-width: 1em;
+}
