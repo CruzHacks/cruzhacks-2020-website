@@ -7,8 +7,9 @@ const PostLandingAboutView: React.FC = () => {
         <>
         <div className="post-landing-about__container">
             <LeftBackdropView />
-            <RightBackdropView />
+            
             <div className="post-landing-about__description-container">
+            <RightBackdropView />
                 <div className="post-landing-about__title-container">
                     <span className="post-landing-about__title"> We're Not Just A Hackathon</span>
                 </div>

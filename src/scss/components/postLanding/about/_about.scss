@@ -1,21 +1,8 @@
-.post-landing-about{
+.post-landing-about {
+    @import './backdrop/backdrop';
     &__container {
         position: relative;
         min-height: 100vh;
-    }
-
-    &__left-backdrop {
-        z-index: -1;
-        position: absolute;
-        left: 0;
-        top: 2.2em;
-    }
-
-    &__right-backdrop {
-        z-index: -1; 
-        position: absolute;
-        top: 17em;
-        right: 14em; 
     }
 
     &__description-container {

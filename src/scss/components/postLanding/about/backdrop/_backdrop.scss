@@ -1,0 +1,13 @@
+&__left-backdrop {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 2.2em;
+}
+
+&__right-backdrop {
+  z-index: -1; 
+  position: absolute;
+  display: inline;
+  top: 2em;
+}
