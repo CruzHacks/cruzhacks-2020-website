@@ -6,6 +6,9 @@
   @include respond(big-desktop) {
     top: -1em;
   }
+  @include respond(phone) {
+    top: -1em;
+  }
 }
 
 &__backdrop--greenWaves {

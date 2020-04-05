@@ -25,6 +25,9 @@
     @include respond(big-desktop) {
       padding-top: 6.9em;
     }
+    @include respond(phone) {
+      padding-top: 5em;
+    }
   }
 
   &__button {
