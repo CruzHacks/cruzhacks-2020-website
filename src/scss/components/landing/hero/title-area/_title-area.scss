@@ -55,7 +55,7 @@
       bold,
       #222222
     );
-    font-family: 'Rubik Bold';
+    font-family: 'Rubik';
     margin-top: 30px;
     mix-blend-mode: normal;
     @include responsive-font(3vw, 32px, 39px);
@@ -76,6 +76,7 @@
       500,
       #9e9eff
     );
+    font-family: 'Rubik Regular';
     @include responsive-font(1.75vw, 18px, 22px);
   }
 
