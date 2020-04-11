@@ -20,9 +20,7 @@ const PostLandingHeroView: React.FC = () => {
         </div>
 
         <NavbarView />
-        <div className="post-landing-hero__title-container">
-          <TitleAreaView />
-        </div>
+        <TitleAreaView />
       </div>
     </>
   );

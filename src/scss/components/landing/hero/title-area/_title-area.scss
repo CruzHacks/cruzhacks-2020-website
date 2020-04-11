@@ -32,8 +32,11 @@
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: center;
-  left: 115px;
+  left: 110px;
   top: 32vh;
+  @include respond(tab-port) {
+    left: 75px;
+  }
   @include respond(smallest) {
     top: 38vh;
   }

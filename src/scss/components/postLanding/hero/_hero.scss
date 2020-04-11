@@ -7,21 +7,22 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(65vw - 5vh);
+    width: calc(65vw);
     max-width: 105vh;
     @include respond(desktop) {
-      width: calc(60vw - 5vh);
+      width: calc(60vw);
     }
     @include respond(mission) {
-      width: calc(70vw - 5vh);
+      width: calc(70vw);
     }
-  }
-  &__title-container {
-    position: relative;
-    bottom: calc(20vh + 37vw);
-    left: calc(10vw - 4em);
-    @include respond(mission) {
-      left: -3em;
+    @include respond(tab-port) {
+      width: auto;
+      right: -5px;
+      height: 41em;
+    }
+    @include respond(phone) {
+      height: 31em;
+      top: -0.75em;
     }
   }
   &__pillars {
