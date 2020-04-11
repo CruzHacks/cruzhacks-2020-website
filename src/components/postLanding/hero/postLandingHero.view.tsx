@@ -18,7 +18,6 @@ const PostLandingHeroView: React.FC = () => {
         <div className="post-landing-hero__pillars">
           <BackdropHeroAllPillars />
         </div>
-
         <NavbarView />
         <TitleAreaView />
       </div>

@@ -32,10 +32,14 @@
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: center;
-  left: 110px;
+  left: 95px;
   top: 32vh;
   @include respond(tab-port) {
     left: 75px;
+  }
+  @include respond(phone-narrow) {
+    left: 0;
+    right: 0;
   }
   @include respond(smallest) {
     top: 38vh;
@@ -173,16 +177,17 @@ div.hero-subscribe-container {
   padding-top: 1.5em;
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-end;
+  align-items: center;
   position: absolute;
-  left: 0;
+  left: -8px;
 
   text-align: center;
+
 
   @include respond(smallest) {
     padding-right: 1.5vw;
   }
-
+  
   #emailInputContainer {
     margin: 0 0 0.25em 1em;
     display: inline-block;
