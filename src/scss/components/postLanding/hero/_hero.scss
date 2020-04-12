@@ -1,6 +1,6 @@
 .post-landing-hero {
   &__container {
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
   }
   &__bg {
@@ -33,6 +33,7 @@
     position: relative;
     top: 10vh;
     max-width: 55%;
+    z-index: -1;
   }
   &__lowPillar {
     @include respond(mission) {

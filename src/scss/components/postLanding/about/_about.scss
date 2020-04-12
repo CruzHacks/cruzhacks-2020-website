@@ -3,7 +3,20 @@
   display: flex;
   &__container {
     position: relative;
-    min-height: 40em;
+    height: 100vh;
+    top: -11em;
+    @include respond(mission) {
+      top: -13.2em;
+    }
+    @include respond(tab-land) {
+      top: -13.2em;
+    }
+    @include respond(tab-port) {
+      top: -16em;
+    }
+    @include respond(phone) {
+      top: 0;
+    }
   }
 
   &__description-container {
