@@ -1,6 +1,7 @@
 .post-landing-hero {
   &__container {
     height: 100vh;
+    min-height: 300px;
     position: relative;
   }
   &__bg {
