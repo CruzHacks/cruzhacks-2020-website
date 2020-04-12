@@ -29,9 +29,8 @@ const Routes: React.FC = () => {
       <div className="routes">
         <Router>
           <Switch>
-            <Route exact path="/" render={() => <LandingView />} />
+            <Route exact path="/" render={() => <PostLandingView />} />
             <Route exact path="/team" render={() => <TeamView />} />
-            <Route exact path="/retrospective" render={() => <PostLandingView />} />
             {/* <PrivateRoute path="/portal" component={<PortalView />} />
             <Route exact path="/schedule" render={() => <SchedulePage />} />
             <Route exact path="/live" render={() => <LiveHomepage />} />

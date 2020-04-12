@@ -13,7 +13,6 @@
     padding-bottom: calc(2em + 3vh);
     @include respond(phone) {
       padding-bottom: calc(3em + 3vh);
-
     }
   }
 
@@ -41,6 +40,7 @@
       $weight: bold,
       $color: #2e2c5f
     );
+    padding: 0 0.5em;
     font-family: 'Rubik';
     text-transform: uppercase;
     @include responsive-font(3.1vw, 18px, 27px);
