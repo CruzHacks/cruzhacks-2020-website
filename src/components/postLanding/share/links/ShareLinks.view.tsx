@@ -8,23 +8,24 @@ interface media {
   }[];
 }
 
-const ShareLinksView: React.FC<media> = media => {
-  const tooltip = (e, message, cl, link) => {
-    let el = document.createElement('div');
-    el.classList.add('tooltip');
-    while (cl && !e.className.includes(cl)) e = e.parentElement;
-    el.innerHTML = message;
+const ShareLinksView: React.FC<media> = (media) => {
+  const tooltip = (e, message, parent, link) => {
+    let element = document.createElement('div');
+    element.classList.add('tooltip');
+    while (parent && !e.className.includes(parent)) e = e.parentElement;
+    element.innerHTML = message;
     if (
       [...e.children].reduce(
-        (open, el) => [...el.classList].includes('tooltip') && (open = true),
+        (open, element) =>
+          [...element.classList].includes('tooltip') && (open = true),
         false
       )
     )
       return;
-    e.appendChild(el);
+    e.appendChild(element);
 
-    setTimeout(() => el.classList.add('__invisible'), 2000);
-    setTimeout(() => e.removeChild(el), 2200);
+    setTimeout(() => element.classList.add('__invisible'), 2000);
+    setTimeout(() => e.removeChild(element), 2200);
     if (link) {
       setTimeout(
         () =>
@@ -45,13 +46,13 @@ const ShareLinksView: React.FC<media> = media => {
           </span>
         </div>
         <div className="postLanding-share__links">
-          {media.accounts.map(profile => (
+          {media.accounts.map((profile) => (
             <a
               className={'postLanding-share__' + profile.type}
               href={profile.copy ? '/#' : profile.link}
               key={profile.type}
-              target={profile.copy ? '' : "__blank"}
-              onClick={e => {
+              target={profile.copy ? '' : '__blank'}
+              onClick={(e) => {
                 if (profile.copy) {
                   e.preventDefault();
                   profile.copy();

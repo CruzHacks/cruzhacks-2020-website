@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Countdown from 'react-countdown-now';
 import HamburgerIcon from '../../../../assets/images/icons/hamburger.svg';
 
 const HeroHamburgerView: React.FC = () => {
@@ -9,8 +8,11 @@ const HeroHamburgerView: React.FC = () => {
 
   const hideDropdownMenu = (event) => {
     if (
+      event.target.className !== 'hamburger__button-text extended' &&
+      event.target.className !== 'navbar__button-text' &&
       event.target.className !== 'hamburger__extended' &&
-      event.target.className !== 'hamburger__button-text extended'
+      event.target.className !== '' &&
+      showDropdownMenu
     ) {
       document.removeEventListener('click', hideDropdownMenu);
       console.log(event.target.className);
@@ -34,13 +36,18 @@ const HeroHamburgerView: React.FC = () => {
     return () => document.removeEventListener('click', hideDropdownMenu);
   });
 
+  let [logistics, setLogistics] = useState('Logistics');
+  let [marketing, setMarketing] = useState('Marketing');
+  let [design, setDesign] = useState('Design');
+  let [eng, setEng] = useState('Engineering');
+
   return (
     <div className="hamburger">
       <button onClick={showDropdownMenu} className="hamburger__icon">
         <img src={HamburgerIcon} alt="dropdown menu"></img>
       </button>
       {displayMenu ? (
-        <ul id="dropdown">
+        <ul id="dropdown" className="hamburger__dropdown">
           <li onClick={toggleExtended} className="hamburger__extended">
             <div className="hamburger__button">
               <p
@@ -52,56 +59,88 @@ const HeroHamburgerView: React.FC = () => {
             </div>
           </li>
           {displayDrop ? (
-            <a href="/#" style={{ textDecoration: 'none' }}>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                setLogistics('Recruitment starting soon!');
+                setTimeout((e) => setLogistics('Logistics'), 3000);
+              }}
+              href="/#"
+              style={{ textDecoration: 'none' }}
+            >
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
                   <p
                     className="navbar__button-text"
                     style={{ fontWeight: 500 }}
                   >
-                    Logistics
+                    {logistics}
                   </p>
                 </div>
               </li>
             </a>
           ) : null}
           {displayDrop ? (
-            <a href="/#" style={{ textDecoration: 'none' }}>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                setMarketing('Recruitment starting soon!');
+                setTimeout((e) => setMarketing('Marketing'), 3000);
+              }}
+              href="/#"
+              style={{ textDecoration: 'none' }}
+            >
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
                   <p
                     className="navbar__button-text"
                     style={{ fontWeight: 500 }}
                   >
-                    Marketing
+                    {marketing}
                   </p>
                 </div>
               </li>
             </a>
           ) : null}
           {displayDrop ? (
-            <a href="/#" style={{ textDecoration: 'none' }}>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                setDesign('Recruitment starting soon!');
+                setTimeout((e) => setDesign('Design'), 3000);
+              }}
+              href="/#"
+              style={{ textDecoration: 'none' }}
+            >
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
                   <p
                     className="navbar__button-text"
                     style={{ fontWeight: 500 }}
                   >
-                    Design
+                    {design}
                   </p>
                 </div>
               </li>
             </a>
           ) : null}
           {displayDrop ? (
-            <a href="/#" style={{ textDecoration: 'none' }}>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                setEng('Recruitment starting soon!');
+                setTimeout((e) => setEng('Engineering'), 3000);
+              }}
+              href="/#"
+              style={{ textDecoration: 'none' }}
+            >
               <li>
                 <div className="navbar__dropButton">
                   <p
                     className="navbar__button-text"
                     style={{ fontWeight: 500 }}
                   >
-                    Engineering
+                    {eng}
                   </p>
                 </div>
               </li>
