@@ -16,6 +16,7 @@
     }
     @include respond(phone-narrow) {
       padding: 8px 24px;
+      margin: calc(1.5vh - 0.1em) 0;
     }
     &:hover {
       transition: background-color 0.2s ease-in;
@@ -55,10 +56,32 @@
 
 .ctaButtonHero {
   @include ctaButton;
+  top: 2em;
   &__link {
     background: #6f6fe8;
+    margin-top: 2em;
     &:hover {
       background: lighten(#6f6fe8, 8%);
+    }
+    @include respond(tab-land) {
+      margin-left: -1em;
+    }
+    @include respond(tab-port) {
+      padding: 12px 30px;
+    }
+    @include respond(phone) {
+      margin-left: auto;
+    }
+    @include respond(phone-narrow) {
+      padding: 12px 30px;
+    }
+  }
+  &__text {
+    @include respond(tab-port) {
+      font-size: 15px;
+    }
+    @include respond(phone-narrow) {
+      font-size: 15px;
     }
   }
 }

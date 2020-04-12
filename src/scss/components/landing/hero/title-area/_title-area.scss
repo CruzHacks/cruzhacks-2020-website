@@ -33,16 +33,17 @@
   justify-content: flex-end;
   align-items: center;
   left: 95px;
-  top: 32vh;
+  top: 42vh;
+  height: 5em;
   @include respond(tab-port) {
     left: 75px;
+  }
+  @include respond(phone) {
   }
   @include respond(phone-narrow) {
     left: 0;
     right: 0;
-  }
-  @include respond(smallest) {
-    top: 38vh;
+    top: 50vh;
   }
   &__title-text {
     @include font-source-header(
@@ -175,20 +176,23 @@
 div.hero-subscribe-container {
   width: 100%;
   top: 6em;
-  padding-top: 1.5em;
+  padding-top: 0.75em;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   position: absolute;
-  left: -8px;
+  left: -30px;
 
   text-align: center;
 
-
-  @include respond(smallest) {
-    padding-right: 1.5vw;
+  @include respond(tab-land) {
+    left: -30px;
   }
-  
+  @include respond(smallest) {
+    left: -8px;
+    margin-right: 1em;
+  }
+
   #emailInputContainer {
     margin: 0 0 0.25em 1em;
     display: inline-block;
