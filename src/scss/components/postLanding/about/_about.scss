@@ -7,7 +7,6 @@
     top: -11em;
     @include respond(mission) {
       top: -13.2em;
-      height: 25em;
     }
     @include respond(tab-land) {
       top: -13.2em;
