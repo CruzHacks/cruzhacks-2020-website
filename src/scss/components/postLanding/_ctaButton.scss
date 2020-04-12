@@ -35,6 +35,9 @@
       500,
       #ffffff
     );
+    @include respond(tab-port) {
+      font-size: 12px;
+    }
     @include respond(phone-narrow) {
       font-size: 10px;
     }
