@@ -12,20 +12,17 @@
     top: 0;
     right: 0;
     width: calc(65vw);
-    max-width: 900px;
-    min-width: 200px;
-    @include respond(desktop) {
-      width: calc(60vw);
-    }
-    @include respond(mission) {
-      width: calc(69vw);
-    }
+    max-width: 105vh;
+    min-width: 35em;
     @include respond(tab-port) {
+      min-width: unset;
+      max-width: 35em;
       width: auto;
       right: -5px;
       height: 41em;
     }
     @include respond(phone) {
+      min-width: 200px;
       height: 31em;
       top: -0.75em;
     }
