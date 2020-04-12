@@ -3,19 +3,22 @@
   display: flex;
   &__container {
     position: relative;
-    height: 100vh;
+    height: 30em;
     top: -11em;
     @include respond(mission) {
       top: -13.2em;
+      height: 25em;
     }
     @include respond(tab-land) {
       top: -13.2em;
     }
     @include respond(tab-port) {
       top: -16em;
+      height: 22em;
     }
     @include respond(phone) {
       top: 0;
+      height: 42em;
     }
   }
 
