@@ -1,7 +1,7 @@
 .post-landing-hero {
   &__container {
     height: 100vh;
-    min-height: 300px;
+    min-height: 500px;
     position: relative;
   }
   &__bg {
@@ -9,12 +9,13 @@
     top: 0;
     right: 0;
     width: calc(65vw);
-    max-width: 105vh;
+    max-width: 900px;
+    min-width: 200px;
     @include respond(desktop) {
       width: calc(60vw);
     }
     @include respond(mission) {
-      width: calc(70vw);
+      width: calc(69vw);
     }
     @include respond(tab-port) {
       width: auto;
