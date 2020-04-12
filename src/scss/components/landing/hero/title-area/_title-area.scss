@@ -33,18 +33,19 @@
   justify-content: flex-end;
   align-items: center;
   left: 95px;
-  top: 42vh;
+  top: calc(4em + 28vh);
   height: 5em;
   padding-top: 5em;
   @include respond(tab-port) {
     left: 75px;
   }
   @include respond(phone) {
+    top: calc(10em + 30vh);
   }
   @include respond(phone-narrow) {
     left: 0;
     right: 0;
-    top: 50vh;
+    top: calc(10em + 30vh);
   }
   &__title-text {
     @include font-source-header(
