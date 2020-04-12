@@ -1,4 +1,4 @@
-.ctaButton {
+@mixin ctaButton {
   position: relative;
   display: flex;
   align-self: center;
@@ -10,7 +10,6 @@
     min-width: fit-content;
     text-decoration: none;
     transition: background-color 0.2s ease-out;
-    background: #5dcec6;
     margin: calc(2vh - 0.1em) 0;
     @include respond(tab-port) {
       padding: 10px 26px;
@@ -20,7 +19,6 @@
     }
     &:hover {
       transition: background-color 0.2s ease-in;
-      background: lighten(#5dcec6, 8%);
     }
   }
   &__text {
@@ -41,6 +39,26 @@
     }
     @include respond(phone-narrow) {
       font-size: 10px;
+    }
+  }
+}
+
+.ctaButton {
+  @include ctaButton;
+  &__link {
+    background: #5dcec6;
+    &:hover {
+      background: lighten(#5dcec6, 8%);
+    }
+  }
+}
+
+.ctaButtonHero {
+  @include ctaButton;
+  &__link {
+    background: #6f6fe8;
+    &:hover {
+      background: lighten(#6f6fe8, 8%);
     }
   }
 }
