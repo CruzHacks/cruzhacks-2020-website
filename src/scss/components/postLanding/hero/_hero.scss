@@ -1,8 +1,11 @@
 .post-landing-hero {
   &__container {
     height: 100vh;
-    min-height: 500px;
+    min-height: calc(25em + 20vw);
     position: relative;
+    @include respond(phone) {
+      min-height: 500px;
+    }
   }
   &__bg {
     position: absolute;
