@@ -18,14 +18,11 @@
   justify-content: center;
   position: absolute;
   right: 8%;
-  top: 2.25em;
+  top: 1.5em;
   width: 30px;
   height: 21px;
   visibility: hidden;
   z-index: 1;
-  @include respond(phone-narrow) {
-    top: 1.5em;
-  }
   ul {
     list-style-type: none;
     margin: 0;

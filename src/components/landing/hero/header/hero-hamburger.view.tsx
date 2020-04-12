@@ -7,7 +7,7 @@ const HeroHamburgerView: React.FC = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
   const [displayDrop, setDrop] = useState(false);
 
-  const hideDropdownMenu = event => {
+  const hideDropdownMenu = (event) => {
     if (
       event.target.className !== 'hamburger__extended' &&
       event.target.className !== 'hamburger__button-text extended'
@@ -41,34 +41,6 @@ const HeroHamburgerView: React.FC = () => {
       </button>
       {displayMenu ? (
         <ul id="dropdown">
-          <Link to="/" style={{ textDecoration: `none` }}>
-            <li>
-              <div className="hamburger__button">
-                <p className="hamburger__button-text">HOME</p>
-              </div>
-            </li>
-          </Link>
-          <Link to="/live" style={{ textDecoration: `none` }}>
-            <li>
-              <div className="hamburger__button">
-                <p className="hamburger__button-text">LIVE EVENT INFO</p>
-              </div>
-            </li>
-          </Link>
-          <Link to="/portal" style={{ textDecoration: `none` }}>
-            <li>
-              <div className="hamburger__button">
-                <p className="hamburger__button-text">
-                  <Countdown
-                    date={'Friday January 3 2020 23:59:59'}
-                    renderer={props =>
-                      !props.completed ? 'APPLY' : 'DECISIONS'
-                    }
-                  />
-                </p>
-              </div>
-            </li>
-          </Link>
           <li onClick={toggleExtended} className="hamburger__extended">
             <div className="hamburger__button">
               <p
@@ -80,68 +52,56 @@ const HeroHamburgerView: React.FC = () => {
             </div>
           </li>
           {displayDrop ? (
-            <a
-              href="https://forms.gle/rP8MGCwRk9CTdKJ67"
-              style={{ textDecoration: 'none' }}
-            >
+            <a href="/#" style={{ textDecoration: 'none' }}>
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
                   <p
                     className="navbar__button-text"
                     style={{ fontWeight: 500 }}
                   >
-                    Mentor
+                    Logistics
                   </p>
                 </div>
               </li>
             </a>
           ) : null}
           {displayDrop ? (
-            <a
-              href="https://forms.gle/rP8MGCwRk9CTdKJ67"
-              style={{ textDecoration: 'none' }}
-            >
+            <a href="/#" style={{ textDecoration: 'none' }}>
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
                   <p
                     className="navbar__button-text"
                     style={{ fontWeight: 500 }}
                   >
-                    Judge
+                    Marketing
                   </p>
                 </div>
               </li>
             </a>
           ) : null}
           {displayDrop ? (
-            <a
-              href="https://forms.gle/rP8MGCwRk9CTdKJ67"
-              style={{ textDecoration: 'none' }}
-            >
+            <a href="/#" style={{ textDecoration: 'none' }}>
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
                   <p
                     className="navbar__button-text"
                     style={{ fontWeight: 500 }}
                   >
-                    Volunteer
+                    Design
                   </p>
                 </div>
               </li>
             </a>
           ) : null}
           {displayDrop ? (
-            <a
-              href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing"
-              style={{ textDecoration: 'none' }}
-            >
+            <a href="/#" style={{ textDecoration: 'none' }}>
               <li>
                 <div className="navbar__dropButton">
                   <p
                     className="navbar__button-text"
                     style={{ fontWeight: 500 }}
                   >
-                    Learn More
+                    Engineering
                   </p>
                 </div>
               </li>

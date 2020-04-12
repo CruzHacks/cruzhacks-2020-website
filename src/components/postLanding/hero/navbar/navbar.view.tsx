@@ -28,10 +28,7 @@ const HeroNavbarView: React.FC = () => {
         {dropMenu ? (
           <div className="navbar__dropdown">
             <ul>
-              <a
-                style={{ textDecoration: 'none' }}
-                href="https://forms.gle/rP8MGCwRk9CTdKJ67"
-              >
+              <a style={{ textDecoration: 'none' }} href="/#">
                 <li>
                   <div className="navbar__dropButton">
                     <p
@@ -43,10 +40,7 @@ const HeroNavbarView: React.FC = () => {
                   </div>
                 </li>
               </a>
-              <a
-                style={{ textDecoration: 'none' }}
-                href="https://forms.gle/rP8MGCwRk9CTdKJ67"
-              >
+              <a style={{ textDecoration: 'none' }} href="/#">
                 <li>
                   <div className="navbar__dropButton">
                     <p
@@ -58,10 +52,7 @@ const HeroNavbarView: React.FC = () => {
                   </div>
                 </li>
               </a>
-              <a
-                style={{ textDecoration: 'none' }}
-                href="https://forms.gle/rP8MGCwRk9CTdKJ67"
-              >
+              <a style={{ textDecoration: 'none' }} href="/#">
                 <li>
                   <div className="navbar__dropButton">
                     <p
@@ -73,10 +64,7 @@ const HeroNavbarView: React.FC = () => {
                   </div>
                 </li>
               </a>
-              <a
-                style={{ textDecoration: 'none' }}
-                href="https://docs.google.com/document/d/1OKiuYrZsPzP1XEfKzNmgSWOuz28rLjNouAEbiUGnSss/edit?usp=sharing"
-              >
+              <a style={{ textDecoration: 'none' }} href="/#">
                 <li>
                   <div className="navbar__dropButton">
                     <p
