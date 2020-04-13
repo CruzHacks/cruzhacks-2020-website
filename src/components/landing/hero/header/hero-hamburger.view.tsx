@@ -11,6 +11,7 @@ const HeroHamburgerView: React.FC = () => {
       event.target.className !== 'hamburger__button-text extended' &&
       event.target.className !== 'navbar__button-text' &&
       event.target.className !== 'hamburger__extended' &&
+      event.target.className !== 'navbar__dropButton' &&
       event.target.className !== '' &&
       showDropdownMenu
     ) {

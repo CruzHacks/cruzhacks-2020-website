@@ -12,6 +12,11 @@ const HeroNavbarView: React.FC = () => {
     setDropMenu(true);
   };
 
+  let [logistics, setLogistics] = useState('Logistics');
+  let [marketing, setMarketing] = useState('Marketing');
+  let [design, setDesign] = useState('Design');
+  let [eng, setEng] = useState('Engineering');
+
   return (
     <div className="navbar">
       <div
@@ -28,50 +33,82 @@ const HeroNavbarView: React.FC = () => {
         {dropMenu ? (
           <div className="navbar__dropdown">
             <ul>
-              <a style={{ textDecoration: 'none' }} href="/#">
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  setLogistics('Recruitment starting soon!');
+                  setTimeout((e) => setLogistics('Logistics'), 3000);
+                }}
+                style={{ textDecoration: 'none' }}
+                href="/#"
+              >
                 <li>
                   <div className="navbar__dropButton">
                     <p
                       className="navbar__button-text"
                       style={{ fontWeight: 500 }}
                     >
-                      Logistics
+                      {logistics}
                     </p>
                   </div>
                 </li>
               </a>
-              <a style={{ textDecoration: 'none' }} href="/#">
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMarketing('Recruitment starting soon!');
+                  setTimeout((e) => setMarketing('Marketing'), 3000);
+                }}
+                style={{ textDecoration: 'none' }}
+                href="/#"
+              >
                 <li>
                   <div className="navbar__dropButton">
                     <p
                       className="navbar__button-text"
                       style={{ fontWeight: 500 }}
                     >
-                      Marketing
+                      {marketing}
                     </p>
                   </div>
                 </li>
               </a>
-              <a style={{ textDecoration: 'none' }} href="/#">
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  setDesign('Recruitment starting soon!');
+                  setTimeout((e) => setDesign('Design'), 3000);
+                }}
+                style={{ textDecoration: 'none' }}
+                href="/#"
+              >
                 <li>
                   <div className="navbar__dropButton">
                     <p
                       className="navbar__button-text"
                       style={{ fontWeight: 500 }}
                     >
-                      Design
+                      {design}
                     </p>
                   </div>
                 </li>
               </a>
-              <a style={{ textDecoration: 'none' }} href="/#">
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  setEng('Recruitment starting soon!');
+                  setTimeout((e) => setEng('Engineering'), 3000);
+                }}
+                style={{ textDecoration: 'none' }}
+                href="/#"
+              >
                 <li>
                   <div className="navbar__dropButton">
                     <p
                       className="navbar__button-text"
                       style={{ fontWeight: 500 }}
                     >
-                      Engineering
+                      {eng}
                     </p>
                   </div>
                 </li>
