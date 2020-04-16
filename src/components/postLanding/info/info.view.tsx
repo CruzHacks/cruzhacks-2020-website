@@ -4,7 +4,7 @@ let stats = [
   {
     title: 'Hackers of All Ages',
     text:
-      'Of the roughly 450 attendees who participated, 81% were UCSC students while the rest hailed from outside the university. This event not only garnered interest across national universities, but also drew students of all ages. High-schoolers and college students from all around the U.S. (including one team of middle-schoolers!) came out to participate!',
+      'Of the roughly 450 attendees who participated, 81% were UCSC students while the rest hailed from outside the university. This event not only garnered interest across national universities, but also drew students of all ages. High-schoolers, undergraduates and graduates from all around the U.S. (including one team of middle-schoolers!) came out to participate!',
   },
   {
     title: "Inclusivity is CruzHack's Goal",
