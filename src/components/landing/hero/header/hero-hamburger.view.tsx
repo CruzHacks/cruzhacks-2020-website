@@ -16,7 +16,6 @@ const HeroHamburgerView: React.FC = () => {
       showDropdownMenu
     ) {
       document.removeEventListener('click', hideDropdownMenu);
-      console.log(event.target.className);
       setDrop(false);
       setDisplayMenu(false);
     }

@@ -68,12 +68,12 @@
   }
 
   &__text-container {
-    width: 40em;
+    width: 38em;
     @include respond(mission) {
-      width: 35em;
+      width: 34em;
     }
     @include respond(tab-land) {
-      width: calc(21em + 15vw);
+      width: calc(20em + 12vw);
     }
     @include respond(tab-port) {
       width: 24em;
