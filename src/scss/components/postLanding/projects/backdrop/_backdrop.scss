@@ -15,8 +15,9 @@
   min-width: 200vw;
   min-height: 20em;
   max-height: 30em;
-  background: url('./greenWaves.svg') repeat-x;
-  top: 1em;
+  background: url('./greenWaves.svg');
+  opacity: 0.8;
+  top: 1.25em;
   position: absolute;
   left: 0;
   right: 0;
@@ -34,7 +35,7 @@
   left: 0;
   right: -3em;
   animation: wave1 50s cubic-bezier(0.75, 0.22, 0.5, 1.03) -0.125s infinite,
-    swell 14s ease -1.25s infinite;
+    swell 8s ease -1.25s infinite;
   transform: translate3d(0, 0, 0);
 }
 
@@ -75,8 +76,14 @@
   0% {
     transform: translate3d(0, -5px, 0);
   }
-  50% {
+  42% {
     transform: translate3d(0, 10px, 0);
+  }
+  45% {
+    transform: translate3d(0, 10px, 0);
+  }
+  55% {
+    transform: translate3d(0, 7px, 0);
   }
   100% {
     transform: translate3d(0, -5px, 0);
