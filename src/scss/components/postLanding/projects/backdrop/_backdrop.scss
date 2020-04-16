@@ -12,28 +12,28 @@
 }
 
 &__backdrop--greenWaves {
-  min-width: 100vw;
+  min-width: 200vw;
   min-height: 20em;
   max-height: 30em;
-  object-fit: cover;
+  background: url('./greenWaves.svg') repeat-x;
+  top: 1em;
   position: absolute;
   left: 0;
   right: 0;
   animation: wave2 60s cubic-bezier(0.57, 0.1, 0.5, 1.03) infinite;
-  transform: translate3d(0, 0, 0);
 }
 
 &__backdrop--purpleWaves {
   min-width: 100vw;
   min-height: 20em;
-  object-fit: cover;
   top: 1em;
   background: url('./purpleWaves.svg') repeat-x;
+  background-size: 100% 100%;
   opacity: 0.6;
   position: absolute;
   left: 0;
   right: -3em;
-  animation: wave1 80s cubic-bezier(0.75, 0.22, 0.5, 1.03) -0.125s infinite,
+  animation: wave1 50s cubic-bezier(0.75, 0.22, 0.5, 1.03) -0.125s infinite,
     swell 14s ease -1.25s infinite;
   transform: translate3d(0, 0, 0);
 }
