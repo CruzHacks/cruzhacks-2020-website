@@ -21,11 +21,11 @@
   position: absolute;
   left: 0;
   right: 0;
-  animation: wave2 60s cubic-bezier(0.57, 0.1, 0.5, 1.03) infinite;
+  animation: wave2 30s cubic-bezier(0.57, 0.1, 0.5, 1.03) infinite;
 }
 
 &__backdrop--purpleWaves {
-  min-width: 100vw;
+  min-width: 120vw;
   min-height: 20em;
   top: 1em;
   background: url('./purpleWaves.svg') repeat-x;
@@ -61,14 +61,14 @@
   0% {
     margin-left: 0;
   }
-  30% {
-    margin-left: -500px;
+  25% {
+    margin-left: -400px;
   }
   50% {
-    margin-right: -700px;
+    margin-right: -600px;
   }
-  85% {
-    margin-left: -200px;
+  75% {
+    margin-left: -300px;
   }
 }
 
