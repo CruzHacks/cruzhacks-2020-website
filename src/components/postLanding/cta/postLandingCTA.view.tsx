@@ -24,7 +24,7 @@ const PostLandingCTAview: React.FC = () => {
         <span className="postLanding-cta__info">
           Each year, we strive to deliver an exciting, inclusive, and fun event
           focused on social good. This requires a considerable amount of
-          wo/manpower and resources towards logistics, food, electricity,
+          humanpower and resources towards logistics, food, electricity,
           internet, merch, and more for the ~40 continuous hours that CruzHacks
           spans. Help us put on 2021!
         </span>
