@@ -9,7 +9,7 @@ let stats = [
   {
     title: "Inclusivity is CruzHack's Goal",
     text:
-      'CruzHacks brings together a diverse and inclusive group of students to develop innovative solutions and solve real world challenges; we take pride in expanding diversity within the tech industry by prioritizing opportunities for underrepresented communities, and encouraging all attendees to chart new paths for building tech.',
+      'CruzHacks brings together a diverse and inclusive group of students to develop innovative solutions and solve real world challenges; we take pride in expanding diversity within the tech industry by providing opportunities for underrepresented communities, and encouraging all attendees to chart new paths for building tech.',
   },
 ];
 
