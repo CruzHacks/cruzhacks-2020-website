@@ -20,9 +20,9 @@ const PostLandingAboutView: React.FC = () => {
             <span className="post-landing-about__text">
               From January 17 to January 19, 2020, UCSC’s Stevenson Event Center
               was transformed into a bustling playground for over 450 hackers.
-              The 36 hours of hacking were as hectic as they were productive. As
-              hackers downed bottle after bottle of Yerba Mate and LIFEAID,
-              mentors and representatives were available to help your visions
+              The 36 hours of hacking were challenging, yet invaluably
+              productive. As hackers downed bottle after bottle of Yerba Mate
+              and LIFEAID, mentors and tech representatives helped your visions
               for social change manifest into tangible projects.
             </span>
           </div>
