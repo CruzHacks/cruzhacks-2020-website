@@ -6,7 +6,7 @@
     position: relative;
     padding: 20px 0 calc(8vh - 0.2em) 0;
     top: calc(8vh - 2em);
-    min-height: 475px;
+    min-height: 375px;
   }
   &__button-container {
     position: relative;
@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: center;
     max-height: 200px;
+    margin-top: 10px;
   }
   &__title {
     @include postLandingTitle;

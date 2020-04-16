@@ -19,11 +19,11 @@ const PostLandingAboutView: React.FC = () => {
             </div>
             <span className="post-landing-about__text">
               From January 17 to January 19, 2020, UCSC’s Stevenson Event Center
-              was transformed into a bustling playground for over 450 hackers.
-              The 36 hours of hacking proved challenging, yet invaluably
-              productive. As hackers downed bottle after bottle of Yerba Mate
-              and LIFEAID, mentors and tech representatives helped your visions
-              for social change manifest into tangible projects.
+              was transformed into a playground for hacking solutions to the
+              world's problems. As 450 hackers downed bottle after bottle of
+              Yerba Mate and LIFEAID, visions of social good manifested into
+              tangible solutions. Here, we present a handful of projects that
+              excel in their approach, planning, and potential.
             </span>
           </div>
         </div>

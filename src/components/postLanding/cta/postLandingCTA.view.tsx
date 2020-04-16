@@ -23,10 +23,7 @@ const PostLandingCTAview: React.FC = () => {
         <span className="postLanding-cta__title">Help shape our future</span>
         <span className="postLanding-cta__info">
           Each year, we strive to deliver an exciting, inclusive, and fun event
-          focused on social good. This requires a considerable amount of
-          humanpower and resources towards logistics, food, electricity,
-          internet, merch, and more for the ~40 continuous hours that CruzHacks
-          spans. Help us put on 2021!
+          focused on social good. Let's make more projects happen!
         </span>
         <div className="postLanding-cta__button-container">
           <CTAbuttonView info={packetButtonProps} />

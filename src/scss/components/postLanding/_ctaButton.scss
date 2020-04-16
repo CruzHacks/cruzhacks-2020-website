@@ -10,13 +10,13 @@
     min-width: fit-content;
     text-decoration: none;
     transition: background-color 0.2s ease-out;
-    margin: calc(2vh - 0.1em) 0;
+    margin: calc(1.5vh - 0.1em) 0;
     @include respond(tab-port) {
       padding: 10px 26px;
     }
     @include respond(phone-narrow) {
       padding: 8px 24px;
-      margin: calc(0.5em + 1vh) 0;
+      margin: calc(0.25em + 0.5vh) 0;
     }
     &:hover {
       transition: background-color 0.2s ease-in;
