@@ -1,5 +1,6 @@
 .post-landing-projects {
   @import './backdrop/backdrop';
+  @import './backdrop/reducedMotionBackdrop';
 
   &__container {
     position: relative;

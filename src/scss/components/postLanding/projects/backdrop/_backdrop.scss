@@ -36,7 +36,6 @@
   right: -3em;
   animation: wave1 50s cubic-bezier(0.75, 0.22, 0.5, 1.03) -0.125s infinite,
     swell 8s ease -1.25s infinite;
-  transform: translate3d(0, 0, 0);
 }
 
 @keyframes wave1 {

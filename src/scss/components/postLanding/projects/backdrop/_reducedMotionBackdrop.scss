@@ -1,0 +1,28 @@
+@media screen and (prefers-reduced-motion: reduce) {
+  @keyframes wave1 {
+    0% {
+      margin-left: -1300px;
+    }
+    100% {
+      margin-left: -1300px;
+    }
+  }
+
+  @keyframes wave2 {
+    0% {
+      margin-left: -500px;
+    }
+    100% {
+      margin-left: -500px;
+    }
+  }
+
+  @keyframes swell {
+    0% {
+      transform: translate3d(0, -5px, 0);
+    }
+    100% {
+      transform: translate3d(0, -5px, 0);
+    }
+  }
+}
