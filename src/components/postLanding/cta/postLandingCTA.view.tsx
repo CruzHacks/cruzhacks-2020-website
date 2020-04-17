@@ -24,7 +24,7 @@ const PostLandingCTAview: React.FC = () => {
         <span className="postLanding-cta__title">Help shape our future</span>
         <span className="postLanding-cta__info">
           Each year, we strive to deliver an exciting, inclusive, and fun event
-          focused on social good. Let's make more projects happen!
+          focused on social good. Let's culture creativity in our community!
         </span>
         <div className="postLanding-cta__button-container">
           <CTAbuttonView info={packetButtonProps} />
