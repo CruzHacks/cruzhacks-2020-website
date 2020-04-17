@@ -36,10 +36,11 @@ const HeroHamburgerView: React.FC = () => {
     return () => document.removeEventListener('click', hideDropdownMenu);
   });
 
-  let [logistics, setLogistics] = useState('Logistics');
-  let [marketing, setMarketing] = useState('Marketing');
-  let [design, setDesign] = useState('Design');
-  let [eng, setEng] = useState('Engineering');
+  let logistics = 'Logistics';
+  let sponsorship = 'Sponsorship';
+  let marketing = 'Marketing';
+  let design = 'Design';
+  let eng = 'Engineering';
 
   return (
     <div className="hamburger">
@@ -60,13 +61,10 @@ const HeroHamburgerView: React.FC = () => {
           </li>
           {displayDrop ? (
             <a
-              onClick={(e) => {
-                e.preventDefault();
-                setLogistics('Recruitment starting soon!');
-                setTimeout((e) => setLogistics('Logistics'), 3000);
-              }}
-              href="/#"
               style={{ textDecoration: 'none' }}
+              href="https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY"
+              target="__blank"
+              rel="noopener noreferrer"
             >
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
@@ -82,13 +80,29 @@ const HeroHamburgerView: React.FC = () => {
           ) : null}
           {displayDrop ? (
             <a
-              onClick={(e) => {
-                e.preventDefault();
-                setMarketing('Recruitment starting soon!');
-                setTimeout((e) => setMarketing('Marketing'), 3000);
-              }}
-              href="/#"
               style={{ textDecoration: 'none' }}
+              href="https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY"
+              target="__blank"
+              rel="noopener noreferrer"
+            >
+              <li style={{ border: 'none' }}>
+                <div className="navbar__dropButton">
+                  <p
+                    className="navbar__button-text"
+                    style={{ fontWeight: 500 }}
+                  >
+                    {sponsorship}
+                  </p>
+                </div>
+              </li>
+            </a>
+          ) : null}
+          {displayDrop ? (
+            <a
+              style={{ textDecoration: 'none' }}
+              href="https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY"
+              target="__blank"
+              rel="noopener noreferrer"
             >
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
@@ -104,13 +118,10 @@ const HeroHamburgerView: React.FC = () => {
           ) : null}
           {displayDrop ? (
             <a
-              onClick={(e) => {
-                e.preventDefault();
-                setDesign('Recruitment starting soon!');
-                setTimeout((e) => setDesign('Design'), 3000);
-              }}
-              href="/#"
               style={{ textDecoration: 'none' }}
+              href="https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY"
+              target="__blank"
+              rel="noopener noreferrer"
             >
               <li style={{ border: 'none' }}>
                 <div className="navbar__dropButton">
@@ -126,13 +137,10 @@ const HeroHamburgerView: React.FC = () => {
           ) : null}
           {displayDrop ? (
             <a
-              onClick={(e) => {
-                e.preventDefault();
-                setEng('Recruitment starting soon!');
-                setTimeout((e) => setEng('Engineering'), 3000);
-              }}
-              href="/#"
               style={{ textDecoration: 'none' }}
+              href="https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY"
+              target="__blank"
+              rel="noopener noreferrer"
             >
               <li>
                 <div className="navbar__dropButton">

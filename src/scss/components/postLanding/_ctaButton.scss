@@ -85,3 +85,13 @@
     }
   }
 }
+
+.ctaButtonOrganize {
+  @include ctaButton;
+  &__link {
+    background: #6f6fe8;
+    &:hover {
+      background: lighten(#6f6fe8, 8%);
+    }
+  }
+}
