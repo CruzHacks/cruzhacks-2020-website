@@ -10,12 +10,11 @@ const PostLandingCTAview: React.FC = () => {
       className: 'ctaButton',
     },
   ];
-  const organizeButtonProps = [
+  const sponsorButtonProps = [
     {
-      text: 'GET INVOLVED AT CRUZHACKS',
-      link:
-        'https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY',
-      className: 'ctaButtonOrganize',
+      text: 'CONNECT WITH US',
+      link: 'mailto:contact@cruzhacks.com',
+      className: 'ctaButton',
     },
   ];
   return (
@@ -29,7 +28,7 @@ const PostLandingCTAview: React.FC = () => {
         </span>
         <div className="postLanding-cta__button-container">
           <CTAbuttonView info={packetButtonProps} />
-          <CTAbuttonView info={organizeButtonProps} />
+          <CTAbuttonView info={sponsorButtonProps} />
         </div>
       </div>
     </>

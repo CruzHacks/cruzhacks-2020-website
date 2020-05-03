@@ -36,12 +36,6 @@ const HeroHamburgerView: React.FC = () => {
     return () => document.removeEventListener('click', hideDropdownMenu);
   });
 
-  let logistics = 'Logistics';
-  let sponsorship = 'Sponsorship';
-  let marketing = 'Marketing';
-  let design = 'Design';
-  let eng = 'Engineering';
-
   return (
     <div className="hamburger">
       <button onClick={showDropdownMenu} className="hamburger__icon">
@@ -49,111 +43,6 @@ const HeroHamburgerView: React.FC = () => {
       </button>
       {displayMenu ? (
         <ul id="dropdown" className="hamburger__dropdown">
-          <li onClick={toggleExtended} className="hamburger__extended">
-            <div className="hamburger__button">
-              <p
-                className="hamburger__button-text extended"
-                style={{ textDecoration: 'none' }}
-              >
-                GET INVOLVED
-              </p>
-            </div>
-          </li>
-          {displayDrop ? (
-            <a
-              style={{ textDecoration: 'none' }}
-              href="https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY"
-              target="__blank"
-              rel="noopener noreferrer"
-            >
-              <li style={{ border: 'none' }}>
-                <div className="navbar__dropButton">
-                  <p
-                    className="navbar__button-text"
-                    style={{ fontWeight: 500 }}
-                  >
-                    {logistics}
-                  </p>
-                </div>
-              </li>
-            </a>
-          ) : null}
-          {displayDrop ? (
-            <a
-              style={{ textDecoration: 'none' }}
-              href="https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY"
-              target="__blank"
-              rel="noopener noreferrer"
-            >
-              <li style={{ border: 'none' }}>
-                <div className="navbar__dropButton">
-                  <p
-                    className="navbar__button-text"
-                    style={{ fontWeight: 500 }}
-                  >
-                    {sponsorship}
-                  </p>
-                </div>
-              </li>
-            </a>
-          ) : null}
-          {displayDrop ? (
-            <a
-              style={{ textDecoration: 'none' }}
-              href="https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY"
-              target="__blank"
-              rel="noopener noreferrer"
-            >
-              <li style={{ border: 'none' }}>
-                <div className="navbar__dropButton">
-                  <p
-                    className="navbar__button-text"
-                    style={{ fontWeight: 500 }}
-                  >
-                    {marketing}
-                  </p>
-                </div>
-              </li>
-            </a>
-          ) : null}
-          {displayDrop ? (
-            <a
-              style={{ textDecoration: 'none' }}
-              href="https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY"
-              target="__blank"
-              rel="noopener noreferrer"
-            >
-              <li style={{ border: 'none' }}>
-                <div className="navbar__dropButton">
-                  <p
-                    className="navbar__button-text"
-                    style={{ fontWeight: 500 }}
-                  >
-                    {design}
-                  </p>
-                </div>
-              </li>
-            </a>
-          ) : null}
-          {displayDrop ? (
-            <a
-              style={{ textDecoration: 'none' }}
-              href="https://docs.google.com/document/d/1WAWdIKNvgQ3Ckvkpa_nk0ymabH-dXKksTc1gE1bLMuY"
-              target="__blank"
-              rel="noopener noreferrer"
-            >
-              <li>
-                <div className="navbar__dropButton">
-                  <p
-                    className="navbar__button-text"
-                    style={{ fontWeight: 500 }}
-                  >
-                    {eng}
-                  </p>
-                </div>
-              </li>
-            </a>
-          ) : null}
           <Link to="/team" style={{ textDecoration: `none` }}>
             <li>
               <div className="hamburger__button">
