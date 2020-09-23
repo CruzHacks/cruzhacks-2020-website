@@ -1,3 +1,4 @@
+// file deepcode ignore variable-name no-any no-default-export
 import React from 'react';
 import axios, { AxiosRequestConfig } from 'axios';
 
@@ -20,16 +21,16 @@ async function subscribeToEmailList(
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
   if (emailInputRef.current.reportValidity()) {
-    let body = {
+    const body = {
       email: '' + email_address,
     };
     inputRef.current.value = '';
 
-    let key: string = '' + process.env.REACT_APP_MAILING_API_KEY;
-    let mailingServiceEndpoint: string =
+    const key: string = '' + process.env.REACT_APP_MAILING_API_KEY;
+    const mailingServiceEndpoint: string =
       '' + process.env.REACT_APP_MAILING_SUBSCRIBERS_ENDPOINT;
 
-    let axiosConfig: AxiosRequestConfig = {
+    const axiosConfig: AxiosRequestConfig = {
       headers: {
         Authentication: key,
         'Content-Type': 'application/json',
@@ -45,23 +46,18 @@ async function subscribeToEmailList(
         axiosConfig
       );
 
-      if (response.status === 200) {
+      if (response.status === 201) {
         inputRef.current.classList.add('placeholder-ok');
         inputRef.current.placeholder = 'Added to Email List!';
+      } else if (response.status === 200) {
+        inputRef.current.classList.add('placeholder-ok');
+        inputRef.current.placeholder = 'Already subscribed!';
       }
     } catch (error) {
-      if (error.response && error.response.status === 500) {
-        // if (error.response.data.title === 'Member Exists') {
-        let err_msg = 'Already subscribed!';
-        inputRef.current.classList.add('placeholder-ok');
-        inputRef.current.placeholder = err_msg;
-        console.error(err_msg);
-      } else {
-        let err_msg = 'Something Went Wrong';
-        inputRef.current.classList.add('placeholder-error');
-        inputRef.current.placeholder = err_msg;
-        console.error(err_msg);
-      }
+      let err_msg = 'Something Went Wrong';
+      inputRef.current.classList.add('placeholder-error');
+      inputRef.current.placeholder = err_msg;
+      console.error(err_msg);
     }
     inputRef.current.disabled = false;
   }

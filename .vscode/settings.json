@@ -1,3 +1,4 @@
 {
-  "deepcode.review.results.hideInformationIssues": true
+  "deepcode.review.results.hideInformationIssues": true,
+  "deepcode.uploadApproved": true
 }
