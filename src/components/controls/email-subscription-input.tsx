@@ -1,3 +1,4 @@
+// file deepcode ignore variable-name no-any no-default-export
 import React from 'react';
 import axios, { AxiosRequestConfig } from 'axios';
 
@@ -20,16 +21,16 @@ async function subscribeToEmailList(
   emailInputRef.current.classList.add('placeholder-sending');
   inputRef.current.blur();
   if (emailInputRef.current.reportValidity()) {
-    let body = {
+    const body = {
       email: '' + email_address,
     };
     inputRef.current.value = '';
 
-    let key: string = '' + process.env.REACT_APP_MAILING_API_KEY;
-    let mailingServiceEndpoint: string =
+    const key: string = '' + process.env.REACT_APP_MAILING_API_KEY;
+    const mailingServiceEndpoint: string =
       '' + process.env.REACT_APP_MAILING_SUBSCRIBERS_ENDPOINT;
 
-    let axiosConfig: AxiosRequestConfig = {
+    const axiosConfig: AxiosRequestConfig = {
       headers: {
         Authentication: key,
         'Content-Type': 'application/json',
