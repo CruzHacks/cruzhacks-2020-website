@@ -45,22 +45,18 @@ async function subscribeToEmailList(
         axiosConfig
       );
 
-      if (response.status === 200) {
+      if (response.status === 201) {
         inputRef.current.classList.add('placeholder-ok');
         inputRef.current.placeholder = 'Added to Email List!';
+      } else if (response.status === 200) {
+        inputRef.current.classList.add('placeholder-ok');
+        inputRef.current.placeholder = 'Already subscribed!';
       }
     } catch (error) {
-      if (error.response && error.response.status === 500) {
-        let err_msg = 'Already subscribed!';
-        inputRef.current.classList.add('placeholder-ok');
-        inputRef.current.placeholder = err_msg;
-        console.error(err_msg);
-      } else {
-        let err_msg = 'Something Went Wrong';
-        inputRef.current.classList.add('placeholder-error');
-        inputRef.current.placeholder = err_msg;
-        console.error(err_msg);
-      }
+      let err_msg = 'Something Went Wrong';
+      inputRef.current.classList.add('placeholder-error');
+      inputRef.current.placeholder = err_msg;
+      console.error(err_msg);
     }
     inputRef.current.disabled = false;
   }
