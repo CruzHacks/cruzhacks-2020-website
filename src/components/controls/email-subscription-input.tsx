@@ -51,7 +51,6 @@ async function subscribeToEmailList(
       }
     } catch (error) {
       if (error.response && error.response.status === 500) {
-        // if (error.response.data.title === 'Member Exists') {
         let err_msg = 'Already subscribed!';
         inputRef.current.classList.add('placeholder-ok');
         inputRef.current.placeholder = err_msg;

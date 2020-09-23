@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "build",
+    "site": "cruzhacks-4a899",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
